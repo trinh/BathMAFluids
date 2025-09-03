@@ -195,7 +195,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter-PS.html" class="internal"><span class="codenumber">4</span> <span class="title">Problem sets</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Worksheet</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Boo.</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
@@ -204,13 +204,43 @@ eBookConfig.enable_chatcodes =  false;
 </h2>
 <section class="introduction" id="ch-chapter01-kinematics-2"><div class="para" id="ch-chapter01-kinematics-2-1">There are some unintuitive challenges when it comes to defining even the most basic quantities in fluid dynamics. Consider the following two thought experiments.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch-chapter01-kinematics-2-2">In the first experiment, we consider a tube filled with water, where the bottom is released at time <span class="process-math">\(t = 0\text{.}\)</span> One can imagine that the entire column of fluid will fall under the effect of gravity. Each particle within the fluid is accelerated downwards at a constant rate (gravity). Therefore the velocity of the fluid is given by <span class="process-math">\(\bu = (0, 0, -U(t)).\)</span> Acceleration can be defined simply as the partial derivative in time of the velocity field, or <span class="process-math">\(\ba
-= \pd{\bu}{t} = (0, 0, -\dot{U}(t)) = (0, 0, -g)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch-chapter01-kinematics-2-2">In the first experiment, we consider a tube filled with water, where the bottom is released at time <span class="process-math">\(t = 0\text{.}\)</span> One can imagine that the entire column of fluid will fall under the effect of gravity.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch-chapter01-kinematics-2-3">However, consider now the second thought experiment of fluid being pumped through the vessel shown in the figure below.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter01-kinematics-tube01.png" class="contained" alt="(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere."></div>
+<div class="para logical" id="ch-chapter01-kinematics-2-4">
+<div class="para">Each particle within the fluid is accelerated downwards at a constant rate (gravity). Therefore the velocity of the fluid is given by <span class="process-math">\(\bu = (0, 0, -U(t)).\)</span> In this case, we imagine that acceleration can be defined simply as the partial derivative, in time, of the velocity field, or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ba
+= \pd{\bu}{t} = (0, 0, -\dot{U}(t)) = (0, 0, -g),
+\end{equation*}
 </div>
-<div class="para" id="ch-chapter01-kinematics-2-4">Upstream of the bottleneck, the volume flowrate is equal to the velocity times area, or <span class="process-math">\(A_1
-U_1\text{.}\)</span> This is the amount of fluid that is flowing through a cross section of the pipe upstream. Downstream of the bottleneck, the volume flowrate is <span class="process-math">\(A_2 U_2\text{.}\)</span> However, since mass must be conserved, that fact that there is a smaller cross-sectional area downstream must mean that the velocity is higher downstream.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">where we have used the over-dot notation for a derivative in time.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-kinematics-2-5">However, consider now the second thought experiment of fluid being pumped through the vessel shown in the figure below. The fluid has reached a steady-state (so the streamlines of the flow, if you can imagine them, are constant and travelling from left-to-right).<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter01-kinematics-tube02.png" class="contained" alt="Fluid pumped through a tube with variable cross-sectional area, \(A_1, A_2\) and corresponding velocities \(U_1, U_2\text{.}\)"></div>
+<div class="para logical" id="ch-chapter01-kinematics-2-7">
+<div class="para">Upstream of the bottleneck, the volume flowrate is equal to the velocity times area, or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\textrm{Upstream flow rate (area times velocity)} = A_1 U_1.
+\end{equation*}
+</div>
+<div class="para">This is the amount of fluid that is flowing through a cross section of the pipe upstream. Similarly, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\textrm{Downstream flow rate (area times velocity)} = A_2 U_2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-kinematics-2-8">However, since mass must be conserved, that fact that there is a smaller cross-sectional area downstream must mean that the velocity is higher downstream. Therefore, <span class="process-math">\(U_2 &gt; U_1\text{,}\)</span> and to achieve this, the fluid must therefore have been accelerated somewhere within the channel.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-kinematics-2-9">However, a thought to the situation might convince you that the velocity field in the channel is time-independent: it only changes as a function of its position and is therefore of the form <span class="process-math">\(\bu = \bu(\bx)\text{.}\)</span> Indeed, at every fixed point in the channel, the velocity <em class="emphasis">at that point</em> is not changing in time. Therefore, if we use our previous definition that <span class="process-math">\(\ba = \dot{\bu}\)</span> we see that the acceleration would be zero everywhere!<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-kinematics-2-10">The crux of the issue, and the difference between the two thought experiments, is that velocity is both a function of space and time, i.e. <span class="process-math">\(\bu = \bu(\bx, t)\text{.}\)</span> The change in velocity (acceleration) can therefore derive from changes in <span class="process-math">\(\bu\)</span> at fixed space and variable time; but also due to changes in <span class="process-math">\(\bu\)</span> at fixed time and variable space. Disentangling this leads us to define the nature of Eulerian and Lagrangian coordinates, presented next.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-kinematics-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
 <li><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></li>
 <li><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></li>

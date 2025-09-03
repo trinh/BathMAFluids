@@ -1,15 +1,6 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "front-colophon",
-  "level": "1",
-  "url": "front-colophon.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": "  "
-},
-{
   "id": "sec-test",
   "level": "1",
   "url": "sec-test.html",
@@ -25,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Eulerian and Lagrangian coordinates",
-  "body": " Eulerian and Lagrangian coordinates   There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, . At this point, we then attempt to measure a fluid quantity such as the density, , or temperature, . This is essentially the Eulerian frame . One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.  Alternatively, we can imagine tracking of a single fixed particle (or a fluid element) within the flow. The particle begins at some position. Let us define a label to describe the particle's initial position. For example, if the particle's position is given by we can define the corresponding Lagrangian label as We then ask for the corresponding measurement of the fluid quantity that corresponds to the label . For example, this is equivalent to tagging a free-floating buoy in the ocean with the label , then measuring the temperature of the water as the buoy drifts in the ocean. This temperature, we might write as where is simply a fixed quantity for the particular buoy.    The convective derivative  Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).  Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, , and time, and denote it by . This is the Eulerian description of the property since it is defined by specifying a fixed position in space. Fixing and then measuring is akin to standing in the fluid at a fixed location and measuring the property value in time.  We can alternatively write the property by its Lagrangian description. That is, given a label , we obtain the current position of the particle associated with this label, , then obtain its property value. This we can write as the following: Now, fixing corresponds to tracking how changes as we move with the particle along the deforming fluid.  There are thus two ways of considering time derivatives.   We use the normal partial derivative notation to refer to an Eulerian time derivative , considered at a fixed point in space:   On the other hand, the Lagrangian time derivative is considered for a fix label. We often refer to the Lagrangian time derivative as the convective derivative or the material derivative .      The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables.   The natural question is how the two derivatives relate to one another. This is given by the following theorem.  The convective derivative   The convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that         You are asked to work out the above proof more carefully using individual coordinates (instead of vector notation) in the problem set.    We can now apply the above result to the question of how to calculate the acceleration within the fluid (more specifically, we are enquiring about the acceleration of a volume or particle within the fluid). The acceleration is given by the convective or material derivative of the velocity:    "
+  "body": " Eulerian and Lagrangian coordinates   There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, . At this point, we then attempt to measure a fluid quantity such as the density, , or temperature, . This is essentially the Eulerian frame . One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.   (a) The Eulerian interpretation; (b) the Lagrangian interpretation.   Alternatively, we can imagine tracking of a single fixed particle (or a fluid element) within the flow. The particle begins at some position. Let us define a label to describe the particle's initial position. For example, if the particle's position is given by we can define the corresponding Lagrangian label as We then ask for the corresponding measurement of the fluid quantity that corresponds to the label . For example, this is equivalent to tagging a free-floating buoy in the ocean with the label , then measuring the temperature of the water as the buoy drifts in the ocean. This temperature, we might write as where is simply a fixed quantity for the particular buoy.    The convective derivative  Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).  Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, , and time, and denote it by . This is the Eulerian description of the property since it is defined by specifying a fixed position in space. Fixing and then measuring is akin to standing in the fluid at a fixed location and measuring the property value in time.  We can alternatively write the property by its Lagrangian description. That is, given a label , we obtain the current position of the particle associated with this label, , then obtain its property value. This we can write as the following: Now, fixing corresponds to tracking how changes as we move with the particle along the deforming fluid.  There are thus two ways of considering time derivatives.   We use the normal partial derivative notation to refer to an Eulerian time derivative , considered at a fixed point in space:   On the other hand, the Lagrangian time derivative is considered for a fix label. We often refer to the Lagrangian time derivative as the convective derivative or the material derivative .      The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables.   The natural question is how the two derivatives relate to one another. This is given by the following theorem.  The convective derivative   The convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that         You are asked to work out the above proof more carefully using individual coordinates (instead of vector notation) in the problem set.    We can now apply the above result to the question of how to calculate the acceleration within the fluid (more specifically, we are enquiring about the acceleration of a volume or particle within the fluid). The acceleration is given by the convective or material derivative of the velocity:    "
 },
 {
   "id": "def-eulerlag",
@@ -258,13 +249,13 @@ var ptx_lunr_docs = [
   "url": "ws-intro.html",
   "type": "Worksheet",
   "number": "4.1",
-  "title": "Worksheet",
-  "body": "  Test.    Blah.   "
+  "title": "Boo.",
+  "body": " Boo.   Test.    Blah.   "
 },
 {
-  "id": "ws-intro-2",
+  "id": "ws-intro-3",
   "level": "2",
-  "url": "ws-intro.html#ws-intro-2",
+  "url": "ws-intro.html#ws-intro-3",
   "type": "Worksheet Exercise",
   "number": "4.1.1",
   "title": "",
