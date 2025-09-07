@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter00-introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction</title>
+<chapter xml:id="ch-chapter-potentialflows" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Potential flows</title>
 
   <introduction>
     <p>Brief introduction to appear here.</p>

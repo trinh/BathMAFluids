@@ -112,7 +112,8 @@
         </me> Now, fixing <m>\bX</m> corresponds
         to tracking how <m>f</m> changes as we move with the particle along the deforming fluid. </p>
 
-      <p> There are thus two ways of considering time derivatives. <definition xml:id="def-eulerlag">
+      <p> There are thus two ways of considering time derivatives. 
+        <definition xml:id="def-eulerlag">
           <statement>
             <p> We use the normal partial derivative notation to refer to an <em>Eulerian time
         derivative</em>, considered at a fixed point in space: <me>
@@ -141,10 +142,10 @@
       </remark>
 
       <p> The natural question is how the two derivatives relate to one another. This is given by
-        the following theorem. <theorem xml:id="thm-convder">
-          <title>The convective derivative</title>
+        the following theorem. <theorem xml:id="thm-DDt">
+          <title>The material/convective derivative</title>
           <statement>
-            <p> The convective derivative can be defined in terms of Eulerian derivative in the
+            <p> The <em>material or convective derivative</em> can be defined in terms of Eulerian derivative in the
         following way: <men xml:id="eqn-DDt">
                 \DD{}{t} = \pd{}{t} + (\bu \cdot \nabla).
               </men>

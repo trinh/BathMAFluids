@@ -178,7 +178,7 @@
                 <mrow> \dd{I}{t} \amp= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
               </md>
         and the material derivative passes through since the domain is fixed. The <xref
-                ref="thm-convder" /> now allows us to convert the material derivative to regular
+                ref="thm-DDt" /> now allows us to convert the material derivative to regular
         partial derivatives. By the chain rule: <md>
                 <mrow>\DD{(fJ)}{t} \amp= \DD{f}{t}J + f\DD{J}{t} </mrow>
                 <mrow> \amp= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
@@ -374,7 +374,7 @@
         <statement>
           <p> The differential form of the law of conservation of momentum, is              
             <men xml:id="eqn-consvmoment">
-               \rho \DD{\bu}{t} = \rho \left(\pd{u}{t} + \bu \cdot \nabla\bu\right) = - \nabla p + \rho \bg 
+               \rho \DD{\bu}{t} = \rho \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) = - \nabla p + \rho \bg 
               </men>
           where <m>\rho = \rho(\bx,t)</m> is the density of the fluid, <m>\bu = \bu(\bx, t)</m> is the velocity of the fluid, <m>p = p(\bx, t)</m> is the pressure, and <m>\bg</m> is the acceleration due to a body force (typically gravity).
           </p>
@@ -459,11 +459,364 @@
     </me>
     
     </p>
+    </subsection>
+
+  </section>
+    <section xml:id="sec-incompressible">
+      <title>Incompressible flow and Euler</title>
+
+    <p>
+      Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via 
+      <me>\dxyz = J \dXYZ</me>.
+      So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible fluid.</em>
+      </p>
+
+      <p>
+        <definition xml:id="def-incompressible">
+          <title>Incompressible fluids</title>
+          <statement>
+            <p>
+             A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes. That is, 
+             <me>
+              \DD{J}{t} \equiv 0.
+             </me>
+             The following equivalence (iff) then follows:
+            <men xml:id="eqn-incompressibledef">
+             \textrm{Fluid is incompressible} \quad \Longleftrightarrow \quad \nabla \cdot \bu = 0.
+            </men>
+            </p>
+            <proof>
+              <p>
+                This is immediate with Euler's identity in <xref ref="thm-Euleridentity"/>.
+              </p>
+            </proof>
+          </statement>
+        </definition>
+      </p>   
+
+
+      <p>
+        So in conclusion, for the case of an incompressible fluid, it suffices to solve the equation 
+        <men xml:id="eqn-divu">
+         \nabla \cdot \bu = 0,
+        </men>
+        instead of the more complicated equation in <xref ref="thm-mass"/>.
+      </p>
+
+      <p>
+      By the way, what happens to the mass conservation equation in <xref ref="thm-mass"/> if the fluid is incompressible? This leads to the following corollary. 
+      <corollary xml:id="cor-incompressible-density">
+        <title>Constant density along streamlines</title>
+        <statement>
+          <p>
+          For an incompressible fluid, the density is constant along streamlines, i.e. 
+          <me>
+            \DD{\rho}{t} = \pd{\rho}{t} + (\bu \cdot \nabla)\rho = 0.
+          </me>
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            This relies on setting <m>\nabla \cdot \bu = 0</m> in <xref ref="thm-mass"/>.
+          </p>
+        </proof>
+      </corollary> 
+      </p>
+      
+      <p>
+        Let us return to consider the total sum of equations and unknowns. We have introduced the scalar mass conservation equation found in <xref ref="thm-mass"/> (or alternatively the more simplified equation <xref ref="eqn-divu"/> for incompressible fluids). Also the vector momentum equation found in <xref ref="thm-momentum"/>. This yields four scalar equations for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity components <m>\bu</m>.
+      </p>
+
+      <p>
+        One way of proceeding is to attempt to establish or to inuit a relationship between pressure and density. For instance, the assumption of an ideal gas law can be derived from kinetic theory, which leads to the empirical law that <m>p = RT\rho</m>, relating pressure in a linear fashion to density, and depending on the temperature, <m>T</m>, and a (gas) constant <m>R</m>. Other assumptions of the form <m>p = p(\rho)</m> are possible, and this is involved in the study of gases and <em>compressible fluids</em>.
+      </p>
 
     
 
-    </subsection>
-  </section>
+      <p>
+        However, empirically, we observe that in most liquids, the density only varies within a few percent under typical variations of temperature and pressure. Therefore, it is common to assume:</p>
+
+        <p><note>
+          <title>Constant density assumption</title>
+          <p>
+            We often assume that in the situation of liquids, the density is taken to be constant, <m>\rho = \textrm{constant}</m>.
+          </p>
+        </note>
+      </p>
+
+      <p>
+      Note, then that in the case of constant density fluids, if we consider the mass conservation equation <xref ref="eqn-consvmass1"/>, it follows that <m>\nabla \cdot \bu = 0</m>. Therefore, from the definition <xref ref="def-incompressible"/>, we conclude that the fluid is indeed incompressible. 
+      </p>
+
+      <p>
+        <remark>
+          <statement>
+            <p>
+              Confusingly, in many references, authors define a fluid to be incompressible if <m>\rho</m> is constant. However, we see this is not necessarily the case. A fluid can be incompressible and therefore <m>\DD{\rho}{t} = 0</m> without <m>\rho</m> being constant.
+            </p>
+          </statement>
+        </remark>
+      </p>
+
+    <p>
+      We are finally ready to state the <em>Euler equations</em>.
+
+      <definition xml:id="def-euler">
+        <title>Euler equations</title>
+        <statement>
+          <p>
+            The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu"/> and momentum equations <xref ref="eqn-consvmoment"/>, considered in the situation of an incompressible fluid:
+            <mdn>
+              <mrow>\nabla \cdot \bu \amp= 0, </mrow>
+              <mrow xml:id="eqn-euler-momentum"> 
+               \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) \amp= - \frac{1}{\rho}\nabla p + \bg.
+            </mrow>
+          </mdn>
+          Note this is then four scalar equations for the three unknown velocities in <m>\bu</m> and pressure <m>p</m>. We shall assume in the course that incompressible fluids have constant density, <m>\rho</m>. The above Euler equations include the (gravitational) body force <m>\bg</m>.
+          </p>
+        </statement>
+      </definition>
+    </p>
+    </section>
+
+    <section xml:id="sec-bernoulli">
+      <title>Bernoulli's equation</title>
+
+      <p>
+        There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <xref ref="eqn-euler-momentum"/> and yields the famous <em>Bernoulli equation(s)</em>.</p>
+
+
+        <p>
+          We will first need a vector identity.
+
+          <identity xml:id="ident-ugradu">
+            <statement>
+           <p>
+            Note the following identity: 
+            <men xml:id="eqn-ugradu">
+             (\bu \cdot \nabla) \bu = \nabla \left(\frac{1}{2}|\bu|^2\right) + (\nabla \times \bu) \times \bu. 
+            </men>
+           </p>
+            </statement>
+                   <proof>
+            <p>
+              The proof follows from direct expansion of both sides. 
+            </p>
+          </proof> </identity>
+        </p>
+
+        <p>
+          It will also be useful for us to introduce the notion of vorticity.
+
+          <definition xml:id="def-vorticity">
+            <title>Vorticity of a vector field</title>
+            <statement>
+              <p>
+                The <em>vorticity</em>, <m>\omega</m>, of a vector field is defined by 
+                <men xml:id="eqn-vorticity">
+                  \omega \equiv \nabla \times \bu.
+                </men>
+               The vorticity is a measure of the local rotation of the flow. 
+              </p>
+            </statement>
+          </definition>
+        </p>
+
+
+
+        <p>
+          Let us recall the definition of a <em>conservative force</em>.
+
+          <definition xml:id="def-conservative-force">
+            <title>Conservative forces</title>
+            <statement>
+              <p>
+              A force <m>\bF</m> is a <em>conservative force</em> if and only if there exists a potential <m>\chi</m>, such that 
+              <me>
+                \bF = -\nabla \chi,
+              </me>
+              in a simply connected region where the quantities are defined.
+              </p>
+            </statement>
+          </definition>
+
+          Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.
+        </p>
+
+        <p>
+        <theorem xml:id="thm-bernoulli-steady">
+          <title>Bernoulli's equation for steady flow</title>
+          <statement>
+            <p>Bernoulli's equation (theorem) for steady flow states that
+            <men xml:id="eqn-bernoulli-steady">
+            B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along streamlines},
+            </men>
+            where we have assumed that the body force is <em>conservative</em>, i.e. it can be written as 
+            <men xml:id="eqn-gravity-potential">
+             \bg = -\nabla \chi, 
+            </men>
+            for a potential function, <m>\chi</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Start from the momentum equation <xref ref="eqn-consvmoment"/>, 
+              <me>
+                \pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
+              </me>
+              and use the vector identity <xref ref="eqn-ugradu"/> gives 
+              <me>
+                \pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p + \frac{1}{2} |\bu|^2 + \chi\right).
+              </me>
+            </p>
+
+            <p>
+              Next, the flow is steady, and therefore we can zero the first term. This leaves
+              <me>
+                \bomega \times \bu = -\nabla B.
+              </me>
+              We now take the dot product of both sides of the equation with <m>\bu</m>. We use the fact that, 
+              <me>
+              \bu \cdot (\bomega \times \bu ) = 0,
+              </me>
+              since it is a triple scalar product with two repeated entries. It therefore results in the fact that
+              <me>
+                \bu \cdot \nabla B = 0.
+              </me>
+             Notice that this is the steady component that comes from the material derivative, <m>\DD{B}{t} = 0</m>. So we conclude that <m>B</m> is constant along streamlines of the flow. 
+            </p>
+
+            <p>
+              It is useful to note that if we use the definition of vorticity in <xref ref="eqn-vorticity"/>, and the definition of <m>B</m> in <xref ref="eqn-bernoulli-steady"/>, we have from the above that 
+              <men xml:id="eqn-bernoulli-vorticity">
+                \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+              </men>
+             a form that will be useful, shortly. 
+            </p>
+          </proof>
+        </theorem>
+      </p>
+
+      <p>
+        <remark>
+          <p>
+          For the typical gravity force directed in the <m>-z</m> direction, we can write <m>\bg = -g[0, 0, 1] = -g \be_z</m>. So in this case, the (gravitational) potential is <m>\chi = gz</m>.
+          </p>
+        </remark>
+      </p>
+     
+      <p>
+        The proof of <xref ref="thm-bernoulli-steady"/> introduced a useful form of the momentum equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity"/>. This leads to the so-called <em>vorticity equation</em> form of the momentum equation. 
+
+        <theorem xml:id="thm-vorticity-equation">
+          <title>The vorticity equation for incompressible flow</title>
+          <statement>
+            <p>
+            The momentum equation for incompressible flow, reposed in terms of the vorticity is:
+            <men xml:id="eqn-vorticity-equation">
+              \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
+            </men>
+            known as the <em>vorticity equation</em>.
+            
+            </p>
+          </statement>
+        </theorem>
+      </p>
+
+      <p>
+        In the proof, it is useful to use the vector identity for the curl of a cross product: 
+        <men xml:id="eqn-curlcross">
+         \nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.  
+        </men>
+        
+      </p>
+
+
+      <p>
+        <proof>
+          <p>
+            Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <xref ref="eqn-bernoulli-vorticity"/>, we take the curl of both sides to obtain 
+            <me>
+              \nabla \times \left(\pd{\bu}{t} + \bomega \times \bu\right) = 0.
+            </me>
+            Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity <xref ref="eqn-curlcross"/>. For the second term, we get 
+            <me>
+            -\nabla \times (\bu \times \bomega) = 0 - 0 + (\bomega \cdot \nabla)\bu - (\bu \cdot \nabla)\bomega,
+            </me>
+            with the first zero resulting in the fact that "div curl equals zero", while the second results from incompressibility. 
+          </p>
+
+          <p>
+            Thus we have,
+            <me>
+              \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
+            </me>
+            which is the main result.
+          </p>
+        </proof>
+      </p>
+
+      <subsection xml:id="subsec-potential">
+        <title>Potential flow</title>
+        
+        <p>
+          We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in <xref ref="def-euler"/> and in particular, the reduction of the mass conservation equation to <m>\nabla \cdot \bu = 0</m>.
+        </p>
+
+        <p>
+          We attempt to reduce further by assuming that the fluid is <em>irrotational</em>. This lends to the following definition. 
+
+          <definition xml:id="def-irrotational">
+            <title>Irrotational flows</title>
+            <statement>
+              <p>
+               A flow is said to be <em>irrotational</em> if the vorticity is identically zero: 
+               <men xml:id="eqn-irrotational">
+               \textrm{flow is irrotational} \Longleftrightarrow  \bomega = \nabla \times \bu \equiv 0.
+               </men>
+              </p>
+            </statement>
+          </definition>
+        </p>
+
+        <p>
+          For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation. 
+
+          <theorem xml:id="thm-bernoulli-potential">
+          <title>Bernoulli's equation for steady irrotational flow</title>
+            <statement>
+              <p>
+                For an incompressible and irrotational flow, Bernoulli's theorem states that 
+                <men xml:id="eqn-bernoulli-potential">
+                 B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant everywhere},
+                </men>
+                where <m>\bg = -\nabla \chi</m> is the body force. 
+              </p>
+            </statement>
+          </theorem>
+        </p>
+
+        <p>
+          <proof>
+            <p>
+              The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in <xref ref="thm-bernoulli-steady"/>. In the proof, we arrived at the result in <xref ref="eqn-bernoulli-steady"/> that 
+              <me>
+                \pd{\bu}{t} + \bomega \times \bu = -\nabla B.
+              </me>
+              For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that <m>\bomega = 0</m>, and therefore we have
+              <me>
+                \nabla B = 0.
+              </me>
+             But the only way that all spatial derivatives is zero is if the function is constant. 
+            </p>
+          </proof>
+        </p>
+      </subsection>
+
+      
+    </section>
   
 
 </chapter>

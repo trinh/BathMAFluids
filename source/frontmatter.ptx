@@ -8,8 +8,9 @@
   
     <author>
       <personname>&#160;</personname>
+      <!-- <personname>XXXX</personname> -->
       <department>Phil Trinh and Jennifer Tweedy (2025-26 delivery) </department>
-      <institution>Dept. of Math. Sci., University of Bath</institution>
+      <institution>Dept. of Math. Sci., University of Bath </institution>
     </author>
     <date>
       <today />
@@ -42,6 +43,189 @@
   <titlepage>
     <titlepage-items/>
   </titlepage>
+
+
+  <preface><title>Official description</title><p>
+The description of this unit in the <url
+href="http://www.bath.ac.uk/catalogues/2025-2026/ma/MA32051.html" visual="" >official
+catalogue</url> is the following:
+<dl width="narrow"><li><title>Aims</title><p>
+ 		In this unit you will explore the mathematical theory of fluid dynamics, with a view towards applications to physical phenomena such as flight, vortex motion and water waves. You will study the mathematics of conservation laws and the derivation of governing fluid dynamical equations. This unit will provide you with a foundation for further study of more advanced theory of fluid dynamics and continuum mechanics, and its application in scientific areas including engineering, physics and biology.
+</p></li><li><title>Outcomes</title><p>
+(i) Demonstrate an understanding of the principles of mathematical fluids dynamics; (ii) discuss and apply techniques from vector calculus and complex variable theory to analyse and solve fluid flow problems; (iii)  give a qualitative and quantitative account of a range of phenomena in fluid dynamics.
+</p></li><li><title>Content</title><p>
+		Complex analysis primer: Cauchy-Riemann equations; harmonic functions; complex maps; residue integration. The mathematics of fluid phenomena and its applications: derivation and interpretation of governing equations; reduction of governing equations to equations of simpler formulation; potential flow; vortical flow. Two-dimensional incompressible and irrotational flow: velocity potential; stream function; complex potential. Conformal mapping. Vortex motion: vortex lines and tubes; Kelvin circulation theorem; Helmholtz' principal. Water waves: free surfaces; harmonic waves; finite depth; instability; group velocity. Computational fluid dynamics.
+</p></li></dl>
+</p></preface>
+
+
+<preface xml:id="history"><title>History of the unit</title>
+<p>
+Previously at Bath in the Mathematical Sciences, there were two units meant to teach continuum and fluid mechanics (or dynamics) to students. Prior to 2025, there was the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html">MA30253 Continuum Mechanics</url> module. This was then continued into the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html">MA40255 Viscous fluid dynamics</url> module. 
+</p>
+
+<p>
+As part of the curriculum transformation (with the first change to Year 3 in 2025), we are attempting to unify these two treatments, providing a more streamlined teaching of elementary fluid dynamics, which is oriented towards a broad range of styles of emphasis, from applied mathematics, to physics and engineering. The hope is that this new course on Fluid Dynamics provides you with a strong foundation in different basic fluid flows and their mathematical formulation and study. 
+</p>
+
+
+<!-- <paragraphs><title>Changes in 2024<ndash/>2025</title><p>
+  Probably the most visible change this year is that I have condensed all
+  variants of the weak maximum principle into a single theorem , and similarly for the strong maximum Principe, Hopf lemma,
+  and parabolic weak maximum principle. Lectures in recent years have been
+  drifting towards this style, and the hope is that it will ultimately
+  streamline the presentation. Also:
+<ul><li>
+  During the semester last year, I added a paragraph was added on treating formulas as
+  functions. This is perhaps the main place where the conventions in this
+  unite differ from those in MA30252. 
+</li><li>
+  There is a new sentence inmaking it more explicit
+  how the zeroth-order partial <m>∂^0</m> is to be interpreted. I have also
+  added an additional displayed equation below  to
+  further emphasize the meaning of the zeroth-order term <m>c</m>.
+</li><li>
+</li><li>
+  Further changes made during the semester will be recorded in 
+</li></ul>
+</p>
+</paragraphs> -->
+</preface>
+
+<preface><title>Related units at Bath</title>
+<p>
+There are a great many units at Bath which, in one way or another, touch on
+partial differential equations (PDEs) or related techniques in analysis. Here
+is a (partial!) list of (pre-Curriculum Transformation):
+<ul><li>
+  <title>MA20223: Vector calculus and partial differential equations</title><p>
+    This applied unit is a prerequisite for MA40203. It introduces three classic
+    PDEs: the Laplace equation, the heat equation and the wave
+    equation. Moreover, it shown how to solve these equations in (extremely)
+    special domains using separation of variables.
+  </p>
+</li><li>
+  <title>MA30039: Differential geometry of curves &amp; surfaces</title><p>
+    Potential topics include <sq>special surfaces</sq> such as minimal surfaces
+    and surfaces of constant mean or Gauss curvature. These are closely related to
+    PDEs such as the minimal surface equation.
+  </p>
+</li><li>
+  <title>MA30044: Mathematical methods 1</title><p>
+    This applied unit covers quasilinear first-order PDEs, the
+    Cauchy<ndash/>Kovalevskaya theorem, classification of equations as
+    elliptic/parabolic/hyperbolic and d'Alembert's solution for the
+    one-dimensional wave equation.
+  </p>
+</li><li>
+  <title>MA30252: Advanced real analysis</title><p>
+    This pure unit is a prerequisite for MA40203. It shows that <m>C^k([a,b])</m>
+    is a Banach space, defines the Hilbert space <m>L^2(a,b)</m> as a completion,
+    and proves the Arzelà<ndash/>Ascoli and Weierstrass approximation theorems.
+  </p>
+</li><li>
+  <title>MA30253: Continuum mechanics</title><p>
+    Introduces a variety of PDEs, including Euler's equations for inviscid fluids,
+    and studies them from an applied point of view.
+  </p>
+</li><li>
+  <title>MA30170: Numerical solution of elliptic PDEs </title><p>
+    Introduces variational and weak forms of elliptic PDEs, and how to solve them
+    numerically using finite element methods.
+  </p>
+</li><li>
+  <title>MA40171: Numerical solution of evolutionary equations</title><p>
+    Covers numerical methods for parabolic and hyperbolic PDEs.
+  </p>
+</li><li>
+  <title>MA30059: Mathematical methods 2</title><p>
+    An applied unit which often covers more advanced techniques for the
+    Laplace and heat equations, for instance Green's functions and separation
+    of variables for inhomogeneous systems. May also cover the calculus of
+    variations, which is an important source of PDEs.
+  </p>
+</li><li>
+  <title>MA30063: Mathematical biology 2</title><p>
+    This applied unit concerns the modelling and analysis of PDEs arising in
+    biology.
+  </p>
+</li><li>
+  <title>MA40256: Analysis in Hilbert spaces</title><p>
+    This pure unit studies linear mappings between Hilbert spaces, which is
+    an abstract setting often used to study PDEs. Potential topics include the
+    Lax<ndash/>Milgram theorem, which is a powerful tool to show the existence
+    of solutions to certain PDEs. (MA40256 and MA40057 are offered in
+    alternating years.)
+  </p>
+</li><li>
+  <title>MA40049: Elasticity</title><p>
+    Another applied unit with many connections to PDEs.
+  </p>
+</li><li>
+  <title>MA40042: Measure theory &amp; integration</title><p>
+    Provides a detailed description of the function spaces <m>L^p</m> for <m>1
+    ≤ p ≤ ∞</m>, which are very useful in the study of PDEs.
+  </p>
+</li><li>
+  <title>MA40057: Functional analysis</title><p>
+    This pure unit studies linear operators between Banach spaces, which is
+    another commonly-used abstract setting for PDEs. Covers weak and weak-*
+    convergence, which are often used to show existence of solutions to PDEs.
+    (MA40256 and MA40057 are offered in alternating years.)
+  </p>
+</li><li>
+  There are also connections to some of the higher-level probability units
+  through the Feynman<ndash/>Kac formula, Fokker<ndash/>Plank equations, and
+  of course stochastic PDEs.
+</li><li>
+  There are also connections to the units on ordinary differential
+  equations and dynamical systems, especially some of the higher-level units
+  with a focus rigorous existence and/or qualitative properties of solutions.
+</li></ul>
+</p><p>
+In this unit:
+<ul><li>
+  We will study PDEs from a pure rather than applied point of view. We will
+  not do any modelling, nor indeed spend much time at all motivating the PDEs
+  we study. Instead, we will spend a lot of time working through rigorous
+  proofs with <m>ε</m>s, <m>δ</m>s, and convergent subsequences of functions.
+</li><li>
+  On the other hand we will not use tools from Functional analysis, Hilbert
+  space theory or Measure theory &amp; integration.
+</li><li>
+  We will consider second-order PDEs on quite general domains and with quite
+  general coefficients. Such equations cannot be solved explicitly using
+  separation of variables or Green's functions techniques. Instead, we focus
+  on qualitative properties such as existence, uniqueness and symmetry.
+</li><li>
+  Rather than attempt a broad survey, we will focus almost exclusively on a
+  single tool, the maximum principle, and develop it to a high level of
+  sophistication.
+</li></ul>
+</p>
+
+</preface>
+
+<preface><title>Moodle page <etc/></title>
+<!--
+<assemblage><title>Recordings on Re:View</title><p>
+  <ul><li>
+    <url href="" visual="">Administrative stuff</url>
+  </li><li>
+    <url href="" visual="">What this unit is and isn't</url>
+  </li></ul>
+</p></assemblage>
+-->
+<p>
+  Besides this document, the main resource for this unit is the <url
+  href="https://moodle.bath.ac.uk/course/view.php?id=29841" visual="">Moodle
+  page</url>. There is also a <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%22e51d63f8-3774-4570-a3cb-b1df015bd8b9%22" visual="">
+  folder on Re:View for the recordings</url>. In Week 1 we walked through this
+  Moodle page and talked about various other administrative things;
+  unfortunately the recording was lost due to a Moodle/Panopto error.
+</p>
+</preface>
+
 
   <!-- <colophon xml:id="front-colophon">
     <colophon-items/>

@@ -29,14 +29,19 @@
 \newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
 \newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
 \newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} % Do this
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} % Do this
 \newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
 \newcommand{\bX}{\boldsymbol{X}}
 \newcommand{\bn}{\boldsymbol{n}}
 \newcommand{\bt}{\boldsymbol{t}}
 \newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
 \newcommand{\ba}{\boldsymbol{a}}
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
 </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->
