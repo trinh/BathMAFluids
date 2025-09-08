@@ -1,13 +1,49 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "sec-test",
+  "id": "frontmatter-3",
   "level": "1",
-  "url": "sec-test.html",
-  "type": "Section",
-  "number": "1.1",
-  "title": "test",
-  "body": " test  This is a section.  "
+  "url": "frontmatter-3.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Official description",
+  "body": "Official description The description of this unit in the official catalogue is the following: Aims In this unit you will explore the mathematical theory of fluid dynamics, with a view towards applications to physical phenomena such as flight, vortex motion and water waves. You will study the mathematics of conservation laws and the derivation of governing fluid dynamical equations. This unit will provide you with a foundation for further study of more advanced theory of fluid dynamics and continuum mechanics, and its application in scientific areas including engineering, physics and biology. Outcomes (i) Demonstrate an understanding of the principles of mathematical fluids dynamics; (ii) discuss and apply techniques from vector calculus and complex variable theory to analyse and solve fluid flow problems; (iii) give a qualitative and quantitative account of a range of phenomena in fluid dynamics. Content Complex analysis primer: Cauchy-Riemann equations; harmonic functions; complex maps; residue integration. The mathematics of fluid phenomena and its applications: derivation and interpretation of governing equations; reduction of governing equations to equations of simpler formulation; potential flow; vortical flow. Two-dimensional incompressible and irrotational flow: velocity potential; stream function; complex potential. Conformal mapping. Vortex motion: vortex lines and tubes; Kelvin circulation theorem; Helmholtz' principal. Water waves: free surfaces; harmonic waves; finite depth; instability; group velocity. Computational fluid dynamics.  "
+},
+{
+  "id": "history",
+  "level": "1",
+  "url": "history.html",
+  "type": "Preface",
+  "number": "",
+  "title": "History of the unit",
+  "body": "History of the unit  Previously at Bath in the Mathematical Sciences, there were two units meant to teach continuum and fluid mechanics (or dynamics) to students. Prior to 2025, there was the MA30253 Continuum Mechanics module. This was then continued into the MA40255 Viscous fluid dynamics module.  As part of the curriculum transformation (with the first change to Year 3 in 2025), we are attempting to unify these two treatments, providing a more streamlined teaching of elementary fluid dynamics, which is oriented towards a broad range of styles of emphasis, from applied mathematics, to physics and engineering. The hope is that this new course on Fluid Dynamics provides you with a strong foundation in different basic fluid flows and their mathematical formulation and study.   "
+},
+{
+  "id": "frontmatter-5",
+  "level": "1",
+  "url": "frontmatter-5.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Related units at Bath",
+  "body": "Related units at Bath  There are a great many units at Bath which, in one way or another, touch on partial differential equations (PDEs) or related techniques in analysis. Here is a (partial!) list of (pre-Curriculum Transformation):  MA20223: Vector calculus and partial differential equations This applied unit is a prerequisite for MA40203. It introduces three classic PDEs: the Laplace equation, the heat equation and the wave equation. Moreover, it shown how to solve these equations in (extremely) special domains using separation of variables.   MA30039: Differential geometry of curves & surfaces Potential topics include special surfaces such as minimal surfaces and surfaces of constant mean or Gauss curvature. These are closely related to PDEs such as the minimal surface equation.   MA30044: Mathematical methods 1 This applied unit covers quasilinear first-order PDEs, the Cauchy Kovalevskaya theorem, classification of equations as elliptic\/parabolic\/hyperbolic and d'Alembert's solution for the one-dimensional wave equation.   MA30252: Advanced real analysis This pure unit is a prerequisite for MA40203. It shows that is a Banach space, defines the Hilbert space as a completion, and proves the Arzelà Ascoli and Weierstrass approximation theorems.   MA30253: Continuum mechanics Introduces a variety of PDEs, including Euler's equations for inviscid fluids, and studies them from an applied point of view.   MA30170: Numerical solution of elliptic PDEs Introduces variational and weak forms of elliptic PDEs, and how to solve them numerically using finite element methods.   MA40171: Numerical solution of evolutionary equations Covers numerical methods for parabolic and hyperbolic PDEs.   MA30059: Mathematical methods 2 An applied unit which often covers more advanced techniques for the Laplace and heat equations, for instance Green's functions and separation of variables for inhomogeneous systems. May also cover the calculus of variations, which is an important source of PDEs.   MA30063: Mathematical biology 2 This applied unit concerns the modelling and analysis of PDEs arising in biology.   MA40256: Analysis in Hilbert spaces This pure unit studies linear mappings between Hilbert spaces, which is an abstract setting often used to study PDEs. Potential topics include the Lax Milgram theorem, which is a powerful tool to show the existence of solutions to certain PDEs. (MA40256 and MA40057 are offered in alternating years.)   MA40049: Elasticity Another applied unit with many connections to PDEs.   MA40042: Measure theory & integration Provides a detailed description of the function spaces for , which are very useful in the study of PDEs.   MA40057: Functional analysis This pure unit studies linear operators between Banach spaces, which is another commonly-used abstract setting for PDEs. Covers weak and weak-* convergence, which are often used to show existence of solutions to PDEs. (MA40256 and MA40057 are offered in alternating years.)  There are also connections to some of the higher-level probability units through the Feynman Kac formula, Fokker Plank equations, and of course stochastic PDEs. There are also connections to the units on ordinary differential equations and dynamical systems, especially some of the higher-level units with a focus rigorous existence and\/or qualitative properties of solutions.  In this unit: We will study PDEs from a pure rather than applied point of view. We will not do any modelling, nor indeed spend much time at all motivating the PDEs we study. Instead, we will spend a lot of time working through rigorous proofs with s, s, and convergent subsequences of functions. On the other hand we will not use tools from Functional analysis, Hilbert space theory or Measure theory & integration. We will consider second-order PDEs on quite general domains and with quite general coefficients. Such equations cannot be solved explicitly using separation of variables or Green's functions techniques. Instead, we focus on qualitative properties such as existence, uniqueness and symmetry. Rather than attempt a broad survey, we will focus almost exclusively on a single tool, the maximum principle, and develop it to a high level of sophistication.   "
+},
+{
+  "id": "frontmatter-6",
+  "level": "1",
+  "url": "frontmatter-6.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Moodle page etc.",
+  "body": "Moodle page   Besides this document, the main resource for this unit is the Moodle page . There is also a folder on Re:View for the recordings . In Week 1 we walked through this Moodle page and talked about various other administrative things; unfortunately the recording was lost due to a Moodle\/Panopto error.  "
+},
+{
+  "id": "ch-chapter00-introduction",
+  "level": "1",
+  "url": "ch-chapter00-introduction.html",
+  "type": "Chapter",
+  "number": "1",
+  "title": "Introduction",
+  "body": " Introduction   Brief introduction to appear here.   "
 },
 {
   "id": "sec-eulerlagrang",
@@ -16,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Eulerian and Lagrangian coordinates",
-  "body": " Eulerian and Lagrangian coordinates   There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, . At this point, we then attempt to measure a fluid quantity such as the density, , or temperature, . This is essentially the Eulerian frame . One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.   (a) The Eulerian interpretation; (b) the Lagrangian interpretation.   Alternatively, we can imagine tracking of a single fixed particle (or a fluid element) within the flow. The particle begins at some position. Let us define a label to describe the particle's initial position. For example, if the particle's position is given by we can define the corresponding Lagrangian label as We then ask for the corresponding measurement of the fluid quantity that corresponds to the label . For example, this is equivalent to tagging a free-floating buoy in the ocean with the label , then measuring the temperature of the water as the buoy drifts in the ocean. This temperature, we might write as where is simply a fixed quantity for the particular buoy.    The convective derivative  Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).  Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, , and time, and denote it by . This is the Eulerian description of the property since it is defined by specifying a fixed position in space. Fixing and then measuring is akin to standing in the fluid at a fixed location and measuring the property value in time.  We can alternatively write the property by its Lagrangian description. That is, given a label , we obtain the current position of the particle associated with this label, , then obtain its property value. This we can write as the following: Now, fixing corresponds to tracking how changes as we move with the particle along the deforming fluid.  There are thus two ways of considering time derivatives.   We use the normal partial derivative notation to refer to an Eulerian time derivative , considered at a fixed point in space:   On the other hand, the Lagrangian time derivative is considered for a fix label. We often refer to the Lagrangian time derivative as the convective derivative or the material derivative .      The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables.   The natural question is how the two derivatives relate to one another. This is given by the following theorem.  The convective derivative   The convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that         You are asked to work out the above proof more carefully using individual coordinates (instead of vector notation) in the problem set.    We can now apply the above result to the question of how to calculate the acceleration within the fluid (more specifically, we are enquiring about the acceleration of a volume or particle within the fluid). The acceleration is given by the convective or material derivative of the velocity:    "
+  "body": " Eulerian and Lagrangian coordinates   There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, . At this point, we then attempt to measure a fluid quantity such as the density, , or temperature, . This is essentially the Eulerian frame . One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.   (a) The Eulerian interpretation; (b) the Lagrangian interpretation.   Alternatively, we can imagine tracking of a single fixed particle (or a fluid element) within the flow. The particle begins at some position. Let us define a label to describe the particle's initial position. For example, if the particle's position is given by we can define the corresponding Lagrangian label as We then ask for the corresponding measurement of the fluid quantity that corresponds to the label . For example, this is equivalent to tagging a free-floating buoy in the ocean with the label , then measuring the temperature of the water as the buoy drifts in the ocean. This temperature, we might write as where is simply a fixed quantity for the particular buoy.    The convective derivative  Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).  Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, , and time, and denote it by . This is the Eulerian description of the property since it is defined by specifying a fixed position in space. Fixing and then measuring is akin to standing in the fluid at a fixed location and measuring the property value in time.  We can alternatively write the property by its Lagrangian description. That is, given a label , we obtain the current position of the particle associated with this label, , then obtain its property value. This we can write as the following: Now, fixing corresponds to tracking how changes as we move with the particle along the deforming fluid.  There are thus two ways of considering time derivatives.   We use the normal partial derivative notation to refer to an Eulerian time derivative , considered at a fixed point in space:   On the other hand, the Lagrangian time derivative is considered for a fix label. We often refer to the Lagrangian time derivative as the convective derivative or the material derivative .      The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables.   The natural question is how the two derivatives relate to one another. This is given by the following theorem.  The material\/convective derivative   The material or convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that         You are asked to work out the above proof more carefully using individual coordinates (instead of vector notation) in the problem set.    We can now apply the above result to the question of how to calculate the acceleration within the fluid (more specifically, we are enquiring about the acceleration of a volume or particle within the fluid). The acceleration is given by the convective or material derivative of the velocity:    "
 },
 {
   "id": "def-eulerlag",
@@ -37,13 +73,13 @@ var ptx_lunr_docs = [
   "body": " The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables.  "
 },
 {
-  "id": "thm-convder",
+  "id": "thm-DDt",
   "level": "2",
-  "url": "sec-eulerlagrang.html#thm-convder",
+  "url": "sec-eulerlagrang.html#thm-DDt",
   "type": "Theorem",
   "number": "2.1.3",
-  "title": "The convective derivative.",
-  "body": " The convective derivative   The convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that     "
+  "title": "The material\/convective derivative.",
+  "body": " The material\/convective derivative   The material or convective derivative can be defined in terms of Eulerian derivative in the following way:    This is a result of the chain rule. For a scalar function , we have the fact that     "
 },
 {
   "id": "subsec-laglabel-8-1",
@@ -244,11 +280,191 @@ var ptx_lunr_docs = [
   "body": "  In the case of inviscid fluids , we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, , which acts in the inward normal direction at each point, with . Consequently, the surface force, given by , is   In particular, for the case of inviscid fluids, we ignore tangential internal forces.    The result follows by a corollary of the diverence theorem. The divergence theorem is Let where and apply to the above.   "
 },
 {
+  "id": "sec-incompressible",
+  "level": "1",
+  "url": "sec-incompressible.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Incompressible flow and Euler",
+  "body": " Incompressible flow and Euler  Recall from that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via . So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy . This leads us to defining the notion of an incompressible fluid.     Incompressible fluids   A fluid is said to be incompressible if it preserves infinitessimal volumes. That is, The following equivalence (iff) then follows:    This is immediate with Euler's identity in .      So in conclusion, for the case of an incompressible fluid, it suffices to solve the equation instead of the more complicated equation in .  By the way, what happens to the mass conservation equation in if the fluid is incompressible? This leads to the following corollary.  Constant density along streamlines   For an incompressible fluid, the density is constant along streamlines, i.e.     This relies on setting in .     Let us return to consider the total sum of equations and unknowns. We have introduced the scalar mass conservation equation found in (or alternatively the more simplified equation for incompressible fluids). Also the vector momentum equation found in . This yields four scalar equations for five unknowns: the pressure , density , and the three velocity components .  One way of proceeding is to attempt to establish or to inuit a relationship between pressure and density. For instance, the assumption of an ideal gas law can be derived from kinetic theory, which leads to the empirical law that , relating pressure in a linear fashion to density, and depending on the temperature, , and a (gas) constant . Other assumptions of the form are possible, and this is involved in the study of gases and compressible fluids .  However, empirically, we observe that in most liquids, the density only varies within a few percent under typical variations of temperature and pressure. Therefore, it is common to assume:   Constant density assumption  We often assume that in the situation of liquids, the density is taken to be constant, .    Note, then that in the case of constant density fluids, if we consider the mass conservation equation , it follows that . Therefore, from the definition , we conclude that the fluid is indeed incompressible.     Confusingly, in many references, authors define a fluid to be incompressible if is constant. However, we see this is not necessarily the case. A fluid can be incompressible and therefore without being constant.     We are finally ready to state the Euler equations .  Euler equations   The Euler equations consist of the continuity equation and momentum equations , considered in the situation of an incompressible fluid: Note this is then four scalar equations for the three unknown velocities in and pressure . We shall assume in the course that incompressible fluids have constant density, . The above Euler equations include the (gravitational) body force .     "
+},
+{
+  "id": "def-incompressible",
+  "level": "2",
+  "url": "sec-incompressible.html#def-incompressible",
+  "type": "Definition",
+  "number": "3.4.1",
+  "title": "Incompressible fluids.",
+  "body": " Incompressible fluids   A fluid is said to be incompressible if it preserves infinitessimal volumes. That is, The following equivalence (iff) then follows:    This is immediate with Euler's identity in .    "
+},
+{
+  "id": "cor-incompressible-density",
+  "level": "2",
+  "url": "sec-incompressible.html#cor-incompressible-density",
+  "type": "Corollary",
+  "number": "3.4.2",
+  "title": "Constant density along streamlines.",
+  "body": " Constant density along streamlines   For an incompressible fluid, the density is constant along streamlines, i.e.     This relies on setting in .   "
+},
+{
+  "id": "sec-incompressible-9-1",
+  "level": "2",
+  "url": "sec-incompressible.html#sec-incompressible-9-1",
+  "type": "Note",
+  "number": "3.4.3",
+  "title": "Constant density assumption.",
+  "body": " Constant density assumption  We often assume that in the situation of liquids, the density is taken to be constant, .  "
+},
+{
+  "id": "sec-incompressible-11-1",
+  "level": "2",
+  "url": "sec-incompressible.html#sec-incompressible-11-1",
+  "type": "Remark",
+  "number": "3.4.4",
+  "title": "",
+  "body": "  Confusingly, in many references, authors define a fluid to be incompressible if is constant. However, we see this is not necessarily the case. A fluid can be incompressible and therefore without being constant.   "
+},
+{
+  "id": "def-euler",
+  "level": "2",
+  "url": "sec-incompressible.html#def-euler",
+  "type": "Definition",
+  "number": "3.4.5",
+  "title": "Euler equations.",
+  "body": " Euler equations   The Euler equations consist of the continuity equation and momentum equations , considered in the situation of an incompressible fluid: Note this is then four scalar equations for the three unknown velocities in and pressure . We shall assume in the course that incompressible fluids have constant density, . The above Euler equations include the (gravitational) body force .   "
+},
+{
+  "id": "sec-bernoulli",
+  "level": "1",
+  "url": "sec-bernoulli.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Bernoulli’s equation",
+  "body": " Bernoulli's equation  There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation and yields the famous Bernoulli equation(s) .  We will first need a vector identity.   Note the following identity:     The proof follows from direct expansion of both sides.     It will also be useful for us to introduce the notion of vorticity.  Vorticity of a vector field   The vorticity , , of a vector field is defined by The vorticity is a measure of the local rotation of the flow.     Let us recall the definition of a conservative force .  Conservative forces   A force is a conservative force if and only if there exists a potential , such that in a simply connected region where the quantities are defined.   Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.    Bernoulli's equation for steady flow   Bernoulli's equation (theorem) for steady flow states that where we have assumed that the body force is conservative , i.e. it can be written as for a potential function, .    Start from the momentum equation , and use the vector identity gives   Next, the flow is steady, and therefore we can zero the first term. This leaves We now take the dot product of both sides of the equation with . We use the fact that, since it is a triple scalar product with two repeated entries. It therefore results in the fact that Notice that this is the steady component that comes from the material derivative, . So we conclude that is constant along streamlines of the flow.  It is useful to note that if we use the definition of vorticity in , and the definition of in , we have from the above that a form that will be useful, shortly.       For the typical gravity force directed in the direction, we can write . So in this case, the (gravitational) potential is .    The proof of introduced a useful form of the momentum equation using the vorticity function, resulting in . This leads to the so-called vorticity equation form of the momentum equation.  The vorticity equation for incompressible flow   The momentum equation for incompressible flow, reposed in terms of the vorticity is: known as the vorticity equation .     In the proof, it is useful to use the vector identity for the curl of a cross product:     Crucially, we recall the result that \"curl grad equals zero\" for a vector field. So from , we take the curl of both sides to obtain Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity . For the second term, we get with the first zero resulting in the fact that \"div curl equals zero\", while the second results from incompressibility.  Thus we have, which is the main result.     Potential flow  We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in and in particular, the reduction of the mass conservation equation to .  We attempt to reduce further by assuming that the fluid is irrotational . This lends to the following definition.  Irrotational flows   A flow is said to be irrotational if the vorticity is identically zero:      For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation.  Bernoulli's equation for steady irrotational flow   For an incompressible and irrotational flow, Bernoulli's theorem states that where is the body force.       The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.     "
+},
+{
+  "id": "ident-ugradu",
+  "level": "2",
+  "url": "sec-bernoulli.html#ident-ugradu",
+  "type": "Identity",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  Note the following identity:     The proof follows from direct expansion of both sides.   "
+},
+{
+  "id": "def-vorticity",
+  "level": "2",
+  "url": "sec-bernoulli.html#def-vorticity",
+  "type": "Definition",
+  "number": "3.5.2",
+  "title": "Vorticity of a vector field.",
+  "body": " Vorticity of a vector field   The vorticity , , of a vector field is defined by The vorticity is a measure of the local rotation of the flow.   "
+},
+{
+  "id": "def-conservative-force",
+  "level": "2",
+  "url": "sec-bernoulli.html#def-conservative-force",
+  "type": "Definition",
+  "number": "3.5.3",
+  "title": "Conservative forces.",
+  "body": " Conservative forces   A force is a conservative force if and only if there exists a potential , such that in a simply connected region where the quantities are defined.   "
+},
+{
+  "id": "thm-bernoulli-steady",
+  "level": "2",
+  "url": "sec-bernoulli.html#thm-bernoulli-steady",
+  "type": "Theorem",
+  "number": "3.5.4",
+  "title": "Bernoulli’s equation for steady flow.",
+  "body": " Bernoulli's equation for steady flow   Bernoulli's equation (theorem) for steady flow states that where we have assumed that the body force is conservative , i.e. it can be written as for a potential function, .    Start from the momentum equation , and use the vector identity gives   Next, the flow is steady, and therefore we can zero the first term. This leaves We now take the dot product of both sides of the equation with . We use the fact that, since it is a triple scalar product with two repeated entries. It therefore results in the fact that Notice that this is the steady component that comes from the material derivative, . So we conclude that is constant along streamlines of the flow.  It is useful to note that if we use the definition of vorticity in , and the definition of in , we have from the above that a form that will be useful, shortly.   "
+},
+{
+  "id": "sec-bernoulli-7-1",
+  "level": "2",
+  "url": "sec-bernoulli.html#sec-bernoulli-7-1",
+  "type": "Remark",
+  "number": "3.5.5",
+  "title": "",
+  "body": " For the typical gravity force directed in the direction, we can write . So in this case, the (gravitational) potential is .  "
+},
+{
+  "id": "thm-vorticity-equation",
+  "level": "2",
+  "url": "sec-bernoulli.html#thm-vorticity-equation",
+  "type": "Theorem",
+  "number": "3.5.6",
+  "title": "The vorticity equation for incompressible flow.",
+  "body": " The vorticity equation for incompressible flow   The momentum equation for incompressible flow, reposed in terms of the vorticity is: known as the vorticity equation .   "
+},
+{
+  "id": "sec-bernoulli-10-1",
+  "level": "2",
+  "url": "sec-bernoulli.html#sec-bernoulli-10-1",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Crucially, we recall the result that \"curl grad equals zero\" for a vector field. So from , we take the curl of both sides to obtain Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity . For the second term, we get with the first zero resulting in the fact that \"div curl equals zero\", while the second results from incompressibility.  Thus we have, which is the main result.  "
+},
+{
+  "id": "def-irrotational",
+  "level": "2",
+  "url": "sec-bernoulli.html#def-irrotational",
+  "type": "Definition",
+  "number": "3.5.7",
+  "title": "Irrotational flows.",
+  "body": " Irrotational flows   A flow is said to be irrotational if the vorticity is identically zero:    "
+},
+{
+  "id": "thm-bernoulli-potential",
+  "level": "2",
+  "url": "sec-bernoulli.html#thm-bernoulli-potential",
+  "type": "Theorem",
+  "number": "3.5.8",
+  "title": "Bernoulli’s equation for steady irrotational flow.",
+  "body": " Bernoulli's equation for steady irrotational flow   For an incompressible and irrotational flow, Bernoulli's theorem states that where is the body force.   "
+},
+{
+  "id": "subsec-potential-5-1",
+  "level": "2",
+  "url": "sec-bernoulli.html#subsec-potential-5-1",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.  "
+},
+{
+  "id": "ch-chapter-potentialflows",
+  "level": "1",
+  "url": "ch-chapter-potentialflows.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "Potential flows",
+  "body": " Potential flows   Brief introduction to appear here.   "
+},
+{
+  "id": "ch-chapter-waves",
+  "level": "1",
+  "url": "ch-chapter-waves.html",
+  "type": "Chapter",
+  "number": "5",
+  "title": "Water waves",
+  "body": " Water waves   Brief introduction to appear here.   "
+},
+{
+  "id": "ch-chapter-viscous",
+  "level": "1",
+  "url": "ch-chapter-viscous.html",
+  "type": "Chapter",
+  "number": "6",
+  "title": "Viscous flows",
+  "body": " Viscous flows   Brief introduction to appear here.   "
+},
+{
   "id": "ws-intro",
   "level": "1",
   "url": "ws-intro.html",
   "type": "Worksheet",
-  "number": "4.1",
+  "number": "7.1",
   "title": "Boo.",
   "body": " Boo.   Test.    Blah.   "
 },
@@ -257,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-intro.html#ws-intro-3",
   "type": "Worksheet Exercise",
-  "number": "4.1.1",
+  "number": "7.1.1",
   "title": "",
   "body": " Blah.  "
 },
@@ -265,10 +481,19 @@ var ptx_lunr_docs = [
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": " This book was authored in PreTeXt .  "
+  "type": "Appendix",
+  "number": "A",
+  "title": "Vector calculus",
+  "body": " Vector calculus  Vector identities go here.  "
+},
+{
+  "id": "backmatter-3",
+  "level": "1",
+  "url": "backmatter-3.html",
+  "type": "Appendix",
+  "number": "B",
+  "title": "List of Symbols",
+  "body": " List of Symbols   "
 }
 ]
 
