@@ -77,7 +77,7 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Mathematical fluids dynamics">
+<meta property="book:title" content="Fluids dynamics (MA32051)">
 <meta property="book:author" content=" ">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
@@ -115,10 +115,10 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematical fluids dynamics</span></a></h1>
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Fluids dynamics (MA32051)</span> <span class="subtitle">A first course on the mathematics of fluid dynamics</span></a></h1>
 <p class="byline"> </p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -152,6 +152,9 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -208,7 +211,10 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Potential and streamfunction</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter-viscous.html" class="internal"><span class="codenumber">6</span> <span class="title">Viscous flows</span></a></div></li>
 <li class="toc-item toc-chapter">
@@ -220,6 +226,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -227,106 +234,21 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Preface</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Related units at Bath</span>
 </h2>
 <div class="para logical" id="frontmatter-5-2">
-<div class="para">There are a great many units at Bath which, in one way or another, touch on partial differential equations (PDEs) or related techniques in analysis. Here is a (partial!) list of (pre-Curriculum Transformation):</div>
 <ul class="disc" id="frontmatter-5-2-1">
 <li id="frontmatter-5-2-1-1">
-<span class="heading"><span class="title">MA20223: Vector calculus and partial differential equations.</span></span><div class="para" id="frontmatter-5-2-1-1-2">This applied unit is a prerequisite for MA40203. It introduces three classic PDEs: the Laplace equation, the heat equation and the wave equation. Moreover, it shown how to solve these equations in (extremely) special domains using separation of variables.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading"><span class="title">MA22016: Differential equations and vector calculus.</span></span><div class="para" id="frontmatter-5-2-1-1-2">
+<a class="external" href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22016.html" target="_blank">This unit</a> forms a standard second-year module on differential equations and vector calculus, and is a key pre-requisite for this module. In addition to teaching and reviewing basic techniques for solving ordinary differential equations, you will learn about some of the core methods in vector calculus (directional derivatives; gradients; potentials; line integrals; divergence; curl; surface and volume integrals; curvilinear coordinates; integral theorems).<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item: MA20223: Vector calculus and partial differential equations"><a href="#frontmatter-5-2-1-1" title="Copy heading and permalink for Item: MA20223: Vector calculus and partial differential equations" aria-label="Copy heading and permalink for Item: MA20223: Vector calculus and partial differential equations">🔗</a></div>
+<div class="autopermalink" data-description="Item: MA22016: Differential equations and vector calculus"><a href="#frontmatter-5-2-1-1" title="Copy heading and permalink for Item: MA22016: Differential equations and vector calculus" aria-label="Copy heading and permalink for Item: MA22016: Differential equations and vector calculus">🔗</a></div>
 </li>
 <li id="frontmatter-5-2-1-2">
-<span class="heading"><span class="title">MA30039: Differential geometry of curves &amp; surfaces.</span></span><div class="para" id="frontmatter-5-2-1-2-2">Potential topics include ‘special surfaces’ such as minimal surfaces and surfaces of constant mean or Gauss curvature. These are closely related to PDEs such as the minimal surface equation.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="heading"><span class="title">MA22021: Partial differential equations.</span></span><div class="para" id="frontmatter-5-2-1-2-2">
+<a class="external" href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22021.html" target="_blank">This module</a> teaches basic techniques and theory for the core PDEs (Laplace, heat, wave equations). Generally, we will make with your broad familiarity of PDE different equation types and terminology (e.g. boundary conditions).<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item: MA30039: Differential geometry of curves &amp; surfaces"><a href="#frontmatter-5-2-1-2" title="Copy heading and permalink for Item: MA30039: Differential geometry of curves &amp; surfaces" aria-label="Copy heading and permalink for Item: MA30039: Differential geometry of curves &amp; surfaces">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-3">
-<span class="heading"><span class="title">MA30044: Mathematical methods 1.</span></span><div class="para" id="frontmatter-5-2-1-3-2">This applied unit covers quasilinear first-order PDEs, the Cauchy–Kovalevskaya theorem, classification of equations as elliptic/parabolic/hyperbolic and d’Alembert’s solution for the one-dimensional wave equation.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30044: Mathematical methods 1"><a href="#frontmatter-5-2-1-3" title="Copy heading and permalink for Item: MA30044: Mathematical methods 1" aria-label="Copy heading and permalink for Item: MA30044: Mathematical methods 1">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-4">
-<span class="heading"><span class="title">MA30252: Advanced real analysis.</span></span><div class="para" id="frontmatter-5-2-1-4-2">This pure unit is a prerequisite for MA40203. It shows that <span class="process-math">\(C^k([a,b])\)</span> is a Banach space, defines the Hilbert space <span class="process-math">\(L^2(a,b)\)</span> as a completion, and proves the Arzelà–Ascoli and Weierstrass approximation theorems.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30252: Advanced real analysis"><a href="#frontmatter-5-2-1-4" title="Copy heading and permalink for Item: MA30252: Advanced real analysis" aria-label="Copy heading and permalink for Item: MA30252: Advanced real analysis">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-5">
-<span class="heading"><span class="title">MA30253: Continuum mechanics.</span></span><div class="para" id="frontmatter-5-2-1-5-2">Introduces a variety of PDEs, including Euler’s equations for inviscid fluids, and studies them from an applied point of view.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30253: Continuum mechanics"><a href="#frontmatter-5-2-1-5" title="Copy heading and permalink for Item: MA30253: Continuum mechanics" aria-label="Copy heading and permalink for Item: MA30253: Continuum mechanics">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-6">
-<span class="heading"><span class="title">MA30170: Numerical solution of elliptic PDEs.</span></span><div class="para" id="frontmatter-5-2-1-6-2">Introduces variational and weak forms of elliptic PDEs, and how to solve them numerically using finite element methods.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30170: Numerical solution of elliptic PDEs"><a href="#frontmatter-5-2-1-6" title="Copy heading and permalink for Item: MA30170: Numerical solution of elliptic PDEs" aria-label="Copy heading and permalink for Item: MA30170: Numerical solution of elliptic PDEs">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-7">
-<span class="heading"><span class="title">MA40171: Numerical solution of evolutionary equations.</span></span><div class="para" id="frontmatter-5-2-1-7-2">Covers numerical methods for parabolic and hyperbolic PDEs.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA40171: Numerical solution of evolutionary equations"><a href="#frontmatter-5-2-1-7" title="Copy heading and permalink for Item: MA40171: Numerical solution of evolutionary equations" aria-label="Copy heading and permalink for Item: MA40171: Numerical solution of evolutionary equations">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-8">
-<span class="heading"><span class="title">MA30059: Mathematical methods 2.</span></span><div class="para" id="frontmatter-5-2-1-8-2">An applied unit which often covers more advanced techniques for the Laplace and heat equations, for instance Green’s functions and separation of variables for inhomogeneous systems. May also cover the calculus of variations, which is an important source of PDEs.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30059: Mathematical methods 2"><a href="#frontmatter-5-2-1-8" title="Copy heading and permalink for Item: MA30059: Mathematical methods 2" aria-label="Copy heading and permalink for Item: MA30059: Mathematical methods 2">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-9">
-<span class="heading"><span class="title">MA30063: Mathematical biology 2.</span></span><div class="para" id="frontmatter-5-2-1-9-2">This applied unit concerns the modelling and analysis of PDEs arising in biology.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA30063: Mathematical biology 2"><a href="#frontmatter-5-2-1-9" title="Copy heading and permalink for Item: MA30063: Mathematical biology 2" aria-label="Copy heading and permalink for Item: MA30063: Mathematical biology 2">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-10">
-<span class="heading"><span class="title">MA40256: Analysis in Hilbert spaces.</span></span><div class="para" id="frontmatter-5-2-1-10-2">This pure unit studies linear mappings between Hilbert spaces, which is an abstract setting often used to study PDEs. Potential topics include the Lax–Milgram theorem, which is a powerful tool to show the existence of solutions to certain PDEs. (MA40256 and MA40057 are offered in alternating years.)<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA40256: Analysis in Hilbert spaces"><a href="#frontmatter-5-2-1-10" title="Copy heading and permalink for Item: MA40256: Analysis in Hilbert spaces" aria-label="Copy heading and permalink for Item: MA40256: Analysis in Hilbert spaces">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-11">
-<span class="heading"><span class="title">MA40049: Elasticity.</span></span><div class="para" id="frontmatter-5-2-1-11-2">Another applied unit with many connections to PDEs.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA40049: Elasticity"><a href="#frontmatter-5-2-1-11" title="Copy heading and permalink for Item: MA40049: Elasticity" aria-label="Copy heading and permalink for Item: MA40049: Elasticity">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-12">
-<span class="heading"><span class="title">MA40042: Measure theory &amp; integration.</span></span><div class="para" id="frontmatter-5-2-1-12-2">Provides a detailed description of the function spaces <span class="process-math">\(L^p\)</span> for <span class="process-math">\(1
-≤ p ≤ ∞\text{,}\)</span> which are very useful in the study of PDEs.<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA40042: Measure theory &amp; integration"><a href="#frontmatter-5-2-1-12" title="Copy heading and permalink for Item: MA40042: Measure theory &amp; integration" aria-label="Copy heading and permalink for Item: MA40042: Measure theory &amp; integration">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-13">
-<span class="heading"><span class="title">MA40057: Functional analysis.</span></span><div class="para" id="frontmatter-5-2-1-13-2">This pure unit studies linear operators between Banach spaces, which is another commonly-used abstract setting for PDEs. Covers weak and weak-* convergence, which are often used to show existence of solutions to PDEs. (MA40256 and MA40057 are offered in alternating years.)<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2-1-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item: MA40057: Functional analysis"><a href="#frontmatter-5-2-1-13" title="Copy heading and permalink for Item: MA40057: Functional analysis" aria-label="Copy heading and permalink for Item: MA40057: Functional analysis">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-14">
-<div class="para" id="p-derived-frontmatter-5-2-1-14">There are also connections to some of the higher-level probability units through the Feynman–Kac formula, Fokker–Plank equations, and of course stochastic PDEs.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-2-1-14" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="frontmatter-5-2-1-15">
-<div class="para" id="p-derived-frontmatter-5-2-1-15">There are also connections to the units on ordinary differential equations and dynamical systems, especially some of the higher-level units with a focus rigorous existence and/or qualitative properties of solutions.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-2-1-15" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item: MA22021: Partial differential equations"><a href="#frontmatter-5-2-1-2" title="Copy heading and permalink for Item: MA22021: Partial differential equations" aria-label="Copy heading and permalink for Item: MA22021: Partial differential equations">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="frontmatter-5-3">
-<div class="para">In this unit:</div>
-<ul class="disc" id="frontmatter-5-3-1">
-<li id="frontmatter-5-3-1-1">
-<div class="para" id="p-derived-frontmatter-5-3-1-1">We will study PDEs from a pure rather than applied point of view. We will not do any modelling, nor indeed spend much time at all motivating the PDEs we study. Instead, we will spend a lot of time working through rigorous proofs with <span class="process-math">\(ε\)</span>s, <span class="process-math">\(δ\)</span>s, and convergent subsequences of functions.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="frontmatter-5-3-1-2">
-<div class="para" id="p-derived-frontmatter-5-3-1-2">On the other hand we will not use tools from Functional analysis, Hilbert space theory or Measure theory &amp; integration.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="frontmatter-5-3-1-3">
-<div class="para" id="p-derived-frontmatter-5-3-1-3">We will consider second-order PDEs on quite general domains and with quite general coefficients. Such equations cannot be solved explicitly using separation of variables or Green’s functions techniques. Instead, we focus on qualitative properties such as existence, uniqueness and symmetry.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="frontmatter-5-3-1-4">
-<div class="para" id="p-derived-frontmatter-5-3-1-4">Rather than attempt a broad survey, we will focus almost exclusively on a single tool, the maximum principle, and develop it to a high level of sophistication.</div>
-<div class="autopermalink" data-description="Item"><a href="#frontmatter-5-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Preface: Related units at Bath"><a href="#frontmatter-5" title="Copy heading and permalink for Preface: Related units at Bath" aria-label="Copy heading and permalink for Preface: Related units at Bath">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
