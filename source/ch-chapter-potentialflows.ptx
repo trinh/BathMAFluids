@@ -4,7 +4,90 @@
   <title>Potential flows</title>
 
   <introduction>
-    <p>Brief introduction to appear here.</p>
+    <p>Typically, the most basic introduction on fluid dynamics usually involves the study of two-dimensional incompressible and irrotational flows, otherwise known as <em>potential flows</em>. There is a good reason for this: the theory is elegant, visualisable, and uses to its benefit the enormous power of complex-variable theory. </p>
   </introduction>
+
+<section xml:id="sec-Potential-and-streamfunction">
+  <title>Potential and streamfunction</title>
+
+  <p>
+    In this chapter, we focus on 2D flows where the velocity vector is given by 
+    <me>
+      \bu(x, y, t) = u(x, y, t)\bi + v(x, y, z)\bj = [u, v].
+    </me>
+    With the velocity given as above, the vorticity is then 
+    <men xml:id="eqn-2d-vorticity">
+      \bomega = \nabla \times \bu = \left(\pd{v}{x} - \pd{u}{y}\right)\bk.
+    </men>
+    If we assume that the flow is irrotational according to <xref ref="def-irrotational"/>, then <m>\nabla \times \bu = 0</m> and 
+    <me>
+      \pd{v}{x} - \pd{u}{y} = 0.
+    </me>
+  </p>
+
+  <p>
+    Further, we know that if the flow is irrotational, then there exists a <em>velocity potential</em>, <m>\phi</m>, such that <m>\bu = \nabla \phi</m>. Thus the velocities are expressed as 
+    <men xml:id="eqn-vel-potential">
+      u = \pd{\phi}{x} \quad \textrm{and} \quad v = \pd{\phi}{y}.
+    </men>
+  </p>
+
+  <p>
+    Now we furthermore have assumed that the flow is incompressible. Therefore from <xref ref="def-incompressible"/>,
+    <men xml:id="eqn-2d-divu">
+      \nabla \cdot \bu = \pd{u}{x} + \pd{v}{y} = \pd{^2\phi}{x^2} + \pd{^2\phi}{y^2} = 0.
+    </men>
+    This is the crucial result, which is that in potential flows, we need only solve the Laplace equation: 
+    <men xml:id="eqn-2d-laplace">
+      \nabla^2 \phi = 0,
+    </men>
+    within the flow region. This is effectively a single linear equation for the single unknown <m>\phi</m>. However, for different problems, the boundary conditions can render even this "simple" problem difficult. 
+  </p>
+
+  <p>
+  Once the velocity potential <m>\phi</m> has been solved, the velocities in the flow can be recovered from the relationship <xref ref="eqn-vel-potential"/>. The pressure in the flow also follows from Bernoulli's equation. For the situation of a steady potential flow, following <xref ref="thm-bernoulli-potential"/>, it is 
+  <men xml:id="eqn-2d-bernoulli">
+    \frac{p}{\rho} + \frac{1}{2} |\nabla \phi|^2 + \chi = \textrm{constant}.
+  </men>
+  </p>
+
+  <p>
+    <example>
+      <title>Uniform flow</title>
+      <idx><h>uniform flow</h></idx>
+     <p>
+      Consider the potential given by the linear function 
+      <me>
+        \phi(x, y) = Ux \cos\alpha + Uy \sin\alpha,
+      </me>
+      with constants <m>U</m> and <m>\alpha</m>. Then by differentiation we have that the velicity is 
+      <me>
+        \bu = U[\cos\alpha, \sin\alpha].
+      </me>
+      Therefore this is a constant velocity field with vectors oriented an angle <m>\alpha</m> to the horizontal.
+     </p> 
+      
+    </example>
+  </p>
+
+  <p>
+    <example>
+      <title>Stagnation point flow</title><idx><h>stagnation point flow</h></idx>
+      <p>
+        We can verify that the velocity potential 
+        <me>
+          \phi = \frac{1}{2} (x^2 - y^2),
+        </me>
+        satisfies Laplace's equation. The corresponding velocity field is given by 
+        <me>
+          [u, v] = [x, -y]. 
+        </me>
+       and corresponds to <em>stagnation point flow</em>.
+      </p>
+      
+    </example>
+  </p>
+  
+</section>
 
 </chapter>

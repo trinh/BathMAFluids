@@ -94,23 +94,19 @@ As part of the curriculum transformation (with the first change to Year 3 in 202
 
 <preface><title>Related units at Bath</title>
 <p>
-There are a great many units at Bath which, in one way or another, touch on
-partial differential equations (PDEs) or related techniques in analysis. Here
-is a (partial!) list of (pre-Curriculum Transformation):
-<ul><li>
-  <title>MA20223: Vector calculus and partial differential equations</title><p>
-    This applied unit is a prerequisite for MA40203. It introduces three classic
-    PDEs: the Laplace equation, the heat equation and the wave
-    equation. Moreover, it shown how to solve these equations in (extremely)
-    special domains using separation of variables.
+<ul>
+  <li>
+  <title>MA22016: Differential equations and vector calculus</title>
+  <p>
+    <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22016.html">This unit</url> forms a standard second-year module on differential equations and vector calculus, and is a key pre-requisite for this module. In addition to teaching and reviewing basic techniques for solving ordinary differential equations, you will learn about some of the core methods in vector calculus (directional derivatives; gradients; potentials; line integrals; divergence; curl; surface and volume integrals; curvilinear coordinates; integral theorems). 
   </p>
-</li><li>
-  <title>MA30039: Differential geometry of curves &amp; surfaces</title><p>
-    Potential topics include <sq>special surfaces</sq> such as minimal surfaces
-    and surfaces of constant mean or Gauss curvature. These are closely related to
-    PDEs such as the minimal surface equation.
+</li>
+<li>
+  <title>MA22021: Partial differential equations</title><p>
+ <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22021.html" >This module</url> teaches basic techniques and theory for the core PDEs (Laplace, heat, wave equations). Generally, we will make with your broad familiarity of PDE different equation types and terminology (e.g. boundary conditions).  
   </p>
-</li><li>
+</li>
+<!-- <li>
   <title>MA30044: Mathematical methods 1</title><p>
     This applied unit covers quasilinear first-order PDEs, the
     Cauchy<ndash/>Kovalevskaya theorem, classification of equations as
@@ -181,8 +177,10 @@ is a (partial!) list of (pre-Curriculum Transformation):
   There are also connections to the units on ordinary differential
   equations and dynamical systems, especially some of the higher-level units
   with a focus rigorous existence and/or qualitative properties of solutions.
-</li></ul>
-</p><p>
+</li> -->
+</ul>
+</p>
+<!-- <p>
 In this unit:
 <ul><li>
   We will study PDEs from a pure rather than applied point of view. We will
@@ -202,7 +200,7 @@ In this unit:
   single tool, the maximum principle, and develop it to a high level of
   sophistication.
 </li></ul>
-</p>
+</p> -->
 
 </preface>
 
