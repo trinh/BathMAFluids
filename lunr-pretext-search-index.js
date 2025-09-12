@@ -37,9 +37,9 @@ var ptx_lunr_docs = [
   "body": "Moodle page   Besides this document, the main resource for this unit is the Moodle page . There is also a folder on Re:View for the recordings . In Week 1 we walked through this Moodle page and talked about various other administrative things; unfortunately the recording was lost due to a Moodle\/Panopto error.  "
 },
 {
-  "id": "ch-chapter00-introduction",
+  "id": "ch-chapter01-introduction",
   "level": "1",
-  "url": "ch-chapter00-introduction.html",
+  "url": "ch-chapter01-introduction.html",
   "type": "Chapter",
   "number": "1",
   "title": "Introduction",
@@ -190,9 +190,9 @@ var ptx_lunr_docs = [
   "body": " In 1D, Reynolds transport theorem reduces to an identity known as Leibniz's rule. This will be proven in your problem sets.  "
 },
 {
-  "id": "ch-chapter01-equations-4",
+  "id": "ch-chapter03-equations-4",
   "level": "1",
-  "url": "ch-chapter01-equations-4.html",
+  "url": "ch-chapter03-equations-4.html",
   "type": "Section",
   "number": "3.2",
   "title": "Conservation of mass",
@@ -201,16 +201,16 @@ var ptx_lunr_docs = [
 {
   "id": "thm-mass",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#thm-mass",
+  "url": "ch-chapter03-equations-4.html#thm-mass",
   "type": "Theorem",
   "number": "3.2.1",
   "title": "Continuity equation.",
   "body": " Continuity equation   The differential form of the law of conservation of mass, otherwise known as the continuity equation is where is the density of the fluid and is the velocity of the fluid.  The above form is equivalent, by the definition of the convective derivative, to    "
 },
 {
-  "id": "ch-chapter01-equations-4-4",
+  "id": "ch-chapter03-equations-4-4",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#ch-chapter01-equations-4-4",
+  "url": "ch-chapter03-equations-4.html#ch-chapter03-equations-4-4",
   "type": "Proof",
   "number": "3.2.1",
   "title": "",
@@ -219,25 +219,25 @@ var ptx_lunr_docs = [
 {
   "id": "fig-normalvolume",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#fig-normalvolume",
+  "url": "ch-chapter03-equations-4.html#fig-normalvolume",
   "type": "Figure",
   "number": "3.2.2",
   "title": "",
   "body": " Picture of the fluid volume, , shown in blue, with a small surface element, , and the outwards flux.   Fluid   "
 },
 {
-  "id": "ch-chapter01-equations-4-5-4-1",
+  "id": "ch-chapter03-equations-4-5-4-1",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#ch-chapter01-equations-4-5-4-1",
+  "url": "ch-chapter03-equations-4.html#ch-chapter03-equations-4-5-4-1",
   "type": "Theorem",
   "number": "3.2.3",
   "title": "Integral form of the law of conservation of mass.",
   "body": " Integral form of the law of conservation of mass  Given a fixed volume element and boundary , the integral form of the law of mass conservation is   "
 },
 {
-  "id": "ch-chapter01-equations-4-5-4-2",
+  "id": "ch-chapter03-equations-4-5-4-2",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#ch-chapter01-equations-4-5-4-2",
+  "url": "ch-chapter03-equations-4.html#ch-chapter03-equations-4-5-4-2",
   "type": "Proof",
   "number": "1",
   "title": "",
@@ -246,7 +246,7 @@ var ptx_lunr_docs = [
 {
   "id": "cor-convmass",
   "level": "2",
-  "url": "ch-chapter01-equations-4.html#cor-convmass",
+  "url": "ch-chapter03-equations-4.html#cor-convmass",
   "type": "Corollary",
   "number": "3.2.4",
   "title": "",
@@ -478,27 +478,27 @@ var ptx_lunr_docs = [
   "body": " Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   "
 },
 {
-  "id": "ch-chapter-waves",
+  "id": "ch-chapter05-waves",
   "level": "1",
-  "url": "ch-chapter-waves.html",
+  "url": "ch-chapter05-waves.html",
   "type": "Chapter",
   "number": "5",
   "title": "Water waves",
   "body": " Water waves   Brief introduction to appear here.   "
 },
 {
-  "id": "ch-chapter05-vorticity",
+  "id": "ch-chapter06-vorticity",
   "level": "1",
-  "url": "ch-chapter05-vorticity.html",
+  "url": "ch-chapter06-vorticity.html",
   "type": "Chapter",
   "number": "6",
   "title": "Vorticity",
   "body": " Vorticity   Brief introduction to appear here.   "
 },
 {
-  "id": "ch-chapter06-viscousflows",
+  "id": "ch-chapter07-viscousflows",
   "level": "1",
-  "url": "ch-chapter06-viscousflows.html",
+  "url": "ch-chapter07-viscousflows.html",
   "type": "Chapter",
   "number": "7",
   "title": "Viscous flows",
