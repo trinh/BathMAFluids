@@ -487,11 +487,20 @@ var ptx_lunr_docs = [
   "body": " Water waves   Brief introduction to appear here.   "
 },
 {
-  "id": "ch-chapter-viscous",
+  "id": "ch-chapter05-vorticity",
   "level": "1",
-  "url": "ch-chapter-viscous.html",
+  "url": "ch-chapter05-vorticity.html",
   "type": "Chapter",
   "number": "6",
+  "title": "Vorticity",
+  "body": " Vorticity   Brief introduction to appear here.   "
+},
+{
+  "id": "ch-chapter06-viscousflows",
+  "level": "1",
+  "url": "ch-chapter06-viscousflows.html",
+  "type": "Chapter",
+  "number": "7",
   "title": "Viscous flows",
   "body": " Viscous flows   Brief introduction to appear here. Are we ready?   "
 },
@@ -500,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "ws-intro.html",
   "type": "Worksheet",
-  "number": "7.1",
+  "number": "8.1",
   "title": "Boo.",
   "body": " Boo.   Test.    Blah.   "
 },
@@ -509,7 +518,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-intro.html#ws-intro-3",
   "type": "Worksheet Exercise",
-  "number": "7.1.1",
+  "number": "8.1.1",
   "title": "",
   "body": " Blah.  "
 },
