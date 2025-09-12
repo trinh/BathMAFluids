@@ -25,7 +25,7 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "Related units at Bath",
-  "body": "Related units at Bath  There are a great many units at Bath which, in one way or another, touch on partial differential equations (PDEs) or related techniques in analysis. Here is a (partial!) list of (pre-Curriculum Transformation):  MA20223: Vector calculus and partial differential equations This applied unit is a prerequisite for MA40203. It introduces three classic PDEs: the Laplace equation, the heat equation and the wave equation. Moreover, it shown how to solve these equations in (extremely) special domains using separation of variables.   MA30039: Differential geometry of curves & surfaces Potential topics include special surfaces such as minimal surfaces and surfaces of constant mean or Gauss curvature. These are closely related to PDEs such as the minimal surface equation.   MA30044: Mathematical methods 1 This applied unit covers quasilinear first-order PDEs, the Cauchy Kovalevskaya theorem, classification of equations as elliptic\/parabolic\/hyperbolic and d'Alembert's solution for the one-dimensional wave equation.   MA30252: Advanced real analysis This pure unit is a prerequisite for MA40203. It shows that is a Banach space, defines the Hilbert space as a completion, and proves the Arzelà Ascoli and Weierstrass approximation theorems.   MA30253: Continuum mechanics Introduces a variety of PDEs, including Euler's equations for inviscid fluids, and studies them from an applied point of view.   MA30170: Numerical solution of elliptic PDEs Introduces variational and weak forms of elliptic PDEs, and how to solve them numerically using finite element methods.   MA40171: Numerical solution of evolutionary equations Covers numerical methods for parabolic and hyperbolic PDEs.   MA30059: Mathematical methods 2 An applied unit which often covers more advanced techniques for the Laplace and heat equations, for instance Green's functions and separation of variables for inhomogeneous systems. May also cover the calculus of variations, which is an important source of PDEs.   MA30063: Mathematical biology 2 This applied unit concerns the modelling and analysis of PDEs arising in biology.   MA40256: Analysis in Hilbert spaces This pure unit studies linear mappings between Hilbert spaces, which is an abstract setting often used to study PDEs. Potential topics include the Lax Milgram theorem, which is a powerful tool to show the existence of solutions to certain PDEs. (MA40256 and MA40057 are offered in alternating years.)   MA40049: Elasticity Another applied unit with many connections to PDEs.   MA40042: Measure theory & integration Provides a detailed description of the function spaces for , which are very useful in the study of PDEs.   MA40057: Functional analysis This pure unit studies linear operators between Banach spaces, which is another commonly-used abstract setting for PDEs. Covers weak and weak-* convergence, which are often used to show existence of solutions to PDEs. (MA40256 and MA40057 are offered in alternating years.)  There are also connections to some of the higher-level probability units through the Feynman Kac formula, Fokker Plank equations, and of course stochastic PDEs. There are also connections to the units on ordinary differential equations and dynamical systems, especially some of the higher-level units with a focus rigorous existence and\/or qualitative properties of solutions.  In this unit: We will study PDEs from a pure rather than applied point of view. We will not do any modelling, nor indeed spend much time at all motivating the PDEs we study. Instead, we will spend a lot of time working through rigorous proofs with s, s, and convergent subsequences of functions. On the other hand we will not use tools from Functional analysis, Hilbert space theory or Measure theory & integration. We will consider second-order PDEs on quite general domains and with quite general coefficients. Such equations cannot be solved explicitly using separation of variables or Green's functions techniques. Instead, we focus on qualitative properties such as existence, uniqueness and symmetry. Rather than attempt a broad survey, we will focus almost exclusively on a single tool, the maximum principle, and develop it to a high level of sophistication.   "
+  "body": "Related units at Bath     MA22016: Differential equations and vector calculus   This unit forms a standard second-year module on differential equations and vector calculus, and is a key pre-requisite for this module. In addition to teaching and reviewing basic techniques for solving ordinary differential equations, you will learn about some of the core methods in vector calculus (directional derivatives; gradients; potentials; line integrals; divergence; curl; surface and volume integrals; curvilinear coordinates; integral theorems).    MA22021: Partial differential equations  This module teaches basic techniques and theory for the core PDEs (Laplace, heat, wave equations). Generally, we will make with your broad familiarity of PDE different equation types and terminology (e.g. boundary conditions).       "
 },
 {
   "id": "frontmatter-6",
@@ -43,7 +43,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "1",
   "title": "Introduction",
-  "body": " Introduction   Brief introduction to appear here.   "
+  "body": " Introduction   Brief introduction to appear here. Let's get started with this! A fluid. Hello world again.   "
 },
 {
   "id": "sec-eulerlagrang",
@@ -433,13 +433,49 @@ var ptx_lunr_docs = [
   "body": " The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.  "
 },
 {
-  "id": "ch-chapter-potentialflows",
+  "id": "sec-Potential-and-streamfunction",
   "level": "1",
-  "url": "ch-chapter-potentialflows.html",
-  "type": "Chapter",
-  "number": "4",
-  "title": "Potential flows",
-  "body": " Potential flows   Brief introduction to appear here.   "
+  "url": "sec-Potential-and-streamfunction.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Potential and streamfunction",
+  "body": " Potential and streamfunction  In this chapter, we focus on 2D flows where the velocity vector is given by With the velocity given as above, the vorticity is then If we assume that the flow is irrotational according to , then and   Further, we know that if the flow is irrotational, then there exists a velocity potential , , such that . Thus the velocities are expressed as   Now we furthermore have assumed that the flow is incompressible. Therefore from , This is the crucial result, which is that in potential flows, we need only solve the Laplace equation: within the flow region. This is effectively a single linear equation for the single unknown . However, for different problems, the boundary conditions can render even this \"simple\" problem difficult.  Once the velocity potential has been solved, the velocities in the flow can be recovered from the relationship . The pressure in the flow also follows from Bernoulli's equation. For the situation of a steady potential flow, following , it is    Elementary flows  The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source\/sink flows.    Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is Therefore this is a constant velocity field with vectors oriented an angle to the horizontal.      Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .      Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink     Crucially, because the governing fluid mechanical equation is only Laplace's equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow.    Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as       On the streamfunction   "
+},
+{
+  "id": "sec-Potential-and-streamfunction-6-3-1",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-3-1",
+  "type": "Example",
+  "number": "4.1.1",
+  "title": "Uniform flow.",
+  "body": " Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is Therefore this is a constant velocity field with vectors oriented an angle to the horizontal.  "
+},
+{
+  "id": "sec-Potential-and-streamfunction-6-4-1",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-4-1",
+  "type": "Example",
+  "number": "4.1.2",
+  "title": "Stagnation point flow.",
+  "body": " Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .  "
+},
+{
+  "id": "sec-Potential-and-streamfunction-6-5-1",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-5-1",
+  "type": "Example",
+  "number": "4.1.3",
+  "title": "Line source.",
+  "body": " Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink   "
+},
+{
+  "id": "sec-Potential-and-streamfunction-6-7-1",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-7-1",
+  "type": "Example",
+  "number": "4.1.4",
+  "title": "Line source in a uniform flow.",
+  "body": " Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   "
 },
 {
   "id": "ch-chapter-waves",
@@ -457,7 +493,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "6",
   "title": "Viscous flows",
-  "body": " Viscous flows   Brief introduction to appear here.   "
+  "body": " Viscous flows   Brief introduction to appear here. Are we ready?   "
 },
 {
   "id": "ws-intro",
@@ -494,6 +530,15 @@ var ptx_lunr_docs = [
   "number": "B",
   "title": "List of Symbols",
   "body": " List of Symbols   "
+},
+{
+  "id": "backmatter-4",
+  "level": "1",
+  "url": "backmatter-4.html",
+  "type": "Index",
+  "number": "",
+  "title": "Index",
+  "body": " Index   "
 }
 ]
 
