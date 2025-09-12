@@ -42,6 +42,9 @@
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
 </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

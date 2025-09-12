@@ -4,7 +4,177 @@
   <title>Potential flows</title>
 
   <introduction>
-    <p>Brief introduction to appear here.</p>
+    <p>Typically, the most basic introduction on fluid dynamics usually involves the study of two-dimensional incompressible and irrotational flows, otherwise known as <em>potential flows</em>. There is a good reason for this: the theory is elegant, visualisable, and uses to its benefit the enormous power of complex-variable theory. </p>
   </introduction>
+
+<section xml:id="sec-Potential-and-streamfunction">
+  <title>Potential and streamfunction</title>
+
+  <p>
+    In this chapter, we focus on 2D flows where the velocity vector is given by 
+    <me>
+      \bu(x, y, t) = u(x, y, t)\bi + v(x, y, z)\bj = [u, v].
+    </me>
+    With the velocity given as above, the vorticity is then 
+    <men xml:id="eqn-2d-vorticity">
+      \bomega = \nabla \times \bu = \left(\pd{v}{x} - \pd{u}{y}\right)\bk.
+    </men>
+    If we assume that the flow is irrotational according to <xref ref="def-irrotational"/>, then <m>\nabla \times \bu = 0</m> and 
+    <me>
+      \pd{v}{x} - \pd{u}{y} = 0.
+    </me>
+  </p>
+
+  <p>
+    Further, we know that if the flow is irrotational, then there exists a <em>velocity potential</em>, <m>\phi</m>, such that <m>\bu = \nabla \phi</m>. Thus the velocities are expressed as 
+    <men xml:id="eqn-vel-potential">
+      u = \pd{\phi}{x} \quad \textrm{and} \quad v = \pd{\phi}{y}.
+    </men>
+  </p>
+
+  <p>
+    Now we furthermore have assumed that the flow is incompressible. Therefore from <xref ref="def-incompressible"/>,
+    <men xml:id="eqn-2d-divu">
+      \nabla \cdot \bu = \pd{u}{x} + \pd{v}{y} = \pd{^2\phi}{x^2} + \pd{^2\phi}{y^2} = 0.
+    </men>
+    This is the crucial result, which is that in potential flows, we need only solve the Laplace equation: 
+    <men xml:id="eqn-2d-laplace">
+      \nabla^2 \phi = 0,
+    </men>
+    within the flow region. This is effectively a single linear equation for the single unknown <m>\phi</m>. However, for different problems, the boundary conditions can render even this "simple" problem difficult. 
+  </p>
+
+  <p>
+  Once the velocity potential <m>\phi</m> has been solved, the velocities in the flow can be recovered from the relationship <xref ref="eqn-vel-potential"/>. The pressure in the flow also follows from Bernoulli's equation. For the situation of a steady potential flow, following <xref ref="thm-bernoulli-potential"/>, it is 
+  <men xml:id="eqn-2d-bernoulli">
+    \frac{p}{\rho} + \frac{1}{2} |\nabla \phi|^2 + \chi = \textrm{constant}.
+  </men>
+  </p>
+
+
+  <subsection>
+    <title>Elementary flows</title>
+
+    <p>The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source/sink flows.</p>
+    
+  <p>
+    <example>
+      <title>Uniform flow</title>
+      <idx><h>uniform flow</h></idx>
+     <p>
+      Consider the potential given by the linear function 
+      <me>
+        \phi(x, y) = Ux \cos\alpha + Uy \sin\alpha,
+      </me>
+      with constants <m>U</m> and <m>\alpha</m>. Then by differentiation we have that the velicity is 
+      <me>
+        \bu = U[\cos\alpha, \sin\alpha].
+      </me>
+      Therefore this is a constant velocity field with vectors oriented an angle <m>\alpha</m> to the horizontal.
+     </p> 
+      
+    </example>
+  </p>
+
+  <p>
+    <example>
+      <title>Stagnation point flow</title><idx><h>stagnation point flow</h></idx>
+      <p>
+        We can verify that the velocity potential 
+        <me>
+          \phi = \frac{1}{2} (x^2 - y^2),
+        </me>
+        satisfies Laplace's equation. The corresponding velocity field is given by 
+        <me>
+          [u, v] = [x, -y]. 
+        </me>
+       and corresponds to <em>stagnation point flow</em>.
+      </p>
+      
+    </example>
+  </p>
+
+<p>
+  <example>
+    <title>Line source</title>
+   <idx><h>line source</h></idx> 
+
+   <p>
+   We aim to derive the potential and velocity for a <em>line source</em>, imagined as the flow consisting of a point source or point sink that ejects/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve <m>\nabla^2 \phi = 0</m> in plane polar coordinates. This is given by
+   <me>
+    \nabla^2 \phi = \frac{1}{r} \pd{}{r}\left(r \pd{\phi}{r}\right) + \frac{1}{r^2} \pd{^2 \phi}{\theta^2} = 0.
+   </me>
+   We assume that the potential takes the form <m>\phi = \phi(r)</m>. Then direct integration gives
+   <me>
+    \phi = \frac{Q}{2\pi} \log r, 
+   </me>
+   where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to <m>Q/(2\pi)</m> so that <m>Q</m> can be later identified with a physical quantity. 
+  </p> 
+
+  <p>
+    The velocity then follows from consideration of the gradient in polar form, 
+    <me>
+      \bu = \nabla \phi = \pd{\phi}{r} \be_r + \frac{1}{r}\pd{\phi}{\theta} \be_{\theta} = \frac{Q}{2\pi r} \be_r,
+    </me>
+    where the unit vectors written in the Cartesian basis are <m>\be_r = [\cos\theta, \sin\theta]</m> and <m>\be_{\theta} = [-\sin\theta, \cos\theta]</m>. Thus we can write the velocity as 
+    <me>
+      \bu = \frac{Q}{2\pi r^2} r[\cos\theta, \sin\theta] = \frac{Q}{2\pi r^2} [x, y].
+    </me>
+   The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a <em>line source</em> because fluid is ejected from the origin (a source). It refers to a "line" because in <m>(x, y, z)</m>, the source runs parallel to the <m>z</m>-axis.  
+  </p>
+
+  <p>
+    Let us also identify the <em>strength</em> of this line source. Consider a closed contour <m>C</m> around the origin. Then the quantity 
+    <me>
+      \int_C \bu \cdot \bn \, \de{s},
+    </me>
+    is the flux (the flow per unit time) of fluid crossing the contour, with <m>\bn</m> denoting the unit normal along <m>C</m>.
+  </p>
+
+  <p>
+    For simplicity, let us take the contour <m>C</m> to be a circle of constant radius <m>r = a</m>. Then since the unit normal is precisely <m>\be_r</m>, we have that 
+    <me>
+      \int_C \bu \cdot \bn \, \de{s} = \int_0^{2\pi} \frac{Q}{2\pi a} \be_r \cdot \be_r \, (a \, \de\theta) = Q. 
+    </me>
+   In computing the above integral, remember that the conversion following the polar Jacobian is <m>\de{s} = r \de{\theta}</m> where <m>r = a</m>.
+  </p>
+
+  <p>
+    Therefore, <m>Q</m> is the rate at which fluid is produced from the line source. If <m>Q \lt 0</m>, we refer to the flow as a <em>line sink</em>.
+    <idx><h>line sink</h></idx>
+  </p>
+    
+  </example>
+</p>
+
+<p>
+  Crucially, because the governing fluid mechanical equation is only Laplace's equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow. 
+</p>
+
+<p>
+  <example>
+    <title>Line source in a uniform flow</title>
+   <p> 
+   For instance, we may combine a uniform flow in the <m>x</m>-direction with a line source:
+  <me>
+    \phi = Ux + \frac{Q}{2\pi} \log r = Ux + \frac{Q}{2\pi} \log \sqrt{x^2 + y^2}.
+  </me>
+  We can then obtain the velocity field as 
+  <me>
+    \bu = [U, 0] + \frac{Q}{2\pi(x^2 + y^2)} [x, y].
+  </me>
+  
+</p> 
+  </example>
+</p>
+  </subsection>
+
+  <subsection>
+   <title>On the streamfunction</title>
+   
+    
+  </subsection>
+  
+</section>
 
 </chapter>

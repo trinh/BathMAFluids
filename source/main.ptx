@@ -9,8 +9,8 @@
 
 
   <book xml:id="my-great-book">
-    <title>Mathematical fluids dynamics</title>
-    <!-- <subtitle>An introduction</subtitle> -->
+    <title>Fluids dynamics (MA32051)</title>
+    <subtitle>A first course on the mathematics of fluid dynamics</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
