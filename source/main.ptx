@@ -21,7 +21,8 @@
     <xi:include href="./ch-chapter02-equations.ptx" />
     <xi:include href="./ch-chapter-potentialflows.ptx" />
     <xi:include href="./ch-chapter-waves.ptx" />
-    <xi:include href="./ch-chapter-viscousflows.ptx" />
+    <xi:include href="./ch-chapter05-vorticity.ptx" />
+    <xi:include href="./ch-chapter06-viscousflows.ptx" />
     <xi:include href="./ch-chapter-PS.ptx" /> 
 
     <!-- Include backmatter -->
