@@ -43,7 +43,11 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "1",
   "title": "Introduction",
+<<<<<<< HEAD
   "body": " Introduction   Brief introduction to appear here. Let's get started with this! A fluid. Hello world again.   "
+=======
+  "body": " Introduction   Brief introduction to appear here. Here we go! Hello world again.   "
+>>>>>>> 5ab5c91d63a80501c820dc4bc6f9cf0c1a95b9c4
 },
 {
   "id": "sec-eulerlagrang",
