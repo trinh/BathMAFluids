@@ -16,14 +16,14 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter00-introduction.ptx" />
-    <xi:include href="./ch-chapter01-kinematics.ptx" />
-    <xi:include href="./ch-chapter02-equations.ptx" />
-    <xi:include href="./ch-chapter-potentialflows.ptx" />
-    <xi:include href="./ch-chapter-waves.ptx" />
-    <xi:include href="./ch-chapter05-vorticity.ptx" />
-    <xi:include href="./ch-chapter06-viscousflows.ptx" />
-    <xi:include href="./ch-chapter-PS.ptx" /> 
+    <xi:include href="./ch-chapter01-introduction.ptx" />
+    <xi:include href="./ch-chapter02-kinematics.ptx" />
+    <xi:include href="./ch-chapter03-equations.ptx" />
+    <xi:include href="./ch-chapter04-potentialflows.ptx" />
+    <xi:include href="./ch-chapter05-waves.ptx" />
+    <xi:include href="./ch-chapter06-vorticity.ptx" />
+    <xi:include href="./ch-chapter07-viscousflows.ptx" />
+    <xi:include href="./ch-chapter08-PS.ptx" /> 
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
