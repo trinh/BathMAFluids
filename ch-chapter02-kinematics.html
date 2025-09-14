@@ -213,13 +213,19 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Potential and streamfunction</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-7" class="internal"><span class="codenumber">4.1.2</span> <span class="title">On the streamfunction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-8" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div></li>
 </ul>
-</li></ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vorticity</span></a></div></li>
@@ -231,7 +237,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
@@ -244,8 +253,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="ch-chapter02-kinematics-2-2">In the first experiment, we consider a tube filled with water, where the bottom is released at time <span class="process-math">\(t = 0\text{.}\)</span> One can imagine that the entire column of fluid will fall under the effect of gravity.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter02-kinematics-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter01-kinematics-tube01.png" class="contained" alt="(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere."></div>
-<div class="para logical" id="ch-chapter02-kinematics-2-4">
+<figure class="figure figure-like" id="kinematic-tube01"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter01-kinematics-tube01.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere.<div class="autopermalink" data-description="Figure 2.0.1"><a href="#kinematic-tube01" title="Copy heading and permalink for Figure 2.0.1" aria-label="Copy heading and permalink for Figure 2.0.1">🔗</a></div></figcaption></figure><div class="para logical" id="ch-chapter02-kinematics-2-4">
 <div class="para">Each particle within the fluid is accelerated downwards at a constant rate (gravity). Therefore the velocity of the fluid is given by <span class="process-math">\(\bu = (0, 0, -U(t)).\)</span> In this case, we imagine that acceleration can be defined simply as the partial derivative, in time, of the velocity field, or</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -258,8 +267,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="ch-chapter02-kinematics-2-5">However, consider now the second thought experiment of fluid being pumped through the vessel shown in the figure below. The fluid has reached a steady-state (so the streamlines of the flow, if you can imagine them, are constant and travelling from left-to-right).<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter02-kinematics-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter01-kinematics-tube02.png" class="contained" alt="Fluid pumped through a tube with variable cross-sectional area, \(A_1, A_2\) and corresponding velocities \(U_1, U_2\text{.}\)"></div>
-<div class="para logical" id="ch-chapter02-kinematics-2-7">
+<figure class="figure figure-like" id="kinematic-tube02"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter01-kinematics-tube02.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Fluid pumped through a tube with variable cross-sectional area, <span class="process-math">\(A_1, A_2\)</span> and corresponding velocities <span class="process-math">\(U_1, U_2\text{.}\)</span><div class="autopermalink" data-description="Figure 2.0.2"><a href="#kinematic-tube02" title="Copy heading and permalink for Figure 2.0.2" aria-label="Copy heading and permalink for Figure 2.0.2">🔗</a></div></figcaption></figure><div class="para logical" id="ch-chapter02-kinematics-2-7">
 <div class="para">Upstream of the bottleneck, the volume flowrate is equal to the velocity times area, or</div>
 <div class="displaymath process-math">
 \begin{equation*}

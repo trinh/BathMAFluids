@@ -438,44 +438,161 @@ var ptx_lunr_docs = [
   "url": "sec-Potential-and-streamfunction.html",
   "type": "Section",
   "number": "4.1",
-  "title": "Potential and streamfunction",
-  "body": " Potential and streamfunction  In this chapter, we focus on 2D flows where the velocity vector is given by With the velocity given as above, the vorticity is then If we assume that the flow is irrotational according to , then and   Further, we know that if the flow is irrotational, then there exists a velocity potential , , such that . Thus the velocities are expressed as   Now we furthermore have assumed that the flow is incompressible. Therefore from , This is the crucial result, which is that in potential flows, we need only solve the Laplace equation: within the flow region. This is effectively a single linear equation for the single unknown . However, for different problems, the boundary conditions can render even this \"simple\" problem difficult.  Once the velocity potential has been solved, the velocities in the flow can be recovered from the relationship . The pressure in the flow also follows from Bernoulli's equation. For the situation of a steady potential flow, following , it is    Elementary flows  The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source\/sink flows.    Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is Therefore this is a constant velocity field with vectors oriented an angle to the horizontal.      Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .      Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink     Crucially, because the governing fluid mechanical equation is only Laplace's equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow.    Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as       On the streamfunction   "
+  "title": "The velocity potential",
+  "body": " The velocity potential  In this chapter, we focus on 2D flows where the velocity vector is given by With the velocity given as above, the vorticity is then If we assume that the flow is irrotational according to , then and   Further, we know that if the flow is irrotational, then there exists a velocity potential , , such that . Thus the velocities are expressed as   The above result about irrotational flows is a standard result in Vector Calculus, but we will re-state the result here for reference, and provide a review of its proof.  Existence of a potential   Consider a three-dimensional time-dependent velocity field, defined on a simply connected domain   Then is irrotational, i.e. if and only if there exists a scalar potential, defined on , such that .     Define where is any contour connecting an arbitrary origin point to the point (changing the origin point will change the \"constant\" of integration ).  We can verify, using the definition of differentiation, and the fundamental theorme of calculus, applied along each of the three coordinate directions, that as desired.  The key is to prove that the above definition is unique, regardless of the choice of contour . To this end, consider two contours, and , both with the same origin point, , and end point . Then the contour is a close contour beginning and ending at .  By Stokes' theorem, where is any surface with bounding curve , and with unit normal positively oriented with the bounding curve. However, the right hand-side is zero by irrotationality, and therefore and our choice of curve in the definition of the potential is irrelevant.  The converse direction of the theorem follows directly from the fact that \"curl grad equals zero\", i.e. .      Let us return to discussing the setting of potential flow.  In addition to being irrotational, we furthermore have assumed that the flow is incompressible. Therefore from , This is the crucial result, which is that in potential flows, we need only solve the Laplace equation: within the flow region. This is effectively a single linear equation for the single unknown . However, for different problems, the boundary conditions can render even this \"simple\" problem difficult.  Once the velocity potential has been solved, the velocities in the flow can be recovered from the relationship . The pressure in the flow also follows from Bernoulli's equation. For the situation of a steady potential flow, following , it is    Elementary flows  The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source\/sink flows. You will also investigate the notion of a source \"strength\".    Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is   The image shown below shows the streamlines of the flow.   Streamlines (or velocity field) of uniform flow with magnitude and angle .        Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .  The streamlines (or velocity field) is shown below.   Streamlines (or velocity field) of stagnation point flow.        Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  The streamlines (or velocity field) are shown below.   Streamlines (or velocity field) of line source flow.    Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink     Crucially, because the governing fluid mechanical equation is only Laplace's equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow.    Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   The streamlines (or velocity field) is shown below.   Streamlines (or velocity field) of a line source in a uniform flow with and .    Where do you think the stagnation point lies in this flow?     "
 },
 {
-  "id": "sec-Potential-and-streamfunction-6-3-1",
+  "id": "thm-exist-potential",
   "level": "2",
-  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-3-1",
-  "type": "Example",
+  "url": "sec-Potential-and-streamfunction.html#thm-exist-potential",
+  "type": "Theorem",
   "number": "4.1.1",
-  "title": "Uniform flow.",
-  "body": " Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is Therefore this is a constant velocity field with vectors oriented an angle to the horizontal.  "
+  "title": "Existence of a potential.",
+  "body": " Existence of a potential   Consider a three-dimensional time-dependent velocity field, defined on a simply connected domain   Then is irrotational, i.e. if and only if there exists a scalar potential, defined on , such that .     Define where is any contour connecting an arbitrary origin point to the point (changing the origin point will change the \"constant\" of integration ).  We can verify, using the definition of differentiation, and the fundamental theorme of calculus, applied along each of the three coordinate directions, that as desired.  The key is to prove that the above definition is unique, regardless of the choice of contour . To this end, consider two contours, and , both with the same origin point, , and end point . Then the contour is a close contour beginning and ending at .  By Stokes' theorem, where is any surface with bounding curve , and with unit normal positively oriented with the bounding curve. However, the right hand-side is zero by irrotationality, and therefore and our choice of curve in the definition of the potential is irrelevant.  The converse direction of the theorem follows directly from the fact that \"curl grad equals zero\", i.e. .    "
 },
 {
-  "id": "sec-Potential-and-streamfunction-6-4-1",
+  "id": "example-potential-uniform",
   "level": "2",
-  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-4-1",
+  "url": "sec-Potential-and-streamfunction.html#example-potential-uniform",
   "type": "Example",
   "number": "4.1.2",
-  "title": "Stagnation point flow.",
-  "body": " Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .  "
+  "title": "Uniform flow.",
+  "body": " Uniform flow  uniform flow  Consider the potential given by the linear function with constants and . Then by differentiation we have that the velicity is   The image shown below shows the streamlines of the flow.   Streamlines (or velocity field) of uniform flow with magnitude and angle .    "
 },
 {
-  "id": "sec-Potential-and-streamfunction-6-5-1",
+  "id": "example-potential-stagnation",
   "level": "2",
-  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-5-1",
-  "type": "Example",
-  "number": "4.1.3",
-  "title": "Line source.",
-  "body": " Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink   "
-},
-{
-  "id": "sec-Potential-and-streamfunction-6-7-1",
-  "level": "2",
-  "url": "sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-6-7-1",
+  "url": "sec-Potential-and-streamfunction.html#example-potential-stagnation",
   "type": "Example",
   "number": "4.1.4",
+  "title": "Stagnation point flow.",
+  "body": " Stagnation point flow stagnation point flow  We can verify that the velocity potential satisfies Laplace's equation. The corresponding velocity field is given by and corresponds to stagnation point flow .  The streamlines (or velocity field) is shown below.   Streamlines (or velocity field) of stagnation point flow.    "
+},
+{
+  "id": "example-potential-linesource",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#example-potential-linesource",
+  "type": "Example",
+  "number": "4.1.6",
+  "title": "Line source.",
+  "body": " Line source  line source  We aim to derive the potential and velocity for a line source , imagined as the flow consisting of a point source or point sink that ejects\/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve in plane polar coordinates. This is given by We assume that the potential takes the form . Then direct integration gives where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to so that can be later identified with a physical quantity.  The velocity then follows from consideration of the gradient in polar form, where the unit vectors written in the Cartesian basis are and . Thus we can write the velocity as The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a line source because fluid is ejected from the origin (a source). It refers to a \"line\" because in , the source runs parallel to the -axis.  The streamlines (or velocity field) are shown below.   Streamlines (or velocity field) of line source flow.    Let us also identify the strength of this line source. Consider a closed contour around the origin. Then the quantity is the flux (the flow per unit time) of fluid crossing the contour, with denoting the unit normal along .  For simplicity, let us take the contour to be a circle of constant radius . Then since the unit normal is precisely , we have that In computing the above integral, remember that the conversion following the polar Jacobian is where .  Therefore, is the rate at which fluid is produced from the line source. If , we refer to the flow as a line sink . line sink   "
+},
+{
+  "id": "example-potential-movingsource",
+  "level": "2",
+  "url": "sec-Potential-and-streamfunction.html#example-potential-movingsource",
+  "type": "Example",
+  "number": "4.1.8",
   "title": "Line source in a uniform flow.",
-  "body": " Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   "
+  "body": " Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   The streamlines (or velocity field) is shown below.   Streamlines (or velocity field) of a line source in a uniform flow with and .    Where do you think the stagnation point lies in this flow?  "
+},
+{
+  "id": "ch-chapter04-potentialflows-4",
+  "level": "1",
+  "url": "ch-chapter04-potentialflows-4.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "The streamfunction",
+  "body": " The streamfunction  Our next task is to introduce the concept of the streamfunction . Remember that in 2D, the irrotational flow led to the equation and this led to the existence of the potential function. If we begin with incompressibility, however, we have , which can be written as And we can deduce the existence of an analogous function, the streamfunction , satisfying, Alternatively and more conveniently, we can write To establish the existence of the streamfunction, we follow a similar proof as in but now with the definition that where again is an arbitrary function of . The proof is otherwise identical, relying on establishing the independence of path of the integral using Stokes' theorem.  Why all this work? The streamfunction has an intuitive intepretation via the following result.  The streamfunction is constant along streamlines   The streamfunction, , is constant along streamlines of the flow (i.e. the trajectory formed by a particle in the flow).     The proof follows simply by the fact that and for which the substitution in the first equality follows from .      A graphical depiction of the property in is shown below.  The streamfunction is thus constant on streamlines. Consider two streamlines. The following theorem relates the flux between the streamlines to the streamline values.  Flux between streamlines   Consider streamlines and . The flux (net flow of fluid) between the two streamlines is given by      By definition, the flux is given by the integral where is any smooth path joining the two streamlines with unit normal , as shown in FIGURE.  Note that given the curve, the unit normal is written as , so . Then the flux is re-written as the following: In the third line above, is the change of across the contour. Note that there is somewhat an arbitrary choice of direction for the contour , as related to the selection of the normal direction , and the positivity or negativity of the flux.      Finally, note that the velocity potential was governed by Laplace's equation, . The streamfunction is also governed by the same Laplace's equation.  Streamfunction satisfies Laplace's equation   Like the velocity potential, the streamfunction satisfies Laplace's equation:      Substitute the relationship into .      Like in the situation of certain flows, e.g. the line source in , it is easier to work in alternative coordinate systems to study the streamfunction. Since we know that by , we can use the conversion of the curl to polar coordinates in to give which allows us to relate the radial and angular velocities to the streamfunction.   Elementary flows  Let us return to each of the examples in and reconsider their corresponding streamfunctions.    Uniform flow  uniform flow, streamfunction  From , we can directly integrate and to get up to an arbitrary constant. Therefore, lines of constant correspond to which indeed yields the image seen in .      Stagnation point flow stagnation point flow, streamfunction  Now turning to , we integrate and . This gives up to an arbitrary constant. Indeed curves of constant match the hyperbole shown in .      Line source  line source, streamfunction  For the situation of the line source in , we want to work with polar coordinates. From the previous work, we have for this situation the potential . It then follows from the polar version of the gradient in , that the velocity is entirely radial and We use the formulae in and integrate yielding Then indeed note that the lines of constant are given by the radial lines of constant , matching the illustration in .    Another remark concerns the fact that is a multi-valued function in the example of the line source , gaining a jump of every time the origin is encircled. This is indeed a warning that the standard proof, analogous to , leading to the existence of a unique streamfunction, via would not apply since the velocity field is not defined at the origin. However, despite this, we see that the streamfunction provides well-defined predictions of streamlines on the cut plane with e.g. .    Line source in a uniform flow  Like the case of the potential function in , the linearity of the equation governing the streamfunction implies that we can consider the combination of those streamfunctions for a line source with a uniform flow. This yields for the case of uniform flow of speed in the positive -direction. The streamlines are then given by having designed the constant combination on the right hand-side for convenience. Then using , we have     Our previous examples were reliant on considering the flows generated by the velocity potentials studied previously. However, we can also consider \"fundamental solutions\" of the equation in their own right. Recall that in deriving the velocity potential of the line source in , we considered the solution of an axi-symmetric problem, where is only dependent on the distance from the origin. A similar argument must imply that the analogous axi-symmetric streamfunction is a permissible solution. And this leads us to the following example.    Line vortex  line vortex  The fundamental solution for the streamfunction, in plane polar coordinates, is the axisymmetric solution, defined up to a constant, and corresponds to a line vortex .  The streamlines of such a flow correspond to circular trajectories with constant, and are visualied in FIGURE.  Recall that the radial and angular velocities are given by . Therefore, we see that the velocity vector is given by and thus this flow corresponds to entirely circular trajectories orbiting the origin, and with angular velocity increasing as .  The quantity is called the vortex strength , analogous to the source strength in . Let us consider the amount of circulation around a contour that contains the origin: i.e. one envisions encircling the origin along , adding up each of the velocity components tangential to the path. This is the circulation. By Stokes' theorem it is equal to the flux of vorticity of the corresponding bounding surface.  Choosing to be the circle of radius , we have . Then the circulation is given by So indeed this gives us an intuitive understanding of . Notice that corresponds to flow in the anticlockwise sense, and corresponds to flow in the clockwise sense.     "
+},
+{
+  "id": "thm-streamfunction",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#thm-streamfunction",
+  "type": "Theorem",
+  "number": "4.2.1",
+  "title": "The streamfunction is constant along streamlines.",
+  "body": " The streamfunction is constant along streamlines   The streamfunction, , is constant along streamlines of the flow (i.e. the trajectory formed by a particle in the flow).     The proof follows simply by the fact that and for which the substitution in the first equality follows from .    "
+},
+{
+  "id": "thm-flux-streamlines",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#thm-flux-streamlines",
+  "type": "Theorem",
+  "number": "4.2.2",
+  "title": "Flux between streamlines.",
+  "body": " Flux between streamlines   Consider streamlines and . The flux (net flow of fluid) between the two streamlines is given by      By definition, the flux is given by the integral where is any smooth path joining the two streamlines with unit normal , as shown in FIGURE.  Note that given the curve, the unit normal is written as , so . Then the flux is re-written as the following: In the third line above, is the change of across the contour. Note that there is somewhat an arbitrary choice of direction for the contour , as related to the selection of the normal direction , and the positivity or negativity of the flux.    "
+},
+{
+  "id": "thm-streamfunction-laplace",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#thm-streamfunction-laplace",
+  "type": "Theorem",
+  "number": "4.2.3",
+  "title": "Streamfunction satisfies Laplace’s equation.",
+  "body": " Streamfunction satisfies Laplace's equation   Like the velocity potential, the streamfunction satisfies Laplace's equation:      Substitute the relationship into .    "
+},
+{
+  "id": "ch-chapter04-potentialflows-4-8-3-1",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8-3-1",
+  "type": "Example",
+  "number": "4.2.4",
+  "title": "Uniform flow.",
+  "body": " Uniform flow  uniform flow, streamfunction  From , we can directly integrate and to get up to an arbitrary constant. Therefore, lines of constant correspond to which indeed yields the image seen in .  "
+},
+{
+  "id": "ch-chapter04-potentialflows-4-8-4-1",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8-4-1",
+  "type": "Example",
+  "number": "4.2.5",
+  "title": "Stagnation point flow.",
+  "body": " Stagnation point flow stagnation point flow, streamfunction  Now turning to , we integrate and . This gives up to an arbitrary constant. Indeed curves of constant match the hyperbole shown in .  "
+},
+{
+  "id": "example-streamfunction-linesource",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#example-streamfunction-linesource",
+  "type": "Example",
+  "number": "4.2.6",
+  "title": "Line source.",
+  "body": " Line source  line source, streamfunction  For the situation of the line source in , we want to work with polar coordinates. From the previous work, we have for this situation the potential . It then follows from the polar version of the gradient in , that the velocity is entirely radial and We use the formulae in and integrate yielding Then indeed note that the lines of constant are given by the radial lines of constant , matching the illustration in .  "
+},
+{
+  "id": "ch-chapter04-potentialflows-4-8-7-1",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8-7-1",
+  "type": "Example",
+  "number": "4.2.7",
+  "title": "Line source in a uniform flow.",
+  "body": " Line source in a uniform flow  Like the case of the potential function in , the linearity of the equation governing the streamfunction implies that we can consider the combination of those streamfunctions for a line source with a uniform flow. This yields for the case of uniform flow of speed in the positive -direction. The streamlines are then given by having designed the constant combination on the right hand-side for convenience. Then using , we have   "
+},
+{
+  "id": "ch-chapter04-potentialflows-4-8-9-1",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8-9-1",
+  "type": "Example",
+  "number": "4.2.8",
+  "title": "Line vortex.",
+  "body": " Line vortex  line vortex  The fundamental solution for the streamfunction, in plane polar coordinates, is the axisymmetric solution, defined up to a constant, and corresponds to a line vortex .  The streamlines of such a flow correspond to circular trajectories with constant, and are visualied in FIGURE.  Recall that the radial and angular velocities are given by . Therefore, we see that the velocity vector is given by and thus this flow corresponds to entirely circular trajectories orbiting the origin, and with angular velocity increasing as .  The quantity is called the vortex strength , analogous to the source strength in . Let us consider the amount of circulation around a contour that contains the origin: i.e. one envisions encircling the origin along , adding up each of the velocity components tangential to the path. This is the circulation. By Stokes' theorem it is equal to the flux of vorticity of the corresponding bounding surface.  Choosing to be the circle of radius , we have . Then the circulation is given by So indeed this gives us an intuitive understanding of . Notice that corresponds to flow in the anticlockwise sense, and corresponds to flow in the clockwise sense.  "
+},
+{
+  "id": "sec-complex-potential",
+  "level": "1",
+  "url": "sec-complex-potential.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "The complex potential",
+  "body": " The complex potential  "
+},
+{
+  "id": "sec-method-of-images",
+  "level": "1",
+  "url": "sec-method-of-images.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "The method of images",
+  "body": " The method of images  "
+},
+{
+  "id": "sec-conformal-mapping",
+  "level": "1",
+  "url": "sec-conformal-mapping.html",
+  "type": "Section",
+  "number": "4.5",
+  "title": "Conformal mapping",
+  "body": " Conformal mapping  "
 },
 {
   "id": "ch-chapter05-waves",
@@ -523,13 +640,13 @@ var ptx_lunr_docs = [
   "body": " Blah.  "
 },
 {
-  "id": "backmatter-2",
+  "id": "sec-vector-calculus-planepolar",
   "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Appendix",
-  "number": "A",
-  "title": "Vector calculus",
-  "body": " Vector calculus  Vector identities go here.  "
+  "url": "sec-vector-calculus-planepolar.html",
+  "type": "Section",
+  "number": "A.1",
+  "title": "Identities for plane polar coordinates",
+  "body": " Identities for plane polar coordinates   "
 },
 {
   "id": "backmatter-3",
