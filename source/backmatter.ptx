@@ -17,6 +17,16 @@
     <p>
       Vector identities go here.
     </p>
+
+    <section xml:id="sec-vector-calculus-planepolar">
+      <title>Identities for plane polar coordinates</title>
+
+    <mdn>
+      <mrow xml:id="eqn-identity-grad-polar">\nabla \phi \amp= \pd{\phi}{r}\be_r + \frac{1}{r} \pd{\phi}{\theta}\be_{\theta} </mrow>
+      <mrow xml:id="eqn-identity-curlpolar">\nabla \times \bu \amp= \left(\frac{1}{r} \pd{(ru_\theta)}{r} - \frac{1}{r} \pd{u_r}{\theta}\right) \bk </mrow>
+    </mdn>
+      
+    </section>
   </appendix>
   <appendix> <title>List of Symbols</title> <notation-list/> </appendix>
 

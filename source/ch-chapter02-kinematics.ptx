@@ -13,10 +13,11 @@
       at time <m>t = 0</m>. One can imagine that the entire column of fluid will fall under the
       effect of gravity.</p>
 
-      <image source="ch-chapter01-kinematics-tube01.png">
-        <shortdescription>(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere.</shortdescription>
-      </image>
-    
+      <figure xml:id="kinematic-tube01">
+        <caption>(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere.</caption>
+      <image source="ch-chapter01-kinematics-tube01.png" width="80%"/>
+      </figure>
+
     <p>Each particle within the fluid is accelerated downwards at a constant rate
       (gravity). Therefore the velocity of the fluid is given by <m>\bu = (0, 0, -U(t)).</m>
       In this case, we imagine that acceleration can be defined simply as the partial derivative, in time, of the velocity field, or 
@@ -31,9 +32,10 @@
       shown in the figure below. The fluid has reached a steady-state (so the streamlines of the flow, if you can imagine them, are constant and travelling from left-to-right).
     </p>
 
-      <image source="ch-chapter01-kinematics-tube02.png">
-        <shortdescription>Fluid pumped through a tube with variable cross-sectional area, <m>A_1, A_2</m> and corresponding velocities <m>U_1, U_2</m>.</shortdescription>
-      </image>
+    <figure xml:id="kinematic-tube02">
+      <image source="ch-chapter01-kinematics-tube02.png" width="80%"/>
+        <caption>Fluid pumped through a tube with variable cross-sectional area, <m>A_1, A_2</m> and corresponding velocities <m>U_1, U_2</m>.</caption>
+    </figure>
 
     <p> Upstream of the bottleneck, the volume flowrate is equal to the velocity times area, or <me>
       \textrm{Upstream flow rate (area times velocity)} = A_1 U_1.

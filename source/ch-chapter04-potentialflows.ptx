@@ -8,7 +8,8 @@
   </introduction>
 
 <section xml:id="sec-Potential-and-streamfunction">
-  <title>Potential and streamfunction</title>
+  <title>The velocity potential</title>
+
 
   <p>
     In this chapter, we focus on 2D flows where the velocity vector is given by 
@@ -20,9 +21,9 @@
       \bomega = \nabla \times \bu = \left(\pd{v}{x} - \pd{u}{y}\right)\bk.
     </men>
     If we assume that the flow is irrotational according to <xref ref="def-irrotational"/>, then <m>\nabla \times \bu = 0</m> and 
-    <me>
+    <men xml:id="eqn-2d-irrotational">
       \pd{v}{x} - \pd{u}{y} = 0.
-    </me>
+    </men>
   </p>
 
   <p>
@@ -33,7 +34,64 @@
   </p>
 
   <p>
-    Now we furthermore have assumed that the flow is incompressible. Therefore from <xref ref="def-incompressible"/>,
+    The above result about irrotational flows is a standard result in Vector Calculus, but we will re-state the result here for reference, and provide a review of its proof. 
+
+    <theorem xml:id="thm-exist-potential">
+      <title>Existence of a potential</title>
+      <statement>
+        <p>
+          Consider a three-dimensional time-dependent velocity field, <m>\bu = \bu(\bx, t)</m> defined on a simply connected domain <m>\bx\in D \subset \mathbb{R}^3 \times \mathbb{R}^+.</m>
+        </p>
+          
+          <p>Then <m>\bu</m> is irrotational, i.e. <m>\nabla \times \bu = 0</m> if and only if there exists a scalar potential, defined on <m>D \times \mathbb{R}^+</m>, such that <m>\bu = \nabla \phi</m>.
+        </p>
+      </statement>
+
+      <p>
+      <proof>
+        <p>
+          Define 
+          <me>
+            \phi(\bx, t) \equiv \phi_0(t) + \int_C \bu \cdot \de{x},
+          </me>
+          where <m>C</m> is any contour connecting an arbitrary origin point to the point <m>\bx</m> (changing the origin point will change the "constant" of integration <m>\phi_0(t)</m>).
+        </p>
+
+        <p>
+          We can verify, using the definition of differentiation, and the fundamental theorme of calculus, applied along each of the three coordinate directions, that <m>\nabla \phi = \bu</m> as desired. 
+        </p>
+
+        <p>
+          The key is to prove that the above definition is unique, regardless of the choice of contour <m>C</m>. To this end, consider two contours, <m>C_1</m> and <m>C_2</m>, both with the same origin point, <m>O</m>, and end point <m>P</m>. Then the contour <m>C_1 - C_2</m> is a close contour beginning and ending at <m>O</m>. 
+        </p>
+
+        <p>
+          By Stokes' theorem, 
+          <me>
+            \int_{C_1 - C_2} \bu \cdot \de{x} = \iint_S (\nabla \times \bu) \, \bn \, \de{S}, 
+          </me>
+          where <m>S</m> is any surface with bounding curve <m>C_1 - C_2</m>, and with unit normal <m>\bn</m> positively oriented with the bounding curve. However, the right hand-side is zero by irrotationality, and therefore 
+          <me>
+            \int_{C_1} \bu \cdot \de{x} = \int_{C_2} \bu \cdot \de{x},
+          </me>
+          and our choice of curve in the definition of the potential is irrelevant. 
+        </p>
+
+        <p>
+          The converse direction of the theorem follows directly from the fact that "curl grad equals zero", i.e. <m>\nabla \times \nabla \phi = 0</m>.
+        </p>
+      </proof>
+    </p>
+    </theorem>
+    
+  </p>
+
+  <p>
+    Let us return to discussing the setting of potential flow.
+  </p>
+
+  <p>
+    In addition to being irrotational, we furthermore have assumed that the flow is incompressible. Therefore from <xref ref="def-incompressible"/>,
     <men xml:id="eqn-2d-divu">
       \nabla \cdot \bu = \pd{u}{x} + \pd{v}{y} = \pd{^2\phi}{x^2} + \pd{^2\phi}{y^2} = 0.
     </men>
@@ -55,10 +113,10 @@
   <subsection>
     <title>Elementary flows</title>
 
-    <p>The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source/sink flows.</p>
+    <p>The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source/sink flows. You will also investigate the notion of a source "strength".</p>
     
   <p>
-    <example>
+    <example xml:id="example-potential-uniform">
       <title>Uniform flow</title>
       <idx><h>uniform flow</h></idx>
      <p>
@@ -70,14 +128,20 @@
       <me>
         \bu = U[\cos\alpha, \sin\alpha].
       </me>
-      Therefore this is a constant velocity field with vectors oriented an angle <m>\alpha</m> to the horizontal.
      </p> 
-      
+
+     <p>
+      The image shown below shows the streamlines of the flow.
+      <figure xml:id="fig-potential-uniform">
+        <image source="uniformflow" width="90%"/> 
+          <caption>Streamlines (or velocity field) of uniform flow with magnitude <m>U = 1</m> and angle <m>\pi/4</m>.</caption>
+        </figure>
+     </p>
     </example>
   </p>
 
   <p>
-    <example>
+    <example xml:id="example-potential-stagnation">
       <title>Stagnation point flow</title><idx><h>stagnation point flow</h></idx>
       <p>
         We can verify that the velocity potential 
@@ -90,12 +154,19 @@
         </me>
        and corresponds to <em>stagnation point flow</em>.
       </p>
+
+      <p> The streamlines (or velocity field) is shown below.
+      <figure xml:id="fig-potential-stagnation">
+        <image source="stagnationflow" width="90%"/> 
+          <caption>Streamlines (or velocity field) of stagnation point flow.</caption>
+        </figure>
+      </p>
       
     </example>
   </p>
 
 <p>
-  <example>
+  <example xml:id="example-potential-linesource">
     <title>Line source</title>
    <idx><h>line source</h></idx> 
 
@@ -122,6 +193,14 @@
     </me>
    The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a <em>line source</em> because fluid is ejected from the origin (a source). It refers to a "line" because in <m>(x, y, z)</m>, the source runs parallel to the <m>z</m>-axis.  
   </p>
+
+
+      <p> The streamlines (or velocity field) are shown below.
+      <figure xml:id="fig-potential-linesource">
+        <image source="linesource" width="90%"/> 
+          <caption>Streamlines (or velocity field) of line source flow.</caption>
+        </figure>
+      </p>
 
   <p>
     Let us also identify the <em>strength</em> of this line source. Consider a closed contour <m>C</m> around the origin. Then the quantity 
@@ -152,7 +231,7 @@
 </p>
 
 <p>
-  <example>
+  <example xml:id="example-potential-movingsource">
     <title>Line source in a uniform flow</title>
    <p> 
    For instance, we may combine a uniform flow in the <m>x</m>-direction with a line source:
@@ -163,18 +242,298 @@
   <me>
     \bu = [U, 0] + \frac{Q}{2\pi(x^2 + y^2)} [x, y].
   </me>
-  
 </p> 
+
+<p> The streamlines (or velocity field) is shown below.
+      <figure xml:id="fig-potential-movinglinesource">
+        <image source="movinglinesource" width="90%"/> 
+          <caption>Streamlines (or velocity field) of a line source in a uniform flow with <m>U = 1</m> and <m>Q = 1</m>.</caption>
+        </figure>
+      </p>
+
+<p>
+  Where do you think the stagnation point lies in this flow? 
+</p>
   </example>
 </p>
-  </subsection>
 
-  <subsection>
-   <title>On the streamfunction</title>
-   
-    
   </subsection>
-  
+</section>
+
+  <section>
+   <title>The streamfunction</title>
+
+   <p>
+    Our next task is to introduce the concept of the <em>streamfunction</em>. Remember that in 2D, the irrotational flow led to the equation <xref ref="eqn-2d-irrotational"/> and this led to the existence of the potential function. If we begin with incompressibility, however, we have <xref ref="eqn-2d-divu"/>, which can be written as 
+    <men xml:id="eqn-1d-divu-cross">
+      \nabla \times [-v, u] = 0.
+    </men>
+    And we can deduce the existence of an analogous function, the <em>streamfunction</em>, <m>\psi(x, y, t)</m> satisfying, 
+    <men xml:id="eqn-2d-uv-streamfunction">
+      u = \pd{\psi}{y} \quad \textrm{and} \quad v = -\pd{\psi}{x}.
+    </men>
+  Alternatively and more conveniently, we can write 
+    <men xml:id="eqn-2d-streamfunction">
+      \bu = \nabla \times (\psi \bk).
+    </men>
+    To establish the existence of the streamfunction, we follow a similar proof as in <xref ref="thm-exist-potential"/> but now with the definition that 
+   <men xml:id="eqn-streamfunction-def-psi">
+    \psi(x, y, t) = \psi_0(t) + \int_0^{\bx} (u \de{y} - v \de{x}),
+   </men>
+   where again <m>\psi_0(t)</m> is an arbitrary function of <m>t</m>. The proof is otherwise identical, relying on establishing the independence of path of the integral using Stokes' theorem.  
+   </p>
+
+   <p>
+    Why all this work? The streamfunction has an intuitive intepretation via the following result. 
+
+    <theorem xml:id="thm-streamfunction">
+      <title>The streamfunction is constant along streamlines</title>
+      <statement>
+        <p>
+          The streamfunction, <m>\psi(x, y, t)</m>, is constant along streamlines of the flow (i.e. the trajectory formed by a particle in the flow).
+        </p>
+      </statement>
+
+      <p>
+      <proof>
+        <p>
+          The proof follows simply by the fact that
+          <me>
+            \bu \cdot \nabla \psi = \left(\pd{\psi}{y}, -\pd{\psi}{x}\right) \cdot \left(\pd{\psi}{x}, \pd{psi}{y}\right) = 0,
+          </me>
+          and for which the substitution in the first equality follows from <xref ref="eqn-2d-uv-streamfunction"/>. 
+        </p>
+      </proof>
+    </p>
+    </theorem>
+   </p>
+
+
+   <p>
+    A graphical depiction of the property in <xref ref="thm-streamfunction"/> is shown below.
+   </p>
+
+
+   <p>
+    The streamfunction is thus constant on streamlines. Consider two streamlines. The following theorem relates the flux between the streamlines to the streamline values. 
+
+    <theorem xml:id="thm-flux-streamlines">
+      <title>Flux between streamlines</title>
+      <statement>
+        <p>
+        Consider streamlines <m>\psi = \psi_1</m> and <m>\psi = \psi_2</m>. The <em>flux</em> (net flow of fluid) between the two streamlines is given by
+        <me>
+          \textrm{flux} = \psi_1 - \psi_2.
+        </me>
+        </p>
+      </statement>
+
+      <p>
+        <proof>
+          <p>
+            By definition, the flux is given by the integral 
+            <me>
+              \int_C \bu \cdot \bn \, \de{s},
+            </me>
+            where <m>C</m> is any smooth path joining the two streamlines with unit normal <m>\bn</m>, as shown in FIGURE. 
+          </p>
+
+          <p>
+            Note that given the curve, the unit normal is written as <m>[-\de{y}, \de{x}]/\de s</m>, so <m>\bn \de{s} = [\de{y}, -\de{x}]</m>. Then the flux is re-written as the following: 
+            <md>
+              <mrow>\textrm{flux} \amp= \int_C \left[\pd{\psi}{y}, -\pd{\psi}{x}\right] \cdot [\de{y}, \de{x}], </mrow>
+              <mrow>\amp= \int_C \left(\pd{\psi}{x} \, \de{x} + \pd{\psi}{y} \right), </mrow>
+              <mrow>\amp= \bigl[ \psi \bigr]_C, </mrow>
+              <mrow>\amp= \psi_2 - \psi_1. </mrow>
+            </md>
+          In the third line above, <m>[\psi]_C</m> is the change of <m>\psi</m> across the contour.  
+          Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. 
+        </p>
+        </proof>
+      </p>
+
+    </theorem>
+  </p>
+      
+    
+    <p>
+        Finally, note that the velocity potential was governed by Laplace's equation, <m>\nabla^2 \phi = 0</m>. The streamfunction is also governed by the same Laplace's equation. 
+
+       
+   <theorem xml:id="thm-streamfunction-laplace">
+          <title>Streamfunction satisfies Laplace's equation</title>
+          <statement>
+            <p>
+              Like the velocity potential, the streamfunction satisfies Laplace's equation: 
+              <me>
+                \pd{^2 \psi}{x^2} + \pd{^2 \psi}{y^2} = \nabla^2 \psi = 0.
+              </me>
+            </p>
+          </statement>
+
+          <p>
+            <proof>
+              <p>
+                Substitute the relationship <xref ref="eqn-2d-uv-streamfunction"/> into <xref ref="eqn-2d-irrotational"/>.
+              </p>
+            </proof>
+          </p>
+        </theorem>
+   </p>
+
+   <p>
+    Like in the situation of certain flows, e.g. the line source in <xref ref="example-potential-linesource"/>, it is easier to work in alternative coordinate systems to study the streamfunction. Since we know that <m>\bu = \nabla \times (\psi \bk)</m> by <xref ref="eqn-2d-streamfunction"/>, we can use the conversion of the curl to polar coordinates in <xref ref="eqn-identity-curlpolar"/> to give 
+    <men xml:id="eqn-streamfunction-polar">
+      u_r = \frac{1}{r} \pd{\psi}{\theta} \quad \textrm{and} \quad u_{\theta} = -\pd{\psi}{r}\,
+    </men>
+   which allows us to relate the radial and angular velocities to the streamfunction. 
+   </p>
+
+   <subsection>
+    <title>Elementary flows</title>
+
+   <p>
+    Let us return to each of the examples in <xref ref="sec-Potential-and-streamfunction"/> and reconsider their corresponding streamfunctions. 
+   </p>
+
+
+  <p>
+    <example>
+      <title>Uniform flow</title>
+      <idx><h>uniform flow, streamfunction</h></idx>
+
+      <p>
+        From <xref ref="example-potential-uniform"/>, we can directly integrate <m>u = \psi_y</m> and <m>v = -\psi_x</m> to get 
+        <me>
+          \psi = Uy\cos\alpha - Ux\sin\alpha, 
+        </me>
+       up to an arbitrary constant. Therefore, lines of constant <m>\psi</m> correspond to 
+       <me>
+        y = x\tan\alpha + \textrm{constant},
+       </me>
+      which indeed yields the image seen in <xref ref="fig-potential-uniform"/>.
+      </p>
+    </example>
+  </p>
+
+  <p>
+    <example>
+      <title>Stagnation point flow</title><idx><h>stagnation point flow, streamfunction</h></idx>
+
+      <p>
+        Now turning to <xref ref="example-potential-stagnation"/>, we integrate <m>u = y = \psi_x</m> and <m>v = x = \psi_y</m>. This gives
+        <me>
+          \psi = xy, 
+        </me>
+        up to an arbitrary constant. Indeed curves of constant <m>\psi</m> match the hyperbole shown in <xref ref="fig-potential-stagnation"/>.
+        
+      </p>
+    </example>
+  </p>
+
+<p>
+  <example xml:id="example-streamfunction-linesource">
+    <title>Line source</title>
+   <idx><h>line source, streamfunction</h></idx> 
+
+   <p>
+    For the situation of the line source in <xref ref="example-potential-linesource"/>, we want to work with polar coordinates. From the previous work, we have for this situation the potential <m>\phi = Q/(2\pi log r</m>. It then follows from the polar version of the gradient in <xref ref="eqn-identity-grad-polar"/>, that the velocity is entirely radial and 
+    <men xml:id="eqn-streamfunction-u-linesource">
+     \bu = \pd{\phi}{r}\be_r + 0 = \frac{Q}{2\pi r} \be_r.
+    </men>
+    We use the formulae in <xref ref="eqn-streamfunction-polar"/> and integrate <m>\frac{1}{r} \pd{\psi}{\theta} = \frac{Q}{2\pi r}</m> yielding
+    <me>
+      \psi = \frac{Q}{2\pi} \theta.
+    </me>
+    Then indeed note that the lines of constant <m>\psi</m> are given by the radial lines of constant <m>\theta</m>, matching the illustration in <xref ref="fig-potential-linesource"/>.  
+   </p>
+  </example>
+</p>
+   
+<p>
+    Another remark concerns the fact that <m>\psi</m> is a multi-valued function in the example of the line source <xref ref="example-streamfunction-linesource"/>, gaining a jump of <m>Q</m> every time the origin is encircled. This is indeed a warning that the standard proof, analogous to <xref ref="thm-exist-potential"/>, leading to the existence of a unique streamfunction, via <xref ref="eqn-streamfunction-def-psi"/> would not apply since the velocity field <xref ref="example-streamfunction-linesource"/> is not defined at the origin. However, despite this, we see that the streamfunction provides well-defined predictions of streamlines on the <em>cut</em> plane with e.g. <m>\theta \in [0, 2\pi)</m>.
+   </p>
+
+<p>
+  <example>
+    <title>Line source in a uniform flow</title>
+
+  <p>
+    Like the case of the potential function in <xref ref="example-potential-movingsource"/>, the linearity of the equation governing the streamfunction implies that we can consider the combination of those streamfunctions for a line source with a uniform flow. This yields 
+    <me>
+      \psi = Uy + \frac{Q}{2\pi}\theta, 
+    </me>
+    for the case of uniform flow of speed <m>U</m> in the positive <m>x</m>-direction. The streamlines are then given by 
+    <me>
+      Uy + \frac{Q}{2\pi} \theta = \frac{Q}{2\pi}C,
+    </me>
+   having designed the constant combination on the right hand-side for convenience. Then using <m>y = r\sin\theta</m>, we have
+   <me>
+    r = \left(\frac{Q}{2\pi U}\right) \frac{C - \theta}{\sin\theta}.
+   </me>
+  </p>
+  </example>
+</p>
+
+<p>
+  Our previous examples were reliant on considering the flows generated by the velocity potentials studied previously. However, we can also consider "fundamental solutions" of the equation <m>\nabla^2 \psi = 0</m> in their own right. Recall that in deriving the velocity potential of the line source in <xref ref="example-potential-linesource"/>, we considered the solution of an axi-symmetric problem, where <m>\phi = \phi(r)</m> is only dependent on the distance from the origin. A similar argument must imply that the analogous axi-symmetric streamfunction is a permissible solution. And this leads us to the following example. 
+</p>
+
+<p>
+  <example>
+   <title>Line vortex </title>
+   <idx><h>line vortex</h></idx>
+
+   <p>
+    The fundamental solution for the streamfunction, in plane polar coordinates, is the axisymmetric solution, 
+    <men xml:id="eqn-streamfunction-linevortex">
+      \psi = -\frac{\Gamma}{2\pi}\log r,
+    </men>
+    defined up to a constant, and corresponds to a <em>line vortex</em>.
+   </p>
+
+   <p>
+    The streamlines of such a flow correspond to circular trajectories with <m>r</m> constant, and are visualied in FIGURE.
+   </p>
+
+   <p>
+    Recall that the radial and angular velocities are given by <xref ref="eqn-streamfunction-polar"/>. Therefore, we see that the velocity vector is given by 
+    <me>
+      \bu = -\pd{\psi}{r} \be_{\theta} = \frac{\Gamma}{2\pi r} \be_{\theta},
+    </me>
+    and thus this flow corresponds to entirely circular trajectories orbiting the origin, and with angular velocity increasing as <m>r \to 0</m>.
+   </p>
+
+   <p>
+    The quantity <m>\Gamma</m> is called the <em>vortex strength</em>, analogous to the source strength <m>Q</m> in <xref ref="example-potential-linesource"/>. Let us consider the amount of circulation around a contour <m>C</m> that contains the origin: 
+    <me>
+      \oint_C \bu \cdot \de{\bx} = \oint_C (u \, \de{x} + v \, \de{y}),
+    </me>
+    i.e. one envisions encircling the origin along <m>C</m>, adding up each of the velocity components tangential to the path. This is the circulation. By Stokes' theorem it is equal to the flux of vorticity of the corresponding bounding surface. 
+   </p>
+
+   <p>
+    Choosing <m>C</m> to be the circle of radius <m>r = a</m>, we have <m>\de{\bx} = a \be_{\theta} \de{\theta}</m>. Then the circulation is given by
+    <me>
+      \oint_C \bu \cdot \de{\bx} = \int_0^{2\pi} \frac{\Gamma}{2\pi a} \be_{\theta} \cdot \be_{\theta} a \de\theta = \Gamma.
+    </me>
+    So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
+   </p>
+  </example>
+</p>
+</subsection>
+</section>
+
+<section xml:id="sec-complex-potential">
+  <title>The complex potential</title>
+</section>
+
+<section xml:id="sec-method-of-images">
+  <title>The method of images</title>
+</section>
+
+<section xml:id="sec-conformal-mapping">
+  <title>Conformal mapping</title>
 </section>
 
 </chapter>
