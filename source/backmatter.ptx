@@ -32,6 +32,16 @@
 
   <index> <title>Index</title> <index-list/> </index>
 
+  <references xml:id="refs-references">
+    <title>References and further reading</title>
+   
+    <biblio xml:id="ref-kreyszig"><p>Kreyszig, E. (2007). Advanced engineering mathematics 9th edition with Wiley plus set (Vol. 334). US: John Wiley and Sons.</p></biblio>
+    
+    <biblio xml:id="ref-fornberg"><p>Fornberg</p></biblio>
+    
+    
+  </references>
+
   <!-- <colophon>
     <p> This book was authored in <pretext />. </p>
   </colophon> -->

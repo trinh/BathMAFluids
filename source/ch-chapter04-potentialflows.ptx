@@ -65,6 +65,11 @@
           The key is to prove that the above definition is unique, regardless of the choice of contour <m>C</m>. To this end, consider two contours, <m>C_1</m> and <m>C_2</m>, both with the same origin point, <m>O</m>, and end point <m>P</m>. Then the contour <m>C_1 - C_2</m> is a close contour beginning and ending at <m>O</m>. 
         </p>
 
+        <figure xml:id="fig-potential-proof">
+          <caption>Proof of the uniqueness of the potential</caption>
+          <image source="potentialproof.jpg" width="80%"/>
+        </figure>
+
         <p>
           By Stokes' theorem, 
           <me>
@@ -132,9 +137,10 @@
 
      <p>
       The image shown below shows the streamlines of the flow.
+c
       <figure xml:id="fig-potential-uniform">
         <image source="uniformflow" width="90%"/> 
-          <caption>Streamlines (or velocity field) of uniform flow with magnitude <m>U = 1</m> and angle <m>\pi/4</m>.</caption>
+          <caption>Streamlines (or velocity field) of uniform flow with <m>U = 1</m> and <m>\alpha = \pi/4</m>.</caption>
         </figure>
      </p>
     </example>
@@ -299,9 +305,13 @@
         <p>
           The proof follows simply by the fact that
           <me>
-            \bu \cdot \nabla \psi = \left(\pd{\psi}{y}, -\pd{\psi}{x}\right) \cdot \left(\pd{\psi}{x}, \pd{psi}{y}\right) = 0,
+            \bu \cdot \nabla \psi = \left(\pd{\psi}{y}, -\pd{\psi}{x}\right) \cdot \left(\pd{\psi}{x}, \pd{\psi}{y}\right) = 0,
           </me>
           and for which the substitution in the first equality follows from <xref ref="eqn-2d-uv-streamfunction"/>. 
+        </p>
+
+        <p>
+          The above equality indicates that the velocity vector, <m>\bu</m>, is orthogonal to the vector pointing along <m>\nabla \psi</m>. However, it is known from Vector Calculus that <m>\nabla \psi</m> runs along curves of steepest descent/ascent of <m>\psi</m>---these must hence be orthogonal to the level sets of <m>\psi</m>. Therefore, the level sets of <m>\psi</m> are tangential to <m>\bu</m> (the definition of a streamline).
         </p>
       </proof>
     </p>
@@ -311,6 +321,18 @@
 
    <p>
     A graphical depiction of the property in <xref ref="thm-streamfunction"/> is shown below.
+
+    <figure xml:id="fig-streamfunction">
+      <image source="streamfunction.jpg" width="70%"/>
+      <caption>Flow between two streamlines, where the streamlines <m>\psi_1</m> and <m>\psi_2</m> are constant. Later, we will consider the flux through the contour <m>C</m> illustrated in the figure along with its unit normal <m>\bn</m>.</caption>
+    </figure>
+
+
+      <!-- <figure>
+        <image source="uniformflow" width="90%"/> 
+          <caption>Streamlines (or velocity field) of uniform flow with <m>U = 1</m> and <m>\alpha = \pi/4</m>.</caption>
+        </figure> -->
+
    </p>
 
 
@@ -365,9 +387,9 @@
           <statement>
             <p>
               Like the velocity potential, the streamfunction satisfies Laplace's equation: 
-              <me>
+              <men xml:id="eqn-2d-streamfunction-laplace">
                 \pd{^2 \psi}{x^2} + \pd{^2 \psi}{y^2} = \nabla^2 \psi = 0.
-              </me>
+              </men>
             </p>
           </statement>
 
@@ -480,7 +502,7 @@
 </p>
 
 <p>
-  <example>
+  <example xml:id="example-streamfunction-linevortex">
    <title>Line vortex </title>
    <idx><h>line vortex</h></idx>
 
@@ -493,8 +515,15 @@
    </p>
 
    <p>
-    The streamlines of such a flow correspond to circular trajectories with <m>r</m> constant, and are visualied in FIGURE.
-   </p>
+    The streamlines of such a flow correspond to circular trajectories with <m>r</m> constant, and are visualised in 
+    <!-- <xref ref="fig-streamfunction-linevortex"/>. -->
+
+      <figure xml:id="fig-streamfunction-linevortex">
+        <image source="linevortex" width="90%"/> 
+          <caption>Streamlines (or velocity field) of a line vortex with <m>\Gamma = 1</m>.</caption>
+        </figure>
+  </p>
+
 
    <p>
     Recall that the radial and angular velocities are given by <xref ref="eqn-streamfunction-polar"/>. Therefore, we see that the velocity vector is given by 
@@ -526,6 +555,358 @@
 
 <section xml:id="sec-complex-potential">
   <title>The complex potential</title>
+
+ <p>
+  In the previous two sections, we studied the properties and utility of the velocity potential <m>\phi</m> and streamfunction <m>\psi</m> in the context of two-dimensional potential flows (inviscid, incompressible, irrotational). We did this with techniques from real-valued Vector Calculus.  As it turns out, there is a much more elegant and powerful framework for studying two-dimensional flow which leverages the significant power of complex analysis and complex variables. 
+ </p>
+
+ <p>
+  In fact, you may have already noticed this on an intuitive level, given the intimate relationships between <m>\phi</m> and <m>\psi</m>, seeming to exhibit a certain kind of symmetry in formulae and operations. Complex analysis is the language in which we can make this kind of "symmetry" transparent. 
+ </p>
+
+ <p>
+  We begin by reviewing (or in some cases, introducing) you to some key theorems about the properties of well-behaved (analytic) complex functions. 
+ </p>
+
+ <p>
+  In his section, we will refer to a complex function generically as
+  <me>f(z) = u(x, y) + \im v(x, y)
+  </me>
+  where <m>u</m> and <m>v</m> and the real-valued decompositions of the complex-valued function <m>f</m>. Also, <m>z = x + \im y</m>.
+ </p>
+
+ <p>
+  A complex function is differentiated in much the same way as real-valued functions, with the definition that 
+  <men xml:id="eqn-complex-derivative">
+    f'(z) = \lim_{\Delta z \to 0} \frac{f(z + \Delta z) - f(z)}{\Delta z}.
+  </men>
+ The crucial difference with real-valued differentiation is that the above limit is required to hold whilst approaching the point <m>z</m> in any direction of the complex plane.
+ </p>
+
+ <p>
+  <remark>
+    <p>
+      As long as you stay away from exceptional points of a function, the "calculus" of complex functions is largely the same as for real-valued functions, e.g. 
+      <md>
+       <mrow> \dd{(z^m)}{z} = mz^{m-1}, \qquad \dd{\e^z}{z} = \e^z,</mrow> 
+      <mrow>\dd{(\log (z+1))}{z} = \frac{1}{z + 1}, \quad \dd{\sin(z^2)}{z} = 2z\cos(z^2). </mrow>
+      </md>
+      and the usual rules of algebraic manipulations hold. There are some caveats, however, which are dealt with on an individual manner.
+    </p>
+  </remark>
+ </p>
+
+
+ <p>
+  Below, we will often use susbcripts for partial differentiation, e.g. <m>u_x = \pd{u}{x}</m>.
+ </p>
+
+ <subsection xml:id="subsec-complex-introduction">
+  <title>Cauchy's theorem and harmonic functions</title>
+
+  <p>We will follow the reference text by <xref ref="ref-kreyszig"/> and <xref ref="ref-fornberg"/>  and introduce the basic notions of complex functions that we will need. 
+  </p>
+
+  <p>
+    <definition xml:id="def-analytic">
+      <title>Analyticity</title>
+      <idx><h>analytic</h></idx>
+      <statement>
+        <p>
+        A function <m>f: \mathbb{C} \to \mathbb{C}</m> is said to be analytic in a domain if <m>f(z)</m> is defined and differentiable at all points in the domain. The function is said to be <em>analytic at a point</em> <m>z = z_0</m> if it is analytic in a neighbourhood of <m>z_0</m>.     
+        </p>
+
+        <p>
+          When we refer to an <em>analytic function</em>, we mean a function that is analytic in some domain of <m>\mathbb{C}</m> (often clear by context).
+        </p>
+
+        <p>
+      The function is <em>holomorphic</em><idx><h>holomorphic</h></idx> if it is analytic; the terms are synonyms. 
+        </p>
+
+        <p>
+          An analytic function is <em>entire</em><idx><h>entire</h></idx> if its region of analyticity includes all points in <m>\mathbb{C}</m>, including infinity. 
+        </p>
+      </statement>
+    </definition>
+  </p>
+
+  <p>
+    Note that above, we have stated that a function is analytic if it is well-defined and differentiable <em>once</em>(!) As it turns out, the requirement that a complex-valued function is differentiable is a strong condition. An analytic function turns out to be infinitely differentiable by consequence!
+  </p>
+ 
+  <p>
+  <remark>
+    <p>
+      In this module, we will not be concerned with formalities when they are not relevant. For example, in our definition of analyticity, we do not specify if the relevant domains are open or closed. The functions we work with are generally non-pathological---they may have isolated singularities or exceptional points, but generally the application and context will make it clear the limits of our results.
+    </p>
+  </remark>
+ </p>
+
+  <p>
+    Now we have one of the most important theorems of complex analysis. 
+
+    <theorem xml:id="thm-CR1">
+      <title>Cauchy-Riemann equations I</title>
+      <statement>
+        <p>
+         If <m>f(z) = u(x, y) + \im v(x, u)</m> is differentiable, then the Cauchy-Riemann equations, given by
+       <men xml:id="eqn-CR">
+       u_x = v_y \quad \text{and} \quad u_y = -v_x,
+       </men>
+       hold.
+        </p>
+
+        <p>
+          In particular, if <m>f</m> is analytic on a domain, then its real and complex parts must satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> (in that domain).
+        </p>
+      </statement>
+
+      <p>
+        <proof>
+          <p>
+            (Non-examinable)
+          </p>
+          <p> 
+            This follows by considering the definition of the derivative <xref ref="eqn-complex-derivative"/> when the point <m>z</m> is approached from the <m>x</m> or <m>y</m> directions. 
+          </p>
+
+          <p>
+            With <m>\Delta z = \Delta x</m> real, we can verify from applying the definition that 
+            <me>
+              f'(z) = \pd{u}{x} + \im \pd{v}{x}.
+            </me>
+            On the other hand, approaching with <m>\Delta z = \im \Delta y</m> gives 
+            <me>
+              f'(z) = -\im \pd{u}{y} + \pd{v}{y}. 
+            </me>
+          Equating the two results then yields the Cauchy-Riemann equations.
+          </p>
+        </proof>
+      </p>
+    </theorem>
+  </p>
+
+<p>
+  It turns out that the Cauchy-Riemann equations are not only necessary to an analytic function, but are actually sufficient as well. 
+
+  <theorem xml:id="thm-CR2">
+    <title>Cauchy-Riemann equations II</title>
+    <statement>
+      <p>
+      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z0 = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
+      </p>
+    </statement>
+
+    <p>
+      <proof>
+        <p>
+          (Non-examinable)
+        </p>
+        <p>
+          The proof is not difficult, but we will refer students to <xref ref="ref-kreyszig"/> for its proof. It relies on constructing the derivative of <m>f</m> along any direction using the decomposition into the two Cartesian directions.
+        </p>
+      </proof>
+    </p>
+  </theorem>
+</p>
+
+<p>
+  <theorem xml:id="thm-complex-inf-derivatives">
+    <statement>
+      <p>
+       If <m>f</m> is analytic, it is differentiable to all orders. 
+      </p>
+    </statement>
+  </theorem>
+  
+</p>
+
+<p>
+  Our last step involves relating complex functions to the solution of Laplace's equation(s), i.e. <xref ref="eqn-2d-laplace"/> or <xref ref="eqn-2d-streamfunction-laplace"/>, that govern potential flow.
+
+  <theorem xml:id="thm-complex-laplace">
+    <title>Analyticity and Laplace's equation</title>
+    <statement>
+      <p>
+      If <m>f(z) = u(x, y) + \im v(x, y)</m> is analytic in a domain <m>D</m>, then <m>u</m> and <m>v</m> satisfy Laplace's equation, 
+      <me>
+        \nabla^2 u = u_{xx} + u_{yy} = 0 \quad \textrm{and} \quad
+        \nabla^2 v = v_{xx} + v_{yy} = 0,
+      </me>
+      in <m>D</m>, and have continuous second partial derivatives in <m>D</m>.
+          
+      </p>
+    </statement>
+
+    <p>
+      <proof>
+        <p>
+          Since <m>f</m> is analytic, then it follows from <xref ref="thm-CR1"/> that <m>u_x = v_y</m> and <m>u_y = -v_x</m>. It furthermore follows from <xref ref="thm-complex-inf-derivatives"/> that <m>f</m> is differentiable to all orders; therefore, we can take derivatives to obtain 
+          <me>
+            u_{xx} = v_{yx} \quad \text{and} \quad -u_{yy} = v_{xy}. 
+          </me>
+          The second derivatives are continuous and therefore <m>v_{xy} = v_{yx}</m>. Therefore <m>u_{xx} + u_{yy} = 0</m>. Laplace's equation is analogously proved for <m>v</m>.
+          
+        </p>
+      </proof>
+    </p>
+  </theorem>
+</p>
+
+<p>
+  The above theorem is truly a remarkable result; it would not be a stretch to state that this single result was at the forefront of why complex analysis played such an important role in the development of applied mathematics and physics in the 18th, 19th, and 20th centuries. 
+</p>
+
+<p>
+  Since Laplace's equation, <m>\nabla^2 \phi = 0</m>, is such an important equation in physics, occuring in theories of gravitation, electrostatics, fluid mechanics, etc. the theorem establishes that there exists a parallel theory in the language of complex variables for the specific case of two-dimensional applications. 
+</p>
+
+<p>
+  A potential fluid, for example, can be studied by manipulating complex functions of the form 
+  <me>
+    f(z) = \phi(x, y) + \im \psi(x, y).
+  </me>
+  One can envision all kinds of different forms of <m>f</m>---polynomials, cosines and sines, exponentials, logarithms, etc. As long as the function is locally differentiable, it is thus analytic and therefore can be associated with (some kind of) fluid flow.
+</p>
+ </subsection>
+
+ <subsection xml:id="subsec-complex-examples">
+  <title>Examples of elementary flows</title>
+
+  <p>
+    Let us return to the examples of flows studied in <xref ref="sec-Potential-and-streamfunction"/> and re-interpret them using the theory of analytic functions.
+  </p>
+
+  <p>
+    We will associate the velocity potential, <m>\phi</m>, and streamfunction <m>\psi</m> with an analytic function in the following way. 
+
+    <definition xml:id="def-complex-potential">
+      <statement>
+        <p>
+         Let <m>\phi(x,y)</m> and <m>\psi(x, y)</m> be the respective velocity potential and streamfunction for some potential flow. We define
+    <men xml:id="eqn-complex-potential">
+      f(z) = \phi(x, y) + \im \psi(x, y),
+    </men>
+    and call <m>f</m> the <em>complex potential</em>. 
+        </p>
+
+        <p>
+          Note that by differentiating in the horizontal and vertical directions, we have 
+          <me>
+            \dd{f}{z} = \pd{}{x} (\phi + \im \psi) = \pd{}{y} (\phi + \im \psi). 
+          </me>
+         Therefore it follows that the horizontal and vertical velocity components of the flow, related via <m>\bu = [u, v]</m>, are given by 
+         <men xml:id="eqn-complex-velocity">
+          \dd{f}{z} = u - \im v.
+         </men>
+          
+        </p>
+      </statement>
+    </definition>
+  </p>
+
+
+
+  <p>
+    <example>
+      <title>Uniform flow</title>
+      <idx><h>uniform flow, complex</h></idx>
+
+      <p>
+        We can verify that the complex potential for uniform flow is given from 
+       <me>
+        f(z) = U \e^{-\im \alpha} z.
+       </me>
+       This can be compared to  <xref ref="example-potential-uniform"/>.
+      </p>
+    </example>
+  </p>
+
+  <p>
+    <example>
+      <title>Stagnation point flow</title>
+      <idx><h>stagnation point flow, complex</h></idx>
+
+      <p>
+        We can verify that the complex potential for a stagnation point flow is given by
+       <me>
+        f(z) = \frac{z^2}{2}.
+       </me>
+       This can be compared to  <xref ref="example-potential-stagnation"/>.
+      </p>
+    </example>
+  </p>
+  
+  <p>
+    <example>
+      <title>Line source</title>
+      <idx><h>line source, complex</h></idx>
+
+      <p>
+        We can verify that the complex potential for a line source flow is given by
+       <men xml:id="eqn-complex-linesource">
+        f(z) = \frac{Q}{2\pi} \log z
+       </men>
+       This can be compared to  <xref ref="example-potential-linesource"/>.
+      </p>
+
+      <p>
+        The complex logarithm is an example of a function that is not analytic at the isolated point <m>z = 0</m> where it possesess a <em>branch point</em>. However, it still provides a permissible analytic function away from the origin. 
+      </p>
+
+      <p>
+        The evaluation of the complex logarithm can be performed via the definition 
+        <men xml:id="eqn-complex-logarithm">
+          \log z = \log r + \im \theta,
+        </men>
+        where <m>z = r\e^{\im \theta}</m> is the polar form representation of <m>z</m>. In particular <m>log z</m> is a multi-function with a <em>branch point</em> at the origin. 
+      </p>
+
+      <p>
+        With the above decomposition of the logarithm in mind, notice that we can then conclude that the velocity potential and streamfunction are given by 
+        <me>
+          \phi = \Re[f] = \frac{Q}{2\pi} \log r \quad \text{and} \quad
+          \psi = \Im[f] = \frac{Q}{2\pi} \theta.
+        </me>
+        Indeed the streamlines are along the rays <m>\theta</m> constant.
+      </p>
+
+      <p>
+        From <xref ref="eqn-complex-linesource"/>, we can also compute the velocities using the relationship <xref ref="eqn-complex-velocity"/>. We thus have 
+        <me>
+         u - \im v = \frac{Q}{2\pi} \frac{1}{z} = \frac{Q}{2\pi} \frac{x - \im y}{(x^2 + y^2)},
+        </me>
+        once we have multiplied the top and bottom by the conjugate of <m>z</m>.
+      </p>
+    </example>
+  </p>
+
+  <p>
+    <example>
+      <title>Line vortex flow</title>
+      <idx><h>line vortex, complex</h></idx>
+
+      <p>
+        We can verify that the complex potential for a line vortex is given by
+       <me>
+        f(z) = -\frac{\im \Gamma}{2\pi} \log z.
+       </me>
+       This can be compared to  <xref ref="example-streamfunction-linevortex"/>.
+      </p>
+
+      <p>
+        Again, using the definition of the complex logarithm, via <xref ref="eqn-complex-logarithm"/>, we can write <m>f</m> in terms of its real and complex components as 
+        <me>
+          f(z) = \frac{\Gamma}{2\pi} (\theta - \im \log r),
+        </me>
+        where <m>z = r\e^{\im\theta}</m>>.
+       Therefore, the streamfunction is given by <m>\psi = -(\Gamma/2\pi) \log r</m> and is constant along circular trajectories with constant distance from the origin, <m>r</m>. 
+      </p>
+    </example>
+  </p>
+
+ </subsection>
 </section>
 
 <section xml:id="sec-method-of-images">

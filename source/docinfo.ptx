@@ -23,6 +23,7 @@
 \renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
 \newcommand{\de}{\mathrm{d}} % Do this
 \newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
 \newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
