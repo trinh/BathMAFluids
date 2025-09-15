@@ -1,10 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-chapter06-vorticity" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Vorticity</title>
+  <title>Vorticity and the Helmholtz principle</title>
 
   <introduction>
-    <p>Brief introduction to appear here.</p>
+    <p>Recall the fluid vorticity <m>\bomega=\nabla\times\bu</m> that was introduced in
+      Definition <xref ref="def-vorticity"/>. Many people struggle to understand the
+      concept of vorticity when they first encounter it, so you should not worry if it
+      takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’
+      by Ascher Shapiro available at
+      <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>
+      gives a clear and comprehensive introduction to the phenomenon. To recap:
+      <ul>
+        <li>
+          <p>
+            Vorticity, <m>\bomega</m>, is a vector field and it is a function of space and time
+            (like the fluid velocity).
+          </p>
+        </li>
+        <li>
+          <p>
+            At each point in the fluid, <m>\bomega</m> points in the direction of the axis of the local fluid rotation.
+          </p>
+        </li>
+        <li>
+          <p>
+            The magnitude of <m>\bomega</m> is twice the local angular velocity.
+          </p>
+        </li>
+        <li>
+          <p>
+            In the special case of a two-dimensional flow
+            (that is <m>\bu(\bx,t)=(u(x,y,t),v(x,y,t),0)</m>), the vorticity is
+            unidirectional, pointing in the <m>z</m>-direction with
+            magnitude <me>\pd{v}{x}-\pd{u}{y}</me>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+     <example>
+      <statement>
+        <p> Consider the steady two-dimensional flow given by <me>\bu = (-y,x, 0)</me>, which is flow
+          anti-clockwise around the origin.
+          <ol>
+            <li>
+              <p>
+                Plot the streamlines of this flow.
+              </p>
+            </li>
+            <li>
+              <p>
+                Convert this flow to plane polar coordinates <m>(r,\theta)</m> (where
+                <m>x = r\cos\theta</m> and <m>y = r\sin\theta</m>), and show that the <m>r</m>-component
+                of the velocity is zero and the <m>\theta</m>-component is <m>1</m>.
+                </p>
+            </li>
+            <li>
+              <p>
+                Hence find the angular velocity of the fluid.
+                </p>
+            </li>
+            <li>
+              <p>
+                Calculate the vorticity of the flow.
+              </p>
+            </li>
+          </ol>
+          </p> 
+        <answer>
+          <p>
+          <ol>
+            <li>
+              <p>
+                Plot the streamlines of this flow.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have
+                <me>\dd{r}{t}=\frac{x}{r}(-y)+\frac{y}{r}(x)=0,</me>
+                and
+                <me>\dd{\theta}{t}=\dd{}{t}\tan^{-1}\frac{y}{x}
+                  =\frac{1}{1+y^2/x^2}\left(-\frac{y}{x^2}\right)(-y)+\frac{1}{1+y^2/x^2}\left(\frac{1}{x}\right)(x)
+                  =1.</me>
+                  Thus, in plane polar coordinates, the velocity is <m>(0,1)</m>.
+                </p>
+            </li>
+            <li>
+              <p>
+                The angular velocity is everywhere <m>(0,0,1)</m>.
+                </p>
+            </li>
+            <li>
+              <p>
+                The vorticity of the flow is given by <m>(0,0,2)</m>, which is twice the local rotation rate.
+              </p>
+            </li>
+          </ol>
+          </p>
+        </answer>
+      </statement>
+    </example>      
+
   </introduction>
+
+<section xml:id="sec-helmholtz">
+    <title>The Helmholtz principle</title>
+      <p>As mentioned in Chapter <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
+      vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>:
+      <me>
+        \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu.
+      </me>
+      In two-dimensional irrotational flow, the right-hand side is zero, so the vorticity of each fluid
+      particle is constant in time. This is a special case of the more general result known as
+      the <em>Helmholtz principle</em>, which states that in an inviscid fluid, the vorticity
+      of each fluid particle is conserved.
+      </p>
+  </section>
+
+  <section xml:id="sec-helmholtz-examples">
+    <title>Examples illustrating the use of the Helmholtz principle</title>
+      Here are some examples.
+  </section>
 
 </chapter>

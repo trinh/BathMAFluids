@@ -4,7 +4,21 @@
   <title>Viscous flows</title>
 
   <introduction>
-    <p>Brief introduction to appear here. Are we ready?</p>
+    <p>
+      In this chapter we introduce the effects of viscosity into our fluid model. This
+      leads to the famous Navier--Stokes equations, which are the governing equations for
+      many fluid flows of practical interest. The viscosity has a profound
+      effect on the flow, and it can lead to the formation of boundary layers and the generation
+      of vorticity at solid boundaries.
+    </p>
+
+    <p>
+      Test matrix.
+      <!--<me>
+        \begin{matrix} 1 & 2 & 3\\ a & b & c \end{matrix}
+      </me>-->
+    </p>
+
   </introduction>
 
 </chapter>

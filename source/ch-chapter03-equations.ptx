@@ -85,7 +85,7 @@
         packet of fluid is initially located at <m>V(0)</m>. As the fluid evolves in time, it then
         occupies the volume <m>V(t)</m> with <m>t > 0</m>. </p>
 
-      <p> As an exmaple, we may express the density of the fluid as <me>
+      <p> As an example, we may express the density of the fluid as <me>
           \rho = \rho(\bx, t), \qquad \textrm{$\bx \in V(t)$}
         </me> i.e. at every
         point in space and moment in time, the above retrieves the density of the fluid within a
@@ -214,6 +214,18 @@
           <p>
             In 1D, Reynolds transport theorem reduces to an identity known as Leibniz's rule. This
             will be proven in your problem sets.
+          </p>
+        </remark>
+      </p>
+
+      <p>
+        <remark>
+          <p>
+            The Reynolds transport theorem can be stated in words as follows: the
+            rate of change of the integral of a quantity over a material
+            volume is equal to the
+            local rate of change of the quantity plus the net flux of the quantity
+            out of the control volume.
           </p>
         </remark>
       </p>
@@ -708,7 +720,9 @@
       </p>
      
       <p>
-        The proof of <xref ref="thm-bernoulli-steady"/> introduced a useful form of the momentum equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity"/>. This leads to the so-called <em>vorticity equation</em> form of the momentum equation. 
+        The proof of <xref ref="thm-bernoulli-steady"/> introduced a useful form of the momentum
+        equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity"/>.
+        This leads to the so-called <em>vorticity equation</em> form of the momentum equation. 
 
         <theorem xml:id="thm-vorticity-equation">
           <title>The vorticity equation for incompressible flow</title>
@@ -718,7 +732,11 @@
             <men xml:id="eqn-vorticity-equation">
               \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
             </men>
-            known as the <em>vorticity equation</em>.
+            or, equivalently,
+            <men xml:id="eqn-vorticity-equation-lagrange">
+              \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
+            </men>
+            and is known as the <em>vorticity equation</em>.
             
             </p>
           </statement>

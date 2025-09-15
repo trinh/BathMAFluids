@@ -87,7 +87,7 @@
         corresponding measurement of the fluid quantity that corresponds to the label <m>\bX</m>.
         For example, this is equivalent to tagging a free-floating buoy in the ocean with the label <m>
         \bX</m>, then measuring the temperature of the water as the buoy drifts in the ocean. This
-        temperature, we might write as <m>\mathcal{T}(\bX, t),</m> where <m>\bX</m> is simply a
+        Lagrangian temperature could be written <m>\mathcal{T}(\bX, t),</m> where <m>\bX</m> is simply a
         fixed quantity for the particular buoy. </p>
 
 
@@ -102,7 +102,7 @@
 
       <p> Again, let us consider a scalar property of the fluid (for example, its density,
         temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a
-        function of both position, <m>\bx</m>, and time, <m>t</m> and denote it by <m>f(\bx, t)</m>.
+        function of both position, <m>\bx</m>, and time, <m>t</m>, and denote it by <m>f(\bx, t)</m>.
         This is the <em>Eulerian description</em> of the property since it is defined by specifying
         a fixed position in space. Fixing <m>\bx</m> and then measuring <m>f</m> is akin to standing
         in the fluid at a fixed location and measuring the property value in time. </p>
@@ -110,9 +110,10 @@
       <p> We can alternatively write the property by its Lagrangian description. That is, given a
         label <m>\bX</m>, we obtain the current position of the particle associated with this label, <m>\bx(\bX,
         t)</m>, then obtain its property value. This we can write as the following: <me>
-          F(\bX, t) \equiv f(\bx(\bX, t)).
-        </me> Now, fixing <m>\bX</m> corresponds
-        to tracking how <m>f</m> changes as we move with the particle along the deforming fluid. </p>
+          F(\bX, t) \equiv f(\bx(\bX, t), t).
+        </me> Now, fixing <m>\bX</m> and changing <m>t</m> corresponds
+        to tracking the scalar property at a material point in the flow, or, equivalently, how <m>f</m> changes
+        as we move with the particle along the deforming fluid. </p>
 
       <p> There are thus two ways of considering time derivatives. 
         <definition xml:id="def-eulerlag">
@@ -123,8 +124,8 @@
         constant}.
               </me>
             </p>
-            <p> On the other hand, the <em>Lagrangian time derivative</em> is considered for a fix
-        label. <me>
+            <p> On the other hand, the <em>Lagrangian time derivative</em> is defined at a fixed
+              material point in the fluid. <me>
                 \DD{}{t} \equiv \pd{}{t} \biggr\rvert_{\bX} = \text{rate of change with $\bX$ held
         constant}.
               </me>
@@ -139,7 +140,8 @@
           The reason why the above derivatives are introduced is because, for the purpose of much of
           fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However,
           for the purpose of deriving many governing equations, it turns out to be much easier to
-          work with Lagrangian variables.
+          work with Lagrangian variables. This is because physical forces act on physical particles, or
+          material elements, of the fluid.
         </p>
       </remark>
 
@@ -187,35 +189,62 @@
     <p>There are different ways to visualise the dynamics of a fluid. Given the velocity, <m>\bu(\bx,
       t)</m>, we can plot a vector field at each point in space, and at a fixed moment in time.
       Little arrows are used to indicate the direction and the length of the arrow can be chosen to
-      represent the magnitude. </p>
+      represent the magnitude. Joining these up at a fixed moment in time into smooth curves gives the
+      <em>streamlines</em> of the flow. This is often the easiest type of visualisation to perform
+      mathematically, but the hardest experimentally.</p>
 
-    <p>Another representation of the flow is using <em>particle paths</em> and <em>streamlines</em>.
+    <p>Another representation of the flow is using <em>particle paths</em> or <em>pathlines</em>.
       Given a point and time, the particle path is the trajectory that would result if a particle
-      were dropped into the flow at that chosen point. It is thus found by solving an equation where
-      at every point on the trajectory, the particle's velocity is the specified velocity of the
-      fluid.</p>
+      were dropped into the flow at that chosen point and time. It is thus found by solving an
+      equation where at every point on the trajectory, the particle's velocity is the specified
+      velocity of the fluid.</p>
+
+    <p>A third representation is a <em>streakline</em>. If dye were continuously released into a
+      fluid from a fixed chosen point, the streakline at a given time is the line that would be
+      made by the dye. It is thus found by finding the current position of those particles whose
+      pathline has visited the chosen point at any past time. This is often the easiest type
+      of visualisation to perform experimentally, but the hardest to perform
+      mathematically.</p>
+
+      <p>Note that in a steady flow, the streamlines, pathlines and streaklines all coincide. However,
+        in an unsteady flow, they are all different. Although the video is dated and the sound and
+        picture quality are not up to modern standards, the clearest introduction to
+        these concepts is given in the first fourteen minutes of the 1963 production titled
+        ``Flow visualization'' available at
+        <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>.
+        </p>
 
     <p>
-      In the below definition, we define these concepts more concretely.
+      In the definition below, we define these concepts more concretely.
     </p>
 
     <p>
       <definition xml:id="def-streamline">
-        <title>Particle path and streamlines</title>
+        <title>Particle streamlines, pathlines and streaklines</title>
         <statement>
-          <p> Consider a particle whose position is given by <me>
-              \bx_1(t) = (x_1(t), y_1(t), z_1(t)),
-            </me> lying in a fluid
-            with velocity <m>\bu(\bx,
-              t)</m>.</p>
+          
+          <p>The <em>streamline</em> is given by solving the parametric equation <me>
+              \dd{\bx_1}{s} = \bu(\bx_1, t_0),
+            </me> where <m>s</m> is a parameter along the streamline, and <m>t_0</m> is the chosen
+            time. Choosing a variety of different initial points, <m>\bx_1(0)</m>, and solving
+            the above equation gives a family of streamlines at time <m>t_0</m>.
+          </p>
 
-          <p>The <em>particle path</em> for the particle is given by solving the equation <me>
-            \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx = \bx_1$},
+          <p> The <em>particle path</em> or <em>pathline</em> for a particle <m>\bx(t)</m> is given by
+            solving the equation <me>
+            \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(0) = \bx_2$},
             </me>
-            with appropriate initial conditions, i.e. a specified value of <m>\bx_1(0)</m>. </p>
+            for a chosen initial value of <m>\bx_2</m>. Choosing a variety of points <m>\bx_2</m> yields
+            a family of pathlines.</p>
+
+            <p>The <em>streakline</em> for a point <m>\bx_3</m> is given by solving the equation <me>
+              \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(t_3) = \bx_3$},
+            </me>
+            for a variety of values of <m>t_3</m>. This gives the current position of all particles
+            that have passed through the point <m>\bx_3</m> at any time <m>t_3</m> in the past. </p>
 
           <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>,
-            then the particle path is called a <em>streamline</em>. </p>
+            then these three definitions coincide. </p>
         </statement>
       </definition>
     </p>
@@ -267,7 +296,7 @@
         above hyperbolae. </p>
 
       <p> Notice that in this case, the velocity field is time-independent, and therefore the
-        particle paths are <em>streamlines</em>. </p>
+        particle paths coincide with the streamlines. </p>
     </answer>
     </example>
 
@@ -277,7 +306,7 @@
           streamlines of the flow on the plane <m>z = 0</m>, and also the particle trajectories. </p>
         <!-- <answer>
           <p>
-            This is.
+            I think the pathlines and streaklines coincide in this case, but not the streamlines.
           </p>
         </answer> -->
       </statement>
