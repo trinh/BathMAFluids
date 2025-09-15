@@ -45,7 +45,13 @@
   </titlepage>
 
 
-  <preface><title>Official description</title><p>
+  <preface><title>Official description</title>
+   
+    <image source="rayleigh_tubulence.jpg" width="80%">
+      <shortdescription>Rayleigh's experiment on turbulence</shortdescription>
+    </image>
+    
+    <p>
 The description of this unit in the <url
 href="http://www.bath.ac.uk/catalogues/2025-2026/ma/MA32051.html" visual="" >official
 catalogue</url> is the following:
@@ -94,16 +100,28 @@ As part of the curriculum transformation (with the first change to Year 3 in 202
 
 <preface><title>Related units at Bath</title>
 <p>
+We will only mention units from Year 2 onwards in this. Apart from the key pre-requisites of MA22016 (Differential equations and vector calculus) and/or MA20223 (the older Vector calculus and partial differential equations), we make an effort to keep the material in the module self-contained. You are recommended to have taken MA22021 (partial differential equations). </p>
+<p>
 <ul>
   <li>
   <title>MA22016: Differential equations and vector calculus</title>
   <p>
     <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22016.html">This unit</url> forms a standard second-year module on differential equations and vector calculus, and is a key pre-requisite for this module. In addition to teaching and reviewing basic techniques for solving ordinary differential equations, you will learn about some of the core methods in vector calculus (directional derivatives; gradients; potentials; line integrals; divergence; curl; surface and volume integrals; curvilinear coordinates; integral theorems). 
   </p>
+
+  <p>
+    Note prior to curriculum transformation, this would have been part of the MA20223 unit (with additional material from the below MA22021).
+  </p>
 </li>
 <li>
-  <title>MA22021: Partial differential equations</title><p>
- <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22021.html" >This module</url> teaches basic techniques and theory for the core PDEs (Laplace, heat, wave equations). Generally, we will make with your broad familiarity of PDE different equation types and terminology (e.g. boundary conditions).  
+  <title>MA22021: Partial differential equations</title>
+  <p>
+ <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA22021.html" >This module</url> teaches basic techniques and theory for the core PDEs (Laplace, heat, wave equations). Generally, we will make with your broad familiarity of PDE different equation types and terminology (e.g. boundary conditions). This unit will be useful, as it will teach you some basic familiarity with partial differential equations. However, the current fluid dynamics module assumes you may not have taken it, and attempts to fill in any necessary gaps.
+  </p>
+</li>
+<li>
+  <title>MA32045: Complex analysis</title><p>
+ <url href="https://www.bath.ac.uk/catalogues/2025-2026/ma/MA32045.html" >This module</url> covers some of the theory and applications behind complex-valued functions. You will have encountered complex functions, e.g. <m>f(z) = z^2, \e^z, \log z, \ldots</m> in an <em>ad-hoc</em> way, perhaps in earlier courses on Analysis. Again, we will attempt to cover all the necessary pre-requisites, and also provide you with helpful references. 
   </p>
 </li>
 <!-- <li>
@@ -204,7 +222,7 @@ In this unit:
 
 </preface>
 
-<preface><title>Moodle page <etc/></title>
+<preface><title>Moodle and references</title>
 <!--
 <assemblage><title>Recordings on Re:View</title><p>
   <ul><li>
@@ -222,6 +240,11 @@ In this unit:
   Moodle page and talked about various other administrative things;
   unfortunately the recording was lost due to a Moodle/Panopto error.
 </p>
+
+  <p>
+    There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a <em>first course</em> on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones. 
+  </p>
+  
 </preface>
 
 
