@@ -118,7 +118,7 @@
               \begin{vmatrix}
               \pd{x}{X} \amp \pd{x}{Y} \amp \pd{x}{Z} \\
               \pd{y}{X} \amp \pd{y}{Y} \amp \pd{y}{Z} \\
-              \pd{z}{X} \amp \pd{z}{Y} \amp \pd{z}{Z},
+              \pd{z}{X} \amp \pd{z}{Y} \amp \pd{z}{Z}
               \end{vmatrix}
             </me>
             is finite and non-zero: <me>
