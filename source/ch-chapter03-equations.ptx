@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-chapter03-equations" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>The Euler equations</title>
+  <title>Equations of motion</title>
 
   <introduction>
     <p>In this chapter, we develop the basic equations of fluid dynamics. The equations are derived
@@ -475,7 +475,7 @@
 
   </section>
     <section xml:id="sec-incompressible">
-      <title>Incompressible flow and Euler</title>
+      <title>The Euler equations</title>
 
     <p>
       Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via 
@@ -590,7 +590,54 @@
         </statement>
       </definition>
     </p>
+
+    <subsection xml:id="subsec-euler-BCs">
+      <title>Boundary conditions</title>
+      <idx><h>boundary conditions</h></idx>
+
+      <p>
+        A great deal of the complexity of fluid motion comes from the conditions that we must consider between the fluid and its bounding surfaces. For water in the ocean, a bounding surfaces might include the ocean floor bottom and the body of a boat, down to the vegetation in the water or the sand on a beach. <em>This can get quite complex!</em> In this module, and when we first learn fluid dynamics, we only consider simple bounded fluid regions (fluid above a plate, fluid in a box, fluid in a channel, etc.)</p>
+        
+        <p>In the case of a water wave, a bounding surface will also include the free surface of the wave, itself, which interacts with the surrounding atmospheric gas. This leads to the situation of free-boundary or free-surface conditions<idx><h>free-surface</h></idx>.
+      </p>
+
+      <p>
+        For the situation of fluid at a solid boundary, this leads us to formulate the following. </p>
+
+        <p>
+        <note xml:id="note-noflux-BC">
+          <title>No-flux condition through a boundary</title>
+          <p>
+        For a fluid in contact with a fixed rigid boundary, <m>\partial V</m>, then we require that the normal velocity of the fluid there must be zero: 
+        <men xml:id="eqn-motion-noflux-BC">
+          <idx><h>boundary conditions, no penetration</h></idx>
+         \bu \cdot \bn = 0 \quad \textrm{on $\partial V$},
+        </men>
+        where <m>\bn</m> is the unit normal to <m>\partial V</m>.  
+        This condition states that the fluid cannot flow through <m>\partial V</m> or separate from <m>\partial V</m> (hence leaving a vacuum). 
+      </p>
+    </note>
+      </p>
+
+      <p>
+        It turns out that the above no-flux condition is sufficient to provide well-posed boundary conditions for most inviscid fluids. Note that in particular, we have not constrained the tangential velocity of the fluid, i.e. <m>\bu \cdot \bt</m>, where <m>\bt</m> is the tangential vector at the boundary. 
+      </p>
+
+      <p>
+        Later in <xref ref="ch-viscousflows"/>, you will study the situation of a <em>viscous fluid</em>, where it will be important to consider the tangential fluid velocity. 
+      </p>
+      
+    </subsection>
+
+
+
     </section>
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                                              %
+    %                           BERNOULLI'S                                        %
+    %                                                                              %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     <section xml:id="sec-bernoulli">
       <title>Bernoulli's equation</title>

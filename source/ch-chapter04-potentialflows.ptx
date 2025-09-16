@@ -911,10 +911,74 @@ c
 
 <section xml:id="sec-method-of-images">
   <title>The method of images</title>
+
+  <p>
+    The preceeding sections would give the misleading impression that solving potential-flow problems for two-dimensional flows is easy. This is not the case, and the primary reason is due to the presence of <em>boundary conditions</em>. The elementary flows we have previously considered were unconfined and/or we did not consider additonal constraints on their behaviours at infinity. In reality, a real physical fluid, whether in the ocean, the air, or in a container, is confined in some direction, and we must often consider subtle questions about the mechanism that produces the fluid motion. 
+  </p>
+
+  <p>
+    In this section, we consider the situation of solving for the potential flow in a fluid region with boundaries. Recall that this is equivalent to finding a velocity potential satisfying <m>\nabla^2 \phi = 0</m> or an analytic complex potential, <m>f(z)</m>. 
+  </p>
+
+  <p>
+    Recall from <xref ref="note-noflux-BC"/> that on solid boundaries, we must impose the no-flux condition that
+    <me>
+      \bu \cdot \bn = \nabla \phi \cdot \bn = 0 \quad \text{on $\partial V$}.
+    </me>
+  </p>
+
+  <subsection xml:id="subsec-images-planar">
+    <title>Planar boundaries</title>
+
+   <p>
+    Consider the situation illustrated in <xref ref="image-planar01"/>.
+
+    <figure xml:id="image-planar01">
+      <caption>Blah</caption>
+      <image source="image-planar01.jpg" width="80%"/>
+    </figure>
+   </p> 
+
+   <p>
+    We envision a semi-infinite region of fluid bounded on the left by a wall at <m>x = 0</m>. A single (line) source of strength <m>Q</m> is placed at <m>x = d</m>. Therefore from <xref ref="eqn-complex-linesource"/>, we would expect that at least near <m>x = d</m>, the complex potential behaves as 
+    <me>
+      f(z) \sim \frac{Q}{2\pi} \log z \quad \text{as $z \to d$}.
+    </me>
+    However the above solution does not satisfy the required boundary conditions at <m>x = 0</m> since it corresponds to a velocity field for which the horizontal velocity penetrates through <m>x = 0</m>. This can be verified via inspection. For example, we can inspect the velocity or the streamlines; this is part of <xref ref="ps-image-planar01"/>.
+   </p>
+
+
+  </subsection>
+
+
 </section>
 
 <section xml:id="sec-conformal-mapping">
   <title>Conformal mapping</title>
 </section>
+
+
+<worksheet xml:id="ws-potentialflows">
+
+  <exercisegroup xml:id="ps-image">
+ <title>Method of images</title>
+    <introduction>
+      <p>
+     Intro. 
+      </p>
+    </introduction>
+  
+    <exercise xml:id="ps-image-planar01">
+      <title>Single source in a semi-infinite flow</title>
+      <statement>
+        <p>
+       Verify that a single source of strength <m>Q</m> placed at the point <m>z = d > 0</m> is insufficient to describe flow bounded in the semi-infinite region, <m>x > 0</m>, with a planar boundary at <m>x = 0</m>. What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow. 
+        </p>
+      </statement>
+    </exercise>
+  
+  </exercisegroup>
+  
+</worksheet>
 
 </chapter>
