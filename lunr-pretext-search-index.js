@@ -784,13 +784,49 @@ var ptx_lunr_docs = [
   "body": " Examples illustrating the use of the Helmholtz principle Here are some examples. "
 },
 {
-  "id": "ch-viscousflows",
+  "id": "definitions",
   "level": "1",
-  "url": "ch-viscousflows.html",
-  "type": "Chapter",
-  "number": "7",
-  "title": "Viscous flows",
-  "body": " Viscous flows   In this chapter we introduce the effects of viscosity into our fluid model. This leads to the famous Navier--Stokes equations, which are the governing equations for many fluid flows of practical interest. The viscosity has a profound effect on the flow, and it can lead to the formation of boundary layers and the generation of vorticity at solid boundaries.  Test matrix.    "
+  "url": "definitions.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "Definitions of important concepts",
+  "body": " Definitions of important concepts   Viscosity  Viscosity quantifies the fluid's resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a Newtonian fluid. For these fluids the shear viscosity (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.   We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).   The kinematic viscosity (measured in ) is related to the shear viscosity via    Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood        Many real fluids, e.g. blood, have more complicated viscosity properties, but in this course we mainly consider circumstances in which it is appropriate to assume that the fluid in question has a constant and uniform viscosity.    Reynolds number  This is one of the most important flow parameters, and it often determines the qualitative nature of the flow. It is a dimensionless quantity, defined by   where is a characteristic (or typical) velocity of the flow and is a characteristic lengthscale. It characterises the relative importance of viscous and inertial accelerations.   "
+},
+{
+  "id": "example-viscosity",
+  "level": "2",
+  "url": "definitions.html#example-viscosity",
+  "type": "Example",
+  "number": "7.1.1",
+  "title": "",
+  "body": " We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).  "
+},
+{
+  "id": "viscosity-6",
+  "level": "2",
+  "url": "definitions.html#viscosity-6",
+  "type": "Table",
+  "number": "7.1.3",
+  "title": "Viscosities at <span class=\"process-math\">\\(1\\,\\mathrm{atm}\\)<\/span> pressure and <span class=\"process-math\">\\(20\\,^\\circ\\mathrm{C}\\text{.}\\)<\/span>",
+  "body": " Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood       "
+},
+{
+  "id": "ws-viscousflows",
+  "level": "1",
+  "url": "ws-viscousflows.html",
+  "type": "Worksheet",
+  "number": "7.2",
+  "title": "Worksheet",
+  "body": "  Mechanics   Intro.    Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .         "
+},
+{
+  "id": "ps-falling-ball-viscometer",
+  "level": "2",
+  "url": "ws-viscousflows.html#ps-falling-ball-viscometer",
+  "type": "Worksheet Exercise",
+  "number": "7.2.1",
+  "title": "Falling ball viscometer.",
+  "body": " Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .       "
 },
 {
   "id": "ws-intro",
