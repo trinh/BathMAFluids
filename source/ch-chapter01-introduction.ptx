@@ -8,4 +8,23 @@
 
   </introduction>
 
+
+  <section xml:id="sec-preliminary-vector-calculus">
+    <title>A reminder of vector calculus</title>
+
+    <p>
+      Brief listing of things that we shall remind you of: vector operations, div, grad, curl, vector identities, divergence theorem, Stokes theorem, line integrals, different coordinate systems. 
+    </p>
+    
+  </section>
+  
+  <section xml:id="sec-preliminary-complex-variables">
+    <title>A reminder of complex variables</title>
+
+  <p>
+    Brief listing of things we shall remind you of: interpretation of complex variables in the Argand plane, polar-coordinate representation, exponential and logarithm. 
+  </p>
+    
+  </section>
+
  </chapter>

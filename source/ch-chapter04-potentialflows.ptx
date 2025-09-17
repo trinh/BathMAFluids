@@ -928,7 +928,7 @@ c
   </p>
 
   <subsection xml:id="subsec-images-planar">
-    <title>Planar boundaries</title>
+    <title>Planar boundaries: a half-plane</title>
 
    <p>
     Consider the situation illustrated in <xref ref="image-planar01"/>.
@@ -942,13 +942,131 @@ c
    <p>
     We envision a semi-infinite region of fluid bounded on the left by a wall at <m>x = 0</m>. A single (line) source of strength <m>Q</m> is placed at <m>x = d</m>. Therefore from <xref ref="eqn-complex-linesource"/>, we would expect that at least near <m>x = d</m>, the complex potential behaves as 
     <me>
-      f(z) \sim \frac{Q}{2\pi} \log z \quad \text{as $z \to d$}.
+      f(z) \sim \frac{Q}{2\pi} \log (z-d) \quad \text{as $z \to d$}.
     </me>
     However the above solution does not satisfy the required boundary conditions at <m>x = 0</m> since it corresponds to a velocity field for which the horizontal velocity penetrates through <m>x = 0</m>. This can be verified via inspection. For example, we can inspect the velocity or the streamlines; this is part of <xref ref="ps-image-planar01"/>.
    </p>
 
+   <p>
+    Rephrased in terms of the streamlines, the boundary condition at <m>x = 0</m> is equivalent to the constraint that 
+    <me>
+      \Im f(z) = \psi = \textrm{constant at $x = 0$}.
+    </me>
+   </p>
 
+   <p>
+    Our inspired solution to the above problem is referred to as <em>the method of images</em>.</p>
+
+    <p>
+    <note xml:id="note-method-of-images">
+      <title>Method of images</title>
+
+      <p>
+        Given potential flow problem, we consider the superposition of elementary sinks/sources, i.e. 
+       <me>
+        f(z) = \frac{1}{2\pi} \sum_{j=0}^{N-1} Q_j \log(z - z_j), 
+       </me>
+      and/or vortices,
+      <me>
+        f(z) = -\frac{\im}{2\pi} \sum_{j=0}^{N-1} \Gamma_j \log(z - z_j).
+      </me>
+      The strengths and locations of the individual contributions are chosen so that boundary conditions on the required boundaries (including at infinity) can be met. 
+      </p>
+    </note>
+   </p>
+
+   <p>
+    Notice that the <em>linearity</em> of the potential flow problem is crucial: any analytic function is associated with a velocity potential that satisfies Laplace's equation, <m>\nabla^2 \phi = 0</m>, and therefore the superposition of such functions also yields a permissible complex potential, <m>f</m>. 
+   </p>
+    
+    
+    <p>We consider the addition of a "fictitious" image source, with the same strength at the reflected point <m>x = -d</m>, which lies outside of the posited fluid region. This gives the complex potential of 
+    <me>
+      f(z) = \frac{Q}{2\pi} \log(z - d) + \frac{Q}{2\pi} \log(z + d). 
+    </me>
+    This yields the illustration of the flow in <xref ref="fig-image-planar02"/>
+
+     <figure xml:id="fig-image-planar02">
+      <caption>Blah</caption>
+      <image source="image-planar02.jpg" width="80%"/>
+    </figure>
+   </p> 
+
+   <p>
+    The corresponding complex velocity is given by 
+    <me>
+      u - \im v = f'(z) = \frac{Q}{2\pi}\frac{z}{z^2 - d^2}.
+    </me>
+    So indeed, on the central boundary, we have <m>z = \im y</m>, and 
+    <me>
+      u - \im v = - \im \frac{Q}{\pi} \frac{y}{y^2 + d^2},
+    </me>
+    and the velocity is entirely vertical. So indeed, the condition that <m>\bu \cdot \bn = 0</m> on the planar boundary is satisfied. 
+   </p>
+
+   <p>
+    In order to study the complex velocity, <m>f(z)</m>, and develop an equation for the streamlines of the flow, we must first navigate the fact that the complex logarithm function is only well-defined in a slit complex plane. First, let
+    <me>
+    z - d = r_1 \e^{\im \theta_1} \quad \textrm{and} \quad z + d = r_2 \e^{\im \theta_2}.
+    </me>
+    Using the definition of the complex logarithm <xref ref="eqn-complex-logarithm"/>, we have
+    <me>
+    f(z) = \frac{Q}{2\pi} \left[ \log r_1 + \log r_2\right] + \im \frac{Q}{2\pi}\left[ \theta_1 + \theta_2 \right].
+    </me>
+    The definitions of <m>r_1, r_2</m> and <m>\theta_1, \theta_2</m>, are shown in the below figure. In order for each logarithm to be well defined, the angles <m>\theta_1</m> and <m>\theta_2</m> must be restricted to be less than a complete revolution. We thus restrict <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_1 \in [-\pi, \pi)</m>. 
+
+    <figure xml:id="fig-image-duallog">
+      <caption>Blah</caption>
+      <image source="image-duallog.jpg" width="100%"/>
+    </figure>
+   
+  In <xref ref="ps-image-planar02"/>, you will be asked to develop an equation for the streamlines of this flow. 
+   </p>
+
+  <p>
+    The above ideas can be extended to the situation of a line vortex in a half plane. Again, we are interested in describing the flow due to a line vortex at <m>z = d</m>, and therefore we expect that near this point,
+    <me>
+      f(z) \sim -\frac{\im\Gamma}{2\pi} \log(z - d) \quad \textrm{as $z \to d$}.
+    </me>
+    However, the above potential does not satisfy the necessary zero-flux condition at <m>x = 0</m>.
+  </p>
+
+  <p>
+    In this case, the approach is to add an image vortex at <m>z = -d</m>, but opposite in direction:
+    <me>
+      f(z) = -\frac{\im\Gamma}{2\pi} \log(z - d) + \frac{\im\Gamma}{2\pi} \log(z + d).
+    </me>
+    Therefore, this flow is composed by a line vortex circulating anticlockwise on the right, and a line vortex circulating clockwise on the left. It can be verified that the complex velocity is given by 
+    <me>
+      u - \im v = -\frac{\im \Gamma d}{\pi(z^2 - d^2)}
+    </me>
+    and indeed the velocity at <m>x = 0</m> is entirely vertical and there is no flux through the boundary. 
+  </p>
+
+  <p>
+    There is an exercise in <xref ref="ps-image-planar03"/>.
+  </p>
   </subsection>
+
+  <remark>
+    <title>Uniqueness of solutions</title>
+    <p>
+      You may be wondering: if a permissible potential function is found that satisfies the necessary boundary conditions, can we be certain it is the unique solution in the problem (up to a constant)? You may understand the construction of potentials, via the method of images, but perhaps irked that it involves the insertion of these so-called 'fictitious' points. The answer, at least for most non-pathological problems in potential flow theory (i.e. all the problems you study) is <em>yes</em>, the solution you have found is assured to be the only solution (up to a constant).</p> 
+      
+     <p> This is, to some extent, related to the <url href="https://proofwiki.org/wiki/Uniqueness_of_Analytic_Continuation">uniqueness of analytic continuation</url>. In a nutshall, the relevant theorem states that given two admissible complex potentials, say <m>f_1(z)</m> and <m>f_2(z)</m>, that agree on the line <m>x = 0</m> (in the case of the above situation), it is the case that <m>f_1 = f_2</m> everywhere (where they are analytic). 
+    </p>
+
+    <p>
+      Therefore, you can be certain that solutions you find via the trick of method of images are the only solutions.
+    </p>
+    
+  </remark>
+
+
+  <!-- <subsection">
+    <title>Planar boundaries: vortex flow</title>
+    
+  </subsection> -->
 
 
 </section>
@@ -976,9 +1094,37 @@ c
         </p>
       </statement>
     </exercise>
+    
+  <exercise xml:id="ps-image-planar02">
+      <title>A source in a semi-infinite flow</title>
+      <statement>
+        <p>
+          Consider the situation of two point sources of identical strength, <m>Q</m>, placed at <m>z = \pm d</m>, with <m>d \gt 0</m>. Develop equations for the complex potential, <m>f(z) = \phi + \im \psi</m>, and complex velocity, <m>u - \im v</m>. 
+        </p>
+
+        <p>
+          Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form. 
+        </p>
+      </statement>
+    </exercise>
   
+  <exercise xml:id="ps-image-planar03">
+      <title>Two vortices and a dividing boundary</title>
+      <statement>
+        <p>
+          Consider the situation of two point vorticies of identical strength, but opposite direction, placed at <m>z = \pm d</m>, with <m>d \gt 0</m>. Develop equations for the complex potential, <m>f(z) = \phi + \im \psi</m>, and complex velocity, <m>u - \im v</m>. 
+        </p>
+
+        <p>
+          Demonstrate that the streamlines are given by 
+          <me>
+            \psi = \frac{\Gamma}{2\pi}\log \left( \frac{r_2}{r_1}\right).
+          </me>
+        </p>
+      </statement>
+    </exercise>
+
   </exercisegroup>
-  
 </worksheet>
 
 </chapter>
