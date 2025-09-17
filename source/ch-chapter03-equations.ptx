@@ -12,12 +12,12 @@
   <p> Let <m>D</m> be a region in a 2D or 3D region filled with fluid. The fluid is in motion and we
     wish to describe this motion.</p>
 
-  <p>Let <m>\mathbf{x}\in D</m> be a point in <m>D</m> and consider the particle of fluid that moves
-    through the point <m>\mathbf{x}</m> at time <m>t</m>. In the figure below, we sketch the
-    trajectory that this particle might take within the fluid. Also at the point <m>\mathbf{x}</m>
-    at time <m>t</m>, we let <m>\mathbf{u}(\mathbf{x}, t)</m> be the velocity of the particle. At
+  <p>Let <m>\bx\in D</m> be a point in <m>D</m> and consider the particle of fluid that moves
+    through the point <m>\bx</m> at time <m>t</m>. In the figure below, we sketch the
+    trajectory that this particle might take within the fluid. Also at the point <m>\bx</m>
+    at time <m>t</m>, we let <m>\bu(\bx, t)</m> be the velocity of the particle. At
     each fixed time, we can imagine the velocity vectors drawn at each point in the fluid; thus we
-    call <m>\mathbf{u}</m> the <em>velocity field</em> of the fluid. </p>
+    call <m>\bu</m> the <em>velocity field</em> of the fluid. </p>
 
   <figure xml:id="ch01-fluid">
     <caption>Image of the fluid domain <m>D</m>.</caption>
@@ -25,17 +25,17 @@
   </figure>
 
   <p>At each point in space and moment in time, we assume that the fluid has a well-defined mass
-    density, <m>\rho(\mathbf{x}, t)</m>. Let <m>V \subseteq D</m> be any subregion of <m>D</m>. Then
+    density, <m>\rho(\bx, t)</m>. Let <m>V \subseteq D</m> be any subregion of <m>D</m>. Then
     the mass of the fluid in <m>V</m> at time <m>t</m> is given by 
     <men xml:id="eqn-mass">
-    m(t) = \iiint_{V(t)} \rho(\mathbf{x}, t) \, \mathrm{d}V.     
+    m(t) = \iiint_{V(t)} \rho(\bx, t) \, \mathrm{d}V.     
     </men>
   </p>
 
   <remark>
     <title>Smoothness and well-posedness</title>
     <p> In most of what follows in this chapter, we shall always assume that the functions <m>
-      \mathbf{u}</m>, <m>\rho</m>, and similarly for others describing fluid quantities are
+      \bu</m>, <m>\rho</m>, and similarly for others describing fluid quantities are
       sufficiently smooth that the standard calculus operations can be applied to them. <em>Can you
       think of some situations in fluid dynamics where smoothness might not be guaranteed?</em>
     </p>
@@ -49,6 +49,25 @@
       one, applicable to most real-life scenarios). On the other extreme of this view is the
       assumption that the fluid is composed of a discrete set of molecules, all bouncing around, and
       hence fluid dynamics might be posed as the study of the kinetic motion of molecules! </p>
+<p>
+  In the continuum description, we are averaging properties (e.g. velocity) over groups of individual
+  fluid particles that are close to each other. Thus there is a minimum size of the fluid body required
+  for this approach to be valid (if we consider smaller sizes of fluid, the motion of individual particles
+  becomes important):
+<ul>
+  <li> For gases at standard temperature and pressure (STP): the minimum volume is around
+    <m>10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around $3\times10^7$ molecules).</li>
+<li> For liquids: the minimum volume of fluid is smaller as the particles are closer together. For
+  water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m>
+  (this contains around <m>3\times10^7</m> molecules).</li>
+<li> For complex fluids: the minimum volume needed to invoke the continuum approximation is often larger,
+  e.g. blood contains red blood cells, which significantly affect its mechanics
+  (the mechanics of blood plasma approximates that of water) and the volume of a single red blood cell
+  is around <m>10^{-16}</m> m<m>^3</m>.</li>
+</ul>
+</p>
+
+
   </remark>
 
   <p> The derivation of the governing equations for a fluid is then based on three basic principles
@@ -883,5 +902,137 @@
       
     </section>
   
+<worksheet xml:id="ws-equations">
+
+<exercisegroup xml:id="governing-equations-questions">
+<title>Governing equations</title>
+<introduction>
+<p>
+Intro. 
+</p>
+</introduction>
+  
+<exercise xml:id="continuum-approximation">
+<title>Continuum approximation</title>
+<statement>
+<p>
+Domestic salt flows quite well out of a container with a hole in the bottom.
+Does salt match up to the properties quoted for a fluid? What is the size of a typical salt particle?
+At what size of hole would a continuum model of the salt flow out of the hole be reasonable?
+(Based on Q1, p. 42 by Paterson.)
+</p>
+<answer>
+<p>
+Salt is not like a fluid because you can make it into a pile,
+whereas the surface of a resting fluid is always horizontal.
+However, some aspects of salt flow are similar to the flow of a fluid.
+A typical salt particle is approximately a cube of side <m>0.5</m> mm,
+and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>.
+We need a size of hole that admits a very large number of particles.
+A reasonable value of the volume <m>V</m> appearing in the continuum approximation
+might be the volume of <m>3\times10^7</m> salt grains
+(this was the number of gas or liquid molecules quoted in the notes),
+i.e. <m>3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately
+<m>10</m> cm. We need a hole that is many times this distance, perhaps a hole with a diameter
+of one metre or so might be reasonable!
+</p>
+</answer>
+</statement>
+</exercise>
+
+<exercise xml:id="energy">
+<title>Energy</title>
+<statement>
+<p>
+Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1\times10^5</m> J/kg.
+(Based on Problem 1.24 by White.)
+</p>
+<ol>
+<li>
+<p>
+If the wind speed is 150 m/s at an altitude of 8 m, what is the total energy
+per unit mass of the air, relative to zero altitude?
+</p>
+<answer>
+<p>
+The total energy per unit mass of the fluid is
+<md>
+<mrow>e=\hat{u}+\frac12u^2+gz
+=2.1\times10^5+\frac{(150)^2}2+9.81\times8</mrow>
+<mrow>=2.1\times10^5+1.13\times10^4+ 78.5
+\approx2.2\times10^5\,\mbox{J/kg}.</mrow>
+</md>
+</p>
+</answer>
+</li>
+<li>
+<p>
+Are any of the contributions negligible?
+</p>
+<answer>
+<p>
+The three terms have orders of magnitude <m>10^5</m>, <m>10^4</m> and <m>10^2</m> J/kg,
+respectively. Thus the gravitational potential energy is relatively unimportant,
+compared to the contributions due to the internal energy and the kinetic energy.
+</p>
+</answer>
+</li>
+</ol>
+</statement>
+</exercise>
+
+<exercise xml:id="kelvin-circulation-theorem">
+<title>Kelvin’s Circulation Theorem</title>
+ <statement>
+   <p>
+    The circulation <m>\Gamma</m> around a closed curve <m>C(t)</m> is defined by
+  <me>
+    \Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
+  </me>
+    By transforming to Lagrangian variables show that <m>\Gamma</m> is independent of <m>t</m>.
+    Deduce that a flow that is initially irrotational (i.e. <m>\bomega = 0</m> at <m>t=0</m>)
+    remains irrotational for all time.
+  </p>
+  <p>
+      Note that this is a key result: if a flow is initially irrotational,
+      it remains so indefinitely and we can introduce a velocity potential
+      <m>\phi</m> such that <m>\mathbf{u} = \nabla \phi</m>.
+  </p>
+  <answer>
+  <p>
+ <figure xml:id="kelvin-circulation-theorem-fig">
+      <image source="ch-chapter03-kelvin-circulation.png" width="80%"/>
+        <caption>Curve <m>\Gamma</m> at times <m>t</m> and <m>t+\de t</m>.
+          The inset shows the relationship between the two curves.</caption>
+    </figure>
+  Assuming a conservative body force <m>-\bnabla\chi</m> per unit volume, the Euler equation reads
+  <me>
+    \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right),
+  </me>
+  <md> 
+  <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}\amp=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
+  <mrow>\amp=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
+  <mrow>\amp=\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.</mrow>
+  </md>
+  Hence
+<md>
+  <mrow>\dd{\Gamma}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t</mrow>
+  <mrow>\amp=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=0.</mrow>
+</md>
+The final equality above follows because the line integral of a gradient around a closed curve is zero.
+  Thus <m>\Gamma</m> is independent of <m>t</m>.
+  If the flow is initially irrotational, then <m>\Gamma=0</m> at <m>t=0</m>
+  for any closed curve <m>C(0)</m>, and hence <m>\Gamma=0</m> for all time.
+  Since this holds for any closed curve, it follows that <m>\omega=\bnabla\times\bu=0</m> for all time.
+</p>
+  </answer>
+</statement>
+</exercise>
+</exercisegroup>
+
+</worksheet>
 
 </chapter>

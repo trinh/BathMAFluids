@@ -312,4 +312,93 @@
       </statement>
     </example>
   </section>
+
+
+<worksheet xml:id="ws-kinematics">
+<exercisegroup xml:id="kinematics-questions">
+<title>Kinematics</title>
+<introduction>
+<p>
+Intro.
+</p>
+</introduction>
+<exercise xml:id="particle-paths-streamlines">
+<title>Particle paths and streamlines</title>
+<statement>
+  <ol>
+    <li>
+      <p>
+        Define the particle paths and streamlines for a velocity field
+    <m>\bu(\bx,t)</m>. When do these coincide?
+      </p>
+      <answer>
+        <p>
+          Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE
+          <me>
+            \dd{\bx}{t} = \bu(\bx,t).
+          </me>
+          Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy
+          <me>
+            \dd{\bx}{s} = \bu(\bx,t),
+          </me>
+          where <m>s</m> is a parameter along the streamline. The two coincide if the flow is steady, i.e. <m>\bu(\bx,t)=\bu(\bx)</m>.
+        </p>
+      </answer>
+    </li>
+  <li>
+  <p>
+    Show that a quantity <m>f(\bx,t)</m> is preserved following the flow if
+  <me>
+    \DD{f}{t}=\pd{f}{t}+\bu\cdot\bnabla f=0.
+  </me>
+</p>
+<answer>
+  <p>
+    <figure xml:id="lagrange-problem">
+      <image source="ch-chapter02-lagrange-problem2.jpg" width="80%"/>
+        <caption>Pathline, showing the particle positions at times <m>t</m> and <m>t+\de t</m>.</caption>
+    </figure>
+    Figure <xref ref="lagrange-problem"/> shows the points <m>\bx(t)</m> and
+          <m>\bx(t+dt)=\bx(t)+\de\bx</m>, and the equation for pathlines gives
+          <m>\de\bx=\bu(\bx,t)\de t</m>.
+    We follow the value of <m>f</m> following a particle:
+    <md>
+      <mrow> \dd{f}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de t)-f(\bx,t)\right)</mrow>
+      <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)-f(\bx,t)\right)</mrow>
+    <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)\right)</mrow>
+    <mrow>\amp=\pd{f}{t}+\bu\cdot\bnabla f=\DD{f}{t}.</mrow>
+    </md>
+    Thus the value is preserved if <m>\DD{f}{t}=0</m>.
+  </p>
+  </answer>
+</li>
+<li>
+  <p>
+    Show also that <m>f</m> is constant along streamlines if
+  <me>
+    \bu\cdot\bnabla f=0.
+  </me>
+   </p>
+   <answer>
+  <p>
+    Now suppose figure <xref ref="lagrange-problem"/> shows a streamline. In this case,
+    the points <m>\bx(s)</m> and <m>\bx(s+ds)=\bx(s)+\de\bx</m> are shown, and the equation for streamlines gives
+          <m>\de\bx=\bu(\bx,t)\de s</m>.
+    We follow the value of <m>f</m> along the streamline:
+    <md>
+      <mrow>\dd{f}{s}\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
+      <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)-f(\bx,t)\right)</mrow>
+    <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\bnabla f(\bx,t)\right)</mrow>
+    <mrow>\amp=\bu\cdot\bnabla f.</mrow>
+    </md>
+    Thus the value of <m>f</m> is preserved if <m>\bu\cdot\bnabla f=0</m>.
+  </p>
+  </answer>
+  </li>
+  </ol>
+</statement>
+</exercise>
+</exercisegroup>
+</worksheet>
+
 </chapter>

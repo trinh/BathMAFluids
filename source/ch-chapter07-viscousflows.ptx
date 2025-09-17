@@ -104,9 +104,8 @@
         relative importance of viscous and inertial accelerations.
     </p>
 
-    <paragraph>
-        <title>How do we choose <m>L</m> and <m>U</m>?</title>
         <p>
+        <em>How do we choose <m>L</m> and <m>U</m>?</em>
             There are usually ‘natural’ scales in the problem that we can choose
             for <m>L</m> and <m>U</m>, and determining these in a given problem
             usually becomes easier with experience. As an illustrative example of a
@@ -115,10 +114,9 @@
             or diameter, while an appropriate value of <m>U</m> could be the velocity
             on the centreline of the pipe.
         </p>
-    </paragraph>
-
-    <paragraph>
-        <title>Typical characteristics of the flow are strongly associated with Reynolds number</title>
+    
+        <p>
+        Typical characteristics of the flow are strongly associated with Reynolds number:
         <ul>
             <li>
                 <p><b>Low-Reynolds-number flows (<m>Re \ll 1</m>):</b></p>
@@ -145,16 +143,15 @@
                 </ul>
             </li>
         </ul>
-    </paragraph>
+    </p>
 
-    <paragraph>
-        <title>Turbulent flow</title>
-        <p>
-            Turbulent flow is characterised as having many different length scales,
-            and the flow is <em>chaotic</em>
-            <fn>Chaotic flow means that fluid particles that start close together can become widely separated over time.</fn>.
-            As well as the scale of the whole experiment (e.g. the length of the cyclist
-            in the example above), the turbulence has eddies on all small length scales.
+    <p>
+        <em>Turbulent flow</em>
+            is characterised as having many different length scales,
+            and the flow is <em>chaotic</em>.
+            Chaotic flow means that fluid particles that start close together can become
+            widely separated over time. As well as the scale of the whole experiment,
+            the turbulence has eddies on all small length scales.
             Turbulent flows are analysed mathematically by decomposing the flow into a
             mean flow, which describes the large-scale flow and a fluctuating flow,
             which describes the eddies. Equations can be written for each of these,
@@ -174,13 +171,13 @@
         <p>
             The study of turbulence could constitute a lecture course in its own right,
             and therefore a detailed analysis is beyond the scope of this course.
-            However, some of the material in this course is relevant to turbulent flows.
-            <!--For example the result by von Kármán about developing boundary layers that
+            <!--However, some of the material in this course is relevant to turbulent flows.
+            For example the result by von Kármán about developing boundary layers that
             is described in <xref ref="sect:linmtmcons"/> on
             <pageref ref="page:vonkarmanlayer"/> is one that was famously first developed
             to analyse turbulent flows.-->
         </p>
-    </paragraph>
+   
 </subsection>
 </section>
 
