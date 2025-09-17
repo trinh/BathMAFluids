@@ -9,7 +9,7 @@
 
 
   <book xml:id="my-great-book">
-    <title>Fluids dynamics (MA32051)</title>
+    <title>Fluid dynamics (MA32051)</title>
     <subtitle>A first course on the mathematics of fluid dynamics</subtitle>
 
     <!-- Include frontmatter -->

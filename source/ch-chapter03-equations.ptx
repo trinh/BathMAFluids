@@ -1031,8 +1031,225 @@ The final equality above follows because the line integral of a gradient around 
   </answer>
 </statement>
 </exercise>
-</exercisegroup>
 
+<exercise xml:id="fluid-pressure-uniform-velocity">
+<title>Pressure field in uniform flow</title>
+  <statement>
+    <p>
+      A fluid in a gravitational field with density <m>\rho</m> and acceleration
+      vector <m>-g \hat{\mathbf{z}}</m> has uniform velocity
+    <me>
+      \mathbf{u} = (a + b t, \; t^3, \; e^t).
+    </me>
+      The pressure at the origin is fixed at <m>p_0</m>.
+    </p>
+
+    <ol marker="a">
+      <li>
+        <p>
+          Find the pressure field in terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>.
+        </p>
+        <answer>
+        <p>
+          The fluid has a uniform velocity, which means that all components of <m>\bnabla/bu</m>
+           vanish. The Euler equation simplifies to
+        <me>
+          \rho\pd{\bu}{t}=-\nabla p-\rho g \hat{\mathbf{z}},
+        </me>
+        where
+        <me>
+          \pd{\bu}{t}=(b, \; 3t^2, \; e^t).
+        </me>
+        Hence,
+        <me>
+          \nabla p = -\rho \pd{\bu}{t} - \rho g \hat{\mathbf{z}}
+          = -\rho (\, b, \; 3t^2, \; e^t + g \,),
+        </me>
+        which is a vector equation. Splitting into components, we obtain
+        <me>
+          \frac{\partial p}{\partial x} = -\rho b, \quad
+          \frac{\partial p}{\partial y} = -3\rho t^2, \quad
+          \frac{\partial p}{\partial z} = -\rho (e^t + g).
+        </me>
+        Solving sequentially, the first equation gives
+        <me>
+          p = -\rho b x + f_1(y,z,t).
+        </me>
+        Substituting into the second equation,
+        <me>
+          \frac{\partial f_1}{\partial y} = -3\rho t^2
+          \;\;\Rightarrow\;\;
+          f_1 = -3\rho t^2 y + f_2(z,t),
+        </me>
+        <me>
+          p = -\rho b x - 3\rho t^2 y + f_2(z,t).
+        </me>
+        The third equation then implies
+        <me>
+          \frac{\partial f_2}{\partial z} = -\rho(e^t+g)
+          \;\;\Rightarrow\;\;
+          f_2 = -\rho(e^t+g)z + f_3(t),
+        </me>
+        <me>
+          p = -\rho b x - 3\rho t^2 y - \rho(e^t+g)z + f_3(t).
+        </me>
+        Using <m>p = p_0</m> at the origin gives <m>f_3(t) = p_0</m> for all <m>t</m>. Hence
+        <me>
+          p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
+        </me>
+      </p>  
+      </answer>
+      </li>
+      <li>
+        <p>
+          Draw the contours of the pressure at a fixed time <m>t</m>, and hence describe the pressure field.
+        </p>
+        <answer>
+        <p>
+          The pressure is constant on planes normal to the vector
+          <m>(b, \; 3t^2, \; e^t + g)</m>, as illustrated below:
+        </p>
+        <figure xml:id="fig-pressure-contours">
+          <image source="ch-chapter03-pressure-contours.png"/>
+          <caption>Contours of the pressure field at fixed <m>t</m>.</caption>
+        </figure>
+        </answer>
+      </li>
+    </ol>
+  </statement>
+</exercise>
+
+<exercise xml:id="piston-fluid-problem">
+<title>Piston problem</title>
+  <statement>
+    <figure xml:id="fig-piston">
+      <image source="ch-chapter03-piston.png"/>
+      <caption>Schematic of piston and pipe system.</caption>
+    </figure>
+    <p>
+      The piston shown in the diagram below is pushed with a force <m>F(t)</m>
+      into a pipe of length <m>L</m> and cross-sectional area <m>A</m>
+      containing incompressible fluid of density <m>\rho</m>.
+    </p>
+    <p>
+      Assuming the fluid moves as a rigid body and neglecting friction and the mass of the piston,
+      write down a differential equation governing the position <m>X(t)</m> of the piston
+      at time <m>t</m>. You may neglect gravity.
+    </p>
+  </statement>
+
+  <answer>
+    <p>
+      We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
+      Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
+      hence the Euler equation reduces to
+      <me>
+        \rho\pd{\bu}{t}=-\bnabla p.
+      </me>
+      Solving for <m>p</m> gives
+      <me>
+        p(x,t) = \rho\dd{^2X}{t^2}(L-x)+p_{atm},
+      </me>
+      where <m>p_{atm}</m> is atmospheric pressure, and hence
+      <me>
+        \frac{F+Ap_{atm}}{A} = \rho\dd{^2X}{t^2}(L-X)+p_{atm}
+        \quad\Rightarrow\quad
+        \dd{^2X}{t^2} = \frac{F}{A\rho(L-X)}.
+      </me>
+    </p>
+  </answer>
+</exercise>
+
+<exercise>
+  <title>The vorticity equation</title>
+  <statement>
+    <p>
+      Consider an incompressible fluid, with constant density 
+      <m>\rho</m>, subject to a conservative body force 
+      (i.e. <m>{\bf g} = -\nabla \chi</m> for some potential function 
+      <m>\chi</m>).
+    </p>
+    <ol>
+      <li>
+        <p>
+          Starting from the Euler equations, show that the 
+         vorticity <m>\bomega = \nabla \times {\bf u}</m> satisfies
+          <me>
+          \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bf u}.
+          </me>
+        </p>
+        <answer>
+        <p>
+          The Euler equation reads:
+          <me>
+            \rho\left(\pd{\bu}{t} + (\bu \cdot \bnabla)\bu\right) = -\bnabla p - \rho\bnabla \chi.
+          </me>
+          Since the curl of a gradient is zero, <m>\rho</m> is constant and we can commute derivatives,
+          taking the curl of both sides gives
+          <me>
+            \rho\left(\pd{\bomega}{t} + \bnabla \times(\bu \cdot \bnabla)\bu\right) = 0.
+          </me>
+          We have
+          <md>
+            <mrow>\amp \nabla \times(\bu \cdot \bnabla)\bu,</mrow>
+            <mrow>=\amp\begin{vmatrix}
+              \bi \amp \bj \amp \bk \\
+              \pd{}{x} \amp \pd{}{y} \amp \pd{}{z} \\
+              \bu \cdot \nabla u \amp \bu \cdot \nabla v \amp \bu \cdot \nabla w
+              \end{vmatrix},</mrow>
+            <mrow>=\amp\bi\left(\bu\cdot\bnabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\bnabla w-\pd{\bu}{z}\cdot\bnabla v\right)</mrow>
+            <mrow>\amp+\bj\left(\bu\cdot\bnabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\bnabla u-\pd{\bu}{x}\cdot\bnabla w\right)</mrow>
+            <mrow>\amp+\bk\left(\bu\cdot\bnabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\bnabla v-\pd{\bu}{y}\cdot\bnabla u\right),</mrow>
+            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu+\bomega\cdot\bnabla\bu</mrow>
+            <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+            <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+            <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu</mrow>
+            <mrow>\amp+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
+            <mrow>\amp+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
+            <mrow>\amp+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
+            <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+            <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+            <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu+\bomega\bnabla\cdot\bu,</mrow>
+            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu,</mrow>
+          </md>
+          where the final equality follows from incompressibility. Hence,
+          <me>
+          \pd{\bomega}{t} + \bu\cdot\bnabla\bomega - \bomega\cdot\bnabla\bu = 0
+          \quad\Rightarrow\quad
+          \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
+          </me>
+          as required.
+        </p>
+      </answer>
+      </li>
+      <li>
+        <p>
+          Deduce that, in two-dimensional incompressible flow, 
+          <m>\omega</m> is conserved following the flow.
+        </p>
+        <answer>
+          <p>
+            If the flow is the <m>(x,y)</m>-plane, we have <m>w=0</m> and all <m>z</m>-derivatives
+            are zero. Hence the only non-zero component of the vorticity is the <m>z</m>-component,
+            <m>\omega_z=\partial v/\partial x-\partial u/\partial y</m>. Thus
+            <me>
+              \bomega\cdot\bnabla\bu=\omega_z\pd{\bu}{z}=0.
+            </me>
+            Hence
+            <me>
+              \DD{\bomega}{t} = 0,
+            </me>
+            meaning that <m>\bomega</m> is conserved following the flow.
+          </p>
+        </answer>
+      </li>
+    </ol>
+  </statement>
+</exercise>
+
+</exercisegroup>
 </worksheet>
 
 </chapter>
