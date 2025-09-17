@@ -183,6 +183,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -214,6 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
 </li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -349,6 +351,79 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para" id="reynolds-number-4">where <span class="process-math">\(U\)</span> is a characteristic (or typical) velocity of the flow and <span class="process-math">\(L\)</span> is a characteristic lengthscale. It characterises the relative importance of viscous and inertial accelerations.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-5">
+<em class="emphasis">How do we choose <span class="process-math">\(L\)</span> and <span class="process-math">\(U\text{?}\)</span></em> There are usually ‘natural’ scales in the problem that we can choose for <span class="process-math">\(L\)</span> and <span class="process-math">\(U\text{,}\)</span> and determining these in a given problem usually becomes easier with experience. As an illustrative example of a suitable scale choice, consider steady flow down a pipe with a circular cross-section. An appropriate value of <span class="process-math">\(L\)</span> is often the pipe radius or diameter, while an appropriate value of <span class="process-math">\(U\)</span> could be the velocity on the centreline of the pipe.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="reynolds-number-6">
+<div class="para">Typical characteristics of the flow are strongly associated with Reynolds number:</div>
+<ul class="disc" id="reynolds-number-6-1">
+<li id="reynolds-number-6-1-1">
+<div class="para" id="reynolds-number-6-1-1-1">Low-Reynolds-number flows (<span class="process-math">\(Re \ll 1\)</span>):<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="circle" id="reynolds-number-6-1-1-2">
+<li id="reynolds-number-6-1-1-2-1">
+<div class="para" id="p-derived-reynolds-number-6-1-1-2-1">Examples include capillary flow, microfluidics, swimming bacteria or single cell organisms, lymphatic system flow, glacier flow, and spreading honey on toast.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-1-2-2">
+<div class="para" id="p-derived-reynolds-number-6-1-1-2-2">These flows are called Stokes flow (after G. G. Stokes who studied them) or creeping flows.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-1-2-3">
+<div class="para" id="p-derived-reynolds-number-6-1-1-2-3">Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.  </div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-1-2-4">
+<div class="para" id="p-derived-reynolds-number-6-1-1-2-4">Inertial effects are negligible and viscous effects are important.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-2">
+<div class="para" id="reynolds-number-6-1-2-1">Flows with moderate Reynolds number (<span class="process-math">\(1 \ll Re \ll 2{,}000\)</span>):<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="circle" id="reynolds-number-6-1-2-2">
+<li id="reynolds-number-6-1-2-2-1">
+<div class="para" id="p-derived-reynolds-number-6-1-2-2-1">Examples include flows in most blood vessels that are not capillaries, fast flow of aqueous humour and vitreous humour in the eye, urinary tract flow, and small fish swimming.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-2-2-2">
+<div class="para" id="p-derived-reynolds-number-6-1-2-2-2">Flows in pipes with moderate Reynolds number are often described as laminar, meaning that the fluid moves in ‘layers’ sliding past each other (often people use ‘laminar’ to mean that the flow is not turbulent).</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-3">
+<div class="para" id="reynolds-number-6-1-3-1">High-Reynolds-number flows (typically <span class="process-math">\(Re\)</span> above about <span class="process-math">\(1{,}000\)</span>):<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="circle" id="reynolds-number-6-1-3-2">
+<li id="reynolds-number-6-1-3-2-1">
+<div class="para" id="p-derived-reynolds-number-6-1-3-2-1">Examples in biomedical engineering include airflow in trachea, pathological flow in large arteries (caused by severe stenosis), large swimming fish. Other examples include airflow around vehicles, large scale industrial processes involving fluid movement, rivers, oceans, the atmosphere.  </div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-3-2-2">
+<div class="para" id="p-derived-reynolds-number-6-1-3-2-2">These flows are characteristically unstable or turbulent (especially for very high Reynolds numbers).</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-6-1-3-2-3">
+<div class="para" id="p-derived-reynolds-number-6-1-3-2-3">Inertial effects are important and viscous effects are small.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-3-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-6-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-7">
+<em class="emphasis">Turbulent flow</em> is characterised as having many different length scales, and the flow is <em class="emphasis">chaotic</em>. Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the flow into a mean flow, which describes the large-scale flow and a fluctuating flow, which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called <em class="emphasis">closure problem</em>, in which an assumption needs to be made to provide a final equation that governs the dynamics.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-8">Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have such a high Reynolds number that turbulence is unavoidable and dominates the flow characteristics. Turbulence is less prevalent in many bioengineering applications, because they are usually on a smaller scale and involve slower flows.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-9">The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course. <div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Subsection 7.1.2: Reynolds number"><a href="#reynolds-number" title="Copy heading and permalink for Subsection 7.1.2: Reynolds number" aria-label="Copy heading and permalink for Subsection 7.1.2: Reynolds number">🔗</a></div></section><div class="autopermalink" data-description="Section 7.1: Definitions of important concepts"><a href="#definitions" title="Copy heading and permalink for Section 7.1: Definitions of important concepts" aria-label="Copy heading and permalink for Section 7.1: Definitions of important concepts">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
