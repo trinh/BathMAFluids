@@ -46,6 +46,7 @@
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
 </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

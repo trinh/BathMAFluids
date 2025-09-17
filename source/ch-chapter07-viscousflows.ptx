@@ -11,6 +11,175 @@
       effect on the flow, and it can lead to the formation of boundary layers and the generation
       of vorticity at solid boundaries.
     </p>
+</introduction>
+
+    <section xml:id="definitions">
+      <title>Definitions of important concepts</title>
+    <subsection xml:id="viscosity">
+    <title>Viscosity</title>
+    <p>
+        Viscosity quantifies the fluid's resistance to flow when a force is applied
+        (the higher the resistance the higher the viscosity). One of the most common
+        mathematical models of an idealised fluid is a
+        <em>Newtonian</em> fluid. For these fluids the shear viscosity
+        <m>\mu</m> (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.
+    </p>
+    <example xml:id="example-viscosity">
+      <p>
+        We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see
+        also <xref ref="fig-viscosity-measurement"/>.       
+        <figure xml:id="fig-viscosity-measurement">
+        <caption>Experiment to determine the shear viscosity of a fluid.</caption>
+        <image source="ch-chapter07-viscosity-measurement.png" width="60%">
+          <shortdescription>Fluid</shortdescription>
+        </image>
+      </figure>
+        A solid block of area <m>A</m> floats on the surface of a thin layer of the fluid of
+        thickness <m>h</m>. The block is pushed with a force <m>F</m> parallel to the surface of the fluid,
+        causing it to move with a steady velocity <m>U</m>. The shear viscosity is given by
+        <me>
+          \mu = \frac{F h}{A U}.
+        </me>
+        In principle this formula could be used to determine the viscosity of a fluid
+        experimentally; however, in practice it is more common to use a falling ball viscometer (see
+        <xref ref="ps-falling-ball-viscometer"/> in the worksheet at the end of this chapter).
+    </p>
+  </example>
+    <p>
+        The kinematic viscosity <m>\nu</m> (measured in
+        <m>\mathrm{m^2\,s^{-1}}</m>) is related to the shear viscosity via
+    </p>
+    <me>
+        \nu = \frac{\mu}{\rho}
+    </me>
+    <table>
+      <title>Viscosities at <m>1\,\mathrm{atm}</m> pressure and <m>20\,^\circ\mathrm{C}</m>.</title>
+        <tabular>
+            <row header="yes">
+                <cell/>
+                <cell><m>\mu</m> (<m>\mathrm{kg\,m^{-1}\,s^{-1}}</m>)</cell>
+                <cell><m>\rho</m> (<m>\mathrm{kg\,m^{-3}}</m>)</cell>
+                <cell><m>\nu</m> (<m>\mathrm{m^2\,s^{-1}}</m>)</cell>
+            </row>
+            <row>
+                <cell>Air</cell>
+                <cell><m>1.8\times 10^{-5}</m></cell>
+                <cell><m>1.2</m></cell>
+                <cell><m>1.51\times 10^{-5}</m></cell>
+            </row>
+            <row>
+                <cell>Water</cell>
+                <cell><m>1.0\times 10^{-3}</m></cell>
+                <cell><m>998</m></cell>
+                <cell><m>1.01\times 10^{-6}</m></cell>
+            </row>
+            <row>
+                <cell>Blood</cell>
+                <cell><m>2.5\times 10^{-3}</m></cell>
+                <cell><m>1050</m></cell>
+                <cell><m>2.4\times 10^{-6}</m></cell>
+            </row>
+        </tabular>
+    </table>
+    <p>
+        Many real fluids, <em>e.g.</em> blood, have more complicated viscosity
+        properties, but in this course we mainly consider circumstances in which it
+        is appropriate to assume that the fluid in question has a
+        constant and uniform viscosity.
+    </p>
+</subsection>
+
+<subsection xml:id="reynolds-number">
+    <title>Reynolds number</title>
+    <p>
+        This is one of the most important flow parameters, and it often determines
+        the qualitative nature of the flow. It is a dimensionless quantity, defined by
+    </p>
+    <me>
+        \mathrm{Re} = \frac{\rho U L}{\mu} = \frac{U L}{\nu}
+    </me>
+    <p>
+        where <m>U</m> is a characteristic (or typical) velocity of the flow
+        and <m>L</m> is a characteristic lengthscale. It characterises the
+        relative importance of viscous and inertial accelerations.
+    </p>
+
+        <p>
+        <em>How do we choose <m>L</m> and <m>U</m>?</em>
+            There are usually ‘natural’ scales in the problem that we can choose
+            for <m>L</m> and <m>U</m>, and determining these in a given problem
+            usually becomes easier with experience. As an illustrative example of a
+            suitable scale choice, consider steady flow down a pipe with a circular
+            cross-section. An appropriate value of <m>L</m> is often the pipe radius
+            or diameter, while an appropriate value of <m>U</m> could be the velocity
+            on the centreline of the pipe.
+        </p>
+    
+        <p>
+        Typical characteristics of the flow are strongly associated with Reynolds number:
+        <ul>
+            <li>
+                <p><b>Low-Reynolds-number flows (<m>Re \ll 1</m>):</b></p>
+                <ul>
+                    <li>Examples include capillary flow, microfluidics, swimming bacteria or single cell organisms, lymphatic system flow, glacier flow, and spreading honey on toast.</li>
+                    <li>These flows are called Stokes flow (after G. G. Stokes who studied them) or creeping flows.</li>
+                    <li>Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions. <media url="Movie44"/> <media url="Movie45"/></li>
+                    <li>Inertial effects are negligible and viscous effects are important.</li>
+                </ul>
+            </li>
+            <li>
+                <p><b>Flows with moderate Reynolds number (<m>1 \ll Re \ll 2{,}000</m>):</b></p>
+                <ul>
+                    <li>Examples include flows in most blood vessels that are not capillaries, fast flow of aqueous humour and vitreous humour in the eye, urinary tract flow, and small fish swimming.</li>
+                    <li>Flows in pipes with moderate Reynolds number are often described as laminar, meaning that the fluid moves in ‘layers’ sliding past each other (often people use ‘laminar’ to mean that the flow is not turbulent).</li>
+                </ul>
+            </li>
+            <li>
+                <p><b>High-Reynolds-number flows (typically <m>Re</m> above about <m>1{,}000</m>):</b></p>
+                <ul>
+                    <li>Examples in biomedical engineering include airflow in trachea, pathological flow in large arteries (caused by severe stenosis), large swimming fish. Other examples include airflow around vehicles, large scale industrial processes involving fluid movement, rivers, oceans, the atmosphere. <media url="Movie463"/> <media url="Movie4490"/></li>
+                    <li>These flows are characteristically unstable or turbulent (especially for very high Reynolds numbers).</li>
+                    <li>Inertial effects are important and viscous effects are small.</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+
+    <p>
+        <em>Turbulent flow</em>
+            is characterised as having many different length scales,
+            and the flow is <em>chaotic</em>.
+            Chaotic flow means that fluid particles that start close together can become
+            widely separated over time. As well as the scale of the whole experiment,
+            the turbulence has eddies on all small length scales.
+            Turbulent flows are analysed mathematically by decomposing the flow into a
+            mean flow, which describes the large-scale flow and a fluctuating flow,
+            which describes the eddies. Equations can be written for each of these,
+            but this decomposition leads to the so-called <em>closure problem</em>,
+            in which an assumption needs to be made to provide a final equation that
+            governs the dynamics.
+        </p>
+        <p>
+            Turbulence is of great importance in applications such as aeronautical
+            engineering, weather forecasting and large-scale industrial flows,
+            basically because large and fast moving flows have such a high Reynolds
+            number that turbulence is unavoidable and dominates the flow
+            characteristics. Turbulence is less prevalent in many bioengineering
+            applications, because they are usually on a smaller scale and involve
+            slower flows.
+        </p>
+        <p>
+            The study of turbulence could constitute a lecture course in its own right,
+            and therefore a detailed analysis is beyond the scope of this course.
+            <!--However, some of the material in this course is relevant to turbulent flows.
+            For example the result by von Kármán about developing boundary layers that
+            is described in <xref ref="sect:linmtmcons"/> on
+            <pageref ref="page:vonkarmanlayer"/> is one that was famously first developed
+            to analyse turbulent flows.-->
+        </p>
+   
+</subsection>
+</section>
 
     <p>
       Test matrix.
@@ -19,6 +188,165 @@
       </me>-->
     </p>
 
-  </introduction>
+<worksheet xml:id="ws-viscousflows">
+
+<exercisegroup xml:id="viscousflows-mechanics">
+<title>Mechanics</title>
+<introduction>
+<p>
+Intro. 
+</p>
+</introduction>
+  
+<exercise xml:id="ps-falling-ball-viscometer">
+<title>Falling ball viscometer</title>
+<statement>
+<p>
+For slowly moving spheres, the resistive force is given by Stokes
+drag, and equals <m>3\pi\mu Du</m>, where <m>D</m> is the diameter of the sphere, <m>\mu</m>
+is the dynamic viscosity of the fluid, and <m>u</m> is the speed of the sphere
+(this is a famous result).
+<ol>
+<li>
+<p>
+Check the dimensions of the Stokes drag. Is the dimension what you expect?
+</p>
+<answer>
+<p>
+The dimensions of the terms are as follows:
+<me>
+[3\pi]=1,\quad
+[\mu]=ML^{-1}T^{-1},\quad
+[D]=L,\quad
+[u]=LT^{-1},
+</me>
+meaning that
+<me>
+\left[3\pi\mu Du\right]=1\times ML^{-1}T^{-1}\times L\times LT^{-1}
+=MLT^{-2}.
+</me>
+Thus the expression <m>3\pi\mu Du</m> for the Stokes drag has the dimensions of force, as expected.
+</p>
+</answer>
+</li>
+<li>
+<p>
+A steel ballbearing of mass <m>m</m>, diameter <m>D</m> falls slowly through a
+viscous fluid of dynamic viscosity <m>\mu</m>. In this question you can neglect
+the buoyancy force. What are the other two forces acting on the ballbearing?
+</p>
+<answer>
+<p>
+Gravity and fluid drag
+</p>
+</answer>
+</li>
+<li>
+<p>
+Write down a differential equation for the time-evolution of the velocity
+<m>u</m> of the ballbearing, assuming that the acceleration due to gravity is <m>g</m>.
+</p>
+<answer>
+<p>
+Newton's second law gives
+<me>
+m\frac{du}{dt}=mg-3\pi\mu Du.
+</me>
+</p>
+</answer>
+</li>
+<li>
+<p>
+Given that the ballbearing is released from rest, solve the differential
+equation to show that
+<me>
+u=u_t\left(1-e^{-t/\tau}\right),
+</me>
+where <m>u_t</m> and <m>\tau</m> are constant parameters that you should define.
+What is the physical significance of <m>u_t</m> and <m>\tau</m>?
+</p>
+<answer>
+<p>
+We have
+<me>
+\frac{du}{dt}+\frac{3\pi\mu D}{m}u=g,
+</me>
+for which the integrating factor is <m>e^{\frac{3\pi\mu D}{m}t}</m>, and
+<me>
+ue^{\frac{3\pi\mu D}{m}t}=\int ge^{\frac{3\pi\mu D}{m}t}dt
+=\frac{mg}{3\pi\mu D}e^{\frac{3\pi\mu D}{m}t}+c,
+</me>
+where <m>c</m> is a constant of integration. Hence
+<me>
+u=\frac{mg}{3\pi\mu D}+ce^{-\frac{3\pi\mu D}{m}t}
+</me>
+The initial condition is <m>u=0</m> at <m>t=0</m>, and, substituting this into the above equation,
+<m>0=\frac{mg}{3\pi\mu D}+c</m>, giving <m>c=-\frac{mg}{3\pi\mu D}</m>. Hence
+<me>
+u=\frac{mg}{3\pi\mu D}\left(1-e^{-\frac{3\pi\mu D}{m}t}\right).
+</me>
+We substitute <m>u_t=\frac{mg}{3\pi\mu D}</m> and <m>\tau=\frac{m}{3\pi\mu D}</m>. With these substitutions we get
+<me>
+u=u_t\left(1-e^{-t/\tau}\right).
+</me>
+The physical significance of these choices is that <m>u_t</m> is the terminal velocity of the sphere and <m>\tau</m> is the timescale over which the velocity of the sphere approaches the terminal velocity. Every <m>\tau</m> units of time, the velocity of the sphere becomes closer to the terminal velocity <m>u_t</m> by a factor <m>e\approx2.7</m>.
+</p>
+</answer>
+</li>
+<li>
+<p>
+Sketch the velocity as a function of time.
+</p>
+<answer>
+<p>
+<figure xml:id="ball-low-re" class="figure">
+<caption>Sketch of velocity as a function of time.</caption>
+<image source="ch-chapter07-ball-low-re.png" width="80%"/>
+</figure>
+</p>
+</answer>
+</li>
+<li>
+<p>
+If the ballbearing has diameter 2 mm and is falling through glycerol at 20<m>^\circ</m>C, what is its terminal velocity in mm/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20<m>^\circ</m>C is 1.2 Pa s and the density of steel is 8,000 kg/m<m>^3</m>.
+</p>
+<answer>
+<p>
+Using the fact that the volume of a sphere is <m>\pi D^3/6</m>, where <m>D</m> is the diameter,
+we have <m>m=\pi\rho_sD^3/6</m>, where <m>\rho_s=8,000</m> kg/m<m>^3</m>. Thus
+<md>
+<mrow>u_t=\frac{mg}{3\pi\mu D}=\frac{mg}{3\pi\mu D}=\frac{\rho_sgD^2}{18\mu}</mrow>
+<mrow>=\frac{8000\times9.81\times(4\times10^{-6})}{18\times1.2}
+=0.0146\,\mbox{m/s}=14.6\,\mbox{mm/s}.</mrow>
+</md>
+The timescale <m>\tau</m> is given by
+<me>
+\tau=\frac{m}{3\pi\mu D}=\frac{\rho_sD^2}{18\mu}=\frac{8000\times4\times10^{-6}}{18\times1.2}
+=0.00148\,\mbox{s}.
+</me>
+</p>
+</answer>
+</li>
+<li>
+<p>
+Comment on the experimental set up needed to measure the terminal velocity.
+</p>
+<answer>
+<p>
+The ball would attain its terminal velocity very quickly (in much less than a second),
+and since <m>u_t</m> is on order of centimetres per second, a container of about 10 cm
+deep would be suitable for measurement. In fact this idea is commonly used to measure
+the viscosity of fluids (since the viscosity can be calculated from the terminal velocity);
+this is called a <em>falling ball viscometer</em>.
+</p>
+</answer>
+</li>
+</ol>
+</p>
+</statement>
+</exercise>
+</exercisegroup>
+  
+</worksheet>
 
 </chapter>
