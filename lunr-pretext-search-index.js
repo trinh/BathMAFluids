@@ -37,13 +37,22 @@ var ptx_lunr_docs = [
   "body": "Moodle and references   Besides this document, the main resource for this unit is the Moodle page . There is also a folder on Re:View for the recordings . In Week 1 we walked through this Moodle page and talked about various other administrative things; unfortunately the recording was lost due to a Moodle\/Panopto error.  There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a first course on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.  "
 },
 {
-  "id": "ch-chapter01-introduction",
+  "id": "sec-preliminary-vector-calculus",
   "level": "1",
-  "url": "ch-chapter01-introduction.html",
-  "type": "Chapter",
-  "number": "1",
-  "title": "Introduction",
-  "body": " Introduction   Brief introduction to appear here.   "
+  "url": "sec-preliminary-vector-calculus.html",
+  "type": "Section",
+  "number": "1.1",
+  "title": "A reminder of vector calculus",
+  "body": " A reminder of vector calculus  Brief listing of things that we shall remind you of: vector operations, div, grad, curl, vector identities, divergence theorem, Stokes theorem, line integrals, different coordinate systems.  "
+},
+{
+  "id": "sec-preliminary-complex-variables",
+  "level": "1",
+  "url": "sec-preliminary-complex-variables.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "A reminder of complex variables",
+  "body": " A reminder of complex variables  Brief listing of things we shall remind you of: interpretation of complex variables in the Argand plane, polar-coordinate representation, exponential and logarithm.  "
 },
 {
   "id": "sec-eulerlagrang",
@@ -134,24 +143,6 @@ var ptx_lunr_docs = [
   "number": "2.2.4",
   "title": "",
   "body": "  Consider the unsteady flow given by . Plot the streamlines of the flow on the plane , and also the particle trajectories.    "
-},
-{
-  "id": "ws-kinematics",
-  "level": "1",
-  "url": "ws-kinematics.html",
-  "type": "Worksheet",
-  "number": "2.3",
-  "title": "Worksheet",
-  "body": "  Kinematics   Intro.    Particle paths and streamlines     Define the particle paths and streamlines for a velocity field . When do these coincide?   Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy where is a parameter along the streamline. The two coincide if the flow is steady, i.e. .     Show that a quantity is preserved following the flow if       Pathline, showing the particle positions at times and .  Figure shows the points and , and the equation for pathlines gives . We follow the value of following a particle: Thus the value is preserved if .     Show also that is constant along streamlines if    Now suppose figure shows a streamline. In this case, the points and are shown, and the equation for streamlines gives . We follow the value of along the streamline: Thus the value of is preserved if .        "
-},
-{
-  "id": "particle-paths-streamlines",
-  "level": "2",
-  "url": "ws-kinematics.html#particle-paths-streamlines",
-  "type": "Worksheet Exercise",
-  "number": "2.3.1",
-  "title": "Particle paths and streamlines.",
-  "body": " Particle paths and streamlines     Define the particle paths and streamlines for a velocity field . When do these coincide?   Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy where is a parameter along the streamline. The two coincide if the flow is steady, i.e. .     Show that a quantity is preserved following the flow if       Pathline, showing the particle positions at times and .  Figure shows the points and , and the equation for pathlines gives . We follow the value of following a particle: Thus the value is preserved if .     Show also that is constant along streamlines if    Now suppose figure shows a streamline. In this case, the points and are shown, and the equation for streamlines gives . We follow the value of along the streamline: Thus the value of is preserved if .      "
 },
 {
   "id": "sec-RTT",
@@ -469,42 +460,6 @@ var ptx_lunr_docs = [
   "body": " The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.  "
 },
 {
-  "id": "ws-equations",
-  "level": "1",
-  "url": "ws-equations.html",
-  "type": "Worksheet",
-  "number": "3.6",
-  "title": "Worksheet",
-  "body": "  Governing equations   Intro.    Continuum approximation   Domestic salt flows quite well out of a container with a hole in the bottom. Does salt match up to the properties quoted for a fluid? What is the size of a typical salt particle? At what size of hole would a continuum model of the salt flow out of the hole be reasonable? (Based on Q1, p. 42 by Paterson.)   Salt is not like a fluid because you can make it into a pile, whereas the surface of a resting fluid is always horizontal. However, some aspects of salt flow are similar to the flow of a fluid. A typical salt particle is approximately a cube of side mm, and therefore has a volume of approximately m . We need a size of hole that admits a very large number of particles. A reasonable value of the volume appearing in the continuum approximation might be the volume of salt grains (this was the number of gas or liquid molecules quoted in the notes), i.e. m , which is a cube of side length approximately cm. We need a hole that is many times this distance, perhaps a hole with a diameter of one metre or so might be reasonable!      Energy   Air at 1 atm and C has an internal energy of approximately J\/kg. (Based on Problem 1.24 by White.)    If the wind speed is 150 m\/s at an altitude of 8 m, what is the total energy per unit mass of the air, relative to zero altitude?   The total energy per unit mass of the fluid is      Are any of the contributions negligible?   The three terms have orders of magnitude , and J\/kg, respectively. Thus the gravitational potential energy is relatively unimportant, compared to the contributions due to the internal energy and the kinetic energy.        Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .      Curve at times and . The inset shows the relationship between the two curves.  Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.      "
-},
-{
-  "id": "continuum-approximation",
-  "level": "2",
-  "url": "ws-equations.html#continuum-approximation",
-  "type": "Worksheet Exercise",
-  "number": "3.6.1",
-  "title": "Continuum approximation.",
-  "body": " Continuum approximation   Domestic salt flows quite well out of a container with a hole in the bottom. Does salt match up to the properties quoted for a fluid? What is the size of a typical salt particle? At what size of hole would a continuum model of the salt flow out of the hole be reasonable? (Based on Q1, p. 42 by Paterson.)   Salt is not like a fluid because you can make it into a pile, whereas the surface of a resting fluid is always horizontal. However, some aspects of salt flow are similar to the flow of a fluid. A typical salt particle is approximately a cube of side mm, and therefore has a volume of approximately m . We need a size of hole that admits a very large number of particles. A reasonable value of the volume appearing in the continuum approximation might be the volume of salt grains (this was the number of gas or liquid molecules quoted in the notes), i.e. m , which is a cube of side length approximately cm. We need a hole that is many times this distance, perhaps a hole with a diameter of one metre or so might be reasonable!    "
-},
-{
-  "id": "energy",
-  "level": "2",
-  "url": "ws-equations.html#energy",
-  "type": "Worksheet Exercise",
-  "number": "3.6.2",
-  "title": "Energy.",
-  "body": " Energy   Air at 1 atm and C has an internal energy of approximately J\/kg. (Based on Problem 1.24 by White.)    If the wind speed is 150 m\/s at an altitude of 8 m, what is the total energy per unit mass of the air, relative to zero altitude?   The total energy per unit mass of the fluid is      Are any of the contributions negligible?   The three terms have orders of magnitude , and J\/kg, respectively. Thus the gravitational potential energy is relatively unimportant, compared to the contributions due to the internal energy and the kinetic energy.      "
-},
-{
-  "id": "kelvin-circulation-theorem",
-  "level": "2",
-  "url": "ws-equations.html#kelvin-circulation-theorem",
-  "type": "Worksheet Exercise",
-  "number": "3.6.3",
-  "title": "Kelvin’s Circulation Theorem.",
-  "body": " Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .      Curve at times and . The inset shows the relationship between the two curves.  Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.    "
-},
-{
   "id": "sec-Potential-and-streamfunction",
   "level": "1",
   "url": "sec-Potential-and-streamfunction.html",
@@ -772,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.4",
   "title": "The method of images",
-  "body": " The method of images  The preceeding sections would give the misleading impression that solving potential-flow problems for two-dimensional flows is easy. This is not the case, and the primary reason is due to the presence of boundary conditions . The elementary flows we have previously considered were unconfined and\/or we did not consider additonal constraints on their behaviours at infinity. In reality, a real physical fluid, whether in the ocean, the air, or in a container, is confined in some direction, and we must often consider subtle questions about the mechanism that produces the fluid motion.  In this section, we consider the situation of solving for the potential flow in a fluid region with boundaries. Recall that this is equivalent to finding a velocity potential satisfying or an analytic complex potential, .  Recall from that on solid boundaries, we must impose the no-flux condition that    Planar boundaries  Consider the situation illustrated in .  Blah     We envision a semi-infinite region of fluid bounded on the left by a wall at . A single (line) source of strength is placed at . Therefore from , we would expect that at least near , the complex potential behaves as However the above solution does not satisfy the required boundary conditions at since it corresponds to a velocity field for which the horizontal velocity penetrates through . This can be verified via inspection. For example, we can inspect the velocity or the streamlines; this is part of .   "
+  "body": " The method of images  The preceeding sections would give the misleading impression that solving potential-flow problems for two-dimensional flows is easy. This is not the case, and the primary reason is due to the presence of boundary conditions . The elementary flows we have previously considered were unconfined and\/or we did not consider additonal constraints on their behaviours at infinity. In reality, a real physical fluid, whether in the ocean, the air, or in a container, is confined in some direction, and we must often consider subtle questions about the mechanism that produces the fluid motion.  In this section, we consider the situation of solving for the potential flow in a fluid region with boundaries. Recall that this is equivalent to finding a velocity potential satisfying or an analytic complex potential, .  Recall from that on solid boundaries, we must impose the no-flux condition that    Planar boundaries: a half-plane  Consider the situation illustrated in .  Blah     We envision a semi-infinite region of fluid bounded on the left by a wall at . A single (line) source of strength is placed at . Therefore from , we would expect that at least near , the complex potential behaves as However the above solution does not satisfy the required boundary conditions at since it corresponds to a velocity field for which the horizontal velocity penetrates through . This can be verified via inspection. For example, we can inspect the velocity or the streamlines; this is part of .  Rephrased in terms of the streamlines, the boundary condition at is equivalent to the constraint that   Our inspired solution to the above problem is referred to as the method of images .    Method of images  Given potential flow problem, we consider the superposition of elementary sinks\/sources, i.e. and\/or vortices, The strengths and locations of the individual contributions are chosen so that boundary conditions on the required boundaries (including at infinity) can be met.    Notice that the linearity of the potential flow problem is crucial: any analytic function is associated with a velocity potential that satisfies Laplace's equation, , and therefore the superposition of such functions also yields a permissible complex potential, .  We consider the addition of a \"fictitious\" image source, with the same strength at the reflected point , which lies outside of the posited fluid region. This gives the complex potential of This yields the illustration of the flow in   Blah     The corresponding complex velocity is given by So indeed, on the central boundary, we have , and and the velocity is entirely vertical. So indeed, the condition that on the planar boundary is satisfied.  In order to study the complex velocity, , and develop an equation for the streamlines of the flow, we must first navigate the fact that the complex logarithm function is only well-defined in a slit complex plane. First, let Using the definition of the complex logarithm , we have The definitions of and , are shown in the below figure. In order for each logarithm to be well defined, the angles and must be restricted to be less than a complete revolution. We thus restrict and .  Blah   In , you will be asked to develop an equation for the streamlines of this flow.  The above ideas can be extended to the situation of a line vortex in a half plane. Again, we are interested in describing the flow due to a line vortex at , and therefore we expect that near this point, However, the above potential does not satisfy the necessary zero-flux condition at .  In this case, the approach is to add an image vortex at , but opposite in direction: Therefore, this flow is composed by a line vortex circulating anticlockwise on the right, and a line vortex circulating clockwise on the left. It can be verified that the complex velocity is given by and indeed the velocity at is entirely vertical and there is no flux through the boundary.  There is an exercise in .    Uniqueness of solutions  You may be wondering: if a permissible potential function is found that satisfies the necessary boundary conditions, can we be certain it is the unique solution in the problem (up to a constant)? You may understand the construction of potentials, via the method of images, but perhaps irked that it involves the insertion of these so-called 'fictitious' points. The answer, at least for most non-pathological problems in potential flow theory (i.e. all the problems you study) is yes , the solution you have found is assured to be the only solution (up to a constant).  This is, to some extent, related to the uniqueness of analytic continuation . In a nutshall, the relevant theorem states that given two admissible complex potentials, say and , that agree on the line (in the case of the above situation), it is the case that everywhere (where they are analytic).  Therefore, you can be certain that solutions you find via the trick of method of images are the only solutions.    "
 },
 {
   "id": "image-planar01",
@@ -782,6 +737,42 @@ var ptx_lunr_docs = [
   "number": "4.4.1",
   "title": "",
   "body": " Blah   "
+},
+{
+  "id": "note-method-of-images",
+  "level": "2",
+  "url": "sec-method-of-images.html#note-method-of-images",
+  "type": "Note",
+  "number": "4.4.2",
+  "title": "Method of images.",
+  "body": " Method of images  Given potential flow problem, we consider the superposition of elementary sinks\/sources, i.e. and\/or vortices, The strengths and locations of the individual contributions are chosen so that boundary conditions on the required boundaries (including at infinity) can be met.  "
+},
+{
+  "id": "fig-image-planar02",
+  "level": "2",
+  "url": "sec-method-of-images.html#fig-image-planar02",
+  "type": "Figure",
+  "number": "4.4.3",
+  "title": "",
+  "body": " Blah   "
+},
+{
+  "id": "fig-image-duallog",
+  "level": "2",
+  "url": "sec-method-of-images.html#fig-image-duallog",
+  "type": "Figure",
+  "number": "4.4.4",
+  "title": "",
+  "body": " Blah   "
+},
+{
+  "id": "sec-method-of-images-6",
+  "level": "2",
+  "url": "sec-method-of-images.html#sec-method-of-images-6",
+  "type": "Remark",
+  "number": "4.4.5",
+  "title": "Uniqueness of solutions.",
+  "body": " Uniqueness of solutions  You may be wondering: if a permissible potential function is found that satisfies the necessary boundary conditions, can we be certain it is the unique solution in the problem (up to a constant)? You may understand the construction of potentials, via the method of images, but perhaps irked that it involves the insertion of these so-called 'fictitious' points. The answer, at least for most non-pathological problems in potential flow theory (i.e. all the problems you study) is yes , the solution you have found is assured to be the only solution (up to a constant).  This is, to some extent, related to the uniqueness of analytic continuation . In a nutshall, the relevant theorem states that given two admissible complex potentials, say and , that agree on the line (in the case of the above situation), it is the case that everywhere (where they are analytic).  Therefore, you can be certain that solutions you find via the trick of method of images are the only solutions.  "
 },
 {
   "id": "sec-conformal-mapping",
@@ -799,7 +790,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "4.6",
   "title": "Worksheet",
-  "body": "  Method of images   Intro.    Single source in a semi-infinite flow   Verify that a single source of strength placed at the point is insufficient to describe flow bounded in the semi-infinite region, , with a planar boundary at . What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow.     "
+  "body": "  Method of images   Intro.    Single source in a semi-infinite flow   Verify that a single source of strength placed at the point is insufficient to describe flow bounded in the semi-infinite region, , with a planar boundary at . What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow.     A source in a semi-infinite flow   Consider the situation of two point sources of identical strength, , placed at , with . Develop equations for the complex potential, , and complex velocity, .  Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form.     Two vortices and a dividing boundary   Consider the situation of two point vorticies of identical strength, but opposite direction, placed at , with . Develop equations for the complex potential, , and complex velocity, .  Demonstrate that the streamlines are given by      "
 },
 {
   "id": "ps-image-planar01",
@@ -809,6 +800,24 @@ var ptx_lunr_docs = [
   "number": "4.6.1",
   "title": "Single source in a semi-infinite flow.",
   "body": " Single source in a semi-infinite flow   Verify that a single source of strength placed at the point is insufficient to describe flow bounded in the semi-infinite region, , with a planar boundary at . What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow.   "
+},
+{
+  "id": "ps-image-planar02",
+  "level": "2",
+  "url": "ws-potentialflows.html#ps-image-planar02",
+  "type": "Worksheet Exercise",
+  "number": "4.6.2",
+  "title": "A source in a semi-infinite flow.",
+  "body": " A source in a semi-infinite flow   Consider the situation of two point sources of identical strength, , placed at , with . Develop equations for the complex potential, , and complex velocity, .  Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form.   "
+},
+{
+  "id": "ps-image-planar03",
+  "level": "2",
+  "url": "ws-potentialflows.html#ps-image-planar03",
+  "type": "Worksheet Exercise",
+  "number": "4.6.3",
+  "title": "Two vortices and a dividing boundary.",
+  "body": " Two vortices and a dividing boundary   Consider the situation of two point vorticies of identical strength, but opposite direction, placed at , with . Develop equations for the complex potential, , and complex velocity, .  Demonstrate that the streamlines are given by    "
 },
 {
   "id": "ch-chapter05-waves",
@@ -838,49 +847,13 @@ var ptx_lunr_docs = [
   "body": " Examples illustrating the use of the Helmholtz principle Here are some examples. "
 },
 {
-  "id": "definitions",
+  "id": "ch-viscousflows",
   "level": "1",
-  "url": "definitions.html",
-  "type": "Section",
-  "number": "7.1",
-  "title": "Definitions of important concepts",
-  "body": " Definitions of important concepts   Viscosity  Viscosity quantifies the fluid's resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a Newtonian fluid. For these fluids the shear viscosity (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.   We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).   The kinematic viscosity (measured in ) is related to the shear viscosity via    Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood        Many real fluids, e.g. blood, have more complicated viscosity properties, but in this course we mainly consider circumstances in which it is appropriate to assume that the fluid in question has a constant and uniform viscosity.    Reynolds number  This is one of the most important flow parameters, and it often determines the qualitative nature of the flow. It is a dimensionless quantity, defined by   where is a characteristic (or typical) velocity of the flow and is a characteristic lengthscale. It characterises the relative importance of viscous and inertial accelerations.   How do we choose and ? There are usually ‘natural’ scales in the problem that we can choose for and , and determining these in a given problem usually becomes easier with experience. As an illustrative example of a suitable scale choice, consider steady flow down a pipe with a circular cross-section. An appropriate value of is often the pipe radius or diameter, while an appropriate value of could be the velocity on the centreline of the pipe.  Typical characteristics of the flow are strongly associated with Reynolds number:   Low-Reynolds-number flows ( ):   Examples include capillary flow, microfluidics, swimming bacteria or single cell organisms, lymphatic system flow, glacier flow, and spreading honey on toast.  These flows are called Stokes flow (after G. G. Stokes who studied them) or creeping flows.  Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.   Inertial effects are negligible and viscous effects are important.     Flows with moderate Reynolds number ( ):   Examples include flows in most blood vessels that are not capillaries, fast flow of aqueous humour and vitreous humour in the eye, urinary tract flow, and small fish swimming.  Flows in pipes with moderate Reynolds number are often described as laminar, meaning that the fluid moves in ‘layers’ sliding past each other (often people use ‘laminar’ to mean that the flow is not turbulent).     High-Reynolds-number flows (typically above about ):   Examples in biomedical engineering include airflow in trachea, pathological flow in large arteries (caused by severe stenosis), large swimming fish. Other examples include airflow around vehicles, large scale industrial processes involving fluid movement, rivers, oceans, the atmosphere.   These flows are characteristically unstable or turbulent (especially for very high Reynolds numbers).  Inertial effects are important and viscous effects are small.       Turbulent flow is characterised as having many different length scales, and the flow is chaotic . Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the flow into a mean flow, which describes the large-scale flow and a fluctuating flow, which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called closure problem , in which an assumption needs to be made to provide a final equation that governs the dynamics.  Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have such a high Reynolds number that turbulence is unavoidable and dominates the flow characteristics. Turbulence is less prevalent in many bioengineering applications, because they are usually on a smaller scale and involve slower flows.  The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course.    "
-},
-{
-  "id": "example-viscosity",
-  "level": "2",
-  "url": "definitions.html#example-viscosity",
-  "type": "Example",
-  "number": "7.1.1",
-  "title": "",
-  "body": " We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).  "
-},
-{
-  "id": "viscosity-6",
-  "level": "2",
-  "url": "definitions.html#viscosity-6",
-  "type": "Table",
-  "number": "7.1.3",
-  "title": "Viscosities at <span class=\"process-math\">\\(1\\,\\mathrm{atm}\\)<\/span> pressure and <span class=\"process-math\">\\(20\\,^\\circ\\mathrm{C}\\text{.}\\)<\/span>",
-  "body": " Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood       "
-},
-{
-  "id": "ws-viscousflows",
-  "level": "1",
-  "url": "ws-viscousflows.html",
-  "type": "Worksheet",
-  "number": "7.2",
-  "title": "Worksheet",
-  "body": "  Mechanics   Intro.    Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .         "
-},
-{
-  "id": "ps-falling-ball-viscometer",
-  "level": "2",
-  "url": "ws-viscousflows.html#ps-falling-ball-viscometer",
-  "type": "Worksheet Exercise",
-  "number": "7.2.1",
-  "title": "Falling ball viscometer.",
-  "body": " Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .       "
+  "url": "ch-viscousflows.html",
+  "type": "Chapter",
+  "number": "7",
+  "title": "Viscous flows",
+  "body": " Viscous flows   In this chapter we introduce the effects of viscosity into our fluid model. This leads to the famous Navier--Stokes equations, which are the governing equations for many fluid flows of practical interest. The viscosity has a profound effect on the flow, and it can lead to the formation of boundary layers and the generation of vorticity at solid boundaries.  Test matrix.    "
 },
 {
   "id": "ws-intro",

@@ -156,7 +156,6 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
-\newcommand{\bnabla}{\boldsymbol{\nabla}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -174,7 +173,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and references</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
 <ul class="structural toc-item-list">
@@ -183,7 +188,6 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div></li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -215,7 +219,6 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -238,7 +241,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Worksheet</span></a></div></li>
@@ -252,19 +255,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Definitions of important concepts</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Worksheet</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter08-PS.html" class="internal"><span class="codenumber">8</span> <span class="title">Problem sets</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Boo.</span></a></div></li></ul>
@@ -299,7 +290,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-method-of-images-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="subsection" id="subsec-images-planar"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Planar boundaries</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Planar boundaries: a half-plane</span>
 </h3>
 <div class="para" id="subsec-images-planar-2">Consider the situation illustrated in <a href="sec-method-of-images.html#image-planar01" class="xref" data-knowl="./knowl/xref/image-planar01.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.1">Figure 4.4.1</a>. <figure class="figure figure-like" id="image-planar01"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/image-planar01.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Blah<div class="autopermalink" data-description="Figure 4.4.1"><a href="#image-planar01" title="Copy heading and permalink for Figure 4.4.1" aria-label="Copy heading and permalink for Figure 4.4.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -308,13 +299,131 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">We envision a semi-infinite region of fluid bounded on the left by a wall at <span class="process-math">\(x = 0\text{.}\)</span> A single (line) source of strength <span class="process-math">\(Q\)</span> is placed at <span class="process-math">\(x = d\text{.}\)</span> Therefore from <a href="sec-complex-potential.html#eqn-complex-linesource" class="xref" data-knowl="./knowl/xref/eqn-complex-linesource.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.5">(4.3.5)</a>, we would expect that at least near <span class="process-math">\(x = d\text{,}\)</span> the complex potential behaves as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-complex-linesource.html ./knowl/xref/ps-image-planar01.html">
 \begin{equation*}
-f(z) \sim \frac{Q}{2\pi} \log z \quad \text{as $z \to d$}.
+f(z) \sim \frac{Q}{2\pi} \log (z-d) \quad \text{as $z \to d$}.
 \end{equation*}
 </div>
 <div class="para">However the above solution does not satisfy the required boundary conditions at <span class="process-math">\(x = 0\)</span> since it corresponds to a velocity field for which the horizontal velocity penetrates through <span class="process-math">\(x = 0\text{.}\)</span> This can be verified via inspection. For example, we can inspect the velocity or the streamlines; this is part of <a href="ws-potentialflows.html#ps-image-planar01" class="xref" data-knowl="./knowl/xref/ps-image-planar01.html" data-reveal-label="Reveal" data-close-label="Close" title="Worksheet Exercise 4.6.1: Single source in a semi-infinite flow">Worksheet Exercise 4.6.1</a>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 4.4.1: Planar boundaries"><a href="#subsec-images-planar" title="Copy heading and permalink for Subsection 4.4.1: Planar boundaries" aria-label="Copy heading and permalink for Subsection 4.4.1: Planar boundaries">🔗</a></div></section><div class="autopermalink" data-description="Section 4.4: The method of images"><a href="#sec-method-of-images" title="Copy heading and permalink for Section 4.4: The method of images" aria-label="Copy heading and permalink for Section 4.4: The method of images">🔗</a></div></section></div>
+<div class="para logical" id="subsec-images-planar-4">
+<div class="para">Rephrased in terms of the streamlines, the boundary condition at <span class="process-math">\(x = 0\)</span> is equivalent to the constraint that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Im f(z) = \psi = \textrm{constant at $x = 0$}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-images-planar-5">Our inspired solution to the above problem is referred to as <em class="emphasis">the method of images</em>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-images-planar-6">
+<article class="note remark-like" id="note-method-of-images"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method of images.</span>
+</h4>
+<div class="para logical" id="note-method-of-images-2">
+<div class="para">Given potential flow problem, we consider the superposition of elementary sinks/sources, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \frac{1}{2\pi} \sum_{j=0}^{N-1} Q_j \log(z - z_j), 
+\end{equation*}
+</div>
+<div class="para">and/or vortices,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = -\frac{\im}{2\pi} \sum_{j=0}^{N-1} \Gamma_j \log(z - z_j).
+\end{equation*}
+</div>
+<div class="para">The strengths and locations of the individual contributions are chosen so that boundary conditions on the required boundaries (including at infinity) can be met.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#note-method-of-images-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 4.4.2: Method of images"><a href="#note-method-of-images" title="Copy heading and permalink for Note 4.4.2: Method of images" aria-label="Copy heading and permalink for Note 4.4.2: Method of images">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-images-planar-7">Notice that the <em class="emphasis">linearity</em> of the potential flow problem is crucial: any analytic function is associated with a velocity potential that satisfies Laplace’s equation, <span class="process-math">\(\nabla^2 \phi = 0\text{,}\)</span> and therefore the superposition of such functions also yields a permissible complex potential, <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-images-planar-8">
+<div class="para">We consider the addition of a "fictitious" image source, with the same strength at the reflected point <span class="process-math">\(x = -d\text{,}\)</span> which lies outside of the posited fluid region. This gives the complex potential of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-image-planar02.html">
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} \log(z - d) + \frac{Q}{2\pi} \log(z + d). 
+\end{equation*}
+</div>
+<div class="para">This yields the illustration of the flow in <a href="sec-method-of-images.html#fig-image-planar02" class="xref" data-knowl="./knowl/xref/fig-image-planar02.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.4.3">Figure 4.4.3</a> <figure class="figure figure-like" id="fig-image-planar02"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/image-planar02.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Blah<div class="autopermalink" data-description="Figure 4.4.3"><a href="#fig-image-planar02" title="Copy heading and permalink for Figure 4.4.3" aria-label="Copy heading and permalink for Figure 4.4.3">🔗</a></div></figcaption></figure>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-images-planar-9">
+<div class="para">The corresponding complex velocity is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = f'(z) = \frac{Q}{2\pi}\frac{z}{z^2 - d^2}.
+\end{equation*}
+</div>
+<div class="para">So indeed, on the central boundary, we have <span class="process-math">\(z = \im y\text{,}\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = - \im \frac{Q}{\pi} \frac{y}{y^2 + d^2},
+\end{equation*}
+</div>
+<div class="para">and the velocity is entirely vertical. So indeed, the condition that <span class="process-math">\(\bu \cdot \bn = 0\)</span> on the planar boundary is satisfied.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-images-planar-10">
+<div class="para">In order to study the complex velocity, <span class="process-math">\(f(z)\text{,}\)</span> and develop an equation for the streamlines of the flow, we must first navigate the fact that the complex logarithm function is only well-defined in a slit complex plane. First, let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-complex-logarithm.html ./knowl/xref/ps-image-planar02.html">
+\begin{equation*}
+z - d = r_1 \e^{\im \theta_1} \quad \textrm{and} \quad z + d = r_2 \e^{\im \theta_2}.
+\end{equation*}
+</div>
+<div class="para">Using the definition of the complex logarithm <a href="sec-complex-potential.html#eqn-complex-logarithm" class="xref" data-knowl="./knowl/xref/eqn-complex-logarithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.6">(4.3.6)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-complex-logarithm.html ./knowl/xref/ps-image-planar02.html">
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} \left[ \log r_1 + \log r_2\right] + \im \frac{Q}{2\pi}\left[ \theta_1 + \theta_2 \right].
+\end{equation*}
+</div>
+<div class="para">The definitions of <span class="process-math">\(r_1, r_2\)</span> and <span class="process-math">\(\theta_1, \theta_2\text{,}\)</span> are shown in the below figure. In order for each logarithm to be well defined, the angles <span class="process-math">\(\theta_1\)</span> and <span class="process-math">\(\theta_2\)</span> must be restricted to be less than a complete revolution. We thus restrict <span class="process-math">\(\theta_1 \in [0, 2\pi)\)</span> and <span class="process-math">\(\theta_1 \in [-\pi, \pi)\text{.}\)</span> <figure class="figure figure-like" id="fig-image-duallog"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/image-duallog.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Blah<div class="autopermalink" data-description="Figure 4.4.4"><a href="#fig-image-duallog" title="Copy heading and permalink for Figure 4.4.4" aria-label="Copy heading and permalink for Figure 4.4.4">🔗</a></div></figcaption></figure> In <a href="ws-potentialflows.html#ps-image-planar02" class="xref" data-knowl="./knowl/xref/ps-image-planar02.html" data-reveal-label="Reveal" data-close-label="Close" title="Worksheet Exercise 4.6.2: A source in a semi-infinite flow">Worksheet Exercise 4.6.2</a>, you will be asked to develop an equation for the streamlines of this flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-images-planar-11">
+<div class="para">The above ideas can be extended to the situation of a line vortex in a half plane. Again, we are interested in describing the flow due to a line vortex at <span class="process-math">\(z = d\text{,}\)</span> and therefore we expect that near this point,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) \sim -\frac{\im\Gamma}{2\pi} \log(z - d) \quad \textrm{as $z \to d$}.
+\end{equation*}
+</div>
+<div class="para">However, the above potential does not satisfy the necessary zero-flux condition at <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-images-planar-12">
+<div class="para">In this case, the approach is to add an image vortex at <span class="process-math">\(z = -d\text{,}\)</span> but opposite in direction:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = -\frac{\im\Gamma}{2\pi} \log(z - d) + \frac{\im\Gamma}{2\pi} \log(z + d).
+\end{equation*}
+</div>
+<div class="para">Therefore, this flow is composed by a line vortex circulating anticlockwise on the right, and a line vortex circulating clockwise on the left. It can be verified that the complex velocity is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = -\frac{\im \Gamma d}{\pi(z^2 - d^2)}
+\end{equation*}
+</div>
+<div class="para">and indeed the velocity at <span class="process-math">\(x = 0\)</span> is entirely vertical and there is no flux through the boundary.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-images-planar-13">There is an exercise in <a href="ws-potentialflows.html#ps-image-planar03" class="xref" data-knowl="./knowl/xref/ps-image-planar03.html" data-reveal-label="Reveal" data-close-label="Close" title="Worksheet Exercise 4.6.3: Two vortices and a dividing boundary">Worksheet Exercise 4.6.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-images-planar-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.4.1: Planar boundaries: a half-plane"><a href="#subsec-images-planar" title="Copy heading and permalink for Subsection 4.4.1: Planar boundaries: a half-plane" aria-label="Copy heading and permalink for Subsection 4.4.1: Planar boundaries: a half-plane">🔗</a></div></section><article class="remark remark-like" id="sec-method-of-images-6"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniqueness of solutions.</span>
+</h3>
+<div class="para" id="sec-method-of-images-6-2">You may be wondering: if a permissible potential function is found that satisfies the necessary boundary conditions, can we be certain it is the unique solution in the problem (up to a constant)? You may understand the construction of potentials, via the method of images, but perhaps irked that it involves the insertion of these so-called ’fictitious’ points. The answer, at least for most non-pathological problems in potential flow theory (i.e. all the problems you study) is <em class="emphasis">yes</em>, the solution you have found is assured to be the only solution (up to a constant).<div class="autopermalink" data-description="Paragraph"><a href="#sec-method-of-images-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-method-of-images-6-3">This is, to some extent, related to the <a class="external" href="https://proofwiki.org/wiki/Uniqueness_of_Analytic_Continuation" target="_blank">uniqueness of analytic continuation</a>. In a nutshall, the relevant theorem states that given two admissible complex potentials, say <span class="process-math">\(f_1(z)\)</span> and <span class="process-math">\(f_2(z)\text{,}\)</span> that agree on the line <span class="process-math">\(x = 0\)</span> (in the case of the above situation), it is the case that <span class="process-math">\(f_1 = f_2\)</span> everywhere (where they are analytic).<div class="autopermalink" data-description="Paragraph"><a href="#sec-method-of-images-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-method-of-images-6-4">Therefore, you can be certain that solutions you find via the trick of method of images are the only solutions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-method-of-images-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 4.4.5: Uniqueness of solutions"><a href="#sec-method-of-images-6" title="Copy heading and permalink for Remark 4.4.5: Uniqueness of solutions" aria-label="Copy heading and permalink for Remark 4.4.5: Uniqueness of solutions">🔗</a></div></article><div class="autopermalink" data-description="Section 4.4: The method of images"><a href="#sec-method-of-images" title="Copy heading and permalink for Section 4.4: The method of images" aria-label="Copy heading and permalink for Section 4.4: The method of images">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-complex-potential.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-conformal-mapping.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
