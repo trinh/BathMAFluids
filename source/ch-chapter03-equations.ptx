@@ -1177,6 +1177,9 @@ The final equality above follows because the line integral of a gradient around 
           <me>
           \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bf u}.
           </me>
+          Note that, in this question, you are expected to do a long-form calculation.
+          The method given in the notes uses an alternative expression for the momentum equation
+          combined with a vector identity to get the same result with less effort.
         </p>
         <answer>
         <p>
@@ -1191,7 +1194,7 @@ The final equality above follows because the line integral of a gradient around 
           </me>
           We have
           <md>
-            <mrow>\amp \nabla \times(\bu \cdot \bnabla)\bu,</mrow>
+            <mrow>\amp \bnabla \times(\bu \cdot \bnabla)\bu,</mrow>
             <mrow>=\amp\begin{vmatrix}
               \bi \amp \bj \amp \bk \\
               \pd{}{x} \amp \pd{}{y} \amp \pd{}{z} \\
@@ -1222,6 +1225,19 @@ The final equality above follows because the line integral of a gradient around 
           </me>
           as required.
         </p>
+        <!--<p>
+          Alternatively, we can use indicial notation. The <m>i</m>-th component of
+          <m>\bnabla \times(\bu \cdot \bnabla)\bu</m> is:
+                  <md>
+            <mrow>\epsilon_{ijk}\pd{}{x_j}\left(u_l\pd{u_k}{x_l}\right)
+              =\amp \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
+              +\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l},</mrow>
+            <mrow>=\amp \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
+              -\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l}
+              +\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
+              +\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l},</mrow>
+          </md>
+        </p>-->
       </answer>
       </li>
       <li>
