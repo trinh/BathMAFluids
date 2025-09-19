@@ -364,11 +364,11 @@ Intro.
     We follow the value of <m>f</m> following a particle:
     <md>
       <mrow> \dd{f}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de t)-f(\bx,t)\right)</mrow>
-      <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)-f(\bx,t)\right)</mrow>
-    <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)\right)</mrow>
-    <mrow>\amp=\pd{f}{t}+\bu\cdot\bnabla f=\DD{f}{t}.</mrow>
+      <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
+    <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
+    <mrow>\amp=\pd{f}{t}+\bu\cdot\bnabla f=\DD{f}{t},</mrow>
     </md>
-    Thus the value is preserved if <m>\DD{f}{t}=0</m>.
+    (''<m>\dots</m>'' denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>.
   </p>
   </answer>
 </li>

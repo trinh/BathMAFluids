@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-chapter06-vorticity" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Vorticity and the Helmholtz principle</title>
+  <title>Vortex motion</title>
 
   <introduction>
+    <p>In this chapter, we will study the motion of vortices in an inviscid fluid.
+      We will define vortex lines, which are to the vorticity field as the streamlines defined in
+      <xref ref="ch-chapter02-kinematics"/> are to the velocity field. We will show that vortex
+      lines move with the fluid and that a fluid that starts irrotational remains irrotational
+      for all time.
+    </p>
+
+    <sidebyside>
+      <figure>
+       <image source="ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg" width="35%" />
+        <caption>A tornado (credit Greg Johnson, Unsplash).</caption>
+      </figure>
+      <figure>
+        <image source="ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg" width="35%" />
+        <caption>Wingtip vortices behind an aircraft (credit NASA Langley Research Center).</caption>
+      </figure>
+      <figure>
+        <image source="ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png" width="25%" />
+        <caption>Vortex created when a cup of tea is stirred, also showing the secondary flow that results,
+        which in turn leads to the <em>tea leaf paradox</em> in which tea leaves sprinkled on the bottom
+        of a cup migrate into a pile in the centre (you can try this at home). Credit Wikipedia.</caption>
+      </figure>
+    </sidebyside>
+
+    <p>
+      Examples of vortex motion abound in nature and industry. The most familiar examples are perhaps
+      tornadoes and hurricanes, which are large-scale vortices in the atmosphere. Other
+      examples include the swirling motion that forms when water drains from a bath or
+      sink, the wake vortices that form behind aircraft wings, and the vortices that form
+      behind a swimming fish or a flying bird. Vortices are also important in engineering
+      applications, for example in the design of aircraft wings and turbine blades.
+    </p>
+
     <p>Recall the fluid vorticity <m>\bomega=\nabla\times\bu</m> that was introduced in
       Definition <xref ref="def-vorticity"/>. Many people struggle to understand the
       concept of vorticity when they first encounter it, so you should not worry if it

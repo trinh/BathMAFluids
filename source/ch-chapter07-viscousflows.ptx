@@ -11,6 +11,34 @@
       effect on the flow, and it can lead to the formation of boundary layers and the generation
       of vorticity at solid boundaries.
     </p>
+
+      <figure>
+       <image source="ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png" width="60%" />
+        <caption>Steady, laminar flow of a viscous fluid through a uniform, circular pipe.
+            The velocity profile is parabolic. A similar profile is found for flow between two
+            parallel plates.
+            Credit Fu, Liang, Zhang (Symmetry, 2020).</caption>
+      </figure>
+     <sidebyside>
+      <figure>
+        <image source="ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png" width="25%" />
+        <caption>Sphere falling through viscous fluid at low Reynolds number. Credit Kraaiennest.</caption>
+      </figure>
+      <figure>
+        <image source="ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg" width="60%" />
+        <caption>Thin film flow / lubrication theory. If the thickness of a fluid layer is much less than the lengthscale
+            in the other two dimensions, we may considerably simplify the governing equations.
+        Credit J Mo Painting.</caption>
+      </figure>
+    </sidebyside>
+
+    <p>
+    Viscous flows are ubiquitous in nature and industry. Examples include the flow of blood
+    through arteries and veins, the flow of air over aircraft wings, and the flow of water
+    around ship hulls. Viscosity is also important in many industrial processes, such as
+    the manufacture of paints, adhesives, and food products.
+</p>
+
 </introduction>
 
     <section xml:id="definitions">
@@ -137,8 +165,10 @@
             <li>
                 <p><b>High-Reynolds-number flows (typically <m>Re</m> above about <m>1{,}000</m>):</b></p>
                 <ul>
-                    <li>Examples in biomedical engineering include airflow in trachea, pathological flow in large arteries (caused by severe stenosis), large swimming fish. Other examples include airflow around vehicles, large scale industrial processes involving fluid movement, rivers, oceans, the atmosphere. <media url="Movie463"/> <media url="Movie4490"/></li>
-                    <li>These flows are characteristically unstable or turbulent (especially for very high Reynolds numbers).</li>
+                    <li>Examples include atmospheric and ocean flows, rivers, large industrial processes,
+                        flows around vehicles, airflow in trachea.</li>
+                    <li>These flows are characteristically unstable or turbulent (especially for
+                        very high Reynolds numbers).</li>
                     <li>Inertial effects are important and viscous effects are small.</li>
                 </ul>
             </li>
@@ -164,9 +194,7 @@
             engineering, weather forecasting and large-scale industrial flows,
             basically because large and fast moving flows have such a high Reynolds
             number that turbulence is unavoidable and dominates the flow
-            characteristics. Turbulence is less prevalent in many bioengineering
-            applications, because they are usually on a smaller scale and involve
-            slower flows.
+            characteristics.
         </p>
         <p>
             The study of turbulence could constitute a lecture course in its own right,
@@ -191,7 +219,7 @@
 <worksheet xml:id="ws-viscousflows">
 
 <exercisegroup xml:id="viscousflows-mechanics">
-<title>Mechanics</title>
+<title>Viscous flows</title>
 <introduction>
 <p>
 Intro. 
@@ -308,7 +336,7 @@ Sketch the velocity as a function of time.
 </li>
 <li>
 <p>
-If the ballbearing has diameter 2 mm and is falling through glycerol at 20<m>^\circ</m>C, what is its terminal velocity in mm/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamics viscosity of glycerol at 20<m>^\circ</m>C is 1.2 Pa s and the density of steel is 8,000 kg/m<m>^3</m>.
+If the ballbearing has diameter 2 mm and is falling through glycerol at 20<m>^\circ</m>C, what is its terminal velocity in mm/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamic viscosity of glycerol at 20<m>^\circ</m>C is 1.2 Pa s and the density of steel is 8,000 kg/m<m>^3</m>.
 </p>
 <answer>
 <p>
