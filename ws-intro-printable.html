@@ -14,11 +14,12 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Boo.</title>
+<title>Worksheet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/print-worksheet.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -77,7 +78,7 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Fluids dynamics (MA32051)">
+<meta property="book:title" content="Fluid dynamics (MA32051)">
 <meta property="book:author" content=" ">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
@@ -115,7 +116,7 @@ eBookConfig.enable_chatcodes =  false;
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Fluids dynamics (MA32051)</span> <span class="subtitle">A first course on the mathematics of fluid dynamics</span></a></h1>
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Fluid dynamics (MA32051)</span> <span class="subtitle">A first course on the mathematics of fluid dynamics</span></a></h1>
 <p class="byline"> </p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -129,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter08-PS.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter08-PS.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-preliminary-complex-variables.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter01-introduction.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -174,11 +175,12 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and references</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -188,7 +190,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-13" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
@@ -252,7 +257,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vorticity and the Helmholtz principle</span></a></div>
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
@@ -270,10 +275,6 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
-</li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-chapter08-PS.html" class="internal"><span class="codenumber">8</span> <span class="title">Problem sets</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Boo.</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
@@ -304,16 +305,500 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <section class="worksheet" id="ws-intro" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Boo.</span><div class="print-links"><a href="ws-intro-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Worksheet</span><div class="print-links"><a href="ws-intro-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h2>
-<section class="introduction" id="ws-intro-2"><div class="para" id="ws-intro-2-1">Test.<div class="autopermalink" data-description="Paragraph"><a href="#ws-intro-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><article class="exercise exercise-like" id="ws-intro-3"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
-<div class="para" id="ws-intro-3-1">Blah.<div class="autopermalink" data-description="Paragraph"><a href="#ws-intro-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="exercisegroup" id="vector-calculus">
+<h3 class="heading"><span class="title">Vector Calculus.</span></h3>
+<div class="introduction" id="vector-calculus-2"><div class="para" id="vector-calculus-2-1">
+<article class="warning remark-like" id="vector-calculus-2-1-1"><h4 class="heading">
+<span class="type">Warning</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="vector-calculus-2-1-1-1">We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.<div class="autopermalink" data-description="Paragraph"><a href="#vector-calculus-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Worksheet Exercise 8.1.1"><a href="#ws-intro-3" title="Copy heading and permalink for Worksheet Exercise 8.1.1" aria-label="Copy heading and permalink for Worksheet Exercise 8.1.1">🔗</a></div></article><div class="autopermalink" data-description="Worksheet 8.1: Boo."><a href="#ws-intro" title="Copy heading and permalink for Worksheet 8.1: Boo." aria-label="Copy heading and permalink for Worksheet 8.1: Boo.">🔗</a></div></section>
+<div class="autopermalink" data-description="Warning 1.3.1"><a href="#vector-calculus-2-1-1" title="Copy heading and permalink for Warning 1.3.1" aria-label="Copy heading and permalink for Warning 1.3.1">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#vector-calculus-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="vector-identities"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector identities.</span>
+</h4>
+<div class="para logical" id="vector-identities-2-1">
+<div class="para">Prove the following vector identities:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="vector-identities-2-1-1">
+<li id="vector-identities-2-1-1-1">
+<div class="para" id="p-derived-vector-identities-2-1-1-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\bnabla \cdot \left(\phi\mathbf{A}\right) = \phi (\bnabla \cdot \mathbf{A}) + \mathbf{A} \cdot (\bnabla \phi),
+\end{equation*}
+</div>
+<details id="vector-identities-2-1-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="vector-identities-2-1-1-1-2-1">Using the Einstein summation convention, <div class="displaymath process-math" id="vector-identities-2-1-1-1-2-1-1-1">
+\begin{align*}
+\nabla \cdot (\phi \mathbf{A}) \amp = \pd{}{x_i}\left(\phi A_i\right)\\
+\amp = \left(\pd{\phi}{x_i}\right)A_i + \phi \pd{A_i}{x_i}\\
+\amp = \left(\bnabla\phi\right)\cdot\mathbf{A} + \phi\bnabla\cdot\mathbf{A},
+\end{align*}
+</div> where we have used the product rule in the second equality.<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.a.1"><a href="#vector-identities-2-1-1-1-2" title="Copy heading and permalink for Answer 1.3.1.a.1" aria-label="Copy heading and permalink for Answer 1.3.1.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.a"><a href="#vector-identities-2-1-1-1" title="Copy heading and permalink for Item 1.3.1.a" aria-label="Copy heading and permalink for Item 1.3.1.a">🔗</a></div>
+</li>
+<li id="vector-identities-2-1-1-2">
+<div class="para" id="p-derived-vector-identities-2-1-1-2">
+<div class="displaymath process-math">
+\begin{equation*}
+\bnabla \times (\phi \mathbf{A}) = \phi \left(\bnabla \times \mathbf{A}\right) + \left(\bnabla \phi\right) \times \mathbf{A}
+\end{equation*}
+</div>
+<details id="vector-identities-2-1-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="vector-identities-2-1-1-2-2-1">We have, <div class="displaymath process-math" id="vector-identities-2-1-1-2-2-1-1-1">
+\begin{align*}
+\nabla \times (\phi \mathbf{A}) \amp = \epsilon_{ijk}\pd{}{x_j}\left(\phi A_k\right)\\
+\amp = \left(\epsilon_{ijk}\pd{A_k}{x_j}\right)\phi+\epsilon_{ijk}\left(\pd{\phi}{x_j}\right)A_k\\
+\amp = \left(\bnabla\times\mathbf{A}\right)\phi+\left(\bnabla\phi\right)\times\mathbf{A}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.b.1"><a href="#vector-identities-2-1-1-2-2" title="Copy heading and permalink for Answer 1.3.1.b.1" aria-label="Copy heading and permalink for Answer 1.3.1.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.b"><a href="#vector-identities-2-1-1-2" title="Copy heading and permalink for Item 1.3.1.b" aria-label="Copy heading and permalink for Item 1.3.1.b">🔗</a></div>
+</li>
+<li id="vector-identities-2-1-1-3">
+<div class="para" id="p-derived-vector-identities-2-1-1-3">
+<div class="displaymath process-math">
+\begin{equation*}
+\bnabla \cdot \left(\mathbf{A} \times \mathbf{B}\right)
+= \mathbf{B} \cdot \left(\bnabla \times \mathbf{A}\right) - \mathbf{A} \cdot \left(\bnabla \times \mathbf{B}\right)
+\end{equation*}
+</div>
+<details id="vector-identities-2-1-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="vector-identities-2-1-1-3-2-1">We have, <div class="displaymath process-math" id="vector-identities-2-1-1-3-2-1-1-1">
+\begin{align*}
+\bnabla \cdot \left(\mathbf{A} \times \mathbf{B}\right)
+\amp = \pd{}{x_i}\left(\epsilon_{ijk}A_jB_k\right)\\
+\amp = \epsilon_{ijk}\pd{A_j}{x_i}B_k+\epsilon_{ijk}A_j\pd{B_k}{x_i}\\
+\amp = B_k\epsilon_{kij}\pd{A_j}{x_i}+A_j\epsilon_{jki}\pd{B_k}{x_i}\\
+\amp = B_i\epsilon_{ijk}\pd{A_k}{x_j}+A_i\epsilon_{ikj}\pd{B_k}{x_j}\\
+\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-A_i\epsilon_{ijk}\pd{B_k}{x_j}\\
+\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-\mathbf{A}\cdot\left(\bnabla\times\mathbf{B}\right).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.c.1"><a href="#vector-identities-2-1-1-3-2" title="Copy heading and permalink for Answer 1.3.1.c.1" aria-label="Copy heading and permalink for Answer 1.3.1.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.c"><a href="#vector-identities-2-1-1-3" title="Copy heading and permalink for Item 1.3.1.c" aria-label="Copy heading and permalink for Item 1.3.1.c">🔗</a></div>
+</li>
+<li id="vector-identities-2-1-1-4">
+<div class="para" id="p-derived-vector-identities-2-1-1-4">The following identity will be useful for proving the vorticity equation in <a href="ch-chapter03-equations.html" class="internal" title="Chapter 3: Equations of motion">Chapter 3</a> of this course:<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch-chapter03-equations.html">
+\begin{equation*}
+\bnabla\times\left(\bu\cdot\bnabla\bu\right)
+=\bu\cdot\bnabla\left(\bnabla\times\bu\right)
++\left(\bnabla\cdot\bu\right)\left(\bnabla\times\bu\right)
+-\left(\left(\bnabla\times\bu\right)\cdot\bnabla\right)\bu
+\end{equation*}
+</div>
+<details id="vector-identities-2-1-1-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="vector-identities-2-1-1-4-3-1">
+<div class="para">The <span class="process-math">\(i\)</span>th component of the left-hand side equals</div>
+<div class="displaymath process-math" id="vector-identities-2-1-1-4-3-1-2">
+\begin{align*}
+\amp\epsilon_{ijk}\pd{}{x_j}\left(u_l\pd{v_k}{x_l}\right)\\
+=\amp\epsilon_{ijk}\pd{u_l}{x_j}\pd{v_k}{x_l}+\epsilon_{ijk}u_l\pd{^2v_k}{x_jx_l}.
+\end{align*}
+</div>
+<div class="para">The second term of this expression equals the <span class="process-math">\(i\)</span>th component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu\cdot\bnabla\left(\bnabla\times\bu\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="vector-identities-2-1-1-4-3-2">
+<div class="para">It therefore remains to prove that the first term</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
+\end{equation*}
+</div>
+<div class="para">equals the <span class="process-math">\(i\)</span>th component of <span class="process-math">\((\bnabla\cdot\bu)(\bnabla\times\bu)-((\bnabla\times\bu)\cdot\bnabla)\bu\text{.}\)</span> We note that if we can prove this for the first component then the proof for the second component follows by replacing index 1 by index 2, index 2 by index 3 and index 3 by index 1, and the proof of the third component by replacing index 1 by index 3, index 2 by index 1 and index 3 by index 2.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="vector-identities-2-1-1-4-3-3">
+<div class="para">The first component of <span class="process-math">\((\bnabla\cdot\bu)(\bnabla\times\bu)-((\bnabla\times\bu)\cdot\bnabla)\bu\)</span> equals</div>
+<div class="displaymath process-math" id="vector-identities-2-1-1-4-3-3-2">
+\begin{align*}
+\amp\pd{u_l}{x_l}\epsilon_{1jk}\pd{u_k}{x_j}-\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_1}{x_l}\\
+=\amp\left(\pd{u_1}{x_1}+\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)\\
+\amp
+-\pd{u_3}{x_2}\pd{u_1}{x_1}+\pd{u_2}{x_3}\pd{u_1}{x_1}
+-\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+-\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}\\
+=\amp\left(\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)\\
+\amp
+-\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+-\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}\\
+=\amp\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_3}\pd{u_3}{x_2}
+-\pd{u_2}{x_2}\pd{u_2}{x_3}-\pd{u_3}{x_3}\pd{u_2}{x_3}\\
+\amp-\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+-\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}\\
+=\amp\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_3}\pd{u_3}{x_2}
+-\pd{u_2}{x_2}\pd{u_2}{x_3}-\pd{u_3}{x_3}\pd{u_2}{x_3}\\
+\amp+\pd{u_3}{x_1}\pd{u_1}{x_2}
+-\pd{u_2}{x_1}\pd{u_1}{x_3}
+\end{align*}
+</div>
+<div class="para">The <span class="process-math">\(i=1\)</span> component of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
+\end{equation*}
+</div>
+<div class="para">equals</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{u_1}{x_2}\pd{u_3}{x_1}+\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_2}\pd{u_3}{x_3}
+-\pd{u_1}{x_3}\pd{u_2}{x_1}-\pd{u_2}{x_3}\pd{u_2}{x_2}-\pd{u_3}{x_3}\pd{u_2}{x_3}.
+\end{equation*}
+</div>
+<div class="para">Inspecting these expressions, we find they are equal. QED.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1-1-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.d.1"><a href="#vector-identities-2-1-1-4-3" title="Copy heading and permalink for Answer 1.3.1.d.1" aria-label="Copy heading and permalink for Answer 1.3.1.d.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.d"><a href="#vector-identities-2-1-1-4" title="Copy heading and permalink for Item 1.3.1.d" aria-label="Copy heading and permalink for Item 1.3.1.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#vector-identities-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1.3.1: Vector identities"><a href="#vector-identities" title="Copy heading and permalink for Worksheet Exercise 1.3.1: Vector identities" aria-label="Copy heading and permalink for Worksheet Exercise 1.3.1: Vector identities">🔗</a></div></article><article class="exercise exercise-like" id="divergence-theorem"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergence theorem.</span>
+</h4>
+<div class="para logical" id="divergence-theorem-2-1">
+<div class="para">State the divergence theorem. Use it to show that, for a vector-valued function <span class="process-math">\(\mathbf{B}(\mathbf{x})\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_V \bnabla \times \mathbf{B} \, dV = \int_{\partial V} \hat{\mathbf{n}} \times \mathbf{B} \, dS,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\hat{\mathbf{n}}\)</span> is the outward-pointing unit normal to the surface <span class="process-math">\(\partial V\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divergence-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <details id="divergence-theorem-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="divergence-theorem-2-2-1">
+<div class="para">The divergence theorem states that, for a vector field <span class="process-math">\(\mathbf{A}(\mathbf{x})\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_V \bnabla \cdot \mathbf{A} \, dV = \int_{\partial V} \hat{\mathbf{n}} \cdot \mathbf{A} \, dS.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divergence-theorem-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divergence-theorem-2-2-2">
+<div class="para">To prove the required result, we use the Levi--Civita symbol <span class="process-math">\(\epsilon_{ijk}\)</span> to write the <span class="process-math">\(i\)</span>th component of the left-hand side as</div>
+<div class="displaymath process-math" id="divergence-theorem-2-2-2-3">
+\begin{align*}
+\int_V (\bnabla \times \mathbf{B})_i \, dV \amp = \int_V \epsilon_{ijk}\pd{B_k}{x_j} \, dV\\
+\amp = \epsilon_{ijk}\int_V \pd{B_k}{x_j} \, dV
+\end{align*}
+</div>
+<div class="para">Setting <span class="process-math">\(\mathbf{A}=B_k\mathbf{e}_j\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bnabla\cdot\mathbf{A}=\pd{B_k}{x_j},\quad
+\hat{\mathbf{n}}\cdot\mathbf{A}=\hat{n}_jB_k.
+\end{equation*}
+</div>
+<div class="para">and the divergence theorem implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_V \pd{B_k}{x_j} \, dV = \int_{\partial V} \hat{n}_j B_k \, dS.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="divergence-theorem-2-2-2-7">
+\begin{align*}
+\int_V (\bnabla \times \mathbf{B})_i \, dV
+\amp = \epsilon_{ijk}\int_{\partial V} \hat{n}_j B_k \, dS\\
+\amp= \int_{\partial V} (\hat{\mathbf{n}} \times \mathbf{B})_i \, dS.
+\end{align*}
+</div>
+<div class="para">QED.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divergence-theorem-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#divergence-theorem-2-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Worksheet Exercise 1.3.2: Divergence theorem"><a href="#divergence-theorem" title="Copy heading and permalink for Worksheet Exercise 1.3.2: Divergence theorem" aria-label="Copy heading and permalink for Worksheet Exercise 1.3.2: Divergence theorem">🔗</a></div></article><article class="exercise exercise-like" id="stokes-theorem"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stokes’ theorem.</span>
+</h4>
+<div class="para" id="stokes-theorem-2-1">State Stokes’ theorem. Use it to evaluate the line integral <span class="process-math">\(\oint z\,dx+x\,dy+y\,dz\)</span> around the triangle with vertices <span class="process-math">\((3,0,0)\text{,}\)</span> <span class="process-math">\((0,0,2)\)</span> and <span class="process-math">\((0,6,0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#stokes-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <details id="stokes-theorem-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="stokes-theorem-2-2-1">
+<div class="para">Stokes’ theorem states that, for a vector field <span class="process-math">\(\mathbf{A}(\mathbf{x})\)</span> defined on a surface <span class="process-math">\(S\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_S \left(\bnabla \times \mathbf{A}\right) \cdot \hat{\mathbf{n}} \, dS
+= \oint_{\partial S} \mathbf{A} \cdot d\mathbf{x}.
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\hat{\mathbf{n}}\)</span> is the unit normal to the surface <span class="process-math">\(S\)</span> and <span class="process-math">\(\partial S\)</span> is the boundary curve of <span class="process-math">\(S\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stokes-theorem-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="stokes-theorem-2-2-2">
+<div class="para">Setting <span class="process-math">\(\mathbf{A}=(z,x,y)\text{,}\)</span> and noting that <span class="process-math">\(\bnabla \times \mathbf{A} = (1,1,1)\text{,}\)</span> we have that, for any surface <span class="process-math">\(S\)</span> spanning the given triangle,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_S (1,1,1)\cdot\hat{\mathbf{n}} \, dS
+=\oint_{\partial S} (z,x,y)\cdot d\mathbf{x}
+=\oint_{\partial S} z\,dx+x\,dy+y\,dz.
+\end{equation*}
+</div>
+<div class="para">Hence, the required line integral equals the flux of the vector <span class="process-math">\((1,1,1)\)</span> through the surface <span class="process-math">\(S\text{.}\)</span> We choose <span class="process-math">\(S\)</span> to be the triangle itself.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stokes-theorem-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="stokes-theorem-2-2-3">
+<div class="para">The two edges of the triangle that start from the vertex <span class="process-math">\((3,0,0)\)</span> are given by the vectors <span class="process-math">\(\mathbf{a}=(-3,0,2)\)</span> and <span class="process-math">\(\mathbf{b}=(-3,6,0)\text{.}\)</span> The cross product of these two vectors is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(-3,0,2)\times(-3,6,0)=(-12,-6,-18).
+\end{equation*}
+</div>
+<div class="para">This vector is orthogonal to <span class="process-math">\(S\)</span> and its magnitude equals the area of the parallelogram with these vectors as two of its edges. The triangle has area half that of the parallelogram <span class="process-math">\(\frac12\sqrt{(-12)^2+(-6)^2+(-18)^2}=3\sqrt{2^2+1^2+3^2}=3\sqrt{14}\text{,}\)</span> and its unit normal is <span class="process-math">\(\hat{\mathbf{n}}=(-2,-1,-3)/\sqrt{14}\)</span> (note that we can check the direction of the normal using the right-hand rule). Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\oint_{\partial S} z\,dx+x\,dy+y\,dz
+=\int_S (1,1,1)\cdot\hat{\mathbf{n}} \, dS
+=3\sqrt{14}(1,1,1)\cdot\frac{(-2,-1,-3)}{\sqrt{14}}
+=-18.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#stokes-theorem-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#stokes-theorem-2-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Worksheet Exercise 1.3.3: Stokes’ theorem"><a href="#stokes-theorem" title="Copy heading and permalink for Worksheet Exercise 1.3.3: Stokes’ theorem" aria-label="Copy heading and permalink for Worksheet Exercise 1.3.3: Stokes’ theorem">🔗</a></div></article><article class="exercise exercise-like" id="coordinate-systems"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Coordinate systems.</span>
+</h4>
+<div class="para logical" id="coordinate-systems-2-1">
+<ol class="lower-alpha lower-alpha-level-1" id="coordinate-systems-2-1-1">
+<li id="coordinate-systems-2-1-1-1">
+<div class="para" id="p-derived-coordinate-systems-2-1-1-1">A vector field is given in Cartesian coordinates by <span class="process-math">\(\mathbf{A}=(x,y,0)\text{.}\)</span> Convert to cylindrical and spherical polar coordinates. What do you notice? <details id="coordinate-systems-2-1-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="coordinate-systems-2-1-1-1-2-1">
+<div class="para">For cylindrical polars, we have <span class="process-math">\(x=r\cos\theta\text{,}\)</span> <span class="process-math">\(y=r\sin\theta\)</span> and <span class="process-math">\(z=z\text{.}\)</span> We may also write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{r}}=\cos\theta\,\hat{\mathbf{x}}+\sin\theta\,\hat{\mathbf{y}}.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-1-2-1-5">
+\begin{align*}
+\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}\\
+\amp = r\cos\theta\,\hat{\mathbf{x}}+r\sin\theta\,\hat{\mathbf{y}}\\
+\amp=r\hat{\mathbf{r}}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordinate-systems-2-1-1-1-2-2">
+<div class="para">For spherical polars, we have <span class="process-math">\(x=r\sin\theta\cos\phi\text{,}\)</span> <span class="process-math">\(y=r\sin\theta\sin\phi\)</span> and <span class="process-math">\(z=r\cos\theta\text{.}\)</span> We may also write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{r}}=\sin\theta\cos\phi\,\hat{\mathbf{x}}+\sin\theta\sin\phi\,\hat{\mathbf{y}}+\cos\theta\,\hat{\mathbf{z}}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\boldsymbol{\theta}}=\cos\theta\cos\phi\,\hat{\mathbf{x}}+\cos\theta\sin\phi\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{z}}.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-1-2-2-6">
+\begin{align*}
+\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}\\
+\amp = r\sin\theta\cos\phi\,\hat{\mathbf{x}} + r\sin\theta\sin\phi\,\hat{\mathbf{y}}\\
+\amp = r\sin\theta\left(\cos\phi\,\hat{\mathbf{x}}+\sin\phi\,\hat{\mathbf{y}}\right).
+\end{align*}
+</div>
+<div class="para">We note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}
+=\cos\phi\,\hat{\mathbf{x}}+\sin\phi\,\hat{\mathbf{y}}
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-1-2-2-8">
+\begin{align*}
+\mathbf{A} \amp = r\sin\theta\left(\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}\right).
+\end{align*}
+</div>
+<div class="para">We note that in both cylindrical and spherical polars, the vector field has no component in the azimuthal direction. This is because the original vector field is axisymmetric about the <span class="process-math">\(z\)</span>-axis. Furthermore, in cylindrical polars, the vector field is purely radial, whereas in spherical polars it has both radial and polar components.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.4.a.1"><a href="#coordinate-systems-2-1-1-1-2" title="Copy heading and permalink for Answer 1.3.4.a.1" aria-label="Copy heading and permalink for Answer 1.3.4.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.a"><a href="#coordinate-systems-2-1-1-1" title="Copy heading and permalink for Item 1.3.4.a" aria-label="Copy heading and permalink for Item 1.3.4.a">🔗</a></div>
+</li>
+<li id="coordinate-systems-2-1-1-2">
+<div class="para" id="p-derived-coordinate-systems-2-1-1-2">A vector field is given in Cartesian coordinates by <span class="process-math">\(\mathbf{A}=(y,-x,0)\text{.}\)</span> Convert to cylindrical and spherical polar coordinates. What do you notice? <details id="coordinate-systems-2-1-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="coordinate-systems-2-1-1-2-2-1">
+<div class="para">For cylindricals, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{\theta}}=\cos\theta\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{x}}.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-2-2-1-2">
+\begin{align*}
+\mathbf{A} \amp = y\,\hat{\mathbf{x}} - x\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}\\
+\amp = r\sin\theta\,\hat{\mathbf{x}}-r\cos\theta\,\hat{\mathbf{y}}\\
+\amp=-r\hat{\mathbf{\theta}}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordinate-systems-2-1-1-2-2-2">
+<div class="para">For sphericals,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-2-2-2-1">
+\begin{align*}
+\mathbf{A} \amp = y\,\hat{\mathbf{x}} -x\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}\\
+\amp = r\sin\theta\sin\phi\,\hat{\mathbf{x}} - r\sin\theta\cos\phi\,\hat{\mathbf{y}}\\
+\amp = r\sin\theta\left(\sin\phi\,\hat{\mathbf{x}}-\cos\phi\,\hat{\mathbf{y}}\right).
+\end{align*}
+</div>
+<div class="para">We note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{mathbf{\phi}}=-\sin\phi\,\hat{\mathbf{x}}+\cos\phi\,\hat{\mathbf{y}},
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{A}=-r\sin\theta\hat{mathbf{\phi}}.
+\end{equation*}
+</div>
+<div class="para">We note that in both cylindrical and spherical polars, the vector field is purely azimuthal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.4.b.1"><a href="#coordinate-systems-2-1-1-2-2" title="Copy heading and permalink for Answer 1.3.4.b.1" aria-label="Copy heading and permalink for Answer 1.3.4.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.b"><a href="#coordinate-systems-2-1-1-2" title="Copy heading and permalink for Item 1.3.4.b" aria-label="Copy heading and permalink for Item 1.3.4.b">🔗</a></div>
+</li>
+<li id="coordinate-systems-2-1-1-3">
+<div class="para" id="p-derived-coordinate-systems-2-1-1-3">A vector field is given in Cartesian coordinates by <span class="process-math">\(\mathbf{A}=(x,y,z)\text{.}\)</span> Convert to cylindrical and spherical polar coordinates. What do you notice? <details id="coordinate-systems-2-1-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="coordinate-systems-2-1-1-3-2-1">
+<div class="para">For cylindrical polar coordinates, and using the answer to the first part of this question, we may immediately write</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-3-2-1-1">
+\begin{align*}
+\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}\\
+\amp=r\hat{\mathbf{r}}+z\hat{\mathbf{z}}.
+\end{align*}
+</div>
+<div class="para">For spherical polar coordinates, and using the answer to the first part of this question,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-3-2-1-2">
+\begin{align*}
+\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}\\
+\amp=r\sin\theta\cos\phi\hat{\mathbf{x}}+r\sin\theta\sin\phi\hat{\mathbf{y}}+r\cos\theta\hat{\mathbf{z}}\\
+\amp=r\hat{\mathbf{r}}.
+\end{align*}
+</div>
+<div class="para">The velocity field is purely radial in spherical polars, but has both radial and axial components in cylindrical polars.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.4.c.1"><a href="#coordinate-systems-2-1-1-3-2" title="Copy heading and permalink for Answer 1.3.4.c.1" aria-label="Copy heading and permalink for Answer 1.3.4.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.c"><a href="#coordinate-systems-2-1-1-3" title="Copy heading and permalink for Item 1.3.4.c" aria-label="Copy heading and permalink for Item 1.3.4.c">🔗</a></div>
+</li>
+<li id="coordinate-systems-2-1-1-4">
+<div class="para" id="coordinate-systems-2-1-1-4-1">A vector field is given in Cartesian coordinates by <span class="process-math">\(\mathbf{A}=(y,2x,z)\text{.}\)</span> Write down the components of this vector field in cylindrical polars and in spherical polars.<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="coordinate-systems-2-1-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="coordinate-systems-2-1-1-4-2-1">
+<div class="para">In cylindrical polars, the unit vectors are related by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{x}}=\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\mathbf{\theta}},\quad
+\hat{\boldsymbol{y}}=\sin\theta\,\hat{\mathbf{r}}+\cos\theta\,\hat{\mathbf{\theta}},\quad
+\hat{\mathbf{z}}=\hat{\mathbf{z}}.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-4-2-1-2">
+\begin{align*}
+\mathbf{A} \amp = y\,\hat{\mathbf{x}} + 2x\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}\\
+\amp = r\sin\theta(\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\boldsymbol{\theta}})
++ 2r\cos\theta(\sin\theta\,\hat{\mathbf{r}}+\cos\theta\,\hat{\boldsymbol{\theta}})
++ z\,\hat{\mathbf{z}}\\
+\amp = r\sin(3\theta)\,\hat{\mathbf{r}} + r\cos(3\theta)\,\hat{\boldsymbol{\theta}}
++ z\,\hat{\mathbf{z}}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="coordinate-systems-2-1-1-4-2-2">
+<div class="para">In spherical polars, the unit vectors are related by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{x}}=\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\mathbf{\theta}}-\sin\phi\,\hat{\mathbf{\phi}},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{y}}=\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\mathbf{\theta}}+\cos\phi\,\hat{\mathbf{\phi}},
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\mathbf{z}}=\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\mathbf{\theta}}.
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="coordinate-systems-2-1-1-4-2-2-4">
+\begin{align*}
+\mathbf{A} \amp = y\,\hat{\mathbf{x}} + 2x\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}\\
+\amp = r\sin\theta\sin\phi(\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\boldsymbol{\theta}}
+- \sin\phi\,\hat{\boldsymbol{\phi}})
++ 2r\sin\theta\cos\phi(\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\boldsymbol{\theta}}
++ \cos\phi\,\hat{\boldsymbol{\phi}})
++ r\cos\theta(\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\boldsymbol{\theta}})\\
+\amp = r\left(3\sin^2\theta\sin\phi\cos\phi+\cos^2\theta\right)\,\hat{\mathbf{r}}
++ r\sin\theta\cos\theta\left(3\sin\phi\cos\phi-1\right)\,\hat{\boldsymbol{\theta}}
++ r\sin\theta\left(2\cos^2\phi-\sin^2\phi\right)\,\hat{\boldsymbol{\phi}}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1-1-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.4.d.1"><a href="#coordinate-systems-2-1-1-4-2" title="Copy heading and permalink for Answer 1.3.4.d.1" aria-label="Copy heading and permalink for Answer 1.3.4.d.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 1.3.4.d"><a href="#coordinate-systems-2-1-1-4" title="Copy heading and permalink for Item 1.3.4.d" aria-label="Copy heading and permalink for Item 1.3.4.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#coordinate-systems-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet Exercise 1.3.4: Coordinate systems"><a href="#coordinate-systems" title="Copy heading and permalink for Worksheet Exercise 1.3.4: Coordinate systems" aria-label="Copy heading and permalink for Worksheet Exercise 1.3.4: Coordinate systems">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 1.3.1–4: Vector Calculus"><a href="#vector-calculus" title="Copy heading and permalink for Exercise Group 1.3.1–4: Vector Calculus" aria-label="Copy heading and permalink for Exercise Group 1.3.1–4: Vector Calculus">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Worksheet 1.3"><a href="#ws-intro" title="Copy heading and permalink for Worksheet 1.3" aria-label="Copy heading and permalink for Worksheet 1.3">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-chapter08-PS.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-preliminary-complex-variables.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter02-kinematics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
