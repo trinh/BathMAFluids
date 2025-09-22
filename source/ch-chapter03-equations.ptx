@@ -908,7 +908,12 @@
 <title>Governing equations</title>
 <introduction>
 <p>
-Intro. 
+This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow, starting from first principles, and deriving the conservation laws using vector calculus. Eventually, we studied different variations of the Euler equations and its consequences. 
+</p>
+<p>
+<warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+</warning>
 </p>
 </introduction>
   

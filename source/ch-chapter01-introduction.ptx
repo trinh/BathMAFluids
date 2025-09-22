@@ -4,8 +4,7 @@
   <title>Introduction</title>
 
   <introduction>
-    <p>Brief introduction to appear here.</p>
-
+    <p>During the first week, we will first introduce the general topic (and feel!) of the fluid dynamics course; review some basic knowledge in vector calculus; review some basic knowledge of complex variables.</p>
   </introduction>
 
 
@@ -20,6 +19,13 @@
   
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
+
+    <p>
+      <figure xml:id="">
+        <video youtube="0z1fIsUNhO4"/>
+        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption>
+      </figure>
+    </p>
 
   <p>
     Brief listing of things we shall remind you of: interpretation of complex variables in the Argand plane, polar-coordinate representation, exponential and logarithm. 

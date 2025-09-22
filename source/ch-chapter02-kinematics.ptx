@@ -6,6 +6,17 @@
   <introduction>
 
     <p>
+     <figure xml:id="fig-euler-vid">
+        <image source="01_euler_trim.gif" width="70%"/> 
+        <caption>Eulerian description of flow from the <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" visual="NCFMF">NCFMF video</url>.</caption>
+      </figure>
+    </p>
+
+    <p>
+      Fluid <em>kinematics</em> refers to the study of fluid motions without considering the associated forces (or energies) that cause such a fluid to move. In a nutshell, it relates to studying e.g. the general velocity and acceleration fields of a fluid, visualising the fluid trajectories, and so forth. 
+    </p>
+
+    <p>
       There are some unintuitive challenges when it comes to defining even the most basic quantities
       in fluid dynamics. Consider the following two thought experiments. </p>
 
@@ -220,36 +231,61 @@
 
     <p>
       <definition xml:id="def-streamline">
-        <title>Particle streamlines, pathlines and streaklines</title>
+        <title>Particle streamlines</title>
         <statement>
           
-          <p>The <em>streamline</em> is given by solving the parametric equation <me>
-              \dd{\bx_1}{s} = \bu(\bx_1, t_0),
-            </me> where <m>s</m> is a parameter along the streamline, and <m>t_0</m> is the chosen
-            time. Choosing a variety of different initial points, <m>\bx_1(0)</m>, and solving
-            the above equation gives a family of streamlines at time <m>t_0</m>.
+          <p>Consider a fixed time, <m>t = t_1</m>.</p>
+
+          <p>Select an initial point, <m>\bx_1</m> at this time.</p>
+
+          <p>The <em>streamline</em>, <m>\bx = \bx(s)</m> through the above point is given by solving the parametric equation <me>
+              \dd{\bx}{s} = \bu(\bx(s), t_1), \quad \text{with $\bx(s = 0) = \bx_1$,}
+            </me> 
+            where <m>s</m> is a parameter along the streamline. Choosing a variety of different initial points, <m>\bx_1</m>, and solving
+            the above equation gives a family of streamlines at time <m>t_1</m>.
           </p>
+        </statement>
+        </definition>
+      </p>
 
-          <p> The <em>particle path</em> or <em>pathline</em> for a particle <m>\bx(t)</m> is given by
-            solving the equation <me>
-            \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(0) = \bx_2$},
+      <p>Basically, given a velocity field, we freeze time. The streamlines are those curves that are traced out by the velocity field in the "snapshot".</p>
+      
+      <p>
+          <definition xml:id="def-particle-path">
+        <title>Pathline or particle path</title>
+        <statement>
+          <p>Consider now a particle that begins at the location <m>\bx_2</m> at time <m>t = 0</m>.</p>
+
+          <p>We consider the <em>partial path</em> or <em>pathline</em> of the particle, given by the curve <m>\bx = \bx(t)</m> and found by solving the equation
+            <me>
+            \dd{\bx}{t} = \bu(\bx(t), t), \quad \text{with $\bx(0) = \bx_2$.}
             </me>
-            for a chosen initial value of <m>\bx_2</m>. Choosing a variety of points <m>\bx_2</m> yields
-            a family of pathlines.</p>
+            Choosing a variety of initial points, <m>\bx_2</m>, yields a family of pathlines.</p>
+        </statement>
+      </definition>
+    </p>
 
+    <p>The pathline or particle path from an initial point is what we would physically expect if we were to dye the point with a colour and follow the dye colour as time increases.</p>
+
+      <p>
+          <definition xml:id="def-streakline">
+        <title>Streakline</title>
+        <statement>
+          <p>Consider now fixing a location <m>\bx_3</m>.</p>
             <p>The <em>streakline</em> for a point <m>\bx_3</m> is given by solving the equation <me>
               \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(t_3) = \bx_3$},
             </me>
             for a variety of values of <m>t_3</m>. This gives the current position of all particles
             that have passed through the point <m>\bx_3</m> at any time <m>t_3</m> in the past. </p>
 
-          <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>,
-            then these three definitions coincide. </p>
         </statement>
       </definition>
     </p>
+          
+    <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>,
+            then the three above definitions coincide. </p>
 
-    <p>
+    <!-- <p>
       <remark>
         <p> Above, we have been somewhat diligent not to abuse notation and distinguish between
           independent and dependent variables. For example, <m>x</m> is the independent variable
@@ -265,14 +301,25 @@
           </me> is the position of the particle. The above abuse of
           notation uses both <m>x</m> as independent variable (left) and dependent variable (right). </p>
       </remark>
-    </p>
+    </p> -->
 
+
+    <subsection>
+      <title>Examples of streamlines, pathlines, and streaklines</title>
     <p>
       Let us practice these concepts.
     </p>
+      
+      
+
+    <p>
     <example>
-      <p> Consider a fluid described by the two-dimensional velocity field <m>\bu = (x, -y, 0)</m>.
-        Derive and plot the streamlines of the flow.</p>
+      <p> Consider a fluid described by the two-dimensional velocity field 
+        <me>
+          \bu(\bx, t) = (x, -y, 0).
+        </me>
+        Derive and plot the streamlines of the flow. Discuss what occurs with particle paths and streaklines.</p>
+
     <answer>
       <p> There are many online applications, such as <url
           href="https://www.desmos.com/calculator/yhubcn7dij"
@@ -283,43 +330,98 @@
         </image>
       </p>
 
-      <p> The particle paths or streamlines of the flow are found by solving the equations: <md>
-          <mrow>\dd{x}{t} \amp= x, </mrow>
-          <mrow>\dd{y}{t} \amp= -y, </mrow>
-          <mrow>\dd{z}{t} \amp= 0. </mrow>
-        </md> Solving thus gives <m>x = A \e^t, y =
-        B\e^{-t}, z = C,</m> for constants <m>A, B, C</m>. </p>
-      <p> You can put initial conditions to determine the constant and plot the trajectories in
-        time. However, in this case, it is easier to remove the time variable entirely. Notice that <me>
-        xy = AB = \textrm{constant}
-        </me> Therefore, the trajectories lie along the
-        above hyperbolae. </p>
+      <p>The streamlines follow from <xref ref="def-streamline"/>. We seek to solve the equations
+        <md>
+          <mrow>\dd{x}{s} \amp= x, </mrow>
+          <mrow>\dd{y}{s} \amp= -y, </mrow>
+          <mrow>\dd{z}{s} \amp= 0. </mrow>
+        </md> 
+      Solving thus gives <m>x = A \e^s, y = B\e^{-s}, z = C,</m> for constants <m>A, B, C</m>. </p>
+
+      <p> You can put initial conditions to determine the constant and plot the trajectories for different values of <m>s</m>.</p>
+      
+      <p>However, in this case, it is easier to remove the time-like variable, <m>s</m>, entirely. Notice that 
+        <me>
+        xy = AB = \textrm{constant}.
+        </me> 
+      Therefore, the trajectories lie along hyperbolae. </p>
 
       <p> Notice that in this case, the velocity field is time-independent, and therefore the
-        particle paths coincide with the streamlines. </p>
+        particle paths coincide with the streamlines and streaklines. </p>
+
+
+    <p>
+      For instance, the particle path through a particle at <m>\bx_2 = (1, 1, 0)</m> is given by (replacing <m>s</m> with <m>t</m>):
+      <me>
+        \bx(t) = (\e^t, \, \e^{-t}, \, 0).
+      </me>
+     Similarly, the <em>streakline</em> through the point <m>(1, 1, 0)</m> is precisely the set of points above.
+    </p>
     </answer>
     </example>
+  </p>
 
     <example>
-      <statement>
-        <p> Consider the unsteady flow given by <me>\bu = (\cos t, \sin t, 0)</me>. Plot the
-          streamlines of the flow on the plane <m>z = 0</m>, and also the particle trajectories. </p>
-        <!-- <answer>
-          <p>
-            I think the pathlines and streaklines coincide in this case, but not the streamlines.
-          </p>
-        </answer> -->
-      </statement>
+        <p> Consider the unsteady flow given by <me>\bu(\bx, t) = (\cos t, \sin t, 0)</me>. Plot the
+          streamlines of the flow on the plane <m>z = 0</m>, and also the particle trajectories. What occurs with the streaklines?</p>
+
+  
+   <answer>
+    <p>
+      In this case, the velocity field is changing in time. Consider firstly the concept of the streamline in <xref ref="def-streamline"/>.
+    </p>
+
+    <p>
+      We solve the governing equations for the streamlines <m>\bx = \bx(s)</m>, 
+      <me>
+        \dd{x}{s} = \cos t, \quad \dd{y}{s} = \sin t, \quad \dd{z}{s} = 0,
+      </me>
+      for fixed <m>t</m>. 
+    </p>
+
+    <p>
+      This gives 
+      <me>
+        x(s) = A + s \cos t, \quad y(s) = B + \sin t, \quad z(s) = C,
+      </me>
+    for constants <m>A, B, C</m>. Therefore the streamline are given by straight in the <m>(x, y)</m> plane, if <m>z = C</m> is fixed.
+    </p>
+
+    <p>
+      Consider instead the definition of particle paths via <xref ref="def-particle-path"/>. We seek to solve
+      <me>
+        \dd{x}{t} = \cos t, \quad \dd{y}{t} = \sin t, \quad \dd{z}{t} = 0,
+      </me>
+      yielding 
+      <me>
+       x(t) = A + \sin t, \quad y(t) = B - \cos t, \quad z(t) = C, 
+      </me>
+      for constants <m>A, B, C</m>. Therefore, we see that the particle paths are closed circles (in the <m>xy</m>-plane) of unit radius encircling the point <m>(A, B, 0)</m>.
+    </p>
+
+    <p>
+      In this case, considering the streakline via <xref ref="def-streakline"/>, we conclude that the streakline coincides with the particle path. Can you reason why this must be the case in this situation? What is necessary in order for this not to be true? 
+    </p>
+   </answer>
     </example>
+  </subsection>
   </section>
 
+
+  <!-- ============================================================
+       WORKSHEET 
+    ============================================================ -->
 
 <worksheet xml:id="ws-kinematics">
 <exercisegroup xml:id="kinematics-questions">
 <title>Kinematics</title>
 <introduction>
+  <p>The kinematics chapter covered the basic essentials about the measurement and computation of fluid velocities and acceleration. We examined the difference between Eulerian and Lagrangian coordinates and derivatives. Examples of streamlines and velocity fields were examined.</p>
+
 <p>
-Intro.
+  <warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+</warning>
 </p>
 </introduction>
 <exercise xml:id="particle-paths-streamlines">
@@ -358,7 +460,8 @@ Intro.
       <image source="ch-chapter02-lagrange-problem2.jpg" width="80%"/>
         <caption>Pathline, showing the particle positions at times <m>t</m> and <m>t+\de t</m>.</caption>
     </figure>
-    Figure <xref ref="lagrange-problem"/> shows the points <m>\bx(t)</m> and
+    
+    <xref ref="lagrange-problem"/> shows the points <m>\bx(t)</m> and
           <m>\bx(t+dt)=\bx(t)+\de\bx</m>, and the equation for pathlines gives
           <m>\de\bx=\bu(\bx,t)\de t</m>.
     We follow the value of <m>f</m> following a particle:
@@ -381,7 +484,9 @@ Intro.
    </p>
    <answer>
   <p>
-    Now suppose figure <xref ref="lagrange-problem"/> shows a streamline. In this case,
+    Now suppose that in <xref ref="lagrange-problem"/>, we have shown instead the situation of a streamline.</p>
+    
+    <p>In this case,
     the points <m>\bx(s)</m> and <m>\bx(s+ds)=\bx(s)+\de\bx</m> are shown, and the equation for streamlines gives
           <m>\de\bx=\bu(\bx,t)\de s</m>.
     We follow the value of <m>f</m> along the streamline:
@@ -390,8 +495,9 @@ Intro.
       <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)-f(\bx,t)\right)</mrow>
     <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\bnabla f(\bx,t)\right)</mrow>
     <mrow>\amp=\bu\cdot\bnabla f.</mrow>
-    </md>
-    Thus the value of <m>f</m> is preserved if <m>\bu\cdot\bnabla f=0</m>.
+    </md></p>
+   
+   <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\bnabla f=0</m>.
   </p>
   </answer>
   </li>
@@ -418,7 +524,7 @@ Intro.
               \pd{y}{x}=te^{-4x}\quad\Rightarrow\quad
               y=y_0-\frac{t}{4} e^{-4x},
             </me>
-            for any constant <m>y_0</m>. Different values of $y_0$ give different streamlines.
+            for any constant <m>y_0</m>. Different values of <m>y_0</m> give different streamlines.
             See <xref ref="flowvisualisationproblem"/> for a sketch.
           </p>
         </answer>
@@ -476,11 +582,13 @@ Intro.
         </p>
       </answer>
       </li>
-      <li>For a line/curve in the <m>(x,y)</m>, its timeline at time <m>t</m> is the
+      <li>
+        <p>For a line/curve in the <m>(x,y)</m>, its timeline at time <m>t</m> is the
         locus of the material elements at time <m>t</m> that started on the line/curve
         at <m>t=0</m>. In experiments this can be visualised using a streak of dye
-        placed initally along the line/curve. Tracking this over time gives the timelines.
-        Calculate and sketch the timelines of the line (i) <m>y=0</m>, (ii) <m>x=0</m>.
+        placed initally along the line/curve. Tracking this over time gives the timelines.</p>
+
+        <p>Calculate and sketch the timelines of the line (i) <m>y=0</m>, (ii) <m>x=0</m>.</p>
       <answer>
         <p>
           From the pathline equation, a particle starting from
