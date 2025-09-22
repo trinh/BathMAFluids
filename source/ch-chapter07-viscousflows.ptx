@@ -140,7 +140,13 @@
             suitable scale choice, consider steady flow down a pipe with a circular
             cross-section. An appropriate value of <m>L</m> is often the pipe radius
             or diameter, while an appropriate value of <m>U</m> could be the velocity
-            on the centreline of the pipe.
+            on the centreline of the pipe. However, note that we could alternatively
+            choose the average velocity across the pipe cross-section as our
+            characteristic velocity. This would lead to a different numerical value
+            of <m>Re</m>, but note that the order of magnitude of the quantities are unchanged.
+            Thus the value of <m>Re</m> is often quoted as an order-of-magnitude property,
+            unless we are given detailed information about exactly which length and
+            velocity scales are used.
         </p>
     
         <p>

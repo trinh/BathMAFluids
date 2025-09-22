@@ -14,8 +14,7 @@
     <p>
       Brief listing of things that we shall remind you of: vector operations, div, grad, curl, vector identities, divergence theorem, Stokes theorem, line integrals, different coordinate systems. 
     </p>
-    
-  </section>
+    </section>
   
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
@@ -32,5 +31,342 @@
   </p>
     
   </section>
+<worksheet xml:id="ws-intro">
+    <exercisegroup xml:id="vector-calculus">
+    <title>Vector Calculus</title>
+    <introduction>
+    <p>
+    <warning>
+      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+    </warning>
+    </p>
+    </introduction>
+  
+    <exercise xml:id="vector-identities">
+    <title>Vector identities</title>
+    <statement>
+    <p>
+    Prove the following vector identities:
+    <ol>
+      <li> <me>\bnabla \cdot \left(\phi\mathbf{A}\right) = \phi (\bnabla \cdot \mathbf{A}) + \mathbf{A} \cdot (\bnabla \phi),</me>
+        <answer>
+          <p>Using the Einstein summation convention,
+          <align>
+            <md><mrow>\nabla \cdot (\phi \mathbf{A}) \amp = \pd{}{x_i}\left(\phi A_i\right)</mrow>
+              <mrow>\amp = \left(\pd{\phi}{x_i}\right)A_i + \phi \pd{A_i}{x_i}</mrow>
+              <mrow>\amp = \left(\bnabla\phi\right)\cdot\mathbf{A} + \phi\bnabla\cdot\mathbf{A},</mrow></md>
+          </align>
+          where we have used the product rule in the second equality.
+        </p>
+        </answer>
+      </li>
+      <li> <me>\bnabla \times (\phi \mathbf{A}) = \phi \left(\bnabla \times \mathbf{A}\right) + \left(\bnabla \phi\right) \times \mathbf{A}</me>
+        <answer>
+          <p>We have,
+          <align>
+            <md><mrow>\nabla \times (\phi \mathbf{A}) \amp = \epsilon_{ijk}\pd{}{x_j}\left(\phi A_k\right)</mrow>
+              <mrow>\amp = \left(\epsilon_{ijk}\pd{A_k}{x_j}\right)\phi+\epsilon_{ijk}\left(\pd{\phi}{x_j}\right)A_k</mrow>
+              <mrow>\amp = \left(\bnabla\times\mathbf{A}\right)\phi+\left(\bnabla\phi\right)\times\mathbf{A}.</mrow></md>
+          </align>
+        </p>
+        </answer>
+      </li>
+      <li> <me>\bnabla \cdot \left(\mathbf{A} \times \mathbf{B}\right)
+        = \mathbf{B} \cdot \left(\bnabla \times \mathbf{A}\right) - \mathbf{A} \cdot \left(\bnabla \times \mathbf{B}\right)</me>
+        <answer>
+          <p>We have,
+          <align>
+            <md><mrow>\bnabla \cdot \left(\mathbf{A} \times \mathbf{B}\right)
+              \amp = \pd{}{x_i}\left(\epsilon_{ijk}A_jB_k\right)</mrow>
+              <mrow>\amp = \epsilon_{ijk}\pd{A_j}{x_i}B_k+\epsilon_{ijk}A_j\pd{B_k}{x_i}</mrow>
+              <mrow>\amp = B_k\epsilon_{kij}\pd{A_j}{x_i}+A_j\epsilon_{jki}\pd{B_k}{x_i}</mrow>
+              <mrow>\amp = B_i\epsilon_{ijk}\pd{A_k}{x_j}+A_i\epsilon_{ikj}\pd{B_k}{x_j}</mrow>
+              <mrow>\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-A_i\epsilon_{ijk}\pd{B_k}{x_j}</mrow>
+              <mrow>\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-\mathbf{A}\cdot\left(\bnabla\times\mathbf{B}\right).</mrow>
+            </md>
+          </align>
+        </p>
+        </answer>
+      </li>
+      <li>The following identity will be useful for proving the vorticity equation in <xref ref="ch-chapter03-equations"/> of this course:
+        <me>\bnabla\times\left(\bu\cdot\bnabla\bu\right)
+          =\bu\cdot\bnabla\left(\bnabla\times\bu\right)
+          +\left(\bnabla\cdot\bu\right)\left(\bnabla\times\bu\right)
+          -\left(\left(\bnabla\times\bu\right)\cdot\bnabla\right)\bu</me>
+        <answer>
+          <p>The <m>i</m>th component of the left-hand side equals
+            <md><mrow>\amp\epsilon_{ijk}\pd{}{x_j}\left(u_l\pd{v_k}{x_l}\right)</mrow>
+              <mrow>=\amp\epsilon_{ijk}\pd{u_l}{x_j}\pd{v_k}{x_l}+\epsilon_{ijk}u_l\pd{^2v_k}{x_jx_l}.</mrow>
+            </md>
+            The second term of this expression equals the <m>i</m>th component of
+            <me>\bu\cdot\bnabla\left(\bnabla\times\bu\right).</me>
+          </p>
+          <p>
+            It therefore remains to prove that the first term
+            <me>
+              \epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
+            </me>
+            equals the <m>i</m>th component of
+            <m>(\bnabla\cdot\bu)(\bnabla\times\bu)-((\bnabla\times\bu)\cdot\bnabla)\bu</m>.
+            We note that if we can prove this for the first component then
+            the proof for the second component follows
+            by replacing index 1 by index 2, index 2 by index 3 and index 3 by index 1,
+            and the proof of the third component
+            by replacing index 1 by index 3, index 2 by index 1 and index 3 by index 2.
+          </p>
+          <p>
+            The first component of
+            <m>(\bnabla\cdot\bu)(\bnabla\times\bu)-((\bnabla\times\bu)\cdot\bnabla)\bu</m>
+            equals
+            <md>
+              <mrow>\amp\pd{u_l}{x_l}\epsilon_{1jk}\pd{u_k}{x_j}-\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_1}{x_l}</mrow>
+              <mrow>=\amp\left(\pd{u_1}{x_1}+\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)</mrow>
+                <mrow>\amp
+                -\pd{u_3}{x_2}\pd{u_1}{x_1}+\pd{u_2}{x_3}\pd{u_1}{x_1}
+                -\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+                -\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}</mrow>
+              <mrow>=\amp\left(\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)</mrow>
+                <mrow>\amp
+                -\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+                -\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}</mrow>
+              <mrow>=\amp\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_3}\pd{u_3}{x_2}
+                -\pd{u_2}{x_2}\pd{u_2}{x_3}-\pd{u_3}{x_3}\pd{u_2}{x_3}</mrow>
+                <mrow>\amp-\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
+                -\pd{u_2}{x_1}\pd{u_1}{x_3}+\pd{u_1}{x_2}\pd{u_1}{x_3}</mrow>
+              <mrow>=\amp\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_3}\pd{u_3}{x_2}
+                -\pd{u_2}{x_2}\pd{u_2}{x_3}-\pd{u_3}{x_3}\pd{u_2}{x_3}</mrow>
+                <mrow>\amp+\pd{u_3}{x_1}\pd{u_1}{x_2}
+                -\pd{u_2}{x_1}\pd{u_1}{x_3}</mrow>
+            </md>
+            The <m>i=1</m> component of
+            <me>
+              \epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
+            </me>
+            equals
+            <me>\pd{u_1}{x_2}\pd{u_3}{x_1}+\pd{u_2}{x_2}\pd{u_3}{x_2}+\pd{u_3}{x_2}\pd{u_3}{x_3}
+              -\pd{u_1}{x_3}\pd{u_2}{x_1}-\pd{u_2}{x_3}\pd{u_2}{x_2}-\pd{u_3}{x_3}\pd{u_2}{x_3}.</me>
+            Inspecting these expressions, we find they are equal. QED.
+          </p>
+        </answer>
+      </li>
+    </ol>
+    </p>
+    </statement>
+    </exercise>
 
+    <exercise xml:id="divergence-theorem">
+    <title>Divergence theorem</title>
+    <statement>
+    <p>
+      State the divergence theorem. Use it to show that, for a vector-valued function <m>\mathbf{B}(\mathbf{x})</m>,
+      <me>\int_V \bnabla \times \mathbf{B} \, dV = \int_{\partial V} \hat{\mathbf{n}} \times \mathbf{B} \, dS,</me>
+      where <m>\hat{\mathbf{n}}</m> is the outward-pointing unit normal to the surface <m>\partial V</m>.
+    </p>
+    <answer>
+    <p>
+      The divergence theorem states that, for a vector field <m>\mathbf{A}(\mathbf{x})</m>,
+      <me>\int_V \bnabla \cdot \mathbf{A} \, dV = \int_{\partial V} \hat{\mathbf{n}} \cdot \mathbf{A} \, dS.</me>
+    </p>
+    <p>
+      To prove the required result, we use the Levi--Civita symbol <m>\epsilon_{ijk}</m>
+      to write the <m>i</m>th component of the left-hand side as
+      <md><mrow>\int_V (\bnabla \times \mathbf{B})_i \, dV \amp = \int_V \epsilon_{ijk}\pd{B_k}{x_j} \, dV</mrow>
+        <mrow>\amp = \epsilon_{ijk}\int_V \pd{B_k}{x_j} \, dV</mrow>
+      </md>
+      Setting <m>\mathbf{A}=B_k\mathbf{e}_j</m>:
+      <me>
+        \bnabla\cdot\mathbf{A}=\pd{B_k}{x_j},\quad
+        \hat{\mathbf{n}}\cdot\mathbf{A}=\hat{n}_jB_k.
+      </me>
+      and the divergence theorem implies
+      <me>\int_V \pd{B_k}{x_j} \, dV = \int_{\partial V} \hat{n}_j B_k \, dS.</me>
+      Hence,
+      <md><mrow>\int_V (\bnabla \times \mathbf{B})_i \, dV
+        \amp = \epsilon_{ijk}\int_{\partial V} \hat{n}_j B_k \, dS</mrow>
+        <mrow>\amp= \int_{\partial V} (\hat{\mathbf{n}} \times \mathbf{B})_i \, dS.</mrow>
+      </md>
+      QED.
+    </p>
+    </answer>
+    </statement>
+    </exercise>
+
+    <exercise xml:id="stokes-theorem">
+    <title>Stokes' theorem</title>
+    <statement>
+    <p>
+      State Stokes' theorem. Use it to evaluate the line integral <m>\oint z\,dx+x\,dy+y\,dz</m>
+      around the triangle with vertices <m>(3,0,0)</m>, <m>(0,0,2)</m> and <m>(0,6,0)</m>.
+    </p>
+    <answer>
+    <p>
+      Stokes' theorem states that, for a vector field <m>\mathbf{A}(\mathbf{x})</m>
+      defined on a surface <m>S</m>,
+      <me>\int_S \left(\bnabla \times \mathbf{A}\right) \cdot \hat{\mathbf{n}} \, dS
+        = \oint_{\partial S} \mathbf{A} \cdot d\mathbf{x}.</me>
+      where <m>\hat{\mathbf{n}}</m> is the unit normal to the surface <m>S</m>
+      and <m>\partial S</m> is the boundary curve of <m>S</m>.
+    </p>
+    <p>
+      Setting <m>\mathbf{A}=(z,x,y)</m>, and noting that <m>\bnabla \times \mathbf{A} = (1,1,1)</m>,
+      we have that, for any surface <m>S</m> spanning the given triangle,
+      <me>\int_S (1,1,1)\cdot\hat{\mathbf{n}} \, dS
+        =\oint_{\partial S} (z,x,y)\cdot d\mathbf{x}
+        =\oint_{\partial S} z\,dx+x\,dy+y\,dz.</me>
+      Hence, the required line integral equals the flux of the vector <m>(1,1,1)</m>
+      through the surface <m>S</m>. We choose <m>S</m> to be the triangle itself.
+    </p>
+    <p>
+      The two edges of the triangle that start from the vertex
+      <m>(3,0,0)</m> are given by the vectors
+      <m>\mathbf{a}=(-3,0,2)</m> and <m>\mathbf{b}=(-3,6,0)</m>. The cross product of these two vectors is
+      <me>(-3,0,2)\times(-3,6,0)=(-12,-6,-18).</me>
+      This vector is orthogonal to <m>S</m> and its magnitude equals the area of the
+      parallelogram with these vectors as two of its edges.
+      The triangle has area half that of the parallelogram
+      <m>\frac12\sqrt{(-12)^2+(-6)^2+(-18)^2}=3\sqrt{2^2+1^2+3^2}=3\sqrt{14}</m>,
+      and its unit normal is <m>\hat{\mathbf{n}}=(-2,-1,-3)/\sqrt{14}</m>
+      (note that we can check the direction of the normal using the right-hand rule).
+      Hence
+      <me>\oint_{\partial S} z\,dx+x\,dy+y\,dz
+        =\int_S (1,1,1)\cdot\hat{\mathbf{n}} \, dS
+        =3\sqrt{14}(1,1,1)\cdot\frac{(-2,-1,-3)}{\sqrt{14}}
+        =-18.</me>
+    </p>
+    </answer>
+    </statement>
+    </exercise>
+
+    <exercise xml:id="coordinate-systems">
+    <title>Coordinate systems</title>
+    <statement>
+    <p>
+      <ol>
+        <li>
+        A vector field is given in Cartesian coordinates by <m>\mathbf{A}=(x,y,0)</m>.
+        Convert to cylindrical and spherical polar coordinates. What do you notice?
+        <answer>
+          <p>
+            For cylindrical polars, we have <m>x=r\cos\theta</m>, <m>y=r\sin\theta</m> and <m>z=z</m>.
+            We may also write
+            <me>\hat{\mathbf{r}}=\cos\theta\,\hat{\mathbf{x}}+\sin\theta\,\hat{\mathbf{y}}.</me>
+            Hence,
+            <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp = r\cos\theta\,\hat{\mathbf{x}}+r\sin\theta\,\hat{\mathbf{y}}</mrow>
+              <mrow>\amp=r\hat{\mathbf{r}}.</mrow>
+            </md>
+          </p>
+          <p>
+          For spherical polars, we have <m>x=r\sin\theta\cos\phi</m>, <m>y=r\sin\theta\sin\phi</m>
+          and <m>z=r\cos\theta</m>.
+          We may also write
+          <me>\hat{\mathbf{r}}=\sin\theta\cos\phi\,\hat{\mathbf{x}}+\sin\theta\sin\phi\,\hat{\mathbf{y}}+\cos\theta\,\hat{\mathbf{z}}</me>
+          and
+          <me>\hat{\boldsymbol{\theta}}=\cos\theta\cos\phi\,\hat{\mathbf{x}}+\cos\theta\sin\phi\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{z}}.</me>
+          Hence,
+          <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}</mrow>
+            <mrow>\amp = r\sin\theta\cos\phi\,\hat{\mathbf{x}} + r\sin\theta\sin\phi\,\hat{\mathbf{y}}</mrow>
+            <mrow>\amp = r\sin\theta\left(\cos\phi\,\hat{\mathbf{x}}+\sin\phi\,\hat{\mathbf{y}}\right).</mrow>
+          </md>
+          We note that
+          <me>\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}
+            =\cos\phi\,\hat{\mathbf{x}}+\sin\phi\,\hat{\mathbf{y}}</me>
+          and hence
+          <md><mrow>\mathbf{A} \amp = r\sin\theta\left(\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}\right).</mrow></md>
+          We note that in both cylindrical and spherical polars, the vector field has no component in the azimuthal direction.
+          This is because the original vector field is axisymmetric about the <m>z</m>-axis. Furthermore, in cylindrical polars,
+          the vector field is purely radial, whereas in spherical polars it has both radial and polar components.
+          </p>
+        </answer>
+        </li>
+        <li>
+        A vector field is given in Cartesian coordinates by <m>\mathbf{A}=(y,-x,0)</m>.
+        Convert to cylindrical and spherical polar coordinates. What do you notice?
+        <answer>
+          <p>
+            For cylindricals, we have
+            <me>\hat{\mathbf{\theta}}=\cos\theta\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{x}}.</me>
+            Hence,
+            <md><mrow>\mathbf{A} \amp = y\,\hat{\mathbf{x}} - x\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp = r\sin\theta\,\hat{\mathbf{x}}-r\cos\theta\,\hat{\mathbf{y}}</mrow>
+              <mrow>\amp=-r\hat{\mathbf{\theta}}.</mrow>
+            </md>
+          </p>
+          <p>
+          For sphericals,
+          <md><mrow>\mathbf{A} \amp = y\,\hat{\mathbf{x}} -x\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}</mrow>
+            <mrow>\amp = r\sin\theta\sin\phi\,\hat{\mathbf{x}} - r\sin\theta\cos\phi\,\hat{\mathbf{y}}</mrow>
+            <mrow>\amp = r\sin\theta\left(\sin\phi\,\hat{\mathbf{x}}-\cos\phi\,\hat{\mathbf{y}}\right).</mrow>
+          </md>
+          We note that
+          <me>\hat{mathbf{\phi}}=-\sin\phi\,\hat{\mathbf{x}}+\cos\phi\,\hat{\mathbf{y}},</me>
+          and hence
+          <me>\mathbf{A}=-r\sin\theta\hat{mathbf{\phi}}.</me>
+          We note that in both cylindrical and spherical polars, the vector field is purely azimuthal.
+          </p>
+        </answer>
+        </li>
+        <li>
+        A vector field is given in Cartesian coordinates by <m>\mathbf{A}=(x,y,z)</m>.
+        Convert to cylindrical and spherical polar coordinates. What do you notice?
+        <answer>
+          <p>
+            For cylindrical polar coordinates, and using the answer to the first part of this question,
+            we may immediately write
+            <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp=r\hat{\mathbf{r}}+z\hat{\mathbf{z}}.</mrow>
+            </md>
+            For spherical polar coordinates, and using the answer to the first part of this question,
+            <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp=r\sin\theta\cos\phi\hat{\mathbf{x}}+r\sin\theta\sin\phi\hat{\mathbf{y}}+r\cos\theta\hat{\mathbf{z}}</mrow>
+              <mrow>\amp=r\hat{\mathbf{r}}.</mrow>
+            </md>
+            The velocity field is purely radial in spherical polars,
+            but has both radial and axial components in cylindrical polars.
+          </p>
+        </answer>
+        </li>
+        <li>
+          <p>A vector field is given in Cartesian coordinates by <m>\mathbf{A}=(y,2x,z)</m>.
+          Write down the components of this vector field in cylindrical polars and in spherical polars.</p>
+          <answer>
+          <p>
+            In cylindrical polars, the unit vectors are related by
+            <me>\hat{\mathbf{x}}=\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\mathbf{\theta}},\quad
+              \hat{\boldsymbol{y}}=\sin\theta\,\hat{\mathbf{r}}+\cos\theta\,\hat{\mathbf{\theta}},\quad
+              \hat{\mathbf{z}}=\hat{\mathbf{z}}.</me>
+            Hence,
+            <md><mrow>\mathbf{A} \amp = y\,\hat{\mathbf{x}} + 2x\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp = r\sin\theta(\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\boldsymbol{\theta}})
+                + 2r\cos\theta(\sin\theta\,\hat{\mathbf{r}}+\cos\theta\,\hat{\boldsymbol{\theta}})
+                + z\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp = r\sin(3\theta)\,\hat{\mathbf{r}} + r\cos(3\theta)\,\hat{\boldsymbol{\theta}}
+                + z\,\hat{\mathbf{z}}.</mrow>
+            </md>
+          </p>
+          <p>
+            In spherical polars, the unit vectors are related by
+            <me>\hat{\mathbf{x}}=\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\mathbf{\theta}}-\sin\phi\,\hat{\mathbf{\phi}},</me>
+            <me>\hat{\mathbf{y}}=\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\mathbf{\theta}}+\cos\phi\,\hat{\mathbf{\phi}},</me>
+            <me>\hat{\mathbf{z}}=\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\mathbf{\theta}}.</me>
+            Hence,
+            <md><mrow>\mathbf{A} \amp = y\,\hat{\mathbf{x}} + 2x\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
+              <mrow>\amp = r\sin\theta\sin\phi(\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\boldsymbol{\theta}}
+                - \sin\phi\,\hat{\boldsymbol{\phi}})
+                + 2r\sin\theta\cos\phi(\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\boldsymbol{\theta}}
+                + \cos\phi\,\hat{\boldsymbol{\phi}})
+                + r\cos\theta(\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\boldsymbol{\theta}})</mrow>
+              <mrow>\amp = r\left(3\sin^2\theta\sin\phi\cos\phi+\cos^2\theta\right)\,\hat{\mathbf{r}}
+                + r\sin\theta\cos\theta\left(3\sin\phi\cos\phi-1\right)\,\hat{\boldsymbol{\theta}}
+                + r\sin\theta\left(2\cos^2\phi-\sin^2\phi\right)\,\hat{\boldsymbol{\phi}}.</mrow>
+            </md>
+          </p>
+          </answer>
+        </li>
+      </ol>
+    </p>
+    </statement>
+    </exercise>
+  </exercisegroup>
+  </worksheet>
  </chapter>
