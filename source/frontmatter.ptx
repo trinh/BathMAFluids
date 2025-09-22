@@ -24,7 +24,7 @@
     </paragraphs -->
 
     <website>
-      <url href="https://trinh.github.io/MA30351_Fluids/">Course website</url>
+      <url href="https://trinh.github.io/BathMAFluids/">Course website</url>
     </website>
 
 <!--       <image source="rayleigh-turbulence.jpg">
@@ -46,10 +46,13 @@
 
 
   <preface><title>Official description</title>
-   
-    <image source="rayleigh_tubulence.jpg" width="80%">
-      <shortdescription>Rayleigh's experiment on turbulence</shortdescription>
-    </image>
+  
+    <figure xml:id="fig-rayleigh">
+      <caption>Rayleigh's 1883 experiment on turbulence, as duplicated in World of Flosws (Darrigol, 2005).</caption>
+      <image source="rayleigh_tubulence.jpg" width="80%">
+        <shortdescription>Turbulence</shortdescription>
+      </image>
+    </figure>
     
     <p>
 The description of this unit in the <url
