@@ -40,6 +40,7 @@
 \newcommand{\bu}{\boldsymbol{u}}
 \newcommand{\bv}{\boldsymbol{v}}
 \newcommand{\ba}{\boldsymbol{a}}
+\newcommand{\bf}{\boldsymbol{f}}
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
