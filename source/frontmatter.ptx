@@ -46,13 +46,15 @@
 
 
   <preface><title>Official description</title>
-  
+ 
+    <p>
     <figure xml:id="fig-rayleigh">
       <caption>Rayleigh's 1883 experiment on turbulence, as duplicated in World of Flosws (Darrigol, 2005).</caption>
       <image source="rayleigh_tubulence.jpg" width="80%">
         <shortdescription>Turbulence</shortdescription>
       </image>
     </figure>
+  </p>
     
     <p>
 The description of this unit in the <url
@@ -225,7 +227,7 @@ In this unit:
 
 </preface>
 
-<preface><title>Moodle and references</title>
+<preface><title>Moodle and other references</title>
 <!--
 <assemblage><title>Recordings on Re:View</title><p>
   <ul><li>
@@ -237,18 +239,63 @@ In this unit:
 -->
 <p>
   Besides this document, the main resource for this unit is the <url
-  href="https://moodle.bath.ac.uk/course/view.php?id=29841" visual="">Moodle
-  page</url>. There is also a <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%22e51d63f8-3774-4570-a3cb-b1df015bd8b9%22" visual="">
-  folder on Re:View for the recordings</url>. In Week 1 we walked through this
-  Moodle page and talked about various other administrative things;
-  unfortunately the recording was lost due to a Moodle/Panopto error.
+  href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="">Moodle
+  page</url>. Links to the video recordings, course notes, and other resources are collected there.
 </p>
 
   <p>
-    There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a <em>first course</em> on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones. 
+    There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a <em>first course</em> on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.</p>
+
+    <p>
+      However, note that our goal is to be as self-sufficient as possible via the lecture notes.</p>
+
+      <p>
+    <ul>
+      <li>
+        <p>
+          David Acheson's (1990) book <em>Elementary fluid dynamics</em> <xref ref="ref-acheson"/>: a significant part of this course follows some of the now-classic treatments that would have been developed simultaneous to the design of this book by Acheson (often used by Oxford UG students). It is written in quite an informal style.</p>
+
+          <p>
+<image source="intro_book_acheson.png" width="30%">
+        <shortdescription>Book cover</shortdescription>
+      </image>
+        </p>
+      </li>
+      <li>
+        <p>
+          Milton Van Dyke's (1982) book "An album of fluid motion" <xref ref="ref-album"/>: a classic album showing beautiful black and white images of fluid motion. Published by an iconic private press and sold (by design by Van Dyke) at affordable prices!</p>
+
+<p>
+      <image source="intro_book_vandyke.png" width="30%">
+        <shortdescription>Book cover</shortdescription>
+      </image>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Kreyszig, E. (2007) book "Advanced engineering mathematics" <xref ref="ref-kreyszig"/> covers all the necessary essentials in terms of Vector Calculus and Complex Variables. This is one of my favourite reference texts for mathematical methods just on account of how straightfoward it is. Despite the "engineering" in the title, the style of presentation here fits in well with the style of UK applied mathematics.</p>
+
+          <p>
+          <image source="intro_book_eng.png" width="30%">
+            <shortdescription>Book cover</shortdescription>
+          </image>
+        </p>
+      </li>
+    </ul>
   </p>
   
 </preface>
+
+<preface>
+  <title>Changelog</title>
+
+  <p>
+    When possible (likely weekly), we will update the changelog to indicate relevant updates to the course notes.
+  </p>
+  
+  
+  </preface>
 
 
   <!-- <colophon xml:id="front-colophon">

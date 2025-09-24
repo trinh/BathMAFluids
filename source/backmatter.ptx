@@ -15,7 +15,7 @@
   <appendix>
     <title>Vector calculus</title>
     <p>
-      Vector identities go here.
+      We write scalar functions as, e.g. <m>\phi(</m>
     </p>
 
     <section xml:id="sec-vector-calculus-planepolar">
@@ -35,9 +35,14 @@
   <references xml:id="refs-references">
     <title>References and further reading</title>
    
-    <biblio xml:id="ref-kreyszig"><p>Kreyszig, E. (2007). Advanced engineering mathematics 9th edition with Wiley plus set (Vol. 334). US: John Wiley and Sons.</p></biblio>
+    <biblio xml:id="ref-kreyszig"><p>Kreyszig, E. (2007). Advanced engineering mathematics 9th edition. Wiley. US: John Wiley and Sons.</p></biblio>
     
-    <biblio xml:id="ref-fornberg"><p>Fornberg</p></biblio>
+    <biblio xml:id="ref-album"><p>Van Dyke, M. (1982). An Album of Fluid Motion. Parabolic Press.</p></biblio>
+    
+    <biblio xml:id="ref-acheson"><p>Acheson, D. J. (1990). Elementary fluid dynamics. Oxford University Press.</p></biblio>
+    
+    <biblio xml:id="ref-fornberg"><p>Fornberg, B. and Piret, C. (2019). Complex Variables and Analytic Functions. Society for Industrial and Applied Mathematics.</p></biblio>
+    
     
     
   </references>

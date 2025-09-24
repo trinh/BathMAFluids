@@ -110,7 +110,7 @@ Fluid Mechanics
  </p>
 
   <figure>
-  <caption>Water ejected from a nozzle forms a vortex sheet that rolls up into two vortex rings. From Van Dyke, An Album of Fluid Motion.</caption>
+  <caption>Water ejected from a nozzle forms a vortex sheet that rolls up into two vortex rings. From Van Dyke (1982) "An Album of Fluid Motion" <xref ref="ref-album"/>.</caption>
   <image source="vortexring.png" width="70%">
     <shortdescription>Vortex ring</shortdescription>
   </image>
@@ -142,26 +142,83 @@ Fluid Mechanics
     <title>A reminder of vector calculus</title>
 
     <p>
-      Brief listing of things that we shall remind you of: vector operations, div, grad, curl, vector identities, divergence theorem, Stokes theorem, line integrals, different coordinate systems. 
+      During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference <url href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="notes">on Moodle</url>.
     </p>
+
+    <p>
+      We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or <url href="https://people.bath.ac.uk/ensdasr/ME10304.bho/UniBathFormulaeAndStatisticalTables.pdf" visual="tables">via this link</url>.
+    </p>
+
     </section>
   
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
 
     <p>
-      <figure xml:id="">
+      <figure>
         <video youtube="0z1fIsUNhO4"/>
         <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption>
       </figure>
     </p>
 
   <p>
-    Brief listing of things we shall remind you of: interpretation of complex variables in the Argand plane, polar-coordinate representation, exponential and logarithm. 
+    In <xref ref="ch-chapter04-potentialflows"/>, we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>.
+  </p>
+
+  <subsection>
+    <title>Basic complex representations</title>
+    
+    
+    <p>
+      Generally, we write the Cartesian and polar form of a complex number as,
+      <me>
+        z = x + \im y = r\e^{\im\theta},
+      </me>
+      for magnitude <m>r > 0</m> and angle <m>\theta</m>. Below, we will consistently refer to <m>z\in\mathbb{C}</m>. The decomposition of the complex exponential is given by Euler's identity: 
+      <men xml:id="eq-complex-euler">
+      \e^{\im\theta} = \cos \theta + \im \sin\theta.
+      </men>
+  </p>
+
+  <p>
+    The usual trigonometric functions can be extended to the complex plane by considering their definition in terms of complex exponentials and Euler's identity. For example, we have
+    <men xml:id="eq-complex-cossin">
+      \cos z = \frac{\e^{\im z} + \e^{-\im z}}{2} \quad \text{and} \quad \sin z = \frac{\e^{\im z} - \e^{-\im z}}{2\im}.
+    </men>
+  </p>
+
+  <p>
+    Another important function we shall consider is the complex logarithm, defined as 
+    <men xml:id="eqn-complex-log">
+     \log z \equiv \log r + \im \theta,
+    </men>
+    where <m>z = r\e^{\im\theta}</m>. That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is, 
+    <me>
+      \e^{\log z} = \e^{\log r + \im\theta} = \e^{\log r} \e^{\im\theta} = z.
+    </me>
+  </p>
+
+  <p>
+    However, the definition <xref ref="eqn-complex-log"/> is troubling because it is not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z = 1</m>. We dig deeper into this issue.
+  </p>
+</subsection>
+
+<subsection>
+ <title>Complex functions</title>
+</subsection>
+
+  <p>
+    A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, 
+    <me>
+      f(z) = z^2 = r^2 \e^{2\im \theta},
+    </me>
+   can be better understood by its effect on points on the unit circle, <m>|z| = 1</m>.
   </p>
     
   </section>
-<worksheet xml:id="ws-intro">
+
+
+  <!-- <worksheet xml:id="ws-intro">
     <exercisegroup xml:id="vector-calculus">
     <title>Vector Calculus</title>
     <introduction>
@@ -298,7 +355,7 @@ Fluid Mechanics
       <me>\int_V \bnabla \cdot \mathbf{A} \, dV = \int_{\partial V} \hat{\mathbf{n}} \cdot \mathbf{A} \, dS.</me>
     </p>
     <p>
-      To prove the required result, we use the Levi--Civita symbol <m>\epsilon_{ijk}</m>
+      To prove the required result, we use the Levi-Civita symbol <m>\epsilon_{ijk}</m>
       to write the <m>i</m>th component of the left-hand side as
       <md><mrow>\int_V (\bnabla \times \mathbf{B})_i \, dV \amp = \int_V \epsilon_{ijk}\pd{B_k}{x_j} \, dV</mrow>
         <mrow>\amp = \epsilon_{ijk}\int_V \pd{B_k}{x_j} \, dV</mrow>
@@ -498,5 +555,5 @@ Fluid Mechanics
     </statement>
     </exercise>
   </exercisegroup>
-  </worksheet>
+  </worksheet> -->
  </chapter>
