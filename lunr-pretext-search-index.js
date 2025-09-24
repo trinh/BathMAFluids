@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "Official description",
-  "body": "Official description   Rayleigh's 1883 experiment on turbulence, as duplicated in World of Flosws (Darrigol, 2005).   Turbulence    The description of this unit in the official catalogue is the following: Aims In this unit you will explore the mathematical theory of fluid dynamics, with a view towards applications to physical phenomena such as flight, vortex motion and water waves. You will study the mathematics of conservation laws and the derivation of governing fluid dynamical equations. This unit will provide you with a foundation for further study of more advanced theory of fluid dynamics and continuum mechanics, and its application in scientific areas including engineering, physics and biology. Outcomes (i) Demonstrate an understanding of the principles of mathematical fluid dynamics; (ii) discuss and apply techniques from vector calculus and complex variable theory to analyse and solve fluid flow problems; (iii) give a qualitative and quantitative account of a range of phenomena in fluid dynamics. Content Complex analysis primer: Cauchy-Riemann equations; harmonic functions; complex maps; residue integration. The mathematics of fluid phenomena and its applications: derivation and interpretation of governing equations; reduction of governing equations to equations of simpler formulation; potential flow; vortical flow. Two-dimensional incompressible and irrotational flow: velocity potential; stream function; complex potential. Conformal mapping. Vortex motion: vortex lines and tubes; Kelvin circulation theorem; Helmholtz' principal. Water waves: free surfaces; harmonic waves; finite depth; instability; group velocity. Computational fluid dynamics.  "
+  "body": "Official description    Rayleigh's 1883 experiment on turbulence, as duplicated in World of Flosws (Darrigol, 2005).   Turbulence     The description of this unit in the official catalogue is the following: Aims In this unit you will explore the mathematical theory of fluid dynamics, with a view towards applications to physical phenomena such as flight, vortex motion and water waves. You will study the mathematics of conservation laws and the derivation of governing fluid dynamical equations. This unit will provide you with a foundation for further study of more advanced theory of fluid dynamics and continuum mechanics, and its application in scientific areas including engineering, physics and biology. Outcomes (i) Demonstrate an understanding of the principles of mathematical fluid dynamics; (ii) discuss and apply techniques from vector calculus and complex variable theory to analyse and solve fluid flow problems; (iii) give a qualitative and quantitative account of a range of phenomena in fluid dynamics. Content Complex analysis primer: Cauchy-Riemann equations; harmonic functions; complex maps; residue integration. The mathematics of fluid phenomena and its applications: derivation and interpretation of governing equations; reduction of governing equations to equations of simpler formulation; potential flow; vortical flow. Two-dimensional incompressible and irrotational flow: velocity potential; stream function; complex potential. Conformal mapping. Vortex motion: vortex lines and tubes; Kelvin circulation theorem; Helmholtz' principal. Water waves: free surfaces; harmonic waves; finite depth; instability; group velocity. Computational fluid dynamics.  "
 },
 {
   "id": "fig-rayleigh",
@@ -42,8 +42,17 @@ var ptx_lunr_docs = [
   "url": "frontmatter-6.html",
   "type": "Preface",
   "number": "",
-  "title": "Moodle and references",
-  "body": "Moodle and references   Besides this document, the main resource for this unit is the Moodle page . There is also a folder on Re:View for the recordings . In Week 1 we walked through this Moodle page and talked about various other administrative things; unfortunately the recording was lost due to a Moodle\/Panopto error.  There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a first course on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.  "
+  "title": "Moodle and other references",
+  "body": "Moodle and other references   Besides this document, the main resource for this unit is the Moodle page . Links to the video recordings, course notes, and other resources are collected there.  There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a first course on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.  However, note that our goal is to be as self-sufficient as possible via the lecture notes.     David Acheson's (1990) book Elementary fluid dynamics  : a significant part of this course follows some of the now-classic treatments that would have been developed simultaneous to the design of this book by Acheson (often used by Oxford UG students). It is written in quite an informal style.    Book cover      Milton Van Dyke's (1982) book \"An album of fluid motion\" : a classic album showing beautiful black and white images of fluid motion. Published by an iconic private press and sold (by design by Van Dyke) at affordable prices!    Book cover      Kreyszig, E. (2007) book \"Advanced engineering mathematics\" covers all the necessary essentials in terms of Vector Calculus and Complex Variables. This is one of my favourite reference texts for mathematical methods just on account of how straightfoward it is. Despite the \"engineering\" in the title, the style of presentation here fits in well with the style of UK applied mathematics.    Book cover       "
+},
+{
+  "id": "frontmatter-7",
+  "level": "1",
+  "url": "frontmatter-7.html",
+  "type": "Preface",
+  "number": "",
+  "title": "Changelog",
+  "body": " Changelog  When possible (likely weekly), we will update the changelog to indicate relevant updates to the course notes.  "
 },
 {
   "id": "sec-preliminary-vector-calculus",
@@ -52,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "A reminder of vector calculus",
-  "body": " A reminder of vector calculus  Brief listing of things that we shall remind you of: vector operations, div, grad, curl, vector identities, divergence theorem, Stokes theorem, line integrals, different coordinate systems.  "
+  "body": " A reminder of vector calculus  During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference on Moodle .  We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or via this link .  "
 },
 {
   "id": "sec-preliminary-complex-variables",
@@ -61,70 +70,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "A reminder of complex variables",
-  "body": " A reminder of complex variables     A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.    Brief listing of things we shall remind you of: interpretation of complex variables in the Argand plane, polar-coordinate representation, exponential and logarithm.  "
+  "body": " A reminder of complex variables     A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.    In , we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a branch cut .   Basic complex representations  Generally, we write the Cartesian and polar form of a complex number as, for magnitude and angle . Below, we will consistently refer to . The decomposition of the complex exponential is given by Euler's identity:   The usual trigonometric functions can be extended to the complex plane by considering their definition in terms of complex exponentials and Euler's identity. For example, we have   Another important function we shall consider is the complex logarithm, defined as where . That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is,   However, the definition is troubling because it is not single-valued. For example, writing and gives two different possible values of for the same value of . We dig deeper into this issue.    Complex functions   A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, can be better understood by its effect on points on the unit circle, .  "
 },
 {
-  "id": "",
+  "id": "sec-preliminary-complex-variables-2-1",
   "level": "2",
-  "url": "sec-preliminary-complex-variables.html#",
+  "url": "sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-2-1",
   "type": "Figure",
   "number": "1.2.1",
   "title": "",
   "body": "  A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.  "
-},
-{
-  "id": "ws-intro",
-  "level": "1",
-  "url": "ws-intro.html",
-  "type": "Worksheet",
-  "number": "1.3",
-  "title": "Worksheet",
-  "body": "  Vector Calculus     We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.      Vector identities   Prove the following vector identities:     Using the Einstein summation convention,   where we have used the product rule in the second equality.       We have,          We have,       The following identity will be useful for proving the vorticity equation in of this course:   The th component of the left-hand side equals The second term of this expression equals the th component of   It therefore remains to prove that the first term equals the th component of . We note that if we can prove this for the first component then the proof for the second component follows by replacing index 1 by index 2, index 2 by index 3 and index 3 by index 1, and the proof of the third component by replacing index 1 by index 3, index 2 by index 1 and index 3 by index 2.  The first component of equals The component of equals Inspecting these expressions, we find they are equal. QED.         Divergence theorem   State the divergence theorem. Use it to show that, for a vector-valued function , where is the outward-pointing unit normal to the surface .   The divergence theorem states that, for a vector field ,   To prove the required result, we use the Levi--Civita symbol to write the th component of the left-hand side as Setting : and the divergence theorem implies Hence, QED.      Stokes' theorem   State Stokes' theorem. Use it to evaluate the line integral around the triangle with vertices , and .   Stokes' theorem states that, for a vector field defined on a surface , where is the unit normal to the surface and is the boundary curve of .  Setting , and noting that , we have that, for any surface spanning the given triangle, Hence, the required line integral equals the flux of the vector through the surface . We choose to be the triangle itself.  The two edges of the triangle that start from the vertex are given by the vectors and . The cross product of these two vectors is This vector is orthogonal to and its magnitude equals the area of the parallelogram with these vectors as two of its edges. The triangle has area half that of the parallelogram , and its unit normal is (note that we can check the direction of the normal using the right-hand rule). Hence       Coordinate systems     A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindrical polars, we have , and . We may also write Hence,   For spherical polars, we have , and . We may also write and Hence, We note that and hence We note that in both cylindrical and spherical polars, the vector field has no component in the azimuthal direction. This is because the original vector field is axisymmetric about the -axis. Furthermore, in cylindrical polars, the vector field is purely radial, whereas in spherical polars it has both radial and polar components.    A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindricals, we have Hence,   For sphericals, We note that and hence We note that in both cylindrical and spherical polars, the vector field is purely azimuthal.    A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindrical polar coordinates, and using the answer to the first part of this question, we may immediately write For spherical polar coordinates, and using the answer to the first part of this question, The velocity field is purely radial in spherical polars, but has both radial and axial components in cylindrical polars.     A vector field is given in Cartesian coordinates by . Write down the components of this vector field in cylindrical polars and in spherical polars.   In cylindrical polars, the unit vectors are related by Hence,   In spherical polars, the unit vectors are related by   Hence,          "
-},
-{
-  "id": "vector-calculus-2-1-1",
-  "level": "2",
-  "url": "ws-intro.html#vector-calculus-2-1-1",
-  "type": "Warning",
-  "number": "1.3.1",
-  "title": "",
-  "body": " We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.  "
-},
-{
-  "id": "vector-identities",
-  "level": "2",
-  "url": "ws-intro.html#vector-identities",
-  "type": "Worksheet Exercise",
-  "number": "1.3.1",
-  "title": "Vector identities.",
-  "body": " Vector identities   Prove the following vector identities:     Using the Einstein summation convention,   where we have used the product rule in the second equality.       We have,          We have,       The following identity will be useful for proving the vorticity equation in of this course:   The th component of the left-hand side equals The second term of this expression equals the th component of   It therefore remains to prove that the first term equals the th component of . We note that if we can prove this for the first component then the proof for the second component follows by replacing index 1 by index 2, index 2 by index 3 and index 3 by index 1, and the proof of the third component by replacing index 1 by index 3, index 2 by index 1 and index 3 by index 2.  The first component of equals The component of equals Inspecting these expressions, we find they are equal. QED.       "
-},
-{
-  "id": "divergence-theorem",
-  "level": "2",
-  "url": "ws-intro.html#divergence-theorem",
-  "type": "Worksheet Exercise",
-  "number": "1.3.2",
-  "title": "Divergence theorem.",
-  "body": " Divergence theorem   State the divergence theorem. Use it to show that, for a vector-valued function , where is the outward-pointing unit normal to the surface .   The divergence theorem states that, for a vector field ,   To prove the required result, we use the Levi--Civita symbol to write the th component of the left-hand side as Setting : and the divergence theorem implies Hence, QED.    "
-},
-{
-  "id": "stokes-theorem",
-  "level": "2",
-  "url": "ws-intro.html#stokes-theorem",
-  "type": "Worksheet Exercise",
-  "number": "1.3.3",
-  "title": "Stokes’ theorem.",
-  "body": " Stokes' theorem   State Stokes' theorem. Use it to evaluate the line integral around the triangle with vertices , and .   Stokes' theorem states that, for a vector field defined on a surface , where is the unit normal to the surface and is the boundary curve of .  Setting , and noting that , we have that, for any surface spanning the given triangle, Hence, the required line integral equals the flux of the vector through the surface . We choose to be the triangle itself.  The two edges of the triangle that start from the vertex are given by the vectors and . The cross product of these two vectors is This vector is orthogonal to and its magnitude equals the area of the parallelogram with these vectors as two of its edges. The triangle has area half that of the parallelogram , and its unit normal is (note that we can check the direction of the normal using the right-hand rule). Hence     "
-},
-{
-  "id": "coordinate-systems",
-  "level": "2",
-  "url": "ws-intro.html#coordinate-systems",
-  "type": "Worksheet Exercise",
-  "number": "1.3.4",
-  "title": "Coordinate systems.",
-  "body": " Coordinate systems     A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindrical polars, we have , and . We may also write Hence,   For spherical polars, we have , and . We may also write and Hence, We note that and hence We note that in both cylindrical and spherical polars, the vector field has no component in the azimuthal direction. This is because the original vector field is axisymmetric about the -axis. Furthermore, in cylindrical polars, the vector field is purely radial, whereas in spherical polars it has both radial and polar components.    A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindricals, we have Hence,   For sphericals, We note that and hence We note that in both cylindrical and spherical polars, the vector field is purely azimuthal.    A vector field is given in Cartesian coordinates by . Convert to cylindrical and spherical polar coordinates. What do you notice?  For cylindrical polar coordinates, and using the answer to the first part of this question, we may immediately write For spherical polar coordinates, and using the answer to the first part of this question, The velocity field is purely radial in spherical polars, but has both radial and axial components in cylindrical polars.     A vector field is given in Cartesian coordinates by . Write down the components of this vector field in cylindrical polars and in spherical polars.   In cylindrical polars, the unit vectors are related by Hence,   In spherical polars, the unit vectors are related by   Hence,        "
 },
 {
   "id": "sec-eulerlagrang",
@@ -1114,7 +1069,7 @@ var ptx_lunr_docs = [
   "type": "References",
   "number": "",
   "title": "References and further reading",
-  "body": " References and further reading  Kreyszig, E. (2007). Advanced engineering mathematics 9th edition with Wiley plus set (Vol. 334). US: John Wiley and Sons.  Fornberg  "
+  "body": " References and further reading  Kreyszig, E. (2007). Advanced engineering mathematics 9th edition. Wiley. US: John Wiley and Sons.  Van Dyke, M. (1982). An Album of Fluid Motion. Parabolic Press.  Acheson, D. J. (1990). Elementary fluid dynamics. Oxford University Press.  Fornberg, B. and Piret, C. (2019). Complex Variables and Analytic Functions. Society for Industrial and Applied Mathematics.  "
 }
 ]
 
