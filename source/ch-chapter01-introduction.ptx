@@ -179,12 +179,6 @@ Fluid Mechanics
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
 
-    <p>
-      <figure>
-        <video youtube="0z1fIsUNhO4"/>
-        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption>
-      </figure>
-    </p>
 
   <p>
     In <xref ref="ch-chapter04-potentialflows"/>, we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>.
@@ -214,7 +208,7 @@ Fluid Mechanics
 
   <p>
     Another important function we shall consider is the complex logarithm, defined as 
-    <men xml:id="eqn-complex-log">
+    <men xml:id="eqn-intro-complex-log">
      \log z \equiv \log r + \im \theta,
     </men>
     where <m>z = r\e^{\im\theta}</m>. That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is, 
@@ -224,7 +218,7 @@ Fluid Mechanics
   </p>
 
   <p>
-    However, the definition <xref ref="eqn-complex-log"/> is troubling because it is not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z = 1</m>. We dig deeper into this issue.
+    However, the definition <xref ref="eqn-intro-complex-log"/> is troubling because it is not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z = 1</m>. We dig deeper into this issue.
   </p>
 </subsection>
 
@@ -322,14 +316,16 @@ Fluid Mechanics
       Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows. 
 
       <definition>
-        <title>Branches of the square root</title>
+        <title>Branches of the square root function</title>
         <statement>
           <p>
             The positive branch of the square root, with branch cut taken along the positive real axis, is defined by
             <me>
               f(z) = f_1(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
             </me>
-           for <m>r > 0 </m> and <m>0 \leq \theta &lt; 2\pi</m>. Other branch cut choices can be taken in an analogous manner. Then the above <m>f</m> with <m>z</m> restricted as given is a well-defined single-valued function. 
+           for <m>r > 0 </m> and <m>0 \leq \theta &lt; 2\pi</m>. Other branch cut choices can be taken in an analogous manner (curve that extends from <m>z= 0</m> to <m>z = \infty</m>).</p>
+
+           <p> Then the above <m>f</m> with <m>z</m> restricted as given is a well-defined single-valued function. 
           </p>
 
           <p>
@@ -340,10 +336,20 @@ Fluid Mechanics
           </p>
 
           <p>
-            Therefore, <m>f_1</m> and <m>f_2</m> make up the two "layers" of the square root function. We often refer to each individual "layer" as a <em>Riemann sheet</em>. The critical point <m>z = 0</m> is referred to as a <em>branch point</em>.
+            Therefore, <m>f_1</m> and <m>f_2</m> make up the two "layers" of the square root function.</p>
+              
+            <p> We often refer to each individual "layer" as a <em>Riemann sheet</em><idx><h>Riemann sheet</h></idx>. The critical point <m>z = 0</m> is referred to as a <em>branch point</em><idx><h>branch point</h></idx>.
+          </p>
+
+          <p>
+            The collection of Riemann sheets is referred to as a <em>Riemann surface</em><idx><h>Riemann surface</h></idx>.
           </p>
         </statement>
       </definition>
+    </p>
+
+    <p>
+      In <xref ref="ex-Riemannsurface"/>, you will plot the Riemann surface that corresponds to <m>f(z) = z^{1/2}</m>.
     </p>
 
     <p>
@@ -351,11 +357,52 @@ Fluid Mechanics
       <men xml:id="eq-intro-twobranch">
         f(z) = (z + 1)^{1/2} (z - 1)^{1/2},
       </men>
-      requires two branch cuts in general, each cut originating from the two branch points at <m>z = \pm 1.</m>
+      requires two branch cuts in general, each cut originating from the two branch points at <m>z = \pm 1.</m> You will study this function in more detail in <xref ref="ex-branch1"/>.
     </p>
 
     <p>
-     In summary: certain complex functions are only well-defined with appropriate branch cuts chosen. However, once such restrictions are made (and an individual Riemann sheet chosen), the complex function is well defined. 
+      Also in <xref ref="ex-log"/>, you will study the branch structure of the complex logarithm in <xref ref="eqn-intro-complex-log"/>.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Other functions and visualisations</title>
+
+    <!-- <p>
+      (Non-examinable)
+    </p> -->
+
+    <p>
+    The theory of complex analysis is rich in different kinds of visualisations. Another way to visualise a complex function is by considering its effect on a gridded pattern in the original <m>z</m>-plane, and then to imagine the function as warping this pattern. With this interpretation, it will be seen clearly that the operation of <m>f(z) = z^2</m> essentially rotates and expands the <m>(x, y)</m> plane. This is seen in the following video.</p>
+
+    <p>
+      <figure>
+        <video youtube="0z1fIsUNhO4"/>
+        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption>
+      </figure>
+    </p>
+
+    <p>
+      However, you will also encounter some of these more complex mappings, notably the inversion map, <m>f(z) = 1/z</m> in <xref ref="ch-chapter04-potentialflows"/>.
+    </p>
+
+    <p>
+      The theory in the video (visualisation on the Riemann sphere) is not necessary for this course; it is presented here just out of interest (and because the video is beautiful!).
+    </p>
+
+    <p>
+    <remark>
+      <p>It is sensible to ask: <em>what does this have to do with fluid mechanics?</em>. In <xref ref="ch-chapter04-potentialflows"/>, we will see that the use of complex functions can map a region of fluid to another. </p>
+    </remark>
+    </p>
+    
+  </subsection>
+
+    <subsection>
+      <title>Summary</title>
+      
+    <p>
+Certain complex functions are only well-defined with appropriate branch cuts chosen. However, once such restrictions are made (and an individual Riemann sheet chosen), the complex function is well defined. The branch cut will correspond to locations where the function is nonsmooth (in its real and/or imaginary components).
     </p>
     
   </subsection>
@@ -365,10 +412,10 @@ Fluid Mechanics
 
   <worksheet xml:id="ws-intro">
     <exercisegroup>
-    <title>Complex anlaysis</title>
+    <title>Complex analysis</title>
     <introduction> 
     <p>
-      The main function of this chapter was to brielfy review complex functions and also review/introduce you to the notion of branch cuts. Complex functions will be used in the potential theory of <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
+      The main function of this chapter was to briefly review complex functions and also review/introduce you to the notion of branch cuts. Complex functions will be used in the potential theory of <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
     </p>
     <!-- <p>
     <warning>
@@ -376,6 +423,23 @@ Fluid Mechanics
     </warning>
     </p> -->
     </introduction>
+
+    <exercise xml:id="ex-Riemannsurface">
+      <title>Plotting a Riemann surface</title>
+      <p>Select the branch cut of <m>f(z) = z^{1/2}</m> that runs along the positive real axis. 
+      </p>
+
+      <ol>
+        <li>
+          <p>
+            Consider a contour that starts from <m>z = 1</m>, then encircles the origin (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m> at the end of the contour as compared to the start? 
+          </p>
+          <p>
+            By hand, plot the Riemann surface as visualised in <m>(x, y, \Im f(x + \im y)</m>, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
+          </p>
+        </li>
+      </ol>
+    </exercise>
 
 
     <exercise xml:id="ex-branch1">
@@ -405,12 +469,38 @@ Fluid Mechanics
           </li>
           <li>
             <p>
-              (Challenging). If you consider a plot of <m>(x, y, \Re f)</m> or <m>(x, y, \Im f)</m>, what will the Riemann surface look like? You can attempt to plot this using any tool.
+              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool.
             </p>
           </li>
         </ol>
       </p>
     </exercise>
+
+
+    <exercise xml:id="ex-log">
+      <title>Branch cuts of the complex logarithm</title>
+      <p>
+        Consider the complex logarithm as defined in <xref ref="eqn-intro-complex-log"/>.
+        <ol>
+          <li>
+            <p>
+              Explain why there must be a branch cut imposed, originating from the branch point at <m>z = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Take the branch cut along the positive real axis. Do your best to draw the Riemann surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in the space <m>(x, y, \Im f(x + \im y))</m>.
+            </p>
+
+            <p>
+              Again, you may find it useful to confirm your work above by plotting the function using a computational tool. 
+            </p>
+          </li>
+        </ol>
+      </p>
+      
+    </exercise>
+
     </exercisegroup>
   </worksheet>
  </chapter>
