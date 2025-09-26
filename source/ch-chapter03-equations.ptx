@@ -41,7 +41,7 @@
     </p>
   </remark>
 
-  <remark>
+  <remark xml:id="rem-continuum">
     <title>Continuum assumption</title>
     <p> The assumption that the fluid can be described by a smooth scalar density field, <m>\rho</m>,
       is a <em>continuum assumption.</em> This is indeed one of the core assumptions that underlies
@@ -56,7 +56,7 @@
   becomes important):
 <ul>
   <li> For gases at standard temperature and pressure (STP): the minimum volume is around
-    <m>10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around $3\times10^7$ molecules).</li>
+    <m>10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m> molecules).</li>
 <li> For liquids: the minimum volume of fluid is smaller as the particles are closer together. For
   water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m>
   (this contains around <m>3\times10^7</m> molecules).</li>

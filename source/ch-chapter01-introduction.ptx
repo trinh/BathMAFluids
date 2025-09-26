@@ -415,7 +415,10 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
     <title>Complex analysis</title>
     <introduction> 
     <p>
-      The main function of this chapter was to briefly review complex functions and also review/introduce you to the notion of branch cuts. Complex functions will be used in the potential theory of <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
+      The main function of this chapter was to briefly review complex functions and also
+      review/introduce you to the notion of branch cuts.
+      Complex functions will be used in the potential theory of
+      <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
     </p>
     <!-- <p>
     <warning>
@@ -435,7 +438,7 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
             Consider a contour that starts from <m>z = 1</m>, then encircles the origin (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m> at the end of the contour as compared to the start? 
           </p>
           <p>
-            By hand, plot the Riemann surface as visualised in <m>(x, y, \Im f(x + \im y)</m>, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
+            By hand, plot the Riemann surface as visualised in <m>(x, y)</m>, <m>\Im f(x + \im y)</m>, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
           </p>
         </li>
       </ol>
