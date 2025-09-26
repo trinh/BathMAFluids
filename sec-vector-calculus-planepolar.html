@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<html lang="en-US" dir="ltr">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -184,10 +184,14 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-10" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-11" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-12" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Summary</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -297,7 +301,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-vector-calculus-planepolar"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identities for plane polar coordinates</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">A.1</span><span class="space"> </span><span class="title">Identities for plane polar coordinates</span>
 </h2>
 <div class="displaymath process-math" id="sec-vector-calculus-planepolar-2">
 \begin{align}
@@ -305,7 +309,7 @@ eBookConfig.enable_chatcodes =  false;
 \nabla \times \bu \amp= \left(\frac{1}{r} \pd{(ru_\theta)}{r} - \frac{1}{r} \pd{u_r}{\theta}\right) \bk \tag{A.1.2}
 \end{align}
 </div>
-<div class="autopermalink" data-description="Section A.1: Identities for plane polar coordinates"><a href="#sec-vector-calculus-planepolar" title="Copy heading and permalink for Section A.1: Identities for plane polar coordinates" aria-label="Copy heading and permalink for Section A.1: Identities for plane polar coordinates">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Section A.1: Identities for plane polar coordinates"><a href="#sec-vector-calculus-planepolar" title="Copy heading and permalink for Section A.1: Identities for plane polar coordinates">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

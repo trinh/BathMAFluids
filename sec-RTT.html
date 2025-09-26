@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<html lang="en-US" dir="ltr">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -130,7 +130,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter03-equations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter03-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter03-equations-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter03-equations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter03-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter03-equations-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -184,10 +184,14 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-10" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-11" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-12" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Summary</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -297,12 +301,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-RTT"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reynolds’ transport theorem</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Reynolds’ transport theorem</span>
 </h2>
 <section class="subsection" id="subsec-jacob"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Jacobian of Lagrangian to Eulerian</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="space"> </span><span class="title">Jacobian of Lagrangian to Eulerian</span>
 </h3>
-<div class="para" id="subsec-jacob-2">Consider a fluid volume, <span class="process-math">\(V \subset D\text{,}\)</span> that is initially dyed a certain colour. The packet of fluid is initially located at <span class="process-math">\(V(0)\text{.}\)</span> As the fluid evolves in time, it then occupies the volume <span class="process-math">\(V(t)\)</span> with <span class="process-math">\(t &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-jacob-2">Consider a fluid volume, <span class="process-math">\(V \subset D\text{,}\)</span> that is initially dyed a certain colour. The packet of fluid is initially located at <span class="process-math">\(V(0)\text{.}\)</span> As the fluid evolves in time, it then occupies the volume <span class="process-math">\(V(t)\)</span> with <span class="process-math">\(t &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-jacob-3">
 <div class="para">As an example, we may express the density of the fluid as</div>
@@ -312,7 +316,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">i.e. at every point in space and moment in time, the above retrieves the density of the fluid within a designated region (which may be changing). This is a natural quantity to study in a fixed frame of the fluid.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-jacob-4">
 <div class="para">Alternatively, we can write</div>
@@ -322,7 +326,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">which is the density of fluid for those particles making up an originally chosen volume, <span class="process-math">\(V(0)\text{.}\)</span> This is a natural quantity to study if we were to move with the fluid; for instance, if we were to colour the volume <span class="process-math">\(V(0)\)</span> with a dye and track its density in time.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-jacob-5">
 <div class="para">The correspondence between the Euclidean and Lagrangian coordinates is written as</div>
@@ -331,12 +335,12 @@ eBookConfig.enable_chatcodes =  false;
 \bx = \bx(\bX, t).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-jacobian"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Jacobian of Lagrangian to Eulerian.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Jacobian of Lagrangian to Eulerian.</span>
 </h4>
-<div class="para" id="thm-jacobian-2-1">Since we assume the medium is continuous, then we would generally require that the mapping from Lagrangian to Eulerian coordinates is continuous and one-to-one; then the map assigns every element (label) in the original reference configuration, denoted <span class="process-math">\(\bX\text{,}\)</span> a unique position, <span class="process-math">\(\bx\text{,}\)</span> in the deformed state.<div class="autopermalink" data-description="Paragraph"><a href="#thm-jacobian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-jacobian-2-1">Since we assume the medium is continuous, then we would generally require that the mapping from Lagrangian to Eulerian coordinates is continuous and one-to-one; then the map assigns every element (label) in the original reference configuration, denoted <span class="process-math">\(\bX\text{,}\)</span> a unique position, <span class="process-math">\(\bx\text{,}\)</span> in the deformed state.<div class="autopermalink" data-description="Paragraph"><a href="#thm-jacobian-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="thm-jacobian-2-2">
 <div class="para">From Multivariable Calculus, a sufficient condition for this to be true is that the <em class="emphasis">Jacobian of the transformation</em>,</div>
 <div class="displaymath process-math">
@@ -355,10 +359,10 @@ J = \pd{\bx}{\bX} = \pd{(x, y, z)}{(X, Y, Z)} =
 0 \lt J \lt \infty.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-jacobian-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-jacobian-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.1.1: Jacobian of Lagrangian to Eulerian"><a href="#thm-jacobian" title="Copy heading and permalink for Theorem 3.1.1: Jacobian of Lagrangian to Eulerian" aria-label="Copy heading and permalink for Theorem 3.1.1: Jacobian of Lagrangian to Eulerian">🔗</a></div></article><div class="para" id="subsec-jacob-7">The following requires a bit of algebra, and you are not required to prove the result. <article class="theorem theorem-like" id="thm-Euleridentity"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euler’s identity.</span>
+<div class="autopermalink" data-description="Theorem 3.1.1: Jacobian of Lagrangian to Eulerian"><a href="#thm-jacobian" title="Copy heading and permalink for Theorem 3.1.1: Jacobian of Lagrangian to Eulerian">🔗</a></div></article><div class="para" id="subsec-jacob-7">The following requires a bit of algebra, and you are not required to prove the result. <article class="theorem theorem-like" id="thm-Euleridentity"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s identity.</span>
 </h4>
 <div class="para logical" id="thm-Euleridentity-2-1">
 <div class="para">The material derivative of the Jacobian of the transformation <span class="process-math">\(\bx = \bx(\bX, t)\)</span> is given by</div>
@@ -370,17 +374,17 @@ J = \pd{\bx}{\bX} = \pd{(x, y, z)}{(X, Y, Z)} =
 <div class="para">where <span class="process-math">\(\bu =
 \DD{\bx}{t}\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-Euleridentity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-Euleridentity-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.1.2: Euler’s identity"><a href="#thm-Euleridentity" title="Copy heading and permalink for Theorem 3.1.2: Euler’s identity" aria-label="Copy heading and permalink for Theorem 3.1.2: Euler’s identity">🔗</a></div></article><details id="thm-Euleridentity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-Euleridentity-3-1">The proof follows from direct differentiation on the determinant and use of the identity of the material derivative.<div class="autopermalink" data-description="Paragraph"><a href="#thm-Euleridentity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 3.1.2: Euler’s identity"><a href="#thm-Euleridentity" title="Copy heading and permalink for Theorem 3.1.2: Euler’s identity">🔗</a></div></article><details id="thm-Euleridentity-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-Euleridentity-3-1">The proof follows from direct differentiation on the determinant and use of the identity of the material derivative.<div class="autopermalink" data-description="Paragraph"><a href="#thm-Euleridentity-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.1.2.1"><a href="#thm-Euleridentity-3" title="Copy heading and permalink for Proof 3.1.2.1" aria-label="Copy heading and permalink for Proof 3.1.2.1">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.1.2.1"><a href="#thm-Euleridentity-3" title="Copy heading and permalink for Proof 3.1.2.1">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#subsec-jacob-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.1.1: Jacobian of Lagrangian to Eulerian"><a href="#subsec-jacob" title="Copy heading and permalink for Subsection 3.1.1: Jacobian of Lagrangian to Eulerian" aria-label="Copy heading and permalink for Subsection 3.1.1: Jacobian of Lagrangian to Eulerian">🔗</a></div></section><section class="subsection" id="subsec-RTT"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reynolds transport theorem</span>
+<div class="autopermalink" data-description="Subsection 3.1.1: Jacobian of Lagrangian to Eulerian"><a href="#subsec-jacob" title="Copy heading and permalink for Subsection 3.1.1: Jacobian of Lagrangian to Eulerian">🔗</a></div></section><section class="subsection" id="subsec-RTT"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="space"> </span><span class="title">Reynolds transport theorem</span>
 </h3>
 <div class="para" id="subsec-RTT-2">We are now ready to derive a key result that eases our path towards developing the governing equations for a fluid. The result is as follows. <article class="theorem theorem-like" id="thm-RTT"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reynolds transport theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Reynolds transport theorem.</span>
 </h4>
 <div class="para logical" id="thm-RTT-2-1">
 <div class="para">Consider a time-dependent volume, <span class="process-math">\(V(t)\text{,}\)</span> that is transported by the fluid so that it always consists of the same fluid particles. Then, for any function, <span class="process-math">\(f(\bx, t)\text{,}\)</span> continuously differentiable with respect to its arguments, <em class="emphasis">Reynolds’ transport theorem</em> is as follows:</div>
@@ -390,9 +394,9 @@ J = \pd{\bx}{\bX} = \pd{(x, y, z)}{(X, Y, Z)} =
 \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.\tag{3.1.2}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.1.3: Reynolds transport theorem"><a href="#thm-RTT" title="Copy heading and permalink for Theorem 3.1.3: Reynolds transport theorem" aria-label="Copy heading and permalink for Theorem 3.1.3: Reynolds transport theorem">🔗</a></div></article><details id="thm-RTT-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-RTT-3-1">
+<div class="autopermalink" data-description="Theorem 3.1.3: Reynolds transport theorem"><a href="#thm-RTT" title="Copy heading and permalink for Theorem 3.1.3: Reynolds transport theorem">🔗</a></div></article><details id="thm-RTT-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-RTT-3-1">
 <div class="para">We transform the integral in Euclidean coordinates to Lagrangian coordinates, integrating in the label space:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-DDt.html ./knowl/xref/thm-Euleridentity.html">
 \begin{equation*}
@@ -422,42 +426,42 @@ I(t) \equiv \iiint_{V(t)} f \, \de{x} \de{y} \de{z}
 \end{equation*}
 </div>
 <div class="para">We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof of the Reynolds’ transport theorem. <article class="note remark-like" id="thm-RTT-3-1-7"><h5 class="heading">
-<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h5>
 <div class="para" id="thm-RTT-3-1-7-1">It is helpful for you to convince yourself that the above vector identity is the only possible arrangement of operations that makes sense, i.e. in order for <span class="process-math">\(\nabla \cdot
-(f\bu)\)</span> to return a scalar.<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-3-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+(f\bu)\)</span> to return a scalar.<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-3-1-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Note 3.1.4"><a href="#thm-RTT-3-1-7" title="Copy heading and permalink for Note 3.1.4" aria-label="Copy heading and permalink for Note 3.1.4">🔗</a></div></article>
+<div class="autopermalink" data-description="Note 3.1.4"><a href="#thm-RTT-3-1-7" title="Copy heading and permalink for Note 3.1.4">🔗</a></div></article>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-RTT-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.1.3.1"><a href="#thm-RTT-3" title="Copy heading and permalink for Proof 3.1.3.1" aria-label="Copy heading and permalink for Proof 3.1.3.1">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.1.3.1"><a href="#thm-RTT-3" title="Copy heading and permalink for Proof 3.1.3.1">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-RTT-3">
 <article class="remark remark-like" id="subsec-RTT-3-1"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-RTT-3-1-1">Reynolds’ transport theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-RTT-3-1-1">Reynolds’ transport theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.1.5"><a href="#subsec-RTT-3-1" title="Copy heading and permalink for Remark 3.1.5" aria-label="Copy heading and permalink for Remark 3.1.5">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.1.5"><a href="#subsec-RTT-3-1" title="Copy heading and permalink for Remark 3.1.5">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-RTT-4">
 <article class="remark remark-like" id="subsec-RTT-4-1"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-RTT-4-1-1">In 1D, Reynolds transport theorem reduces to an identity known as Leibniz’s rule. This will be proven in your problem sets.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-RTT-4-1-1">In 1D, Reynolds transport theorem reduces to an identity known as Leibniz’s rule. This will be proven in your problem sets.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.1.6"><a href="#subsec-RTT-4-1" title="Copy heading and permalink for Remark 3.1.6" aria-label="Copy heading and permalink for Remark 3.1.6">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.1.6"><a href="#subsec-RTT-4-1" title="Copy heading and permalink for Remark 3.1.6">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="subsec-RTT-5">
 <article class="remark remark-like" id="subsec-RTT-5-1"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-RTT-5-1-1">The Reynolds transport theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-RTT-5-1-1">The Reynolds transport theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.1.7"><a href="#subsec-RTT-5-1" title="Copy heading and permalink for Remark 3.1.7" aria-label="Copy heading and permalink for Remark 3.1.7">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.1.7"><a href="#subsec-RTT-5-1" title="Copy heading and permalink for Remark 3.1.7">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-RTT-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Subsection 3.1.2: Reynolds transport theorem"><a href="#subsec-RTT" title="Copy heading and permalink for Subsection 3.1.2: Reynolds transport theorem" aria-label="Copy heading and permalink for Subsection 3.1.2: Reynolds transport theorem">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Reynolds’ transport theorem"><a href="#sec-RTT" title="Copy heading and permalink for Section 3.1: Reynolds’ transport theorem" aria-label="Copy heading and permalink for Section 3.1: Reynolds’ transport theorem">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Subsection 3.1.2: Reynolds transport theorem"><a href="#subsec-RTT" title="Copy heading and permalink for Subsection 3.1.2: Reynolds transport theorem">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Reynolds’ transport theorem"><a href="#sec-RTT" title="Copy heading and permalink for Section 3.1: Reynolds’ transport theorem">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-chapter03-equations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter03-equations-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

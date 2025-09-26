@@ -52,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "Changelog",
-  "body": " Changelog  When possible (likely weekly), we will update the changelog to indicate relevant updates to the course notes.  "
+  "body": " Changelog  When possible (likely weekly), we will update the changelog to indicate relevant updates to the course notes.     26 September 2025: the Introduction was largely completed with the review of complex variables; the first worksheet was completed.    "
 },
 {
   "id": "sec-preliminary-vector-calculus",
@@ -61,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "A reminder of vector calculus",
-  "body": " A reminder of vector calculus  During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference on Moodle .  We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or via this link .  "
+  "body": " A reminder of vector calculus  During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference on Moodle .  We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or via this link .  In general, over the next few weeks, you will want to be familiar with recalling\/looking up concepts like:   The use of identities like div curl = 0 and curl grad = 0. Some of these are found on p.24 of the above tables.    The notion of line integrals, surface integrals, and volume integrals.    The divergence theorem and Stokes' theorem. (p.24)    Conversion of vector operations and integrals into different coordinate systems (p.25)     "
 },
 {
   "id": "sec-preliminary-complex-variables",
@@ -70,16 +70,97 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "A reminder of complex variables",
-  "body": " A reminder of complex variables     A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.    In , we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a branch cut .   Basic complex representations  Generally, we write the Cartesian and polar form of a complex number as, for magnitude and angle . Below, we will consistently refer to . The decomposition of the complex exponential is given by Euler's identity:   The usual trigonometric functions can be extended to the complex plane by considering their definition in terms of complex exponentials and Euler's identity. For example, we have   Another important function we shall consider is the complex logarithm, defined as where . That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is,   However, the definition is troubling because it is not single-valued. For example, writing and gives two different possible values of for the same value of . We dig deeper into this issue.    Complex functions   A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, can be better understood by its effect on points on the unit circle, .  "
+  "body": " A reminder of complex variables  In , we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a branch cut .   Basic complex representations  Generally, we write the Cartesian and polar form of a complex number as, for magnitude and angle . Below, we will consistently refer to . The decomposition of the complex exponential is given by Euler's identity:   The usual trigonometric functions can be extended to the complex plane by considering their definition in terms of complex exponentials and Euler's identity. For example, we have   Another important function we shall consider is the complex logarithm, defined as where . That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is,   However, the definition is troubling because it is not single-valued. For example, writing and gives two different possible values of for the same value of . We dig deeper into this issue.    Complex functions   A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, can be better understood by its effect on points on the unit circle, .  Consider a particle that orbits around the unit circle in the plane at unit speed. If the particle rotates by half a revolution, with , then in the image plane, the image particle has rotated by a full revolution, with in this same unit time. This is illustrated by the image in .    A revolution of in the pre-image produces a full rotation in the image plane.   z2 map     Now we continue rotating around the unit circle in the plane, performing an additional rotation. Within the image plane, the particle has now completed another full rotation around the unit circle. This is shown in .    A revolution of in the pre-image produces a full rotation in the image plane.   z2 map      Multifunctions, branch cuts, and Riemann sheets  Now consider the inverse function of the above, given by the square root function,   Visually, we can simply consider the same figures as before, but now with the mapping proceeding from the right subfigure to the left subfigure. Observe that there is now an ambiguity, because for each point in the original plane, there are two possible images to assign for , corresponding to either the top semicircle of the left figure, or the bottom semicircle.  That is, it is unclear of whether we should define: or   Moreover there is a problem, for if we allow a \"motion\" of the values such that rotates more than a complete revolution around the origin, then is no longer well-defined and takes on multiple possible values.  This leads to the following restriction. We define a branch cut of the plane, and restrict the possible argument values. For example, we may choose hence imposing that the branch cut is along the positive real axis. This is illustrated in where the branch cut is shown as a wavy line.  Branch cut   branch cut     Alternatively, we could have equally chosen hence taken the branch cut along the negative real axis.  Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows.  Branches of the square root function   The positive branch of the square root, with branch cut taken along the positive real axis, is defined by for and . Other branch cut choices can be taken in an analogous manner (curve that extends from to ).  Then the above with restricted as given is a well-defined single-valued function.  There is an analogous negative branch defined as   Therefore, and make up the two \"layers\" of the square root function.  We often refer to each individual \"layer\" as a Riemann sheet Riemann sheet . The critical point is referred to as a branch point branch point .  The collection of Riemann sheets is referred to as a Riemann surface Riemann surface .     In , you will plot the Riemann surface that corresponds to .  A similar argument would indicate that the function requires two branch cuts in general, each cut originating from the two branch points at You will study this function in more detail in .  Also in , you will study the branch structure of the complex logarithm in .    Other functions and visualisations   The theory of complex analysis is rich in different kinds of visualisations. Another way to visualise a complex function is by considering its effect on a gridded pattern in the original -plane, and then to imagine the function as warping this pattern. With this interpretation, it will be seen clearly that the operation of essentially rotates and expands the plane. This is seen in the following video.     A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.    However, you will also encounter some of these more complex mappings, notably the inversion map, in .  The theory in the video (visualisation on the Riemann sphere) is not necessary for this course; it is presented here just out of interest (and because the video is beautiful!).    It is sensible to ask: what does this have to do with fluid mechanics? . In , we will see that the use of complex functions can map a region of fluid to another.      Summary  Certain complex functions are only well-defined with appropriate branch cuts chosen. However, once such restrictions are made (and an individual Riemann sheet chosen), the complex function is well defined. The branch cut will correspond to locations where the function is nonsmooth (in its real and\/or imaginary components).   "
 },
 {
-  "id": "sec-preliminary-complex-variables-2-1",
+  "id": "fig-intro-z2map",
   "level": "2",
-  "url": "sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-2-1",
+  "url": "sec-preliminary-complex-variables.html#fig-intro-z2map",
   "type": "Figure",
   "number": "1.2.1",
   "title": "",
+  "body": " A revolution of in the pre-image produces a full rotation in the image plane.   z2 map   "
+},
+{
+  "id": "fig-intro-z2map_02",
+  "level": "2",
+  "url": "sec-preliminary-complex-variables.html#fig-intro-z2map_02",
+  "type": "Figure",
+  "number": "1.2.2",
+  "title": "",
+  "body": " A revolution of in the pre-image produces a full rotation in the image plane.   z2 map   "
+},
+{
+  "id": "fig-intro-branchcut",
+  "level": "2",
+  "url": "sec-preliminary-complex-variables.html#fig-intro-branchcut",
+  "type": "Figure",
+  "number": "1.2.3",
+  "title": "",
+  "body": " Branch cut   branch cut   "
+},
+{
+  "id": "sec-preliminary-complex-variables-10-8-1",
+  "level": "2",
+  "url": "sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-10-8-1",
+  "type": "Definition",
+  "number": "1.2.4",
+  "title": "Branches of the square root function.",
+  "body": " Branches of the square root function   The positive branch of the square root, with branch cut taken along the positive real axis, is defined by for and . Other branch cut choices can be taken in an analogous manner (curve that extends from to ).  Then the above with restricted as given is a well-defined single-valued function.  There is an analogous negative branch defined as   Therefore, and make up the two \"layers\" of the square root function.  We often refer to each individual \"layer\" as a Riemann sheet Riemann sheet . The critical point is referred to as a branch point branch point .  The collection of Riemann sheets is referred to as a Riemann surface Riemann surface .   "
+},
+{
+  "id": "sec-preliminary-complex-variables-11-3-1",
+  "level": "2",
+  "url": "sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-11-3-1",
+  "type": "Figure",
+  "number": "1.2.5",
+  "title": "",
   "body": "  A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.  "
+},
+{
+  "id": "sec-preliminary-complex-variables-11-6-1",
+  "level": "2",
+  "url": "sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-11-6-1",
+  "type": "Remark",
+  "number": "1.2.6",
+  "title": "",
+  "body": " It is sensible to ask: what does this have to do with fluid mechanics? . In , we will see that the use of complex functions can map a region of fluid to another.  "
+},
+{
+  "id": "ws-intro",
+  "level": "1",
+  "url": "ws-intro.html",
+  "type": "Worksheet",
+  "number": "1.3",
+  "title": "Worksheet",
+  "body": "  Complex analysis   The main function of this chapter was to briefly review complex functions and also review\/introduce you to the notion of branch cuts. Complex functions will be used in the potential theory of and wave theory of .     Plotting a Riemann surface  Select the branch cut of that runs along the positive real axis.    Consider a contour that starts from , then encircles the origin (anticlockwise) and returns to . What is the jump in the value of at the end of the contour as compared to the start?  By hand, plot the Riemann surface as visualised in , where . You may also confirm your sketch with a computational tool, if desired.      A function with two branch points  Consider the function :    Choose the branch cut from in the positive real direction. Choose the branch cut from in the negative real direction. Write either or for and defined as relative angles from the two branch points. Show that: (i) when is encircled by a complete revolution, the function jumps in value by a factor of ; (ii) that there is a similar jump in value when is encircled. Finally what happens if (iii) is encircled?  Draw a picture of the final -plane, showing the branch cuts.    Consider now a branch cut from that tends in the positive real direction and the branch cut from tends in the negative real direction. Repeat the experiment above, considering (i)-(iii) and conclude that there is no jump in value along the region .  Draw a picture of the final -plane, showing the branch cuts.    (Challenging). If you consider a plot of or , what will the Riemann surface look like? You can attempt to plot this using any tool.       Branch cuts of the complex logarithm  Consider the complex logarithm as defined in .   Explain why there must be a branch cut imposed, originating from the branch point at .    Take the branch cut along the positive real axis. Do your best to draw the Riemann surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in the space .  Again, you may find it useful to confirm your work above by plotting the function using a computational tool.       "
+},
+{
+  "id": "ex-Riemannsurface",
+  "level": "2",
+  "url": "ws-intro.html#ex-Riemannsurface",
+  "type": "Worksheet Exercise",
+  "number": "1.3.1",
+  "title": "Plotting a Riemann surface.",
+  "body": " Plotting a Riemann surface  Select the branch cut of that runs along the positive real axis.    Consider a contour that starts from , then encircles the origin (anticlockwise) and returns to . What is the jump in the value of at the end of the contour as compared to the start?  By hand, plot the Riemann surface as visualised in , where . You may also confirm your sketch with a computational tool, if desired.    "
+},
+{
+  "id": "ex-branch1",
+  "level": "2",
+  "url": "ws-intro.html#ex-branch1",
+  "type": "Worksheet Exercise",
+  "number": "1.3.2",
+  "title": "A function with two branch points.",
+  "body": " A function with two branch points  Consider the function :    Choose the branch cut from in the positive real direction. Choose the branch cut from in the negative real direction. Write either or for and defined as relative angles from the two branch points. Show that: (i) when is encircled by a complete revolution, the function jumps in value by a factor of ; (ii) that there is a similar jump in value when is encircled. Finally what happens if (iii) is encircled?  Draw a picture of the final -plane, showing the branch cuts.    Consider now a branch cut from that tends in the positive real direction and the branch cut from tends in the negative real direction. Repeat the experiment above, considering (i)-(iii) and conclude that there is no jump in value along the region .  Draw a picture of the final -plane, showing the branch cuts.    (Challenging). If you consider a plot of or , what will the Riemann surface look like? You can attempt to plot this using any tool.     "
+},
+{
+  "id": "ex-log",
+  "level": "2",
+  "url": "ws-intro.html#ex-log",
+  "type": "Worksheet Exercise",
+  "number": "1.3.3",
+  "title": "Branch cuts of the complex logarithm.",
+  "body": " Branch cuts of the complex logarithm  Consider the complex logarithm as defined in .   Explain why there must be a branch cut imposed, originating from the branch point at .    Take the branch cut along the positive real axis. Do your best to draw the Riemann surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in the space .  Again, you may find it useful to confirm your work above by plotting the function using a computational tool.     "
 },
 {
   "id": "sec-eulerlagrang",
