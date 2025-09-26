@@ -149,6 +149,31 @@ Fluid Mechanics
       We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or <url href="https://people.bath.ac.uk/ensdasr/ME10304.bho/UniBathFormulaeAndStatisticalTables.pdf" visual="tables">via this link</url>.
     </p>
 
+    <p>
+      In general, over the next few weeks, you will want to be familiar with recalling/looking up concepts like: 
+      <ul>
+        <li>
+          <p>
+            The use of identities like div curl = 0 and curl grad = 0. Some of these are found on p.24 of the above tables.
+          </p>
+        </li>
+        <li>
+          <p>
+            The notion of line integrals, surface integrals, and volume integrals.
+          </p>
+        </li>
+        <li>
+          <p>
+            The divergence theorem and Stokes' theorem. (p.24)
+          </p>
+        </li>
+        <li>
+          <p>
+            Conversion of vector operations and integrals into different coordinate systems (p.25)
+          </p>
+        </li>
+      </ul>
+    </p>
     </section>
   
   <section xml:id="sec-preliminary-complex-variables">
@@ -214,12 +239,184 @@ Fluid Mechanics
     </me>
    can be better understood by its effect on points on the unit circle, <m>|z| = 1</m>.
   </p>
+
+  <p>
+    Consider a particle that orbits around the unit circle in the <m>z-</m>plane at unit speed. If the particle rotates by half a revolution, with <m>\theta = \pi</m>, then in the image plane, the image particle has rotated by a full revolution, with <m>f(z) = (\e^{\im \pi})^2</m> in this same unit time. This is illustrated by the image in <xref ref="fig-intro-z2map"/>.
+  </p>
+
+  <p>
+    <figure xml:id="fig-intro-z2map">
+      <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
+      <image source="intro_z2map.png" width="100%">
+        <shortdescription>z2 map</shortdescription>
+      </image>
+    </figure>
+  </p>
+
+  <p>
+    Now we continue rotating around the unit circle in the <m>z-</m>plane, performing an additional <m>\pi</m> rotation. Within the image plane, the particle has now completed another full rotation around the unit circle. This is shown in <xref ref="fig-intro-z2map_02"/>.
+  </p>
+
+  <p>
+    <figure xml:id="fig-intro-z2map_02">
+      <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
+      <image source="intro_z2map_02.jpg" width="100%">
+        <shortdescription>z2 map</shortdescription>
+      </image>
+    </figure>
+  </p>
+
+  <subsection>
+    <title>Multifunctions, branch cuts, and Riemann sheets</title>
+
+    <p>
+      Now consider the inverse function of the above, given by the square root function, 
+      <me>
+        f(z) = z^{1/2}.
+      </me>
+    </p>
+
+    <p>
+      Visually, we can simply consider the same figures as before, but now with the mapping proceeding from the right subfigure to the left subfigure. Observe that there is now an ambiguity, because for each point in the original <m>z-</m>plane, there are two possible images to assign for <m>z^{1/2}</m>, corresponding to either the top semicircle of the left figure, or the bottom semicircle. 
+    </p>
+
+    <p>
+      That is, it is unclear of whether we should define: 
+      <me>
+        f(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
+      </me>
+      or 
+      <me>
+        f(z) = z^{1/2} = -r^{1/2} \e^{\im\theta/2}.
+      </me>
+    </p>
+
+    <p>
+    Moreover there is a problem, for if we allow a "motion" of the <m>z</m> values such that <m>z</m> rotates more than a complete revolution around the origin, then <m>f(z)</m> is no longer well-defined and takes on multiple possible values. 
+    </p>
+
+    <p>
+      This leads to the following restriction. We define a <em>branch cut</em> of the <m>z-</m>plane, and restrict the possible argument values. For example, we may choose 
+      <me>
+        0 \leq \theta &lt; 2\pi,
+      </me>
+      hence imposing that the branch cut is along the positive real axis. This is illustrated in <xref ref="fig-intro-branchcut"/> where the branch cut is shown as a wavy line.
+
+    <figure xml:id="fig-intro-branchcut">
+      <caption>Branch cut</caption>
+      <image source="intro_branchcut.jpg" width="80%">
+        <shortdescription>branch cut</shortdescription>
+      </image>
+    </figure>
+    </p>
+
+    <p>
+      Alternatively, we could have equally chosen 
+      <me>
+        -\pi \leq \theta &lt; \pi,
+      </me>
+      hence taken the branch cut along the negative real axis. 
+    </p>
+
+    <p>
+      Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows. 
+
+      <definition>
+        <title>Branches of the square root</title>
+        <statement>
+          <p>
+            The positive branch of the square root, with branch cut taken along the positive real axis, is defined by
+            <me>
+              f(z) = f_1(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
+            </me>
+           for <m>r > 0 </m> and <m>0 \leq \theta &lt; 2\pi</m>. Other branch cut choices can be taken in an analogous manner. Then the above <m>f</m> with <m>z</m> restricted as given is a well-defined single-valued function. 
+          </p>
+
+          <p>
+            There is an analogous negative branch defined as 
+            <me>
+              f(z) = f_2(z) = z^{1/2} = -r^{1/2} \e^{\im\theta/2},
+            </me>
+          </p>
+
+          <p>
+            Therefore, <m>f_1</m> and <m>f_2</m> make up the two "layers" of the square root function. We often refer to each individual "layer" as a <em>Riemann sheet</em>. The critical point <m>z = 0</m> is referred to as a <em>branch point</em>.
+          </p>
+        </statement>
+      </definition>
+    </p>
+
+    <p>
+      A similar argument would indicate that the function 
+      <men xml:id="eq-intro-twobranch">
+        f(z) = (z + 1)^{1/2} (z - 1)^{1/2},
+      </men>
+      requires two branch cuts in general, each cut originating from the two branch points at <m>z = \pm 1.</m>
+    </p>
+
+    <p>
+     In summary: certain complex functions are only well-defined with appropriate branch cuts chosen. However, once such restrictions are made (and an individual Riemann sheet chosen), the complex function is well defined. 
+    </p>
     
+  </subsection>
+ 
   </section>
 
 
-  <!-- <worksheet xml:id="ws-intro">
-    <exercisegroup xml:id="vector-calculus">
+  <worksheet xml:id="ws-intro">
+    <exercisegroup>
+    <title>Complex anlaysis</title>
+    <introduction> 
+    <p>
+      The main function of this chapter was to brielfy review complex functions and also review/introduce you to the notion of branch cuts. Complex functions will be used in the potential theory of <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
+    </p>
+    <!-- <p>
+    <warning>
+      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+    </warning>
+    </p> -->
+    </introduction>
+
+
+    <exercise xml:id="ex-branch1">
+      <title>A function with two branch points</title>
+      <p>
+        Consider the function <xref ref="eq-intro-twobranch"/>:
+        <me>
+        f(z) = (z + 1)^{1/2} (z - 1)^{1/2}.
+        </me>
+        <ol>
+          <li>
+            <p>
+              Choose the branch cut from <m>z = 1</m> in the positive real direction. Choose the branch cut from <m>z = -1</m> in the negative real direction. Write either <m>z = r_1 \e^{\im\theta_1}</m> or <m>z = r_2 \e^{\im\theta_2}</m> for <m>\theta_1</m> and <m>\theta_2</m> defined as relative angles from the two branch points. Show that: (i) when <m>z = 1</m> is encircled by a complete revolution, the function jumps in value by a factor of <m>\e^{\im \pi}</m>; (ii) that there is a similar jump in value when <m>z = -1</m> is encircled. Finally what happens if (iii) <m>z = 0</m> is encircled?
+            </p>
+            <p>
+              Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
+            </p>
+          </li>
+          <li>
+            <p>
+              Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction and the branch cut from <m>z = 1</m> tends in the negative real direction. Repeat the experiment above, considering (i)-(iii) and conclude that there is no jump in value along the region <m>-1 \leq z \leq 1</m>. 
+            </p>
+
+            <p>
+              Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
+            </p>
+          </li>
+          <li>
+            <p>
+              (Challenging). If you consider a plot of <m>(x, y, \Re f)</m> or <m>(x, y, \Im f)</m>, what will the Riemann surface look like? You can attempt to plot this using any tool.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exercise>
+    </exercisegroup>
+  </worksheet>
+ </chapter>
+
+
+    <!-- <exercisegroup xml:id="vector-calculus">
     <title>Vector Calculus</title>
     <introduction>
     <p>
@@ -554,6 +751,5 @@ Fluid Mechanics
     </p>
     </statement>
     </exercise>
-  </exercisegroup>
-  </worksheet> -->
- </chapter>
+  </exercisegroup> -->
+
