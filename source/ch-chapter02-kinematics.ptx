@@ -101,6 +101,34 @@
         Lagrangian temperature could be written <m>\mathcal{T}(\bX, t),</m> where <m>\bX</m> is simply a
         fixed quantity for the particular buoy. </p>
 
+      <p> We are now in a position to define the Eulerian velocity field of a fluid.
+        <definition xml:id="def-velocity">
+          <statement>
+            <p> The Eulerian velocity <m>\bu(\bx,t)</m> is the velocity of the fluid at the
+              point with spatial coordinates <m>\bx</m> at time <m>t</m>. Note that, in physical terms
+              this velocity is the average velocity at the time <m>t</m> of the fluid particles
+              (e.g. molecules, ions) in a small box centred on the point <m>\bx</m>. See also <xref
+                ref="rem-continuum"/> for a discussion of the continuum assumption.
+            </p>
+          </statement>
+        </definition>
+      </p>
+      <p> It will be useful to introduce the concept of steady flow.
+        <definition xml:id="def-steady-flow">
+          <statement>
+            <p> A velocity field <m>\bu</m> is defined as steady if it can be written <m>\bu=\bu(\bx)</m>.
+            </p>
+          </statement>
+        </definition>
+        Note that steady flow does not mean that the fluid particles are not moving.
+        It simply means that at a fixed point in space, the Eulerian velocity does not change in time.
+        The Lagrangian velocity of a fluid particle will generally change in time, even in a steady flow.
+      </p>
+      <p>
+        A simple example of the conversion between the Eulerian and Lagrangian reference frames is in
+        <xref ref="ex-eulerian-lagrangian"/>.
+      </p>
+
 
     </introduction>
 
@@ -189,6 +217,7 @@
         derivative of the velocity: <men xml:id="eqn-accel">
           \ba \equiv \DD{\bu}{t} = \pd{\bu}{t} + (\bu \cdot \nabla) \bu.
         </men>
+      You will practice using this formula in <xref ref="ex-eulerian-lagrangian2"/> of the problem set.
       </p>
     </subsection>
   </section>
@@ -247,8 +276,9 @@
         </definition>
       </p>
 
-      <p>Basically, given a velocity field, we freeze time. The streamlines are those curves that are traced out by the velocity field in the "snapshot".</p>
-      
+      <p>Basically, given a velocity field, we freeze time.
+        The streamlines are those curves that are traced out by the velocity field in the "snapshot".</p>
+
       <p>
           <definition xml:id="def-particle-path">
         <title>Pathline or particle path</title>
@@ -302,6 +332,9 @@
       </remark>
     </p> -->
 
+        <p>You will practice the theory of these concepts in <xref ref="ex-particle-paths-streamlines"/>
+          and do a worked example in <xref ref="ex-streamlines-pathlines-streaklines"/> of the problem set.
+        </p>
 
     <subsection>
       <title>Examples of streamlines, pathlines, and streaklines</title>
@@ -412,14 +445,17 @@
     ============================================================ -->
 
 <worksheet xml:id="ws-kinematics">
-<exercisegroup xml:id="kinematics-questions">
+<exercisegroup xml:id="kinematics-exercises">
 <title>Kinematics</title>
 <introduction>
-  <p>The kinematics chapter covered the basic essentials about the measurement and computation of fluid velocities and acceleration. We examined the difference between Eulerian and Lagrangian coordinates and derivatives. Examples of streamlines and velocity fields were examined.</p>
-
+  <p>The kinematics chapter covered the basic essentials about the measurement
+    and computation of fluid velocities and acceleration.
+    We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
+    Examples of streamlines and velocity fields were examined.</p>
 <p>
   <warning>
-  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+  <p>We look to complete worksheets in the week prior to the content being delivered.
+    Once this is done, this disclaimer message will be removed.</p>
 </warning>
 </p>
 </introduction>
@@ -457,7 +493,190 @@
 </exercise>
 
 
-<exercise xml:id="particle-paths-streamlines">
+
+<exercise xml:id="ex-eulerian-lagrangian">
+<title>Eulerian and Lagrangian descriptions</title>
+<statement>
+      <p>
+        A velocity field is described in Eulerian terms in Cartesian coordinates by <m>\mathbf{u}=(-y,x)</m>.
+        What is the Lagrangian position of the particle that starts at the point <m>(x_0,y_0)</m>?
+        Describe its path.
+        What is its velocity?
+        Express the position and velocity in polar coordinates. What do you notice?
+      </p>
+      <answer>
+        <p>
+          A particle moves with the velocity of the fluid, so we have
+          <me>
+            \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
+            \quad\Rightarrow\quad
+            \dd{^2x}{t^2} = -\dd{y}{t} = -x(t).
+          </me>
+          Trying solutions of the form <m>x(t)=\e^{\lambda t}</m> gives <m>\lambda=\pm i</m>,
+          so the general solution is
+          <me>
+            x(t) = Ae^{it}+Be^{-it},
+          </me>
+          or, equivalently,
+          <me>
+            x(t) = C\cos t + D\sin t,
+          </me>
+          where <m>C</m> and <m>D</m> are constants, and
+          <me>
+            y(t) =-\dd{x}{t}= C\sin t - D\cos t.
+          </me>
+          Setting <m>x(0)=x_0</m> and <m>y(0)=y_0</m> gives <m>C=x_0</m> and <m>D=-y_0</m>, so
+          <me>
+            \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
+          </me>
+          This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around the origin.
+          The velocity is
+          <me>
+            (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
+          </me>
+          The calculation works out more simply in polar coordinates; the velocity field is
+          <me>
+            \bu = r\be_\theta,
+          </me>
+          meaning the equation for particle paths is
+          <me>
+            \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
+          </me>
+          Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>,
+          where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
+        </p>
+      </answer>
+</statement>
+</exercise>
+
+<exercise xml:id="ex-eulerian-lagrangian2">
+<title>Eulerian and Lagrangian descriptions</title>
+<statement>
+      <p>
+      <figure xml:id="fig-nozzle">
+        <caption>Sketch of nozzle.</caption>
+        <image source="ch-chapter02-nozzle.png" width="60%">
+        </image>
+      </figure>
+        A fluid flows through the nozzle shown from <m>x=0</m> to <m>x=L</m> with one-dimensional velocity
+        <me>
+          u=U\left(1+\frac{x}{L}\right)
+        </me>
+        in the <m>x</m>-direction, where <m>U</m> and <m>L</m> are constants.
+        Note that, in reality the flow would be two- or three-dimensional,
+        but we ignore this here for simplicity.
+      </p>
+      <p>
+        <ol>
+          <li>
+            <p>
+              What is the particle acceleration?
+            </p>
+            <answer>
+              <p>
+                <md>
+                  <mrow> \ba=\amp\DD{\bu}{t} </mrow>
+                  <mrow> =\amp \pd{\bu}{t} + (\bu \cdot \nabla) \bu</mrow>
+                  <mrow> =\amp0+\left(u\pd{u}{x}+v\pd{u}{y}+w\pd{u}{z}\right)\be_x
+                +\left(u\pd{v}{x}+v\pd{v}{y}+w\pd{v}{z}\right)\be_y
+                +\left(u\pd{w}{x}+v\pd{w}{y}+w\pd{w}{z}\right)\be_z</mrow>
+                  <mrow> =\amp u\pd{u}{x}\be_x</mrow>
+                  <mrow> = \amp U\left(1+\frac{x}{L}\right)\frac{U}{L}\be_x</mrow>
+                  <mrow> = \amp \frac{U^2}{L}\left(1+\frac{x}{L}\right)\be_x</mrow>
+                </md>
+              </p>
+            </answer>
+          </li>
+          <li>
+            <p>
+              If a particle starts at <m>x=0</m> at time <m>t=0</m>, what is its position at time <m>t</m>?
+            </p>
+            <answer>
+              <p>
+                We have
+                <me>
+                  \dd{x}{t}=u(x)=U\left(1+\frac{x}{L}\right).
+                </me>
+                Solving by separation of variables gives,
+                <md>
+                  <mrow>\amp\int_0^x\frac{dx}{1+x/L}=\int_0^t U\,dt</mrow>
+                  <mrow>\Rightarrow\quad\amp L\ln\left(1+\frac{x}{L}\right)=Ut</mrow>
+                  <mrow>\Rightarrow\quad\amp x(t)=L\left(\e^{Ut/L}-1\right).</mrow>
+                </md>
+              </p>
+            </answer>
+          </li>
+          <li>
+            <p>
+              What is its Lagrangian velocity as a function of time?
+            </p>
+            <answer>
+              <p>
+                The velocity is
+                <md>
+                  <mrow>\dd{x}{t}=\amp\dd{}{t}\left(L\left(\e^{Ut/L}-1\right)\right)</mrow>
+                  <mrow>=\amp L\frac{U}{L}\e^{Ut/L}</mrow>
+                  <mrow>=\amp U\e^{Ut/L}.</mrow>
+                </md>
+              </p>
+            </answer>
+          </li>
+          <li>
+            <p>
+              What is its Lagrangian acceleration as a function of time?
+            </p>
+            <answer>
+              <p>
+                The acceleration is
+                <md>
+                  <mrow>\dd{^2x}{t^2}=\amp\dd{}{t}\left(U\e^{Ut/L}\right)</mrow>
+                  <mrow>=\amp \frac{U^2}{L}\e^{Ut/L}.</mrow>
+                </md>
+              </p>
+            </answer>
+          </li>
+          <li>
+            <p>
+              Write the Lagrangian velocity and acceleration as a function of <m>x</m>.
+              Compare with the corresponding Eulerian velocity and particle acceleration.
+              What do you notice?
+            </p>
+            <answer>
+              <p>
+                The velocity is
+                <me>
+                  U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
+                </me>
+                as expected. This is the same as the Eulerian velocity at the particle position.
+                The acceleration is
+                <md>
+                  <mrow>\frac{U^2}{L}\e^{Ut/L}=\amp\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
+                </md>
+                which is the same as the particle acceleration, as expected from the defintion.
+              </p>
+            </answer>
+          </li>
+          <li>
+            <p>
+              How long does it take for a particle to travel from <m>x=0</m> to <m>x=L</m>?
+            </p>
+            <answer>
+              <p>
+                The particle reaches <m>x=L</m> when
+                <md>
+                  <mrow>\amp L\left(\e^{Ut/L}-1\right)=L</mrow>
+                  <mrow>\Rightarrow\quad\amp \e^{Ut/L}=2</mrow>
+                  <mrow>\Rightarrow\quad\amp t=\frac{L}{U}\ln(2).</mrow>
+                </md>
+              </p>
+            </answer>
+          </li>
+        </ol>
+      </p>
+</statement>
+</exercise>
+
+<exercise xml:id="ex-particle-paths-streamlines">
 <title>Particle paths and streamlines</title>
 <statement>
   <ol>
@@ -538,7 +757,7 @@
 </statement>
 </exercise>
 
-<exercise xml:id="streamlines-pathlines-streaklines">
+<exercise xml:id="ex-streamlines-pathlines-streaklines">
 <title>Streamlines, pathlines and streaklines</title>
   <statement>
     <p>
