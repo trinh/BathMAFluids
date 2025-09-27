@@ -597,17 +597,25 @@
         <title>Euler equations</title>
         <statement>
           <p>
-            The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu"/> and momentum equations <xref ref="eqn-consvmoment"/>, considered in the situation of an incompressible fluid:
+            The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu"/>
+            and momentum equations <xref ref="eqn-consvmoment"/>, considered in the situation of an
+            incompressible fluid:
             <mdn>
               <mrow>\nabla \cdot \bu \amp= 0, </mrow>
               <mrow xml:id="eqn-euler-momentum"> 
                \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) \amp= - \frac{1}{\rho}\nabla p + \bg.
             </mrow>
           </mdn>
-          Note this is then four scalar equations for the three unknown velocities in <m>\bu</m> and pressure <m>p</m>. We shall assume in the course that incompressible fluids have constant density, <m>\rho</m>. The above Euler equations include the (gravitational) body force <m>\bg</m>.
+          Note this is then four scalar equations for the three unknown velocities in <m>\bu</m>
+          and pressure <m>p</m>. We shall assume in the course that incompressible fluids have constant
+          density, <m>\rho</m>. The above Euler equations include the (gravitational) body force <m>\bg</m>.
           </p>
         </statement>
       </definition>
+    </p>
+    <p>
+      Simple applications of the Euler equations are given in <xref ref="ex-kelvin-circulation-theorem"/>,
+      <xref ref="ex-fluid-pressure-uniform-velocity"/> and <xref ref="ex-piston-fluid-problem"/>
     </p>
 
     <subsection xml:id="subsec-euler-BCs">
@@ -639,7 +647,10 @@
       </p>
 
       <p>
-        It turns out that the above no-flux condition is sufficient to provide well-posed boundary conditions for most inviscid fluids. Note that in particular, we have not constrained the tangential velocity of the fluid, i.e. <m>\bu \cdot \bt</m>, where <m>\bt</m> is the tangential vector at the boundary. 
+        It turns out that the above no-flux condition is sufficient to provide well-posed boundary
+        conditions for most inviscid fluids. Note that in particular, we have not constrained the
+        tangential velocity of the fluid, i.e. <m>\bu \cdot \bt</m>, where <m>\bt</m> is the tangential
+        vector at the boundary. 
       </p>
 
       <p>
@@ -662,7 +673,9 @@
       <title>Bernoulli's equation</title>
 
       <p>
-        There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <xref ref="eqn-euler-momentum"/> and yields the famous <em>Bernoulli equation(s)</em>.</p>
+        There is a reformulation of the momentum equations that proves to be useful. In essence,
+        it emerges from attempting to integrate the momentum equation <xref ref="eqn-euler-momentum"/>
+        and yields the famous <em>Bernoulli equation(s)</em>.</p>
 
 
         <p>
@@ -841,16 +854,23 @@
           </p>
         </proof>
       </p>
+      <p>
+        You will prove this result from first principles in <xref ref="ex-vorticity-equation"/>.
+      </p>
 
       <subsection xml:id="subsec-potential">
         <title>Potential flow</title>
         
         <p>
-          We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in <xref ref="def-euler"/> and in particular, the reduction of the mass conservation equation to <m>\nabla \cdot \bu = 0</m>.
+          We are interested in the simplest scenarios that will result in reducing the governing equations.
+          Previosly, we introduced the notion of incompressible flows,
+          which results in the Euler equations in <xref ref="def-euler"/> and in particular,
+          the reduction of the mass conservation equation to <m>\nabla \cdot \bu = 0</m>.
         </p>
 
         <p>
-          We attempt to reduce further by assuming that the fluid is <em>irrotational</em>. This lends to the following definition. 
+          We attempt to reduce further by assuming that the fluid is <em>irrotational</em>.
+          This lends to the following definition. 
 
           <definition xml:id="def-irrotational">
             <title>Irrotational flows</title>
@@ -898,8 +918,9 @@
           </proof>
         </p>
       </subsection>
-
-      
+      <p>
+        You will practice an application of Bernoulli's equation in <xref ref="ex-bernoulli-streamline"/>.
+      </p>
     </section>
   
 <worksheet xml:id="ws-equations">
@@ -908,7 +929,9 @@
 <title>Governing equations</title>
 <introduction>
 <p>
-This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow, starting from first principles, and deriving the conservation laws using vector calculus. Eventually, we studied different variations of the Euler equations and its consequences. 
+This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow,
+starting from first principles, and deriving the conservation laws using vector calculus.
+Eventually, we studied different variations of the Euler equations and its consequences. 
 </p>
 <p>
 <warning>
@@ -986,7 +1009,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
 </statement>
 </exercise>
 
-<exercise xml:id="kelvin-circulation-theorem">
+<exercise xml:id="ex-kelvin-circulation-theorem">
 <title>Kelvin’s Circulation Theorem</title>
  <statement>
    <p>
@@ -1037,7 +1060,7 @@ The final equality above follows because the line integral of a gradient around 
 </statement>
 </exercise>
 
-<exercise xml:id="fluid-pressure-uniform-velocity">
+<exercise xml:id="ex-fluid-pressure-uniform-velocity">
 <title>Pressure field in uniform flow</title>
   <statement>
     <p>
@@ -1124,7 +1147,7 @@ The final equality above follows because the line integral of a gradient around 
   </statement>
 </exercise>
 
-<exercise xml:id="piston-fluid-problem">
+<exercise xml:id="ex-piston-fluid-problem">
 <title>Piston problem</title>
   <statement>
     <figure xml:id="fig-piston">
@@ -1165,7 +1188,7 @@ The final equality above follows because the line integral of a gradient around 
   </answer>
 </exercise>
 
-<exercise>
+<exercise xml:id="ex-vorticity-equation">
   <title>The vorticity equation</title>
   <statement>
     <p>
@@ -1267,6 +1290,97 @@ The final equality above follows because the line integral of a gradient around 
         </answer>
       </li>
     </ol>
+  </statement>
+</exercise>
+
+<exercise xml:id="ex-bernoulli-streamline">
+  <title>Using streamlines: The clepsydra</title>
+  <statement>
+  <p>
+    One of the earliest means for measuring the passage of time, invented by the ancient
+    Egyptians, was the <term>clepsydra</term> (or ‘water thief’): a large jar with a hole in its base is
+    filled with water. The shape of the jar was such that the interval of time taken for the
+    water surface to pass two equally-spaced markers on the side of the jar is constant.
+  </p>
+  <p>
+    In this question you will determine the shape of jar required to achieve this.
+    In particular, we denote the (axisymmetric) jar’s radius a height <m>z</m> above the hole by <m>a(z)</m>.
+    The radius of the hole, <m>a_h \ne a(0)</m>, in general.
+  </p>
+  <ol marker="(a)">
+    <li>
+      <p>Explain why the curve <m>r = a(z)</m> is a streamline.</p>
+      <answer>
+      <p>
+        The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>,
+        so that no fluid leaves or enters the jar through its sides. Thus,
+        <me>
+          \bu \cdot \bn = u_r - u_z \pd{a}{z} = 0.
+        </me>
+        This is precisely the condition for <m>r = a(z)</m> to be a streamline.
+      </p>
+    </answer>
+    </li>
+    <li>
+      <p>
+        If the surface of the water lies at <m>z = h(t)</m>, use an appropriate form of
+        Bernoulli’s principle to calculate the speed of liquid, <m>u</m>, leaving the jar at <m>z = 0</m>.
+      </p>
+      <p>
+        [You may assume that the desired surface speed <m>u_S = |\dot{h}| \ll u</m>, so that the flow is
+        approximately steady and that the fluid pressure is atmospheric at <m>z = 0</m>.]
+      </p>
+      <answer>
+        <p>
+          We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface
+          at <m>z = h(t)</m> and the fluid leaving the hole at <m>z = 0</m>.
+          At the free surface, the pressure is atmospheric, <m>p = p_{atm}</m>, and the speed is
+          <m>u_S\sqrt{1+a^{'2}}</m>.
+          At the hole, the pressure is also atmospheric, <m>p = p_{atm}</m>, and the velocity is <m>u</m>.
+          Thus, Bernoulli's equation for the streamline joining the two points gives
+          <me>
+            \frac{p_{atm}}{\rho} + \frac12 u_S^2(1+a^{'2}) + gh = \frac{p_{atm}}{\rho} + \frac12 u^2.
+          </me>
+          Assuming that <m>u_S \ll u</m>, this simplifies to
+          <me>
+            gh = \frac12 u^2.
+          </me>
+        </p>
+      </answer>
+    </li>
+    <li>
+      <p>
+        Use the principle of conservation of mass to link <m>u_S</m>, <m>u</m>, <m>a_h</m>
+        and <m>a(h(t))</m>;
+        thereby determine the correct shape for a clepsydra.
+      </p>
+      <answer>
+        <p>
+          The volume flux out of the hole is <m>\pi a_h^2 u</m>, while the rate of decrease of
+          the volume of fluid in the jar is <m>\pi a(h(t))^2 u_S</m>. Conservation of mass
+          therefore gives
+          <me>
+            \pi a^2 u_S = \pi a_h^2 u,
+          </me>
+          or
+          <me>
+            u_S = \frac{a_h^2}{a^2}u.
+          </me>
+          Using the result from part (b) to eliminate <m>u</m> gives
+          <me>
+            u_S = \frac{a_h^2}{a^2}\sqrt{2gh}.
+          </me>
+          We require <m>u_S</m> to be independent of time so that equally spaced intervals are
+          traversed in equal times. Hence,
+          <me>
+            a=\left(\frac{a_h^2\sqrt{2g}}{u_S}\right)^{1/2} h^{1/4}.
+          </me>
+          The terms in the brackets are constant, so we have that
+          the radius of the jar must vary as the fourth root of the height.
+        </p>
+      </answer>
+    </li>
+  </ol>
   </statement>
 </exercise>
 
