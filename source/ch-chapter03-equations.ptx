@@ -196,8 +196,7 @@
         space, at the expense of adding the Jacobian factor. We now write <md>
                 <mrow> \dd{I}{t} \amp= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
               </md>
-        and the material derivative passes through since the domain is fixed. The <xref
-                ref="thm-DDt" /> now allows us to convert the material derivative to regular
+        and the material derivative passes through since the domain is fixed. The <xref ref="thm-material-derivative"/> now allows us to convert the material derivative to regular
         partial derivatives. By the chain rule: <md>
                 <mrow>\DD{(fJ)}{t} \amp= \DD{f}{t}J + f\DD{J}{t} </mrow>
                 <mrow> \amp= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
@@ -284,7 +283,16 @@
 
       <proof>
         <p>
-          We consider the time differentiation of the mass integral. By <xref ref="thm-RTT"/>, we can use the Reynolds' transport theorem to pass the time derivative through the integral. This gives:
+          We consider the time differentiation of the mass integral,
+          <me>
+            \iiint_{V(t)} \rho \, \de{V},
+          </me>
+         for an arbitrary material volume <m>V(t)</m> in the fluid. 
+        </p>
+
+          
+          
+         <p> By <xref ref="thm-RTT"/>, we can use the Reynolds' transport theorem to pass the time derivative through the integral. This gives:
           <me>
             \dd{}{t}\iiint_{V(t)} \rho \de{V} = \iiint_{V(t)} \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V},
           </me>
@@ -484,11 +492,14 @@
      <me>
       \iiint_{V} \left( \rho \DD{\bu}{t} + \nabla p - \rho \bg\right) \, \de{V} = 0.
      </me>
-    Again, the above holds for all material volumes <m>V</m> and therefore it must follow that the integrand is zero. We conclude thus with the following result as stated at the start of this section.
+    Again, the above holds for all material volumes <m>V</m> and therefore it must follow that the integrand is zero. We conclude thus with the following result as stated in <xref ref="thm-momentum"/>:
     <me>
     \rho \DD{\bu}{t} = - \nabla p + \rho \bg.
     </me>
-    
+    </p>
+
+    <p>
+      In <xref ref="ex-euler-check"/>, you will practice the derivation of the mass and momentum equations.
     </p>
     </subsection>
 
@@ -608,6 +619,10 @@
           </p>
         </statement>
       </definition>
+    </p>
+
+    <p>
+      You will consider the derivation of the Euler equations as part of <xref ref="ex-euler-check"/>.
     </p>
 
     <subsection xml:id="subsec-euler-BCs">
@@ -916,6 +931,97 @@ This chapter focused on deriving the key Euler equations for an inviscid and inc
 </warning>
 </p>
 </introduction>
+
+
+<exercise xml:id="ex-bump">
+  <title>Bump lemma</title>
+ 
+  <p>
+    Within our derivations of the governing equations, we often make use of the following lemma: 
+
+    <lemma xml:id="lem-bump">
+      <title>Bump lemma</title>
+      <statement>
+        <p>
+        Let <m>f(\bx)</m> be a sufficiently smooth function defined on <m>\Omega \subseteq \mathbb{R}^n</m>. Suppose it is the case that 
+        <me>
+          \int_V f(\bx) \, \de{V} = 0,
+        </me>
+        for all <m>V \subseteq \Omega</m>. Then 
+        <me>
+          f(\bx) \equiv 0
+        </me>
+        in <m>\Omega</m>.
+        </p>
+      </statement>
+    </lemma>
+  </p>
+
+  <p>
+    Give a proof of the lemma.
+  </p>
+
+  <answer>
+    <p>
+      This proof assumes that the function <m>f</m> is not pathological (e.g. it cannot oscillate infinitely fast, take different values for rational vs. irrational, etc.). That's what we mean by "sufficiently smooth". 
+    </p>
+    <p>
+      Assume that there exists a point <m>\bx_0 \in \Omega</m> where <m>f(\bx_0) \neq 0</m>. Suppose without loss of generality <m>f > 0</m> here. Since <m>f</m> is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near <m>\bx_0</m> where <m>f > 0</m> everywhere in this neighbourhood, say <m>V_0</m>. Then <m>\int_{V_0} f \, \de{V} = 0</m>, contradicting the assumption. Therefore <m>f</m> must be zero everywhere.
+    </p>
+  </answer>
+</exercise>
+
+<exercise xml:id="ex-leibnitz-rule">
+  <title>Leibnitz's rule</title>
+ 
+  <p>
+    The Reynolds' transport theorem <xref ref="thm-RTT"/>, which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:
+    <mdn xml:id="eqn-leibnitz-rule">
+     <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
+     <mrow> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} + f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
+    </mdn>
+
+
+    <ol>
+      <li>
+        <p>
+          Use the following picture to provide an intuitive explanation of why the result is true (explained in terms of the association of integrals with areas). 
+        </p>
+      </li>
+    </ol>
+  </p>
+  
+  
+</exercise>
+
+
+<exercise xml:id="ex-euler-check">
+  <title>Derivation of governing equations</title>
+ 
+  <p>
+    Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid, use Reynolds' Transport Theorem <xref ref="eqn-RTT"/> to derive the equations:
+    <mdn>
+      <mrow>\pd{\rho}{t} + \nabla \cdot(\rho \bu) = 0, </mrow>
+      <mrow>\DD{\bu}{t} = -\frac{1}{\rho} \nabla p + \bg. </mrow>
+    </mdn>
+  </p>
+
+  <p>
+    What additional assumptions are required to transform the set of equations to the Euler equations of <xref ref="def-euler"/>? Apply these assumptions and conclude with the Euler equations.
+  </p>
+
+  <answer>
+    <p>
+      The proof of the continuity equation is given in <xref ref="thm-mass"/> and the proof of the momentum equation is given in <xref ref="thm-momentum"/>, so make sure you can follow these arguments and produce your own notes. 
+    </p>
+
+    <p>
+      The derivation of the Euler equations, as given in <xref ref="def-euler"/> requires the additional assumption of an incompressible fluid, following <xref ref="def-incompressible"/>. Incompressibility implies that <m>\nabla \cdot \bu = 0</m>, and this equation then replaces the continuity equation.
+    </p>
+  </answer>
+  
+  
+</exercise>
   
 <exercise xml:id="continuum-approximation">
 <title>Continuum approximation</title>

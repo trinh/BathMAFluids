@@ -157,11 +157,13 @@
       </remark>
 
       <p> The natural question is how the two derivatives relate to one another. This is given by
-        the following theorem. <theorem xml:id="thm-DDt">
+        the following theorem. 
+        <theorem xml:id="thm-material-derivative">
           <title>The material/convective derivative</title>
           <statement>
             <p> The <em>material or convective derivative</em> can be defined in terms of Eulerian derivative in the
-        following way: <men xml:id="eqn-DDt">
+        following way: 
+        <men xml:id="eqn-DDt">
                 \DD{}{t} = \pd{}{t} + (\bu \cdot \nabla).
               </men>
             </p>
@@ -178,10 +180,7 @@
       </p>
 
       <p>
-        <note>
-          <p>You are asked to work out the above proof more carefully using individual coordinates
-            (instead of vector notation) in the problem set.</p>
-        </note>
+      The proof to <xref ref="thm-material-derivative"/> seems to use magic vector operations! In <xref ref="ex-material-derivative"/>, we ask you to check this more carefully by expanding the vector operations explicitly.
       </p>
 
       <p> We can now apply the above result to the question of how to calculate the acceleration
@@ -424,6 +423,40 @@
 </warning>
 </p>
 </introduction>
+
+<exercise xml:id="ex-material-derivative">
+  <title>Derivation of the material derivative</title>
+ 
+  <p>
+  Prove the Eulerian representation of the material derivative, as presented in <xref ref="thm-material-derivative"/> by manually expanding the components of the function. That is, consider a scalar function <m>f(\bx, t)</m>. Let the spatial coordinate follow <m>\bx = \bx(\bX,t)</m> and hence is defined by a specified material label <m>\bX</m>. Then derive the identity for
+  <me>
+    \DD{f}{t} = \pd{f}{t} \biggr\rvert_{\bX},
+  </me>
+  according to <xref ref="def-eulerlag"/>.
+  </p>
+
+  <answer>
+    <p>
+      This is the chain rule. Denote the three components of <m>\bx = (x_1, x_2, x_3)</m>. Then we differentiate through both outer arguments of <m>f</m>:
+      <md>
+        <mrow>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} \amp= \pd{f}{t}\biggr\rvert_{\bx} + \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} </mrow>
+      </md>
+    </p>
+
+    <p>
+      The factor,
+      <me>
+        \pd{x_i}{t}\biggr\rvert_{\bX} = \dd{x_i}{t} \equiv u_i,
+      </me>
+      corresponds to the velocity component in each direction. Then 
+      <me>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} = \pd{f}{t} + \bu \cdot \nabla f,
+      </me>
+      as desired.
+    </p>
+  </answer>
+</exercise>
+
+
 <exercise xml:id="particle-paths-streamlines">
 <title>Particle paths and streamlines</title>
 <statement>
