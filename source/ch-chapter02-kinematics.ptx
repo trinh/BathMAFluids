@@ -120,7 +120,8 @@
             </p>
           </statement>
         </definition>
-        Note that steady flow does not mean that the fluid particles are not moving.
+      </p>
+      <p>Note that steady flow does not mean that the fluid particles are not moving.
         It simply means that at a fixed point in space, the Eulerian velocity does not change in time.
         The Lagrangian velocity of a fluid particle will generally change in time, even in a steady flow.
       </p>
@@ -499,14 +500,28 @@
 <statement>
       <p>
         A velocity field is described in Eulerian terms in Cartesian coordinates by <m>\mathbf{u}=(-y,x)</m>.
+
+        <ol>
+          <li>
+            <p>
         What is the Lagrangian position of the particle that starts at the point <m>(x_0,y_0)</m>?
         Describe its path.
         What is its velocity?
+            </p>
+          </li>
+          <li>
+            <p>
         Express the position and velocity in polar coordinates. What do you notice?
+            </p>
+          </li>
+        </ol>
       </p>
       <answer>
         <p>
-          A particle moves with the velocity of the fluid, so we have
+          <ol>
+            <li>
+              <p>
+          A particle moves with the velocity of the fluid. Then it must satisfy the equations
           <me>
             \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
             \quad\Rightarrow\quad
@@ -534,16 +549,23 @@
           <me>
             (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
           </me>
-          The calculation works out more simply in polar coordinates; the velocity field is
+              </p>
+            </li>
+            <li>
+          <p>The calculation works out more simply in polar coordinates; the velocity field is
           <me>
             \bu = r\be_\theta,
           </me>
-          meaning the equation for particle paths is
+          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eqn-appendix-polar-er-etheta"/>. Then the equation for particle paths is
           <me>
             \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
           </me>
           Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>,
           where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
+        </p>
+            </li>
+          </ol>
+
         </p>
       </answer>
 </statement>

@@ -21,10 +21,28 @@
     <section xml:id="sec-vector-calculus-planepolar">
       <title>Identities for plane polar coordinates</title>
 
-    <mdn>
-      <mrow xml:id="eqn-identity-grad-polar">\nabla \phi \amp= \pd{\phi}{r}\be_r + \frac{1}{r} \pd{\phi}{\theta}\be_{\theta} </mrow>
-      <mrow xml:id="eqn-identity-curlpolar">\nabla \times \bu \amp= \left(\frac{1}{r} \pd{(ru_\theta)}{r} - \frac{1}{r} \pd{u_r}{\theta}\right) \bk </mrow>
-    </mdn>
+    <p>
+      The conversion from polar <m>(r, \theta)</m> coordinates and Cartesian <m>(x, y)</m> is given by 
+     <men xml:id="eqn-appendix-polarxy">
+     x = r\cos\theta, \qquad y = r\sin\theta. 
+     </men>
+    </p>
+
+    <p>
+      The corresponding unit basis vectors are 
+      <men xml:id="eqn-appendix-polar-er-etheta">
+       \be_r = \bi \cos\theta + \bj \sin\theta, \qquad \be_{\theta} = -\bi \sin\theta + \bj \cos\theta,  
+      </men>
+      where the usual Cartesian basis vectors are <m>\bi</m> and <m>\bj</m>.
+      
+    </p>
+
+    <p> The gradient and curl operators are converted as 
+      <mdn>
+        <mrow xml:id="eqn-identity-grad-polar">\nabla \phi \amp= \pd{\phi}{r}\be_r + \frac{1}{r} \pd{\phi}{\theta}\be_{\theta} </mrow>
+        <mrow xml:id="eqn-identity-curlpolar">\nabla \times \bu \amp= \left(\frac{1}{r} \pd{(ru_\theta)}{r} - \frac{1}{r} \pd{u_r}{\theta}\right) \bk </mrow>
+      </mdn>
+    </p>
       
     </section>
   </appendix>
