@@ -333,13 +333,72 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="ex-eulerian-lagrangian"><h4 class="heading">
-<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
+<article class="exercise exercise-like" id="ex-material-derivative"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivation of the material derivative.</span>
 </h4>
-<div class="para" id="ex-eulerian-lagrangian-2-1">A velocity field is described in Eulerian terms in Cartesian coordinates by <span class="process-math">\(\mathbf{u}=(-y,x)\text{.}\)</span> What is the Lagrangian position of the particle that starts at the point <span class="process-math">\((x_0,y_0)\text{?}\)</span> Describe its path. What is its velocity? Express the position and velocity in polar coordinates. What do you notice?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ex-material-derivative-2">
+<div class="para">Prove the Eulerian representation of the material derivative, as presented in <a href="sec-eulerlagrang.html#thm-material-derivative" class="xref" data-knowl="./knowl/xref/thm-material-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.5: The material/convective derivative">Theorem 2.1.5</a> by manually expanding the components of the function. That is, consider a scalar function <span class="process-math">\(f(\bx, t)\text{.}\)</span> Let the spatial coordinate follow <span class="process-math">\(\bx = \bx(\bX,t)\)</span> and hence is defined by a specified material label <span class="process-math">\(\bX\text{.}\)</span> Then derive the identity for</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-material-derivative.html ./knowl/xref/def-eulerlag.html">
+\begin{equation*}
+\DD{f}{t} = \pd{f}{t} \biggr\rvert_{\bX},
+\end{equation*}
+</div>
+<div class="para">according to <a href="sec-eulerlagrang.html#def-eulerlag" class="xref" data-knowl="./knowl/xref/def-eulerlag.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.3">Definition 2.1.3</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-material-derivative-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-material-derivative-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="ex-material-derivative-3-1">
+<div class="para">This is the chain rule. Denote the three components of <span class="process-math">\(\bx = (x_1, x_2, x_3)\text{.}\)</span> Then we differentiate through both outer arguments of <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-material-derivative-3-1-3">
+\begin{align*}
+\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} \amp= \pd{f}{t}\biggr\rvert_{\bx} + \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-material-derivative-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-material-derivative-3-2">
+<div class="para">The factor,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{x_i}{t}\biggr\rvert_{\bX} = \dd{x_i}{t} \equiv u_i,
+\end{equation*}
+</div>
+<div class="para">corresponds to the velocity component in each direction. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} = \pd{f}{t} + \bu \cdot \nabla f,
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-material-derivative-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.1.1"><a href="#ex-material-derivative-3" title="Copy heading and permalink for Answer 2.3.1.1" aria-label="Copy heading and permalink for Answer 2.3.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Worksheet Exercise 2.3.1: Derivation of the material derivative"><a href="#ex-material-derivative" title="Copy heading and permalink for Worksheet Exercise 2.3.1: Derivation of the material derivative" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.1: Derivation of the material derivative">🔗</a></div></article><article class="exercise exercise-like" id="ex-eulerian-lagrangian"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
+</h4>
+<div class="para logical" id="ex-eulerian-lagrangian-2-1">
+<div class="para">A velocity field is described in Eulerian terms in Cartesian coordinates by <span class="process-math">\(\mathbf{u}=(-y,x)\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="ex-eulerian-lagrangian-2-1-2">
+<li id="ex-eulerian-lagrangian-2-1-2-1">
+<div class="para" id="ex-eulerian-lagrangian-2-1-2-1-1">What is the Lagrangian position of the particle that starts at the point <span class="process-math">\((x_0,y_0)\text{?}\)</span> Describe its path. What is its velocity?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#ex-eulerian-lagrangian-2-1-2-1" title="Copy heading and permalink for Item 2.3.2.a" aria-label="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="ex-eulerian-lagrangian-2-1-2-2">
+<div class="para" id="ex-eulerian-lagrangian-2-1-2-2-1">Express the position and velocity in polar coordinates. What do you notice?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#ex-eulerian-lagrangian-2-1-2-2" title="Copy heading and permalink for Item 2.3.2.b" aria-label="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <details id="ex-eulerian-lagrangian-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para logical" id="ex-eulerian-lagrangian-2-2-1">
-<div class="para">A particle moves with the velocity of the fluid, so we have</div>
+<ol class="lower-alpha lower-alpha-level-1" id="ex-eulerian-lagrangian-2-2-1-1">
+<li id="ex-eulerian-lagrangian-2-2-1-1-1">
+<div class="para logical" id="ex-eulerian-lagrangian-2-2-1-1-1-1">
+<div class="para">A particle moves with the velocity of the fluid. Then it must satisfy the equations</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
@@ -377,25 +436,36 @@ y(t) =-\dd{x}{t}= C\sin t - D\cos t.
 (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.a"><a href="#ex-eulerian-lagrangian-2-2-1-1-1" title="Copy heading and permalink for Item 2.3.2.a" aria-label="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+</li>
+<li id="ex-eulerian-lagrangian-2-2-1-1-2">
+<div class="para logical" id="ex-eulerian-lagrangian-2-2-1-1-2-1">
 <div class="para">The calculation works out more simply in polar coordinates; the velocity field is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-appendix-polar-er-etheta.html">
 \begin{equation*}
 \bu = r\be_\theta,
 \end{equation*}
 </div>
-<div class="para">meaning the equation for particle paths is</div>
-<div class="displaymath process-math">
+<div class="para">where <span class="process-math">\(\be_{\theta}\)</span> is the angular unit vector given in <a href="sec-vector-calculus-planepolar.html#eqn-appendix-polar-er-etheta" class="xref" data-knowl="./knowl/xref/eqn-appendix-polar-er-etheta.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation A.1.2">(A.1.2)</a>. Then the equation for particle paths is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-appendix-polar-er-etheta.html">
 \begin{equation*}
 \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
 \end{equation*}
 </div>
 <div class="para">Thus <span class="process-math">\(r(t)=r_0=\sqrt{x_0^2+y_0^2}\)</span> and <span class="process-math">\(\theta(t)=\theta_0+t\text{,}\)</span> where <span class="process-math">\(\theta_0=\tan^{-1}(y_0/x_0)\text{.}\)</span> The velocity is <span class="process-math">\(\bu(t)=r_0\be_{\theta}(t)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.3.2.b"><a href="#ex-eulerian-lagrangian-2-2-1-1-2" title="Copy heading and permalink for Item 2.3.2.b" aria-label="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+</li>
+</ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 1"><a href="#ex-eulerian-lagrangian-2-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Worksheet Exercise 2.3.1: Eulerian and Lagrangian descriptions"><a href="#ex-eulerian-lagrangian" title="Copy heading and permalink for Worksheet Exercise 2.3.1: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.1: Eulerian and Lagrangian descriptions">🔗</a></div></article><article class="exercise exercise-like" id="ex-eulerian-lagrangian2"><h4 class="heading">
-<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
+</div></details><div class="autopermalink" data-description="Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions"><a href="#ex-eulerian-lagrangian" title="Copy heading and permalink for Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions">🔗</a></div></article><article class="exercise exercise-like" id="ex-eulerian-lagrangian2"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
 </h4>
 <div class="para logical" id="ex-eulerian-lagrangian2-2-1">
 <div class="para">
@@ -429,8 +499,8 @@ u=U\left(1+\frac{x}{L}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.a.1"><a href="#ex-eulerian-lagrangian2-2-2-1-1-2" title="Copy heading and permalink for Answer 2.3.2.a.1" aria-label="Copy heading and permalink for Answer 2.3.2.a.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.a"><a href="#ex-eulerian-lagrangian2-2-2-1-1" title="Copy heading and permalink for Item 2.3.2.a" aria-label="Copy heading and permalink for Item 2.3.2.a">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.a.1"><a href="#ex-eulerian-lagrangian2-2-2-1-1-2" title="Copy heading and permalink for Answer 2.3.3.a.1" aria-label="Copy heading and permalink for Answer 2.3.3.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.a"><a href="#ex-eulerian-lagrangian2-2-2-1-1" title="Copy heading and permalink for Item 2.3.3.a" aria-label="Copy heading and permalink for Item 2.3.3.a">🔗</a></div>
 </li>
 <li id="ex-eulerian-lagrangian2-2-2-1-2">
 <div class="para" id="ex-eulerian-lagrangian2-2-2-1-2-1">If a particle starts at <span class="process-math">\(x=0\)</span> at time <span class="process-math">\(t=0\text{,}\)</span> what is its position at time <span class="process-math">\(t\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -453,8 +523,8 @@ u=U\left(1+\frac{x}{L}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.b.1"><a href="#ex-eulerian-lagrangian2-2-2-1-2-2" title="Copy heading and permalink for Answer 2.3.2.b.1" aria-label="Copy heading and permalink for Answer 2.3.2.b.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.b"><a href="#ex-eulerian-lagrangian2-2-2-1-2" title="Copy heading and permalink for Item 2.3.2.b" aria-label="Copy heading and permalink for Item 2.3.2.b">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.b.1"><a href="#ex-eulerian-lagrangian2-2-2-1-2-2" title="Copy heading and permalink for Answer 2.3.3.b.1" aria-label="Copy heading and permalink for Answer 2.3.3.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.b"><a href="#ex-eulerian-lagrangian2-2-2-1-2" title="Copy heading and permalink for Item 2.3.3.b" aria-label="Copy heading and permalink for Item 2.3.3.b">🔗</a></div>
 </li>
 <li id="ex-eulerian-lagrangian2-2-2-1-3">
 <div class="para" id="ex-eulerian-lagrangian2-2-2-1-3-1">What is its Lagrangian velocity as a function of time?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -471,8 +541,8 @@ u=U\left(1+\frac{x}{L}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.c.1"><a href="#ex-eulerian-lagrangian2-2-2-1-3-2" title="Copy heading and permalink for Answer 2.3.2.c.1" aria-label="Copy heading and permalink for Answer 2.3.2.c.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.c"><a href="#ex-eulerian-lagrangian2-2-2-1-3" title="Copy heading and permalink for Item 2.3.2.c" aria-label="Copy heading and permalink for Item 2.3.2.c">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.c.1"><a href="#ex-eulerian-lagrangian2-2-2-1-3-2" title="Copy heading and permalink for Answer 2.3.3.c.1" aria-label="Copy heading and permalink for Answer 2.3.3.c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.c"><a href="#ex-eulerian-lagrangian2-2-2-1-3" title="Copy heading and permalink for Item 2.3.3.c" aria-label="Copy heading and permalink for Item 2.3.3.c">🔗</a></div>
 </li>
 <li id="ex-eulerian-lagrangian2-2-2-1-4">
 <div class="para" id="ex-eulerian-lagrangian2-2-2-1-4-1">What is its Lagrangian acceleration as a function of time?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -488,8 +558,8 @@ u=U\left(1+\frac{x}{L}\right)
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.d.1"><a href="#ex-eulerian-lagrangian2-2-2-1-4-2" title="Copy heading and permalink for Answer 2.3.2.d.1" aria-label="Copy heading and permalink for Answer 2.3.2.d.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.d"><a href="#ex-eulerian-lagrangian2-2-2-1-4" title="Copy heading and permalink for Item 2.3.2.d" aria-label="Copy heading and permalink for Item 2.3.2.d">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.d.1"><a href="#ex-eulerian-lagrangian2-2-2-1-4-2" title="Copy heading and permalink for Answer 2.3.3.d.1" aria-label="Copy heading and permalink for Answer 2.3.3.d.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.d"><a href="#ex-eulerian-lagrangian2-2-2-1-4" title="Copy heading and permalink for Item 2.3.3.d" aria-label="Copy heading and permalink for Item 2.3.3.d">🔗</a></div>
 </li>
 <li id="ex-eulerian-lagrangian2-2-2-1-5">
 <div class="para" id="ex-eulerian-lagrangian2-2-2-1-5-1">Write the Lagrangian velocity and acceleration as a function of <span class="process-math">\(x\text{.}\)</span> Compare with the corresponding Eulerian velocity and particle acceleration. What do you notice?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -511,8 +581,8 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 <div class="para">which is the same as the particle acceleration, as expected from the defintion.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.e.1"><a href="#ex-eulerian-lagrangian2-2-2-1-5-2" title="Copy heading and permalink for Answer 2.3.2.e.1" aria-label="Copy heading and permalink for Answer 2.3.2.e.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.e"><a href="#ex-eulerian-lagrangian2-2-2-1-5" title="Copy heading and permalink for Item 2.3.2.e" aria-label="Copy heading and permalink for Item 2.3.2.e">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.e.1"><a href="#ex-eulerian-lagrangian2-2-2-1-5-2" title="Copy heading and permalink for Answer 2.3.3.e.1" aria-label="Copy heading and permalink for Answer 2.3.3.e.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.e"><a href="#ex-eulerian-lagrangian2-2-2-1-5" title="Copy heading and permalink for Item 2.3.3.e" aria-label="Copy heading and permalink for Item 2.3.3.e">🔗</a></div>
 </li>
 <li id="ex-eulerian-lagrangian2-2-2-1-6">
 <div class="para" id="ex-eulerian-lagrangian2-2-2-1-6-1">How long does it take for a particle to travel from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=L\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -529,14 +599,14 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.2.f.1"><a href="#ex-eulerian-lagrangian2-2-2-1-6-2" title="Copy heading and permalink for Answer 2.3.2.f.1" aria-label="Copy heading and permalink for Answer 2.3.2.f.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.2.f"><a href="#ex-eulerian-lagrangian2-2-2-1-6" title="Copy heading and permalink for Item 2.3.2.f" aria-label="Copy heading and permalink for Item 2.3.2.f">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.3.f.1"><a href="#ex-eulerian-lagrangian2-2-2-1-6-2" title="Copy heading and permalink for Answer 2.3.3.f.1" aria-label="Copy heading and permalink for Answer 2.3.3.f.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.3.f"><a href="#ex-eulerian-lagrangian2-2-2-1-6" title="Copy heading and permalink for Item 2.3.3.f" aria-label="Copy heading and permalink for Item 2.3.3.f">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions"><a href="#ex-eulerian-lagrangian2" title="Copy heading and permalink for Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.2: Eulerian and Lagrangian descriptions">🔗</a></div></article><article class="exercise exercise-like" id="ex-particle-paths-streamlines"><h4 class="heading">
-<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Particle paths and streamlines.</span>
+<div class="autopermalink" data-description="Worksheet Exercise 2.3.3: Eulerian and Lagrangian descriptions"><a href="#ex-eulerian-lagrangian2" title="Copy heading and permalink for Worksheet Exercise 2.3.3: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.3: Eulerian and Lagrangian descriptions">🔗</a></div></article><article class="exercise exercise-like" id="ex-particle-paths-streamlines"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Particle paths and streamlines.</span>
 </h4>
 <ol class="lower-alpha lower-alpha-level-1" id="ex-particle-paths-streamlines-2-1">
 <li id="ex-particle-paths-streamlines-2-1-1">
@@ -560,8 +630,8 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.3.a.1"><a href="#ex-particle-paths-streamlines-2-1-1-2" title="Copy heading and permalink for Answer 2.3.3.a.1" aria-label="Copy heading and permalink for Answer 2.3.3.a.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.3.a"><a href="#ex-particle-paths-streamlines-2-1-1" title="Copy heading and permalink for Item 2.3.3.a" aria-label="Copy heading and permalink for Item 2.3.3.a">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.4.a.1"><a href="#ex-particle-paths-streamlines-2-1-1-2" title="Copy heading and permalink for Answer 2.3.4.a.1" aria-label="Copy heading and permalink for Answer 2.3.4.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.4.a"><a href="#ex-particle-paths-streamlines-2-1-1" title="Copy heading and permalink for Item 2.3.4.a" aria-label="Copy heading and permalink for Item 2.3.4.a">🔗</a></div>
 </li>
 <li id="ex-particle-paths-streamlines-2-1-2">
 <div class="para logical" id="ex-particle-paths-streamlines-2-1-2-1">
@@ -590,8 +660,8 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.3.b.1"><a href="#ex-particle-paths-streamlines-2-1-2-2" title="Copy heading and permalink for Answer 2.3.3.b.1" aria-label="Copy heading and permalink for Answer 2.3.3.b.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.3.b"><a href="#ex-particle-paths-streamlines-2-1-2" title="Copy heading and permalink for Item 2.3.3.b" aria-label="Copy heading and permalink for Item 2.3.3.b">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.4.b.1"><a href="#ex-particle-paths-streamlines-2-1-2-2" title="Copy heading and permalink for Answer 2.3.4.b.1" aria-label="Copy heading and permalink for Answer 2.3.4.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.4.b"><a href="#ex-particle-paths-streamlines-2-1-2" title="Copy heading and permalink for Item 2.3.4.b" aria-label="Copy heading and permalink for Item 2.3.4.b">🔗</a></div>
 </li>
 <li id="ex-particle-paths-streamlines-2-1-3">
 <div class="para logical" id="ex-particle-paths-streamlines-2-1-3-1">
@@ -620,12 +690,12 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="para" id="ex-particle-paths-streamlines-2-1-3-2-3">Thus the value of <span class="process-math">\(f\)</span> is preserved if <span class="process-math">\(\bu\cdot\bnabla f=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-2-1-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.3.c.1"><a href="#ex-particle-paths-streamlines-2-1-3-2" title="Copy heading and permalink for Answer 2.3.3.c.1" aria-label="Copy heading and permalink for Answer 2.3.3.c.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.3.c"><a href="#ex-particle-paths-streamlines-2-1-3" title="Copy heading and permalink for Item 2.3.3.c" aria-label="Copy heading and permalink for Item 2.3.3.c">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.4.c.1"><a href="#ex-particle-paths-streamlines-2-1-3-2" title="Copy heading and permalink for Answer 2.3.4.c.1" aria-label="Copy heading and permalink for Answer 2.3.4.c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.4.c"><a href="#ex-particle-paths-streamlines-2-1-3" title="Copy heading and permalink for Item 2.3.4.c" aria-label="Copy heading and permalink for Item 2.3.4.c">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Worksheet Exercise 2.3.3: Particle paths and streamlines"><a href="#ex-particle-paths-streamlines" title="Copy heading and permalink for Worksheet Exercise 2.3.3: Particle paths and streamlines" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.3: Particle paths and streamlines">🔗</a></div></article><article class="exercise exercise-like" id="ex-streamlines-pathlines-streaklines"><h4 class="heading">
-<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Streamlines, pathlines and streaklines.</span>
+<div class="autopermalink" data-description="Worksheet Exercise 2.3.4: Particle paths and streamlines"><a href="#ex-particle-paths-streamlines" title="Copy heading and permalink for Worksheet Exercise 2.3.4: Particle paths and streamlines" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.4: Particle paths and streamlines">🔗</a></div></article><article class="exercise exercise-like" id="ex-streamlines-pathlines-streaklines"><h4 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Streamlines, pathlines and streaklines.</span>
 </h4>
 <div class="para logical" id="ex-streamlines-pathlines-streaklines-2-1">
 <div class="para">The velocity of a two-dimensional fluid flow in Cartesian coordinates is <span class="process-math">\(u = 1\text{,}\)</span> <span class="process-math">\(v = t e^{-4x}\text{.}\)</span> Calculate and sketch the following:</div>
@@ -644,10 +714,10 @@ y=y_0-\frac{t}{4} e^{-4x},
 <div class="para">for any constant <span class="process-math">\(y_0\text{.}\)</span> Different values of <span class="process-math">\(y_0\)</span> give different streamlines. See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.4">Figure 2.3.4</a> for a sketch.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.4.a.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-1-2" title="Copy heading and permalink for Answer 2.3.4.a.1" aria-label="Copy heading and permalink for Answer 2.3.4.a.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.5.a.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-1-2" title="Copy heading and permalink for Answer 2.3.5.a.1" aria-label="Copy heading and permalink for Answer 2.3.5.a.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Item 2.3.4.a"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-1" title="Copy heading and permalink for Item 2.3.4.a" aria-label="Copy heading and permalink for Item 2.3.4.a">🔗</a></div>
+<div class="autopermalink" data-description="Item 2.3.5.a"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-1" title="Copy heading and permalink for Item 2.3.5.a" aria-label="Copy heading and permalink for Item 2.3.5.a">🔗</a></div>
 </li>
 <li id="ex-streamlines-pathlines-streaklines-2-1-3-2">
 <div class="para" id="p-derived-ex-streamlines-pathlines-streaklines-2-1-3-2">the pathline of the particle starting from <span class="process-math">\((0,0)\text{,}\)</span> <details id="ex-streamlines-pathlines-streaklines-2-1-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
@@ -680,10 +750,10 @@ y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.4">Figure 2.3.4</a> for a sketch.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.4.b.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-2-2" title="Copy heading and permalink for Answer 2.3.4.b.1" aria-label="Copy heading and permalink for Answer 2.3.4.b.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.5.b.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-2-2" title="Copy heading and permalink for Answer 2.3.5.b.1" aria-label="Copy heading and permalink for Answer 2.3.5.b.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Item 2.3.4.b"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-2" title="Copy heading and permalink for Item 2.3.4.b" aria-label="Copy heading and permalink for Item 2.3.4.b">🔗</a></div>
+<div class="autopermalink" data-description="Item 2.3.5.b"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-2" title="Copy heading and permalink for Item 2.3.5.b" aria-label="Copy heading and permalink for Item 2.3.5.b">🔗</a></div>
 </li>
 <li id="ex-streamlines-pathlines-streaklines-2-1-3-3">
 <div class="para" id="p-derived-ex-streamlines-pathlines-streaklines-2-1-3-3">and the streaklines passing through <span class="process-math">\((0,0)\text{.}\)</span> <details id="ex-streamlines-pathlines-streaklines-2-1-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
@@ -721,10 +791,10 @@ y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.4">Figure 2.3.4</a> for a sketch. Note that the streamlines, pathlines and streaklines are all very different.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.4.c.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-3-2" title="Copy heading and permalink for Answer 2.3.4.c.1" aria-label="Copy heading and permalink for Answer 2.3.4.c.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.5.c.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-3-2" title="Copy heading and permalink for Answer 2.3.5.c.1" aria-label="Copy heading and permalink for Answer 2.3.5.c.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Item 2.3.4.c"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-3" title="Copy heading and permalink for Item 2.3.4.c" aria-label="Copy heading and permalink for Item 2.3.4.c">🔗</a></div>
+<div class="autopermalink" data-description="Item 2.3.5.c"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-3" title="Copy heading and permalink for Item 2.3.5.c" aria-label="Copy heading and permalink for Item 2.3.5.c">🔗</a></div>
 </li>
 <li id="ex-streamlines-pathlines-streaklines-2-1-3-4">
 <div class="para" id="ex-streamlines-pathlines-streaklines-2-1-3-4-1">For a line/curve in the <span class="process-math">\((x,y)\text{,}\)</span> its timeline at time <span class="process-math">\(t\)</span> is the locus of the material elements at time <span class="process-math">\(t\)</span> that started on the line/curve at <span class="process-math">\(t=0\text{.}\)</span> In experiments this can be visualised using a streak of dye placed initally along the line/curve. Tracking this over time gives the timelines.<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -762,15 +832,15 @@ y = y_0 + \tfrac{1}{16}
 <div class="para">at time <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(y_0\)</span> can take any value, the timeline is just the line <span class="process-math">\(x = t\text{.}\)</span> See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.4">Figure 2.3.4</a> for a sketch.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.4.d.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4-3" title="Copy heading and permalink for Answer 2.3.4.d.1" aria-label="Copy heading and permalink for Answer 2.3.4.d.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Item 2.3.4.d"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4" title="Copy heading and permalink for Item 2.3.4.d" aria-label="Copy heading and permalink for Item 2.3.4.d">🔗</a></div>
+<div class="autopermalink" data-description="Answer 2.3.5.d.1"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4-3" title="Copy heading and permalink for Answer 2.3.5.d.1" aria-label="Copy heading and permalink for Answer 2.3.5.d.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2.3.5.d"><a href="#ex-streamlines-pathlines-streaklines-2-1-3-4" title="Copy heading and permalink for Item 2.3.5.d" aria-label="Copy heading and permalink for Item 2.3.5.d">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Worksheet Exercise 2.3.4: Streamlines, pathlines and streaklines"><a href="#ex-streamlines-pathlines-streaklines" title="Copy heading and permalink for Worksheet Exercise 2.3.4: Streamlines, pathlines and streaklines" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.4: Streamlines, pathlines and streaklines">🔗</a></div></article>
+<div class="autopermalink" data-description="Worksheet Exercise 2.3.5: Streamlines, pathlines and streaklines"><a href="#ex-streamlines-pathlines-streaklines" title="Copy heading and permalink for Worksheet Exercise 2.3.5: Streamlines, pathlines and streaklines" aria-label="Copy heading and permalink for Worksheet Exercise 2.3.5: Streamlines, pathlines and streaklines">🔗</a></div></article>
 </div>
-<div class="autopermalink" data-description="Exercise Group 2.3.1–4: Kinematics"><a href="#kinematics-exercises" title="Copy heading and permalink for Exercise Group 2.3.1–4: Kinematics" aria-label="Copy heading and permalink for Exercise Group 2.3.1–4: Kinematics">🔗</a></div>
+<div class="autopermalink" data-description="Exercise Group 2.3.1–5: Kinematics"><a href="#kinematics-exercises" title="Copy heading and permalink for Exercise Group 2.3.1–5: Kinematics" aria-label="Copy heading and permalink for Exercise Group 2.3.1–5: Kinematics">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Worksheet 2.3"><a href="#ws-kinematics" title="Copy heading and permalink for Worksheet 2.3" aria-label="Copy heading and permalink for Worksheet 2.3">🔗</a></div></section>
 </div>
