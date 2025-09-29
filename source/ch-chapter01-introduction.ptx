@@ -141,6 +141,16 @@ Fluid Mechanics
   <section xml:id="sec-preliminary-vector-calculus">
     <title>A reminder of vector calculus</title>
 
+        <p>
+      <figure xml:id="fig-intro-green">
+        <caption>George Green's monumental work on electricity and magnetism, making use of many new concepts in vector calculus, 1828.</caption>
+        <image source="GreenEssay.png" width="50%">
+          <shortdescription>Cover</shortdescription>
+        </image>
+      </figure>
+    </p>
+
+
     <p>
       During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference <url href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="notes">on Moodle</url>.
     </p>
@@ -179,10 +189,20 @@ Fluid Mechanics
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
 
-
   <p>
     In <xref ref="ch-chapter04-potentialflows"/>, we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>.
   </p>
+
+        
+    <p>
+      <figure xml:id="fig-intro-needham">
+        <caption>An image from Tristan Needham's "Visual Complex Analysis" <xref ref="ref-needham"/> showing how complex mappings transform shapes from one region to another.</caption>
+        <image source="intro_needham.png" width="80%">
+          <shortdescription>Cover</shortdescription>
+        </image>
+      </figure>
+    </p>
+
 
   <subsection>
     <title>Basic complex representations</title>
@@ -349,7 +369,14 @@ Fluid Mechanics
     </p>
 
     <p>
-      In <xref ref="ex-Riemannsurface"/>, you will plot the Riemann surface that corresponds to <m>f(z) = z^{1/2}</m>.
+      In <xref ref="ex-Riemannsurface"/>, you will plot the Riemann surface that corresponds to <m>f(z) = z^{1/2}</m>. The result might look like this version created using Python graphing tool: 
+
+      <figure xml:id="fig-intro-sqrt-surface">
+        <caption>Riemann surface for the square root function. This shows the real part of the square root, which consists of both a positive branch and a negative branch. In the above case, we have placed the branch cut along the negative real axis. </caption>
+        <image source="intro_sqrt_01.png">
+          <shortdescription>Sqrt</shortdescription>
+        </image>
+      </figure>
     </p>
 
     <p>
@@ -398,6 +425,15 @@ Fluid Mechanics
     
   </subsection>
 
+  <subsection>
+    <title>Differentiation of complex functions</title>
+
+    <p>
+      In this chapter, we will only cover the basic necessities of visualising and studying complex functions. In <xref ref="ch-chapter04-potentialflows"/>, we will need additional theory on the differentiation of complex functions. 
+    </p>
+    
+  </subsection>
+
     <subsection>
       <title>Summary</title>
       
@@ -437,11 +473,36 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           <p>
             Consider a contour that starts from <m>z = 1</m>, then encircles the origin (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m> at the end of the contour as compared to the start? 
           </p>
+        </li>
+        <li>
           <p>
             By hand, plot the Riemann surface as visualised in <m>(x, y)</m>, <m>\Im f(x + \im y)</m>, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
           </p>
         </li>
       </ol>
+
+
+    <answer>
+      <ol>
+        <li>
+          <p>
+            At the start, we have <m>f(\e^0) = 1</m>. At the end, we have <m>f(\e^{2\pi\im}) = \e^{\pi \im} = -1</m>. In fact, you can observe this in <xref ref="fig-intro-sqrt-surface"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            This is tricky to plot but give it a shot! It should look like the below.
+
+            <figure>
+              <caption>Imaginary part of the square root function</caption>
+              <image source="intro_sqrt_02.png">
+                <shortdescription>Sqrt</shortdescription>
+              </image>
+            </figure>
+          </p>
+        </li>
+      </ol>
+    </answer>
     </exercise>
 
 
@@ -463,7 +524,7 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           </li>
           <li>
             <p>
-              Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction and the branch cut from <m>z = 1</m> tends in the negative real direction. Repeat the experiment above, considering (i)-(iii) and conclude that there is no jump in value along the region <m>-1 \leq z \leq 1</m>. 
+              Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction and the branch cut from <m>z = 1</m> tends in the positive real direction as well. Repeat the experiment above, considering (i)-(iii). Conclude that there is no jump in value along the region <m>z &gt; 1</m> and hence the branch cuts required only extends between <m>z = \pm 1</m>.
             </p>
 
             <p>
@@ -472,8 +533,10 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           </li>
           <li>
             <p>
-              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool.
+              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool. 
             </p>
+
+
           </li>
         </ol>
       </p>

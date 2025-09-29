@@ -72,6 +72,15 @@
     In <xref ref="ex-continuum-assumption"/>, you will consider whether salt flow can be considered under a continuum assumption.
   </p>
 
+  <p>
+    <figure xml:id="fig-salt-flow">
+      <caption>An AI-generated image of salt flowing out of a large orifice.</caption>
+      <image source="saltflow.png" width="40%">
+        <shortdescription>Salt flow</shortdescription>
+      </image>
+    </figure>
+  </p>
+
   <p> The derivation of the governing equations for a fluid is then based on three basic principles
     of physics: <ol>
       <li>
@@ -304,6 +313,15 @@
         </p>
       </proof>
 
+      <remark>
+        <title>Use of the bump lemma</title>
+       
+        <p>
+          Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the "Bump lemma". In <xref ref="ex-bump"/>, you will prove this lemma. 
+        </p>
+        
+      </remark>
+
 
     <subsection>
       <title>Derivation of mass conservation using Eulerian methods</title>
@@ -367,7 +385,7 @@
         \iiint_V \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V} = 0.
       </me>
       Since the above integral equation holds for all possible <m>V</m>, it must be equivalent to
-      the integrand equated to zero. This yields our final result leading to <xref ref="thm-mass"/>.
+      the integrand equated to zero (<xref ref="lem-bump"/>). This yields our final result leading to <xref ref="thm-mass"/>.
     </p>
     </subsection>
 
@@ -511,7 +529,7 @@
     <p>
       Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via 
       <me>\dxyz = J \dXYZ</me>.
-      So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible fluid.</em>
+      So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible fluid.</em> (You already previously encountered an intuitive definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
       </p>
 
       <p>

@@ -6,14 +6,14 @@
   <introduction>
 
     <p>
+      Fluid <em>kinematics</em> refers to the study of fluid motions without considering the associated forces (or energies) that cause such a fluid to move. In a nutshell, it relates to studying e.g. the general velocity and acceleration fields of a fluid, visualising the fluid trajectories, and so forth. 
+    </p>
+
+    <p>
      <figure xml:id="fig-euler-vid">
         <image source="01_euler_trim.gif" width="70%"/> 
         <caption>Eulerian description of flow from the <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" visual="NCFMF">NCFMF video</url>.</caption>
       </figure>
-    </p>
-
-    <p>
-      Fluid <em>kinematics</em> refers to the study of fluid motions without considering the associated forces (or energies) that cause such a fluid to move. In a nutshell, it relates to studying e.g. the general velocity and acceleration fields of a fluid, visualising the fluid trajectories, and so forth. 
     </p>
 
     <p>
@@ -247,11 +247,7 @@
       mathematically.</p>
 
       <p>Note that in a steady flow, the streamlines, pathlines and streaklines all coincide. However,
-        in an unsteady flow, they are all different. Although the video is dated and the sound and
-        picture quality are not up to modern standards, the clearest introduction to
-        these concepts is given in the first fourteen minutes of the 1963 production titled
-        ``Flow visualization'' available at
-        <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>.
+        in an unsteady flow, they are all different. In <xref ref="ex-video-flow-visualisation"/> you will study a video showing this concept.
         </p>
 
     <p>
@@ -286,7 +282,7 @@
         <statement>
           <p>Consider now a particle that begins at the location <m>\bx_2</m> at time <m>t = 0</m>.</p>
 
-          <p>We consider the <em>partial path</em> or <em>pathline</em> of the particle, given by the curve <m>\bx = \bx(t)</m> and found by solving the equation
+          <p>We consider the <em>partical path</em> or <em>pathline</em> of the particle, given by the curve <m>\bx = \bx(t)</m> and found by solving the equation
             <me>
             \dd{\bx}{t} = \bu(\bx(t), t), \quad \text{with $\bx(0) = \bx_2$.}
             </me>
@@ -453,13 +449,56 @@
     and computation of fluid velocities and acceleration.
     We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
     Examples of streamlines and velocity fields were examined.</p>
-<p>
+<!-- <p>
   <warning>
   <p>We look to complete worksheets in the week prior to the content being delivered.
     Once this is done, this disclaimer message will be removed.</p>
-</warning>
-</p>
+</warning> -->
+<!-- </p> -->
+
 </introduction>
+
+<exercise xml:id="ex-video-flow-visualisation">
+  <title>Flow visulisation</title>
+ 
+  <p>
+   <url href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization"> Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF archives</url>.
+
+   <ol>
+    <li>
+      <p>
+        Name a few ways in which a fluid flow can be visualised (i.e. how does one produce, in an experiment, such a visualisation?)
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Define, in words, what <em>pathline</em>, <em>streakline</em>, <em>timeline</em>, and <em>streamline</em> means. At 6:30, the author comments that "there is no way to make a streamline visible". Discuss this point.  
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Give the example, shown in the video, where the pathline, streakline, and streamlines all coincide. Draw pictures to illustrate the concept. 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Give an example, shown in the video, where the pathline, streakline, and streamlines do not coincide. Draw pictures to illustrate the concept. 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        In the video, an intuitive explanation is given for what it means for the velocity to be <em>incompressible</em>. What is this explanation? (near 8:25)
+      </p>
+    </li>
+   </ol>
+  </p>
+  
+  
+</exercise>
 
 <exercise xml:id="ex-material-derivative">
   <title>Derivation of the material derivative</title>
