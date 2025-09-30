@@ -213,6 +213,302 @@
         </p>
    
 </subsection>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<subsection xml:id="boundaries-of-fluids">
+  <title>Boundaries of fluids</title>
+
+  <subsubsection>
+    <title>Boundary conditions on the velocity</title>
+    <video>
+      <caption>Movie 454 shows an experiment demonstrating the plausibility
+        of the no-slip boundary condition.</caption>
+    </video>
+
+    <paragraph>
+      <title>Fluid–solid boundary</title>
+      <p>
+        It is observed empirically that Newtonian viscous fluids interact with
+        solid boundaries in such a way that
+      </p>
+      <me>
+        <mrow>
+          <mi>u</mi><sub>fluid</sub> = <mi>u</mi><sub>wall</sub>
+        </mrow>
+      </me>
+      <p>
+        are satisfied. The condition on the velocities is called the
+        <em>no-slip condition</em>. When solving problems in fluid
+        mechanics we usually apply these relationships to provide boundary conditions.
+        <em>Inviscid fluids</em> (fluids with no viscosity) do not satisfy
+        the full velocity condition, only the weaker condition that there is no flow through the wall:
+      </p>
+      <me>
+        <mrow>
+          <mi>u</mi><sub>fluid</sub> · <mi>n</mi> =
+          <mi>u</mi><sub>wall</sub> · <mi>n</mi>
+        </mrow>
+      </me>
+      <p>
+        where <m>n</m> is the unit normal to the wall. A temperature boundary condition may also apply.
+      </p>
+    </paragraph>
+
+    <paragraph>
+      <title>Note</title>
+      <p>
+        In many cases <m>u_wall = 0</m>, so the no-slip conditions mean
+        that the velocity (or normal component of velocity for inviscid
+        fluids) is zero at the boundaries.
+      </p>
+    </paragraph>
+
+    <paragraph>
+      <title>Fluid–fluid boundary</title>
+      <p>
+        At the interface between two viscous fluids, the velocities must match:
+      </p>
+      <me>
+        <mrow>
+          <mi>u</mi><sub>fluid 1</sub> = <mi>u</mi><sub>fluid 2</sub>
+        </mrow>
+      </me>
+      <p>
+        For inviscid fluids, only the normal component balances:
+      </p>
+      <me>
+        <mrow>
+          <mi>u</mi><sub>fluid 1</sub> · <mi>n</mi> =
+          <mi>u</mi><sub>fluid 2</sub> · <mi>n</mi>
+        </mrow>
+      </me>
+    </paragraph>
+  </subsubsection>
+
+  <subsubsection>
+    <title>Force balance at the interface</title>
+    <p>
+      In addition to the velocity boundary conditions, an additional force
+      balance condition applies at the interface:
+    </p>
+    <list>
+      <item>
+        In many cases (e.g. rigid walls or fixed pipes) we only need no-slip
+        velocity conditions. The force balance then gives the stress (force per unit area) between fluid and solid.
+      </item>
+      <item>
+        If the solid moves in response to the fluid (elastic solids or fluid–fluid
+        interfaces), then a full force balance is required.
+      </item>
+    </list>
+
+    <p>The stress (force per unit area) exerted at a boundary is called the stress.</p>
+
+    <list>
+      <item>
+        <bold>Fluid–solid interface:</bold> Stresses of fluid and solid are equal and opposite.
+      </item>
+      <item>
+        <bold>Fluid–fluid interface:</bold> Surface tension enters. Three forces balance:
+        <list>
+          <item>Stress of fluid 1 on fluid 2,</item>
+          <item>Stress of fluid 2 on fluid 1,</item>
+          <item>Surface tension.</item>
+        </list>
+      </item>
+    </list>
+  </subsubsection>
+
+  <subsubsection>
+    <title>Stress at a surface</title>
+    <p>
+      The fluid stress on a surface is the force per unit area (a vector) exerted
+      by the fluid. Stress is decomposed into:
+    </p>
+    <list>
+      <item>Shear stress: tangential component,</item>
+      <item>Normal stress: perpendicular component.</item>
+    </list>
+
+    <p>
+      Shear stress is important in biology (e.g. arterial wall shear stress <m>\sim1.5</m> Pa,
+      though normal stress/pressure is much larger ~11–16 kPa). Shear stress distribution is
+      linked to atherosclerosis.
+    </p>
+
+    <paragraph>
+      <title>How do we calculate stress?</title>
+      <p>
+        For Newtonian fluids at a no-slip surface:
+      </p>
+      <list>
+        <item>Wall shear stress = viscosity × normal derivative of tangential velocity.</item>
+        <item>Normal stress = pressure.</item>
+      </list>
+      <p>In 3D: two shear components + one normal component.</p>
+    </paragraph>
+
+    <paragraph>
+      <title>Examples of shear stress</title>
+      <list>
+        <item>
+          Flat wall <m>z=0</m>:
+          <me>
+            <mrow>τ_x = μ ∂u/∂z , τ_y = μ ∂v/∂z</mrow>
+          </me>
+          For <m>z&lt;0</m>:
+          <me>
+            <mrow>τ_x = -μ ∂u/∂z , τ_y = -μ ∂v/∂z</mrow>
+          </me>
+        </item>
+        <item>
+          Pipe flow, cylindrical <m>(r,θ,z)</m>, wall at <m>r=a</m>:
+          <me>τ_axial = -μ ∂u_z/∂r</me>
+          <me>τ_azimuthal = -μ ∂u_θ/∂r</me>
+        </item>
+      </list>
+    </paragraph>
+
+    <aside>
+      <p>
+        If shear stress formulae are confusing, start with flat 2D surface along x-axis:
+      </p>
+      <me>τ = μ ∂u/∂y</me>
+      <p>
+        Other cases can be obtained by axis transformation.
+      </p>
+    </aside>
+
+    <paragraph>
+      <title>Finding viscosity from stress</title>
+      <list>
+        <item>
+          Plate experiment: move plate at known velocity over a fluid bath, measure force per unit area.
+        </item>
+        <item>
+          Cone-and-plate viscometer: cone lowered into fluid, torque needed to rotate cone gives viscosity.
+          <figure>
+            <image source="Cone_and_plate.jpg" width="70%"/>
+          </figure>
+        </item>
+        <item>
+          Falling-ball viscometer: measure terminal velocity of a ball in fluid at low Reynolds number.
+        </item>
+      </list>
+    </paragraph>
+
+    <paragraph>
+      <title>Note on stress</title>
+      <p>
+        Stress can be defined everywhere in the fluid as the stress tensor (3×3 matrix).
+        This is beyond the current course.
+      </p>
+    </paragraph>
+  </subsubsection>
+
+  <subsubsection>
+    <title>Surface tension</title>
+
+    <video>
+      <caption>Movie 4696 explains the molecular origins of surface tension using the
+        continuum approximation and sharp interface model.</caption>
+    </video>
+
+    <p>
+      The interface between immiscible fluids (e.g. air–water, water–mercury) creates
+      surface tension, a force per unit length. A cut of length <m>dl</m> experiences
+      forces <m>Γ dl</m> on each edge, with Γ the surface tension coefficient.
+    </p>
+    <figure>
+      <image source="surfacetension.pdf" width="50%"/>
+    </figure>
+
+    <example>
+      <title>Droplet</title>
+      <p>
+        Pressure inside spherical droplet radius R: balance forces yields
+      </p>
+      <me>Δp = p_in - p_out = 2Γ / R</me>
+      <figure>
+        <image source="droplet.jpg" width="30%"/>
+      </figure>
+    </example>
+
+    <example>
+      <title>Meniscus</title>
+      <figure>
+        <image source="meniscus.pdf_t"/>
+      </figure>
+      <list>
+        <item>Flat surface: no net surface tension force ⇒ pressures equal.</item>
+        <item>Concave up: resultant points outward ⇒ pressure below surface lower than atmospheric.</item>
+        <item>Concave down: resultant points inward ⇒ pressure inside greater than atmospheric.</item>
+      </list>
+    </example>
+
+    <video>
+      <caption>Movie 3794 shows a water strider jumping on water, supported by surface
+        tension (see also Movie 73).</caption>
+    </video>
+  </subsubsection>
+</subsection>
+
+<subsection xml:id="state-relations">
+  <title>State relations</title>
+  <p>
+    In addition to mass, momentum, and energy balances, we need a state relation (from
+    molecular theory) relating thermodynamic variables <m>ρ, T, p</m>.
+  </p>
+
+  <subsubsection>
+    <title>Liquids</title>
+    <p>
+      Often assumed incompressible: <m>ρ = constant</m>.
+    </p>
+    <note>
+      If temperature effects matter: <m>ρ = ρ₀(1 - α(T - T₀))</m>. In convection, the
+      Boussinesq approximation neglects density variation except in buoyancy.
+    </note>
+  </subsubsection>
+
+  <subsubsection>
+    <title>Gases</title>
+    <p>
+      Gases (esp. at high T, low p) follow perfect gas law:
+    </p>
+    <me>p = ρ R_spec T</me>
+    <p>
+      where <m>R_spec = c_p - c_v = R / M</m>.
+    </p>
+    <list>
+      <item><m>c_p ≈ 1005 m²/s²/K</m>, <m>c_v ≈ 718 m²/s²/K</m> for air.</item>
+      <item><m>R = 8.314 J/mol/K</m>, universal gas constant.</item>
+      <item><m>M = 28.96 g/mol</m> for dry air.</item>
+    </list>
+  </subsubsection>
+</subsection>
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
     <p>

@@ -964,7 +964,7 @@ Domestic salt flows quite well out of a container with a hole in the bottom. Fol
 
 <p>What is the size of a typical salt particle?
 What size of hole would required so that a continuum model of the salt flow is a reasonable assumption?
-(Based on Q1, p. 42 by Paterson.)
+(Based on Q1, p. 42 by Paterson <xref ref="ref-paterson"/>.)
 </p>
 <answer>
 <p>
@@ -1135,7 +1135,7 @@ of one metre or so might be reasonable!
 <statement>
 <p>
 Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1\times10^5</m> J/kg.
-(Based on Problem 1.24 by White.)
+(Based on Problem 1.24 by White <xref ref="ref-white-5"/>.)
 </p>
 <ol>
 <li>
