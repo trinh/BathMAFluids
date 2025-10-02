@@ -173,4 +173,74 @@
       Here are some examples.
   </section>
 
+<worksheet xml:id="ws-vorticity">
+
+<exercisegroup xml:id="ws-group-vorticity">
+<title>Vorticity</title>
+<introduction>
+<p>
+  Intro.
+</p>
+<p>
+<warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+</warning>
+</p>
+</introduction>
+
+
+
+<exercise xml:id="ex-kelvin-circulation-theorem">
+<title>Kelvin’s Circulation Theorem</title>
+ <statement>
+   <p>
+    The circulation <m>\Gamma</m> around a closed curve <m>C(t)</m> is defined by
+  <me>
+    \Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
+  </me>
+    By transforming to Lagrangian variables show that <m>\Gamma</m> is independent of <m>t</m>.
+    Deduce that a flow that is initially irrotational (i.e. <m>\bomega = 0</m> at <m>t=0</m>)
+    remains irrotational for all time.
+  </p>
+  <p>
+      Note that this is a key result: if a flow is initially irrotational,
+      it remains so indefinitely and we can introduce a velocity potential
+      <m>\phi</m> such that <m>\mathbf{u} = \nabla \phi</m>.
+  </p>
+  <answer>
+  <p>
+ <figure xml:id="kelvin-circulation-theorem-fig">
+      <image source="ch-chapter03-kelvin-circulation.png" width="80%"/>
+        <caption>Curve <m>\Gamma</m> at times <m>t</m> and <m>t+\de t</m>.
+          The inset shows the relationship between the two curves.</caption>
+    </figure>
+  Assuming a conservative body force <m>-\bnabla\chi</m> per unit volume, the Euler equation reads
+  <me>
+    \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right),
+  </me>
+  <md> 
+  <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}\amp=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
+  <mrow>\amp=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
+  <mrow>\amp=\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.</mrow>
+  </md>
+  Hence
+<md>
+  <mrow>\dd{\Gamma}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t</mrow>
+  <mrow>\amp=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+  <mrow>\amp=0.</mrow>
+</md>
+The final equality above follows because the line integral of a gradient around a closed curve is zero.
+  Thus <m>\Gamma</m> is independent of <m>t</m>.
+  If the flow is initially irrotational, then <m>\Gamma=0</m> at <m>t=0</m>
+  for any closed curve <m>C(0)</m>, and hence <m>\Gamma=0</m> for all time.
+  Since this holds for any closed curve, it follows that <m>\omega=\bnabla\times\bu=0</m> for all time.
+</p>
+  </answer>
+</statement>
+</exercise>
+
+</exercisegroup>
+</worksheet>
 </chapter>

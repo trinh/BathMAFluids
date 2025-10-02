@@ -528,7 +528,9 @@
 
     <p>
       Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via 
-      <me>\dxyz = J \dXYZ</me>.
+      <men xml:id="eq-dxyz-Jacobian">
+        \dxyz = J \dXYZ
+      </men>.
       So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible fluid.</em> (You already previously encountered an intuitive definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
       </p>
 
@@ -536,19 +538,20 @@
         <definition xml:id="def-incompressible">
           <title>Incompressible fluids</title>
           <statement>
-            <p>
-             A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes. That is, 
+             <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes. Since such volumes are related via <xref ref="eq-dxyz-Jacobian"/>, then this is equivalent to 
              <me>
-              \DD{J}{t} \equiv 0.
+              \DD{J}{t} \equiv 0,
              </me>
-             The following equivalence (iff) then follows:
+             within the relevant fluid (and temporal) domain.</p>
+             
+             <p>The following equivalence (iff) then follows:
             <men xml:id="eqn-incompressibledef">
              \textrm{Fluid is incompressible} \quad \Longleftrightarrow \quad \nabla \cdot \bu = 0.
             </men>
             </p>
             <proof>
               <p>
-                This is immediate with Euler's identity in <xref ref="thm-Euleridentity"/>.
+                Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian"/>. Then by Euler's identity in <xref ref="thm-Euleridentity"/>, this implies <m>\nabla \cdot \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>, then again by the identity the fluid is incompressible. 
               </p>
             </proof>
           </statement>
@@ -1147,8 +1150,9 @@ of one metre or so might be reasonable!
   
   
 </exercise>
-  
-<exercise xml:id="energy">
+
+
+<!-- <exercise xml:id="energy">
 <title>Energy</title>
 <statement>
 <p>
@@ -1187,58 +1191,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
 </li>
 </ol>
 </statement>
-</exercise>
-
-<exercise xml:id="ex-kelvin-circulation-theorem">
-<title>Kelvin’s Circulation Theorem</title>
- <statement>
-   <p>
-    The circulation <m>\Gamma</m> around a closed curve <m>C(t)</m> is defined by
-  <me>
-    \Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
-  </me>
-    By transforming to Lagrangian variables show that <m>\Gamma</m> is independent of <m>t</m>.
-    Deduce that a flow that is initially irrotational (i.e. <m>\bomega = 0</m> at <m>t=0</m>)
-    remains irrotational for all time.
-  </p>
-  <p>
-      Note that this is a key result: if a flow is initially irrotational,
-      it remains so indefinitely and we can introduce a velocity potential
-      <m>\phi</m> such that <m>\mathbf{u} = \nabla \phi</m>.
-  </p>
-  <answer>
-  <p>
- <figure xml:id="kelvin-circulation-theorem-fig">
-      <image source="ch-chapter03-kelvin-circulation.png" width="80%"/>
-        <caption>Curve <m>\Gamma</m> at times <m>t</m> and <m>t+\de t</m>.
-          The inset shows the relationship between the two curves.</caption>
-    </figure>
-  Assuming a conservative body force <m>-\bnabla\chi</m> per unit volume, the Euler equation reads
-  <me>
-    \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right),
-  </me>
-  <md> 
-  <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}\amp=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
-  <mrow>\amp=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
-  <mrow>\amp=\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.</mrow>
-  </md>
-  Hence
-<md>
-  <mrow>\dd{\Gamma}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t</mrow>
-  <mrow>\amp=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
-  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx</mrow>
-  <mrow>\amp=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
-  <mrow>\amp=0.</mrow>
-</md>
-The final equality above follows because the line integral of a gradient around a closed curve is zero.
-  Thus <m>\Gamma</m> is independent of <m>t</m>.
-  If the flow is initially irrotational, then <m>\Gamma=0</m> at <m>t=0</m>
-  for any closed curve <m>C(0)</m>, and hence <m>\Gamma=0</m> for all time.
-  Since this holds for any closed curve, it follows that <m>\omega=\bnabla\times\bu=0</m> for all time.
-</p>
-  </answer>
-</statement>
-</exercise>
+</exercise> -->
 
 <exercise xml:id="ex-fluid-pressure-uniform-velocity">
 <title>Pressure field in uniform flow</title>
@@ -1374,16 +1327,16 @@ The final equality above follows because the line integral of a gradient around 
     <p>
       Consider an incompressible fluid, with constant density 
       <m>\rho</m>, subject to a conservative body force 
-      (i.e. <m>{\bf g} = -\nabla \chi</m> for some potential function 
+      (i.e. <m>{\bg} = -\nabla \chi</m> for some potential function 
       <m>\chi</m>).
     </p>
     <ol>
       <li>
         <p>
           Starting from the Euler equations, show that the 
-         vorticity <m>\bomega = \nabla \times {\bf u}</m> satisfies
+         vorticity <m>\bomega = \nabla \times {\bu}</m> satisfies
           <me>
-          \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bf u}.
+          \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bu}.
           </me>
           Note that, in this question, you are expected to do a long-form calculation.
           The method given in the notes uses an alternative expression for the momentum equation

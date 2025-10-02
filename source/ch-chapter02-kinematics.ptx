@@ -343,6 +343,9 @@
 
     <p>
     <example>
+      <title>Stagnation point flow</title>
+      
+      
       <p> Consider a fluid described by the two-dimensional velocity field 
         <me>
           \bu(\bx, t) = (x, -y, 0).
@@ -391,6 +394,8 @@
   </p>
 
     <example>
+      <title>Straight streamlines and circular pathlines</title>
+      
         <p> Consider the unsteady flow given by <me>\bu(\bx, t) = (\cos t, \sin t, 0)</me>. Plot the
           streamlines of the flow on the plane <m>z = 0</m>, and also the particle trajectories. What occurs with the streaklines?</p>
 
@@ -413,7 +418,7 @@
       <me>
         x(s) = A + s \cos t, \quad y(s) = B + \sin t, \quad z(s) = C,
       </me>
-    for constants <m>A, B, C</m>. Therefore the streamline are given by straight in the <m>(x, y)</m> plane, if <m>z = C</m> is fixed.
+    for constants <m>A, B, C</m>. Therefore the streamline are given by straight lines in the <m>(x, y)</m> plane, if <m>z = C</m> is fixed.
     </p>
 
     <p>
@@ -427,6 +432,18 @@
       </me>
       for constants <m>A, B, C</m>. Therefore, we see that the particle paths are closed circles (in the <m>xy</m>-plane) of unit radius encircling the point <m>(A, B, 0)</m>.
     </p>
+
+    <p>
+      The fact that the streamlines are straight lines while the particle paths are circular can be visualised in <xref ref="fig-streamlines-example-02"/>
+
+      <figure xml:id="fig-streamlines-example-02">
+        <caption>Streamlines and particle paths</caption>
+        <image source="streamlines_example02.gif">
+          <shortdescription>Animation of streamlines</shortdescription>
+        </image>
+      </figure>
+    </p>
+
 
     <p>
       In this case, considering the streakline via <xref ref="def-streakline"/>, we conclude that the streakline coincides with the particle path. Can you reason why this must be the case in this situation? What is necessary in order for this not to be true? 
@@ -936,6 +953,38 @@
   </statement>
 
 </exercise>
+
+
+<exercise xml:id="ex-video-radioactive">
+  <title>An experiment for the material derivative</title>
+ 
+  <p>
+   <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics"> Watch around 12:00 to around 19:00 of the video "Eulerian and Lagrangian Descriptions of Fluid Mechanics" from the NCFMF archives</url>.
+
+   <ol>
+    <li>
+      <p>In the video, the authors describe an experiment that one can setup to measure decay of a substance, say <m>C(x, t)</m> along a 1D segment in a river.</p>
+
+      <p>
+        In the first situation, it is assumed that <m>C</m> is distributed uniformly in the river, but is a naturally decaying substance with some uniform rate of change, <m>\dd{C}{t}</m>. Explain what is the (material) change in <m>C</m> that would be measured via two sensors, one upstream ane one downstream.
+      </p>
+    </li>
+
+    <li>
+      <p>Next, the authors imagine a situation where <m>C</m> is not uniformly distributed. They give a visual and analytical explanation of the material derivative,
+      <me>
+        \DD{C}{t} = \pd{C}{t} + u \pd{C}{x},
+      </me>
+      where <m>u</m> is the horizontal velocity within the infinitessimal 1D section. Write your own explanation of the above.
+      </p>
+    </li>
+   </ol>
+  </p>
+  
+  
+</exercise>
+
+
 </exercisegroup>
 </worksheet>
 
