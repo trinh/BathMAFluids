@@ -6,7 +6,7 @@
   <introduction>
     <p>
       In this chapter we introduce the effects of viscosity into our fluid model. This
-      leads to the famous Navier--Stokes equations, which are the governing equations for
+      leads to the famous Navier<ndash/>Stokes equations, which are the governing equations for
       many fluid flows of practical interest. The viscosity has a profound
       effect on the flow, and it can lead to the formation of boundary layers and the generation
       of vorticity at solid boundaries.
@@ -20,7 +20,7 @@
             Credit Fu, Liang, Zhang (Symmetry, 2020).</caption>
       </figure>
      <sidebyside>
-      <figure>
+      <figure xml:id="figure-falling-ball">
         <image source="ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png" width="25%" />
         <caption>Sphere falling through viscous fluid at low Reynolds number. Credit Kraaiennest.</caption>
       </figure>
@@ -42,11 +42,11 @@
 </introduction>
 
     <section xml:id="definitions">
-      <title>Definitions of important concepts</title>
+      <title>Important definitions</title>
     <subsection xml:id="viscosity">
     <title>Viscosity</title>
     <p>
-        Viscosity quantifies the fluid's resistance to flow when a force is applied
+        Viscosity quantifies the fluid's internal resistance to flow when a force is applied
         (the higher the resistance the higher the viscosity). One of the most common
         mathematical models of an idealised fluid is a
         <em>Newtonian</em> fluid. For these fluids the shear viscosity
@@ -73,13 +73,19 @@
         <xref ref="ps-falling-ball-viscometer"/> in the worksheet at the end of this chapter).
     </p>
   </example>
+
+  <p>
+    <definition>
+      <title>Kinematic viscosity</title>   
     <p>
-        The kinematic viscosity <m>\nu</m> (measured in
-        <m>\mathrm{m^2\,s^{-1}}</m>) is related to the shear viscosity via
-    </p>
+        It is sometimes more convenient to work in terms of the kinematic viscosity <m>\nu</m> (measured in
+        <m>\mathrm{m^2\,s^{-1}}</m>). This is related to the shear viscosity via
     <me>
-        \nu = \frac{\mu}{\rho}
+        \nu = \frac{\mu}{\rho}.
     </me>
+  </p>
+</definition>
+</p>
     <table>
       <title>Viscosities at <m>1\,\mathrm{atm}</m> pressure and <m>20\,^\circ\mathrm{C}</m>.</title>
         <tabular>
@@ -110,86 +116,156 @@
         </tabular>
     </table>
     <p>
-        Many real fluids, <em>e.g.</em> blood, have more complicated viscosity
-        properties, but in this course we mainly consider circumstances in which it
-        is appropriate to assume that the fluid in question has a
-        constant and uniform viscosity.
+        Many real fluids have more complicated viscosity
+        properties, for example blood, mucus, shampoo, egg white and custard.
+        In this course we mainly consider Newtonian fluids, thereby avoiding a lot of complexity!
+    </p>
+
+    <p>
+      <remark>
+        <p>
+          Note that we have not yet formally defined the shear viscosity, although the
+          example given in <xref ref="example-viscosity"/> provides an informal definition.
+          This concept will be formalised in <xref ref="sec-stress"/>.
+        </p>
+      </remark>
     </p>
 </subsection>
 
 <subsection xml:id="reynolds-number">
     <title>Reynolds number</title>
     <p>
-        This is one of the most important flow parameters, and it often determines
-        the qualitative nature of the flow. It is a dimensionless quantity, defined by
+        This is one of the most important flow parameters in the study of fluid dynamics,
+        as its order of magnitude determines many of the qualitative features of the flow.
+        In a given flow, it quantifies the relative importance of inertial and viscous effects.
     </p>
-    <me>
-        \mathrm{Re} = \frac{\rho U L}{\mu} = \frac{U L}{\nu}
-    </me>
     <p>
-        where <m>U</m> is a characteristic (or typical) velocity of the flow
-        and <m>L</m> is a characteristic lengthscale. It characterises the
-        relative importance of viscous and inertial accelerations.
+      <definition>
+        <title>The Reynolds number</title>
+           <p>
+        The Reynolds number is a dimensionless quantity, defined by
+    <me>
+        \textrm{Re} = \frac{\rho U L}{\mu} = \frac{U L}{\nu},
+    </me>
+        where <m>U</m> is a <em>characteristic</em> (or typical) velocity of the flow
+        and <m>L</m> is a <em>characteristic</em> lengthscale. It equals the typical size
+        of an inertial acceleration divided by a typical size of a viscous acceleration in the flow.
     </p>
-
+    </definition>
+    </p>
         <p>
-        <em>How do we choose <m>L</m> and <m>U</m>?</em>
-            There are usually ‘natural’ scales in the problem that we can choose
-            for <m>L</m> and <m>U</m>, and determining these in a given problem
-            usually becomes easier with experience. As an illustrative example of a
-            suitable scale choice, consider steady flow down a pipe with a circular
-            cross-section. An appropriate value of <m>L</m> is often the pipe radius
+          <remark>
+            <title>Choice of characteristic scales</title>
+            <p>
+            What do we pick as the <em>characteristic</em> length and velocity scales?
+            This is something that gets easier with increasing experience.
+            For a given problem there are usually ‘natural’ scales that arise within it.
+            </p>
+            <p>
+              <example xml:id="example-choice-of-scales">
+                <title>Illustrative example of choice of scales</title>
+                <p>
+                  As an illustrative example of how we might think about choosing suitable scales,
+                  consider a steady flow along a pipe with a circular
+            cross-section. An appropriate choice of <m>L</m> could be the pipe radius
             or diameter, while an appropriate value of <m>U</m> could be the velocity
-            on the centreline of the pipe. However, note that we could alternatively
-            choose the average velocity across the pipe cross-section as our
-            characteristic velocity. This would lead to a different numerical value
-            of <m>Re</m>, but note that the order of magnitude of the quantities are unchanged.
-            Thus the value of <m>Re</m> is often quoted as an order-of-magnitude property,
-            unless we are given detailed information about exactly which length and
-            velocity scales are used.
+            along the centreline (axis) of the pipe or the average velocity across
+            the pipe cross-section (equal to the volumetric flux (volume per unit time)
+            of fluid passing along the pipe divided by the cross-sectional area of the pipe).
+                </p>
+              </example>
+            </p>
+                <p>
+            Different choices of scales (radius vs. diameter and of centreline vs. average velocity
+            in <xref ref="example-choice-of-scales"/>)
+            would lead to different numerical values of <m>\textrm{Re}</m>. However, note:
+            <ul>
+              <li>
+                <p>
+                  The order of magnitude of the Reynolds number is the same for all choices.
+                  Thus, when describing a flow, the value of <m>\textrm{Re}</m> is often
+                  quoted as an order-of-magnitude property.
+                </p>
+              </li>
+              <li>
+                <p>
+                    If we give detailed information about exactly which
+                    length and velocity scales are being used then
+                    we can directly compare different values of <m>\textrm{Re}</m>,
+                    even if they are of the same order of magnitude.
+                    For example, we might do this in a plot of a property
+                    of the flow against the Reynolds number. In this case,
+                    it would be good scientific practice to specify the
+                    choice of velocity and length scales used.
+                </p>
+              </li>
+            </ul>
+                </p>
+          </remark>
         </p>
-    
         <p>
-        Typical characteristics of the flow are strongly associated with Reynolds number:
+          <remark>
+            <title>Flow characteristics at different Reynolds numbers</title>
+            <p>
+          Typical characteristics of the flow are strongly associated with the order of magnitude
+          of the Reynolds number:
         <ul>
             <li>
-                <p><b>Low-Reynolds-number flows (<m>Re \ll 1</m>):</b></p>
+                <p><em>Low-Reynolds-number flows (<m>Re \ll 1</m>):</em>
                 <ul>
-                    <li>Examples include capillary flow, microfluidics, swimming bacteria or single cell organisms, lymphatic system flow, glacier flow, and spreading honey on toast.</li>
-                    <li>These flows are called Stokes flow (after G. G. Stokes who studied them) or creeping flows.</li>
-                    <li>Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions. <media url="Movie44"/> <media url="Movie45"/></li>
+                    <li>Examples include several biological examples, such as flow in capillaries
+                      (the smallest blood vessels) swimming bacteria or other single cell organisms,
+                      lymphatic system flow, and other examples include microfluidics,
+                      glacier flow, and spreading honey on toast.</li>
+                    <li>These flows are called Stokes flows (after G. G. Stokes who studied them) or creeping flows.</li>
+                    <li>Low-Reynolds-number flows are also reversible, meaning that if a force is applied,
+                      followed by the reverse of that force then the fluid particles return to their original positions.
+                      <!-- <media url="Movie44"/> <media url="Movie45"/>--></li>
                     <li>Inertial effects are negligible and viscous effects are important.</li>
                 </ul>
+              </p>
             </li>
             <li>
-                <p><b>Flows with moderate Reynolds number (<m>1 \ll Re \ll 2{,}000</m>):</b></p>
+                <p><em>Flows with moderate Reynolds number (<m>1 \ll Re \ll 2{,}000</m>):</em>
                 <ul>
-                    <li>Examples include flows in most blood vessels that are not capillaries, fast flow of aqueous humour and vitreous humour in the eye, urinary tract flow, and small fish swimming.</li>
-                    <li>Flows in pipes with moderate Reynolds number are often described as laminar, meaning that the fluid moves in ‘layers’ sliding past each other (often people use ‘laminar’ to mean that the flow is not turbulent).</li>
+                    <li>Examples include flows in most blood vessels that are not capillaries,
+                      small fish swimming, not-too-fast flow out of a domestic tap, stirring a cup of tea.</li>
+                    <li>Flows in pipes with moderate Reynolds number are often described as <em>laminar</em>,
+                      meaning that the fluid moves in ‘layers’ sliding past each other
+                      (in fluid dynamics, the word ‘laminar’ is often used to mean that the flow
+                      is not <em>turbulent</em>).</li>
                 </ul>
+              </p>
             </li>
             <li>
-                <p><b>High-Reynolds-number flows (typically <m>Re</m> above about <m>1{,}000</m>):</b></p>
+                <p><em>High-Reynolds-number flows (typically <m>Re</m> above about <m>1{,}000</m>):</em>
                 <ul>
                     <li>Examples include atmospheric and ocean flows, rivers, large industrial processes,
-                        flows around vehicles, airflow in trachea.</li>
-                    <li>These flows are characteristically unstable or turbulent (especially for
-                        very high Reynolds numbers).</li>
+                        flows around vehicles, airflow in trachea and ships or large animals swimming.</li>
                     <li>Inertial effects are important and viscous effects are small.</li>
+                    <li>Since viscous effects are small, they may often be neglected in these flows,
+                      and the <em>Euler equations</em> <xref ref="def-euler"/> govern the dynamics.</li>
+                    <li>These flows are often unstable or turbulent (especially for
+                        very high Reynolds numbers).</li>
                 </ul>
+              </p>
             </li>
         </ul>
+      </p>
+      </remark>
     </p>
-
+  
     <p>
-        <em>Turbulent flow</em>
-            is characterised as having many different length scales,
-            and the flow is <em>chaotic</em>.
+      <remark>
+        <title>Turbulent flow</title>
+        <p>
+          This is a qualitative type of flow that is characterised as having many
+          different length scales, and the flow is mathematically <em>chaotic</em>.
             Chaotic flow means that fluid particles that start close together can become
             widely separated over time. As well as the scale of the whole experiment,
             the turbulence has eddies on all small length scales.
-            Turbulent flows are analysed mathematically by decomposing the flow into a
-            mean flow, which describes the large-scale flow and a fluctuating flow,
+            Turbulent flows are analysed mathematically by decomposing the fluid velocity into a
+            <em>mean flow</em>, which describes the large-scale flow and a <em>fluctuating flow</em>,
             which describes the eddies. Equations can be written for each of these,
             but this decomposition leads to the so-called <em>closure problem</em>,
             in which an assumption needs to be made to provide a final equation that
@@ -198,8 +274,8 @@
         <p>
             Turbulence is of great importance in applications such as aeronautical
             engineering, weather forecasting and large-scale industrial flows,
-            basically because large and fast moving flows have such a high Reynolds
-            number that turbulence is unavoidable and dominates the flow
+            basically because large and fast moving flows have a sufficiently high Reynolds
+            number that turbulence is unavoidable and it dominates the flow
             characteristics.
         </p>
         <p>
@@ -211,312 +287,407 @@
             <pageref ref="page:vonkarmanlayer"/> is one that was famously first developed
             to analyse turbulent flows.-->
         </p>
+      </remark>
+    </p>
    
-</subsection>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<subsection xml:id="boundaries-of-fluids">
-  <title>Boundaries of fluids</title>
-
-  <subsubsection>
-    <title>Boundary conditions on the velocity</title>
-    <video>
-      <caption>Movie 454 shows an experiment demonstrating the plausibility
-        of the no-slip boundary condition.</caption>
-    </video>
-
-    <paragraph>
-      <title>Fluid–solid boundary</title>
-      <p>
-        It is observed empirically that Newtonian viscous fluids interact with
-        solid boundaries in such a way that
-      </p>
-      <me>
-        <mrow>
-          <mi>u</mi><sub>fluid</sub> = <mi>u</mi><sub>wall</sub>
-        </mrow>
-      </me>
-      <p>
-        are satisfied. The condition on the velocities is called the
-        <em>no-slip condition</em>. When solving problems in fluid
-        mechanics we usually apply these relationships to provide boundary conditions.
-        <em>Inviscid fluids</em> (fluids with no viscosity) do not satisfy
-        the full velocity condition, only the weaker condition that there is no flow through the wall:
-      </p>
-      <me>
-        <mrow>
-          <mi>u</mi><sub>fluid</sub> · <mi>n</mi> =
-          <mi>u</mi><sub>wall</sub> · <mi>n</mi>
-        </mrow>
-      </me>
-      <p>
-        where <m>n</m> is the unit normal to the wall. A temperature boundary condition may also apply.
-      </p>
-    </paragraph>
-
-    <paragraph>
-      <title>Note</title>
-      <p>
-        In many cases <m>u_wall = 0</m>, so the no-slip conditions mean
-        that the velocity (or normal component of velocity for inviscid
-        fluids) is zero at the boundaries.
-      </p>
-    </paragraph>
-
-    <paragraph>
-      <title>Fluid–fluid boundary</title>
-      <p>
-        At the interface between two viscous fluids, the velocities must match:
-      </p>
-      <me>
-        <mrow>
-          <mi>u</mi><sub>fluid 1</sub> = <mi>u</mi><sub>fluid 2</sub>
-        </mrow>
-      </me>
-      <p>
-        For inviscid fluids, only the normal component balances:
-      </p>
-      <me>
-        <mrow>
-          <mi>u</mi><sub>fluid 1</sub> · <mi>n</mi> =
-          <mi>u</mi><sub>fluid 2</sub> · <mi>n</mi>
-        </mrow>
-      </me>
-    </paragraph>
-  </subsubsection>
-
-  <subsubsection>
-    <title>Force balance at the interface</title>
-    <p>
-      In addition to the velocity boundary conditions, an additional force
-      balance condition applies at the interface:
-    </p>
-    <list>
-      <item>
-        In many cases (e.g. rigid walls or fixed pipes) we only need no-slip
-        velocity conditions. The force balance then gives the stress (force per unit area) between fluid and solid.
-      </item>
-      <item>
-        If the solid moves in response to the fluid (elastic solids or fluid–fluid
-        interfaces), then a full force balance is required.
-      </item>
-    </list>
-
-    <p>The stress (force per unit area) exerted at a boundary is called the stress.</p>
-
-    <list>
-      <item>
-        <bold>Fluid–solid interface:</bold> Stresses of fluid and solid are equal and opposite.
-      </item>
-      <item>
-        <bold>Fluid–fluid interface:</bold> Surface tension enters. Three forces balance:
-        <list>
-          <item>Stress of fluid 1 on fluid 2,</item>
-          <item>Stress of fluid 2 on fluid 1,</item>
-          <item>Surface tension.</item>
-        </list>
-      </item>
-    </list>
-  </subsubsection>
-
-  <subsubsection>
-    <title>Stress at a surface</title>
-    <p>
-      The fluid stress on a surface is the force per unit area (a vector) exerted
-      by the fluid. Stress is decomposed into:
-    </p>
-    <list>
-      <item>Shear stress: tangential component,</item>
-      <item>Normal stress: perpendicular component.</item>
-    </list>
-
-    <p>
-      Shear stress is important in biology (e.g. arterial wall shear stress <m>\sim1.5</m> Pa,
-      though normal stress/pressure is much larger ~11–16 kPa). Shear stress distribution is
-      linked to atherosclerosis.
-    </p>
-
-    <paragraph>
-      <title>How do we calculate stress?</title>
-      <p>
-        For Newtonian fluids at a no-slip surface:
-      </p>
-      <list>
-        <item>Wall shear stress = viscosity × normal derivative of tangential velocity.</item>
-        <item>Normal stress = pressure.</item>
-      </list>
-      <p>In 3D: two shear components + one normal component.</p>
-    </paragraph>
-
-    <paragraph>
-      <title>Examples of shear stress</title>
-      <list>
-        <item>
-          Flat wall <m>z=0</m>:
-          <me>
-            <mrow>τ_x = μ ∂u/∂z , τ_y = μ ∂v/∂z</mrow>
-          </me>
-          For <m>z&lt;0</m>:
-          <me>
-            <mrow>τ_x = -μ ∂u/∂z , τ_y = -μ ∂v/∂z</mrow>
-          </me>
-        </item>
-        <item>
-          Pipe flow, cylindrical <m>(r,θ,z)</m>, wall at <m>r=a</m>:
-          <me>τ_axial = -μ ∂u_z/∂r</me>
-          <me>τ_azimuthal = -μ ∂u_θ/∂r</me>
-        </item>
-      </list>
-    </paragraph>
-
-    <aside>
-      <p>
-        If shear stress formulae are confusing, start with flat 2D surface along x-axis:
-      </p>
-      <me>τ = μ ∂u/∂y</me>
-      <p>
-        Other cases can be obtained by axis transformation.
-      </p>
-    </aside>
-
-    <paragraph>
-      <title>Finding viscosity from stress</title>
-      <list>
-        <item>
-          Plate experiment: move plate at known velocity over a fluid bath, measure force per unit area.
-        </item>
-        <item>
-          Cone-and-plate viscometer: cone lowered into fluid, torque needed to rotate cone gives viscosity.
-          <figure>
-            <image source="Cone_and_plate.jpg" width="70%"/>
-          </figure>
-        </item>
-        <item>
-          Falling-ball viscometer: measure terminal velocity of a ball in fluid at low Reynolds number.
-        </item>
-      </list>
-    </paragraph>
-
-    <paragraph>
-      <title>Note on stress</title>
-      <p>
-        Stress can be defined everywhere in the fluid as the stress tensor (3×3 matrix).
-        This is beyond the current course.
-      </p>
-    </paragraph>
-  </subsubsection>
-
-  <subsubsection>
-    <title>Surface tension</title>
-
-    <video>
-      <caption>Movie 4696 explains the molecular origins of surface tension using the
-        continuum approximation and sharp interface model.</caption>
-    </video>
-
-    <p>
-      The interface between immiscible fluids (e.g. air–water, water–mercury) creates
-      surface tension, a force per unit length. A cut of length <m>dl</m> experiences
-      forces <m>Γ dl</m> on each edge, with Γ the surface tension coefficient.
-    </p>
-    <figure>
-      <image source="surfacetension.pdf" width="50%"/>
-    </figure>
-
-    <example>
-      <title>Droplet</title>
-      <p>
-        Pressure inside spherical droplet radius R: balance forces yields
-      </p>
-      <me>Δp = p_in - p_out = 2Γ / R</me>
-      <figure>
-        <image source="droplet.jpg" width="30%"/>
-      </figure>
-    </example>
-
-    <example>
-      <title>Meniscus</title>
-      <figure>
-        <image source="meniscus.pdf_t"/>
-      </figure>
-      <list>
-        <item>Flat surface: no net surface tension force ⇒ pressures equal.</item>
-        <item>Concave up: resultant points outward ⇒ pressure below surface lower than atmospheric.</item>
-        <item>Concave down: resultant points inward ⇒ pressure inside greater than atmospheric.</item>
-      </list>
-    </example>
-
-    <video>
-      <caption>Movie 3794 shows a water strider jumping on water, supported by surface
-        tension (see also Movie 73).</caption>
-    </video>
-  </subsubsection>
 </subsection>
 
 <subsection xml:id="state-relations">
   <title>State relations</title>
   <p>
-    In addition to mass, momentum, and energy balances, we need a state relation (from
-    molecular theory) relating thermodynamic variables <m>ρ, T, p</m>.
+    In addition to the balances implied by mass and momentum conservation that
+    you have so far been working on in this course, there is an additional condition needed,
+    and this is called
+    a <em>state relation</em>. This relates the thermodynamic variables density <m>\rho</m>,
+    pressure <m>p</m> and temperature <m>T</m>. In this section, we give two of the most
+    common state relations that are used mathematically, the first for liquids and the second for gases.
   </p>
 
   <subsubsection>
     <title>Liquids</title>
     <p>
-      Often assumed incompressible: <m>ρ = constant</m>.
+      Liquids are often assumed to be incompressible, that is we assume
+      <m>\rho = \textrm{constant}</m>.
+      This is the most common assumption made in this course. However, it is important
+      to be aware that it is not always appropriate.
     </p>
-    <note>
-      If temperature effects matter: <m>ρ = ρ₀(1 - α(T - T₀))</m>. In convection, the
-      Boussinesq approximation neglects density variation except in buoyancy.
-    </note>
+
+    <p>
+    <remark>
+      <p>
+      One of the most common reasons that making the assumption <m>\rho = \textrm{constant}</m>
+      does not capture the flow dynamics accurately is if there are significant
+      temperature variations within the liquid.
+      Typically, liquids expand as the temperature rises, and this leads to <em>thermal convection</em>,
+      which needs to be taken into account in the mathematical analysis.
+      </p>
+      <p>
+        <definition xml:id="def-boussinesq">
+          <title>The Boussinesq approximation</title>
+          <statement>
+            <p>
+              In a problem in which temperature variations are important in the fluid dynamics,
+      it is often sufficient to assume the <em>Boussinesq approximation</em>:
+      <ul>
+        <li>
+          <p>
+            In the buoyancy term of the momentum conservation equation
+      (that is the term <m>\rho g</m> appearing in the Euler equation),
+      we assume the density is a linear function of the
+      temperature. Thus we write
+      <me>\rho = \rho_0(1 - \alpha(T - T_0))</me>,
+      where <m>T_0</m> and <m>\rho_0</m>
+      are a reference temperature and density, respectively, and <m>\alpha</m> is the
+      <em>coefficient of thermal expansion</em>.
+        </p>
+        </li>
+        <li>
+          <p>
+      In all other appearances in the governing equations, <m>\rho</m> is replaced by the constant value <m>\rho_0</m>.
+          </p>
+        </li>
+      </ul>
+            </p>
+          </statement>
+        </definition>
+      </p>
+    </remark>
+  </p>
   </subsubsection>
 
   <subsubsection>
     <title>Gases</title>
     <p>
-      Gases (esp. at high T, low p) follow perfect gas law:
+      Gases (especially at high temperatures and low pressures) closely follow the
+      <em>ideal or perfect gas law</em>.
     </p>
-    <me>p = ρ R_spec T</me>
+
     <p>
-      where <m>R_spec = c_p - c_v = R / M</m>.
-    </p>
-    <list>
-      <item><m>c_p ≈ 1005 m²/s²/K</m>, <m>c_v ≈ 718 m²/s²/K</m> for air.</item>
-      <item><m>R = 8.314 J/mol/K</m>, universal gas constant.</item>
-      <item><m>M = 28.96 g/mol</m> for dry air.</item>
-    </list>
+    <definition>
+      <title>The ideal or perfect gas law</title>
+      <p>
+        This law states
+    <men xml:id="eqn-idealgas">p = \rho R_{\textrm{spec}} T,</men>
+      where
+    <ul>
+      <li><m>R_{\textrm{spec}} = c_p - c_v = R / M</m> is the specific gas constant,</li>
+      <li><m>c_p = 1005</m> m<m>^2</m>/s<m>^2</m>/K (for air) is the specific heat capacity at constant pressure,</li>
+      <li><m>c_v = 718</m> m<m>^2</m>/s<m>^2</m>/K (for air) is the specific heat capacity at constant temperature,</li>
+      <li><m>R = 8.314</m> J/mol/K is the universal gas constant,</li>
+      <li><m>M = 28.96\,\textrm{g/mol}=0.02896</m> kg/mol for dry air.</li>
+    </ul>
+  </p>
+  </definition>
+  </p>
+
+  <remark>
+    <p>You have probably previously encountered the <em>ideal gas law</em> in the form
+      <m>pV=nRT</m>, where <m>V</m> is the volume occupied by <m>n</m> moles of a gas.
+      Prove that this is equivalent to <xref ref="eqn-idealgas"/>.</p>
+      <answer>
+        <p>
+          The relationship <m>pV=nRT</m> implies
+          <me>p=\frac{n}{V}RT=\left(\frac{nM}{V}\right)\left(\frac{R}{M}\right)T
+            =\rho R_{\textrm{spec}} T,
+          </me>
+          since <m>nM</m> is the mass of the gas molecules in <m>V</m> and therefore <m>nM/V</m>
+          is the average density.
+        </p>
+      </answer>
+      <p>In fluid dynamics the form <xref ref="eqn-idealgas"/> is more convenient than <m>pV=nRT</m>
+        because it can be applied at each point in the gas, whereas <m>pV=nRT</m> is a law applying
+        to a fixed finite volume.</p>
+  </remark>
   </subsubsection>
 </subsection>
-
-
-
-
-
-
-
-
-
-
-
 </section>
 
+<section xml:id="boundaries-surfaces-interfaces">
+  <title>Boundaries, surfaces and interfaces of fluids</title>
+
+  <subsection xml:id="boundary-conditions-velocity">
+    <title>Boundary conditions on the velocity</title>
+    <!--<video>
+      <caption>Movie 454 shows an experiment demonstrating the plausibility
+        of the no-slip boundary condition.</caption>
+    </video>-->
+
     <p>
-      Test matrix.
-      <!--<me>
-        \begin{matrix} 1 & 2 & 3\\ a & b & c \end{matrix}
-      </me>-->
+      <definition xml:id="def-fluid-solid-boundary">
+      <title>Fluid<ndash/>solid boundary</title>
+      <p>
+        It is observed empirically that Newtonian viscous fluids interact with
+        solid boundaries in such a way that
+      <me>
+          \bu_{\textrm{fluid}} = \bu_{\textrm{wall}}
+      </me>
+        are satisfied. This condition on the velocity components is called the
+        <em>no-slip condition</em>. When solving problems in fluid
+        mechanics we usually apply these relationships to provide boundary conditions.
+      </p>
+    </definition>
+  </p>
+
+  <p>
+    <remark>
+      <p>
+        In many cases, <m>\bu_{\textrm{wall}} = \boldsymbol{0}</m>, so the no-slip conditions mean
+        that the velocity is zero at the boundaries.
+      </p>
+    </remark>
+  </p>
+
+  <p>
+    <remark>
+      <title>Comparison with inviscid fluids</title>
+      <p>
+        In the previous sections of the course, you studied <em>inviscid fluids</em>,
+        for which the boundary conditions was
+        <me>
+          \bu_{\textrm{fluid}}\cdot\bn=\bu_{\textrm{wall}}\cdot\bn.
+        </me>
+        Note that this condition is weaker than the corresponding one for viscous fluids,
+        since it only applies to one component of the velocity.
+        As we will shortly see, the extra conditions for viscous fluids are mathematically necessary,
+        since the equation for conservation of momentum for viscous fluids has spatial derivatives
+        of higher order.
+      </p>
+    </remark>
+  </p>
+
+<p>
+  <definition xml:id="def-fluid-fluid-interface">>
+      <title>Fluid<ndash/>fluid interface</title>
+      <p>
+        At the interface between two different viscous fluids, the velocities must match:
+      <me>
+          \bu_{\textrm{fluid 1}} = \bu_{\textrm{fluid 2}}.
+      </me>
     </p>
+    </definition>
+  </p>
+
+  <p>
+    <remark>
+      <title>Comparison with inviscid fluids</title>
+      <p>
+        For inviscid fluids, only the normal component balances:
+        <me>
+          \bu_{\textrm{fluid 1}}\cdot\bn=
+          \bu_{\textrm{fluid 2}}\cdot\bn.
+        </me>
+      </p>
+      </remark>
+  </p>
+  </subsection>
+
+  <subsection>
+    <title>Force balance at the boundary/interface</title>
+    <p>
+      In addition to the boundary conditions on the velocity given in
+      <xref ref="boundary-conditions-velocity"/>, we sometimes need to apply a <em>force balance</em>
+      condition at the boundary of the fluid or at the interface between two fluids in a
+      free boundary problem.
+    </p>
+    <p>
+      <remark><title>Rigid boundaries</title>
+        <p>
+        Thankfully, in the case of a fluid<ndash/>solid boundary, if the solid is rigid
+        (which we often assume), the no-slip
+        boundary conditions on the velocity are sufficient to solve the problem mathematically.
+        If desired, a force balance can be performed after solving the problem, and this determines
+        the <em>stress</em> (force per unit area) that the fluid exerts on the solid wall, and we
+        can thus find the <em>reaction force</em> that the wall applies in order to maintain
+        its position in the presence of the flowing fluid.          
+        </p>
+      </remark>
+    </p>
+    <p>
+        However, if the solid <em>moves in response to the fluid</em>, either because it is an elastic solid
+        or because the solid is not <em>tethered</em>,
+        then a force balance is required to solve the problem mathematically. This is
+        called a <em>fluid<ndash/>structure interaction problem</em>, and these are typically very difficult to solve.
+    </p>
+    <p>
+        Furthermore, at a fluid<ndash/>fluid interface, a force balance is typically
+        required to solve the problem. The difference between the stresses of the two
+        fluids on the interface (the forces each fluid exerts on the interface per unit
+        area of the interface) is balanced by the <em>surface tension</em> that arises
+        within the interface.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Surface tension</title>
+    <!--
+    <video>
+      <caption>Movie 4696 explains the molecular origins of surface tension using the
+        continuum approximation and sharp interface model.</caption>
+    </video>-->
+
+    <p>
+      The interface between two immiscible fluids (e.g. air and water, or water and mercury) creates
+      surface tension, a force per unit length. A cut of length <m>dl</m> experiences
+      forces <m>\Gamma\,dl</m> on each edge, with <m>\Gamma</m> being the surface tension coefficient.
+          <figure xml:id="fig-surfacetension">
+            <caption>Thought experiment to illustrate surface tension</caption>
+            <image source="ch-chapter07-surfacetension.jpg" width="50%">
+              <shortdescription>Surface tension</shortdescription>
+            </image>
+          </figure>
+    </p>
+
+    <example>
+      <title>Droplet pressure</title>
+      <p>
+        A spherical fluid droplet of radius <m>R</m> has
+        coefficient of surface tension <m>\Gamma</m>.
+        What is the pressure difference between the inside and outside of the droplet?
+      <me>\Delta p = p_{\textrm{in}} - p_{\textrm{out}} = \frac{2\Gamma}{R}.</me>
+          <figure xml:id="fig-droplet">
+            <caption>Surface tension example: droplet</caption>
+            <image source="ch-chapter07-droplet.jpg" width="50%">
+              <shortdescription>Droplet</shortdescription>
+            </image>
+          </figure>
+    </p>
+    </example>
+
+    <example>
+      <title>Meniscus</title>
+      <p>
+          <figure xml:id="fig-meniscus">
+            <caption>Surface tension example: meniscus</caption>
+            <image source="ch-chapter07-meniscus.png" width="50%">
+              <shortdescription>Meniscus</shortdescription>
+            </image>
+          </figure>
+      <ul>
+        <li>Flat surface: no net surface tension force <m>Rightarrow</m> pressures equal.</li>
+        <li>Concave up: resultant points outward <m>Rightarrow</m> pressure below surface lower than atmospheric.</li>
+        <li>Concave down: resultant points inward <m>Rightarrow</m> pressure inside greater than atmospheric.</li>
+      </ul>
+    </p>
+    These agree with the hydrostatic pressure profile within the fluid.
+    In principle, the shape of the meniscus can be calculated from this agreement.
+    </example>
+
+    <!--
+    <video>
+      <caption>Movie 3794 shows a water strider jumping on water, supported by surface
+        tension (see also Movie 73).</caption>
+    </video>-->
+  </subsection>
+</section>
+
+<section xml:id="sec-stress">
+  <title>Stress in a fluid</title>
+  
+  <subsection>
+    <title>Stress at a surface</title>
+    <p>
+      <definition>
+      <title>Definition of stress at a surface</title>
+      <p>
+      The fluid stress on a surface is the force per unit area exerted
+      by the fluid; note that this is a vector quantity.
+      It is often convenient to decompose the stress into two contributions:
+    <ul>
+      <li>Shear stress: the components tangential to the surface</li>
+      <li>Normal stress: the component perpendicular to the surface.</li>
+    </ul>
+  </p>
+  </definition>
+</p>
+    
+  <p>
+    <example xml:id="example-shear-stress">
+      <title>Fluid stress in arteries</title>
+      <p>
+      The shear stress on arterial walls is everywhere maintained
+      at around <m>\sim1.5</m> Pa, whereas the normal stress is typically much larger at ~11–16 kPa.
+      The distribution of shear stress distribution is known to be of great importance to our
+      health as it is linked to the development of atherosclerosis, which leads to heart attacks
+      and strokes, two of the leading causes of death worldwide.
+      </p>
+    </example>
+  </p>
+    
+  <p>
+    <definition>
+      <title>Calculation of stress at a surface</title>
+      <p>
+        For Newtonian fluids at a no-slip surface:
+      <ul>
+        <li>The wall shear stress equals the fluid shear viscosity multiplied by the normal derivative of the tangential velocity.</li>
+        <li>The normal stress equals the pressure.</li>
+      </ul>
+      Note that in 3D there are two shear components and one normal component.
+    </p>
+  </definition>
+</p>
+
+    <p>
+      <example>
+      <title>Shear stress at a flat wall</title>
+      <p>
+          Flat wall at <m>z=0</m> and fluid in <m>z>0</m>:
+          <me>
+            \tau_x = \mu\pd{u}{z},\quad \tau_y = \mu\pd{v}{z}.
+          </me>
+          Flat wall at <m>z=0</m> and fluid in <m>z&lt;0</m>:
+          <me>
+            \tau_x = -\mu\pd{u}{z},\quad \tau_y = -\mu\pd{v}{z}.
+          </me>
+        </p>
+        </example>
+        </p>
+
+        <p>
+          <example>
+      <title>Shear stress on a circular pipe</title>
+        <p>
+          Flow in a circular pipe, wall at <m>r=a</m> in cylindrical polar coordinates:
+          <me>\tau_{\textrm{axial}} = -\mu\pd{u_z}{r},\quad
+          \tau_{\textrm{azimuthal}} = -\mu\pd{u_{\theta}}{r}.</me>          
+        </p>
+          </example>
+        </p>
+
+        <p>
+          <example>
+      <title>Cone-and-plate viscometer</title>
+        <p>
+          Cone-and-plate viscometer: cone lowered into fluid, torque needed to rotate cone gives viscosity.
+          <figure xml:id="fig-cone-and-plate-viscometer">
+            <caption>Cone and plate viscometer</caption>
+            <image source="ch-chapter07-Cone_and_plate.jpg" width="50%">
+              <shortdescription>Cone and plate viscometer</shortdescription>
+            </image>
+          </figure>
+        </p>
+        </example>
+      </p>
+        <p>
+          <example>
+      <title>Falling ball viscometer</title>
+        <p>
+          Falling-ball viscometer: measure terminal velocity of a ball in fluid
+          at low Reynolds number (see <xref ref="figure-falling-ball"/>).
+        </p>
+        </example>
+        </p>
+
+</subsection>
+
+<subsection xml:id="subsec-stress-tensor">
+  <title>The stress tensor</title>
+  <p>
+    This is a <m>3\times3</m> matrix.
+  </p>
+</subsection>
+
+</section>
 
 <worksheet xml:id="ws-viscousflows">
 
