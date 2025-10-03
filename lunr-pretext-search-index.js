@@ -375,8 +375,8 @@ var ptx_lunr_docs = [
   "url": "sec-RTT.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Reynolds’ transport theorem",
-  "body": " Reynolds' transport theorem   Jacobian of Lagrangian to Eulerian  Consider a fluid volume, , that is initially dyed a certain colour. The packet of fluid is initially located at . As the fluid evolves in time, it then occupies the volume with .  As an example, we may express the density of the fluid as i.e. at every point in space and moment in time, the above retrieves the density of the fluid within a designated region (which may be changing). This is a natural quantity to study in a fixed frame of the fluid.  Alternatively, we can write which is the density of fluid for those particles making up an originally chosen volume, . This is a natural quantity to study if we were to move with the fluid; for instance, if we were to colour the volume with a dye and track its density in time.  The correspondence between the Euclidean and Lagrangian coordinates is written as    Jacobian of Lagrangian to Eulerian   Since we assume the medium is continuous, then we would generally require that the mapping from Lagrangian to Eulerian coordinates is continuous and one-to-one; then the map assigns every element (label) in the original reference configuration, denoted , a unique position, , in the deformed state.  From Multivariable Calculus, a sufficient condition for this to be true is that the Jacobian of the transformation , is finite and non-zero:     The following requires a bit of algebra, and you are not required to prove the result.  Euler's identity   The material derivative of the Jacobian of the transformation is given by where .    The proof follows from direct differentiation on the determinant and use of the identity of the material derivative.       Reynolds transport theorem  We are now ready to derive a key result that eases our path towards developing the governing equations for a fluid. The result is as follows.  Reynolds transport theorem   Consider a time-dependent volume, , that is transported by the fluid so that it always consists of the same fluid particles. Then, for any function, , continuously differentiable with respect to its arguments, Reynolds' transport theorem is as follows:     We transform the integral in Euclidean coordinates to Lagrangian coordinates, integrating in the label space: and notice that we now only need to integrate over the fixed volume as defined in Lagrangian space, at the expense of adding the Jacobian factor. We now write and the material derivative passes through since the domain is fixed. The now allows us to convert the material derivative to regular partial derivatives. By the chain rule: and we have differentiated the Jacobian via Euler's identity in the second line. The last line follows from the chain rule applied to the vector identity: We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof of the Reynolds' transport theorem.  It is helpful for you to convince yourself that the above vector identity is the only possible arrangement of operations that makes sense, i.e. in order for to return a scalar.         Reynolds' transport theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!      In 1D, Reynolds transport theorem reduces to an identity known as Leibniz's rule. This is presented as an exercise in .      The Reynolds transport theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.     "
+  "title": "Reynolds’ Transport Theorem",
+  "body": " Reynolds' Transport Theorem   Jacobian of Lagrangian to Eulerian  Consider a fluid volume, , that is initially dyed a certain colour. The packet of fluid is initially located at . As the fluid evolves in time, it then occupies the volume with .  As an example, we may express the density of the fluid as i.e. at every point in space and moment in time, the above retrieves the density of the fluid within a designated region (which may be changing). This is a natural quantity to study in a fixed frame of the fluid.  Alternatively, we can write which is the density of fluid for those particles making up an originally chosen volume, . This is a natural quantity to study if we were to move with the fluid; for instance, if we were to colour the volume with a dye and track its density in time.  The correspondence between the Euclidean and Lagrangian coordinates is written as    Jacobian of Lagrangian to Eulerian   Since we assume the medium is continuous, then we would generally require that the mapping from Lagrangian to Eulerian coordinates is continuous and one-to-one; then the map assigns every element (label) in the original reference configuration, denoted , a unique position, , in the deformed state.  From Multivariable Calculus, a sufficient condition for this to be true is that the Jacobian of the transformation , is finite and non-zero:     The following requires a bit of algebra, and you are not required to prove the result.  Euler's identity   The material derivative of the Jacobian of the transformation is given by where .    The proof follows from direct differentiation on the determinant and use of the identity of the material derivative.       Reynolds' Transport Theorem  We are now ready to derive a key result that eases our path towards developing the governing equations for a fluid. The result is as follows.  Reynolds' Transport Theorem   Consider a time-dependent volume, , that is transported by the fluid so that it always consists of the same fluid particles. Then, for any function, , continuously differentiable with respect to its arguments, Reynolds' Transport Theorem is as follows:     We transform the integral in Euclidean coordinates to Lagrangian coordinates, integrating in the label space: and notice that we now only need to integrate over the fixed volume as defined in Lagrangian space, at the expense of adding the Jacobian factor. We now write and the material derivative passes through since the domain is fixed. The now allows us to convert the material derivative to regular partial derivatives. By the chain rule: and we have differentiated the Jacobian via Euler's identity in the second line. The last line follows from the chain rule applied to the vector identity: We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof of the Reynolds' Transport Theorem.  It is helpful for you to convince yourself that the above vector identity is the only possible arrangement of operations that makes sense, i.e. in order for to return a scalar.         Reynolds' Transport Theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!      In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule. This is presented as an exercise in .      The Reynolds' Transport Theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.    You will apply the Reynolds' Transport Theorem to a problem involving the conservation of mass in and problems on momentum conservation in and    "
 },
 {
   "id": "thm-jacobian",
@@ -402,8 +402,8 @@ var ptx_lunr_docs = [
   "url": "sec-RTT.html#thm-RTT",
   "type": "Theorem",
   "number": "3.1.3",
-  "title": "Reynolds transport theorem.",
-  "body": " Reynolds transport theorem   Consider a time-dependent volume, , that is transported by the fluid so that it always consists of the same fluid particles. Then, for any function, , continuously differentiable with respect to its arguments, Reynolds' transport theorem is as follows:     We transform the integral in Euclidean coordinates to Lagrangian coordinates, integrating in the label space: and notice that we now only need to integrate over the fixed volume as defined in Lagrangian space, at the expense of adding the Jacobian factor. We now write and the material derivative passes through since the domain is fixed. The now allows us to convert the material derivative to regular partial derivatives. By the chain rule: and we have differentiated the Jacobian via Euler's identity in the second line. The last line follows from the chain rule applied to the vector identity: We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof of the Reynolds' transport theorem.  It is helpful for you to convince yourself that the above vector identity is the only possible arrangement of operations that makes sense, i.e. in order for to return a scalar.     "
+  "title": "Reynolds’ Transport Theorem.",
+  "body": " Reynolds' Transport Theorem   Consider a time-dependent volume, , that is transported by the fluid so that it always consists of the same fluid particles. Then, for any function, , continuously differentiable with respect to its arguments, Reynolds' Transport Theorem is as follows:     We transform the integral in Euclidean coordinates to Lagrangian coordinates, integrating in the label space: and notice that we now only need to integrate over the fixed volume as defined in Lagrangian space, at the expense of adding the Jacobian factor. We now write and the material derivative passes through since the domain is fixed. The now allows us to convert the material derivative to regular partial derivatives. By the chain rule: and we have differentiated the Jacobian via Euler's identity in the second line. The last line follows from the chain rule applied to the vector identity: We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof of the Reynolds' Transport Theorem.  It is helpful for you to convince yourself that the above vector identity is the only possible arrangement of operations that makes sense, i.e. in order for to return a scalar.     "
 },
 {
   "id": "subsec-RTT-3-1",
@@ -412,7 +412,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "3.1.5",
   "title": "",
-  "body": " Reynolds' transport theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!  "
+  "body": " Reynolds' Transport Theorem thus gives an identity for how time differentiation can pass through the integral when the domain of integration is changing in time!  "
 },
 {
   "id": "subsec-RTT-4-1",
@@ -421,7 +421,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "3.1.6",
   "title": "",
-  "body": " In 1D, Reynolds transport theorem reduces to an identity known as Leibniz's rule. This is presented as an exercise in .  "
+  "body": " In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule. This is presented as an exercise in .  "
 },
 {
   "id": "subsec-RTT-5-1",
@@ -430,7 +430,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "3.1.7",
   "title": "",
-  "body": " The Reynolds transport theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.  "
+  "body": " The Reynolds' Transport Theorem can be stated in words as follows: the rate of change of the integral of a quantity over a material volume is equal to the local rate of change of the quantity plus the net flux of the quantity out of the control volume.  "
 },
 {
   "id": "ch-chapter03-equations-4",
@@ -439,7 +439,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Conservation of mass",
-  "body": " Conservation of mass  Our task from this section is to prove the following equation for the conservation of mass of a fluid:  Continuity equation   The differential form of the law of conservation of mass, otherwise known as the continuity equation is where is the density of the fluid and is the velocity of the fluid.  The above form is equivalent, by the definition of the convective derivative, to      In fact, as it turns out, the proof of this result is trivial if we use the Reynolds' transport theorem and Lagrangian formulation following .   We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' transport theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .    Use of the bump lemma  Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the \"Bump lemma\". In , you will prove this lemma.    Derivation of mass conservation using Eulerian methods  The derivation we have just shown for , using the Lagrangian viewpoint and the Reynolds' transport theorem is misleadingly simple, and it can be instructive to see how the result is proved purely from the perspective of Eulerian coordinates.  For this, let us consider to be a fixed and closed subregion of the overall fluid, that does not change with time. An illustration of this is shown in   Picture of the fluid volume, , shown in blue, with a small surface element, , and the outwards flux.   Fluid     We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.  Integral form of the law of conservation of mass  Given a fixed volume element and boundary , the integral form of the law of mass conservation is     The rate of change of mass in is and note the derivative passes through the integral since the volume, , does not change with time.  Let the boundary of be given by , and let denote the outward unit normal defined along the boundary . At each point on the boundary, the volume flow rate (known as the flux ) across the boundary is given by and therefore the mass flow rate is .  We now sum the total mass flow across the entire boundary. This is given by the surface integral The flux out of the boundary is also sketched in .  Mass conservation is now applied. Therefore, the rate of change of pass in the volume is equal to the rate at which mass enters the boundary in the inwards direction.    We now want to transform the integral form in into the form of a partial differential equation. To do this, apply the Divergence theorem to the right hand-side of the above integral, converting the surface integral to a volume integral. Moving all quantities to the left hand side now yields Since the above integral equation holds for all possible , it must be equivalent to the integrand equated to zero ( ). This yields our final result leading to .    Corollary of the Transport Theorem    There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . In this case the Reynolds transport theorem is     This is left as an exercise. It will be useful for you to consider the vector identity      "
+  "body": " Conservation of mass  Our task from this section is to prove the following equation for the conservation of mass of a fluid:  Continuity equation   The differential form of the law of conservation of mass, otherwise known as the continuity equation is where is the density of the fluid and is the velocity of the fluid.  The above form is equivalent, by the definition of the convective derivative, to      In fact, as it turns out, the proof of this result is trivial if we use the Reynolds' Transport Theorem and Lagrangian formulation following .   We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .    Use of the bump lemma  Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the \"Bump lemma\". In , you will prove this lemma.    Derivation of mass conservation using Eulerian methods  The derivation we have just shown for , using the Lagrangian viewpoint and the Reynolds' Transport Theorem is misleadingly simple, and it can be instructive to see how the result is proved purely from the perspective of Eulerian coordinates.  For this, let us consider to be a fixed and closed subregion of the overall fluid, that does not change with time. An illustration of this is shown in   Picture of the fluid volume, , shown in blue, with a small surface element, , and the outwards flux.   Fluid     We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.  Integral form of the law of conservation of mass  Given a fixed volume element and boundary , the integral form of the law of mass conservation is     The rate of change of mass in is and note the derivative passes through the integral since the volume, , does not change with time.  Let the boundary of be given by , and let denote the outward unit normal defined along the boundary . At each point on the boundary, the volume flow rate (known as the flux ) across the boundary is given by and therefore the mass flow rate is .  We now sum the total mass flow across the entire boundary. This is given by the surface integral The flux out of the boundary is also sketched in .  Mass conservation is now applied. Therefore, the rate of change of pass in the volume is equal to the rate at which mass enters the boundary in the inwards direction.    We now want to transform the integral form in into the form of a partial differential equation. To do this, apply the Divergence theorem to the right hand-side of the above integral, converting the surface integral to a volume integral. Moving all quantities to the left hand side now yields Since the above integral equation holds for all possible , it must be equivalent to the integrand equated to zero ( ). This yields our final result leading to .    Corollary of the Transport Theorem    There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . In this case the Reynolds' Transport Theorem is     This is left as an exercise. It will be useful for you to consider the vector identity      "
 },
 {
   "id": "thm-mass",
@@ -457,7 +457,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "3.2.1",
   "title": "",
-  "body": " We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' transport theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .  "
+  "body": " We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .  "
 },
 {
   "id": "ch-chapter03-equations-4-5",
@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Corollary",
   "number": "3.2.5",
   "title": "",
-  "body": "  There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . In this case the Reynolds transport theorem is     This is left as an exercise. It will be useful for you to consider the vector identity    "
+  "body": "  There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . In this case the Reynolds' Transport Theorem is     This is left as an exercise. It will be useful for you to consider the vector identity    "
 },
 {
   "id": "subsec-euler-momentum",
@@ -700,7 +700,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "3.6",
   "title": "Worksheet",
-  "body": "  Governing equations   This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow, starting from first principles, and deriving the conservation laws using vector calculus. Eventually, we studied different variations of the Euler equations and its consequences.    We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.      Continuum approximation   Domestic salt flows quite well out of a container with a hole in the bottom. Following , consider whether salt matches up to the properties quoted for a fluid  What is the size of a typical salt particle? What size of hole would required so that a continuum model of the salt flow is a reasonable assumption? (Based on Q1, p. 42 by Paterson .)   Salt is not like a fluid because you can make it into a pile, whereas the surface of a resting fluid is always horizontal. However, some aspects of salt flow are similar to the flow of a fluid. A typical salt particle is approximately a cube of side mm, and therefore has a volume of approximately m . We need a size of hole that admits a very large number of particles. A reasonable value of the volume appearing in the continuum approximation might be the volume of salt grains (this was the number of gas or liquid molecules quoted in the notes), i.e. m , which is a cube of side length approximately cm. We need a hole that is many times this distance, perhaps a hole with a diameter of one metre or so might be reasonable!      Bump lemma  Within our derivations of the governing equations, we often make use of the following lemma:  Bump lemma   Let be a sufficiently smooth function defined on . Suppose it is the case that for all . Then in .     Give a proof of the lemma.   This proof assumes that the function is not pathological (e.g. it cannot oscillate infinitely fast, take different values for rational vs. irrational, etc.). That's what we mean by \"sufficiently smooth\".  Assume that there exists a point where . Suppose without loss of generality here. Since is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near where everywhere in this neighbourhood, say . Then , contradicting the assumption. Therefore must be zero everywhere.     Leibnitz's rule  The Reynolds' transport theorem , which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:    Examine the figure in . Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?  Visual \"proof\" of Leibnitz's rule   Leibnitz      The first circled element is associated with the quantity: This is essentially the finite-difference version of the first term on the RHS.  The second circled element is associated with the quantity: and is associated with the area of the rectangle.  The third circled element is associated with and is associated with the area of the rectangle. Notice that for small , the rectangle height of is approximately the same as the rectangle height of .     A nice proof of the Leibnitz rule is given in this YouTube video by Brian Storey . Watch the video and follow the derivation, making your own notes.    Can you now connect the form of the rule in to the Reynolds transport theorem in ?   Write the second and third terms on the RHS as         Derivation of governing equations  Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid, use Reynolds' Transport Theorem to derive the equations:   What additional assumptions are required to transform the set of equations to the Euler equations of ? Apply these assumptions and conclude with the Euler equations.   The proof of the continuity equation is given in and the proof of the momentum equation is given in , so make sure you can follow these arguments and produce your own notes.  The derivation of the Euler equations, as given in requires the additional assumption of an incompressible fluid, following . Incompressibility implies that , and this equation then replaces the continuity equation.      Pressure field in uniform flow   A fluid in a gravitational field with density and acceleration vector has uniform velocity The pressure at the origin is fixed at .    Find the pressure field in terms of and .   The fluid has a uniform velocity, which means that all components of vanish. The Euler equation simplifies to where Hence, which is a vector equation. Splitting into components, we obtain Solving sequentially, the first equation gives Substituting into the second equation,  The third equation then implies  Using at the origin gives for all . Hence      Draw the contours of the pressure at a fixed time , and hence describe the pressure field.   The pressure is constant on planes normal to the vector , as illustrated below:    Contours of the pressure field at fixed .         Piston problem     Schematic of piston and pipe system.   The piston shown in the diagram below is pushed with a force into a pipe of length and cross-sectional area containing incompressible fluid of density .  Assuming the fluid moves as a rigid body and neglecting friction and the mass of the piston, write down a differential equation governing the position of the piston at time . You may neglect gravity.    We assume that the fluid pressure at the open end of the pipe is atmospheric pressure. Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and hence the Euler equation reduces to Solving for gives where is atmospheric pressure, and hence      The vorticity equation   Consider an incompressible fluid, with constant density , subject to a conservative body force (i.e. for some potential function ).    Starting from the Euler equations, show that the vorticity satisfies Note that, in this question, you are expected to do a long-form calculation. The method given in the notes uses an alternative expression for the momentum equation combined with a vector identity to get the same result with less effort.   The Euler equation reads: Since the curl of a gradient is zero, is constant and we can commute derivatives, taking the curl of both sides gives We have where the final equality follows from incompressibility. Hence, as required.      Deduce that, in two-dimensional incompressible flow, is conserved following the flow.   If the flow is the -plane, we have and all -derivatives are zero. Hence the only non-zero component of the vorticity is the -component, . Thus Hence meaning that is conserved following the flow.        Using streamlines: The clepsydra   One of the earliest means for measuring the passage of time, invented by the ancient Egyptians, was the clepsydra (or ‘water thief’): a large jar with a hole in its base is filled with water. The shape of the jar was such that the interval of time taken for the water surface to pass two equally-spaced markers on the side of the jar is constant.  In this question you will determine the shape of jar required to achieve this. In particular, we denote the (axisymmetric) jar’s radius a height above the hole by . The radius of the hole, , in general.    Explain why the curve is a streamline.   The fluid velocity at the surface of the jar satisfies , so that no fluid leaves or enters the jar through its sides. Thus, This is precisely the condition for to be a streamline.     If the surface of the water lies at , use an appropriate form of Bernoulli’s principle to calculate the speed of liquid, , leaving the jar at .  [You may assume that the desired surface speed , so that the flow is approximately steady and that the fluid pressure is atmospheric at .]   We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface at and the fluid leaving the hole at . At the free surface, the pressure is atmospheric, , and the speed is . At the hole, the pressure is also atmospheric, , and the velocity is . Thus, Bernoulli's equation for the streamline joining the two points gives Assuming that , this simplifies to      Use the principle of conservation of mass to link , , and ; thereby determine the correct shape for a clepsydra.   The volume flux out of the hole is , while the rate of decrease of the volume of fluid in the jar is . Conservation of mass therefore gives or Using the result from part (b) to eliminate gives We require to be independent of time so that equally spaced intervals are traversed in equal times. Hence, The terms in the brackets are constant, so we have that the radius of the jar must vary as the fourth root of the height.        "
+  "body": "  Governing equations   This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow, starting from first principles, and deriving the conservation laws using vector calculus. Eventually, we studied different variations of the Euler equations and its consequences.    We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.      Continuum approximation   Domestic salt flows quite well out of a container with a hole in the bottom. Following , consider whether salt matches up to the properties quoted for a fluid  What is the size of a typical salt particle? What size of hole would required so that a continuum model of the salt flow is a reasonable assumption? (Based on Q1, p. 42 by Paterson .)   Salt is not like a fluid because you can make it into a pile, whereas the surface of a resting fluid is always horizontal. However, some aspects of salt flow are similar to the flow of a fluid. A typical salt particle is approximately a cube of side mm, and therefore has a volume of approximately m . We need a size of hole that admits a very large number of particles. A reasonable value of the volume appearing in the continuum approximation might be the volume of salt grains (this was the number of gas or liquid molecules quoted in the notes), i.e. m , which is a cube of side length approximately cm. We need a hole that is many times this distance, perhaps a hole with a diameter of one metre or so might be reasonable!      Bump lemma  Within our derivations of the governing equations, we often make use of the following lemma:  Bump lemma   Let be a sufficiently smooth function defined on . Suppose it is the case that for all . Then in .     Give a proof of the lemma.   This proof assumes that the function is not pathological (e.g. it cannot oscillate infinitely fast, take different values for rational vs. irrational, etc.). That's what we mean by \"sufficiently smooth\".  Assume that there exists a point where . Suppose without loss of generality here. Since is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near where everywhere in this neighbourhood, say . Then , contradicting the assumption. Therefore must be zero everywhere.     Leibnitz's rule  The Reynolds' Transport Theorem , which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:    Examine the figure in . Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?  Visual \"proof\" of Leibnitz's rule   Leibnitz      The first circled element is associated with the quantity: This is essentially the finite-difference version of the first term on the RHS.  The second circled element is associated with the quantity: and is associated with the area of the rectangle.  The third circled element is associated with and is associated with the area of the rectangle. Notice that for small , the rectangle height of is approximately the same as the rectangle height of .     A nice proof of the Leibnitz rule is given in this YouTube video by Brian Storey . Watch the video and follow the derivation, making your own notes.    Can you now connect the form of the rule in to the Reynolds' Transport Theorem in ?   Write the second and third terms on the RHS as         Filling tank Q3 off answer6   Force on arterial segment Q1 off answers7   Draining pipe Q8 off answers7   Derivation of governing equations  Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid, use Reynolds' Transport Theorem to derive the equations:   What additional assumptions are required to transform the set of equations to the Euler equations of ? Apply these assumptions and conclude with the Euler equations.   The proof of the continuity equation is given in and the proof of the momentum equation is given in , so make sure you can follow these arguments and produce your own notes.  The derivation of the Euler equations, as given in requires the additional assumption of an incompressible fluid, following . Incompressibility implies that , and this equation then replaces the continuity equation.      Pressure field in uniform flow   A fluid in a gravitational field with density and acceleration vector has uniform velocity The pressure at the origin is fixed at .    Find the pressure field in terms of and .   The fluid has a uniform velocity, which means that all components of vanish. The Euler equation simplifies to where Hence, which is a vector equation. Splitting into components, we obtain Solving sequentially, the first equation gives Substituting into the second equation,  The third equation then implies  Using at the origin gives for all . Hence      Draw the contours of the pressure at a fixed time , and hence describe the pressure field.   The pressure is constant on planes normal to the vector , as illustrated below:    Contours of the pressure field at fixed .         Piston problem     Schematic of piston and pipe system.   The piston shown in the diagram below is pushed with a force into a pipe of length and cross-sectional area containing incompressible fluid of density .  Assuming the fluid moves as a rigid body and neglecting friction and the mass of the piston, write down a differential equation governing the position of the piston at time . You may neglect gravity.    We assume that the fluid pressure at the open end of the pipe is atmospheric pressure. Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and hence the Euler equation reduces to Solving for gives where is atmospheric pressure, and hence      The vorticity equation   Consider an incompressible fluid, with constant density , subject to a conservative body force (i.e. for some potential function ).    Starting from the Euler equations, show that the vorticity satisfies Note that, in this question, you are expected to do a long-form calculation. The method given in the notes uses an alternative expression for the momentum equation combined with a vector identity to get the same result with less effort.   The Euler equation reads: Since the curl of a gradient is zero, is constant and we can commute derivatives, taking the curl of both sides gives We have where the final equality follows from incompressibility. Hence, as required.      Deduce that, in two-dimensional incompressible flow, is conserved following the flow.   If the flow is the -plane, we have and all -derivatives are zero. Hence the only non-zero component of the vorticity is the -component, . Thus Hence meaning that is conserved following the flow.        Using streamlines: The clepsydra   One of the earliest means for measuring the passage of time, invented by the ancient Egyptians, was the clepsydra (or ‘water thief’): a large jar with a hole in its base is filled with water. The shape of the jar was such that the interval of time taken for the water surface to pass two equally-spaced markers on the side of the jar is constant.  In this question you will determine the shape of jar required to achieve this. In particular, we denote the (axisymmetric) jar’s radius a height above the hole by . The radius of the hole, , in general.    Explain why the curve is a streamline.   The fluid velocity at the surface of the jar satisfies , so that no fluid leaves or enters the jar through its sides. Thus, This is precisely the condition for to be a streamline.     If the surface of the water lies at , use an appropriate form of Bernoulli’s principle to calculate the speed of liquid, , leaving the jar at .  [You may assume that the desired surface speed , so that the flow is approximately steady and that the fluid pressure is atmospheric at .]   We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface at and the fluid leaving the hole at . At the free surface, the pressure is atmospheric, , and the speed is . At the hole, the pressure is also atmospheric, , and the velocity is . Thus, Bernoulli's equation for the streamline joining the two points gives Assuming that , this simplifies to      Use the principle of conservation of mass to link , , and ; thereby determine the correct shape for a clepsydra.   The volume flux out of the hole is , while the rate of decrease of the volume of fluid in the jar is . Conservation of mass therefore gives or Using the result from part (b) to eliminate gives We require to be independent of time so that equally spaced intervals are traversed in equal times. Hence, The terms in the brackets are constant, so we have that the radius of the jar must vary as the fourth root of the height.        "
 },
 {
   "id": "governing-equations-questions-2-2-1",
@@ -736,14 +736,41 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "3.6.3",
   "title": "Leibnitz’s rule.",
-  "body": " Leibnitz's rule  The Reynolds' transport theorem , which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:    Examine the figure in . Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?  Visual \"proof\" of Leibnitz's rule   Leibnitz      The first circled element is associated with the quantity: This is essentially the finite-difference version of the first term on the RHS.  The second circled element is associated with the quantity: and is associated with the area of the rectangle.  The third circled element is associated with and is associated with the area of the rectangle. Notice that for small , the rectangle height of is approximately the same as the rectangle height of .     A nice proof of the Leibnitz rule is given in this YouTube video by Brian Storey . Watch the video and follow the derivation, making your own notes.    Can you now connect the form of the rule in to the Reynolds transport theorem in ?   Write the second and third terms on the RHS as       "
+  "body": " Leibnitz's rule  The Reynolds' Transport Theorem , which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:    Examine the figure in . Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?  Visual \"proof\" of Leibnitz's rule   Leibnitz      The first circled element is associated with the quantity: This is essentially the finite-difference version of the first term on the RHS.  The second circled element is associated with the quantity: and is associated with the area of the rectangle.  The third circled element is associated with and is associated with the area of the rectangle. Notice that for small , the rectangle height of is approximately the same as the rectangle height of .     A nice proof of the Leibnitz rule is given in this YouTube video by Brian Storey . Watch the video and follow the derivation, making your own notes.    Can you now connect the form of the rule in to the Reynolds' Transport Theorem in ?   Write the second and third terms on the RHS as       "
+},
+{
+  "id": "ex-rtt-mass-tank",
+  "level": "2",
+  "url": "ws-equations.html#ex-rtt-mass-tank",
+  "type": "Worksheet Exercise",
+  "number": "3.6.4",
+  "title": "Filling tank.",
+  "body": " Filling tank Q3 off answer6 "
+},
+{
+  "id": "ex-rtt-momentum-artery",
+  "level": "2",
+  "url": "ws-equations.html#ex-rtt-momentum-artery",
+  "type": "Worksheet Exercise",
+  "number": "3.6.5",
+  "title": "Force on arterial segment.",
+  "body": " Force on arterial segment Q1 off answers7 "
+},
+{
+  "id": "ex-rtt-momentum-pipe",
+  "level": "2",
+  "url": "ws-equations.html#ex-rtt-momentum-pipe",
+  "type": "Worksheet Exercise",
+  "number": "3.6.6",
+  "title": "Draining pipe.",
+  "body": " Draining pipe Q8 off answers7 "
 },
 {
   "id": "ex-euler-check",
   "level": "2",
   "url": "ws-equations.html#ex-euler-check",
   "type": "Worksheet Exercise",
-  "number": "3.6.4",
+  "number": "3.6.7",
   "title": "Derivation of governing equations.",
   "body": " Derivation of governing equations  Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid, use Reynolds' Transport Theorem to derive the equations:   What additional assumptions are required to transform the set of equations to the Euler equations of ? Apply these assumptions and conclude with the Euler equations.   The proof of the continuity equation is given in and the proof of the momentum equation is given in , so make sure you can follow these arguments and produce your own notes.  The derivation of the Euler equations, as given in requires the additional assumption of an incompressible fluid, following . Incompressibility implies that , and this equation then replaces the continuity equation.   "
 },
@@ -752,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-equations.html#ex-fluid-pressure-uniform-velocity",
   "type": "Worksheet Exercise",
-  "number": "3.6.5",
+  "number": "3.6.8",
   "title": "Pressure field in uniform flow.",
   "body": " Pressure field in uniform flow   A fluid in a gravitational field with density and acceleration vector has uniform velocity The pressure at the origin is fixed at .    Find the pressure field in terms of and .   The fluid has a uniform velocity, which means that all components of vanish. The Euler equation simplifies to where Hence, which is a vector equation. Splitting into components, we obtain Solving sequentially, the first equation gives Substituting into the second equation,  The third equation then implies  Using at the origin gives for all . Hence      Draw the contours of the pressure at a fixed time , and hence describe the pressure field.   The pressure is constant on planes normal to the vector , as illustrated below:    Contours of the pressure field at fixed .       "
 },
@@ -761,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-equations.html#ex-piston-fluid-problem",
   "type": "Worksheet Exercise",
-  "number": "3.6.6",
+  "number": "3.6.9",
   "title": "Piston problem.",
   "body": " Piston problem     Schematic of piston and pipe system.   The piston shown in the diagram below is pushed with a force into a pipe of length and cross-sectional area containing incompressible fluid of density .  Assuming the fluid moves as a rigid body and neglecting friction and the mass of the piston, write down a differential equation governing the position of the piston at time . You may neglect gravity.    We assume that the fluid pressure at the open end of the pipe is atmospheric pressure. Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and hence the Euler equation reduces to Solving for gives where is atmospheric pressure, and hence    "
 },
@@ -770,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-equations.html#ex-vorticity-equation",
   "type": "Worksheet Exercise",
-  "number": "3.6.7",
+  "number": "3.6.10",
   "title": "The vorticity equation.",
   "body": " The vorticity equation   Consider an incompressible fluid, with constant density , subject to a conservative body force (i.e. for some potential function ).    Starting from the Euler equations, show that the vorticity satisfies Note that, in this question, you are expected to do a long-form calculation. The method given in the notes uses an alternative expression for the momentum equation combined with a vector identity to get the same result with less effort.   The Euler equation reads: Since the curl of a gradient is zero, is constant and we can commute derivatives, taking the curl of both sides gives We have where the final equality follows from incompressibility. Hence, as required.      Deduce that, in two-dimensional incompressible flow, is conserved following the flow.   If the flow is the -plane, we have and all -derivatives are zero. Hence the only non-zero component of the vorticity is the -component, . Thus Hence meaning that is conserved following the flow.      "
 },
@@ -779,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-equations.html#ex-bernoulli-streamline",
   "type": "Worksheet Exercise",
-  "number": "3.6.8",
+  "number": "3.6.11",
   "title": "Using streamlines: The clepsydra.",
   "body": " Using streamlines: The clepsydra   One of the earliest means for measuring the passage of time, invented by the ancient Egyptians, was the clepsydra (or ‘water thief’): a large jar with a hole in its base is filled with water. The shape of the jar was such that the interval of time taken for the water surface to pass two equally-spaced markers on the side of the jar is constant.  In this question you will determine the shape of jar required to achieve this. In particular, we denote the (axisymmetric) jar’s radius a height above the hole by . The radius of the hole, , in general.    Explain why the curve is a streamline.   The fluid velocity at the surface of the jar satisfies , so that no fluid leaves or enters the jar through its sides. Thus, This is precisely the condition for to be a streamline.     If the surface of the water lies at , use an appropriate form of Bernoulli’s principle to calculate the speed of liquid, , leaving the jar at .  [You may assume that the desired surface speed , so that the flow is approximately steady and that the fluid pressure is atmospheric at .]   We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface at and the fluid leaving the hole at . At the free surface, the pressure is atmospheric, , and the speed is . At the hole, the pressure is also atmospheric, , and the velocity is . Thus, Bernoulli's equation for the streamline joining the two points gives Assuming that , this simplifies to      Use the principle of conservation of mass to link , , and ; thereby determine the correct shape for a clepsydra.   The volume flux out of the hole is , while the rate of decrease of the volume of fluid in the jar is . Conservation of mass therefore gives or Using the result from part (b) to eliminate gives We require to be independent of time so that equally spaced intervals are traversed in equal times. Hence, The terms in the brackets are constant, so we have that the radius of the jar must vary as the fourth root of the height.      "
 },
@@ -1203,8 +1230,8 @@ var ptx_lunr_docs = [
   "url": "definitions.html",
   "type": "Section",
   "number": "7.1",
-  "title": "Definitions of important concepts",
-  "body": " Definitions of important concepts   Viscosity  Viscosity quantifies the fluid's resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a Newtonian fluid. For these fluids the shear viscosity (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.   We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).   The kinematic viscosity (measured in ) is related to the shear viscosity via    Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood        Many real fluids, e.g. blood, have more complicated viscosity properties, but in this course we mainly consider circumstances in which it is appropriate to assume that the fluid in question has a constant and uniform viscosity.    Reynolds number  This is one of the most important flow parameters, and it often determines the qualitative nature of the flow. It is a dimensionless quantity, defined by   where is a characteristic (or typical) velocity of the flow and is a characteristic lengthscale. It characterises the relative importance of viscous and inertial accelerations.   How do we choose and ? There are usually ‘natural’ scales in the problem that we can choose for and , and determining these in a given problem usually becomes easier with experience. As an illustrative example of a suitable scale choice, consider steady flow down a pipe with a circular cross-section. An appropriate value of is often the pipe radius or diameter, while an appropriate value of could be the velocity on the centreline of the pipe. However, note that we could alternatively choose the average velocity across the pipe cross-section as our characteristic velocity. This would lead to a different numerical value of , but note that the order of magnitude of the quantities are unchanged. Thus the value of is often quoted as an order-of-magnitude property, unless we are given detailed information about exactly which length and velocity scales are used.  Typical characteristics of the flow are strongly associated with Reynolds number:   Low-Reynolds-number flows ( ):   Examples include capillary flow, microfluidics, swimming bacteria or single cell organisms, lymphatic system flow, glacier flow, and spreading honey on toast.  These flows are called Stokes flow (after G. G. Stokes who studied them) or creeping flows.  Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.   Inertial effects are negligible and viscous effects are important.     Flows with moderate Reynolds number ( ):   Examples include flows in most blood vessels that are not capillaries, fast flow of aqueous humour and vitreous humour in the eye, urinary tract flow, and small fish swimming.  Flows in pipes with moderate Reynolds number are often described as laminar, meaning that the fluid moves in ‘layers’ sliding past each other (often people use ‘laminar’ to mean that the flow is not turbulent).     High-Reynolds-number flows (typically above about ):   Examples include atmospheric and ocean flows, rivers, large industrial processes, flows around vehicles, airflow in trachea.  These flows are characteristically unstable or turbulent (especially for very high Reynolds numbers).  Inertial effects are important and viscous effects are small.       Turbulent flow is characterised as having many different length scales, and the flow is chaotic . Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the flow into a mean flow, which describes the large-scale flow and a fluctuating flow, which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called closure problem , in which an assumption needs to be made to provide a final equation that governs the dynamics.  Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have such a high Reynolds number that turbulence is unavoidable and dominates the flow characteristics.  The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course.     Boundaries of fluids   Boundary conditions on the velocity   Movie 454 shows an experiment demonstrating the plausibility of the no-slip boundary condition.     Force balance at the interface  In addition to the velocity boundary conditions, an additional force balance condition applies at the interface:   In many cases (e.g. rigid walls or fixed pipes) we only need no-slip velocity conditions. The force balance then gives the stress (force per unit area) between fluid and solid.  If the solid moves in response to the fluid (elastic solids or fluid–fluid interfaces), then a full force balance is required.   The stress (force per unit area) exerted at a boundary is called the stress.    Fluid–solid interface: Stresses of fluid and solid are equal and opposite.   Fluid–fluid interface: Surface tension enters. Three forces balance:  Stress of fluid 1 on fluid 2,  Stress of fluid 2 on fluid 1,  Surface tension.       Stress at a surface  The fluid stress on a surface is the force per unit area (a vector) exerted by the fluid. Stress is decomposed into:   Shear stress: tangential component,  Normal stress: perpendicular component.   Shear stress is important in biology (e.g. arterial wall shear stress Pa, though normal stress\/pressure is much larger ~11–16 kPa). Shear stress distribution is linked to atherosclerosis.   If shear stress formulae are confusing, start with flat 2D surface along x-axis:   Other cases can be obtained by axis transformation.     Surface tension   Movie 4696 explains the molecular origins of surface tension using the continuum approximation and sharp interface model.   The interface between immiscible fluids (e.g. air–water, water–mercury) creates surface tension, a force per unit length. A cut of length experiences forces on each edge, with Γ the surface tension coefficient.      Droplet  Pressure inside spherical droplet radius R: balance forces yields        Meniscus      Flat surface: no net surface tension force ⇒ pressures equal.  Concave up: resultant points outward ⇒ pressure below surface lower than atmospheric.  Concave down: resultant points inward ⇒ pressure inside greater than atmospheric.     Movie 3794 shows a water strider jumping on water, supported by surface tension (see also Movie 73).      State relations  In addition to mass, momentum, and energy balances, we need a state relation (from molecular theory) relating thermodynamic variables .   Liquids  Often assumed incompressible: .  If temperature effects matter: . In convection, the Boussinesq approximation neglects density variation except in buoyancy.    Gases  Gases (esp. at high T, low p) follow perfect gas law:   where .   , for air.  , universal gas constant.  for dry air.     "
+  "title": "Important definitions",
+  "body": " Important definitions   Viscosity  Viscosity quantifies the fluid's internal resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a Newtonian fluid. For these fluids the shear viscosity (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.   We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).     Kinematic viscosity  It is sometimes more convenient to work in terms of the kinematic viscosity (measured in ). This is related to the shear viscosity via      Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood        Many real fluids have more complicated viscosity properties, for example blood, mucus, shampoo, egg white and custard. In this course we mainly consider Newtonian fluids, thereby avoiding a lot of complexity!    Note that we have not yet formally defined the shear viscosity, although the example given in provides an informal definition. This concept will be formalised in .      Reynolds number  This is one of the most important flow parameters in the study of fluid dynamics, as its order of magnitude determines many of the qualitative features of the flow. In a given flow, it quantifies the relative importance of inertial and viscous effects.    The Reynolds number  The Reynolds number is a dimensionless quantity, defined by where is a characteristic (or typical) velocity of the flow and is a characteristic lengthscale. It equals the typical size of an inertial acceleration divided by a typical size of a viscous acceleration in the flow.      Choice of characteristic scales  What do we pick as the characteristic length and velocity scales? This is something that gets easier with increasing experience. For a given problem there are usually ‘natural’ scales that arise within it.    Illustrative example of choice of scales  As an illustrative example of how we might think about choosing suitable scales, consider a steady flow along a pipe with a circular cross-section. An appropriate choice of could be the pipe radius or diameter, while an appropriate value of could be the velocity along the centreline (axis) of the pipe or the average velocity across the pipe cross-section (equal to the volumetric flux (volume per unit time) of fluid passing along the pipe divided by the cross-sectional area of the pipe).    Different choices of scales (radius vs. diameter and of centreline vs. average velocity in ) would lead to different numerical values of . However, note:   The order of magnitude of the Reynolds number is the same for all choices. Thus, when describing a flow, the value of is often quoted as an order-of-magnitude property.    If we give detailed information about exactly which length and velocity scales are being used then we can directly compare different values of , even if they are of the same order of magnitude. For example, we might do this in a plot of a property of the flow against the Reynolds number. In this case, it would be good scientific practice to specify the choice of velocity and length scales used.         Flow characteristics at different Reynolds numbers  Typical characteristics of the flow are strongly associated with the order of magnitude of the Reynolds number:   Low-Reynolds-number flows ( ):   Examples include several biological examples, such as flow in capillaries (the smallest blood vessels) swimming bacteria or other single cell organisms, lymphatic system flow, and other examples include microfluidics, glacier flow, and spreading honey on toast.  These flows are called Stokes flows (after G. G. Stokes who studied them) or creeping flows.  Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.  Inertial effects are negligible and viscous effects are important.      Flows with moderate Reynolds number ( ):   Examples include flows in most blood vessels that are not capillaries, small fish swimming, not-too-fast flow out of a domestic tap, stirring a cup of tea.  Flows in pipes with moderate Reynolds number are often described as laminar , meaning that the fluid moves in ‘layers’ sliding past each other (in fluid dynamics, the word ‘laminar’ is often used to mean that the flow is not turbulent ).      High-Reynolds-number flows (typically above about ):   Examples include atmospheric and ocean flows, rivers, large industrial processes, flows around vehicles, airflow in trachea and ships or large animals swimming.  Inertial effects are important and viscous effects are small.  Since viscous effects are small, they may often be neglected in these flows, and the Euler equations  govern the dynamics.  These flows are often unstable or turbulent (especially for very high Reynolds numbers).           Turbulent flow  This is a qualitative type of flow that is characterised as having many different length scales, and the flow is mathematically chaotic . Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the fluid velocity into a mean flow , which describes the large-scale flow and a fluctuating flow , which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called closure problem , in which an assumption needs to be made to provide a final equation that governs the dynamics.  Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have a sufficiently high Reynolds number that turbulence is unavoidable and it dominates the flow characteristics.  The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course.       State relations  In addition to the balances implied by mass and momentum conservation that you have so far been working on in this course, there is an additional condition needed, and this is called a state relation . This relates the thermodynamic variables density , pressure and temperature . In this section, we give two of the most common state relations that are used mathematically, the first for liquids and the second for gases.   Liquids  Liquids are often assumed to be incompressible, that is we assume . This is the most common assumption made in this course. However, it is important to be aware that it is not always appropriate.    One of the most common reasons that making the assumption does not capture the flow dynamics accurately is if there are significant temperature variations within the liquid. Typically, liquids expand as the temperature rises, and this leads to thermal convection , which needs to be taken into account in the mathematical analysis.    The Boussinesq approximation   In a problem in which temperature variations are important in the fluid dynamics, it is often sufficient to assume the Boussinesq approximation :   In the buoyancy term of the momentum conservation equation (that is the term appearing in the Euler equation), we assume the density is a linear function of the temperature. Thus we write , where and are a reference temperature and density, respectively, and is the coefficient of thermal expansion .    In all other appearances in the governing equations, is replaced by the constant value .            Gases  Gases (especially at high temperatures and low pressures) closely follow the ideal or perfect gas law .    The ideal or perfect gas law  This law states where  is the specific gas constant,  m \/s \/K (for air) is the specific heat capacity at constant pressure,  m \/s \/K (for air) is the specific heat capacity at constant temperature,  J\/mol\/K is the universal gas constant,  kg\/mol for dry air.       You have probably previously encountered the ideal gas law in the form , where is the volume occupied by moles of a gas. Prove that this is equivalent to .   The relationship implies since is the mass of the gas molecules in and therefore is the average density.   In fluid dynamics the form is more convenient than because it can be applied at each point in the gas, whereas is a law applying to a fixed finite volume.     "
 },
 {
   "id": "example-viscosity",
@@ -1216,92 +1243,263 @@ var ptx_lunr_docs = [
   "body": " We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also .  Experiment to determine the shear viscosity of a fluid.   Fluid   A solid block of area floats on the surface of a thin layer of the fluid of thickness . The block is pushed with a force parallel to the surface of the fluid, causing it to move with a steady velocity . The shear viscosity is given by In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see in the worksheet at the end of this chapter).  "
 },
 {
-  "id": "viscosity-6",
+  "id": "viscosity-4-1",
   "level": "2",
-  "url": "definitions.html#viscosity-6",
-  "type": "Table",
+  "url": "definitions.html#viscosity-4-1",
+  "type": "Definition",
   "number": "7.1.3",
+  "title": "Kinematic viscosity.",
+  "body": " Kinematic viscosity  It is sometimes more convenient to work in terms of the kinematic viscosity (measured in ). This is related to the shear viscosity via   "
+},
+{
+  "id": "viscosity-5",
+  "level": "2",
+  "url": "definitions.html#viscosity-5",
+  "type": "Table",
+  "number": "7.1.4",
   "title": "Viscosities at <span class=\"process-math\">\\(1\\,\\mathrm{atm}\\)<\/span> pressure and <span class=\"process-math\">\\(20\\,^\\circ\\mathrm{C}\\text{.}\\)<\/span>",
   "body": " Viscosities at pressure and .     ( )  ( )  ( )    Air       Water       Blood       "
 },
 {
-  "id": "boundaries-of-fluids-3-3",
+  "id": "viscosity-7-1",
   "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-3-3",
-  "type": "List",
-  "number": "7.1.4",
-  "title": "",
-  "body": " In many cases (e.g. rigid walls or fixed pipes) we only need no-slip velocity conditions. The force balance then gives the stress (force per unit area) between fluid and solid.  If the solid moves in response to the fluid (elastic solids or fluid–fluid interfaces), then a full force balance is required.  "
-},
-{
-  "id": "boundaries-of-fluids-3-5",
-  "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-3-5",
-  "type": "List",
+  "url": "definitions.html#viscosity-7-1",
+  "type": "Remark",
   "number": "7.1.5",
   "title": "",
-  "body": "  Fluid–solid interface: Stresses of fluid and solid are equal and opposite.   Fluid–fluid interface: Surface tension enters. Three forces balance:  Stress of fluid 1 on fluid 2,  Stress of fluid 2 on fluid 1,  Surface tension.    "
+  "body": " Note that we have not yet formally defined the shear viscosity, although the example given in provides an informal definition. This concept will be formalised in .  "
 },
 {
-  "id": "boundaries-of-fluids-4-3",
+  "id": "reynolds-number-3-1",
   "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-4-3",
-  "type": "List",
+  "url": "definitions.html#reynolds-number-3-1",
+  "type": "Definition",
+  "number": "7.1.6",
+  "title": "The Reynolds number.",
+  "body": " The Reynolds number  The Reynolds number is a dimensionless quantity, defined by where is a characteristic (or typical) velocity of the flow and is a characteristic lengthscale. It equals the typical size of an inertial acceleration divided by a typical size of a viscous acceleration in the flow.  "
+},
+{
+  "id": "reynolds-number-4-1",
+  "level": "2",
+  "url": "definitions.html#reynolds-number-4-1",
+  "type": "Remark",
   "number": "7.1.7",
-  "title": "",
-  "body": " Shear stress: tangential component,  Normal stress: perpendicular component.  "
+  "title": "Choice of characteristic scales.",
+  "body": " Choice of characteristic scales  What do we pick as the characteristic length and velocity scales? This is something that gets easier with increasing experience. For a given problem there are usually ‘natural’ scales that arise within it.    Illustrative example of choice of scales  As an illustrative example of how we might think about choosing suitable scales, consider a steady flow along a pipe with a circular cross-section. An appropriate choice of could be the pipe radius or diameter, while an appropriate value of could be the velocity along the centreline (axis) of the pipe or the average velocity across the pipe cross-section (equal to the volumetric flux (volume per unit time) of fluid passing along the pipe divided by the cross-sectional area of the pipe).    Different choices of scales (radius vs. diameter and of centreline vs. average velocity in ) would lead to different numerical values of . However, note:   The order of magnitude of the Reynolds number is the same for all choices. Thus, when describing a flow, the value of is often quoted as an order-of-magnitude property.    If we give detailed information about exactly which length and velocity scales are being used then we can directly compare different values of , even if they are of the same order of magnitude. For example, we might do this in a plot of a property of the flow against the Reynolds number. In this case, it would be good scientific practice to specify the choice of velocity and length scales used.     "
 },
 {
-  "id": "boundaries-of-fluids-5-4",
+  "id": "reynolds-number-5-1",
   "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-5-4",
-  "type": "Figure",
-  "number": "7.1.8",
-  "title": "",
-  "body": "  "
-},
-{
-  "id": "boundaries-of-fluids-5-5",
-  "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-5-5",
-  "type": "Example",
+  "url": "definitions.html#reynolds-number-5-1",
+  "type": "Remark",
   "number": "7.1.9",
-  "title": "Droplet.",
-  "body": " Droplet  Pressure inside spherical droplet radius R: balance forces yields      "
+  "title": "Flow characteristics at different Reynolds numbers.",
+  "body": " Flow characteristics at different Reynolds numbers  Typical characteristics of the flow are strongly associated with the order of magnitude of the Reynolds number:   Low-Reynolds-number flows ( ):   Examples include several biological examples, such as flow in capillaries (the smallest blood vessels) swimming bacteria or other single cell organisms, lymphatic system flow, and other examples include microfluidics, glacier flow, and spreading honey on toast.  These flows are called Stokes flows (after G. G. Stokes who studied them) or creeping flows.  Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.  Inertial effects are negligible and viscous effects are important.      Flows with moderate Reynolds number ( ):   Examples include flows in most blood vessels that are not capillaries, small fish swimming, not-too-fast flow out of a domestic tap, stirring a cup of tea.  Flows in pipes with moderate Reynolds number are often described as laminar , meaning that the fluid moves in ‘layers’ sliding past each other (in fluid dynamics, the word ‘laminar’ is often used to mean that the flow is not turbulent ).      High-Reynolds-number flows (typically above about ):   Examples include atmospheric and ocean flows, rivers, large industrial processes, flows around vehicles, airflow in trachea and ships or large animals swimming.  Inertial effects are important and viscous effects are small.  Since viscous effects are small, they may often be neglected in these flows, and the Euler equations  govern the dynamics.  These flows are often unstable or turbulent (especially for very high Reynolds numbers).       "
 },
 {
-  "id": "boundaries-of-fluids-5-6",
+  "id": "reynolds-number-6-1",
   "level": "2",
-  "url": "definitions.html#boundaries-of-fluids-5-6",
-  "type": "Example",
+  "url": "definitions.html#reynolds-number-6-1",
+  "type": "Remark",
+  "number": "7.1.10",
+  "title": "Turbulent flow.",
+  "body": " Turbulent flow  This is a qualitative type of flow that is characterised as having many different length scales, and the flow is mathematically chaotic . Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the fluid velocity into a mean flow , which describes the large-scale flow and a fluctuating flow , which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called closure problem , in which an assumption needs to be made to provide a final equation that governs the dynamics.  Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have a sufficiently high Reynolds number that turbulence is unavoidable and it dominates the flow characteristics.  The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course.   "
+},
+{
+  "id": "state-relations-3-3-1",
+  "level": "2",
+  "url": "definitions.html#state-relations-3-3-1",
+  "type": "Remark",
   "number": "7.1.11",
-  "title": "Meniscus.",
-  "body": " Meniscus      Flat surface: no net surface tension force ⇒ pressures equal.  Concave up: resultant points outward ⇒ pressure below surface lower than atmospheric.  Concave down: resultant points inward ⇒ pressure inside greater than atmospheric.   "
+  "title": "",
+  "body": " One of the most common reasons that making the assumption does not capture the flow dynamics accurately is if there are significant temperature variations within the liquid. Typically, liquids expand as the temperature rises, and this leads to thermal convection , which needs to be taken into account in the mathematical analysis.    The Boussinesq approximation   In a problem in which temperature variations are important in the fluid dynamics, it is often sufficient to assume the Boussinesq approximation :   In the buoyancy term of the momentum conservation equation (that is the term appearing in the Euler equation), we assume the density is a linear function of the temperature. Thus we write , where and are a reference temperature and density, respectively, and is the coefficient of thermal expansion .    In all other appearances in the governing equations, is replaced by the constant value .        "
 },
 {
-  "id": "state-relations-3-3",
+  "id": "state-relations-4-3-1",
   "level": "2",
-  "url": "definitions.html#state-relations-3-3",
-  "type": "Note",
+  "url": "definitions.html#state-relations-4-3-1",
+  "type": "Definition",
+  "number": "7.1.13",
+  "title": "The ideal or perfect gas law.",
+  "body": " The ideal or perfect gas law  This law states where  is the specific gas constant,  m \/s \/K (for air) is the specific heat capacity at constant pressure,  m \/s \/K (for air) is the specific heat capacity at constant temperature,  J\/mol\/K is the universal gas constant,  kg\/mol for dry air.    "
+},
+{
+  "id": "state-relations-4-4",
+  "level": "2",
+  "url": "definitions.html#state-relations-4-4",
+  "type": "Remark",
   "number": "7.1.14",
   "title": "",
-  "body": "If temperature effects matter: . In convection, the Boussinesq approximation neglects density variation except in buoyancy. "
+  "body": " You have probably previously encountered the ideal gas law in the form , where is the volume occupied by moles of a gas. Prove that this is equivalent to .   The relationship implies since is the mass of the gas molecules in and therefore is the average density.   In fluid dynamics the form is more convenient than because it can be applied at each point in the gas, whereas is a law applying to a fixed finite volume.  "
 },
 {
-  "id": "state-relations-4-5",
+  "id": "boundaries-surfaces-interfaces",
+  "level": "1",
+  "url": "boundaries-surfaces-interfaces.html",
+  "type": "Section",
+  "number": "7.2",
+  "title": "Boundaries, surfaces and interfaces of fluids",
+  "body": " Boundaries, surfaces and interfaces of fluids   Boundary conditions on the velocity     Fluid solid boundary  It is observed empirically that Newtonian viscous fluids interact with solid boundaries in such a way that are satisfied. This condition on the velocity components is called the no-slip condition . When solving problems in fluid mechanics we usually apply these relationships to provide boundary conditions.      In many cases, , so the no-slip conditions mean that the velocity is zero at the boundaries.      Comparison with inviscid fluids  In the previous sections of the course, you studied inviscid fluids , for which the boundary conditions was Note that this condition is weaker than the corresponding one for viscous fluids, since it only applies to one component of the velocity. As we will shortly see, the extra conditions for viscous fluids are mathematically necessary, since the equation for conservation of momentum for viscous fluids has spatial derivatives of higher order.     > Fluid fluid interface  At the interface between two different viscous fluids, the velocities must match:       Comparison with inviscid fluids  For inviscid fluids, only the normal component balances:       Force balance at the boundary\/interface  In addition to the boundary conditions on the velocity given in , we sometimes need to apply a force balance condition at the boundary of the fluid or at the interface between two fluids in a free boundary problem.   Rigid boundaries  Thankfully, in the case of a fluid solid boundary, if the solid is rigid (which we often assume), the no-slip boundary conditions on the velocity are sufficient to solve the problem mathematically. If desired, a force balance can be performed after solving the problem, and this determines the stress (force per unit area) that the fluid exerts on the solid wall, and we can thus find the reaction force that the wall applies in order to maintain its position in the presence of the flowing fluid.    However, if the solid moves in response to the fluid , either because it is an elastic solid or because the solid is not tethered , then a force balance is required to solve the problem mathematically. This is called a fluid structure interaction problem , and these are typically very difficult to solve.  Furthermore, at a fluid fluid interface, a force balance is typically required to solve the problem. The difference between the stresses of the two fluids on the interface (the forces each fluid exerts on the interface per unit area of the interface) is balanced by the surface tension that arises within the interface.    Surface tension   The interface between two immiscible fluids (e.g. air and water, or water and mercury) creates surface tension, a force per unit length. A cut of length experiences forces on each edge, with being the surface tension coefficient.  Thought experiment to illustrate surface tension   Surface tension      Droplet pressure  A spherical fluid droplet of radius has coefficient of surface tension . What is the pressure difference between the inside and outside of the droplet?   Surface tension example: droplet   Droplet       Meniscus    Surface tension example: meniscus   Meniscus     Flat surface: no net surface tension force pressures equal.  Concave up: resultant points outward pressure below surface lower than atmospheric.  Concave down: resultant points inward pressure inside greater than atmospheric.   These agree with the hydrostatic pressure profile within the fluid. In principle, the shape of the meniscus can be calculated from this agreement.    "
+},
+{
+  "id": "def-fluid-solid-boundary",
   "level": "2",
-  "url": "definitions.html#state-relations-4-5",
-  "type": "List",
-  "number": "7.1.15",
+  "url": "boundaries-surfaces-interfaces.html#def-fluid-solid-boundary",
+  "type": "Definition",
+  "number": "7.2.1",
+  "title": "Fluid–solid boundary.",
+  "body": " Fluid solid boundary  It is observed empirically that Newtonian viscous fluids interact with solid boundaries in such a way that are satisfied. This condition on the velocity components is called the no-slip condition . When solving problems in fluid mechanics we usually apply these relationships to provide boundary conditions.  "
+},
+{
+  "id": "boundary-conditions-velocity-3-1",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundary-conditions-velocity-3-1",
+  "type": "Remark",
+  "number": "7.2.2",
   "title": "",
-  "body": " , for air.  , universal gas constant.  for dry air.  "
+  "body": " In many cases, , so the no-slip conditions mean that the velocity is zero at the boundaries.  "
+},
+{
+  "id": "boundary-conditions-velocity-4-1",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundary-conditions-velocity-4-1",
+  "type": "Remark",
+  "number": "7.2.3",
+  "title": "Comparison with inviscid fluids.",
+  "body": " Comparison with inviscid fluids  In the previous sections of the course, you studied inviscid fluids , for which the boundary conditions was Note that this condition is weaker than the corresponding one for viscous fluids, since it only applies to one component of the velocity. As we will shortly see, the extra conditions for viscous fluids are mathematically necessary, since the equation for conservation of momentum for viscous fluids has spatial derivatives of higher order.  "
+},
+{
+  "id": "def-fluid-fluid-interface",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#def-fluid-fluid-interface",
+  "type": "Definition",
+  "number": "7.2.4",
+  "title": "Fluid–fluid interface.",
+  "body": "> Fluid fluid interface  At the interface between two different viscous fluids, the velocities must match:   "
+},
+{
+  "id": "boundary-conditions-velocity-6-1",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundary-conditions-velocity-6-1",
+  "type": "Remark",
+  "number": "7.2.5",
+  "title": "Comparison with inviscid fluids.",
+  "body": " Comparison with inviscid fluids  For inviscid fluids, only the normal component balances:   "
+},
+{
+  "id": "boundaries-surfaces-interfaces-3-3-1",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-3-3-1",
+  "type": "Remark",
+  "number": "7.2.6",
+  "title": "Rigid boundaries.",
+  "body": "Rigid boundaries  Thankfully, in the case of a fluid solid boundary, if the solid is rigid (which we often assume), the no-slip boundary conditions on the velocity are sufficient to solve the problem mathematically. If desired, a force balance can be performed after solving the problem, and this determines the stress (force per unit area) that the fluid exerts on the solid wall, and we can thus find the reaction force that the wall applies in order to maintain its position in the presence of the flowing fluid.  "
+},
+{
+  "id": "fig-surfacetension",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#fig-surfacetension",
+  "type": "Figure",
+  "number": "7.2.7",
+  "title": "",
+  "body": " Thought experiment to illustrate surface tension   Surface tension   "
+},
+{
+  "id": "boundaries-surfaces-interfaces-4-3",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4-3",
+  "type": "Example",
+  "number": "7.2.8",
+  "title": "Droplet pressure.",
+  "body": " Droplet pressure  A spherical fluid droplet of radius has coefficient of surface tension . What is the pressure difference between the inside and outside of the droplet?   Surface tension example: droplet   Droplet     "
+},
+{
+  "id": "boundaries-surfaces-interfaces-4-4",
+  "level": "2",
+  "url": "boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4-4",
+  "type": "Example",
+  "number": "7.2.10",
+  "title": "Meniscus.",
+  "body": " Meniscus    Surface tension example: meniscus   Meniscus     Flat surface: no net surface tension force pressures equal.  Concave up: resultant points outward pressure below surface lower than atmospheric.  Concave down: resultant points inward pressure inside greater than atmospheric.   These agree with the hydrostatic pressure profile within the fluid. In principle, the shape of the meniscus can be calculated from this agreement. "
+},
+{
+  "id": "sec-stress",
+  "level": "1",
+  "url": "sec-stress.html",
+  "type": "Section",
+  "number": "7.3",
+  "title": "Stress in a fluid",
+  "body": " Stress in a fluid   Stress at a surface    Definition of stress at a surface  The fluid stress on a surface is the force per unit area exerted by the fluid; note that this is a vector quantity. It is often convenient to decompose the stress into two contributions:  Shear stress: the components tangential to the surface  Normal stress: the component perpendicular to the surface.        Fluid stress in arteries  The shear stress on arterial walls is everywhere maintained at around Pa, whereas the normal stress is typically much larger at ~11–16 kPa. The distribution of shear stress distribution is known to be of great importance to our health as it is linked to the development of atherosclerosis, which leads to heart attacks and strokes, two of the leading causes of death worldwide.      Calculation of stress at a surface  For Newtonian fluids at a no-slip surface:  The wall shear stress equals the fluid shear viscosity multiplied by the normal derivative of the tangential velocity.  The normal stress equals the pressure.  Note that in 3D there are two shear components and one normal component.      Shear stress at a flat wall  Flat wall at and fluid in : Flat wall at and fluid in :       Shear stress on a circular pipe  Flow in a circular pipe, wall at in cylindrical polar coordinates:       Cone-and-plate viscometer  Cone-and-plate viscometer: cone lowered into fluid, torque needed to rotate cone gives viscosity.  Cone and plate viscometer   Cone and plate viscometer         Falling ball viscometer  Falling-ball viscometer: measure terminal velocity of a ball in fluid at low Reynolds number (see ).      The stress tensor  This is a matrix.   "
+},
+{
+  "id": "sec-stress-2-2-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-2-1",
+  "type": "Definition",
+  "number": "7.3.1",
+  "title": "Definition of stress at a surface.",
+  "body": " Definition of stress at a surface  The fluid stress on a surface is the force per unit area exerted by the fluid; note that this is a vector quantity. It is often convenient to decompose the stress into two contributions:  Shear stress: the components tangential to the surface  Normal stress: the component perpendicular to the surface.    "
+},
+{
+  "id": "example-shear-stress",
+  "level": "2",
+  "url": "sec-stress.html#example-shear-stress",
+  "type": "Example",
+  "number": "7.3.2",
+  "title": "Fluid stress in arteries.",
+  "body": " Fluid stress in arteries  The shear stress on arterial walls is everywhere maintained at around Pa, whereas the normal stress is typically much larger at ~11–16 kPa. The distribution of shear stress distribution is known to be of great importance to our health as it is linked to the development of atherosclerosis, which leads to heart attacks and strokes, two of the leading causes of death worldwide.  "
+},
+{
+  "id": "sec-stress-2-4-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-4-1",
+  "type": "Definition",
+  "number": "7.3.3",
+  "title": "Calculation of stress at a surface.",
+  "body": " Calculation of stress at a surface  For Newtonian fluids at a no-slip surface:  The wall shear stress equals the fluid shear viscosity multiplied by the normal derivative of the tangential velocity.  The normal stress equals the pressure.  Note that in 3D there are two shear components and one normal component.  "
+},
+{
+  "id": "sec-stress-2-5-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-5-1",
+  "type": "Example",
+  "number": "7.3.4",
+  "title": "Shear stress at a flat wall.",
+  "body": " Shear stress at a flat wall  Flat wall at and fluid in : Flat wall at and fluid in :   "
+},
+{
+  "id": "sec-stress-2-6-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-6-1",
+  "type": "Example",
+  "number": "7.3.5",
+  "title": "Shear stress on a circular pipe.",
+  "body": " Shear stress on a circular pipe  Flow in a circular pipe, wall at in cylindrical polar coordinates:   "
+},
+{
+  "id": "sec-stress-2-7-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-7-1",
+  "type": "Example",
+  "number": "7.3.6",
+  "title": "Cone-and-plate viscometer.",
+  "body": " Cone-and-plate viscometer  Cone-and-plate viscometer: cone lowered into fluid, torque needed to rotate cone gives viscosity.  Cone and plate viscometer   Cone and plate viscometer     "
+},
+{
+  "id": "sec-stress-2-8-1",
+  "level": "2",
+  "url": "sec-stress.html#sec-stress-2-8-1",
+  "type": "Example",
+  "number": "7.3.8",
+  "title": "Falling ball viscometer.",
+  "body": " Falling ball viscometer  Falling-ball viscometer: measure terminal velocity of a ball in fluid at low Reynolds number (see ).  "
 },
 {
   "id": "ws-viscousflows",
   "level": "1",
   "url": "ws-viscousflows.html",
   "type": "Worksheet",
-  "number": "7.2",
+  "number": "7.4",
   "title": "Worksheet",
   "body": "  Viscous flows   Intro.    Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamic viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .         "
 },
@@ -1310,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-falling-ball-viscometer",
   "type": "Worksheet Exercise",
-  "number": "7.2.1",
+  "number": "7.4.1",
   "title": "Falling ball viscometer.",
   "body": " Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).   Check the dimensions of the Stokes drag. Is the dimension what you expect?   The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.     A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?   Gravity and fluid drag     Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .   Newton's second law gives      Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?   We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .     Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamic viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .   Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by      Comment on the experimental set up needed to measure the terminal velocity.   The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .       "
 },
