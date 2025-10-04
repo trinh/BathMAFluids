@@ -316,7 +316,7 @@
             A more general statement of the Reynolds' Transport Theorem is as follows:
             We define a <em>control volume</em> <m>V(t)</m>.
             This is a region of the fluid that we specify;
-            it could be anything and in particular it doesn't need to follow the fluid particles
+            it could be any fluid-containing volume, and in particular it doesn't need to follow the fluid particles
             (unlike <xref ref="eqn-RTT"/>). Then the rate of change of <m>B</m> in the system of particles
             equals the integral of the rate of change of <m>f</m> over the control volume
             plus the net flux of the <m>f</m> through the surface of the control volume:
@@ -329,6 +329,21 @@
             of the control volume. Note that, if <m>B</m> is conserved then we can write the left-hand side
             in terms of other things (zero if <m>B</m> is mass and the sum of the forces if <m>B</m> is
             linear momentum).
+          </p>
+          <p>
+            This is in a form that can be used to solve many problems in engineering.
+            The key point is that these problems are about quantities on the scale of the
+            <em>control volume</em> and not about the details of the flow at particular points.
+          </p>
+          <p>
+            Thus, for example we could consider a tank with inlets and outlets and,
+            using the fluid in the tank as the control volume, we can apply the conservation
+            of mass to find the volume flow rates in the inlets and outlets and the level of
+            fluid in the tank.
+          </p>
+          <p>
+            We can use momentum conservation to find the force on a section of a pipe
+            or the dynamics of a piston moving a fluid to which a known force is applied.
           </p>
         </remark>
       </p>
