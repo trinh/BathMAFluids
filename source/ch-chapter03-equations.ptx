@@ -250,19 +250,93 @@
       <p>
         <remark>
           <p>
-            The Reynolds' Transport Theorem can be stated in words as follows: the
-            rate of change of the integral of a quantity over a material
-            volume is equal to the
-            local rate of change of the quantity plus the net flux of the quantity
-            out of the control volume.
+            Reynolds' Transport Theorem is particularly useful when the integral quantity
+            <me>
+              B = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+            </me>
+            is a <em>conserved quantity</em>. A conserved quantity is something for which
+            we can apply a <em>principle of conservation</em>. In practice for this course, this is
+            usually mass or linear momentum:
+            <ul>
+              <li>
+                <p>
+                  Mass: <m>f=\rho</m> and the left-hand side of <xref ref="eqn-RTT"/> is zero
+                  because mass is conserved.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity
+                  and the left-hand side of <xref ref="eqn-RTT"/> equals
+                  the sum of the all the forces acting on the fluid in the control volume <m>V</m>,
+                  which are:
+                  <ul>
+                    <li>
+                      <p>
+                        Surface forces: Forces acting on the surfaces of the fluid,
+                        which could be reaction forces from the walls of a container,
+                        or forces due to pressure or stress from surrounding fluid.
+                        (Note that we will cover stress in <xref ref="ch-viscousflows"/>.)
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Body forces: Forces acting over the interior of the fluid,
+                        and in this course you will usually only need to consider the force
+                        of gravity, although in principle other body forces could act
+                        such as an electromagnetic force. In addition, if working in
+                        a noninertial frame of reference, other apparent forces need to
+                        be added (forces due to linear acceleration, angular acceleration
+                        and the Coriolis and centrifugal forces).
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+<!--              <li>
+                <p>
+                  Angular momentum: In this case, the angular momentum per unit volume is
+                  <m>\bf=\rho\br\times\bu</m> and the left-hand side of <xref ref="eqn-RTT"/>
+                  is the torque applied to the system of particles in the fluid.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Energy: Energy can be classified as internal, kinetic, gravitational potential, etc.
+                </p>
+              </li>-->
+            </ul>
           </p>
         </remark>
       </p>
       <p>
+        <remark>
+          <p>
+            <em>Non-examinable:</em>
+            A more general statement of the Reynolds' Transport Theorem is as follows:
+            We define a <em>control volume</em> <m>V(t)</m>.
+            This is a region of the fluid that we specify;
+            it could be anything and in particular it doesn't need to follow the fluid particles
+            (unlike <xref ref="eqn-RTT"/>). Then the rate of change of <m>B</m> in the system of particles
+            equals the integral of the rate of change of <m>f</m> over the control volume
+            plus the net flux of the <m>f</m> through the surface of the control volume:
+            <men xml:id="eqn-RTT-simp">
+              \dd{B_{\textrm{syst}}}{t} = \dd{B_{CV}}{t}+\dot{B}_{CS}.
+            </men>
+            Here, <m>B_{\textrm{syst}}</m> is the amount of <m>B</m> in the system of particles,
+            that is the Lagrangian derivative of <m>B</m>, <m>B_{CV}</m> is the amount of <m>B</m>
+            in the control volume and <m>\dot{B}_{CS}</m> is the flux of <m>B</m> across the surface
+            of the control volume. Note that, if <m>B</m> is conserved then we can write the left-hand side
+            in terms of other things (zero if <m>B</m> is mass and the sum of the forces if <m>B</m> is
+            linear momentum).
+          </p>
+        </remark>
+      </p>
+<!--      <p>
         You will apply the Reynolds' Transport Theorem to a problem involving the conservation
         of mass in <xref ref="ex-rtt-mass-tank"/> and problems on momentum conservation in
         <xref ref="ex-rtt-momentum-artery"/> and <xref ref="ex-rtt-momentum-pipe"/>
-      </p>
+      </p>-->
 
     </subsection>
   </section>
@@ -1155,9 +1229,157 @@ of one metre or so might be reasonable!
   </p>
 </exercise>
 
+<!--
 <exercise xml:id="ex-rtt-mass-tank">
   <title>Filling tank</title>
-  Q3 off answer6
+  <exercise xml:id="tank-filling">
+    <p>
+      The tank shown in the diagram below has cross-sectional area <m>A</m>
+      and height <m>H</m> and has an inlet at the top left and an outlet halfway
+      up on the right-hand side.
+      <figure xml:id="fig-tank">
+        <caption>Diagram of tank used for filling</caption>
+        <image source="ch-chapter07-tank-setup.jpg" width="50%">
+          <shortdescription>Filling tank</shortdescription>
+        </image>
+      </figure>
+      Starting from empty, the tank is filled with constant volumetric flux <m>Q</m>
+      of water through the inlet, and during filling the water level is at
+      height <m>h(t)</m>. There are three phases during the filling:
+    <ol>
+      <li>The first phase when the level in the tank is lower than the outlet pipe,
+        and therefore there is inflow and no outflow;</li>
+      <li>The second phase when the water level is above that of the outflow but the
+        tank is not full, so there is inflow and outflow (but the outflow must be less
+        than the inflow so that the tank continues to fill);</li>
+      <li>When the tank is full, the inflow equals the outflow.</li>
+    </ol>
+    During Phase (ii) you may assume that the flow through the outlet is proportional to the depth of fluid above the outlet, that is, the volumetric flux through the outlet is <m>k(h - H/2)</m>.
+  </p>
+  <p>
+    In this question you will find the depth <m>h(t)</m> of the water in the tank over time.
+  </p>
+  <p>
+  <ol>        
+    <li>
+      <p>
+        Use the Reynolds' Transport Theorem to find the depth of water in the tank during Phase (i).
+    <answer>
+      <p>
+        We define the control volume <m>V(t)</m> to be the volume of water in the tank and apply
+        mass conservation to the system of particles. We set <m>f=\rho</m> to be the mass per unit
+        volume, so that
+        <me>\iiint_Vf \, \de{x} \, \de{y} \, \de{z}</me>
+        is the mass of fluid in the tank. Since the mass 
+        We use the Reynolds' Transport Theorem <xref ref="eqn-RTT"/>. The left-hand side equals zero
+        by mass conservation. Hence
+        <me>
+          0 = \iiint_{V(t)} \left[\pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
+        </me>
+        <me>
+          0 = \frac{dV_{CV}}{dt} + Q_{CS} = \frac{dV_{CV}}{dt} + Q_{\textrm{outlet}} - Q_{\textrm{inlet}}.
+        </me>
+        Since the fluid is incompressible we can use volume conservation
+        instead of mass conservation.
+        During Phase (i), <m>Q_{\text{outlet}} = 0</m> and <m>Q_{\text{inlet}} = Q</m>, so
+      </p>
+      <me>0 = \frac{dV_{CV}}{dt} - Q</me>
+      <p>
+        Substituting <m>V_{CV} = Ah</m>, where <m>h(t)</m> is the depth of fluid at time <m>t</m>, we get
+      </p>
+      <me>h = \frac{Qt}{A}</me>
+    </answer>
+  </task>
+
+  <task>
+    <statement>At what time does Phase (ii) start?</statement>
+    <answer>
+      <p>
+        The outlet is reached when <m>h = H/2</m>, which happens at time <m>t = \tfrac{AH}{2Q}</m>, the beginning of Phase (ii).
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Find the height <m>h(t)</m> in the tank during Phase (ii).</statement>
+    <answer>
+      <p>
+        We apply the RTT as before, so
+      </p>
+      <me>0 = \frac{dV_{CV}}{dt} + Q_{\text{outlet}} - Q_{\text{inlet}}</me>
+      <p>
+        but now <m>Q_{\text{outlet}} = k(h - H/2)</m>. Hence
+      </p>
+      <me>
+        \frac{dh}{dt} + \frac{k}{A}h = \frac{1}{A}\left(Q + \tfrac{kH}{2}\right)
+      </me>
+      <p>
+        Solving with integrating factors gives
+      </p>
+      <me>
+        h = \frac{Q}{k} + \frac{H}{2} + c e^{-kt/A}
+      </me>
+      <p>
+        where <m>c</m> is a constant of integration. Noting that <m>h = H/2</m> at <m>t = AH/2Q</m> gives <m>c = -\tfrac{Q}{k} e^{kH/2Q}</m>, and thus
+      </p>
+      <me>
+        h = \frac{H}{2} + \frac{Q}{k}\left(1 - e^{kH/2Q} e^{-kt/A}\right)
+      </me>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Assuming that <m>k</m> is small enough that the tank actually fills, how long does Phase (ii) last?</statement>
+    <answer>
+      <p>
+        Phase (ii) ends when the tank is full, that is <m>h = H</m>, which implies
+      </p>
+      <me>
+        t = \frac{AH}{2Q} - \frac{A}{k} \ln\left(1 - \frac{kH}{2Q}\right)
+      </me>
+      <p>
+        Thus Phase (ii) lasts for a time <m> -\tfrac{A}{k} \ln(1 - kH/(2Q))</m>.
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>What is the largest possible value of <m>k</m> so that the tank fills?</statement>
+    <answer>
+      <p>
+        We require <m>kH/(2Q) &lt; 1</m>. Thus the largest value of <m>k</m> is <m>2Q/H</m>.
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Hence sketch a graph of the height of the water in the tank over time.</statement>
+    <answer>
+      <figure>
+        <image source="tank-filling.pdf" />
+      </figure>
+    </answer>
+  </task>
+
+  <task>
+    <statement>
+      Once the tank reaches the end of Phase (ii), the pressure suddenly rises so as to drive the required flow rate <m>Q</m> out of the tank during Phase (iii).
+      What height of the fluid in the tank would cause this outflow if it were not forced (that is, if the tank were much taller)?
+      Where does the force come from that causes this pressure rise?
+    </statement>
+    <answer>
+      <p>
+        Let the unknown height be <m>H_0</m>. We require <m>Q = k(H_0 - H/2)</m>, meaning that the required height is <m>H_0 = Q/k + H/2</m>.
+      </p>
+      <p>
+        Once the tank is full, the pressure in it can rise arbitrarily, because there is no longer atmospheric air in it. The pressure in the inlet needs to rise to create the extra pressure within the tank.
+      </p>
+    </answer>
+  </p>
+      </p>
+    </li>
+  </ol>
+</p>
 </exercise>
 
 <exercise xml:id="ex-rtt-momentum-artery">
@@ -1168,7 +1390,7 @@ of one metre or so might be reasonable!
 <exercise xml:id="ex-rtt-momentum-pipe">
   <title>Draining pipe</title>
   Q8 off answers7
-</exercise>
+</exercise>-->
 
 <exercise xml:id="ex-euler-check">
   <title>Derivation of governing equations</title>
