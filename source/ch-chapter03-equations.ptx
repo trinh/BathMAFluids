@@ -267,7 +267,7 @@
               <li>
                 <p>
                   Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity
-                  and the left-hand side of <xref ref="eqn-RTT"/> equals
+                  and, by <em>Newton's second law</em>, the left-hand side of <xref ref="eqn-RTT"/> equals
                   the sum of the all the forces acting on the fluid in the control volume <m>V</m>,
                   which are:
                   <ul>
