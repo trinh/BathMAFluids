@@ -106,7 +106,7 @@
   </introduction>
 
   <section xml:id="sec-RTT">
-    <title>Reynolds' transport theorem</title>
+    <title>Reynolds' Transport Theorem</title>
 
     <subsection xml:id="subsec-jacob">
       <title>Jacobian of Lagrangian to Eulerian</title>
@@ -181,15 +181,15 @@
     </subsection>
 
     <subsection xml:id="subsec-RTT">
-      <title>Reynolds transport theorem</title>
+      <title>Reynolds' Transport Theorem</title>
 
       <p> We are now ready to derive a key result that eases our path towards developing the
         governing equations for a fluid. The result is as follows. <theorem xml:id="thm-RTT">
-          <title>Reynolds transport theorem</title>
+          <title>Reynolds' Transport Theorem</title>
           <statement>
             <p> Consider a time-dependent volume, <m>V(t)</m>, that is transported by the fluid so
         that it always consists of the same fluid particles. Then, for any function, <m>f(\bx, t)</m>,
-        continuously differentiable with respect to its arguments, <em>Reynolds' transport theorem</em>
+        continuously differentiable with respect to its arguments, <em>Reynolds' Transport Theorem</em>
         is as follows: <men xml:id="eqn-RTT">
                 \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
         \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
@@ -220,7 +220,7 @@
                 \nabla \cdot (f\bu) = f \nabla \cdot \bu + \nabla f \cdot \bu.
               </me>
         We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof
-        of the Reynolds' transport theorem. <note>
+        of the Reynolds' Transport Theorem. <note>
                 <p>It is helpful for you to convince yourself that the above vector identity is the
         only possible arrangement of operations that makes sense, i.e. in order for <m>\nabla \cdot
         (f\bu)</m> to return a scalar.</p>
@@ -233,7 +233,7 @@
 
       <p>
         <remark>
-          <p>Reynolds' transport theorem thus gives an identity for how time differentiation can
+          <p>Reynolds' Transport Theorem thus gives an identity for how time differentiation can
             pass through the integral when the domain of integration is changing in time!</p>
         </remark>
       </p>
@@ -241,7 +241,8 @@
       <p>
         <remark>
           <p>
-            In 1D, Reynolds transport theorem reduces to an identity known as Leibniz's rule. This is presented as an exercise in <xref ref="ex-leibnitz-rule"/>.
+            In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule.
+            This is presented as an exercise in <xref ref="ex-leibnitz-rule"/>.
           </p>
         </remark>
       </p>
@@ -249,14 +250,108 @@
       <p>
         <remark>
           <p>
-            The Reynolds transport theorem can be stated in words as follows: the
-            rate of change of the integral of a quantity over a material
-            volume is equal to the
-            local rate of change of the quantity plus the net flux of the quantity
-            out of the control volume.
+            Reynolds' Transport Theorem is particularly useful when the integral quantity
+            <me>
+              B = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+            </me>
+            is a <em>conserved quantity</em>. A conserved quantity is something for which
+            we can apply a <em>principle of conservation</em>. In practice for this course, this is
+            usually mass or linear momentum:
+            <ul>
+              <li>
+                <p>
+                  Mass: <m>f=\rho</m> and the left-hand side of <xref ref="eqn-RTT"/> is zero
+                  because mass is conserved.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity
+                  and, by <em>Newton's second law</em>, the left-hand side of <xref ref="eqn-RTT"/> equals
+                  the sum of the all the forces acting on the fluid in the control volume <m>V</m>,
+                  which are:
+                  <ul>
+                    <li>
+                      <p>
+                        Surface forces: Forces acting on the surfaces of the fluid,
+                        which could be reaction forces from the walls of a container,
+                        or forces due to pressure or stress from surrounding fluid.
+                        (Note that we will cover stress in <xref ref="ch-viscousflows"/>.)
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Body forces: Forces acting over the interior of the fluid,
+                        and in this course you will usually only need to consider the force
+                        of gravity, although in principle other body forces could act
+                        such as an electromagnetic force. In addition, if working in
+                        a noninertial frame of reference, other apparent forces need to
+                        be added (forces due to linear acceleration, angular acceleration
+                        and the Coriolis and centrifugal forces).
+                      </p>
+                    </li>
+                  </ul>
+                </p>
+              </li>
+<!--              <li>
+                <p>
+                  Angular momentum: In this case, the angular momentum per unit volume is
+                  <m>\bf=\rho\br\times\bu</m> and the left-hand side of <xref ref="eqn-RTT"/>
+                  is the torque applied to the system of particles in the fluid.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Energy: Energy can be classified as internal, kinetic, gravitational potential, etc.
+                </p>
+              </li>-->
+            </ul>
           </p>
         </remark>
       </p>
+      <p>
+        <remark>
+          <p>
+            <em>Non-examinable:</em>
+            A more general statement of the Reynolds' Transport Theorem is as follows:
+            We define a <em>control volume</em> <m>V(t)</m>.
+            This is a region of the fluid that we specify;
+            it could be any fluid-containing volume, and in particular it doesn't need to follow the fluid particles
+            (unlike <xref ref="eqn-RTT"/>). Then the rate of change of <m>B</m> in the system of particles
+            equals the integral of the rate of change of <m>f</m> over the control volume
+            plus the net flux of the <m>f</m> through the surface of the control volume:
+            <men xml:id="eqn-RTT-simp">
+              \dd{B_{\textrm{syst}}}{t} = \dd{B_{CV}}{t}+\dot{B}_{CS}.
+            </men>
+            Here, <m>B_{\textrm{syst}}</m> is the amount of <m>B</m> in the system of particles,
+            that is the Lagrangian derivative of <m>B</m>, <m>B_{CV}</m> is the amount of <m>B</m>
+            in the control volume and <m>\dot{B}_{CS}</m> is the flux of <m>B</m> across the surface
+            of the control volume. Note that, if <m>B</m> is conserved then we can write the left-hand side
+            in terms of other things (zero if <m>B</m> is mass and the sum of the forces if <m>B</m> is
+            linear momentum).
+          </p>
+          <p>
+            This is in a form that can be used to solve many problems in engineering.
+            The key point is that these problems are about quantities on the scale of the
+            <em>control volume</em> and not about the details of the flow at particular points.
+          </p>
+          <p>
+            Thus, for example we could consider a tank with inlets and outlets and,
+            using the fluid in the tank as the control volume, we can apply the conservation
+            of mass to find the volume flow rates in the inlets and outlets and the level of
+            fluid in the tank.
+          </p>
+          <p>
+            We can use momentum conservation to find the force on a section of a pipe
+            or the dynamics of a piston moving a fluid to which a known force is applied.
+          </p>
+        </remark>
+      </p>
+<!--      <p>
+        You will apply the Reynolds' Transport Theorem to a problem involving the conservation
+        of mass in <xref ref="ex-rtt-mass-tank"/> and problems on momentum conservation in
+        <xref ref="ex-rtt-momentum-artery"/> and <xref ref="ex-rtt-momentum-pipe"/>
+      </p>-->
 
     </subsection>
   </section>
@@ -289,7 +384,9 @@
     </p>
 
     <p>
-      In fact, as it turns out, the proof of this result is trivial if we use the Reynolds' transport theorem and Lagrangian formulation following <xref ref="thm-RTT"/>.</p>
+      In fact, as it turns out, the proof of this result is trivial
+      if we use the Reynolds' Transport Theorem and Lagrangian formulation
+      following <xref ref="thm-RTT"/>.</p>
 
       <proof>
         <p>
@@ -302,7 +399,7 @@
 
           
           
-         <p> By <xref ref="thm-RTT"/>, we can use the Reynolds' transport theorem to pass the time derivative through the integral. This gives:
+         <p> By <xref ref="thm-RTT"/>, we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives:
           <me>
             \dd{}{t}\iiint_{V(t)} \rho \de{V} = \iiint_{V(t)} \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V},
           </me>
@@ -317,7 +414,11 @@
         <title>Use of the bump lemma</title>
        
         <p>
-          Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the "Bump lemma". In <xref ref="ex-bump"/>, you will prove this lemma. 
+          Within the above proof, we use an idea used throughout this chapter,
+          which is that if an integral of a quantity (the integrand) is zero for all possible
+          domains of integration, then the integrand, itself, is zero.
+          This is sometimes referred to as the "Bump lemma".
+          In <xref ref="ex-bump"/>, you will prove this lemma. 
         </p>
         
       </remark>
@@ -327,7 +428,9 @@
       <title>Derivation of mass conservation using Eulerian methods</title>
       
       <p>
-        The derivation we have just shown for <xref ref="thm-mass"/>, using the Lagrangian viewpoint and the Reynolds' transport theorem is misleadingly simple, and it can be instructive to see how the result is proved purely from the perspective of Eulerian coordinates. 
+        The derivation we have just shown for <xref ref="thm-mass"/>, using the Lagrangian viewpoint
+        and the Reynolds' Transport Theorem is misleadingly simple, and it can be instructive to see
+        how the result is proved purely from the perspective of Eulerian coordinates. 
       </p>
 
     <p> For this, let us consider <m>V</m> to be a <em>fixed and closed</em> subregion of the overall fluid, <m>D</m> that does not change with time. An illustration of this is shown in <xref ref="fig-normalvolume"/>
@@ -395,7 +498,9 @@
     <corollary xml:id="cor-convmass">
       <statement>
         <p>
-         There is a useful corollary to the transport theorem in <xref ref="thm-RTT"/> in the case where the desired function of integration, <m>f</m>, is proportional to the density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>. In this case the Reynolds transport theorem is 
+         There is a useful corollary to the transport theorem in <xref ref="thm-RTT"/>
+         in the case where the desired function of integration, <m>f</m>, is proportional to the density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>.
+         In this case the Reynolds' Transport Theorem is 
          <men xml:id="eqn-cor-convmass">
          \dd{}{t} \iiint_{V} \rho h \, \de{V} = \iiint_{V} \rho \DD{h}{t} \, \de{V}.
          </men>
@@ -421,7 +526,8 @@
     <title>Momentum balance</title>
 
     <p>
-      With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum. This is <em>Newton's second law</em> the rate of change of momentum of a body is equal to the sum of all forces acting on the body. 
+      With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum.
+      This is <em>Newton's second law</em> the rate of change of momentum of a body is equal to the sum of all forces acting on the body. 
     </p>
 
 
@@ -527,18 +633,26 @@
       <title>The Euler equations</title>
 
     <p>
-      Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates infinitessimal volumes in Eulerian and Lagrangian frames via 
+      Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates
+      infinitessimal volumes in Eulerian and Lagrangian frames via 
       <men xml:id="eq-dxyz-Jacobian">
         \dxyz = J \dXYZ
       </men>.
-      So the Jacobian is a measure of the local expansion or contraction of a fluid (relative to its original state). If we use Euler's identity in the theorem, we are led to an important interpretation for what it means for a fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible fluid.</em> (You already previously encountered an intuitive definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
+      So the Jacobian is a measure of the local expansion or contraction of a
+      fluid (relative to its original state). If we use Euler's identity in the theorem,
+      we are led to an important interpretation for what it means for a fluid to satisfy
+      <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an
+      <em>incompressible fluid.</em> (You already previously encountered an intuitive
+      definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
       </p>
 
       <p>
         <definition xml:id="def-incompressible">
           <title>Incompressible fluids</title>
           <statement>
-             <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes. Since such volumes are related via <xref ref="eq-dxyz-Jacobian"/>, then this is equivalent to 
+             <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes.
+              Since such volumes are related via <xref ref="eq-dxyz-Jacobian"/>, then this is equivalent
+              to 
              <me>
               \DD{J}{t} \equiv 0,
              </me>
@@ -551,7 +665,11 @@
             </p>
             <proof>
               <p>
-                Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian"/>. Then by Euler's identity in <xref ref="thm-Euleridentity"/>, this implies <m>\nabla \cdot \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>, then again by the identity the fluid is incompressible. 
+                Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element
+                must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian"/>.
+                Then by Euler's identity in <xref ref="thm-Euleridentity"/>, this implies
+                <m>\nabla \cdot \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>,
+                then again by the identity the fluid is incompressible. 
               </p>
             </proof>
           </statement>
@@ -589,7 +707,9 @@
       </p>
       
       <p>
-        Let us return to consider the total sum of equations and unknowns. We have introduced the scalar mass conservation equation found in <xref ref="thm-mass"/> (or alternatively the more simplified equation <xref ref="eqn-divu"/> for incompressible fluids). Also the vector momentum equation found in <xref ref="thm-momentum"/>. This yields four scalar equations for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity components <m>\bu</m>.
+        Let us return to consider the total sum of equations and unknowns.
+        We have introduced the scalar mass conservation equation found in <xref ref="thm-mass"/>
+        (or alternatively the more simplified equation <xref ref="eqn-divu"/> for incompressible fluids). Also the vector momentum equation found in <xref ref="thm-momentum"/>. This yields four scalar equations for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity components <m>\bu</m>.
       </p>
 
       <p>
@@ -1050,7 +1170,9 @@ of one metre or so might be reasonable!
   <title>Leibnitz's rule</title>
  
   <p>
-    The Reynolds' transport theorem <xref ref="thm-RTT"/>, which relates to the passage of a time derivative through an integral, is a general form of the 1D Leibnitz rule:
+    The Reynolds' Transport Theorem <xref ref="thm-RTT"/>,
+    which relates to the passage of a time derivative through an integral,
+    is a general form of the 1D Leibnitz rule:
     <mdn>
      <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
      <mrow xml:id="eqn-leibnitz-rule"> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} + f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
@@ -1060,7 +1182,8 @@ of one metre or so might be reasonable!
     <ol>
       <li>
         <p>
-          Examine the figure in <xref ref="ex-fig-leibnitz"/>. Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?
+          Examine the figure in <xref ref="ex-fig-leibnitz"/>.
+          Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?
 
           <figure xml:id="ex-fig-leibnitz">
             <caption>Visual "proof" of Leibnitz's rule</caption>
@@ -1104,7 +1227,8 @@ of one metre or so might be reasonable!
 
       <li>
         <p>
-          Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule"/>  to the Reynolds transport theorem in <xref ref="eqn-RTT"/>?
+          Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule"/> 
+          to the Reynolds' Transport Theorem in <xref ref="eqn-RTT"/>?
         </p>
 
         <answer>
@@ -1118,16 +1242,177 @@ of one metre or so might be reasonable!
       </li>
     </ol>
   </p>
-  
-  
 </exercise>
 
+<!--
+<exercise xml:id="ex-rtt-mass-tank">
+  <title>Filling tank</title>
+  <exercise xml:id="tank-filling">
+    <p>
+      The tank shown in the diagram below has cross-sectional area <m>A</m>
+      and height <m>H</m> and has an inlet at the top left and an outlet halfway
+      up on the right-hand side.
+      <figure xml:id="fig-tank">
+        <caption>Diagram of tank used for filling</caption>
+        <image source="ch-chapter07-tank-setup.jpg" width="50%">
+          <shortdescription>Filling tank</shortdescription>
+        </image>
+      </figure>
+      Starting from empty, the tank is filled with constant volumetric flux <m>Q</m>
+      of water through the inlet, and during filling the water level is at
+      height <m>h(t)</m>. There are three phases during the filling:
+    <ol>
+      <li>The first phase when the level in the tank is lower than the outlet pipe,
+        and therefore there is inflow and no outflow;</li>
+      <li>The second phase when the water level is above that of the outflow but the
+        tank is not full, so there is inflow and outflow (but the outflow must be less
+        than the inflow so that the tank continues to fill);</li>
+      <li>When the tank is full, the inflow equals the outflow.</li>
+    </ol>
+    During Phase (ii) you may assume that the flow through the outlet is proportional to the depth of fluid above the outlet, that is, the volumetric flux through the outlet is <m>k(h - H/2)</m>.
+  </p>
+  <p>
+    In this question you will find the depth <m>h(t)</m> of the water in the tank over time.
+  </p>
+  <p>
+  <ol>        
+    <li>
+      <p>
+        Use the Reynolds' Transport Theorem to find the depth of water in the tank during Phase (i).
+    <answer>
+      <p>
+        We define the control volume <m>V(t)</m> to be the volume of water in the tank and apply
+        mass conservation to the system of particles. We set <m>f=\rho</m> to be the mass per unit
+        volume, so that
+        <me>\iiint_Vf \, \de{x} \, \de{y} \, \de{z}</me>
+        is the mass of fluid in the tank. Since the mass 
+        We use the Reynolds' Transport Theorem <xref ref="eqn-RTT"/>. The left-hand side equals zero
+        by mass conservation. Hence
+        <me>
+          0 = \iiint_{V(t)} \left[\pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
+        </me>
+        <me>
+          0 = \frac{dV_{CV}}{dt} + Q_{CS} = \frac{dV_{CV}}{dt} + Q_{\textrm{outlet}} - Q_{\textrm{inlet}}.
+        </me>
+        Since the fluid is incompressible we can use volume conservation
+        instead of mass conservation.
+        During Phase (i), <m>Q_{\text{outlet}} = 0</m> and <m>Q_{\text{inlet}} = Q</m>, so
+      </p>
+      <me>0 = \frac{dV_{CV}}{dt} - Q</me>
+      <p>
+        Substituting <m>V_{CV} = Ah</m>, where <m>h(t)</m> is the depth of fluid at time <m>t</m>, we get
+      </p>
+      <me>h = \frac{Qt}{A}</me>
+    </answer>
+  </task>
+
+  <task>
+    <statement>At what time does Phase (ii) start?</statement>
+    <answer>
+      <p>
+        The outlet is reached when <m>h = H/2</m>, which happens at time <m>t = \tfrac{AH}{2Q}</m>, the beginning of Phase (ii).
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Find the height <m>h(t)</m> in the tank during Phase (ii).</statement>
+    <answer>
+      <p>
+        We apply the RTT as before, so
+      </p>
+      <me>0 = \frac{dV_{CV}}{dt} + Q_{\text{outlet}} - Q_{\text{inlet}}</me>
+      <p>
+        but now <m>Q_{\text{outlet}} = k(h - H/2)</m>. Hence
+      </p>
+      <me>
+        \frac{dh}{dt} + \frac{k}{A}h = \frac{1}{A}\left(Q + \tfrac{kH}{2}\right)
+      </me>
+      <p>
+        Solving with integrating factors gives
+      </p>
+      <me>
+        h = \frac{Q}{k} + \frac{H}{2} + c e^{-kt/A}
+      </me>
+      <p>
+        where <m>c</m> is a constant of integration. Noting that <m>h = H/2</m> at <m>t = AH/2Q</m> gives <m>c = -\tfrac{Q}{k} e^{kH/2Q}</m>, and thus
+      </p>
+      <me>
+        h = \frac{H}{2} + \frac{Q}{k}\left(1 - e^{kH/2Q} e^{-kt/A}\right)
+      </me>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Assuming that <m>k</m> is small enough that the tank actually fills, how long does Phase (ii) last?</statement>
+    <answer>
+      <p>
+        Phase (ii) ends when the tank is full, that is <m>h = H</m>, which implies
+      </p>
+      <me>
+        t = \frac{AH}{2Q} - \frac{A}{k} \ln\left(1 - \frac{kH}{2Q}\right)
+      </me>
+      <p>
+        Thus Phase (ii) lasts for a time <m> -\tfrac{A}{k} \ln(1 - kH/(2Q))</m>.
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>What is the largest possible value of <m>k</m> so that the tank fills?</statement>
+    <answer>
+      <p>
+        We require <m>kH/(2Q) &lt; 1</m>. Thus the largest value of <m>k</m> is <m>2Q/H</m>.
+      </p>
+    </answer>
+  </task>
+
+  <task>
+    <statement>Hence sketch a graph of the height of the water in the tank over time.</statement>
+    <answer>
+      <figure>
+        <image source="tank-filling.pdf" />
+      </figure>
+    </answer>
+  </task>
+
+  <task>
+    <statement>
+      Once the tank reaches the end of Phase (ii), the pressure suddenly rises so as to drive the required flow rate <m>Q</m> out of the tank during Phase (iii).
+      What height of the fluid in the tank would cause this outflow if it were not forced (that is, if the tank were much taller)?
+      Where does the force come from that causes this pressure rise?
+    </statement>
+    <answer>
+      <p>
+        Let the unknown height be <m>H_0</m>. We require <m>Q = k(H_0 - H/2)</m>, meaning that the required height is <m>H_0 = Q/k + H/2</m>.
+      </p>
+      <p>
+        Once the tank is full, the pressure in it can rise arbitrarily, because there is no longer atmospheric air in it. The pressure in the inlet needs to rise to create the extra pressure within the tank.
+      </p>
+    </answer>
+  </p>
+      </p>
+    </li>
+  </ol>
+</p>
+</exercise>
+
+<exercise xml:id="ex-rtt-momentum-artery">
+  <title>Force on arterial segment</title>
+  Q1 off answers7
+</exercise>
+
+<exercise xml:id="ex-rtt-momentum-pipe">
+  <title>Draining pipe</title>
+  Q8 off answers7
+</exercise>-->
 
 <exercise xml:id="ex-euler-check">
   <title>Derivation of governing equations</title>
  
   <p>
-    Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid, use Reynolds' Transport Theorem <xref ref="eqn-RTT"/> to derive the equations:
+    Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid,
+    use Reynolds' Transport Theorem <xref ref="eqn-RTT"/> to derive the equations:
     <mdn>
       <mrow>\pd{\rho}{t} + \nabla \cdot(\rho \bu) = 0, </mrow>
       <mrow>\DD{\bu}{t} = -\frac{1}{\rho} \nabla p + \bg. </mrow>
@@ -1140,11 +1425,16 @@ of one metre or so might be reasonable!
 
   <answer>
     <p>
-      The proof of the continuity equation is given in <xref ref="thm-mass"/> and the proof of the momentum equation is given in <xref ref="thm-momentum"/>, so make sure you can follow these arguments and produce your own notes. 
+      The proof of the continuity equation is given in <xref ref="thm-mass"/> and the proof of the
+      momentum equation is given in <xref ref="thm-momentum"/>, so make sure you can follow these
+      arguments and produce your own notes. 
     </p>
 
     <p>
-      The derivation of the Euler equations, as given in <xref ref="def-euler"/> requires the additional assumption of an incompressible fluid, following <xref ref="def-incompressible"/>. Incompressibility implies that <m>\nabla \cdot \bu = 0</m>, and this equation then replaces the continuity equation.
+      The derivation of the Euler equations, as given in <xref ref="def-euler"/> requires
+      the additional assumption of an incompressible fluid, following <xref ref="def-incompressible"/>.
+      Incompressibility implies that <m>\nabla \cdot \bu = 0</m>,
+      and this equation then replaces the continuity equation.
     </p>
   </answer>
   
@@ -1200,7 +1490,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
       A fluid in a gravitational field with density <m>\rho</m> and acceleration
       vector <m>-g \hat{\mathbf{z}}</m> has uniform velocity
     <me>
-      \mathbf{u} = (a + b t, \; t^3, \; e^t).
+      \bu = (a + b t, \; t^3, \; e^t).
     </me>
       The pressure at the origin is fixed at <m>p_0</m>.
     </p>
@@ -1212,7 +1502,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
         </p>
         <answer>
         <p>
-          The fluid has a uniform velocity, which means that all components of <m>\bnabla/bu</m>
+          The fluid has a uniform velocity, which means that all components of <m>\nabla/bu</m>
            vanish. The Euler equation simplifies to
         <me>
           \rho\pd{\bu}{t}=-\nabla p-\rho g \hat{\mathbf{z}},
@@ -1305,7 +1595,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
       Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
       hence the Euler equation reduces to
       <me>
-        \rho\pd{\bu}{t}=-\bnabla p.
+        \rho\pd{\bu}{t}=-\nabla p.
       </me>
       Solving for <m>p</m> gives
       <me>
@@ -1346,41 +1636,41 @@ compared to the contributions due to the internal energy and the kinetic energy.
         <p>
           The Euler equation reads:
           <me>
-            \rho\left(\pd{\bu}{t} + (\bu \cdot \bnabla)\bu\right) = -\bnabla p - \rho\bnabla \chi.
+            \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p - \rho\nabla \chi.
           </me>
           Since the curl of a gradient is zero, <m>\rho</m> is constant and we can commute derivatives,
           taking the curl of both sides gives
           <me>
-            \rho\left(\pd{\bomega}{t} + \bnabla \times(\bu \cdot \bnabla)\bu\right) = 0.
+            \rho\left(\pd{\bomega}{t} + \nabla \times(\bu \cdot \nabla)\bu\right) = 0.
           </me>
           We have
           <md>
-            <mrow>\amp \bnabla \times(\bu \cdot \bnabla)\bu,</mrow>
+            <mrow>\amp \nabla \times(\bu \cdot \nabla)\bu,</mrow>
             <mrow>=\amp\begin{vmatrix}
               \bi \amp \bj \amp \bk \\
               \pd{}{x} \amp \pd{}{y} \amp \pd{}{z} \\
               \bu \cdot \nabla u \amp \bu \cdot \nabla v \amp \bu \cdot \nabla w
               \end{vmatrix},</mrow>
-            <mrow>=\amp\bi\left(\bu\cdot\bnabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\bnabla w-\pd{\bu}{z}\cdot\bnabla v\right)</mrow>
-            <mrow>\amp+\bj\left(\bu\cdot\bnabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\bnabla u-\pd{\bu}{x}\cdot\bnabla w\right)</mrow>
-            <mrow>\amp+\bk\left(\bu\cdot\bnabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\bnabla v-\pd{\bu}{y}\cdot\bnabla u\right),</mrow>
-            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu+\bomega\cdot\bnabla\bu</mrow>
+            <mrow>=\amp\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla w-\pd{\bu}{z}\cdot\nabla v\right)</mrow>
+            <mrow>\amp+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
+            <mrow>\amp+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
+            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
             <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
             <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
             <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu</mrow>
+            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
             <mrow>\amp+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
             <mrow>\amp+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
             <mrow>\amp+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
             <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
             <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
             <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu+\bomega\bnabla\cdot\bu,</mrow>
-            <mrow>=\amp\bu\cdot\bnabla\bomega-\bomega\cdot\bnabla\bu,</mrow>
+            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
+            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
           </md>
           where the final equality follows from incompressibility. Hence,
           <me>
-          \pd{\bomega}{t} + \bu\cdot\bnabla\bomega - \bomega\cdot\bnabla\bu = 0
+          \pd{\bomega}{t} + \bu\cdot\nabla\bomega - \bomega\cdot\nabla\bu = 0
           \quad\Rightarrow\quad
           \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
           </me>
@@ -1388,7 +1678,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
         </p>
         <!--<p>
           Alternatively, we can use indicial notation. The <m>i</m>-th component of
-          <m>\bnabla \times(\bu \cdot \bnabla)\bu</m> is:
+          <m>\nabla \times(\bu \cdot \nabla)\bu</m> is:
                   <md>
             <mrow>\epsilon_{ijk}\pd{}{x_j}\left(u_l\pd{u_k}{x_l}\right)
               =\amp \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
@@ -1412,7 +1702,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
             are zero. Hence the only non-zero component of the vorticity is the <m>z</m>-component,
             <m>\omega_z=\partial v/\partial x-\partial u/\partial y</m>. Thus
             <me>
-              \bomega\cdot\bnabla\bu=\omega_z\pd{\bu}{z}=0.
+              \bomega\cdot\nabla\bu=\omega_z\pd{\bu}{z}=0.
             </me>
             Hence
             <me>
