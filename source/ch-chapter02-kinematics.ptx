@@ -11,8 +11,8 @@
 
     <p>
      <figure xml:id="fig-euler-vid">
-        <!-- <image source="01_euler_trim.gif" width="70%"/>  -->
-        <image source="01_euler_trim.png" width="70%"/> 
+        <image source="01_euler_trim.gif" width="70%"/> 
+        <!-- <image source="01_euler_trim.png" width="70%"/>  -->
         <caption>Eulerian description of flow from the <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" visual="NCFMF">NCFMF video</url>.</caption>
       </figure>
     </p>
@@ -200,8 +200,8 @@
             <proof>
               <p> This is a result of the chain rule. For a scalar function <m>f = f(\bx, t)</m>, we
         have the fact that <md>
-                  <mrow>\DD{f}{t} \amp= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f </mrow>
-                  <mrow>\amp= \pd{f}{t} + \bu \cdot \nabla f. </mrow>
+                  <mrow>\DD{f}{t} &amp;= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f </mrow>
+                  <mrow>&amp;= \pd{f}{t} + \bu \cdot \nabla f. </mrow>
                 </md>
               </p>
             </proof>
@@ -365,9 +365,9 @@
 
       <p>The streamlines follow from <xref ref="def-streamline"/>. We seek to solve the equations
         <md>
-          <mrow>\dd{x}{s} \amp= x, </mrow>
-          <mrow>\dd{y}{s} \amp= -y, </mrow>
-          <mrow>\dd{z}{s} \amp= 0. </mrow>
+          <mrow>\dd{x}{s} &amp;= x, </mrow>
+          <mrow>\dd{y}{s} &amp;= -y, </mrow>
+          <mrow>\dd{z}{s} &amp;= 0. </mrow>
         </md> 
       Solving thus gives <m>x = A \e^s, y = B\e^{-s}, z = C,</m> for constants <m>A, B, C</m>. </p>
 
@@ -439,8 +439,8 @@
 
       <figure xml:id="fig-streamlines-example-02">
         <caption>Streamlines and particle paths</caption>
-        <image source="streamlines_example02.png" width="50%">
-        <!-- <image source="streamlines_example02.gif"> -->
+        <!-- <image source="streamlines_example02.png" width="50%"> -->
+        <image source="streamlines_example02.gif">
           <shortdescription>Animation of streamlines</shortdescription>
         </image>
       </figure>
@@ -534,7 +534,7 @@
     <p>
       This is the chain rule. Denote the three components of <m>\bx = (x_1, x_2, x_3)</m>. Then we differentiate through both outer arguments of <m>f</m>:
       <md>
-        <mrow>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} \amp= \pd{f}{t}\biggr\rvert_{\bx} + \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} </mrow>
+        <mrow>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} &amp;= \pd{f}{t}\biggr\rvert_{\bx} + \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} </mrow>
       </md>
     </p>
 
@@ -655,14 +655,14 @@
             <answer>
               <p>
                 <md>
-                  <mrow> \ba=\amp\DD{\bu}{t} </mrow>
-                  <mrow> =\amp \pd{\bu}{t} + (\bu \cdot \nabla) \bu</mrow>
-                  <mrow> =\amp0+\left(u\pd{u}{x}+v\pd{u}{y}+w\pd{u}{z}\right)\be_x
+                  <mrow> \ba=&amp;\DD{\bu}{t} </mrow>
+                  <mrow> =&amp; \pd{\bu}{t} + (\bu \cdot \nabla) \bu</mrow>
+                  <mrow> =&amp;0+\left(u\pd{u}{x}+v\pd{u}{y}+w\pd{u}{z}\right)\be_x
                 +\left(u\pd{v}{x}+v\pd{v}{y}+w\pd{v}{z}\right)\be_y
                 +\left(u\pd{w}{x}+v\pd{w}{y}+w\pd{w}{z}\right)\be_z</mrow>
-                  <mrow> =\amp u\pd{u}{x}\be_x</mrow>
-                  <mrow> = \amp U\left(1+\frac{x}{L}\right)\frac{U}{L}\be_x</mrow>
-                  <mrow> = \amp \frac{U^2}{L}\left(1+\frac{x}{L}\right)\be_x</mrow>
+                  <mrow> =&amp; u\pd{u}{x}\be_x</mrow>
+                  <mrow> = &amp; U\left(1+\frac{x}{L}\right)\frac{U}{L}\be_x</mrow>
+                  <mrow> = &amp; \frac{U^2}{L}\left(1+\frac{x}{L}\right)\be_x</mrow>
                 </md>
               </p>
             </answer>
@@ -679,9 +679,9 @@
                 </me>
                 Solving by separation of variables gives,
                 <md>
-                  <mrow>\amp\int_0^x\frac{dx}{1+x/L}=\int_0^t U\,dt</mrow>
-                  <mrow>\Rightarrow\quad\amp L\ln\left(1+\frac{x}{L}\right)=Ut</mrow>
-                  <mrow>\Rightarrow\quad\amp x(t)=L\left(\e^{Ut/L}-1\right).</mrow>
+                  <mrow>&amp;\int_0^x\frac{dx}{1+x/L}=\int_0^t U\,dt</mrow>
+                  <mrow>\Rightarrow\quad&amp; L\ln\left(1+\frac{x}{L}\right)=Ut</mrow>
+                  <mrow>\Rightarrow\quad&amp; x(t)=L\left(\e^{Ut/L}-1\right).</mrow>
                 </md>
               </p>
             </answer>
@@ -694,9 +694,9 @@
               <p>
                 The velocity is
                 <md>
-                  <mrow>\dd{x}{t}=\amp\dd{}{t}\left(L\left(\e^{Ut/L}-1\right)\right)</mrow>
-                  <mrow>=\amp L\frac{U}{L}\e^{Ut/L}</mrow>
-                  <mrow>=\amp U\e^{Ut/L}.</mrow>
+                  <mrow>\dd{x}{t}=&amp;\dd{}{t}\left(L\left(\e^{Ut/L}-1\right)\right)</mrow>
+                  <mrow>=&amp; L\frac{U}{L}\e^{Ut/L}</mrow>
+                  <mrow>=&amp; U\e^{Ut/L}.</mrow>
                 </md>
               </p>
             </answer>
@@ -709,8 +709,8 @@
               <p>
                 The acceleration is
                 <md>
-                  <mrow>\dd{^2x}{t^2}=\amp\dd{}{t}\left(U\e^{Ut/L}\right)</mrow>
-                  <mrow>=\amp \frac{U^2}{L}\e^{Ut/L}.</mrow>
+                  <mrow>\dd{^2x}{t^2}=&amp;\dd{}{t}\left(U\e^{Ut/L}\right)</mrow>
+                  <mrow>=&amp; \frac{U^2}{L}\e^{Ut/L}.</mrow>
                 </md>
               </p>
             </answer>
@@ -730,7 +730,7 @@
                 as expected. This is the same as the Eulerian velocity at the particle position.
                 The acceleration is
                 <md>
-                  <mrow>\frac{U^2}{L}\e^{Ut/L}=\amp\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
+                  <mrow>\frac{U^2}{L}\e^{Ut/L}=&amp;\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
                 </md>
                 which is the same as the particle acceleration, as expected from the defintion.
               </p>
@@ -744,9 +744,9 @@
               <p>
                 The particle reaches <m>x=L</m> when
                 <md>
-                  <mrow>\amp L\left(\e^{Ut/L}-1\right)=L</mrow>
-                  <mrow>\Rightarrow\quad\amp \e^{Ut/L}=2</mrow>
-                  <mrow>\Rightarrow\quad\amp t=\frac{L}{U}\ln(2).</mrow>
+                  <mrow>&amp; L\left(\e^{Ut/L}-1\right)=L</mrow>
+                  <mrow>\Rightarrow\quad&amp; \e^{Ut/L}=2</mrow>
+                  <mrow>\Rightarrow\quad&amp; t=\frac{L}{U}\ln(2).</mrow>
                 </md>
               </p>
             </answer>
@@ -783,7 +783,7 @@
   <p>
     Show that a quantity <m>f(\bx,t)</m> is preserved following the flow if
   <me>
-    \DD{f}{t}=\pd{f}{t}+\bu\cdot\bnabla f=0.
+    \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
   </me>
 </p>
 <answer>
@@ -798,10 +798,10 @@
           <m>\de\bx=\bu(\bx,t)\de t</m>.
     We follow the value of <m>f</m> following a particle:
     <md>
-      <mrow> \dd{f}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de t)-f(\bx,t)\right)</mrow>
-      <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
-    <mrow>\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\bnabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
-    <mrow>\amp=\pd{f}{t}+\bu\cdot\bnabla f=\DD{f}{t},</mrow>
+      <mrow> \dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de t)-f(\bx,t)\right)</mrow>
+      <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
+    <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
+    <mrow>&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},</mrow>
     </md>
     (''<m>\dots</m>'' denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>.
   </p>
@@ -811,7 +811,7 @@
   <p>
     Show also that <m>f</m> is constant along streamlines if
   <me>
-    \bu\cdot\bnabla f=0.
+    \bu\cdot\nabla f=0.
   </me>
    </p>
    <answer>
@@ -823,13 +823,13 @@
           <m>\de\bx=\bu(\bx,t)\de s</m>.
     We follow the value of <m>f</m> along the streamline:
     <md>
-      <mrow>\dd{f}{s}\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
-      <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\bnabla f(\bx,t)-f(\bx,t)\right)</mrow>
-    <mrow>\amp=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\bnabla f(\bx,t)\right)</mrow>
-    <mrow>\amp=\bu\cdot\bnabla f.</mrow>
+      <mrow>\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
+      <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla f(\bx,t)-f(\bx,t)\right)</mrow>
+    <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla f(\bx,t)\right)</mrow>
+    <mrow>&amp;=\bu\cdot\nabla f.</mrow>
     </md></p>
    
-   <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\bnabla f=0</m>.
+   <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\nabla f=0</m>.
   </p>
   </answer>
   </li>
@@ -866,9 +866,9 @@
         <p>
           The pathlines for a particle starting from <m>(x_0,y_0)</m> are given by
           <md xml:id="eqn-pathline">
-            <mrow>\amp\dd{x}{t}=1,\quad
+            <mrow>&amp;\dd{x}{t}=1,\quad
             \dd{y}{t}=te^{-4x}</mrow>
-            <mrow>\Rightarrow\quad\amp
+            <mrow>\Rightarrow\quad&amp;
             x = x_0 + t,\quad
             y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.</mrow>
           </md>

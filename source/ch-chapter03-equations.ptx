@@ -146,9 +146,9 @@
             of the transformation</em>, <me>
               J = \pd{\bx}{\bX} = \pd{(x, y, z)}{(X, Y, Z)} =
               \begin{vmatrix}
-              \pd{x}{X} \amp \pd{x}{Y} \amp \pd{x}{Z} \\
-              \pd{y}{X} \amp \pd{y}{Y} \amp \pd{y}{Z} \\
-              \pd{z}{X} \amp \pd{z}{Y} \amp \pd{z}{Z}
+              \pd{x}{X} &amp; \pd{x}{Y} &amp; \pd{x}{Z} \\
+              \pd{y}{X} &amp; \pd{y}{Y} &amp; \pd{y}{Z} \\
+              \pd{z}{X} &amp; \pd{z}{Y} &amp; \pd{z}{Z}
               \end{vmatrix}
             </me>
             is finite and non-zero: <me>
@@ -184,7 +184,9 @@
       <title>Reynolds' Transport Theorem</title>
 
       <p> We are now ready to derive a key result that eases our path towards developing the
-        governing equations for a fluid. The result is as follows. <theorem xml:id="thm-RTT">
+        governing equations for a fluid. The result is as follows.
+       
+        <theorem xml:id="thm-RTT">
           <title>Reynolds' Transport Theorem</title>
           <statement>
             <p> Consider a time-dependent volume, <m>V(t)</m>, that is transported by the fluid so
@@ -205,14 +207,14 @@
               </me>
         and notice that we now only need to integrate over the fixed volume as defined in Lagrangian
         space, at the expense of adding the Jacobian factor. We now write <md>
-                <mrow> \dd{I}{t} \amp= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
+                <mrow> \dd{I}{t} &amp;= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
               </md>
         and the material derivative passes through since the domain is fixed. The <xref ref="thm-material-derivative"/> now allows us to convert the material derivative to regular
         partial derivatives. By the chain rule: <md>
-                <mrow>\DD{(fJ)}{t} \amp= \DD{f}{t}J + f\DD{J}{t} </mrow>
-                <mrow> \amp= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
+                <mrow>\DD{(fJ)}{t} &amp;= \DD{f}{t}J + f\DD{J}{t} </mrow>
+                <mrow> &amp;= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
                   + f \left[J \nabla \cdot \bu\right] </mrow>
-                <mrow> \amp= \left[ \pd{f}{t} + \nabla \cdot (f\bu) \right]J </mrow>
+                <mrow> &amp;= \left[ \pd{f}{t} + \nabla \cdot (f\bu) \right]J </mrow>
               </md>
         and we have differentiated the Jacobian via Euler's identity <xref ref="thm-Euleridentity" />
         in the second line. The last line follows from the chain rule applied to the vector
@@ -220,7 +222,9 @@
                 \nabla \cdot (f\bu) = f \nabla \cdot \bu + \nabla f \cdot \bu.
               </me>
         We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof
-        of the Reynolds' Transport Theorem. <note>
+        of the Reynolds' Transport Theorem.</p>
+        
+        <p><note>
                 <p>It is helpful for you to convince yourself that the above vector identity is the
         only possible arrangement of operations that makes sense, i.e. in order for <m>\nabla \cdot
         (f\bu)</m> to return a scalar.</p>
@@ -231,15 +235,12 @@
         </theorem>
       </p>
 
-      <p>
-        <remark>
-          <p>Reynolds' Transport Theorem thus gives an identity for how time differentiation can
+        <p>In summary: the Reynolds' Transport Theorem thus gives an identity for how time differentiation can
             pass through the integral when the domain of integration is changing in time!</p>
-        </remark>
-      </p>
 
       <p>
         <remark>
+          <title>A 1D version of the Reynolds' Transport Theorem</title>
           <p>
             In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule.
             This is presented as an exercise in <xref ref="ex-leibnitz-rule"/>.
@@ -249,6 +250,7 @@
 
       <p>
         <remark>
+          <title>RTT and conserved quantities</title>
           <p>
             Reynolds' Transport Theorem is particularly useful when the integral quantity
             <me>
@@ -311,9 +313,11 @@
       </p>
       <p>
         <remark>
+          <title>General statement of RTT</title>
           <p>
-            <em>Non-examinable:</em>
-            A more general statement of the Reynolds' Transport Theorem is as follows:
+            <em>Non-examinable:</em></p>
+
+            <p>A more general statement of the Reynolds' Transport Theorem is as follows:
             We define a <em>control volume</em> <m>V(t)</m>.
             This is a region of the fluid that we specify;
             it could be any fluid-containing volume, and in particular it doesn't need to follow the fluid particles
@@ -754,9 +758,9 @@
             and momentum equations <xref ref="eqn-consvmoment"/>, considered in the situation of an
             incompressible fluid:
             <mdn>
-              <mrow>\nabla \cdot \bu \amp= 0, </mrow>
+              <mrow>\nabla \cdot \bu &amp;= 0, </mrow>
               <mrow xml:id="eqn-euler-momentum"> 
-               \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) \amp= - \frac{1}{\rho}\nabla p + \bg.
+               \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) &amp;= - \frac{1}{\rho}\nabla p + \bg.
             </mrow>
           </mdn>
           Note this is then four scalar equations for the three unknown velocities in <m>\bu</m>
@@ -1409,6 +1413,10 @@ of one metre or so might be reasonable!
 
 <exercise xml:id="ex-euler-check">
   <title>Derivation of governing equations</title>
+
+  <p>
+    <em>This is a re-derivation of what is already presented in the notes, giving you valuable practice to understand the concepts.</em>
+  </p>
  
   <p>
     Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid,
@@ -1487,8 +1495,8 @@ compared to the contributions due to the internal energy and the kinetic energy.
 <title>Pressure field in uniform flow</title>
   <statement>
     <p>
-      A fluid in a gravitational field with density <m>\rho</m> and acceleration
-      vector <m>-g \hat{\mathbf{z}}</m> has uniform velocity
+      An ideal (incompressible and irrotational) fluid in a gravitational field with density <m>\rho</m> and acceleration
+      vector <m>\bg = -g \bk</m> (with <m>\bk</m> being the unit vector in the positive <m>z</m>-direction) has uniform velocity
     <me>
       \bu = (a + b t, \; t^3, \; e^t).
     </me>
@@ -1498,22 +1506,22 @@ compared to the contributions due to the internal energy and the kinetic energy.
     <ol marker="a">
       <li>
         <p>
-          Find the pressure field in terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>.
+          Using the Euler equations in <xref ref="def-euler"/>, find the pressure field in terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>.
         </p>
         <answer>
         <p>
-          The fluid has a uniform velocity, which means that all components of <m>\nabla/bu</m>
+          The fluid has a uniform velocity, which means that all components of <m>\nabla\bu</m>
            vanish. The Euler equation simplifies to
         <me>
-          \rho\pd{\bu}{t}=-\nabla p-\rho g \hat{\mathbf{z}},
+          \rho\pd{\bu}{t}=-\nabla p-\rho g \bk,
         </me>
         where
         <me>
           \pd{\bu}{t}=(b, \; 3t^2, \; e^t).
         </me>
-        Hence,
+        Hence, the pressure is given by solving the equation,
         <me>
-          \nabla p = -\rho \pd{\bu}{t} - \rho g \hat{\mathbf{z}}
+          \nabla p = -\rho \pd{\bu}{t} - \rho g \bk
           = -\rho (\, b, \; 3t^2, \; e^t + g \,),
         </me>
         which is a vector equation. Splitting into components, we obtain
@@ -1580,11 +1588,13 @@ compared to the contributions due to the internal energy and the kinetic energy.
     <p>
       The piston shown in the diagram below is pushed with a force <m>F(t)</m>
       into a pipe of length <m>L</m> and cross-sectional area <m>A</m>
-      containing incompressible fluid of density <m>\rho</m>.
+      containing incompressible and irrotational fluid of density <m>\rho</m>.
     </p>
+    <p>Assume that the pressure at the open end is held at atmospheric pressure, <m>p = p_\text{atm}</m>.</p>
+
     <p>
-      Assuming the fluid moves as a rigid body and neglecting friction and the mass of the piston,
-      write down a differential equation governing the position <m>X(t)</m> of the piston
+      Assume the fluid moves as a rigid body and neglect friction and the mass of the piston. Using the Euler equations in <xref ref="def-euler"/>,
+      write down a differential equation governing the position, <m>X(t)</m>, of the piston
       at time <m>t</m>. You may neglect gravity.
     </p>
   </statement>
@@ -1595,13 +1605,21 @@ compared to the contributions due to the internal energy and the kinetic energy.
       Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
       hence the Euler equation reduces to
       <me>
-        \rho\pd{\bu}{t}=-\nabla p.
+        \rho\pd{\bu}{t}=-\nabla p,
       </me>
-      Solving for <m>p</m> gives
+      where the velocity is uniformly <m>\bu = (\dot{X}(t), 0)</m>.</p>
+
+      <p>Solving for <m>p</m> and using the fact that <m>p</m> is atmospheric pressure at <m>x = L</m>, we have
       <me>
-        p(x,t) = \rho\dd{^2X}{t^2}(L-x)+p_{atm},
+        p(x,t) = \rho\dd{^2 X}{t^2}(L-x)+p_\text{atm}.
       </me>
-      where <m>p_{atm}</m> is atmospheric pressure, and hence
+    </p>
+
+      <p>At the piston side, the pressure is equal to 
+      <me>
+        \frac{F}{A} + p_\text{atm},
+      </me>
+      (recall pressure is force per unit area, therefore the piston force must be divided by <m>A</m>). Then 
       <me>
         \frac{F+Ap_{atm}}{A} = \rho\dd{^2X}{t^2}(L-X)+p_{atm}
         \quad\Rightarrow\quad
@@ -1645,28 +1663,28 @@ compared to the contributions due to the internal energy and the kinetic energy.
           </me>
           We have
           <md>
-            <mrow>\amp \nabla \times(\bu \cdot \nabla)\bu,</mrow>
-            <mrow>=\amp\begin{vmatrix}
-              \bi \amp \bj \amp \bk \\
-              \pd{}{x} \amp \pd{}{y} \amp \pd{}{z} \\
-              \bu \cdot \nabla u \amp \bu \cdot \nabla v \amp \bu \cdot \nabla w
+            <mrow>&amp; \nabla \times(\bu \cdot \nabla)\bu,</mrow>
+            <mrow>=&amp;\begin{vmatrix}
+              \bi &amp; \bj &amp; \bk \\
+              \pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
+              \bu \cdot \nabla u &amp; \bu \cdot \nabla v &amp; \bu \cdot \nabla w
               \end{vmatrix},</mrow>
-            <mrow>=\amp\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla w-\pd{\bu}{z}\cdot\nabla v\right)</mrow>
-            <mrow>\amp+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
-            <mrow>\amp+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
-            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
-            <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
-            <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
-            <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
-            <mrow>\amp+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
-            <mrow>\amp+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
-            <mrow>\amp+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
-            <mrow>\amp+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
-            <mrow>\amp+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
-            <mrow>\amp+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
-            <mrow>=\amp\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
+            <mrow>=&amp;\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla w-\pd{\bu}{z}\cdot\nabla v\right)</mrow>
+            <mrow>&amp;+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
+            <mrow>&amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
+            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
+            <mrow>&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+            <mrow>&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+            <mrow>&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
+            <mrow>&amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
+            <mrow>&amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
+            <mrow>&amp;+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
+            <mrow>&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+            <mrow>&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+            <mrow>&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
+            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
           </md>
           where the final equality follows from incompressibility. Hence,
           <me>
@@ -1681,9 +1699,9 @@ compared to the contributions due to the internal energy and the kinetic energy.
           <m>\nabla \times(\bu \cdot \nabla)\bu</m> is:
                   <md>
             <mrow>\epsilon_{ijk}\pd{}{x_j}\left(u_l\pd{u_k}{x_l}\right)
-              =\amp \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
+              =&amp; \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
               +\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l},</mrow>
-            <mrow>=\amp \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
+            <mrow>=&amp; \epsilon_{ijk}u_l\pd{^2u_k}{x_jx_l}
               -\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l}
               +\epsilon_{ijk}\pd{u_l}{x_j}\pd{u_k}{x_l}
               +\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l},</mrow>
@@ -1725,9 +1743,19 @@ compared to the contributions due to the internal energy and the kinetic energy.
     filled with water. The shape of the jar was such that the interval of time taken for the
     water surface to pass two equally-spaced markers on the side of the jar is constant.
   </p>
+
+  <p>
+    <figure xml:id="fig-clepsydra">
+      <caption>Clepsyndra</caption>
+      <image source="clepsydra.png" width="50%">
+        <shortdescription>clepsyndra</shortdescription>
+      </image>
+    </figure>
+  </p>
+
   <p>
     In this question you will determine the shape of jar required to achieve this.
-    In particular, we denote the (axisymmetric) jar’s radius a height <m>z</m> above the hole by <m>a(z)</m>.
+    In particular, we denote the (axisymmetric) jar radius a height <m>z</m> above the hole by <m>r = a(z)</m>.
     The radius of the hole, <m>a_h \ne a(0)</m>, in general.
   </p>
   <ol marker="(a)">
