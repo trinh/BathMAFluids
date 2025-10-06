@@ -154,7 +154,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bu}{\boldsymbol{u}}
 \newcommand{\bv}{\boldsymbol{v}}
 \newcommand{\ba}{\boldsymbol{a}}
-\newcommand{\bf}{\boldsymbol{f}}
+\renewcommand{\bf}{\boldsymbol{f}}
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
@@ -163,6 +163,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\b0}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -430,8 +431,8 @@ constant}.
 <div class="para">This is a result of the chain rule. For a scalar function <span class="process-math">\(f = f(\bx, t)\text{,}\)</span> we have the fact that</div>
 <div class="displaymath process-math" id="thm-material-derivative-2-2-1-2">
 \begin{align*}
-\DD{f}{t} \amp= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f \\
-\amp= \pd{f}{t} + \bu \cdot \nabla f. 
+\DD{f}{t} &amp;= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f \\
+&amp;= \pd{f}{t} + \bu \cdot \nabla f. 
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-material-derivative-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
