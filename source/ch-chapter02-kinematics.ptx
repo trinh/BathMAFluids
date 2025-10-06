@@ -11,7 +11,8 @@
 
     <p>
      <figure xml:id="fig-euler-vid">
-        <image source="01_euler_trim.gif" width="70%"/> 
+        <!-- <image source="01_euler_trim.gif" width="70%"/>  -->
+        <image source="01_euler_trim.png" width="70%"/> 
         <caption>Eulerian description of flow from the <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" visual="NCFMF">NCFMF video</url>.</caption>
       </figure>
     </p>
@@ -438,7 +439,8 @@
 
       <figure xml:id="fig-streamlines-example-02">
         <caption>Streamlines and particle paths</caption>
-        <image source="streamlines_example02.gif">
+        <image source="streamlines_example02.png" width="50%">
+        <!-- <image source="streamlines_example02.gif"> -->
           <shortdescription>Animation of streamlines</shortdescription>
         </image>
       </figure>
