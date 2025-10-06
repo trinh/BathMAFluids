@@ -452,6 +452,51 @@
     </p>
    </answer>
     </example>
+
+<example>
+  <title>An oscillating hose/plate</title>
+
+  <p>
+    Water flows out of an oscillating sprinkler head, held along the edge <m>y = 0</m>, such that the velocity field produced is given by 
+    <me>
+      \bu = [u_0 \sin[\omega(t - y/{v_0})], v_0],
+    </me>
+    where <m>u_0</m> and <m>v_0</m> are constants. 
+  </p>
+
+  <p>
+    Determine the streamline that passes through the origin at <m>t = 0</m> and <m>t = \pi/(2\omega)</m>. 
+  </p>
+
+  <p>
+    Determine the pathline of the particle that was at the origin at <m>t = 0</m>; at <m>t = \pi/2</m>. 
+  </p>
+
+  <p>
+    What is the shape of the streakline that passes through the origin? 
+  </p>
+
+  <answer>
+    <p>
+      <figure xml:id="fig-hose01">
+        <caption>Isolated pathlines show that particles move along straight paths.</caption>
+        <image source="hose01.gif" width="100%">
+          <shortdescription>gif</shortdescription>
+        </image>
+      </figure>
+    </p>
+    <p>
+      <figure xml:id="fig-hose02">
+        <caption>However, viewed in terms of the streakline, the visible pattern is oscillatory.</caption>
+        <image source="hose02.gif" width="100%">
+          <shortdescription>gif</shortdescription>
+        </image>
+      </figure>
+    </p>
+  </answer>
+</example>
+
+
   </subsection>
   </section>
 
