@@ -503,21 +503,20 @@
       <statement>
         <p>
          There is a useful corollary to the transport theorem in <xref ref="thm-RTT"/>
-         in the case where the desired function of integration, <m>f</m>, is proportional to the density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>.
-         In this case the Reynolds' Transport Theorem is 
+         in the case where the desired function of integration, <m>f</m>, is proportional to the density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>. Indeed consider a moving volume <m>V(t)</m>, and a density <m>\rho</m> that satisfies the continuity equation <xref ref="eqn-consvmass1"/> or <xref ref="eqn-consvmass2"/>. Then 
          <men xml:id="eqn-cor-convmass">
-         \dd{}{t} \iiint_{V} \rho h \, \de{V} = \iiint_{V} \rho \DD{h}{t} \, \de{V}.
+         \dd{}{t} \iiint_{V(t)} \rho h \, \de{V} = \iiint_{V(t)} \rho \DD{h}{t} \, \de{V}.
          </men>
         </p>
       </statement>
 
       <proof>
         <p>
-          This is left as an exercise. It will be useful for you to consider the vector identity
+          This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds transport theorem formula. Then expand the quantity:
           <me>
             \nabla \cdot (f\bu) = \nabla f \cdot \bu + f \nabla \cdot \bu.
           </me>
-          
+          where <m>f = \rho h</m>. Finally use the continuity equation on <m>\rho</m>.
         </p>
       </proof>
     </corollary>
@@ -1082,6 +1081,28 @@
       <p>
         You will practice an application of Bernoulli's equation in <xref ref="ex-bernoulli-streamline"/>.
       </p>
+
+
+      <p>
+        <example>
+          <title>Aiflow into or out of a room</title>
+         
+          <p>
+            During the lecture, just for fun, we will play <url href="https://www.youtube.com/watch?v=1L2ef1CP-yw">this video by Matthias Wandel</url> about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult. 
+          </p>
+          
+        </example>
+      </p>
+
+      <p>
+        <example>
+          <title>Pascal's bursting barrel</title>
+         
+          <p>For fun during the lecture, we will play <url href="https://www.youtube.com/watch?v=EJHrr21UvY8">this video demonstration done at Princeton</url> demonstrating the power of hydrostatic pressure.</p>
+        </example>
+      </p>
+
+
     </section>
   
 <worksheet xml:id="ws-equations">

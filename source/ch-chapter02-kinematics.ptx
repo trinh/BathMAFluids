@@ -468,12 +468,22 @@
     Determine the streamline that passes through the origin at <m>t = 0</m> and <m>t = \pi/(2\omega)</m>. 
   </p>
 
+  <!-- <answer>
+    <p>
+      We solve 
+      <md>
+        <mrow>\dd{x}{s} &amp; u_0 \sin[\omega(t- y/v_0)], </mrow>
+        <mrow>\dd{y}{s} \amp </mrow>
+      </md>
+    </p>
+  </answer> -->
+
   <p>
     Determine the pathline of the particle that was at the origin at <m>t = 0</m>; at <m>t = \pi/2</m>. 
   </p>
 
   <p>
-    What is the shape of the streakline that passes through the origin? 
+    Qualitatively describe the shape of the streakline that passes through the origin? 
   </p>
 
   <answer>
