@@ -15,8 +15,8 @@
 
     <!-- Include chapters -->
     <xi:include href="./ch-chapter01-introduction.ptx" />
-    <xi:include href="./ch-chapter02-kinematics.ptx" />
-    <xi:include href="./ch-chapter03-equations.ptx" />
+    <xi:include href="./ch-chapter02-kinematics.ptx" /> 
+    <xi:include href="./ch-chapter03-equations.ptx" /> 
     <xi:include href="./ch-chapter04-potentialflows.ptx" />
     <xi:include href="./ch-chapter05-waves.ptx" />
     <xi:include href="./ch-chapter06-vorticity.ptx" />
