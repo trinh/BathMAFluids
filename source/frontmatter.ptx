@@ -244,7 +244,10 @@ In this unit:
 </p>
 
   <p>
-    There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a <em>first course</em> on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.</p>
+    There are countless fluid mechanics or fluid dynamics courses and textbooks,
+    and for the most part, the development of a <em>first course</em> on fluid dynamics
+    tends to be quite similar between universities and treatments.
+    If you would like additional references, here are a few useful ones.</p>
 
     <p>
       However, note that our goal is to be as self-sufficient as possible via the lecture notes.</p>
@@ -253,7 +256,10 @@ In this unit:
     <ul>
       <li>
         <p>
-          David Acheson's (1990) book <em>Elementary fluid dynamics</em> <xref ref="ref-acheson"/>: a significant part of this course follows some of the now-classic treatments that would have been developed simultaneous to the design of this book by Acheson (often used by Oxford UG students). It is written in quite an informal style.</p>
+          David Acheson's (1990) book <em>Elementary fluid dynamics</em> <xref ref="ref-acheson"/>:
+          a significant part of this course follows some of the now-classic treatments that would
+          have been developed simultaneous to the design of this book by Acheson
+          (often used by Oxford UG students). It is written in quite an informal style.</p>
 
           <p>
 <image source="intro_book_acheson.png" width="30%">
@@ -262,8 +268,18 @@ In this unit:
         </p>
       </li>
       <li>
+        <p>Multimedia Fluid Mechanics Online, edited by G. M. Homsy <xref ref="ref-homsy"/>:
+          a collection of videos and explanations of various fluid mechanics phenomena.
+          This is an online resource available through the University of Bath library system.</p>
+          <p><image source="ch-frontmatter-9781108583756.jpg" width="30%">
+          <shortdescription>MFMO</shortdescription></image>
+        </p>
+      </li>
+      <li>
         <p>
-          Milton Van Dyke's (1982) book "An album of fluid motion" <xref ref="ref-album"/>: a classic album showing beautiful black and white images of fluid motion. Published by an iconic private press and sold (by design by Van Dyke) at affordable prices!</p>
+          Milton Van Dyke's (1982) book "An album of fluid motion" <xref ref="ref-album"/>:
+          a classic album showing beautiful black and white images of fluid motion.
+          Published by an iconic private press and sold (by design by Van Dyke) at affordable prices!</p>
 
 <p>
       <image source="intro_book_vandyke.png" width="30%">
@@ -303,6 +319,9 @@ In this unit:
       </p>
       <p>
         <em>3 October 2025:</em>Add new problems to the worksheet in Ch. 3 (problems 4, 5, 6). Add material to Ch. 7.
+      </p>
+      <p>
+        <em>10 October 2025:</em>Add Homsy (Ed.) Multimedia Fluid Mechanics Online; Update Ch.7.
       </p>
     </li>
   </ol>
