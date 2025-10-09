@@ -312,7 +312,7 @@
         </remark>
       </p>
       <p>
-        <remark>
+        <remark xml:id="rem-RTT-control-volume">
           <title>General statement of RTT</title>
           <p>
             <em>Non-examinable:</em></p>
@@ -512,7 +512,7 @@
 
       <proof>
         <p>
-          This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds transport theorem formula. Then expand the quantity:
+          This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity:
           <me>
             \nabla \cdot (f\bu) = \nabla f \cdot \bu + f \nabla \cdot \bu.
           </me>
@@ -1085,10 +1085,11 @@
 
       <p>
         <example>
-          <title>Aiflow into or out of a room</title>
+          <title>Airflow into or out of a room</title>
          
           <p>
-            During the lecture, just for fun, we will play <url href="https://www.youtube.com/watch?v=1L2ef1CP-yw">this video by Matthias Wandel</url> about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult. 
+            During the lecture, just for fun, we will play
+            <url href="https://www.youtube.com/watch?v=1L2ef1CP-yw">this video by Matthias Wandel</url> about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult. 
           </p>
           
         </example>
