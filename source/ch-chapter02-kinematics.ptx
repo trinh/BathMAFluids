@@ -490,6 +490,7 @@
     <p>
       <figure xml:id="fig-hose01">
         <caption>Isolated pathlines show that particles move along straight paths.</caption>
+        <!-- <image source="hose01.png" width="80%"> -->
         <image source="hose01.gif" width="100%">
           <shortdescription>gif</shortdescription>
         </image>
@@ -498,6 +499,7 @@
     <p>
       <figure xml:id="fig-hose02">
         <caption>However, viewed in terms of the streakline, the visible pattern is oscillatory.</caption>
+        <!-- <image source="hose02.png" width="80%"> -->
         <image source="hose02.gif" width="100%">
           <shortdescription>gif</shortdescription>
         </image>
@@ -726,6 +728,7 @@
             <p>
               If a particle starts at <m>x=0</m> at time <m>t=0</m>, what is its position at time <m>t</m>?
             </p>
+
             <answer>
               <p>
                 We have
