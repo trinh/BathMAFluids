@@ -53,6 +53,8 @@
   <references xml:id="refs-references">
     <title>References and further reading</title>
    
+    <biblio xml:id="ref-homsy"><p>Homsy, G. M. (Ed.) (2019). Multimedia Fluid Mechanics Online. Cambridge University Press.</p></biblio>
+    
     <biblio xml:id="ref-kreyszig"><p>Kreyszig, E. (2007). Advanced engineering mathematics 9th edition. Wiley. US: John Wiley and Sons.</p></biblio>
     
     <biblio xml:id="ref-album"><p>Van Dyke, M. (1982). An Album of Fluid Motion. Parabolic Press.</p></biblio>
