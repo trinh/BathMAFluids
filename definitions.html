@@ -158,6 +158,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
@@ -302,8 +306,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-3" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -313,7 +317,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -335,7 +341,7 @@ eBookConfig.enable_chatcodes =  false;
 <section class="subsection" id="viscosity"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Viscosity</span>
 </h3>
-<div class="para" id="viscosity-2">Viscosity quantifies the fluid’s internal resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a <em class="emphasis">Newtonian</em> fluid. For these fluids the shear viscosity <span class="process-math">\(\mu\)</span> (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.<div class="autopermalink" data-description="Paragraph"><a href="#viscosity-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="viscosity-2">Viscosity quantifies the fluid’s internal resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a <em class="emphasis">Newtonian</em> fluid. For these fluids, the shear viscosity <span class="process-math">\(\mu\)</span> (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity.<div class="autopermalink" data-description="Paragraph"><a href="#viscosity-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="example-viscosity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -347,7 +353,7 @@ eBookConfig.enable_chatcodes =  false;
 \mu = \frac{F h}{A U}.
 \end{equation*}
 </div>
-<div class="para">In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see <a href="ws-viscousflows.html#ps-falling-ball-viscometer" class="xref" data-knowl="./knowl/xref/ps-falling-ball-viscometer.html" data-reveal-label="Reveal" data-close-label="Close" title="Worksheet Exercise 7.4.1: Falling ball viscometer">Worksheet Exercise 7.4.1</a> in the worksheet at the end of this chapter).</div>
+<div class="para">In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see <a href="ws-viscousflows.html#ps-falling-ball-viscometer" class="xref" data-knowl="./knowl/xref/ps-falling-ball-viscometer.html" data-reveal-label="Reveal" data-close-label="Close" title="Worksheet Exercise 7.6.1: Falling ball viscometer">Worksheet Exercise 7.6.1</a> in the worksheet at the end of this chapter).</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-viscosity-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 7.1.1"><a href="#example-viscosity" title="Copy heading and permalink for Example 7.1.1" aria-label="Copy heading and permalink for Example 7.1.1">🔗</a></div></article></details><div class="para" id="viscosity-4">
@@ -475,7 +481,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-1-2-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="reynolds-number-5-1-2-1-1-1-2-3">
-<div class="para" id="p-derived-reynolds-number-5-1-2-1-1-1-2-3">Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions.</div>
+<div class="para" id="p-derived-reynolds-number-5-1-2-1-1-1-2-3">Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions. This <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/95" target="_blank">movie</a> shows a low-Reynolds-number flow that is reversible, whereas this <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/96" target="_blank">movie</a> shows a flow with a higher Reynolds number that is not reversible.</div>
 <div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-1-2-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="reynolds-number-5-1-2-1-1-1-2-4">
@@ -530,6 +536,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-1-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="para">This <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/67" target="_blank">movie</a> shows flows for a range of Reynolds numbers.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Remark 7.1.9: Flow characteristics at different Reynolds numbers"><a href="#reynolds-number-5-1" title="Copy heading and permalink for Remark 7.1.9: Flow characteristics at different Reynolds numbers" aria-label="Copy heading and permalink for Remark 7.1.9: Flow characteristics at different Reynolds numbers">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
