@@ -778,6 +778,16 @@
       You will consider the derivation of the Euler equations as part of <xref ref="ex-euler-check"/>.
     </p>
 
+    <p>
+      <example>
+        <title>Computer graphics and fluid simulations</title>
+       <p>
+        There has always been an intimate link between the research field of fluid mechanics and the entertainment field, where cutting-edge applications in animation, movie, and video-game graphics use ideas from fluid mechanics to model fluids. Many fluid simulators will use things like the Euler equations (or "bastardised version") to simulate fluids. In some cases, such simulations can even happen in real time. Here is an example of a real-time Euler equation solver <url href="https://matthias-research.github.io/pages/tenMinutePhysics/17-fluidSim.html">coded in Javascript.</url>
+       </p> 
+        
+      </example>
+    </p>
+
     <subsection xml:id="subsec-euler-BCs">
       <title>Boundary conditions</title>
       <idx><h>boundary conditions</h></idx>
@@ -1103,6 +1113,13 @@
         </example>
       </p>
 
+      <p>
+        <example>
+          <title>Urination across species</title>
+         
+          <p>During the lecture, we will play <url href="https://www.youtube.com/watch?v=EidLGwyYpBE">this video describing</url> the work by Yang et al. on <url href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111">"Duration of urination does not change with body size"</url>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.</p>
+        </example>
+      </p>
 
     </section>
   
