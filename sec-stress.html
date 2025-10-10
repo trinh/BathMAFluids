@@ -133,7 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="boundaries-surfaces-interfaces.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-viscousflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-viscousflows.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="boundaries-surfaces-interfaces.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-viscousflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="subsec-newtonian-fluids.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -158,10 +158,14 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
-\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\b0}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
 \DeclareGraphicsRule{.gif}{png}{.png}{}
 \newcommand{\lt}{&lt;}
@@ -302,8 +306,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-3" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
@@ -313,7 +317,24 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsubsec-rtt-lhs-bodyforces" class="internal"><span class="codenumber">7.5.1.1</span> <span class="title">Body forces</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsubsec-rtt-lhs-surfaceforces" class="internal"><span class="codenumber">7.5.1.2</span> <span class="title">Surface forces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-streamfunction.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Streamfunction formulation for two-dimensional flow</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -336,52 +357,52 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stress at a surface</span>
 </h3>
 <div class="para" id="sec-stress-2-2">
-<article class="definition definition-like" id="sec-stress-2-2-1"><h4 class="heading">
+<article class="definition definition-like" id="def-stress-surface"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definition of stress at a surface.</span>
 </h4>
-<div class="para logical" id="sec-stress-2-2-1-2">
-<div class="para">The fluid stress on a surface is the force per unit area exerted by the fluid; note that this is a vector quantity. It is often convenient to decompose the stress into two contributions:</div>
-<ul class="disc" id="sec-stress-2-2-1-2-1">
-<li id="sec-stress-2-2-1-2-1-1">
-<div class="para" id="p-derived-sec-stress-2-2-1-2-1-1">Shear stress: the components tangential to the surface</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-stress-2-2-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="para logical" id="def-stress-surface-2">
+<div class="para">The fluid stress on a surface, <span class="process-math">\(\btau\text{,}\)</span> is the force per unit area exerted by the fluid; note that this is a vector quantity. It is often convenient to decompose the stress into two contributions, as these are often quite different both in magnitude and in physical origin:</div>
+<ul class="disc" id="def-stress-surface-2-2">
+<li id="def-stress-surface-2-2-1">
+<div class="para" id="p-derived-def-stress-surface-2-2-1">Shear stress: the components tangential to the surface</div>
+<div class="autopermalink" data-description="Item"><a href="#def-stress-surface-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-stress-2-2-1-2-1-2">
-<div class="para" id="p-derived-sec-stress-2-2-1-2-1-2">Normal stress: the component perpendicular to the surface.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-stress-2-2-1-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="def-stress-surface-2-2-2">
+<div class="para" id="p-derived-def-stress-surface-2-2-2">Normal stress: the component perpendicular to the surface.</div>
+<div class="autopermalink" data-description="Item"><a href="#def-stress-surface-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-stress-surface-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 7.3.1: Definition of stress at a surface"><a href="#sec-stress-2-2-1" title="Copy heading and permalink for Definition 7.3.1: Definition of stress at a surface" aria-label="Copy heading and permalink for Definition 7.3.1: Definition of stress at a surface">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 7.3.1: Definition of stress at a surface"><a href="#def-stress-surface" title="Copy heading and permalink for Definition 7.3.1: Definition of stress at a surface" aria-label="Copy heading and permalink for Definition 7.3.1: Definition of stress at a surface">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-stress-2-3">
 <details id="example-shear-stress" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluid stress in arteries.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-shear-stress-2">The shear stress on arterial walls is everywhere maintained at around <span class="process-math">\(\sim1.5\)</span> Pa, whereas the normal stress is typically much larger at ~11–16 kPa. The distribution of shear stress distribution is known to be of great importance to our health as it is linked to the development of atherosclerosis, which leads to heart attacks and strokes, two of the leading causes of death worldwide.<div class="autopermalink" data-description="Paragraph"><a href="#example-shear-stress-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-shear-stress-2">The shear stress on arterial walls is everywhere maintained at around <span class="process-math">\(\sim1.5\)</span> Pa, whereas the normal stress is typically much larger at ~11–16 kPa. The distribution of shear stress, although much smaller than the normal stress, is known to be of great importance to our health as it is linked to the development of atherosclerosis, which leads to heart attacks and strokes, two of the leading causes of death worldwide.<div class="autopermalink" data-description="Paragraph"><a href="#example-shear-stress-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Example 7.3.2: Fluid stress in arteries"><a href="#example-shear-stress" title="Copy heading and permalink for Example 7.3.2: Fluid stress in arteries" aria-label="Copy heading and permalink for Example 7.3.2: Fluid stress in arteries">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-stress-2-4">
-<article class="definition definition-like" id="sec-stress-2-4-1"><h4 class="heading">
+<article class="definition definition-like" id="def-stress-surface-calculation"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculation of stress at a surface.</span>
 </h4>
-<div class="para logical" id="sec-stress-2-4-1-2">
-<div class="para">For Newtonian fluids at a no-slip surface:</div>
-<ul class="disc" id="sec-stress-2-4-1-2-1">
-<li id="sec-stress-2-4-1-2-1-1">
-<div class="para" id="p-derived-sec-stress-2-4-1-2-1-1">The wall shear stress equals the fluid shear viscosity multiplied by the normal derivative of the tangential velocity.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-stress-2-4-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="para logical" id="def-stress-surface-calculation-2">
+<div class="para">For <em class="emphasis">Newtonian fluids</em> at a no-slip surface:</div>
+<ul class="disc" id="def-stress-surface-calculation-2-2">
+<li id="def-stress-surface-calculation-2-2-1">
+<div class="para" id="p-derived-def-stress-surface-calculation-2-2-1">The wall shear stress equals the fluid shear viscosity multiplied by the normal derivative of the tangential velocity.</div>
+<div class="autopermalink" data-description="Item"><a href="#def-stress-surface-calculation-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-stress-2-4-1-2-1-2">
-<div class="para" id="p-derived-sec-stress-2-4-1-2-1-2">The normal stress equals the pressure.</div>
-<div class="autopermalink" data-description="Item"><a href="#sec-stress-2-4-1-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="def-stress-surface-calculation-2-2-2">
+<div class="para" id="p-derived-def-stress-surface-calculation-2-2-2">Provided the surface is not accelerating, the normal stress equals the pressure.</div>
+<div class="autopermalink" data-description="Item"><a href="#def-stress-surface-calculation-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="para">Note that in 3D there are two shear components and one normal component.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-stress-surface-calculation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 7.3.3: Calculation of stress at a surface"><a href="#sec-stress-2-4-1" title="Copy heading and permalink for Definition 7.3.3: Calculation of stress at a surface" aria-label="Copy heading and permalink for Definition 7.3.3: Calculation of stress at a surface">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 7.3.3: Calculation of stress at a surface"><a href="#def-stress-surface-calculation" title="Copy heading and permalink for Definition 7.3.3: Calculation of stress at a surface" aria-label="Copy heading and permalink for Definition 7.3.3: Calculation of stress at a surface">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-stress-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-stress-2-5">
 <details id="sec-stress-2-5-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
@@ -438,11 +459,175 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Subsection 7.3.1: Stress at a surface"><a href="#sec-stress-2" title="Copy heading and permalink for Subsection 7.3.1: Stress at a surface" aria-label="Copy heading and permalink for Subsection 7.3.1: Stress at a surface">🔗</a></div></section><section class="subsection" id="subsec-stress-tensor"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The stress tensor</span>
 </h3>
-<div class="para" id="subsec-stress-tensor-2">This is a <span class="process-math">\(3\times3\)</span> matrix.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="subsec-stress-tensor-2">
+<div class="para">Cauchy showed that the state of stress at a point in a continuum body is completely defined by a rank two tensor (that is, a matrix with appropriate transformation properties) called the <em class="emphasis">Cauchy stress tensor</em>, <span class="process-math">\(\bsigma(\bx,t)\text{,}\)</span> given by</div>
+<div class="displaymath process-math" id="eqn-stress-tensor">
+\begin{equation}
+\bsigma=\left(\begin{matrix}
+\sigma_{11} &amp; \sigma_{12} &amp; \sigma_{13} \\
+\sigma_{21} &amp; \sigma_{22} &amp; \sigma_{23} \\
+\sigma_{31} &amp; \sigma_{32} &amp; \sigma_{33}
+\end{matrix}\right),\tag{7.3.1}
+\end{equation}
+</div>
+<div class="para">which has nine scalar components.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-3">
+<article class="definition definition-like" id="subsec-stress-tensor-3-1"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Obtaining the stress from the stress tensor.</span>
+</h4>
+<div class="para logical" id="subsec-stress-tensor-3-1-2">
+<div class="para">
+<a href="sec-stress.html#def-stress-surface" class="xref" data-knowl="./knowl/xref/def-stress-surface.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.1: Definition of stress at a surface">Definition 7.3.1</a> can be extended to any surface within the fluid. The stress is a vector (or rank one tensor), <span class="process-math">\(\btau\text{,}\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-stress-surface.html" id="eqn-stress-on-surface">
+\begin{equation}
+\btau(\bn)=\bsigma\bn,\tag{7.3.2}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(\bn\)</span> is the unit normal vector to the surface, pointing into the fluid that is giving rise to the stress.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.3.9: Obtaining the stress from the stress tensor"><a href="#subsec-stress-tensor-3-1" title="Copy heading and permalink for Definition 7.3.9: Obtaining the stress from the stress tensor" aria-label="Copy heading and permalink for Definition 7.3.9: Obtaining the stress from the stress tensor">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-4">
+<article class="remark remark-like" id="subsec-stress-tensor-4-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Element interpretation of the stress tensor.</span>
+</h4>
+<div class="para" id="subsec-stress-tensor-4-1-2">The element <span class="process-math">\(\sigma_{ij}\)</span> of the stress tensor can be defined as the <span class="process-math">\(i\)</span>th component of the stress on the plane with normal vector <span class="process-math">\(\be_j\)</span> in the direction of increasing <span class="process-math">\(x_j\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-4-1-3">Thus for example <span class="process-math">\(\sigma_{23}(x,y,z_0,t)\)</span> is the <span class="process-math">\(y\)</span>-component of the stress on the surface <span class="process-math">\(z=z_0\)</span> within the fluid, and acting on the fluid in <span class="process-math">\(z&gt;z_0\text{.}\)</span> There is an <em class="emphasis">equal and opposite stress</em> acting on the fluid in <span class="process-math">\(z&lt;z_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-4-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.3.10: Element interpretation of the stress tensor"><a href="#subsec-stress-tensor-4-1" title="Copy heading and permalink for Remark 7.3.10: Element interpretation of the stress tensor" aria-label="Copy heading and permalink for Remark 7.3.10: Element interpretation of the stress tensor">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-5">
+<article class="remark remark-like" id="subsec-stress-tensor-5-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notes about the stress tensor.</span>
+</h4>
+<div class="para logical" id="subsec-stress-tensor-5-1-2">
+<ul class="disc" id="subsec-stress-tensor-5-1-2-1">
+<li id="subsec-stress-tensor-5-1-2-1-1">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-1-1">The stress <span class="process-math">\(\btau\)</span> is the force per unit area exerted by the fluid on the right-hand side of the small imaginary surface <span class="process-math">\(dS\)</span> shown in the figure below upon the fluid on the left-hand side of <span class="process-math">\(dS\text{.}\)</span> <figure class="figure figure-like" id="fig-stress-surface"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ch-chapter07-stress-surface.jpg" class="contained" alt="Stress within a fluid"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Imaginary surface in a flowing fluid, illustrating the concept of stress within a fluid.<div class="autopermalink" data-description="Figure 7.3.12"><a href="#fig-stress-surface" title="Copy heading and permalink for Figure 7.3.12" aria-label="Copy heading and permalink for Figure 7.3.12">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-5-1-2-1-2">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-2-1">The stresses acting on opposite sides of a surface (i.e. on the surfaces with normals <span class="process-math">\(\bn\)</span> and <span class="process-math">\(-\bn\)</span>) are equal and opposite. This is required for linear equilibrium within the fluid.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-5-1-2-1-3">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-3-1">The stress tensor is symmetric, i.e. <span class="process-math">\(\sigma_{ij}=\sigma_{ji}\text{.}\)</span> This is required for rotational equilibrium within the fluid, and can be derived from the principle of conservation of angular momentum.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-5-1-2-1-4">
+<div class="para logical" id="subsec-stress-tensor-5-1-2-1-4-1">
+<div class="para">The elements on the principal diagonal of the stress tensor matrix are called <em class="emphasis">the normal stresses</em>. The other six elements are called <em class="emphasis">the shear stresses</em>. The diagram below illustrates this; a cuboid with side lengths <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(Y\)</span> and <span class="process-math">\(Z\)</span> in the <span class="process-math">\(x\)</span>-, <span class="process-math">\(y\)</span>- and <span class="process-math">\(z\)</span>-directions, respectively, is shown, and the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-components of the stresses on those faces that can be seen are shown. <figure class="figure figure-like" id="fig-stress-cuboid"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ch-chapter07-stress-on-square.jpg" class="contained" alt="Stress components"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Components of the stress on the faces of a small cuboid within a fluid.<div class="autopermalink" data-description="Figure 7.3.13"><a href="#fig-stress-cuboid" title="Copy heading and permalink for Figure 7.3.13" aria-label="Copy heading and permalink for Figure 7.3.13">🔗</a></div></figcaption></figure> In <a href="sec-stress.html#fig-stress-cuboid" class="xref" data-knowl="./knowl/xref/fig-stress-cuboid.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.3.13">Figure 7.3.13</a>:</div>
+<ul class="circle" id="subsec-stress-tensor-5-1-2-1-4-1-13">
+<li id="subsec-stress-tensor-5-1-2-1-4-1-13-1">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-4-1-13-1-1">The <span class="process-math">\(z\)</span>-components of the stresses are not shown in order that the diagram does not get too complicated (also the stress on the back face is not shown).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-5-1-2-1-4-1-13-2">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-4-1-13-2-1">The <span class="process-math">\(z\)</span>-axis points outwards from the figure – right-handed axes.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-5-1-2-1-4-1-13-3">
+<div class="para" id="subsec-stress-tensor-5-1-2-1-4-1-13-3-1">Note that these forces assume that the components of the stress tensor are uniform over the faces in question, which would not generally be the case, (although it is quite accurate in the case that the lengths <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(Y\)</span> and <span class="process-math">\(Z\)</span> are small.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-4-1-13-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-5-1-2-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.3.11: Notes about the stress tensor"><a href="#subsec-stress-tensor-5-1" title="Copy heading and permalink for Remark 7.3.11: Notes about the stress tensor" aria-label="Copy heading and permalink for Remark 7.3.11: Notes about the stress tensor">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-6">
+<article class="remark remark-like" id="subsec-stress-tensor-6-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Defining the fluid pressure in terms of the stress tensor.</span>
+</h4>
+<div class="para logical" id="subsec-stress-tensor-6-1-2">
+<div class="para">We can now write a mathematical definition of the fluid pressure in terms of the stress tensor:</div>
+<div class="displaymath process-math" id="eq-defofp">
+\begin{equation}
+p=-\frac13\textrm{tr}\left(\bsigma\right)=-\frac13\textrm{tr}\left(\bsigma\right).\tag{7.3.3}
+\end{equation}
+</div>
+<div class="para">This equation gives us a method by which we can (at least in our imagination) think about measuring the pressure at a particular point in the fluid. We consider three small, mutually orthogonal planes passing through the point (aligned perpendicular to the <span class="process-math">\(x\)</span>-, <span class="process-math">\(y\)</span>- and <span class="process-math">\(z\)</span>-directions) and measure the three forces on the three surfaces. Dividing each force by the area of the respective plane leads to the stresses on the surfaces, which are, respectively,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\begin{matrix}\sigma_{11}\\\sigma_{21}\\\sigma_{31}\end{matrix}\right),\quad
+\left(\begin{matrix}\sigma_{12}\\\sigma_{22}\\\sigma_{32}\end{matrix}\right),\quad\textrm{and}\quad
+\left(\begin{matrix}\sigma_{13}\\\sigma_{23}\\\sigma_{33}\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">The normal components of the respective stresses are <span class="process-math">\(\sigma_{11}\text{,}\)</span> <span class="process-math">\(\sigma_{22}\)</span> and <span class="process-math">\(\sigma_{33}\text{,}\)</span> and hence the pressure is the average of the three normal components of the stresses. The interpretation of the pressure is different for compressible and incompressible fluids:</div>
+<ul class="disc" id="subsec-stress-tensor-6-1-2-9">
+<li id="subsec-stress-tensor-6-1-2-9-1">
+<div class="para" id="subsec-stress-tensor-6-1-2-9-1-1">
+<em class="emphasis">Compressible fluids:</em> From classical thermodynamics it is known that we can define the pressure of the fluid as a parameter of state, making use of an equation of state (for example <span class="process-math">\(p=\rho RT\)</span> for an ideal gas).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-6-1-2-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-6-1-2-9-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-stress-tensor-6-1-2-9-2">
+<div class="para" id="subsec-stress-tensor-6-1-2-9-2-1">
+<em class="emphasis">Incompressible fluids:</em> For an incompressible fluid the pressure <span class="process-math">\(p\)</span> is an independent, purely dynamical, variable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-6-1-2-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-stress-tensor-6-1-2-9-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">In this course we mainly consider incompressible fluids.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.3.14: Defining the fluid pressure in terms of the stress tensor"><a href="#subsec-stress-tensor-6-1" title="Copy heading and permalink for Remark 7.3.14: Defining the fluid pressure in terms of the stress tensor" aria-label="Copy heading and permalink for Remark 7.3.14: Defining the fluid pressure in terms of the stress tensor">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-7">
+<article class="remark remark-like" id="subsec-stress-tensor-7-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Notes about the stress tensor and pressure.</span>
+</h4>
+<div class="para logical" id="subsec-stress-tensor-7-1-2">
+<div class="para">
+<a href="sec-stress.html#eq-defofp" class="xref" data-knowl="./knowl/xref/eq-defofp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.3">(7.3.3)</a> naturally leads to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-defofp.html ./knowl/xref/eq-defofp.html">
+\begin{equation*}
+\sigma_{ij}=-p \delta_{ij}+d_{ij},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\bd=(d_{ij})\)</span> is called the <em class="emphasis">deviatoric stress tensor</em>, and this part of the stress occurs entirely due to the fluid motion. Taking the trace of this equation gives <span class="process-math">\(\textrm{tr}(\bsigma)=-3p+\textrm{tr}(\bd)\text{,}\)</span> and <a href="sec-stress.html#eq-defofp" class="xref" data-knowl="./knowl/xref/eq-defofp.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.3">(7.3.3)</a> implies that <span class="process-math">\(\textrm{tr}(\bd)=\boldsymbol{0}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.3.15: Notes about the stress tensor and pressure"><a href="#subsec-stress-tensor-7-1" title="Copy heading and permalink for Remark 7.3.15: Notes about the stress tensor and pressure" aria-label="Copy heading and permalink for Remark 7.3.15: Notes about the stress tensor and pressure">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-8">
+<article class="remark remark-like" id="subsec-stress-tensor-8-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special case of a fluid at rest.</span>
+</h4>
+<div class="para" id="subsec-stress-tensor-8-1-2">In a fluid at rest we have <span class="process-math">\(d_{ij}=0\text{,}\)</span> and thus <span class="process-math">\(\bsigma=-p\bI\text{,}\)</span> where <span class="process-math">\(\bI\)</span> is the identity matrix, meaning that <span class="process-math">\(\bsigma\)</span> is a multiple of the identity matrix and the only stresses are due to the pressure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.3.16: Special case of a fluid at rest"><a href="#subsec-stress-tensor-8-1" title="Copy heading and permalink for Remark 7.3.16: Special case of a fluid at rest" aria-label="Copy heading and permalink for Remark 7.3.16: Special case of a fluid at rest">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-stress-tensor-9">
+<article class="definition definition-like" id="def-constitutive-relation"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The constitutive relationship of a fluid.</span>
+</h4>
+<div class="para" id="def-constitutive-relation-2-1">This is an equation that describes the relationship between the stress tensor and the kinematic state of the fluid. It is found from experiments, and governs the mechanical behaviour of the fluid, that is the <em class="emphasis">rheology</em> of the fluid. Together with the equations of mass and momentum conservation, this closes the problem for the velocity and pressure fields. Every fluid obeying the continuum approximation has a constitutive relationship, which can be thought of as a definition of its mechanical properties.<div class="autopermalink" data-description="Paragraph"><a href="#def-constitutive-relation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.3.17: The constitutive relationship of a fluid"><a href="#def-constitutive-relation" title="Copy heading and permalink for Definition 7.3.17: The constitutive relationship of a fluid" aria-label="Copy heading and permalink for Definition 7.3.17: The constitutive relationship of a fluid">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#subsec-stress-tensor-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Subsection 7.3.2: The stress tensor"><a href="#subsec-stress-tensor" title="Copy heading and permalink for Subsection 7.3.2: The stress tensor" aria-label="Copy heading and permalink for Subsection 7.3.2: The stress tensor">🔗</a></div></section><div class="autopermalink" data-description="Section 7.3: Stress in a fluid"><a href="#sec-stress" title="Copy heading and permalink for Section 7.3: Stress in a fluid" aria-label="Copy heading and permalink for Section 7.3: Stress in a fluid">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="boundaries-surfaces-interfaces.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-viscousflows.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="boundaries-surfaces-interfaces.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="subsec-newtonian-fluids.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
