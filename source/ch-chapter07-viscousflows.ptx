@@ -1000,11 +1000,11 @@
             e_{31}&amp;e_{32}&amp;e_{33}
           \end{matrix}\right),</me>
           where
-          <me>
+          <men xml:id="eq-rateofstrain">
             \be=\frac12\left(\nabla\bu+\left(\nabla\bu\right)^T\right)
             \quad\textrm{or}\quad
             e_{ij}=\frac12\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
-          </me>
+          </men>
           or, alternatively,
           <men xml:id="eq-cartesianrateofstrain">
           \be=\left(\begin{array}{ccc}
@@ -1013,7 +1013,8 @@
           \frac12\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\frac12\left(\pd{v}{z}+\pd{w}{y}\right)&amp;\pd{w}{z}
           \end{array}\right).
           </men>
-          All three of these forms are equivalent.
+          All three of these forms (<xref ref="eq-rateofstrain"/> and <xref ref="eq-cartesianrateofstrain"/>)
+          are equivalent.
           Using <xref ref="eq-Newtonianstress-incompressible-vectorform"/>, we may write the stress tensor
           of an incompressible Newtonian fluid in component form in Cartesian coordinates as
           <men xml:id="eq-cartesiannewtonianstress">
@@ -1265,12 +1266,23 @@
     <p>
       Many fluids do not obey the assumptions underlying a Newtonian fluid, meaning that their
       constitutive relationship takes a more complicated form.
-      They are called <em>non-Newtonian fluids</em>, and examples include
-      blood, paint, toothpaste, shampoo, custard, cornflour suspension,
-      quicksand, and many others.
-      The rheology of non-Newtonian fluids is often very complex,
+      Many foods and household products, e.g. egg white, custard, shampoo, toothpaste have
+      a <em>non-Newtonian</em> rheology.
+      In the case of foods, this is often because the non-Newtonian properties themselves lend a texture
+      that makes them taste better!
+      For household products the non-Newtonian properties help us use them
+      (for example a Newtonian shampoo might drain off our hair before we have a chance to work it in).
+    </p>
+    <p>
+      The Navier<ndash/>Stokes equations do not work for genuinely non-Newtonian flows,
+      and the pressure and viscous terms must be replaced by a formula that captures the rheology.
+      However, for a surprising variety of complex fluids,
+      the Navier<ndash/>Stokes equations do in fact provide a remarkably good description of the behaviour.
+    </p>
+    <p>
+      In general, however, the rheology of non-Newtonian fluids is often very complex,
       and is an area of active research.
-      Categories of non-Newtonian fluids include the following:
+      Categories include the following:
       <ul>
         <li>
           <p>
@@ -1292,55 +1304,53 @@
         </li>
         <li>
           <p>
-            <em>Viscoelastic fluids:</em> These fluids have a memory,
-            and in this case the formula for the deviatoric part of the stress
+            <em>Viscoelastic fluids:</em>
+            These are fluids that have both elastic and viscous properties,
+            that is the molecules seem to have a memory and spring back when they are
+            suddenly displaced (but not so much when they are slowly displaced);
+            thus they are sometimes described as having a `fading memory'.
+            In this case the formula for the deviatoric part of the stress
             tensor involves an integral over the previous states of the fluid.
+            Examples include ketchup, paint, mucus and vitreous humour.
           </p>
         </li>
         <li>
           <p>
-            <em>Anisotropic fluids:</em> These are fluids that have different properties
-            in different directions. A physiological example of this is blood, which
-            contains red blood cells. When the blood is flowing the cells align,
+            <em>Anisotropic fluids:</em> Some fluids respond differently to the same stress
+            but applied in different directions.
+            An example of this is blood, which
+            contains red blood cells affecting the dynamics. When the blood is flowing the cells align,
             meaning the effective viscosity is much less in the direction of flow and
-            more in the transverse direction.
+            more in the transverse direction (this is also related to the fact that blood is shear thinning).
             In large arteries it is usually acceptable to model blood as a Newtonian fluid
             because the diameter of the artery is many times that of the cells.
-            However, for small arteries, such as that pictured above,
+            However, for small arteries, such as that in <xref ref="fig-artery"/>,
             the Newtonian model does not give an accurate picture.
+            <figure xml:id="fig-artery">
+            <caption>Computer simulation of blood flow in a microvessel
+            by the Biological Flow Studies Laboratory in Tohoku University, Japan.
+            The left picture shows the view of the blood from the outside (with the vessel walls removed),
+            whilst that on the right shows the view in the central plane of the vessel.
+            </caption>
+            <image source="ch-chapter07-artery.jpg" width="90%">
+              <shortdescription>Blood flow</shortdescription>
+            </image>
+            </figure>
+            <xref ref="fig-liquid-crystals"/> shows a schematic representation of nematic liquid crystals,
+            which are used in computer displays, electronic signs etc.
+            These align by themselves to a preferred direction for high enough temperatures,
+            and a magnetic field can be used to set the direction.
+            <figure xml:id="fig-liquid-crystals">
+            <caption>Schematic representation of nematic liquid crystals, an example of an
+              anisotropic fluid.
+            </caption>
+            <image source="ch-chapter07-liquid-crystals.jpg" width="90%">
+              <shortdescription>Liquid crystals</shortdescription>
+            </image>
+            </figure>
           </p>
         </li>
       </ul>
-
-
-\paragraph{Examples of Non-Newtonian fluids}
-Many fluids are non-Newtonian in character. Examples of the ways that fluids can be non-Newtonian are:
-\begin{itemize}
-\item {\bf Non-constant viscosity:} Some fluids have a different effective viscosities under different conditions. Blood and custard both have a so-called `shear-dependent' viscosity, that is the viscosity is different according to how much shear stress there is in the flow, whilst for example golden syrup has different properties at different temperatures.
-\begin{itemize}
-{\bf Blood:} A particular example of a non-Newtonian fluid is blood,
-and the reason for its special rheology is primarily due to the presence of red blood cells.
-The beautiful picture below is a numerical (computer) simulation of blood flow in a microvessel
-performed by the Biological Flow Studies Laboratory in Tohoku University,
-Japan (see \texttt{http://www.pfsl.mech.tohoku.ac.jp/\allowbreak contents/\allowbreak research/\allowbreak microcirculation.html}). The left picture shows the view of the blood from the outside (with the walls removed),
-whilst that on the right shows the view in the central plane of the vessel.
-\begin{center}
-\includegraphics[width=\textwidth]{microcirculation1.jpg}
-\end{center}
-\end{itemize}
-
-\item {\bf Viscoelastic fluids:} These are fluids that have both elastic and viscous properties, that is the molecules seem to have a memory and spring back when they are suddenly displaced (but not so much when they are slowly displaced, that is they have a `fading memory'. Examples include mucus and vitreous humour.
-
-\item {\bf Anisotropic properties:} A few fluids respond differently to stress applied in different directions. \begin{center}
-\includegraphics[width=0.2\textwidth]{LiquidCrystal-MesogenOrder-Nematic.jpg}
-\end{center}
-The picture shows a schematic representation of nematic liquid crystals, which are used in computer displays, electronic signs etc. These align by themselves to a preferred direction for high enough temperatures, and a magnetic field can be used to set the direction.
-\end{itemize}
-
-\paragraph{Other examples of non-Newtonian fluids:} Many foods and household products, e.g.\ egg white, custard, shampoo, have non-Newtonian rheology. In the case of foods, this is often because the non-Newtonian properties themselves lend a texture that makes them taste better! For household products the non-Newtonian properties help us use them (for example a Newtonian shampoo might drain off our hair before we have a chance to work it in).
-
-The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the pressure and viscous terms must be replaced by a formula that captures the rheology. However, for a surprisingly large number of fluids in many circumstances, the Navier<ndash/>Stokes equations do in fact provide a remarkably good description of the behaviour.
-
     </p>
   </remark>
 </p>
@@ -1719,7 +1729,7 @@ The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the p
       You will be relieved to know that in this course we will only consider simple solutions of the Navier<ndash/>Stokes equations (often ones in which the nonlinear term equals zero).
     </p>
     <p>
-      In a typical problem, there are four unknown variables: $u$, $v$, $w$ and $p$. There are four equations governing their behaviour, which are the incompressible continuity equation <xref ref="eqn-incompressibledef"/> and the three components of the Navier<ndash/>Stokes equation <xref ref="eqn-navierstokes"/>. In addition, we need to specify appropriate boundary conditions (for example, no slip conditions at a solid boundary) and initial conditions (the velocity and pressure at time <m>t=0</m>).
+      In a typical problem, there are four unknown variables: <m>u</m>, <m>v</m>, <m>w</m> and <m>p</m>. There are four equations governing their behaviour, which are the incompressible continuity equation <xref ref="eqn-incompressibledef"/> and the three components of the Navier<ndash/>Stokes equation <xref ref="eqn-navierstokes"/>. In addition, we need to specify appropriate boundary conditions (for example, no slip conditions at a solid boundary) and initial conditions (the velocity and pressure at time <m>t=0</m>).
     </p>
   </remark>
   <remark xml:id="remark-navierstokes-components">
@@ -1742,7 +1752,7 @@ The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the p
     <p>
       The special case of an axisymmetric flow (one that is rotationally symmetric)
       is also much simpler to analyse (and sometimes this is also referred to as being two-dimensional).
-      You will derive the equations in other coordinates in <xref ref="ps-polar-coordinates">.
+      You will derive the equations in other coordinates in <xref ref="ps-polar-coordinates"/>.
     </p>
   </remark>
   <remark>
@@ -1763,9 +1773,9 @@ The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the p
       as we did in the derivation of the Navier<ndash/>Stokes equation
       <xref ref="eqn-navierstokes"/>, we can instead work in terms of a general stress
       tensor to derive the Cauchy equation, which applies to any fluid. This states
-      <me>
-        \DD{\rho\bu}{t}=\nabla\cdot\bsigma+\rho\bf,
-      </me>
+      <men xml:id="eqn-cauchy-equation">
+        \rho\DD{\bu}{t}=\nabla\cdot\bsigma+\rho\bf,
+      </men>
       where <m>\bf</m> is the body force per unit mass (for example, gravity).
       This is a more general equation than the Navier<ndash/>Stokes equation,
       which applies only to Newtonian fluids obeying the consititutive law <xref ref="eq-cartesiannewtonianstress"/>. You will perform the derivation in this more general case in <xref ref="ps-Cauchy-equation"/>.
@@ -1776,11 +1786,12 @@ The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the p
     <p>
       The Navier<ndash/>Stokes equations can be adapted for use in a non-inertial reference frame:
       <me>
-      \rho\left(\td{\bu_n}{t}+\bu_n\cdot\nabla_n\bu_n\right)
+      \rho\left(\pd{\bu_n}{t}+\bu_n\cdot\nabla_n\bu_n\right)
       =-\nabla_n p+\mu\nabla_n^2\bu_n+\rho\bf_{\textrm{apparent}}+\rho{\bf g}_n,
       </me>
       where <m>\bu_n</m> and <m>\nabla_n</m> are, respectively, the velocity and gradient operator in the
-      non-inertial coordinates, and <m>\bf_{\textrm{apparent}}</m> is the apparent force acting on the fluid,
+      non-inertial coordinates, and <m>\bf_{\textrm{apparent}}</m> is the apparent additional
+      force acting on the fluid due to the non-inertial nature of the reference frame,
       which has contributions due to the linear acceleration and angular accelerations of the
       non-inertial reference frame, and the Coriolis and centrifugal forces.
     </p>
@@ -1792,105 +1803,156 @@ The Navier<ndash/>Stokes equations do not work for non-Newtonian case, and the p
       and we recover the Euler equation <xref ref="eqn-euler-momentum"/>.
     </p>
   </remark>
-
 </subsection>
-<!--
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Example of application of Navier<ndash/>Stokes and continuity equations}
-(Based on Problem 4.34 in White).  Consider an incompressible Newtonian fluid flowing in a gravitational field ${\bf g}=-g\bk$ with velocity
-\begin{equation}
-\bu=Kx\bi+Ky\bj-2Kz\bk.
-\end{equation}
-Check that this flow satisfies the continuity and Navier<ndash/>Stokes equations, and find the pressure field.
 
-To check the continuity equation, we consider
-\begin{equation}
-\nabla\cdot\bu=K+K-2K=0,
-\end{equation}
-so this is satisfied.
-
-The Navier<ndash/>Stokes equations are
-\begin{equation}
-\rho\left(\pd{\bu}{t}
-+(\bu\cdot\nabla)\bu\right)
-=-\nabla p+\mu\nabla^2\bu-\rho g\bk.
-\end{equation}
-For the flow given
-\begin{itemize}
-\item $\partial\bu/\partial t=0$,
-\item $\displaystyle{
-\bu\cdot\nabla
-=Kx\pd{}{x}+Ky\pd{}{y}-2Kz\pd{}{z}}$, which gives
-\begin{equation}
-(\bu\cdot\nabla)\bu
-=K^2x\bi+K^2y\bj+4K^2z\bk,
-\end{equation}
-\item $\nabla^2\bu=0$.
-\end{itemize}
-So the components of the Navier<ndash/>Stokes equations become
-\begin{equation}\rho K^2x=-\pd{p}{x},\quad
-\rho K^2y=-\pd{p}{y},\quad
-4\rho K^2z=-\pd{p}{z}-\rho g.\end{equation}
-The question of whether the flow satisfies the Navier<ndash/>Stokes equations now becomes a question of whether we can find a pressure field $p$ satisfying each of these equations. The first equation has solution
-\begin{equation*}
-p=-\frac12\rho K^2x^2+f_1(y,z),
-\end{equation*}
-and substituting this solution into the second equation gives
-\begin{align*}
-&\pd{f_1}{y}=-\rho K^2y\\
-\Rightarrow\quad
-&f_1(y,z)=-\frac12\rho K^2y^2+f_2(z)\\
-\Rightarrow\quad
-&p=-\frac12\rho K^2(x^2+y^2)+f_2(z),
-\end{align*}
-and substituting this solution into the third equation gives
-\begin{align*}
-&\td{f_2}{z}=-4\rho K^2z-\rho g\\
-\Rightarrow\quad
-&f_2(z)=-2\rho K^2z^2-\rho gz+p_0\\
-\Rightarrow\quad
-&p=-\frac12\rho K^2(x^2+y^2+4z^2)-\rho gz+p_0.
-\end{align*}
-Since we have found an expression for the pressure that satisfies all three components of the Navier<ndash/>Stokes equations, we can say that the given flow does satisfy the equations.
-
-\paragraph{Notes}
-\begin{itemize}
-\item Note that in general if we have an expression for $\nabla p$, say we know that $\nabla p={\bf q}$, then we can check whether or not it it is possible to find $p$ by taking the curl of both sides, {\it   i.e.} $\nabla\times{\bf q}=\nabla\times\nabla p=0$ (since $\nabla\times\nabla f=0$ for all functions $f$).  If ${\bf q}$ satisfies $\nabla\times{\bf q}=0$ then it is possible to find a pressure field (and hence the Navier<ndash/>Stokes equations are satisfied), otherwise it is not.  In this example
-\begin{equation}
-\nabla p=-\rho K^2x\bi-\rho K^2y\bj
--(4\rho K^2z+\rho g)\bk,
-\end{equation}
-and
-\begin{equation}
-\nabla\times\left(-\rho K^2x\bi-\rho K^2y\bj
--(4\rho K^2z+\rho g)\bk\right)=0,
-\end{equation}
-as expected.
-\item It is quite possible for a flow not to satisfy the Navier<ndash/>Stokes equations. For example the similar looking flow
-\begin{equation}
-\bu=K(x+y)\bi+Ky\bj-2Kz\bk,\label{eq:altflow}
-\end{equation}
-does satisfy the continuity equation, but has
-\begin{equation}
-\bu\cdot\nabla\bu=K^2(x+2y)\bi+K^2y\bj+4K^2z\bk.
-\end{equation}
-The Navier<ndash/>Stokes equations would give
-\begin{equation}
-\nabla p=-\left(-\rho K^2(x+2y),-\rho K^2y,-4\rho K^2z-\rho g\right).
-\end{equation}
-Trying to solve this from the first equation would give
-\begin{equation*}
-p=-\frac12\rho K^2(x^2+4xy)+f_1(y,z),
-\end{equation*}
-and substituting this solution into the second equation gives
-\begin{equation*}
--2\rho K^2x+\pd{f_1}{y}=-\rho K^2y\quad\Rightarrow\quad
-\pd{f_1}{y}=2\rho K^2x-\rho K^2y.
-\end{equation*}
-This is a contradiction as $f_1$ is supposed to be a function of $y$ and $z$ only, but here the right-hand side depends on $x$, meaning that $f_1$ has to depend on $x$. Alternatively we could show that the curl of $\nabla p$ is non-zero, which also implies a contradiction.
-
-If the flow were given at a particular point in time by \eqref{eq:altflow}, what do you think would happen next?
-\end{itemize formulation for two-dimensional flow}-->
+<example>
+  <title>Application of Navier<ndash/>Stokes and continuity equations</title>
+  <p>
+    Consider an incompressible Newtonian fluid flowing in a gravitational field <m>\bg=-g\bk</m>
+    with velocity
+    <me>
+    \bu=Kx\bi+Ky\bj-2Kz\bk.
+    </me>
+    Check that this flow satisfies the continuity and Navier<ndash/>Stokes equations,
+    and find the pressure field.
+    Based on Problem 4.34 in <xref ref="ref-white-5"/>.
+  </p>
+  <p>
+    <answer>
+      <p>
+        To check the continuity equation, we show
+        <me>
+          \nabla\cdot\bu=K+K-2K=0,
+        </me>
+        so this is satisfied.
+      </p>
+      <p>
+        The Navier<ndash/>Stokes equations are
+      <me>
+        \rho\left(\pd{\bu}{t}
+        +(\bu\cdot\nabla)\bu\right)
+        =-\nabla p+\mu\nabla^2\bu-\rho g\bk.
+      </me>
+      For the flow given
+      <ul>
+        <li>
+          <p> <m>\partial\bu/\partial t=0</m>,</p>
+        </li>
+        <li>
+          <p>
+            <me>
+               \bu\cdot\nabla=Kx\pd{}{x}+Ky\pd{}{y}-2Kz\pd{}{z},
+            </me>
+            which gives
+            <me>
+              (\bu\cdot\nabla)\bu=K^2x\bi+K^2y\bj+4K^2z\bk,
+            </me>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\nabla^2\bu=0</m>.
+          </p>
+        </li>
+      </ul>
+      Hence, the components of the Navier<ndash/>Stokes equations become
+      <me>
+        \rho K^2x=-\pd{p}{x},\quad
+        \rho K^2y=-\pd{p}{y},\quad
+        4\rho K^2z=-\pd{p}{z}-\rho g.
+      </me>
+      The question of whether the flow satisfies the Navier<ndash/>Stokes equations
+      now becomes a question of whether we can find a pressure field <m>p</m> satisfying
+      each of these equations. The first equation has solution
+      <me>
+        p=-\frac12\rho K^2x^2+f_1(y,z),
+      </me>
+      where <m>f_1(y,z)</m> is an arbitrary function of <m>y</m> and <m>z</m>.
+      Substituting this solution into the second equation gives
+      <md>
+        <mrow>&amp;\pd{f_1}{y}=-\rho K^2y</mrow>
+        <mrow>\Rightarrow\quad
+        &amp;f_1(y,z)=-\frac12\rho K^2y^2+f_2(z)</mrow>>
+        <mrow>\Rightarrow\quad
+        &amp;p=-\frac12\rho K^2(x^2+y^2)+f_2(z),</mrow>
+      </md>
+      where <m>f_2(z)</m> is an arbitrary function of <m>z</m>.
+      Substituting this solution into the third equation gives
+      <md>
+        <mrow>&amp;\dd{f_2}{z}=-4\rho K^2z-\rho g</mrow>
+        <mrow>\Rightarrow\quad
+        &amp;f_2(z)=-2\rho K^2z^2-\rho gz+p_0</mrow>
+        <mrow>\Rightarrow\quad
+        &amp;p=-\frac12\rho K^2(x^2+y^2+4z^2)-\rho gz+p_0.</mrow>
+      </md>
+      Since we have found an expression for the pressure that satisfies
+      all three components of the Navier<ndash/>Stokes equations,
+      we can say that the given flow does satisfy the equations.
+      </p>
+      <p>
+      Notes:
+      <ul>
+        <li>
+          <p>
+            Note that in general if we have an expression for <m>\nabla p</m>,
+            say we know that <m>\nabla p={\bf q}</m>, then we can check whether or not
+            it it is possible to find <m>p</m> by taking the curl of both sides,
+            i.e. <m>\nabla\times{\bf q}=\nabla\times\nabla p=0</m>
+            (since <m>\nabla\times\nabla f=0</m> for all functions <m>f</m>).
+            If <m>{\bf q}</m> satisfies <m>\nabla\times{\bf q}=0</m> then
+            it is possible to find a pressure field (and hence the Navier<ndash/>Stokes
+            equations are satisfied), otherwise it is not.  In this example
+            <me>
+              \nabla p=-\rho K^2x\bi-\rho K^2y\bj
+              -(4\rho K^2z+\rho g)\bk,
+            </me>
+            and
+            <me>
+              \nabla\times\left(-\rho K^2x\bi-\rho K^2y\bj
+              -(4\rho K^2z+\rho g)\bk\right)=0,
+            </me>
+            as expected.
+          </p>
+        </li>
+        <li>
+          <p>
+            It is quite possible for a flow not to satisfy the Navier<ndash/>Stokes equations.
+            For example, the similar looking flow
+            <men xml:id="eq-altflow">
+              \bu=K(x+y)\bi+Ky\bj-2Kz\bk,
+            </men>
+            does satisfy the continuity equation, but has
+            <me>
+              \bu\cdot\nabla\bu=K^2(x+2y)\bi+K^2y\bj+4K^2z\bk.
+            </me>
+            The Navier<ndash/>Stokes equations would give
+            <me>
+              \nabla p=-\left(-\rho K^2(x+2y),-\rho K^2y,-4\rho K^2z-\rho g\right).
+            </me>
+            Trying to solve this from the first equation would give
+            <me>
+              p=-\frac12\rho K^2(x^2+4xy)+f_1(y,z),
+            </me>
+            and substituting this solution into the second equation gives
+            <me>
+              -2\rho K^2x+\pd{f_1}{y}=-\rho K^2y\quad\Rightarrow\quad
+              \pd{f_1}{y}=2\rho K^2x-\rho K^2y.
+            </me>
+            This is a contradiction as <m>f_1</m> is supposed to be a function of <m>y</m> and <m>z</m> only,
+            but here the right-hand side depends on <m>x</m>, meaning that <m>f_1</m> has to depend on <m>x</m>.
+            Alternatively we could show that the curl of <m>\nabla p</m> is non-zero,
+            which also implies a contradiction.
+          </p>
+          <p>
+            If the flow were given at a particular point in time by <xref ref="eq-altflow"/>,
+            what do you think would happen next?
+          </p>
+        </li>
+        </ul>
+      </p>
+    </answer>
+  </p>
+  </example>
 </section>
 
 <section xml:id="sec-streamfunction">
@@ -2161,11 +2223,11 @@ this is called a <em>falling ball viscometer</em>.
   <statement>
     <p>
       In this problem, you will derive the Cauchy equation
-      <xref ref="eqn-Cauchy-equation"/> for the conservation of linear momentum
+      <xref ref="eqn-cauchy-equation"/> for the conservation of linear momentum
       in a more general fluid (the Navier<ndash/>Stokes equation only applies to Newtonian fluids).
       We will consider a small cube of fluid as shown in
       <xref ref="fig-small-cube"/>, and apply the Reynolds Transport Theorem
-      <xref ref="eqn-reynoldstransporttheorem"/>.
+      <xref ref="eqn-RTT"/>.
     </p>
   </statement>
 </exercise>
