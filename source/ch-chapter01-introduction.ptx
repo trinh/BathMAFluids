@@ -141,14 +141,12 @@ Fluid Mechanics
   <section xml:id="sec-preliminary-vector-calculus">
     <title>A reminder of vector calculus</title>
 
-        <p>
       <figure xml:id="fig-intro-green">
         <caption>George Green's monumental work on electricity and magnetism, making use of many new concepts in vector calculus, 1828.</caption>
         <image source="GreenEssay.png" width="50%">
           <shortdescription>Cover</shortdescription>
         </image>
       </figure>
-    </p>
 
 
     <p>
@@ -194,14 +192,12 @@ Fluid Mechanics
   </p>
 
         
-    <p>
       <figure xml:id="fig-intro-needham">
         <caption>An image from Tristan Needham's "Visual Complex Analysis" <xref ref="ref-needham"/> showing how complex mappings transform shapes from one region to another.</caption>
         <image source="intro_needham.png" width="80%">
           <shortdescription>Cover</shortdescription>
         </image>
       </figure>
-    </p>
 
 
   <subsection>
@@ -244,7 +240,6 @@ Fluid Mechanics
 
 <subsection>
  <title>Complex functions</title>
-</subsection>
 
   <p>
     A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, 
@@ -258,27 +253,25 @@ Fluid Mechanics
     Consider a particle that orbits around the unit circle in the <m>z-</m>plane at unit speed. If the particle rotates by half a revolution, with <m>\theta = \pi</m>, then in the image plane, the image particle has rotated by a full revolution, with <m>f(z) = (\e^{\im \pi})^2</m> in this same unit time. This is illustrated by the image in <xref ref="fig-intro-z2map"/>.
   </p>
 
-  <p>
     <figure xml:id="fig-intro-z2map">
       <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
       <image source="intro_z2map.png" width="100%">
         <shortdescription>z2 map</shortdescription>
       </image>
     </figure>
-  </p>
 
   <p>
     Now we continue rotating around the unit circle in the <m>z-</m>plane, performing an additional <m>\pi</m> rotation. Within the image plane, the particle has now completed another full rotation around the unit circle. This is shown in <xref ref="fig-intro-z2map_02"/>.
   </p>
 
-  <p>
     <figure xml:id="fig-intro-z2map_02">
       <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
       <image source="intro_z2map_02.jpg" width="100%">
         <shortdescription>z2 map</shortdescription>
       </image>
     </figure>
-  </p>
+
+</subsection>
 
   <subsection>
     <title>Multifunctions, branch cuts, and Riemann sheets</title>
@@ -315,6 +308,7 @@ Fluid Mechanics
         0 \leq \theta &lt; 2\pi,
       </me>
       hence imposing that the branch cut is along the positive real axis. This is illustrated in <xref ref="fig-intro-branchcut"/> where the branch cut is shown as a wavy line.
+    </p>
 
     <figure xml:id="fig-intro-branchcut">
       <caption>Branch cut</caption>
@@ -322,7 +316,6 @@ Fluid Mechanics
         <shortdescription>branch cut</shortdescription>
       </image>
     </figure>
-    </p>
 
     <p>
       Alternatively, we could have equally chosen 
@@ -333,7 +326,7 @@ Fluid Mechanics
     </p>
 
     <p>
-      Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows. 
+      Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows.</p>
 
       <definition>
         <title>Branches of the square root function</title>
@@ -366,7 +359,6 @@ Fluid Mechanics
           </p>
         </statement>
       </definition>
-    </p>
 
     <p>
       In <xref ref="ex-Riemannsurface"/>, you will plot the Riemann surface that corresponds to <m>f(z) = z^{1/2}</m>. The result might look like this version created using Python graphing tool: 
@@ -402,12 +394,8 @@ Fluid Mechanics
     <p>
     The theory of complex analysis is rich in different kinds of visualisations. Another way to visualise a complex function is by considering its effect on a gridded pattern in the original <m>z</m>-plane, and then to imagine the function as warping this pattern. With this interpretation, it will be seen clearly that the operation of <m>f(z) = z^2</m> essentially rotates and expands the <m>(x, y)</m> plane. This is seen in the following video.</p>
 
-    <p>
-      <figure>
-        <video youtube="0z1fIsUNhO4"/>
-        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption>
-      </figure>
-    </p>
+        <video youtube="0z1fIsUNhO4">
+        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption> </video>
 
     <p>
       However, you will also encounter some of these more complex mappings, notably the inversion map, <m>f(z) = 1/z</m> in <xref ref="ch-chapter04-potentialflows"/>.
@@ -417,11 +405,9 @@ Fluid Mechanics
       The theory in the video (visualisation on the Riemann sphere) is not necessary for this course; it is presented here just out of interest (and because the video is beautiful!).
     </p>
 
-    <p>
     <remark>
       <p>It is sensible to ask: <em>what does this have to do with fluid mechanics?</em>. In <xref ref="ch-chapter04-potentialflows"/>, we will see that the use of complex functions can map a region of fluid to another. </p>
     </remark>
-    </p>
     
   </subsection>
 
@@ -445,10 +431,9 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
  
   </section>
 
-
-  <worksheet xml:id="ws-intro">
-    <exercisegroup>
-    <title>Complex analysis</title>
+  <exercises xml:id="ws-intro">
+    <!-- <exercisegroup> -->
+    <!-- <title>Complex analysis</title> -->
     <introduction> 
     <p>
       The main function of this chapter was to briefly review complex functions and also
@@ -465,64 +450,127 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
 
     <exercise xml:id="ex-Riemannsurface">
       <title>Plotting a Riemann surface</title>
+
+      <introduction>
       <p>Select the branch cut of <m>f(z) = z^{1/2}</m> that runs along the positive real axis. 
       </p>
+    </introduction>
 
-      <ol>
-        <li>
-          <p>
+    <task>
+      <statement>
+        <p>
             Consider a contour that starts from <m>z = 1</m>, then encircles the origin (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m> at the end of the contour as compared to the start? 
-          </p>
-        </li>
-        <li>
-          <p>
-            By hand, plot the Riemann surface as visualised in <m>(x, y)</m>, <m>\Im f(x + \im y)</m>, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
-          </p>
-        </li>
-      </ol>
+        </p>
+      </statement>
 
+      <hint>
+        <p>
+          Let <m>z = \e^{\im \theta}</m> and consider <m>\theta</m> ranging from the initial value to a final value.
+        </p>
+      </hint>
 
-    <answer>
-      <ol>
-        <li>
-          <p>
-            At the start, we have <m>f(\e^0) = 1</m>. At the end, we have <m>f(\e^{2\pi\im}) = \e^{\pi \im} = -1</m>. In fact, you can observe this in <xref ref="fig-intro-sqrt-surface"/>.
-          </p>
-        </li>
-        <li>
-          <p>
-            This is tricky to plot but give it a shot! It should look like the below.
+      <solution>
+        <p>
+          Let <m>z = \e^{\im \theta}</m>. For <m>\theta = 0</m>, <m>f(z) = r^{1/2}</m> if we choose the positive branch of the square root (by convention). At the other side of the branch cut, <m>\theta = 2\pi</m> and <m>f(z) = r^{1/2} \e^{\pi \im} = -r^{1/2}</m>. Therefore there is a jump in value of <m>-2r^{1/2}</m>. 
+        </p>
+      </solution>
+    </task>
 
-            <figure>
-              <caption>Imaginary part of the square root function</caption>
-              <image source="intro_sqrt_02.png">
-                <shortdescription>Sqrt</shortdescription>
-              </image>
-            </figure>
-          </p>
-        </li>
-      </ol>
-    </answer>
+    <task>
+      <statement>
+        <p>
+            By hand, plot the Riemann surface as visualised in <m>(x, y, \Im f(x + \im y))</m>-space, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
+        </p>
+      </statement>
+
+      <hint>
+        <p>
+          It is useful to first consider the plot of <m>\sin(\theta/2)</m>, and then separately, what happens for the magnitude variation that depends on <m>r^{1/2}</m>.
+        </p>
+      </hint>
+
+      <solution>
+        <p>
+          A sketch of the imaginary part of the square root function is shown below. The two key features to capture is the dependence on <m>\theta</m> and the dependence on <m>r</m>.</p>
+
+          <figure>
+            <caption>Sketch of the imaginary part of the square root function</caption>
+            <image source="intro_squareroot.jpg" width="80%">
+              <shortdescription>Square root</shortdescription>
+            </image>
+          </figure>
+      </solution>
+    </task>
     </exercise>
 
 
     <exercise xml:id="ex-branch1">
       <title>A function with two branch points</title>
-      <p>
+      <introduction><p>
         Consider the function <xref ref="eq-intro-twobranch"/>:
         <me>
         f(z) = (z + 1)^{1/2} (z - 1)^{1/2}.
         </me>
-        <ol>
-          <li>
+      </p>
+      </introduction>
+
+        <task>
+          <statement>
             <p>
-              Choose the branch cut from <m>z = 1</m> in the positive real direction. Choose the branch cut from <m>z = -1</m> in the negative real direction. Write either <m>z = r_1 \e^{\im\theta_1}</m> or <m>z = r_2 \e^{\im\theta_2}</m> for <m>\theta_1</m> and <m>\theta_2</m> defined as relative angles from the two branch points. Show that: (i) when <m>z = 1</m> is encircled by a complete revolution, the function jumps in value by a factor of <m>\e^{\im \pi}</m>; (ii) that there is a similar jump in value when <m>z = -1</m> is encircled. Finally what happens if (iii) <m>z = 0</m> is encircled?
+              Choose the branch cut from <m>z = 1</m> in the positive real direction. Choose the branch cut from <m>z = -1</m> in the negative real direction. Write either <m>z = r_1 \e^{\im\theta_1}</m> or <m>z = r_2 \e^{\im\theta_2}</m> for <m>\theta_1</m> and <m>\theta_2</m> defined as relative angles from the two branch points.</p>
+              
+              <p>Show that: (i) when <m>z = 1</m> is encircled by a complete revolution, the function jumps in value by a factor of <m>\e^{\im \pi}</m>; (ii) that there is a similar jump in value when <m>z = -1</m> is encircled. Finally what happens if (iii) <m>z = 0</m> is encircled?
             </p>
+
             <p>
               Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
             </p>
-          </li>
-          <li>
+          </statement>
+
+          <solution>
+            <p>
+              (i) We have that 
+              <me>
+                f(z) = (r_1 r_2)^{1/2} \e^{\im \theta_1/2} \e^{\im \theta_2/2}.
+              </me>
+              Let <m>\theta_1 \in [0, 2\pi)</m> be the angle about the point <m>z = 1</m>. Similarly let <m>\theta_2 \in [-\pi, \pi)</m> be the angle about the point <m>z = -1</m>. </p>
+              
+              <p>Considering firstly a revolution around <m>z = 1</m> (that does not also enclose <m>z = -1</m>). Let the initial point be denoted "A", with <m>\theta_1 = 0, \theta_2 = 0</m>. And the final point be "B", with <m>\theta_1 = 2\pi</m> and <m>\theta_2 = 0</m>.</p>
+              
+              <p>Then
+              <me>
+                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{2\pi\im/2} - (r_1 r_2)^{1/2} \e^0 = -2(r_1 r_2)^{1/2}.
+              </me>
+              so indeed there is a jump in the function about the branch cut along <m>z &gt; 1</m>.
+            </p>
+
+            <p>
+              (ii) We would similarly verify that for a contour around the branch point <m>z = -1</m> there is a jump. Let the initial point be denoted "A" with <m>\theta_1 = \pi, \theta_2 = -\pi</m>. And the final point be "B" with <m>\theta_1 = \pi, \theta_2 = \pi</m>. Then 
+              <me>
+                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(\pi + \pi)\im/2} - (r_1 r_2)^{1/2} \e^{(\pi - \pi)\im/2} = -2(r_1 r_2)^{1/2}.
+              </me>
+              so indeed there is also a jump about the branch cut that runs <m>z &lt; -1</m>.
+            </p>
+
+            <p>
+              (iii) For the centre point, there are two cases to consider. The first case is if only <m>z = 0</m> is encircled and none of the other branch points. This was the situation originally envisioned in the question. For example, consider the circle of radius 1/2, i.e. <m>z = (1/2) \e^{\im \theta}</m> with <m>\theta \in [0, 2\pi)</m>. You can verify that for this circle the start and end points agree. 
+            </p>
+
+            <p>
+              If along with <m>z = 0</m>, one of the branch points is encircled, then there would be a discontinuity. If both branch points are encircled, there is no discontinuity.
+            </p>
+
+            <figure>
+              <caption>Branch cut configuration for the double square root. The original choice of branches is shown on top. Through the analysis, we see that a circle (i) around <m>z = 1</m> does not produce a discontinuity. Hence only the second picture of the cut arrangement is needed.</caption>
+              <image source="intro_doublesqrt_branch01.jpg" width="70%">
+                <shortdescription>Double square root</shortdescription>
+              </image>
+            </figure>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
             <p>
               Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction and the branch cut from <m>z = 1</m> tends in the positive real direction as well. Repeat the experiment above, considering (i)-(iii). Conclude that there is no jump in value along the region <m>z &gt; 1</m> and hence the branch cuts required only extends between <m>z = \pm 1</m>.
             </p>
@@ -530,45 +578,126 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
             <p>
               Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
             </p>
-          </li>
-          <li>
+
+            
+          </statement>
+
+          <solution>
             <p>
-              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool. 
+              For this situation, we would define the ranges of <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_2 \in [0, 2\pi)</m>. One main difference is the analysis around the point <m>z = 1</m>. Consider the similar loop to the above with, 
+              <me>
+                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(2\pi + 2\pi)\im/2} - (r_1 r_2)^{1/2} \e^{(0 + 0)\im/2} = 0,
+              </me>
+              so in this case, notice that there is no jump due to the fact the total variation of angle is <m>2 \pi + 2\pi</m>.
+            </p>
+
+            <p>
+              In essence, because both branch cuts are running in the positive real direction, when we orbit across <m>z > 1</m>, we jump through both branches, hence returning to the original. There is no required branch cut for <m>z > 1</m>.
+            </p>
+
+            <p>
+              The analysis of parts (ii) and (iii) are identical, with the exception of the angle range. However, the final result, of whether there exists a jump is the same. 
+            </p>
+
+            <p>
+              In the end, the final branch cut picture is shown in the figure below.
             </p>
 
 
-          </li>
-        </ol>
-      </p>
+            <figure>
+              <caption>Branch cut configuration for the double square root</caption>
+              <image source="intro_doublesqrt_branch02.jpg" width="70%">
+                <shortdescription>Double square root</shortdescription>
+              </image>
+            </figure>
+          </solution>
+        </task>
+
+        <task>
+            <statement>
+              <p>
+              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool. 
+            </p>
+          </statement>
+           
+          <solution>
+            <p>
+              This is certainly not an easy function to imagine! There are two features you may want to keep in mind. First, in examining the imaginary part of the function, if <m>z &gt; 1</m> on the real axis, then the imaginary part is zero. Second, if <m>z &lt; -1</m> on the real axis, then again the function is zero. Finally, for the case of the branch selection in part (b), the there is a cut along <m>[-1, 1]</m>. A generated plot is shown below for the imaginary part.
+            </p>
+            
+            <figure>
+              <caption>The imaginary part of <m>f(z) = (z-1)^{1/2}(z +1)^{1/2}</m></caption>
+              <image source="intro_doublesqrt_surf.png" width="70%">
+                <shortdescription>surface plot</shortdescription>
+              </image>
+            </figure>
+          </solution>
+        </task>
+
     </exercise>
 
 
     <exercise xml:id="ex-log">
       <title>Branch cuts of the complex logarithm</title>
+     
+      <introduction>
       <p>
-        Consider the complex logarithm as defined in <xref ref="eqn-intro-complex-log"/>.
-        <ol>
-          <li>
+        Consider the complex logarithm as defined in <xref ref="eqn-intro-complex-log"/>.</p>
+        </introduction>
+
+        <task>
+          <statement>
             <p>
               Explain why there must be a branch cut imposed, originating from the branch point at <m>z = 0</m>.
             </p>
-          </li>
-          <li>
+          </statement>
+            
+            <solution>
+              <p>
+                The logarithm will have a jump in the imaginary part every rotation of <m>2\pi</m> in the argument.
+              </p>
+            </solution>
+          </task>
+
+        <task>
+          <statement>
             <p>
               Take the branch cut along the positive real axis. Do your best to draw the Riemann surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in the space <m>(x, y, \Im f(x + \im y))</m>.
             </p>
+          </statement>
+            
+            <solution>
+              <figure>
+                <caption>The imaginary part of <m>f(z) = \log z</m>. </caption>
+                <image source="intro_log_surf.jpg" width="100%">
+                  <shortdescription>surface plot</shortdescription>
+                </image>
+              </figure>
+            </solution>
+          
+          
+          </task>
 
-            <p>
+          <task>
+            <statement>
+              <p>
               Again, you may find it useful to confirm your work above by plotting the function using a computational tool. 
-            </p>
-          </li>
-        </ol>
-      </p>
-      
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                There is a picture of the complex logarithm on <url href="https://en.wikipedia.org/wiki/Complex_logarithm">Wikipedia</url>.
+              </p>
+            </solution>
+          </task>
     </exercise>
 
-    </exercisegroup>
-  </worksheet>
+    <!-- </exercisegroup> -->
+  </exercises>
+
+
+
  </chapter>
 
 
