@@ -72,14 +72,12 @@
     In <xref ref="ex-continuum-assumption"/>, you will consider whether salt flow can be considered under a continuum assumption.
   </p>
 
-  <p>
     <figure xml:id="fig-salt-flow">
       <caption>An AI-generated image of salt flowing out of a large orifice.</caption>
       <image source="saltflow.png" width="40%">
         <shortdescription>Salt flow</shortdescription>
       </image>
     </figure>
-  </p>
 
   <p> The derivation of the governing equations for a fluid is then based on three basic principles
     of physics: <ol>
@@ -158,7 +156,7 @@
         </statement>
       </theorem>
 
-      <p> The following requires a bit of algebra, and you are not required to prove the result. 
+      <p> The following requires a bit of algebra, and you are not required to prove the result.</p>
         <theorem xml:id="thm-Euleridentity">
           <title>Euler's identity</title>
           <statement>
@@ -176,15 +174,13 @@
             </p>
           </proof>
         </theorem>
-
-      </p>
     </subsection>
 
     <subsection xml:id="subsec-RTT">
       <title>Reynolds' Transport Theorem</title>
 
       <p> We are now ready to derive a key result that eases our path towards developing the
-        governing equations for a fluid. The result is as follows.
+        governing equations for a fluid. The result is as follows.</p>
        
         <theorem xml:id="thm-RTT">
           <title>Reynolds' Transport Theorem</title>
@@ -223,22 +219,18 @@
               </me>
         We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof
         of the Reynolds' Transport Theorem.</p>
-        
-        <p><note>
-                <p>It is helpful for you to convince yourself that the above vector identity is the
+      </proof>
+        </theorem>
+
+        <note>
+                <p>It is helpful for you to convince yourself that the vector identity used in the proof is the
         only possible arrangement of operations that makes sense, i.e. in order for <m>\nabla \cdot
         (f\bu)</m> to return a scalar.</p>
               </note>
 
-            </p>
-          </proof>
-        </theorem>
-      </p>
-
         <p>In summary: the Reynolds' Transport Theorem thus gives an identity for how time differentiation can
             pass through the integral when the domain of integration is changing in time!</p>
 
-      <p>
         <remark>
           <title>A 1D version of the Reynolds' Transport Theorem</title>
           <p>
@@ -246,9 +238,7 @@
             This is presented as an exercise in <xref ref="ex-leibnitz-rule"/>.
           </p>
         </remark>
-      </p>
 
-      <p>
         <remark>
           <title>RTT and conserved quantities</title>
           <p>
@@ -310,8 +300,8 @@
             </ul>
           </p>
         </remark>
-      </p>
-      <p>
+
+
         <remark xml:id="rem-RTT-control-volume">
           <title>General statement of RTT</title>
           <p>
@@ -350,7 +340,6 @@
             or the dynamics of a piston moving a fluid to which a known force is applied.
           </p>
         </remark>
-      </p>
 <!--      <p>
         You will apply the Reynolds' Transport Theorem to a problem involving the conservation
         of mass in <xref ref="ex-rtt-mass-tank"/> and problems on momentum conservation in
@@ -363,8 +352,10 @@
   <section>
     <title>Conservation of mass</title>
 
+    <introduction>
     <p>
-    Our task from this section is to prove the following equation for the conservation of mass of a fluid:
+    Our task from this section is to prove the following equation for the conservation of mass of a fluid:</p>
+
       <theorem xml:id="thm-mass">
         <title>Continuity equation</title>
         <statement>
@@ -385,7 +376,6 @@
           </p>
         </statement>
       </theorem>
-    </p>
 
     <p>
       In fact, as it turns out, the proof of this result is trivial
@@ -426,6 +416,7 @@
         </p>
         
       </remark>
+    </introduction>
 
 
     <subsection>
@@ -437,7 +428,7 @@
         how the result is proved purely from the perspective of Eulerian coordinates. 
       </p>
 
-    <p> For this, let us consider <m>V</m> to be a <em>fixed and closed</em> subregion of the overall fluid, <m>D</m> that does not change with time. An illustration of this is shown in <xref ref="fig-normalvolume"/>
+    <p> For this, let us consider <m>V</m> to be a <em>fixed and closed</em> subregion of the overall fluid, <m>D</m> that does not change with time. An illustration of this is shown in <xref ref="fig-normalvolume"/>.</p>
 
       <figure xml:id="fig-normalvolume">
         <caption>Picture of the fluid volume, <m>V</m>, shown in blue, with a small surface element, <m>\partial V</m>, and the outwards flux.</caption>
@@ -445,18 +436,20 @@
           <shortdescription>Fluid</shortdescription>
         </image>
       </figure>
-    </p>
 
-    <p>We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume. 
+    <p>We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.</p>
 
       <theorem>
         <title>Integral form of the law of conservation of mass</title>
+
+        <statement>
         <p>Given a fixed volume element <m>V</m> and boundary <m>\partial V</m>, the integral form of the
-      law of mass conservation is</p>
+      law of mass conservation is
       <men xml:id="eqn-integralconservation">
         \dd{}{t} \iiint_V \rho \, \de{V} = -\iint_{\partial V} \rho \bu \cdot \bn \, \de{S}.
       </men>
-      </theorem>
+      </p>
+        </statement>
 
 <proof>
      <p> The
@@ -483,7 +476,7 @@
       is equal to the rate at which mass enters the boundary in the <em>inwards</em> direction. 
     </p>
   </proof>
-    </p>
+      </theorem>
       
     <p> We now want to transform the integral form in <xref ref="eqn-integralconservation"/> into the form of a partial differential equation.
       To do this, apply the <em>Divergence theorem</em> to the right hand-side of the above
@@ -528,6 +521,7 @@
   <section xml:id="subsec-euler-momentum">
     <title>Momentum balance</title>
 
+    <introduction>
     <p>
       With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum.
       This is <em>Newton's second law</em> the rate of change of momentum of a body is equal to the sum of all forces acting on the body. 
@@ -535,7 +529,8 @@
 
 
         <p>
-    Our task from this section is to prove the following equation for the conservation of mass of a fluid:
+    Our task from this section is to prove the following equation for the conservation of mass of a fluid:</p>
+
       <theorem xml:id="thm-momentum">
         <title>Momentum equation</title>
         <statement>
@@ -547,7 +542,7 @@
           </p>
         </statement>
       </theorem>
-    </p>
+    </introduction>
 
     <subsection>
       <title>Proof of the momentum equation for an inviscid fluid</title>
@@ -584,7 +579,7 @@
     </p>
 
     <p>
-      At this point, we make a key assumption that is applied in the particular case of <em>inviscid fluids</em>.
+      At this point, we make a key assumption that is applied in the particular case of <em>inviscid fluids</em>.</p>
 
       <theorem xml:id="def-inviscid">
         <statement>
@@ -609,7 +604,6 @@
           </p>
         </proof>
       </theorem>
-    </p>
 
     <p>
       Finally, it follows by summation of the forces above that Newton's law states that 
@@ -635,6 +629,10 @@
     <section xml:id="sec-incompressible">
       <title>The Euler equations</title>
 
+      <subsection>
+        <title>Incompressible fluids and the Euler equations</title>
+        
+
     <p>
       Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates
       infinitessimal volumes in Eulerian and Lagrangian frames via 
@@ -649,8 +647,7 @@
       definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
       </p>
 
-      <p>
-        <definition xml:id="def-incompressible">
+        <theorem xml:id="def-incompressible">
           <title>Incompressible fluids</title>
           <statement>
              <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes.
@@ -666,6 +663,8 @@
              \textrm{Fluid is incompressible} \quad \Longleftrightarrow \quad \nabla \cdot \bu = 0.
             </men>
             </p>
+          </statement>
+
             <proof>
               <p>
                 Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element
@@ -675,9 +674,7 @@
                 then again by the identity the fluid is incompressible. 
               </p>
             </proof>
-          </statement>
-        </definition>
-      </p>   
+          </theorem>
 
 
       <p>
@@ -689,7 +686,8 @@
       </p>
 
       <p>
-      By the way, what happens to the mass conservation equation in <xref ref="thm-mass"/> if the fluid is incompressible? This leads to the following corollary. 
+      By the way, what happens to the mass conservation equation in <xref ref="thm-mass"/> if the fluid is incompressible? This leads to the following corollary.</p>
+
       <corollary xml:id="cor-incompressible-density">
         <title>Constant density along streamlines</title>
         <statement>
@@ -707,7 +705,6 @@
           </p>
         </proof>
       </corollary> 
-      </p>
       
       <p>
         Let us return to consider the total sum of equations and unknowns.
@@ -724,33 +721,29 @@
       <p>
         However, empirically, we observe that in most liquids, the density only varies within a few percent under typical variations of temperature and pressure. Therefore, it is common to assume:</p>
 
-        <p><note>
+        <note>
           <title>Constant density assumption</title>
           <p>
             We often assume that in the situation of liquids, the density is taken to be constant, <m>\rho = \textrm{constant}</m>.
           </p>
         </note>
-      </p>
 
       <p>
       Note, then that in the case of constant density fluids, if we consider the mass conservation equation <xref ref="eqn-consvmass1"/>, it follows that <m>\nabla \cdot \bu = 0</m>. Therefore, from the definition <xref ref="def-incompressible"/>, we conclude that the fluid is indeed incompressible. 
       </p>
 
-      <p>
         <remark>
-          <statement>
             <p>
               Confusingly, in many references, authors define a fluid to be incompressible if <m>\rho</m> is constant. However, we see this is not necessarily the case. A fluid can be incompressible and therefore <m>\DD{\rho}{t} = 0</m> without <m>\rho</m> being constant.
             </p>
-          </statement>
         </remark>
-      </p>
 
     <p>
-      We are finally ready to state the <em>Euler equations</em>.
+      We are finally ready to state the <em>Euler equations</em>.</p>
 
       <definition xml:id="def-euler">
         <title>Euler equations</title>
+
         <statement>
           <p>
             The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu"/>
@@ -768,7 +761,7 @@
           </p>
         </statement>
       </definition>
-    </p>
+
     <p>
       Simple applications of the Euler equations are given in <xref ref="ex-kelvin-circulation-theorem"/>,
       <xref ref="ex-fluid-pressure-uniform-velocity"/> and <xref ref="ex-piston-fluid-problem"/>
@@ -778,7 +771,6 @@
       You will consider the derivation of the Euler equations as part of <xref ref="ex-euler-check"/>.
     </p>
 
-    <p>
       <example>
         <title>Computer graphics and fluid simulations</title>
        <p>
@@ -786,7 +778,8 @@
        </p> 
         
       </example>
-    </p>
+      </subsection>
+
 
     <subsection xml:id="subsec-euler-BCs">
       <title>Boundary conditions</title>
@@ -828,19 +821,12 @@
       </p>
       
     </subsection>
-
-
-
     </section>
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %                                                                              %
-    %                           BERNOULLI'S                                        %
-    %                                                                              %
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     <section xml:id="sec-bernoulli">
       <title>Bernoulli's equation</title>
+
+      <introduction>
 
       <p>
         There is a reformulation of the momentum equations that proves to be useful. In essence,
@@ -849,7 +835,7 @@
 
 
         <p>
-          We will first need a vector identity.
+          We will first need a vector identity.</p>
 
           <identity xml:id="ident-ugradu">
             <statement>
@@ -865,10 +851,9 @@
               The proof follows from direct expansion of both sides. 
             </p>
           </proof> </identity>
-        </p>
 
         <p>
-          It will also be useful for us to introduce the notion of vorticity.
+          It will also be useful for us to introduce the notion of vorticity.</p>
 
           <definition xml:id="def-vorticity">
             <title>Vorticity of a vector field</title>
@@ -882,12 +867,11 @@
               </p>
             </statement>
           </definition>
-        </p>
 
 
 
         <p>
-          Let us recall the definition of a <em>conservative force</em>.
+          Let us recall the definition of a <em>conservative force</em>.</p>
 
           <definition xml:id="def-conservative-force">
             <title>Conservative forces</title>
@@ -902,10 +886,9 @@
             </statement>
           </definition>
 
-          Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.
+         <p> Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.
         </p>
 
-        <p>
         <theorem xml:id="thm-bernoulli-steady">
           <title>Bernoulli's equation for steady flow</title>
           <statement>
@@ -958,20 +941,17 @@
             </p>
           </proof>
         </theorem>
-      </p>
 
-      <p>
         <remark>
           <p>
           For the typical gravity force directed in the <m>-z</m> direction, we can write <m>\bg = -g[0, 0, 1] = -g \be_z</m>. So in this case, the (gravitational) potential is <m>\chi = gz</m>.
           </p>
         </remark>
-      </p>
      
       <p>
         The proof of <xref ref="thm-bernoulli-steady"/> introduced a useful form of the momentum
         equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity"/>.
-        This leads to the so-called <em>vorticity equation</em> form of the momentum equation. 
+        This leads to the so-called <em>vorticity equation</em> form of the momentum equation.</p>
 
         <theorem xml:id="thm-vorticity-equation">
           <title>The vorticity equation for incompressible flow</title>
@@ -990,18 +970,15 @@
             </p>
           </statement>
         </theorem>
-      </p>
 
       <p>
         In the proof, it is useful to use the vector identity for the curl of a cross product: 
         <men xml:id="eqn-curlcross">
          \nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.  
         </men>
-        
       </p>
 
 
-      <p>
         <proof>
           <p>
             Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <xref ref="eqn-bernoulli-vorticity"/>, we take the curl of both sides to obtain 
@@ -1023,10 +1000,11 @@
             which is the main result.
           </p>
         </proof>
-      </p>
+
       <p>
         You will prove this result from first principles in <xref ref="ex-vorticity-equation"/>.
       </p>
+      </introduction>
 
       <subsection xml:id="subsec-potential">
         <title>Potential flow</title>
@@ -1040,7 +1018,7 @@
 
         <p>
           We attempt to reduce further by assuming that the fluid is <em>irrotational</em>.
-          This lends to the following definition. 
+          This lends to the following definition. </p>
 
           <definition xml:id="def-irrotational">
             <title>Irrotational flows</title>
@@ -1053,10 +1031,10 @@
               </p>
             </statement>
           </definition>
-        </p>
 
         <p>
           For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation. 
+        </p>
 
           <theorem xml:id="thm-bernoulli-potential">
           <title>Bernoulli's equation for steady irrotational flow</title>
@@ -1069,10 +1047,7 @@
                 where <m>\bg = -\nabla \chi</m> is the body force. 
               </p>
             </statement>
-          </theorem>
-        </p>
 
-        <p>
           <proof>
             <p>
               The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in <xref ref="thm-bernoulli-steady"/>. In the proof, we arrived at the result in <xref ref="eqn-bernoulli-steady"/> that 
@@ -1086,14 +1061,12 @@
              But the only way that all spatial derivatives is zero is if the function is constant. 
             </p>
           </proof>
-        </p>
-      </subsection>
+          </theorem>
+
       <p>
         You will practice an application of Bernoulli's equation in <xref ref="ex-bernoulli-streamline"/>.
       </p>
 
-
-      <p>
         <example>
           <title>Airflow into or out of a room</title>
          
@@ -1103,41 +1076,34 @@
           </p>
           
         </example>
-      </p>
 
-      <p>
         <example>
           <title>Pascal's bursting barrel</title>
          
           <p>For fun during the lecture, we will play <url href="https://www.youtube.com/watch?v=EJHrr21UvY8">this video demonstration done at Princeton</url> demonstrating the power of hydrostatic pressure.</p>
         </example>
-      </p>
 
-      <p>
         <example>
           <title>Urination across species</title>
          
           <p>During the lecture, we will play <url href="https://www.youtube.com/watch?v=EidLGwyYpBE">this video describing</url> the work by Yang et al. on <url href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111">"Duration of urination does not change with body size"</url>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.</p>
         </example>
-      </p>
 
+      </subsection>
     </section>
   
-<worksheet xml:id="ws-equations">
+<exercises xml:id="ws-equations">
 
-<exercisegroup xml:id="governing-equations-questions">
-<title>Governing equations</title>
 <introduction>
 <p>
 This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow,
 starting from first principles, and deriving the conservation laws using vector calculus.
 Eventually, we studied different variations of the Euler equations and its consequences. 
 </p>
-<p>
+
 <warning>
   <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
 </warning>
-</p>
 </introduction>
 
 <exercise xml:id="ex-continuum-assumption">
@@ -1150,6 +1116,8 @@ Domestic salt flows quite well out of a container with a hole in the bottom. Fol
 What size of hole would required so that a continuum model of the salt flow is a reasonable assumption?
 (Based on Q1, p. 42 by Paterson <xref ref="ref-paterson"/>.)
 </p>
+</statement>
+
 <answer>
 <p>
 Salt is not like a fluid because you can make it into a pile,
@@ -1166,7 +1134,6 @@ i.e. <m>3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximat
 of one metre or so might be reasonable!
 </p>
 </answer>
-</statement>
 </exercise>
 
 
@@ -1874,7 +1841,6 @@ compared to the contributions due to the internal energy and the kinetic energy.
   </statement>
 </exercise>
 
-</exercisegroup>
-</worksheet>
+</exercises>
 
 </chapter>
