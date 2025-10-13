@@ -37,7 +37,8 @@
       applications, for example in the design of aircraft wings and turbine blades.
     </p>
 
-    <p>Recall the fluid vorticity <m>\bomega=\nabla\times\bu</m> that was introduced in
+    <p>
+      Recall the fluid vorticity <m>\bomega=\nabla\times\bu</m> that was introduced in
       Definition <xref ref="def-vorticity"/>. Many people struggle to understand the
       concept of vorticity when they first encounter it, so you should not worry if it
       takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’
@@ -72,7 +73,7 @@
       </ul>
     </p>
 
-     <example>
+    <example>
       <statement>
         <p> Consider the steady two-dimensional flow given by <me>\bu = (-y,x, 0)</me>, which is flow
           anti-clockwise around the origin. Note that this flow is a type of <em>rigid body rotation</em>:
@@ -102,7 +103,7 @@
               </p>
             </li>
           </ol>
-          </p> 
+        </p> 
         <answer>
           <p>
           <ol>
@@ -166,7 +167,178 @@
       the <em>Helmholtz principle</em>, which states that in an inviscid fluid, the vorticity
       of each fluid particle is conserved.
       </p>
-  </section>
+
+<subsection>xml:id="sec-circulation">
+    <title>The circulation in a flow</title>
+    <definition xml:id="def-circulation">
+      <title>Circulation</title>
+      <p>
+        We define the circulation around a closed loop <m>C</m> in the flow as
+        <me>
+          \Gamma = \oint_C \mathbf{u} \cdot \de\mathbf{x}.
+        </me>
+      </p>
+    </definition>
+    <theorem xml:id="thm-kelvin-circulation-theorem">
+      <title>Kelvin's circulation theorem</title>
+      <p>
+        Assume that a fluid is inviscid and incompressible and that a conservative body force
+        (e.g. gravity) acts on it. If a loop <m>C</m> is fixed in the fluid
+        (and thus moves around in the Lagrangian sense as the fluid moves)
+        then the circulation around <m>C</m> is constant in time.
+      </p>
+    </theorem>
+  <proof>
+    <title>Proof of Kelvin's circulation theorem</title>
+    <p>
+      A proof of this theorem is given in Exercise <xref ref="ex-kelvin-circulation-theorem"/>.      
+    </p>
+  </proof>    
+  <remark>
+    <title>Importance of Kelvin's circulation theorem</title>
+    <p>
+      This theorem explains why the circulation is an important physical concept.
+      In particular, if a flow is initally irrotational,
+      then the circulation around any loop is zero at <m>t=0</m>.
+      The theorem then implies that the circulation around any loop is zero for all time.
+      Therefore the flow at any time is irrotational.
+    </p>
+  </remark>    
+  <remark>
+    <title>Relationship between circulation and vorticity</title>
+    <p>
+      Using Stokes' theorem
+      <men xml:id="eq-circulationvorticity">
+        \Gamma=\oint_C{\bu}\cdot \de{\bx}=\int_S\left(\bnabla\times{\bu}\right)\cdot{\bn}\,{\de}S
+        =\int_S\bomega\cdot{\bn}\,{\de}S,
+      </men>
+      where <m>S</m> is any surface spanning the loop <m>C</m>.
+      Thus the circulation equals the flux of vorticity through the spanning surface.
+    </p>
+  </remark>
+</subsection>
+
+  <subsection>
+  <title>Vortex lines and the Helmholtz vortex theorems</title>
+    <definition xml:id="def-vortex-lines">
+      <title>Vortex lines</title>
+      <p>
+        Vortex lines are curves that point in the same direction as the vorticity vector.
+      They satisfy the differential equation
+      <me>
+        \dd{\bx}{s}=\bomega(\bx(s),t),
+      </me>
+      where <m>t</m> is fixed.
+      Just as the streamlines give a picture of the flow field,
+      so the vortex lines give a picture of the vorticity field.
+      Note that if the vorticity is zero at some point,
+      the vortex lines are not defined there.
+      </p>
+    </definition>
+  <remark>
+    <title>Analogy with streamlines</title>
+    <p>
+      The vortex lines are to the vorticity of the fluid as the streamlines are to its velocity.
+    </p>
+  </remark>    
+  <remark>
+    <title>Vortex lines in a two-dimensional flow</title>
+    <p>
+      In a two-dimensional flow, the vorticity is unidirectional, so the vortex lines are
+      straight lines parallel to the vorticity vector.
+      For example, for a flow in the <m>(x,y)</m>-plane,
+      the vorticity points in the <m>z</m>-direction, and the vortex lines are straight
+      lines parallel to the <m>z</m>-axis.
+    </p>
+  </remark>
+  <theorem>xml:id="thm-helmholtz-vortex-theorems">
+    <title>The Helmholtz vortex theorems</title>
+    <p>
+       These state
+       <ol>
+        <li>
+          <p>
+            Vortex lines move with the fluid.
+            Thus they follow the material paths of the fluid particles.
+            We can group nearby vortex lines together to form a vortex tube,
+            as shown in <xref ref="fig-vortextube"/>
+            (taken from <xref ref="ref-acheson"/>),
+            and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines.
+            This is a strong part of the reason why it is useful to calculate vortex lines.
+          </p>
+        </li>
+        <li>
+          <p>
+            <figure xml:id="fig-vortextube">
+              <caption>Sketch of a vortex tube.</caption>
+              <image source="ch-chapter06-vortextube.jpg" width="50%">
+              <shortdescription>Vortex tube</shortdescription>
+              </image>
+            </figure>
+            The circulation of the tube is <m>\Gamma=\oint_C\bu\cdot \de{\bx}</m>
+            around any closed curve <m>C</m> that goes once anticlockwise around the vortex tube,
+            or equivalently <m>\Gamma=\int_S\bomega\cdot{\bn}\,\de S</m>,
+            where <m>S</m> is any cross-section of the vortex tube,
+            see <xref ref="eq-circulationvorticity"/>.
+            The circulation is independent of the choice of curve <m>C</m>
+            or cross-section <m>S</m> at all times.
+          </p>
+        </li>
+       </ol>
+      </p>
+      </theorem>
+      <proof>
+        <title>Proof of the Helmholtz vortex theorems</title>
+        <p>
+          To do.          
+        </p>
+      </proof>
+      <remark>
+        <p>
+          Thus if a vortex line becomes stretched then <em>spin up</em> occurs.
+          If we consider a thin vortex tube surrounding the vortex line,
+          then, as the vortex line is stretched, the tube becomes thinner and longer.
+          However, <m>\Gamma=\int_S\bomega\cdot{\bn}\,dS</m> must remain constant,
+          and therefore, since the area of the cross-section <m>S</m> is decreasing,
+          <m>\bomega</m> must get bigger.
+          Conversely, if a vortex line shortens we get <em>spin down</em>
+          and <m>\bomega</m> gets smaller.          
+        </p>
+      </remark>
+
+
+<example>
+  <title>Example of spin up and spin down</title>
+  <p>
+    <sidebyside>
+    <figure xml:id="fig-spinup">
+      <caption>Spin up of vorticity as thunderclouds move overhead.</caption>-->
+      <image source="ch-chapter06-spinup.jpg" width="50%">
+      <shortdescription>Spin up</shortdescription>
+      </image>
+    </figure>
+    <figure xml:id="fig-spindown">
+      <caption>Spin down of a cup of tea. Secondary circulations (shown by the arrows)
+        tend to spread the material lines out radially.
+        Thus the tall thin column of fluid (a) becomes a short fat one(b).</caption>
+      <image source="ch-chapter06-spindown.jpg" width="50%">
+      <shortdescription>Spin up</shortdescription>
+      </image>
+    </figure>
+    </sidebyside>
+  The two sketches in <xref ref="fig-spinup"/> and <xref ref="fig-spindown"/>
+  (taken from <xref ref="ref-acheson"/>)
+  show examples of spin up and spin down, respectively.
+  Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched,
+  which could result in a tornado. Spin up happens in a cup of tea after it has been stirred.
+  Secondary flows in the cup tend to spread the column of rotating fluid horizontally,
+  making the area of the cross-section of the vortex tube bigger,
+  and hence the vorticity smaller, which is spin down.
+  </p>
+</example>
+
+</subsection>
+</section>
 
   <section xml:id="sec-helmholtz-examples">
     <title>Examples illustrating the use of the Helmholtz principle</title>
@@ -196,7 +368,7 @@
    <p>
     The circulation <m>\Gamma</m> around a closed curve <m>C(t)</m> is defined by
   <me>
-    \Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
+    \Gamma = \oint_{C} \mathbf{u} \cdot \de\mathbf{x}.
   </me>
     By transforming to Lagrangian variables show that <m>\Gamma</m> is independent of <m>t</m>.
     Deduce that a flow that is initially irrotational (i.e. <m>\bomega = 0</m> at <m>t=0</m>)
