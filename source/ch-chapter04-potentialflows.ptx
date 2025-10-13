@@ -1073,19 +1073,190 @@ c
 
 <section xml:id="sec-conformal-mapping">
   <title>Conformal mapping</title>
+
+  <introduction>
+    <p>
+      The essential idea of conformal mapping is as follows. Suppose that we are given a two-dimensional potential fluid flow problem in a region, <m>R \subseteq \mathbb{C}</m>, with impermeable boundary <m>\partial R</m>. There may be singularities in <m>R</m> corresponding to sinks, sources, vortices, etc. We then seek a <em>conformal mapping</em> from the <m>z</m>-plane to the <m>\zeta</m>-plane via
+      <me>
+        \zeta = g(z),
+      </me>
+      so that the region <m>R</m> is mapped to a new region <m>\hat{R} \subseteq \mathbb{C}</m>, as shown in <xref ref="fig-conformal-general"/>.
+    </p>
+    
+    <p>
+      The hope is that within the <m>\zeta</m>-plane, the fluid region is sufficiently simple that a complex potential, say <m>F(\zeta)</m>, can be found. This task is aided by virtue of the fact that sinks/sources and vortices are preserved by the conformal map. Typically, we wish for <m>\hat{R}</m> to be e.g. the upper half-plane or the unit disc, with <m>\partial\hat{R}</m> to be the real axis or circumferance of the unit disc, respectively. Once found, the complex potential in the <m>z</m>-plane is then obtained simply by inverting the conformal map, i.e. 
+      <me>
+        f(z) = F(g(\zeta)) = \phi(x, y) + \im \psi(x, y).
+      </me>
+      This simple idea turns out to yield many insights to potential flows in two dimensions. 
+    </p>
+
+    <figure xml:id="fig-conformal-general">
+      <caption>A general conformal mapping from the <m>z</m>-plane to the <m>\zeta</m>-plane. The object is to map the region <m>R</m> to the region <m>\hat{R}</m>, which is geometrically simpler.</caption>
+      <image source="conformal_generalmap.jpg" width="100%">
+        <shortdescription>Conformal mapping</shortdescription>
+      </image>
+    </figure>
+  </introduction>
+
+  <subsection>
+    <title>Source in a wedge</title>
+
+    <p>
+      Consider fluid contained in a wedge with walls at <m>\theta = 0</m> and <m>\theta = \alpha > 0</m>, and with the fluid in <m>0 &lt; \theta &lt; \alpha</m>. A source of strength <m>Q</m> is placed somewhere within the flow, say at the point <m>z = c</m>. 
+    </p>
+
+    <p>
+      Consider then the map 
+      <men xml:id="eqn-conformal-wedge-map">
+       \zeta = g(z) = z^{\pi/\alpha}.
+      </men>
+      It can be verified that this map transforms the fluid region to the upper half-<m>\zeta</m>-plane. Indeed the ray <m>\theta = 0</m> is mapped to the positive real axis and the ray <m>\theta = \alpha</m> is mapped to the negative real axis. This is shown in <xref ref="fig-conformal-wedge"/>.
+    </p>
+
+    <figure xml:id="fig-conformal-wedge">
+      <caption>The map from the wedge-shaped region in the <m>z</m>-plane (left) and the upper half-<m>\zeta</m>-plane (right). </caption>
+      <image source="conformal_wedge.jpg" width="100%">
+        <shortdescription>conformal map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      In the <m>\zeta</m>-plane, the fluid problem thus consists of solving for flow in the upper half-plane with a source of strength <m>Q</m> at the location <m>\zeta = c^{\pi/\alpha} = \zeta_c</m>, with an impermeable boundary on the real <m>\zeta</m>-axis. Indeed, from the previous section, we know this can be solved using the method of images, with a source placed at both the point <m>\zeta_c</m> and its complex conjugate point, <m>\overline{\zeta_c}</m>. It then follows that the complex potential is 
+      <men xml:id="eqn-conformal-zeta-wedge">
+       F(\zeta) = \frac{Q}{2\pi} \log(\zeta - \zeta_c) + \frac{Q}{2\pi} \log(\zeta - \overline{\zeta_c}).
+      </men>
+     We can then invert the above formula, expressing the complex potential in the <m>z</m>-plane as 
+     <men xml:id="eqn-conformal-z-wedge">
+      f(z) = F(g(z)) = \frac{Q}{2\pi} \log(z^{\pi/\alpha} - c^{\pi/\alpha}) + \frac{Q}{2\pi} \log(z^{\pi/\alpha} - \overline{c^{\pi/\alpha}}).
+     </men>
+    </p>
+
+    <p>
+      We can verify with a computational plot that this complex potential indeed seems to duplicate the necessary fluid flow within the wedge. 
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-conformal-theory">
+    <title>The conformal mapping method</title>
+
+    <p>
+      How does it work?
+    </p>
+
+    <p>
+      We can say that the conformal mapping method is dependent on a number of key properties of conformal maps. 
+    </p>
+
+    <definition xml:id="def-conformal-mapping">
+      <title>Conformal map</title>
+      <statement>
+        <p>
+         Let us specifically define a <em>conformal map</em> as a mapping, <m>\zeta = g(z)</m>, where <m>g</m> is analytic in a region <m>R</m> and also that <m>\dd{g}{z} \neq 0</m> in <m>R</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The following properties hold for conformal maps. 
+    </p>
+
+    <proposition xml:id="prop-conformal">
+      <title>Properties of conformal maps</title>
+      <statement>
+        <p><ol>
+          <li>
+            <p>
+              Conformal maps preserve angles.
+            </p>
+          </li>
+          <li>
+            <p>
+              If the boundary <m>\partial{\hat{R}}</m> is a streamline in the <m>\zeta</m>-plane, then the corresponding boundary <m>\partial R</m> is a streamline in the <m>z</m>-plane (and vice versa). 
+            </p>
+          </li>
+          <li>
+            <p>
+              A source (or vortex) of strength <m>Q</m> at <m>\zeta = g(c) \in \hat{R}</m> in the <m>\zeta</m>-plane corresponds to a source (or vortex) of the same strength <m>Q</m> at <m>z = c \in R</m> in the <m>z</m>-plane (and vice versa).
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+    </proposition>
+    
+  </subsection>
+
+  <subsection>
+    <title>Standard conformal maps</title>
+   
+    <p>
+    The <em>exponential map</em> is used to map a channel to a half-space. Consider a channel of width <m>h</m> in the region <m>0 &lt; \Im z &lt; h</m> in the <m>z</m>-plane. Then 
+    <men xml:id="eqn-conformal-exp-map">
+     \zeta = g(z) = \e^{\pi z/h},
+    </men>
+    maps this channel to the upper half-<m>\zeta</m>-plane. 
+    </p>
+
+    <figure xml:id="fig-conformal-exp">
+      <caption>The exponential map maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
+      <image source="conformal_exp.jpg" width="100%">
+        <shortdescription>conformal map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      <em>Trigonometric maps</em> are used to map semi-infinite channels into a half space. Consider for example, the region <m>R</m> given in the following diagram.
+    </p>
+
+    <p>
+      This is mapped via 
+      <men xml:id="eqn-conformal-sin-map">
+        \zeta = g(z) = \sin\left(\frac{\pi z}{2a}\right),
+      </men>
+     to the upper half-plane.  
+    </p>
+
+
+    <figure xml:id="fig-conformal-sin">
+      <caption>The exponential maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
+      <image source="conformal_sin.jpg" width="100%">
+        <shortdescription>conformal map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      In <xref ref="ps-conformal-check-exp-sin"/>, you will verify this. 
+    </p>
+
+    <example>
+      <title>Vortex flow in a semi-infinite channel</title>
+     <statement>
+      <p>
+        Consider the channel shown in FIGURE. Insert a vortex of strength <m>\Gamma</m> at the point <m>z = d \in \mathbb{R^+}</m>. Find the complex velocity of the flow. 
+      </p>
+     </statement> 
+      
+    </example>
+    
+  </subsection>
+
+
+  <subsection>
+    <title>The Joukowski map</title>
+   
+    <p>
+      Hello world.
+    </p>
+    
+  </subsection>
+
+
 </section>
 
 
-<worksheet xml:id="ws-potentialflows">
+<exercises xml:id="ws-potentialflows">
 
-  <exercisegroup xml:id="ps-image">
- <title>Method of images</title>
-    <introduction>
-      <p>
-     Intro. 
-      </p>
-    </introduction>
-  
     <exercise xml:id="ps-image-planar01">
       <title>Single source in a semi-infinite flow</title>
       <statement>
@@ -1124,7 +1295,12 @@ c
       </statement>
     </exercise>
 
-  </exercisegroup>
-</worksheet>
+    <exercise xml:id='ps-conformal-check-exp-sin'>
+     <p>
+      Check.
+     </p> 
+    </exercise>
+
+</exercises>
 
 </chapter>
