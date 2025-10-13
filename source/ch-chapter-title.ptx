@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Chapter Title</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-section-name.ptx" />
+  
+
+  <exercises>
+  
+    <introduction>
+      <p>
+        This is a group
+      </p>
+    </introduction>
+  
+    <exercise>
+      <statement>
+        <p>
+          This is an exercise.
+        </p>
+      </statement>
+
+      <answer>
+        <p>
+          This is an answer
+        </p>
+      </answer>
+
+      <solution>
+        <p>
+          This is a solution.
+        </p>
+      </solution>
+    </exercise>
+
+  
+  </exercises>
+
+</chapter>

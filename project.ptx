@@ -14,6 +14,12 @@
       name="latex"
       format="latex"
     />
+    <target 
+    name="solutions"
+    format="pdf"
+    xsl="solution-manual.xsl"
+    output-dir="solutions"
+    />
   </targets>
 </project>
 
