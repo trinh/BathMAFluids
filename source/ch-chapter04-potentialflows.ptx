@@ -1195,7 +1195,7 @@ c
     <men xml:id="eqn-conformal-exp-map">
      \zeta = g(z) = \e^{\pi z/h},
     </men>
-    maps this channel to the upper half-<m>\zeta</m>-plane. 
+    maps this channel to the upper half-<m>\zeta</m>-plane. The correspondence of critical points and points at infinity in the pre-image and the image is shown in <xref ref="eqn-conformal-exp-map"/>. It is good to see the map as essentially 'unfolding' the infinite channel, sending points AD to the origin, while sending B to negative infinity and C to positive infinity. The conformal map will preserve the orientation of the boundary, so as we traverse along ABCD, the fluid region is always on the left. 
     </p>
 
     <figure xml:id="fig-conformal-exp">
@@ -1206,17 +1206,8 @@ c
     </figure>
 
     <p>
-      <em>Trigonometric maps</em> are used to map semi-infinite channels into a half space. Consider for example, the region <m>R</m> given in the following diagram.
+      <em>Trigonometric maps</em> are used to map semi-infinite channels into a half space. Consider for example, the region <m>R</m> given in the following diagram in <xref ref="eqn-conformal-sin-map"/>. We can then see that the semi-infinite channel of width <m>2a</m> has been mapped to the upper half-plane. The two corners at <m>z = \pm a</m> have been mapped to <m>\zeta = \pm 1</m>, respectively. 
     </p>
-
-    <p>
-      This is mapped via 
-      <men xml:id="eqn-conformal-sin-map">
-        \zeta = g(z) = \sin\left(\frac{\pi z}{2a}\right),
-      </men>
-     to the upper half-plane.  
-    </p>
-
 
     <figure xml:id="fig-conformal-sin">
       <caption>The exponential maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
@@ -1226,15 +1217,36 @@ c
     </figure>
 
     <p>
-      In <xref ref="ps-conformal-check-exp-sin"/>, you will verify this. 
+      The above map is given by 
+      <men xml:id="eqn-conformal-sin-map">
+        \zeta = g(z) = \sin\left(\frac{\pi z}{2a}\right).
+      </men>
     </p>
+
+    <!-- <p>
+      In <xref ref="ps-conformal-check-exp-sin"/>, you will verify this. 
+    </p> -->
 
     <example>
       <title>Vortex flow in a semi-infinite channel</title>
      <statement>
       <p>
-        Consider the channel shown in FIGURE. Insert a vortex of strength <m>\Gamma</m> at the point <m>z = d \in \mathbb{R^+}</m>. Find the complex velocity of the flow. 
+        Consider the channel shown in the left of <xref ref="fig-conformal-sinh"/>. Insert a vortex of strength <m>\Gamma</m> at the point <m>z = d \in \mathbb{R^+}</m>. Verify that an appropriate conformal map is given by 
+        <men xml:id="eqn-conformal-sinh">
+         \zeta = g(z) = \textrm{sinh}\left(\frac{\pi z}{2a}\right),
+        </men>
+        and find where the map sends the relevant critical points of the pre-image.</p>
+       
+      <p>
+        Using the conformal map, find the complex velocity of the flow. 
       </p>
+
+      <figure xml:id="fig-conformal-sinh">
+      <caption>The exponential maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
+      <image source="conformal_sinh.jpg" width="100%">
+        <shortdescription>conformal map</shortdescription>
+      </image>
+    </figure>
      </statement> 
       
     </example>
@@ -1242,20 +1254,27 @@ c
   </subsection>
 
 
-  <subsection>
+  <!-- <subsection>
     <title>The Joukowski map</title>
    
     <p>
       Hello world.
     </p>
     
-  </subsection>
+  </subsection> -->
 
 
 </section>
 
 
 <exercises xml:id="ws-potentialflows">
+
+  <introduction>
+  <warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered.
+    Once this is done, this disclaimer message will be removed.</p>
+</warning>
+  </introduction>
 
     <exercise xml:id="ps-image-planar01">
       <title>Single source in a semi-infinite flow</title>
