@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Worksheet</title>
+<title>Exercises</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -292,9 +292,15 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
-<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -345,8 +351,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-streamfunction.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Streamfunction formulation for two-dimensional flow</span></a></div></li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -362,47 +367,37 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="ws-vorticity" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Worksheet</span><div class="print-links"><a href="ws-vorticity-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="ws-vorticity"><h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h2>
-<div class="exercisegroup" id="ws-group-vorticity">
-<h3 class="heading"><span class="title">Vorticity.</span></h3>
-<div class="introduction" id="ws-group-vorticity-2">
-<div class="para" id="ws-group-vorticity-2-1">Intro.<div class="autopermalink" data-description="Paragraph"><a href="#ws-group-vorticity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ws-group-vorticity-2-2">
-<article class="warning remark-like" id="ws-group-vorticity-2-2-1"><h4 class="heading">
+<section class="introduction" id="ws-vorticity-1"><article class="warning remark-like" id="ws-vorticity-1-1"><h3 class="heading">
 <span class="type">Warning</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="ws-group-vorticity-2-2-1-1">We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.<div class="autopermalink" data-description="Paragraph"><a href="#ws-group-vorticity-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="ws-vorticity-1-1-1">We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.<div class="autopermalink" data-description="Paragraph"><a href="#ws-vorticity-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Warning 6.3.1"><a href="#ws-group-vorticity-2-2-1" title="Copy heading and permalink for Warning 6.3.1" aria-label="Copy heading and permalink for Warning 6.3.1">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#ws-group-vorticity-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-</div>
-<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="ex-kelvin-circulation-theorem"><h4 class="heading">
+<div class="autopermalink" data-description="Warning 6.3.1"><a href="#ws-vorticity-1-1" title="Copy heading and permalink for Warning 6.3.1" aria-label="Copy heading and permalink for Warning 6.3.1">🔗</a></div></article></section><article class="exercise exercise-like" id="ex-kelvin-circulation-theorem"><h3 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kelvin’s Circulation Theorem.</span>
-</h4>
+</h3>
 <div class="para logical" id="ex-kelvin-circulation-theorem-2-1">
 <div class="para">The circulation <span class="process-math">\(\Gamma\)</span> around a closed curve <span class="process-math">\(C(t)\)</span> is defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
+\Gamma = \oint_{C} \mathbf{u} \cdot \de\mathbf{x}.
 \end{equation*}
 </div>
 <div class="para">By transforming to Lagrangian variables show that <span class="process-math">\(\Gamma\)</span> is independent of <span class="process-math">\(t\text{.}\)</span> Deduce that a flow that is initially irrotational (i.e. <span class="process-math">\(\bomega = 0\)</span> at <span class="process-math">\(t=0\)</span>) remains irrotational for all time.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-kelvin-circulation-theorem-2-2">Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential <span class="process-math">\(\phi\)</span> such that <span class="process-math">\(\mathbf{u} = \nabla \phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <details id="ex-kelvin-circulation-theorem-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para logical" id="ex-kelvin-circulation-theorem-2-3-1">
-<div class="para">
+</div>
+<div class="solutions"><details id="ex-kelvin-circulation-theorem-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <figure class="figure figure-like" id="kelvin-circulation-theorem-fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter03-kelvin-circulation.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Curve <span class="process-math">\(\Gamma\)</span> at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span> The inset shows the relationship between the two curves.<div class="autopermalink" data-description="Figure 6.3.2"><a href="#kelvin-circulation-theorem-fig" title="Copy heading and permalink for Figure 6.3.2" aria-label="Copy heading and permalink for Figure 6.3.2">🔗</a></div></figcaption></figure> Assuming a conservative body force <span class="process-math">\(-\bnabla\chi\)</span> per unit volume, the Euler equation reads</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Curve <span class="process-math">\(\Gamma\)</span> at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span> The inset shows the relationship between the two curves.<div class="autopermalink" data-description="Figure 6.3.2"><a href="#kelvin-circulation-theorem-fig" title="Copy heading and permalink for Figure 6.3.2" aria-label="Copy heading and permalink for Figure 6.3.2">🔗</a></div></figcaption></figure><div class="para logical" id="ex-kelvin-circulation-theorem-4-2">
+<div class="para">Assuming a conservative body force <span class="process-math">\(-\bnabla\chi\)</span> per unit volume, the Euler equation reads</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right),
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="ex-kelvin-circulation-theorem-2-3-1-4">
+<div class="displaymath process-math" id="ex-kelvin-circulation-theorem-4-2-3">
 \begin{align*}
 \left.\bu\cdot\de\bx\right|_{t+\de t}\amp=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)\\
 \amp=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)\\
@@ -410,7 +405,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{align*}
 </div>
 <div class="para">Hence</div>
-<div class="displaymath process-math" id="ex-kelvin-circulation-theorem-2-3-1-5">
+<div class="displaymath process-math" id="ex-kelvin-circulation-theorem-4-2-4">
 \begin{align*}
 \dd{\Gamma}{t}\amp=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t\\
 \amp=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\\
@@ -420,13 +415,11 @@ eBookConfig.enable_chatcodes =  false;
 \end{align*}
 </div>
 <div class="para">The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus <span class="process-math">\(\Gamma\)</span> is independent of <span class="process-math">\(t\text{.}\)</span> If the flow is initially irrotational, then <span class="process-math">\(\Gamma=0\)</span> at <span class="process-math">\(t=0\)</span> for any closed curve <span class="process-math">\(C(0)\text{,}\)</span> and hence <span class="process-math">\(\Gamma=0\)</span> for all time. Since this holds for any closed curve, it follows that <span class="process-math">\(\omega=\bnabla\times\bu=0\)</span> for all time.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 1"><a href="#ex-kelvin-circulation-theorem-2-3" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Worksheet Exercise 6.3.1: Kelvin’s Circulation Theorem"><a href="#ex-kelvin-circulation-theorem" title="Copy heading and permalink for Worksheet Exercise 6.3.1: Kelvin’s Circulation Theorem" aria-label="Copy heading and permalink for Worksheet Exercise 6.3.1: Kelvin’s Circulation Theorem">🔗</a></div></article></div>
-<div class="autopermalink" data-description="Exercise Group 6.3.1–1: Vorticity"><a href="#ws-group-vorticity" title="Copy heading and permalink for Exercise Group 6.3.1–1: Vorticity" aria-label="Copy heading and permalink for Exercise Group 6.3.1–1: Vorticity">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Worksheet 6.3"><a href="#ws-vorticity" title="Copy heading and permalink for Worksheet 6.3" aria-label="Copy heading and permalink for Worksheet 6.3">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Answer 6.3.1.1"><a href="#ex-kelvin-circulation-theorem-4" title="Copy heading and permalink for Answer 6.3.1.1" aria-label="Copy heading and permalink for Answer 6.3.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6.3.1: Kelvin’s Circulation Theorem"><a href="#ex-kelvin-circulation-theorem" title="Copy heading and permalink for Exercise 6.3.1: Kelvin’s Circulation Theorem" aria-label="Copy heading and permalink for Exercise 6.3.1: Kelvin’s Circulation Theorem">🔗</a></div></article><div class="autopermalink" data-description="Exercises 6.3"><a href="#ws-vorticity" title="Copy heading and permalink for Exercises 6.3" aria-label="Copy heading and permalink for Exercises 6.3">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-helmholtz-examples.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-viscousflows.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
