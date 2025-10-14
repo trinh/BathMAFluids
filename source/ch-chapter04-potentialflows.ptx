@@ -10,8 +10,10 @@
       Previously, we defined the concept of vorticity via <m>\omega = \nabla \times \bu</m>, which serves as a measure of the local angular velocity of the flow. It turns out that in 2D, irrotational flows, with <m>\omega = 0</m>, provide a powerful restricton to the complexity of flows, allowing the development of the above <em>potential flow theory.</em>. 
     </p>
 
-        <video youtube="glfm3NMMxh0">
-        <caption>From "Fundamental Principles of Flows" and "Characteristics of the Laminar and Turbulent Flows" by Hunter Rouse. Courtesy of IIHR, University of Iowa. </caption> </video>
+    <figure>
+      <caption>From "Fundamental Principles of Flows" and "Characteristics of the Laminar and Turbulent Flows" by Hunter Rouse. Courtesy of IIHR, University of Iowa. </caption> 
+      <video youtube="glfm3NMMxh0"></video>
+    </figure>
 
   </introduction>
 
