@@ -613,23 +613,23 @@
             </image>
           </figure>
       A cut of length <m>dl</m> experiences
-      forces <m>\Gamma\,dl</m> on each edge, with <m>\Gamma</m> being the surface tension coefficient.
+      forces <m>\gamma\,dl</m> on each edge, with <m>\gamma</m> being the surface tension coefficient.
           <figure xml:id="fig-surfacetension">
             <caption>Thought experiment to illustrate surface tension</caption>
-            <image source="ch-chapter07-surfacetension.jpg" width="50%">
+            <image source="ch-chapter07-surfacetension1.jpg" width="50%">
               <shortdescription>Surface tension</shortdescription>
             </image>
           </figure>
     </p>
     <p>This <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/926">movie</url>
-      shows the effect of different values of <m>\Gamma</m> ("<m>\gamma</m>" in the movie) on the shape of a droplet.</p>
+      shows the effect of different values of <m>\gamma</m> on the shape of a droplet.</p>
     <example>
       <title>Droplet pressure</title>
       <p>
         A spherical fluid droplet of radius <m>R</m> has
-        coefficient of surface tension <m>\Gamma</m>.
+        coefficient of surface tension <m>\gamma</m>.
         What is the pressure difference between the inside and outside of the droplet?
-      <me>\Delta p = p_{\textrm{in}} - p_{\textrm{out}} = \frac{2\Gamma}{R}.</me>
+      <me>\Delta p = p_{\textrm{in}} - p_{\textrm{out}} = \frac{2\gamma}{R}.</me>
           <figure xml:id="fig-droplet">
             <caption>Surface tension example: droplet</caption>
             <image source="ch-chapter07-droplet.jpg" width="50%">
@@ -1955,7 +1955,7 @@
   </example>
 </section>
 
-<section xml:id="sec-streamfunction">
+<!--<section xml:id="sec-streamfunction">
   <title>Streamfunction formulation for two-dimensional flow</title>
   In two dimensions, see the equations in <xref ref="remark-navierstokes-components"/>
   As mentioned in Section If the flow is two-dimensional then this allows a new variable called the streamfunction,
@@ -1963,7 +1963,7 @@
   which can make solving them easier.
   This is beyond the scope of the course, and more details are provided in the supplementary notes.
 
-</section>
+</section>-->
 
 <worksheet xml:id="ws-viscousflows">
 
