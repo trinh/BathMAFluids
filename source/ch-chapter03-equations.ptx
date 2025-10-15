@@ -1101,9 +1101,9 @@ starting from first principles, and deriving the conservation laws using vector 
 Eventually, we studied different variations of the Euler equations and its consequences. 
 </p>
 
-<warning>
+<!-- <warning>
   <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
-</warning>
+</warning> -->
 </introduction>
 
 <exercise xml:id="ex-continuum-assumption">

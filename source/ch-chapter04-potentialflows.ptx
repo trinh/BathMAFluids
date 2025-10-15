@@ -5,6 +5,16 @@
 
   <introduction>
     <p>Typically, the most basic introduction on fluid dynamics usually involves the study of two-dimensional incompressible and irrotational flows, otherwise known as <em>potential flows</em>. There is a good reason for this: the theory is elegant, visualisable, and uses to its benefit the enormous power of complex-variable theory. </p>
+
+    <p>
+      Previously, we defined the concept of vorticity via <m>\omega = \nabla \times \bu</m>, which serves as a measure of the local angular velocity of the flow. It turns out that in 2D, irrotational flows, with <m>\omega = 0</m>, provide a powerful restricton to the complexity of flows, allowing the development of the above <em>potential flow theory.</em>. 
+    </p>
+
+    <figure>
+      <caption>From "Fundamental Principles of Flows" and "Characteristics of the Laminar and Turbulent Flows" by Hunter Rouse. Courtesy of IIHR, University of Iowa. </caption> 
+      <video youtube="glfm3NMMxh0"></video>
+    </figure>
+
   </introduction>
 
 <section xml:id="sec-Potential-and-streamfunction">
