@@ -186,7 +186,7 @@ Fluid Mechanics
   
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
-
+<introduction>
   <p>
     In <xref ref="ch-chapter04-potentialflows"/>, we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>.
   </p>
@@ -198,6 +198,7 @@ Fluid Mechanics
           <shortdescription>Cover</shortdescription>
         </image>
       </figure>
+</introduction>
 
 
   <subsection>

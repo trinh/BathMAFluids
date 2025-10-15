@@ -17,14 +17,14 @@
       and this effect can be confined to a region of the fluid or can be throughout the entire flow.
     </p>
 
-      <figure>
-        <caption>Steady, laminar flow of a viscous fluid through a uniform, circular pipe.
-            The velocity profile is parabolic. A similar profile is found for flow between two
-            parallel plates.
-            Credit Fu, Liang, Zhang (Symmetry, 2020).</caption>
-       <image source="ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png" width="60%" />
-      </figure>
-     <sidebyside>
+    <figure>
+      <caption>Steady, laminar flow of a viscous fluid through a uniform, circular pipe.
+        The velocity profile is parabolic. A similar profile is found for flow between two
+        parallel plates.
+        Credit Fu, Liang, Zhang (Symmetry, 2020).</caption>
+      <image source="ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png" width="60%" />
+    </figure>
+    <sidebyside>
       <figure xml:id="figure-falling-ball">
         <caption>Sphere falling through viscous fluid at low Reynolds number. Credit Kraaiennest.</caption>
         <image source="ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png" width="25%" />
@@ -36,47 +36,46 @@
         <image source="ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg" width="60%" />
       </figure>
     </sidebyside>
-
     <p>
-    Flows that can be described as inviscid include:
-    <ul>
-      <li>
-        <p>
-          free surface flows, such as water waves in the ocean,
-        </p>
-      </li>
-      <li>
-        <p>
-          aerodynamic flow, such as flow past an aircraft wing or a car body at high speed.
-        </p>
-      </li>
-    </ul>
-    Even in some of these flows, the effect of viscosity is important, for example in the flow past an
-    aerodynamic body there is a thin layer of fluid close to the body surface,
-    called a <em>boundary layer</em>, in which viscous effects are important. Flows that are completely
-    dominated by viscosity are called <em>viscous flows</em>, and these tend to include flows that are
-    on a small spatial scale, have a low velocity scale, or are of a particularly viscous fluid, for example:
-    <ul>
-      <li>
-        <p>
-          Many flows in internal physiology, for example the flow of blood through blood vessels,
-          especially capillaries (the smallest vessels), the flow of mucus in the respiratory system,
-          fluid flows within tissues, the flow of synovial fluid in joints.
-          These are often on a small spatial scale and have a low velocity scale.
-        </p>
-      </li>
-      <li>
-        <p>
-          Several manufacturing processes, for example paint, adhesives or food products,
-          since the spatial scales involved are not large and the fluids are often quite viscous.
-        </p>
-      </li>
-      <li>
-        <p>
-          Other examples include lubricating flows, such as ball bearings and glacier flow.
-        </p>
-      </li>
-    </ul>
+      Flows that can be described as inviscid include:
+      <ul>
+        <li>
+          <p>
+            free surface flows, such as water waves in the ocean,
+          </p>
+        </li>
+        <li>
+          <p>
+            aerodynamic flow, such as flow past an aircraft wing or a car body at high speed.
+          </p>
+        </li>
+      </ul>
+      Even in some of these flows, the effect of viscosity is important, for example in the flow past an
+      aerodynamic body there is a thin layer of fluid close to the body surface,
+      called a <em>boundary layer</em>, in which viscous effects are important. Flows that are completely
+      dominated by viscosity are called <em>viscous flows</em>, and these tend to include flows that are
+      on a small spatial scale, have a low velocity scale, or are of a particularly viscous fluid, for example:
+      <ul>
+        <li>
+          <p>
+            Many flows in internal physiology, for example the flow of blood through blood vessels,
+            especially capillaries (the smallest vessels), the flow of mucus in the respiratory system,
+            fluid flows within tissues, the flow of synovial fluid in joints.
+            These are often on a small spatial scale and have a low velocity scale.
+          </p>
+        </li>
+        <li>
+          <p>
+            Several manufacturing processes, for example paint, adhesives or food products,
+            since the spatial scales involved are not large and the fluids are often quite viscous.
+          </p>
+        </li>
+        <li>
+          <p>
+            Other examples include lubricating flows, such as ball bearings and glacier flow.
+          </p>
+        </li>
+      </ul>
     </p>
   </introduction>
 
@@ -345,14 +344,17 @@
     </subsection>
     <subsection xml:id="state-relations">
       <title>State relations</title>
-      <p>
-        In addition to the balances implied by mass and momentum conservation that
-        you have so far been working on in this course, there is an additional condition needed,
-        and this is called
-        a <em>state relation</em>. This relates the thermodynamic variables density <m>\rho</m>,
-        pressure <m>p</m> and temperature <m>T</m>. In this section, we give two of the most
-        common state relations that are used mathematically, the first for liquids and the second for gases.
-      </p>
+      <introduction>
+        <p>
+          In addition to the balances implied by mass and momentum conservation that
+          you have so far been working on in this course, there is an additional condition needed,
+          and this is called
+          a <em>state relation</em>. This relates the thermodynamic variables density <m>\rho</m>,
+          pressure <m>p</m> and temperature <m>T</m>. In this section, we give two of the most
+          common state relations that are used mathematically,
+          the first for liquids and the second for gases.
+        </p>
+      </introduction>
       <subsubsection>
         <title>Liquids</title>
         <p>
@@ -391,7 +393,8 @@
                 </li>
                 <li>
                   <p>
-                    In all other appearances in the governing equations, <m>\rho</m> is replaced by the constant value <m>\rho_0</m>.
+                    In all other appearances in the governing equations,
+                    <m>\rho</m> is replaced by the constant value <m>\rho_0</m>.
                   </p>
                 </li>
               </ul>
@@ -446,24 +449,29 @@
 
   <section xml:id="boundaries-surfaces-interfaces">
     <title>Boundaries, surfaces and interfaces of fluids</title>
-    <p>This <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/118">movie</url>
-      shows an experiment in which two dye streaks illustrate the motion of a viscous fluid.
-      As can be seen:
-      <ul>
-        <li>
-          <p>
-            The end of dye streak at the solid wall does not move relative to the wall.
-            This motivates the <em>no slip</em> condition at a solid<ndash/>fluid boundary <xref ref="def-fluid-solid-boundary"/>.
-          </p>
-        </li>
-        <li>
-          <p>
-            The two dye streaks on either side of the fluid<ndash/>fluid interface move together,
-            illustrating that the velocity is continuous across a fluid<ndash/>fluid interface <xref ref="def-fluid-fluid-interface"/>.
-          </p>
-        </li>
-      </ul>
-    </p>
+    <introduction>
+      <p>
+        This <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/118">movie</url>
+        shows an experiment in which two dye streaks illustrate the motion of a viscous fluid.
+        As can be seen:
+        <ul>
+          <li>
+            <p>
+              The end of dye streak at the solid wall does not move relative to the wall.
+              This motivates the <em>no slip</em> condition at a solid<ndash/>fluid boundary
+              <xref ref="def-fluid-solid-boundary"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The two dye streaks on either side of the fluid<ndash/>fluid interface move together,
+              illustrating that the velocity is continuous across a fluid<ndash/>fluid interface
+              <xref ref="def-fluid-fluid-interface"/>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
 
     <subsection xml:id="boundary-conditions-velocity">
       <title>Boundary conditions on the velocity</title>
@@ -549,7 +557,8 @@
         However, if the solid <em>moves in response to the fluid</em>, either because it is an elastic solid
         or because the solid is not <em>tethered</em>,
         then a force balance is required to solve the problem mathematically. This is
-        called a <em>fluid<ndash/>structure interaction problem</em>, and these are typically very difficult to solve.
+        called a <em>fluid<ndash/>structure interaction problem</em>,
+        and these are typically very difficult to solve.
       </p>
       <p>
         Furthermore, at a fluid<ndash/>fluid interface, a force balance is typically
@@ -567,21 +576,24 @@
         surface tension, a force per unit length.
         This is of considerable importance in many fluid mechanics problems,
         especially those involving small lengthscales.
-        <figure xml:id="fig-water-strider">
-          <caption>Surface tension is very important if you are small! Credit J. Bush and D. Hu</caption>
-          <image source="ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg" width="50%">
-            <shortdescription>Water strider</shortdescription>
-          </image>
-        </figure>
-        A cut of length <m>dl</m> experiences
-        forces <m>\gamma\,dl</m> on each edge, with <m>\gamma</m> being the surface tension coefficient.
-        <figure xml:id="fig-surfacetension">
-          <caption>Thought experiment to illustrate surface tension</caption>
-          <image source="ch-chapter07-surfacetension1.jpg" width="50%">
-            <shortdescription>Surface tension</shortdescription>
-          </image>
-        </figure>
       </p>
+      <figure xml:id="fig-water-strider">
+        <caption>Surface tension is very important if you are small! Credit J. Bush and D. Hu</caption>
+        <image source="ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg" width="50%">
+          <shortdescription>Water strider</shortdescription>
+        </image>
+      </figure>
+      <p>
+        A cut of length <m>dl</m> experiences
+        forces <m>\gamma\,dl</m> on each edge, with <m>\gamma</m>
+        being the surface tension coefficient.
+      </p>
+      <figure xml:id="fig-surfacetension">
+        <caption>Thought experiment to illustrate surface tension</caption>
+        <image source="ch-chapter07-surfacetension1.jpg" width="50%">
+          <shortdescription>Surface tension</shortdescription>
+        </image>
+      </figure>
       <p>
         This <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/926">movie</url>
         shows the effect of different values of <m>\gamma</m> on the shape of a droplet.
@@ -759,15 +771,16 @@
             <li>
               <p>
                 The stress <m>\btau</m> is the force per unit area exerted by the fluid on the
-                right-hand side of the small imaginary surface <m>dS</m> shown in the figure below                upon the fluid on the left-hand side of <m>dS</m>.
-                <figure xml:id="fig-stress-surface">
-                  <caption>Imaginary surface in a flowing fluid,
-                    illustrating the concept of stress within a fluid.</caption>
-                  <image source="ch-chapter07-stress-surface.jpg" width="60%">
-                  <shortdescription>Stress within a fluid</shortdescription>
-                  </image>
-                </figure>
+                right-hand side of the small imaginary surface <m>dS</m> shown in the figure below
+                upon the fluid on the left-hand side of <m>dS</m>.
               </p>
+              <figure xml:id="fig-stress-surface">
+                <caption>Imaginary surface in a flowing fluid,
+                  illustrating the concept of stress within a fluid.</caption>
+                <image source="ch-chapter07-stress-surface.jpg" width="60%">
+                <shortdescription>Stress within a fluid</shortdescription>
+                </image>
+              </figure>
             </li>
             <li>
               <p>
@@ -844,7 +857,8 @@
           which are, respectively,
           <me>
             \left(\begin{matrix}\sigma_{11}\\\sigma_{21}\\\sigma_{31}\end{matrix}\right),\quad
-            \left(\begin{matrix}\sigma_{12}\\\sigma_{22}\\\sigma_{32}\end{matrix}\right),\quad\textrm{and}\quad
+            \left(\begin{matrix}\sigma_{12}\\\sigma_{22}\\\sigma_{32}\end{matrix}\right),
+            \quad\textrm{and}\quad
             \left(\begin{matrix}\sigma_{13}\\\sigma_{23}\\\sigma_{33}\end{matrix}\right).
           </me>
           The normal components of the respective stresses are
@@ -1214,12 +1228,14 @@
               Examples include shear thinning fluids, e.g. blood,
               and shear-thickening fluids, e.g. fluids containing cornflour such as custard,
               or fluids whose viscosity depends on the temperature of the fluid.
-              <figure xml:id="fig-nonnewtonian">
-               <caption>Examples of Non-Newtonian fluids</caption>
-               <image source="ch-chapter07-nonnewtonian.jpg" width="100%">
-               <shortdescription>Non-Newtonian fluids</shortdescription>
-               </image>
-              </figure>
+            </p>
+            <figure xml:id="fig-nonnewtonian">
+              <caption>Examples of Non-Newtonian fluids</caption>
+              <image source="ch-chapter07-nonnewtonian.jpg" width="100%">
+              <shortdescription>Non-Newtonian fluids</shortdescription>
+              </image>
+            </figure>
+            <p>
               A short
               <url href="http://www.teachertube.com/video/walking-on-custard-brainiac-41345">video</url>
               on shear thickening fluids is both fun and educational.
@@ -1249,29 +1265,31 @@
               because the diameter of the artery is many times that of the cells.
               However, for small arteries, such as that in <xref ref="fig-artery"/>,
               the Newtonian model does not give an accurate picture.
-              <figure xml:id="fig-artery">
-                <caption>Computer simulation of blood flow in a microvessel
-                  by the Biological Flow Studies Laboratory in Tohoku University, Japan.
-                  The left picture shows the view of the blood from the outside (with the vessel walls removed),
-                  whilst that on the right shows the view in the central plane of the vessel.
-                </caption>
-                <image source="ch-chapter07-artery.jpg" width="90%">
-                  <shortdescription>Blood flow</shortdescription>
-                </image>
-              </figure>
+            </p>
+            <figure xml:id="fig-artery">
+              <caption>Computer simulation of blood flow in a microvessel
+                by the Biological Flow Studies Laboratory in Tohoku University, Japan.
+                The left picture shows the view of the blood from the outside (with the vessel walls removed),
+                whilst that on the right shows the view in the central plane of the vessel.
+              </caption>
+              <image source="ch-chapter07-artery.jpg" width="90%">
+                <shortdescription>Blood flow</shortdescription>
+              </image>
+            </figure>
+            <p>
               <xref ref="fig-liquid-crystals"/> shows a schematic representation of nematic liquid crystals,
               which are used in computer displays, electronic signs etc.
               These align by themselves to a preferred direction for high enough temperatures,
               and a magnetic field can be used to set the direction.
-              <figure xml:id="fig-liquid-crystals">
-                <caption>Schematic representation of nematic liquid crystals, an example of an
-                  anisotropic fluid.
-                </caption>
-                <image source="ch-chapter07-liquid-crystals.jpg" width="30%">
-                  <shortdescription>Liquid crystals</shortdescription>
-                </image>
-              </figure>
             </p>
+            <figure xml:id="fig-liquid-crystals">
+              <caption>Schematic representation of nematic liquid crystals, an example of an
+                anisotropic fluid.
+              </caption>
+              <image source="ch-chapter07-liquid-crystals.jpg" width="30%">
+                <shortdescription>Liquid crystals</shortdescription>
+              </image>
+            </figure>
           </li>
         </ul>
       </p>
@@ -1279,13 +1297,13 @@
     <example>
       <title>Calculating the stress due to a shear flow</title>
       <statement>
+        <figure xml:id="fig-sample-flow1">
+          <caption>Shear flow</caption>
+          <image source="ch-chapter07-sample-flow1.jpg" width="50%">
+            <shortdescription>Shear flow</shortdescription>
+          </image>
+        </figure>
         <p>
-          <figure xml:id="fig-sample-flow1">
-            <caption>Shear flow</caption>
-            <image source="ch-chapter07-sample-flow1.jpg" width="50%">
-              <shortdescription>Shear flow</shortdescription>
-            </image>
-          </figure>
           Consider an incompressible Newtonian fluid flowing in <m>y\geq0</m>
           in Cartesian coordinates <m>(x,y,z)</m> in a uniform pressure field
           <m>p=p_0</m> with <m>p_0</m> constant, and whose velocity components are respectively given by
@@ -1406,26 +1424,28 @@
 
   <section xml:id="sec-linear-momentum-cons">
     <title>Conservation of linear momentum</title>
-    <figure xml:id="fig-small-cube">
-      <caption>Small cube used to derive the equations of motion</caption>
-      <image source="ch-chapter07-small-cube.jpg" width="50%">
-      <shortdescription>Small cube</shortdescription>
-      </image>
-    </figure>
-    <p>
-      We consider the balance of linear momentum
-      in a small cube of side length <m>\delta</m> for an <em>incompressible fluid</em>,
-      see <xref ref="fig-small-cube"/>.
-      To do this we employ the Reynolds Transport Theorem <xref ref="eqn-RTT"/>,
-      with <m>\bf(\bx,t)</m> equal to the linear momentum of the fluid per unit volume,
-      <m>\bf=\rho\bu</m>, and <m>V(t)</m> being the small volume of fluid under consideration,
-      which coincides with the cube at time <m>t</m> (however, note that the volume of fluid
-      we are following is not generally a cube at other times). The theorem states that:
-      <me>
-        \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
-        \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
-      </me>
-    </p>
+    <introduction>
+      <figure xml:id="fig-small-cube">
+        <caption>Small cube used to derive the equations of motion</caption>
+        <image source="ch-chapter07-small-cube.jpg" width="50%">
+        <shortdescription>Small cube</shortdescription>
+        </image>
+      </figure>
+      <p>
+        We consider the balance of linear momentum
+        in a small cube of side length <m>\delta</m> for an <em>incompressible fluid</em>,
+        see <xref ref="fig-small-cube"/>.
+        To do this we employ the Reynolds Transport Theorem <xref ref="eqn-RTT"/>,
+        with <m>\bf(\bx,t)</m> equal to the linear momentum of the fluid per unit volume,
+        <m>\bf=\rho\bu</m>, and <m>V(t)</m> being the small volume of fluid under consideration,
+        which coincides with the cube at time <m>t</m> (however, note that the volume of fluid
+        we are following is not generally a cube at other times). The theorem states that:
+        <me>
+          \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
+          \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
+        </me>
+      </p>
+    </introduction>
 
     <subsection xml:id="subsec-rtt-lhs">
       <title>Left-hand side</title>
@@ -1445,139 +1465,133 @@
         </me>
       </p>
 
-      <subsubsection xml:id="subsubsec-rtt-lhs-bodyforces">
-        <title>Body forces</title>
-        <p>
-          The <em>body forces</em> are equal to either zero (if gravity is not important)
-          or equal to the gravitational force
-          <me>
-            \bF_{\textrm{surface}}=\bF_{\textrm{gravity}}=\rho V\bg.
-          </me>
-        </p>      
-      </subsubsection>
-      <subsubsection xml:id="subsubsec-rtt-lhs-surfaceforces">
-        <title>Surface forces</title>
-        <p>
-          The <em>surface forces</em> arise from the stress exerted at the surface
-          of the fluid parcel, and these can be computed by integrating the stress vector <m>\tau</m>
-          over the surface of the cube. On the left face, we have <m>\bn=-\bi</m>, and,
-          using  <xref ref="eq-cartesiannewtonianstress"/>, the stress vector is
-          <md>
-            <mrow>\btau=&amp;\bsigma\bn</mrow>
-            <mrow>=&amp;\left(-p\bI+2\mu\be\right)\left(-\bi\right)</mrow>
-            <mrow>=&amp;\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;-p+2\mu\pd{v}{y}&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)&amp;-p+2\mu\pd{w}{z}
-              \end{matrix}\right)
-              \left(\begin{matrix}-1\\0\\0\end{matrix}\right)
-            </mrow>
-            <mrow>=&amp;-\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-                \end{matrix}\right),
-              </mrow>
-          </md>
-          and the force on the left face is this expression multiplied by the area <m>\delta^2</m>.
-          Similarly, on the right-hand face, we have <m>\bn=\bi</m>, and the stress vector is
-          <me>
-            \btau=\bsigma\bn
-            =\left(\begin{matrix}
+      <p>
+        <em>Body forces:</em> These are equal to either zero (if gravity is not important)
+        or equal to the gravitational force
+        <me>
+          \bF_{\textrm{surface}}=\bF_{\textrm{gravity}}=\rho V\bg.
+        </me>
+      </p>
+      <p>
+        <em>Surface forces:</em> These arise from the stress exerted at the surface
+        of the fluid parcel, and these can be computed by integrating the stress vector <m>\tau</m>
+        over the surface of the cube. On the left face, we have <m>\bn=-\bi</m>, and,
+        using  <xref ref="eq-cartesiannewtonianstress"/>, the stress vector is
+        <md>
+          <mrow>\btau=&amp;\bsigma\bn</mrow>
+          <mrow>=&amp;\left(-p\bI+2\mu\be\right)\left(-\bi\right)</mrow>
+          <mrow>=&amp;\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;-p+2\mu\pd{v}{y}&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)&amp;-p+2\mu\pd{w}{z}
+            \end{matrix}\right)
+            \left(\begin{matrix}-1\\0\\0\end{matrix}\right)
+          </mrow>
+          <mrow>=&amp;-\left(\begin{matrix}
             -p+2\mu\pd{u}{x}\\
             \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
             \mu\left(\pd{u}{z}+\pd{w}{x}\right)
             \end{matrix}\right),
-          </me>
-          with the contribution to the force being this expression multiplied by <m>\delta^2</m>.
-          Hence the contribution to the force from the left and right faces is
-          <md>
-            <mrow>
-              &amp;\left.\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-              \end{matrix}\right)\delta^2\right|_{x=x_0+\delta}
-              -\left.\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-              \end{matrix}\right)\delta^2\right|_{x=x_0}
             </mrow>
-            <mrow>
-              =&amp;\pd{}{x}\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-              \end{matrix}\right)\delta^3
-            </mrow>
-            <mrow>
-              =&amp;\pd{}{x}\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-              \end{matrix}\right)V.
-            </mrow>
-          </md>
-          After a similar calculation, the contributions from the front and back faces can be shown to be
-          <me>
-            \pd{}{y}\left(\begin{matrix}
+        </md>
+        and the force on the left face is this expression multiplied by the area <m>\delta^2</m>.
+        Similarly, on the right-hand face, we have <m>\bn=\bi</m>, and the stress vector is
+        <me>
+          \btau=\bsigma\bn
+          =\left(\begin{matrix}
+          -p+2\mu\pd{u}{x}\\
+          \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+          \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+          \end{matrix}\right),
+        </me>
+        with the contribution to the force being this expression multiplied by <m>\delta^2</m>.
+        Hence the contribution to the force from the left and right faces is
+        <md>
+          <mrow>
+            &amp;\left.\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+            \end{matrix}\right)\delta^2\right|_{x=x_0+\delta}
+            -\left.\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+            \end{matrix}\right)\delta^2\right|_{x=x_0}
+          </mrow>
+          <mrow>
+            =&amp;\pd{}{x}\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+            \end{matrix}\right)\delta^3
+          </mrow>
+          <mrow>
+            =&amp;\pd{}{x}\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+            \end{matrix}\right)V.
+          </mrow>
+        </md>
+        After a similar calculation, the contributions from the front and back faces can be shown to be
+        <me>
+          \pd{}{y}\left(\begin{matrix}
+          \mu\left(\pd{v}{x}+\pd{u}{y}\right)\\
+          -p+2\mu\pd{v}{y}\\
+          \mu\left(\pd{v}{z}+\pd{w}{y}\right)
+          \end{matrix}\right)V,
+        </me>
+        and from the top and bottom faces we get
+        <me>
+          \pd{}{z}\left(\begin{matrix}
+          \mu\left(\pd{w}{x}+\pd{u}{z}\right)\\
+          \mu\left(\pd{w}{y}+\pd{v}{z}\right)\\
+          -p+2\mu\pd{w}{z}
+          \end{matrix}\right)V.
+        </me>
+        Hence the total force due to surface stresses is
+        <md>
+          <mrow>
+            \bF_{\textrm{surface}}=\bF_{\textrm{stress}}=&amp;
+            \pd{}{x}\left(\begin{matrix}
+            -p+2\mu\pd{u}{x}\\
+            \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
+            \mu\left(\pd{u}{z}+\pd{w}{x}\right)
+            \end{matrix}\right)V
+            +\pd{}{y}\left(\begin{matrix}
             \mu\left(\pd{v}{x}+\pd{u}{y}\right)\\
             -p+2\mu\pd{v}{y}\\
             \mu\left(\pd{v}{z}+\pd{w}{y}\right)
-            \end{matrix}\right)V,
-          </me>
-          and from the top and bottom faces we get
-          <me>
-            \pd{}{z}\left(\begin{matrix}
+            \end{matrix}\right)V
+            +\pd{}{z}\left(\begin{matrix}
             \mu\left(\pd{w}{x}+\pd{u}{z}\right)\\
             \mu\left(\pd{w}{y}+\pd{v}{z}\right)\\
             -p+2\mu\pd{w}{z}
-            \end{matrix}\right)V.
-          </me>
-          Hence the total force due to surface stresses is
-          <md>
-            <mrow>
-              \bF_{\textrm{surface}}=\bF_{\textrm{stress}}=&amp;
-              \pd{}{x}\left(\begin{matrix}
-              -p+2\mu\pd{u}{x}\\
-              \mu\left(\pd{u}{y}+\pd{v}{x}\right)\\
-              \mu\left(\pd{u}{z}+\pd{w}{x}\right)
-              \end{matrix}\right)V
-              +\pd{}{y}\left(\begin{matrix}
-              \mu\left(\pd{v}{x}+\pd{u}{y}\right)\\
-              -p+2\mu\pd{v}{y}\\
-              \mu\left(\pd{v}{z}+\pd{w}{y}\right)
-              \end{matrix}\right)V
-              +\pd{}{z}\left(\begin{matrix}
-              \mu\left(\pd{w}{x}+\pd{u}{z}\right)\\
-              \mu\left(\pd{w}{y}+\pd{v}{z}\right)\\
-              -p+2\mu\pd{w}{z}
-              \end{matrix}\right)V
-            </mrow>
-            <mrow>
-              =&amp;
-              \left(\begin{matrix}
-              -\pd{p}{x}+\mu\left(\pd{^2u}{x^2}+\pd{^2v}{x\partial y}+\pd{^2w}{x\partial z}+\nabla^2u\right)\\
-              -\pd{p}{y}+\mu\left(\pd{^2u}{x\partial y}+\pd{^2v}{y^2}+\pd{^2w}{y\partial z}+\nabla^2v\right)\\
-              -\pd{p}{z}+\mu\left(\pd{^2u}{x\partial z}+\pd{^2v}{y\partial z}+\pd{^2w}{z^2}+\nabla^2w\right)
-              \end{matrix}\right)V
-            </mrow>
-            <mrow>
-              =&amp;\left(\nabla p+\mu\left(\nabla\pd{u}{x}+\nabla\pd{v}{y}+\nabla\pd{w}{z}\right)
-              +\mu\nabla^2\bu\right)V
-            </mrow>
-            <mrow>
-              =&amp;\left(\nabla p+\mu\nabla\nabla\cdot\bu+\mu\nabla^2\bu\right)V
-            </mrow>
-            <mrow>
-              =&amp;\left(\nabla p+\mu\nabla^2\bu\right)V,
-            </mrow>
-          </md>
-          where the final equality was obtained using the incompressibility condition <m>\nabla\cdot\bu=0</m>
-          <xref ref="eqn-incompressibledef"/>.
-        </p>
-      </subsubsection>
+            \end{matrix}\right)V
+          </mrow>
+          <mrow>
+            =&amp;
+            \left(\begin{matrix}
+            -\pd{p}{x}+\mu\left(\pd{^2u}{x^2}+\pd{^2v}{x\partial y}+\pd{^2w}{x\partial z}+\nabla^2u\right)\\
+            -\pd{p}{y}+\mu\left(\pd{^2u}{x\partial y}+\pd{^2v}{y^2}+\pd{^2w}{y\partial z}+\nabla^2v\right)\\
+            -\pd{p}{z}+\mu\left(\pd{^2u}{x\partial z}+\pd{^2v}{y\partial z}+\pd{^2w}{z^2}+\nabla^2w\right)
+            \end{matrix}\right)V
+          </mrow>
+          <mrow>
+            =&amp;\left(\nabla p+\mu\left(\nabla\pd{u}{x}+\nabla\pd{v}{y}+\nabla\pd{w}{z}\right)
+            +\mu\nabla^2\bu\right)V
+          </mrow>
+          <mrow>
+            =&amp;\left(\nabla p+\mu\nabla\nabla\cdot\bu+\mu\nabla^2\bu\right)V
+          </mrow>
+          <mrow>
+            =&amp;\left(\nabla p+\mu\nabla^2\bu\right)V,
+          </mrow>
+        </md>
+        where the final equality was obtained using the incompressibility condition <m>\nabla\cdot\bu=0</m>
+        <xref ref="eqn-incompressibledef"/>.
+      </p>
       <p>
         Hence, the left-hand side of the Reynolds Transport Theorem becomes
         <me>
@@ -1737,164 +1751,162 @@
         </p>
       </remark>
     </subsection>
-    <example>
-      <title>Application of Navier<ndash/>Stokes and continuity equations</title>
-      <statement>
+    <subsection xml:id="subsec-example-application">
+      <title>Example of the application</title>
+      <example>
+        <title>Application of Navier<ndash/>Stokes and continuity equations</title>
+        <statement>
+          <p>
+            Consider an incompressible Newtonian fluid flowing in a gravitational field <m>\bg=-g\bk</m>
+            with velocity
+            <me>
+              \bu=Kx\bi+Ky\bj-2Kz\bk.
+            </me>
+            Check that this flow satisfies the continuity and Navier<ndash/>Stokes equations,
+            and find the pressure field.
+            Based on Problem 4.34 in <xref ref="ref-white-5"/>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            To check the continuity equation, we show
+            <me>
+              \nabla\cdot\bu=K+K-2K=0,
+            </me>
+            so this is satisfied.
+          </p>
+          <p>
+            The Navier<ndash/>Stokes equations are
+            <me>
+              \rho\left(\pd{\bu}{t}
+              +(\bu\cdot\nabla)\bu\right)
+              =-\nabla p+\mu\nabla^2\bu-\rho g\bk.
+            </me>
+            For the flow given
+            <ul>
+              <li>
+                <p>
+                  <m>\partial\bu/\partial t=0</m>,
+                </p>
+              </li>
+              <li>
+                <p>
+                  <me>
+                     \bu\cdot\nabla=Kx\pd{}{x}+Ky\pd{}{y}-2Kz\pd{}{z},
+                  </me>
+                  which gives
+                  <me>
+                    (\bu\cdot\nabla)\bu=K^2x\bi+K^2y\bj+4K^2z\bk,
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\nabla^2\bu=0</m>.
+                </p>
+              </li>
+            </ul>
+            Hence, the components of the Navier<ndash/>Stokes equations become
+            <me>
+              \rho K^2x=-\pd{p}{x},\quad
+              \rho K^2y=-\pd{p}{y},\quad
+              4\rho K^2z=-\pd{p}{z}-\rho g.
+            </me>
+            The question of whether the flow satisfies the Navier<ndash/>Stokes equations
+            now becomes a question of whether we can find a pressure field <m>p</m> satisfying
+            each of these equations. The first equation has solution
+            <me>
+              p=-\frac12\rho K^2x^2+f_1(y,z),
+            </me>
+            where <m>f_1(y,z)</m> is an arbitrary function of <m>y</m> and <m>z</m>.
+            Substituting this solution into the second equation gives
+            <md>
+              <mrow>&amp;\pd{f_1}{y}=-\rho K^2y</mrow>
+              <mrow>
+                \Rightarrow\quad
+                &amp;f_1(y,z)=-\frac12\rho K^2y^2+f_2(z)
+              </mrow>
+              <mrow>
+                \Rightarrow\quad
+                &amp;p=-\frac12\rho K^2(x^2+y^2)+f_2(z),
+              </mrow>
+            </md>
+            where <m>f_2(z)</m> is an arbitrary function of <m>z</m>.
+            Substituting this solution into the third equation gives
+            <md>
+              <mrow>&amp;\dd{f_2}{z}=-4\rho K^2z-\rho g</mrow>
+              <mrow>
+                \Rightarrow\quad
+                &amp;f_2(z)=-2\rho K^2z^2-\rho gz+p_0
+              </mrow>
+              <mrow>
+                \Rightarrow\quad
+                &amp;p=-\frac12\rho K^2(x^2+y^2+4z^2)-\rho gz+p_0.
+              </mrow>
+            </md>
+            Since we have found an expression for the pressure that satisfies
+            all three components of the Navier<ndash/>Stokes equations,
+            we can say that the given flow does satisfy the equations.
+          </p>
+        </solution>
+      </example>
+      <remark>
         <p>
-          Consider an incompressible Newtonian fluid flowing in a gravitational field <m>\bg=-g\bk</m>
-          with velocity
+          Note that in general if we have an expression for <m>\nabla p</m>,
+          say we know that <m>\nabla p={\bf q}</m>, then we can check whether or not
+          it it is possible to find <m>p</m> by taking the curl of both sides,
+          i.e. <m>\nabla\times{\bf q}=\nabla\times\nabla p=0</m>
+          (since <m>\nabla\times\nabla f=0</m> for all functions <m>f</m>).
+          If <m>{\bf q}</m> satisfies <m>\nabla\times{\bf q}=0</m> then
+          it is possible to find a pressure field (and hence the Navier<ndash/>Stokes
+          equations are satisfied), otherwise it is not.  In this example
           <me>
-            \bu=Kx\bi+Ky\bj-2Kz\bk.
+            \nabla p=-\rho K^2x\bi-\rho K^2y\bj
+            -(4\rho K^2z+\rho g)\bk,
           </me>
-          Check that this flow satisfies the continuity and Navier<ndash/>Stokes equations,
-          and find the pressure field.
-          Based on Problem 4.34 in <xref ref="ref-white-5"/>.
+          and
+          <me>
+            \nabla\times\left(-\rho K^2x\bi-\rho K^2y\bj
+            -(4\rho K^2z+\rho g)\bk\right)=0,
+          </me>
+          as expected.
         </p>
-      </statement>
-      <solution>
+      </remark>
+      <remark>
         <p>
-          To check the continuity equation, we show
+          It is quite possible for a flow not to satisfy the Navier<ndash/>Stokes equations.
+          For example, the similar looking flow
+          <men xml:id="eq-altflow">
+            \bu=K(x+y)\bi+Ky\bj-2Kz\bk,
+          </men>
+          does satisfy the continuity equation, but has
           <me>
-            \nabla\cdot\bu=K+K-2K=0,
+            \bu\cdot\nabla\bu=K^2(x+2y)\bi+K^2y\bj+4K^2z\bk.
           </me>
-          so this is satisfied.
-        </p>
-        <p>
-          The Navier<ndash/>Stokes equations are
+          The Navier<ndash/>Stokes equations would give
           <me>
-            \rho\left(\pd{\bu}{t}
-            +(\bu\cdot\nabla)\bu\right)
-            =-\nabla p+\mu\nabla^2\bu-\rho g\bk.
+            \nabla p=-\left(-\rho K^2(x+2y),-\rho K^2y,-4\rho K^2z-\rho g\right).
           </me>
-          For the flow given
-          <ul>
-            <li>
-              <p>
-                <m>\partial\bu/\partial t=0</m>,
-              </p>
-            </li>
-            <li>
-              <p>
-                <me>
-                   \bu\cdot\nabla=Kx\pd{}{x}+Ky\pd{}{y}-2Kz\pd{}{z},
-                </me>
-                which gives
-                <me>
-                  (\bu\cdot\nabla)\bu=K^2x\bi+K^2y\bj+4K^2z\bk,
-                </me>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\nabla^2\bu=0</m>.
-              </p>
-            </li>
-          </ul>
-          Hence, the components of the Navier<ndash/>Stokes equations become
+          Trying to solve this from the first equation would give
           <me>
-            \rho K^2x=-\pd{p}{x},\quad
-            \rho K^2y=-\pd{p}{y},\quad
-            4\rho K^2z=-\pd{p}{z}-\rho g.
+            p=-\frac12\rho K^2(x^2+4xy)+f_1(y,z),
           </me>
-          The question of whether the flow satisfies the Navier<ndash/>Stokes equations
-          now becomes a question of whether we can find a pressure field <m>p</m> satisfying
-          each of these equations. The first equation has solution
+          and substituting this solution into the second equation gives
           <me>
-            p=-\frac12\rho K^2x^2+f_1(y,z),
+            -2\rho K^2x+\pd{f_1}{y}=-\rho K^2y\quad\Rightarrow\quad
+            \pd{f_1}{y}=2\rho K^2x-\rho K^2y.
           </me>
-          where <m>f_1(y,z)</m> is an arbitrary function of <m>y</m> and <m>z</m>.
-          Substituting this solution into the second equation gives
-          <md>
-            <mrow>&amp;\pd{f_1}{y}=-\rho K^2y</mrow>
-            <mrow>
-              \Rightarrow\quad
-              &amp;f_1(y,z)=-\frac12\rho K^2y^2+f_2(z)
-            </mrow>
-            <mrow>
-              \Rightarrow\quad
-              &amp;p=-\frac12\rho K^2(x^2+y^2)+f_2(z),
-            </mrow>
-          </md>
-          where <m>f_2(z)</m> is an arbitrary function of <m>z</m>.
-          Substituting this solution into the third equation gives
-          <md>
-            <mrow>&amp;\dd{f_2}{z}=-4\rho K^2z-\rho g</mrow>
-            <mrow>
-              \Rightarrow\quad
-              &amp;f_2(z)=-2\rho K^2z^2-\rho gz+p_0
-            </mrow>
-            <mrow>
-              \Rightarrow\quad
-              &amp;p=-\frac12\rho K^2(x^2+y^2+4z^2)-\rho gz+p_0.
-            </mrow>
-          </md>
-          Since we have found an expression for the pressure that satisfies
-          all three components of the Navier<ndash/>Stokes equations,
-          we can say that the given flow does satisfy the equations.
+          This is a contradiction as <m>f_1</m> is supposed to be a function of <m>y</m> and <m>z</m> only,
+          but here the right-hand side depends on <m>x</m>, meaning that <m>f_1</m> has to depend on <m>x</m>.
+          Alternatively we could show that the curl of <m>\nabla p</m> is non-zero,
+          which also implies a contradiction.
         </p>
         <p>
-          Notes:
-          <ul>
-            <li>
-              <p>
-                Note that in general if we have an expression for <m>\nabla p</m>,
-                say we know that <m>\nabla p={\bf q}</m>, then we can check whether or not
-                it it is possible to find <m>p</m> by taking the curl of both sides,
-                i.e. <m>\nabla\times{\bf q}=\nabla\times\nabla p=0</m>
-                (since <m>\nabla\times\nabla f=0</m> for all functions <m>f</m>).
-                If <m>{\bf q}</m> satisfies <m>\nabla\times{\bf q}=0</m> then
-                it is possible to find a pressure field (and hence the Navier<ndash/>Stokes
-                equations are satisfied), otherwise it is not.  In this example
-                <me>
-                  \nabla p=-\rho K^2x\bi-\rho K^2y\bj
-                  -(4\rho K^2z+\rho g)\bk,
-                </me>
-                and
-                <me>
-                  \nabla\times\left(-\rho K^2x\bi-\rho K^2y\bj
-                  -(4\rho K^2z+\rho g)\bk\right)=0,
-                </me>
-                as expected.
-              </p>
-            </li>
-            <li>
-              <p>
-                It is quite possible for a flow not to satisfy the Navier<ndash/>Stokes equations.
-                For example, the similar looking flow
-                <men xml:id="eq-altflow">
-                  \bu=K(x+y)\bi+Ky\bj-2Kz\bk,
-                </men>
-                does satisfy the continuity equation, but has
-                <me>
-                  \bu\cdot\nabla\bu=K^2(x+2y)\bi+K^2y\bj+4K^2z\bk.
-                </me>
-                The Navier<ndash/>Stokes equations would give
-                <me>
-                  \nabla p=-\left(-\rho K^2(x+2y),-\rho K^2y,-4\rho K^2z-\rho g\right).
-                </me>
-                Trying to solve this from the first equation would give
-                <me>
-                  p=-\frac12\rho K^2(x^2+4xy)+f_1(y,z),
-                </me>
-                and substituting this solution into the second equation gives
-                <me>
-                  -2\rho K^2x+\pd{f_1}{y}=-\rho K^2y\quad\Rightarrow\quad
-                  \pd{f_1}{y}=2\rho K^2x-\rho K^2y.
-                </me>
-                This is a contradiction as <m>f_1</m> is supposed to be a function of <m>y</m> and <m>z</m> only,
-                but here the right-hand side depends on <m>x</m>, meaning that <m>f_1</m> has to depend on <m>x</m>.
-                Alternatively we could show that the curl of <m>\nabla p</m> is non-zero,
-                which also implies a contradiction.
-              </p>
-              <p>
-                If the flow were given at a particular point in time by <xref ref="eq-altflow"/>,
-                what do you think would happen next?
-              </p>
-            </li>
-          </ul>
+          If the flow were given at a particular point in time by <xref ref="eq-altflow"/>,
+          what do you think would happen next?
         </p>
-      </solution>
-    </example>
+      </remark>
+    </subsection>
   </section>
 
 <!--<section xml:id="sec-streamfunction">
@@ -2036,7 +2048,7 @@
           </p>
         </statement>
         <solution>
-          <figure xml:id="ball-low-re" class="figure">
+          <figure xml:id="ball-low-re">
             <caption>Sketch of velocity as a function of time.</caption>
             <image source="ch-chapter07-ball-low-re.png" width="80%"/>
           </figure>
@@ -2202,6 +2214,18 @@
           <xref ref="eqn-RTT"/>.
         </p>
       </introduction>
+      <task>
+        <statement>
+          <p>
+            In this task you will
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Here is the solution.
+          </p>
+        </solution>
+      </task>
     </exercise>
 
     <exercise xml:id="ps-polar-coordinates">

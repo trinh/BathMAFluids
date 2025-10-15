@@ -20,7 +20,7 @@
 <section xml:id="sec-Potential-and-streamfunction">
   <title>The velocity potential</title>
 
-
+<introduction>
   <p>
     In this chapter, we focus on 2D flows where the velocity vector is given by 
     <me>
@@ -45,6 +45,7 @@
 
   <p>
     The above result about irrotational flows is a standard result in Vector Calculus, but we will re-state the result here for reference, and provide a review of its proof. 
+  </p>
 
     <theorem xml:id="thm-exist-potential">
       <title>Existence of a potential</title>
@@ -57,7 +58,6 @@
         </p>
       </statement>
 
-      <p>
       <proof>
         <p>
           Define 
@@ -96,10 +96,7 @@
           The converse direction of the theorem follows directly from the fact that "curl grad equals zero", i.e. <m>\nabla \times \nabla \phi = 0</m>.
         </p>
       </proof>
-    </p>
     </theorem>
-    
-  </p>
 
   <p>
     Let us return to discussing the setting of potential flow.
@@ -123,14 +120,13 @@
     \frac{p}{\rho} + \frac{1}{2} |\nabla \phi|^2 + \chi = \textrm{constant}.
   </men>
   </p>
-
+</introduction>
 
   <subsection>
     <title>Elementary flows</title>
 
     <p>The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source/sink flows. You will also investigate the notion of a source "strength".</p>
     
-  <p>
     <example xml:id="example-potential-uniform">
       <title>Uniform flow</title>
       <idx><h>uniform flow</h></idx>
@@ -147,16 +143,14 @@
 
      <p>
       The image shown below shows the streamlines of the flow.
-c
-      <figure xml:id="fig-potential-uniform">
-        <image source="uniformflow" width="90%"/> 
-          <caption>Streamlines (or velocity field) of uniform flow with <m>U = 1</m> and <m>\alpha = \pi/4</m>.</caption>
-        </figure>
      </p>
-    </example>
-  </p>
 
-  <p>
+      <figure xml:id="fig-potential-uniform">
+          <caption>Streamlines (or velocity field) of uniform flow with <m>U = 1</m> and <m>\alpha = \pi/4</m>.</caption>
+        <image source="uniformflow" width="90%"/> 
+        </figure>
+    </example>
+  
     <example xml:id="example-potential-stagnation">
       <title>Stagnation point flow</title><idx><h>stagnation point flow</h></idx>
       <p>
@@ -172,16 +166,13 @@ c
       </p>
 
       <p> The streamlines (or velocity field) is shown below.
-      <figure xml:id="fig-potential-stagnation">
-        <image source="stagnationflow" width="90%"/> 
-          <caption>Streamlines (or velocity field) of stagnation point flow.</caption>
-        </figure>
       </p>
-      
+      <figure xml:id="fig-potential-stagnation">
+          <caption>Streamlines (or velocity field) of stagnation point flow.</caption>
+        <image source="stagnationflow" width="90%"/> 
+        </figure>
     </example>
-  </p>
-
-<p>
+  
   <example xml:id="example-potential-linesource">
     <title>Line source</title>
    <idx><h>line source</h></idx> 
@@ -212,11 +203,11 @@ c
 
 
       <p> The streamlines (or velocity field) are shown below.
-      <figure xml:id="fig-potential-linesource">
-        <image source="linesource" width="90%"/> 
-          <caption>Streamlines (or velocity field) of line source flow.</caption>
-        </figure>
       </p>
+      <figure xml:id="fig-potential-linesource">
+          <caption>Streamlines (or velocity field) of line source flow.</caption>
+        <image source="linesource" width="90%"/> 
+        </figure>
 
   <p>
     Let us also identify the <em>strength</em> of this line source. Consider a closed contour <m>C</m> around the origin. Then the quantity 
@@ -240,13 +231,11 @@ c
   </p>
     
   </example>
-</p>
 
 <p>
   Crucially, because the governing fluid mechanical equation is only Laplace's equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow. 
 </p>
 
-<p>
   <example xml:id="example-potential-movingsource">
     <title>Line source in a uniform flow</title>
    <p> 
@@ -261,24 +250,23 @@ c
 </p> 
 
 <p> The streamlines (or velocity field) is shown below.
-      <figure xml:id="fig-potential-movinglinesource">
-        <image source="movinglinesource" width="90%"/> 
-          <caption>Streamlines (or velocity field) of a line source in a uniform flow with <m>U = 1</m> and <m>Q = 1</m>.</caption>
-        </figure>
       </p>
+      <figure xml:id="fig-potential-movinglinesource">
+          <caption>Streamlines (or velocity field) of a line source in a uniform flow with <m>U = 1</m> and <m>Q = 1</m>.</caption>
+        <image source="movinglinesource" width="90%"/> 
+        </figure>
 
 <p>
   Where do you think the stagnation point lies in this flow? 
 </p>
   </example>
-</p>
 
   </subsection>
 </section>
 
   <section>
    <title>The streamfunction</title>
-
+<introduction>
    <p>
     Our next task is to introduce the concept of the <em>streamfunction</em>. Remember that in 2D, the irrotational flow led to the equation <xref ref="eqn-2d-irrotational"/> and this led to the existence of the potential function. If we begin with incompressibility, however, we have <xref ref="eqn-2d-divu"/>, which can be written as 
     <men xml:id="eqn-1d-divu-cross">
@@ -300,7 +288,7 @@ c
    </p>
 
    <p>
-    Why all this work? The streamfunction has an intuitive intepretation via the following result. 
+    Why all this work? The streamfunction has an intuitive intepretation via the following result. </p>
 
     <theorem xml:id="thm-streamfunction">
       <title>The streamfunction is constant along streamlines</title>
@@ -310,7 +298,6 @@ c
         </p>
       </statement>
 
-      <p>
       <proof>
         <p>
           The proof follows simply by the fact that
@@ -324,17 +311,15 @@ c
           The above equality indicates that the velocity vector, <m>\bu</m>, is orthogonal to the vector pointing along <m>\nabla \psi</m>. However, it is known from Vector Calculus that <m>\nabla \psi</m> runs along curves of steepest descent/ascent of <m>\psi</m>---these must hence be orthogonal to the level sets of <m>\psi</m>. Therefore, the level sets of <m>\psi</m> are tangential to <m>\bu</m> (the definition of a streamline).
         </p>
       </proof>
-    </p>
     </theorem>
-   </p>
 
 
    <p>
-    A graphical depiction of the property in <xref ref="thm-streamfunction"/> is shown below.
+    A graphical depiction of the property in <xref ref="thm-streamfunction"/> is shown below.</p>
 
     <figure xml:id="fig-streamfunction">
-      <image source="streamfunction.jpg" width="70%"/>
       <caption>Flow between two streamlines, where the streamlines <m>\psi_1</m> and <m>\psi_2</m> are constant. Later, we will consider the flux through the contour <m>C</m> illustrated in the figure along with its unit normal <m>\bn</m>.</caption>
+      <image source="streamfunction.jpg" width="70%"/>
     </figure>
 
 
@@ -343,12 +328,11 @@ c
           <caption>Streamlines (or velocity field) of uniform flow with <m>U = 1</m> and <m>\alpha = \pi/4</m>.</caption>
         </figure> -->
 
-   </p>
-
+   
 
    <p>
     The streamfunction is thus constant on streamlines. Consider two streamlines. The following theorem relates the flux between the streamlines to the streamline values. 
-
+   </p>
     <theorem xml:id="thm-flux-streamlines">
       <title>Flux between streamlines</title>
       <statement>
@@ -360,7 +344,6 @@ c
         </p>
       </statement>
 
-      <p>
         <proof>
           <p>
             By definition, the flux is given by the integral 
@@ -382,15 +365,13 @@ c
           Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. 
         </p>
         </proof>
-      </p>
 
     </theorem>
-  </p>
       
     
     <p>
         Finally, note that the velocity potential was governed by Laplace's equation, <m>\nabla^2 \phi = 0</m>. The streamfunction is also governed by the same Laplace's equation. 
-
+    </p>
        
    <theorem xml:id="thm-streamfunction-laplace">
           <title>Streamfunction satisfies Laplace's equation</title>
@@ -403,16 +384,13 @@ c
             </p>
           </statement>
 
-          <p>
             <proof>
               <p>
                 Substitute the relationship <xref ref="eqn-2d-uv-streamfunction"/> into <xref ref="eqn-2d-irrotational"/>.
               </p>
             </proof>
-          </p>
         </theorem>
-   </p>
-
+   
    <p>
     Like in the situation of certain flows, e.g. the line source in <xref ref="example-potential-linesource"/>, it is easier to work in alternative coordinate systems to study the streamfunction. Since we know that <m>\bu = \nabla \times (\psi \bk)</m> by <xref ref="eqn-2d-streamfunction"/>, we can use the conversion of the curl to polar coordinates in <xref ref="eqn-identity-curlpolar"/> to give 
     <men xml:id="eqn-streamfunction-polar">
@@ -420,6 +398,7 @@ c
     </men>
    which allows us to relate the radial and angular velocities to the streamfunction. 
    </p>
+</introduction>
 
    <subsection>
     <title>Elementary flows</title>
@@ -429,7 +408,6 @@ c
    </p>
 
 
-  <p>
     <example>
       <title>Uniform flow</title>
       <idx><h>uniform flow, streamfunction</h></idx>
@@ -446,9 +424,7 @@ c
       which indeed yields the image seen in <xref ref="fig-potential-uniform"/>.
       </p>
     </example>
-  </p>
 
-  <p>
     <example>
       <title>Stagnation point flow</title><idx><h>stagnation point flow, streamfunction</h></idx>
 
@@ -461,9 +437,7 @@ c
         
       </p>
     </example>
-  </p>
 
-<p>
   <example xml:id="example-streamfunction-linesource">
     <title>Line source</title>
    <idx><h>line source, streamfunction</h></idx> 
@@ -480,13 +454,11 @@ c
     Then indeed note that the lines of constant <m>\psi</m> are given by the radial lines of constant <m>\theta</m>, matching the illustration in <xref ref="fig-potential-linesource"/>.  
    </p>
   </example>
-</p>
    
 <p>
     Another remark concerns the fact that <m>\psi</m> is a multi-valued function in the example of the line source <xref ref="example-streamfunction-linesource"/>, gaining a jump of <m>Q</m> every time the origin is encircled. This is indeed a warning that the standard proof, analogous to <xref ref="thm-exist-potential"/>, leading to the existence of a unique streamfunction, via <xref ref="eqn-streamfunction-def-psi"/> would not apply since the velocity field <xref ref="example-streamfunction-linesource"/> is not defined at the origin. However, despite this, we see that the streamfunction provides well-defined predictions of streamlines on the <em>cut</em> plane with e.g. <m>\theta \in [0, 2\pi)</m>.
    </p>
 
-<p>
   <example>
     <title>Line source in a uniform flow</title>
 
@@ -505,13 +477,11 @@ c
    </me>
   </p>
   </example>
-</p>
 
 <p>
   Our previous examples were reliant on considering the flows generated by the velocity potentials studied previously. However, we can also consider "fundamental solutions" of the equation <m>\nabla^2 \psi = 0</m> in their own right. Recall that in deriving the velocity potential of the line source in <xref ref="example-potential-linesource"/>, we considered the solution of an axi-symmetric problem, where <m>\phi = \phi(r)</m> is only dependent on the distance from the origin. A similar argument must imply that the analogous axi-symmetric streamfunction is a permissible solution. And this leads us to the following example. 
 </p>
 
-<p>
   <example xml:id="example-streamfunction-linevortex">
    <title>Line vortex </title>
    <idx><h>line vortex</h></idx>
@@ -527,13 +497,13 @@ c
    <p>
     The streamlines of such a flow correspond to circular trajectories with <m>r</m> constant, and are visualised in 
     <!-- <xref ref="fig-streamfunction-linevortex"/>. -->
+</p>
 
       <figure xml:id="fig-streamfunction-linevortex">
-        <image source="linevortex" width="90%"/> 
           <caption>Streamlines (or velocity field) of a line vortex with <m>\Gamma = 1</m>.</caption>
+        <image source="linevortex" width="90%"/> 
         </figure>
-  </p>
-
+  
 
    <p>
     Recall that the radial and angular velocities are given by <xref ref="eqn-streamfunction-polar"/>. Therefore, we see that the velocity vector is given by 
@@ -559,13 +529,12 @@ c
     So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
    </p>
   </example>
-</p>
 </subsection>
 </section>
 
 <section xml:id="sec-complex-potential">
   <title>The complex potential</title>
-
+<introduction>
  <p>
   In the previous two sections, we studied the properties and utility of the velocity potential <m>\phi</m> and streamfunction <m>\psi</m> in the context of two-dimensional potential flows (inviscid, incompressible, irrotational). We did this with techniques from real-valued Vector Calculus.  As it turns out, there is a much more elegant and powerful framework for studying two-dimensional flow which leverages the significant power of complex analysis and complex variables. 
  </p>
@@ -593,7 +562,6 @@ c
  The crucial difference with real-valued differentiation is that the above limit is required to hold whilst approaching the point <m>z</m> in any direction of the complex plane.
  </p>
 
- <p>
   <remark>
     <p>
       As long as you stay away from exceptional points of a function, the "calculus" of complex functions is largely the same as for real-valued functions, e.g. 
@@ -604,12 +572,12 @@ c
       and the usual rules of algebraic manipulations hold. There are some caveats, however, which are dealt with on an individual manner.
     </p>
   </remark>
- </p>
-
+ 
 
  <p>
   Below, we will often use susbcripts for partial differentiation, e.g. <m>u_x = \pd{u}{x}</m>.
  </p>
+</introduction>
 
  <subsection xml:id="subsec-complex-introduction">
   <title>Cauchy's theorem and harmonic functions</title>
@@ -617,7 +585,6 @@ c
   <p>We will follow the reference text by <xref ref="ref-kreyszig"/> and <xref ref="ref-fornberg"/>  and introduce the basic notions of complex functions that we will need. 
   </p>
 
-  <p>
     <definition xml:id="def-analytic">
       <title>Analyticity</title>
       <idx><h>analytic</h></idx>
@@ -639,22 +606,19 @@ c
         </p>
       </statement>
     </definition>
-  </p>
 
   <p>
     Note that above, we have stated that a function is analytic if it is well-defined and differentiable <em>once</em>(!) As it turns out, the requirement that a complex-valued function is differentiable is a strong condition. An analytic function turns out to be infinitely differentiable by consequence!
   </p>
  
-  <p>
   <remark>
     <p>
       In this module, we will not be concerned with formalities when they are not relevant. For example, in our definition of analyticity, we do not specify if the relevant domains are open or closed. The functions we work with are generally non-pathological---they may have isolated singularities or exceptional points, but generally the application and context will make it clear the limits of our results.
     </p>
   </remark>
- </p>
-
+ 
   <p>
-    Now we have one of the most important theorems of complex analysis. 
+    Now we have one of the most important theorems of complex analysis. </p>
 
     <theorem xml:id="thm-CR1">
       <title>Cauchy-Riemann equations I</title>
@@ -672,7 +636,6 @@ c
         </p>
       </statement>
 
-      <p>
         <proof>
           <p>
             (Non-examinable)
@@ -693,12 +656,11 @@ c
           Equating the two results then yields the Cauchy-Riemann equations.
           </p>
         </proof>
-      </p>
     </theorem>
-  </p>
 
 <p>
   It turns out that the Cauchy-Riemann equations are not only necessary to an analytic function, but are actually sufficient as well. 
+</p>
 
   <theorem xml:id="thm-CR2">
     <title>Cauchy-Riemann equations II</title>
@@ -708,7 +670,6 @@ c
       </p>
     </statement>
 
-    <p>
       <proof>
         <p>
           (Non-examinable)
@@ -717,11 +678,8 @@ c
           The proof is not difficult, but we will refer students to <xref ref="ref-kreyszig"/> for its proof. It relies on constructing the derivative of <m>f</m> along any direction using the decomposition into the two Cartesian directions.
         </p>
       </proof>
-    </p>
   </theorem>
-</p>
 
-<p>
   <theorem xml:id="thm-complex-inf-derivatives">
     <statement>
       <p>
@@ -730,10 +688,10 @@ c
     </statement>
   </theorem>
   
-</p>
 
 <p>
   Our last step involves relating complex functions to the solution of Laplace's equation(s), i.e. <xref ref="eqn-2d-laplace"/> or <xref ref="eqn-2d-streamfunction-laplace"/>, that govern potential flow.
+</p>
 
   <theorem xml:id="thm-complex-laplace">
     <title>Analyticity and Laplace's equation</title>
@@ -749,7 +707,6 @@ c
       </p>
     </statement>
 
-    <p>
       <proof>
         <p>
           Since <m>f</m> is analytic, then it follows from <xref ref="thm-CR1"/> that <m>u_x = v_y</m> and <m>u_y = -v_x</m>. It furthermore follows from <xref ref="thm-complex-inf-derivatives"/> that <m>f</m> is differentiable to all orders; therefore, we can take derivatives to obtain 
@@ -760,9 +717,7 @@ c
           
         </p>
       </proof>
-    </p>
   </theorem>
-</p>
 
 <p>
   The above theorem is truly a remarkable result; it would not be a stretch to state that this single result was at the forefront of why complex analysis played such an important role in the development of applied mathematics and physics in the 18th, 19th, and 20th centuries. 
@@ -790,6 +745,7 @@ c
 
   <p>
     We will associate the velocity potential, <m>\phi</m>, and streamfunction <m>\psi</m> with an analytic function in the following way. 
+  </p>
 
     <definition xml:id="def-complex-potential">
       <statement>
@@ -814,11 +770,9 @@ c
         </p>
       </statement>
     </definition>
-  </p>
+  
 
 
-
-  <p>
     <example>
       <title>Uniform flow</title>
       <idx><h>uniform flow, complex</h></idx>
@@ -831,9 +785,7 @@ c
        This can be compared to  <xref ref="example-potential-uniform"/>.
       </p>
     </example>
-  </p>
-
-  <p>
+  
     <example>
       <title>Stagnation point flow</title>
       <idx><h>stagnation point flow, complex</h></idx>
@@ -846,9 +798,7 @@ c
        This can be compared to  <xref ref="example-potential-stagnation"/>.
       </p>
     </example>
-  </p>
   
-  <p>
     <example>
       <title>Line source</title>
       <idx><h>line source, complex</h></idx>
@@ -890,9 +840,7 @@ c
         once we have multiplied the top and bottom by the conjugate of <m>z</m>.
       </p>
     </example>
-  </p>
-
-  <p>
+  
     <example>
       <title>Line vortex flow</title>
       <idx><h>line vortex, complex</h></idx>
@@ -914,14 +862,14 @@ c
        Therefore, the streamfunction is given by <m>\psi = -(\Gamma/2\pi) \log r</m> and is constant along circular trajectories with constant distance from the origin, <m>r</m>. 
       </p>
     </example>
-  </p>
-
+  
  </subsection>
 </section>
 
 <section xml:id="sec-method-of-images">
   <title>The method of images</title>
 
+  <introduction>
   <p>
     The preceeding sections would give the misleading impression that solving potential-flow problems for two-dimensional flows is easy. This is not the case, and the primary reason is due to the presence of <em>boundary conditions</em>. The elementary flows we have previously considered were unconfined and/or we did not consider additonal constraints on their behaviours at infinity. In reality, a real physical fluid, whether in the ocean, the air, or in a container, is confined in some direction, and we must often consider subtle questions about the mechanism that produces the fluid motion. 
   </p>
@@ -936,19 +884,19 @@ c
       \bu \cdot \bn = \nabla \phi \cdot \bn = 0 \quad \text{on $\partial V$}.
     </me>
   </p>
+  </introduction>
 
   <subsection xml:id="subsec-images-planar">
     <title>Planar boundaries: a half-plane</title>
 
    <p>
     Consider the situation illustrated in <xref ref="image-planar01"/>.
-
+</p> 
     <figure xml:id="image-planar01">
       <caption>Blah</caption>
       <image source="image-planar01.jpg" width="80%"/>
     </figure>
-   </p> 
-
+   
    <p>
     We envision a semi-infinite region of fluid bounded on the left by a wall at <m>x = 0</m>. A single (line) source of strength <m>Q</m> is placed at <m>x = d</m>. Therefore from <xref ref="eqn-complex-linesource"/>, we would expect that at least near <m>x = d</m>, the complex potential behaves as 
     <me>
@@ -967,7 +915,6 @@ c
    <p>
     Our inspired solution to the above problem is referred to as <em>the method of images</em>.</p>
 
-    <p>
     <note xml:id="note-method-of-images">
       <title>Method of images</title>
 
@@ -983,8 +930,7 @@ c
       The strengths and locations of the individual contributions are chosen so that boundary conditions on the required boundaries (including at infinity) can be met. 
       </p>
     </note>
-   </p>
-
+   
    <p>
     Notice that the <em>linearity</em> of the potential flow problem is crucial: any analytic function is associated with a velocity potential that satisfies Laplace's equation, <m>\nabla^2 \phi = 0</m>, and therefore the superposition of such functions also yields a permissible complex potential, <m>f</m>. 
    </p>
@@ -995,13 +941,12 @@ c
       f(z) = \frac{Q}{2\pi} \log(z - d) + \frac{Q}{2\pi} \log(z + d). 
     </me>
     This yields the illustration of the flow in <xref ref="fig-image-planar02"/>
-
+</p> 
      <figure xml:id="fig-image-planar02">
       <caption>Blah</caption>
       <image source="image-planar02.jpg" width="80%"/>
     </figure>
-   </p> 
-
+   
    <p>
     The corresponding complex velocity is given by 
     <me>
@@ -1024,12 +969,12 @@ c
     f(z) = \frac{Q}{2\pi} \left[ \log r_1 + \log r_2\right] + \im \frac{Q}{2\pi}\left[ \theta_1 + \theta_2 \right].
     </me>
     The definitions of <m>r_1, r_2</m> and <m>\theta_1, \theta_2</m>, are shown in the below figure. In order for each logarithm to be well defined, the angles <m>\theta_1</m> and <m>\theta_2</m> must be restricted to be less than a complete revolution. We thus restrict <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_1 \in [-\pi, \pi)</m>. 
-
+  </p>
     <figure xml:id="fig-image-duallog">
       <caption>Blah</caption>
       <image source="image-duallog.jpg" width="100%"/>
     </figure>
-   
+  <p>
   In <xref ref="ps-image-planar02"/>, you will be asked to develop an equation for the streamlines of this flow. 
    </p>
 
@@ -1056,7 +1001,6 @@ c
   <p>
     There is an exercise in <xref ref="ps-image-planar03"/>.
   </p>
-  </subsection>
 
   <remark>
     <title>Uniqueness of solutions</title>
@@ -1071,6 +1015,7 @@ c
     </p>
     
   </remark>
+  </subsection>
 
 
   <!-- <subsection">

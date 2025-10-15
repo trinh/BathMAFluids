@@ -254,16 +254,19 @@
 
   <section xml:id="sec-helmholtz">
     <title>The Helmholtz principle</title>
-    <p>As mentioned in Chapter <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
-      vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>:
-      <me>
-        \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu.
-      </me>
-      In two-dimensional irrotational flow, the right-hand side is zero, so the vorticity of each fluid
-      particle is constant in time. This is a special case of the more general result known as
-      the <em>Helmholtz principle</em>, which states that in an inviscid fluid, the vorticity
-      of each fluid particle is conserved.
-    </p>
+    <introduction>
+      <p>
+        As mentioned in Chapter <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
+        vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>:
+        <me>
+          \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu.
+        </me>
+        In two-dimensional irrotational flow, the right-hand side is zero, so the vorticity of each fluid
+        particle is constant in time. This is a special case of the more general result known as
+        the <em>Helmholtz principle</em>, which states that in an inviscid fluid, the vorticity
+        of each fluid particle is conserved.
+      </p>
+    </introduction>
 
     <subsection xml:id="sec-circulation">
       <title>The circulation in a flow</title>
@@ -443,7 +446,7 @@
       Here are some examples.
     </p>
   </section>
-  
+
   <exercises xml:id="ws-vorticity">
     <introduction>
       <warning>
