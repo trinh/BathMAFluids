@@ -404,18 +404,33 @@
         </p>
       </proof>
 
-      <remark>
-        <title>Use of the bump lemma</title>
-       
         <p>
           Within the above proof, we use an idea used throughout this chapter,
           which is that if an integral of a quantity (the integrand) is zero for all possible
           domains of integration, then the integrand, itself, is zero.
           This is sometimes referred to as the "Bump lemma".
-          In <xref ref="ex-bump"/>, you will prove this lemma. 
         </p>
-        
-      </remark>
+
+      <lemma xml:id="lem-bump">
+      <title>Bump lemma</title>
+      <statement>
+        <p>
+        Let <m>f(\bx)</m> be a sufficiently smooth function defined on <m>\Omega \subseteq \mathbb{R}^n</m>. Suppose it is the case that 
+        <me>
+          \int_V f(\bx) \, \de{V} = 0,
+        </me>
+        for all <m>V \subseteq \Omega</m>. Then 
+        <me>
+          f(\bx) \equiv 0
+        </me>
+        in <m>\Omega</m>.
+        </p>
+      </statement>
+    </lemma>
+
+    <p>
+    In <xref ref="ex-bump"/>, you will prove the above lemma.
+    </p>
     </introduction>
 
 
@@ -542,6 +557,10 @@
           </p>
         </statement>
       </theorem>
+
+      <p>
+        Note that above, we have used the notation <m>\nabla \bu</m> for the gradient of a vector. This is explained in <xref ref="remark-vector-gradient"/>.
+      </p>
     </introduction>
 
     <subsection>
@@ -794,7 +813,6 @@
       <p>
         For the situation of fluid at a solid boundary, this leads us to formulate the following. </p>
 
-        <p>
         <note xml:id="note-noflux-BC">
           <title>No-flux condition through a boundary</title>
           <p>
@@ -807,7 +825,6 @@
         This condition states that the fluid cannot flow through <m>\partial V</m> or separate from <m>\partial V</m> (hence leaving a vacuum). 
       </p>
     </note>
-      </p>
 
       <p>
         It turns out that the above no-flux condition is sufficient to provide well-posed boundary
@@ -1118,7 +1135,7 @@ What size of hole would required so that a continuum model of the salt flow is a
 </p>
 </statement>
 
-<answer>
+<solution>
 <p>
 Salt is not like a fluid because you can make it into a pile,
 whereas the surface of a resting fluid is always horizontal.
@@ -1133,52 +1150,37 @@ i.e. <m>3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximat
 <m>10</m> cm. We need a hole that is many times this distance, perhaps a hole with a diameter
 of one metre or so might be reasonable!
 </p>
-</answer>
+</solution>
 </exercise>
 
 
 
 <exercise xml:id="ex-bump">
   <title>Bump lemma</title>
- 
+
+  <statement>
   <p>
-    Within our derivations of the governing equations, we often make use of the following lemma: 
-
-    <lemma xml:id="lem-bump">
-      <title>Bump lemma</title>
-      <statement>
-        <p>
-        Let <m>f(\bx)</m> be a sufficiently smooth function defined on <m>\Omega \subseteq \mathbb{R}^n</m>. Suppose it is the case that 
-        <me>
-          \int_V f(\bx) \, \de{V} = 0,
-        </me>
-        for all <m>V \subseteq \Omega</m>. Then 
-        <me>
-          f(\bx) \equiv 0
-        </me>
-        in <m>\Omega</m>.
-        </p>
-      </statement>
-    </lemma>
+    Within our derivations of the governing equations, we often make use of the so-called "Bump lemma" given in <xref ref="lem-bump"/>.
   </p>
-
   <p>
     Give a proof of the lemma.
   </p>
+  </statement>
 
-  <answer>
+  <solution>
     <p>
       This proof assumes that the function <m>f</m> is not pathological (e.g. it cannot oscillate infinitely fast, take different values for rational vs. irrational, etc.). That's what we mean by "sufficiently smooth". 
     </p>
     <p>
       Assume that there exists a point <m>\bx_0 \in \Omega</m> where <m>f(\bx_0) \neq 0</m>. Suppose without loss of generality <m>f > 0</m> here. Since <m>f</m> is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near <m>\bx_0</m> where <m>f > 0</m> everywhere in this neighbourhood, say <m>V_0</m>. Then <m>\int_{V_0} f \, \de{V} = 0</m>, contradicting the assumption. Therefore <m>f</m> must be zero everywhere.
     </p>
-  </answer>
+  </solution>
 </exercise>
 
 <exercise xml:id="ex-leibnitz-rule">
   <title>Leibnitz's rule</title>
  
+  <introduction>
   <p>
     The Reynolds' Transport Theorem <xref ref="thm-RTT"/>,
     which relates to the passage of a time derivative through an integral,
@@ -1187,23 +1189,25 @@ of one metre or so might be reasonable!
      <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
      <mrow xml:id="eqn-leibnitz-rule"> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} + f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
     </mdn>
+  </p>
+</introduction>
 
 
-    <ol>
-      <li>
-        <p>
-          Examine the figure in <xref ref="ex-fig-leibnitz"/>.
-          Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?
+  <task>
+    <statement>
+      <p>
+        Examine the figure in <xref ref="ex-fig-leibnitz"/>.
+        Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?</p>
+        
+        <figure xml:id="ex-fig-leibnitz">
+          <caption>Visual "proof" of Leibnitz's rule</caption>
+          <image source="equations_leibnitz.jpg" width="90%">
+            <shortdescription>Leibnitz</shortdescription>
+          </image>
+        </figure>
+      </statement>
 
-          <figure xml:id="ex-fig-leibnitz">
-            <caption>Visual "proof" of Leibnitz's rule</caption>
-            <image source="equations_leibnitz.jpg" width="90%">
-              <shortdescription>Leibnitz</shortdescription>
-            </image>
-          </figure>
-        </p>
-
-        <answer>
+        <solution>
           <p>
             The first circled element is associated with the quantity: 
             <me>
@@ -1227,31 +1231,34 @@ of one metre or so might be reasonable!
             </me>
             and is associated with the area of the rectangle. Notice that for small <m>\Delta t</m>, the rectangle height of <m>f(x, t+\Delta t)</m> is approximately the same as the rectangle height of <m>f(x, t)</m>.
           </p>
-        </answer>
-      </li>
-      <li>
-        <p>
-         A nice proof of the Leibnitz rule is given in <url href="https://www.youtube.com/watch?v=zbWihK9ibhc">this YouTube video by Brian Storey</url>. Watch the video and follow the derivation, making your own notes. 
-        </p>
-      </li>
+        </solution>
+      </task>
 
-      <li>
-        <p>
-          Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule"/> 
-          to the Reynolds' Transport Theorem in <xref ref="eqn-RTT"/>?
-        </p>
+      <task>
+        <statement>
+          <p>
+            A nice proof of the Leibnitz rule is given in <url href="https://www.youtube.com/watch?v=zbWihK9ibhc">this YouTube video by Brian Storey</url>. Watch the video and follow the derivation, making your own notes. 
+          </p>
+        </statement>
+      </task>
 
-        <answer>
+      <task>
+        <statement>
+          <p>
+            Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule"/> 
+            to the Reynolds' Transport Theorem in <xref ref="eqn-RTT"/>?
+          </p>
+        </statement>
+
+        <solution>
           <p>
             Write the second and third terms on the RHS as 
             <me>
               \int_{a(t)}^{b(t)} \dd{}{x}(f(x, t) u(x, t)) \, \de{x}.
             </me>
           </p>
-        </answer>
-      </li>
-    </ol>
-  </p>
+        </solution>
+      </task>
 </exercise>
 
 <!--
@@ -1289,7 +1296,7 @@ of one metre or so might be reasonable!
     <li>
       <p>
         Use the Reynolds' Transport Theorem to find the depth of water in the tank during Phase (i).
-    <answer>
+    <solution>
       <p>
         We define the control volume <m>V(t)</m> to be the volume of water in the tank and apply
         mass conservation to the system of particles. We set <m>f=\rho</m> to be the mass per unit
@@ -1313,21 +1320,21 @@ of one metre or so might be reasonable!
         Substituting <m>V_{CV} = Ah</m>, where <m>h(t)</m> is the depth of fluid at time <m>t</m>, we get
       </p>
       <me>h = \frac{Qt}{A}</me>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>At what time does Phase (ii) start?</statement>
-    <answer>
+    <solution>
       <p>
         The outlet is reached when <m>h = H/2</m>, which happens at time <m>t = \tfrac{AH}{2Q}</m>, the beginning of Phase (ii).
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>Find the height <m>h(t)</m> in the tank during Phase (ii).</statement>
-    <answer>
+    <solution>
       <p>
         We apply the RTT as before, so
       </p>
@@ -1350,12 +1357,12 @@ of one metre or so might be reasonable!
       <me>
         h = \frac{H}{2} + \frac{Q}{k}\left(1 - e^{kH/2Q} e^{-kt/A}\right)
       </me>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>Assuming that <m>k</m> is small enough that the tank actually fills, how long does Phase (ii) last?</statement>
-    <answer>
+    <solution>
       <p>
         Phase (ii) ends when the tank is full, that is <m>h = H</m>, which implies
       </p>
@@ -1365,25 +1372,25 @@ of one metre or so might be reasonable!
       <p>
         Thus Phase (ii) lasts for a time <m> -\tfrac{A}{k} \ln(1 - kH/(2Q))</m>.
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>What is the largest possible value of <m>k</m> so that the tank fills?</statement>
-    <answer>
+    <solution>
       <p>
         We require <m>kH/(2Q) &lt; 1</m>. Thus the largest value of <m>k</m> is <m>2Q/H</m>.
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>Hence sketch a graph of the height of the water in the tank over time.</statement>
-    <answer>
+    <solution>
       <figure>
         <image source="tank-filling.pdf" />
       </figure>
-    </answer>
+    </solution>
   </task>
 
   <task>
@@ -1392,14 +1399,14 @@ of one metre or so might be reasonable!
       What height of the fluid in the tank would cause this outflow if it were not forced (that is, if the tank were much taller)?
       Where does the force come from that causes this pressure rise?
     </statement>
-    <answer>
+    <solution>
       <p>
         Let the unknown height be <m>H_0</m>. We require <m>Q = k(H_0 - H/2)</m>, meaning that the required height is <m>H_0 = Q/k + H/2</m>.
       </p>
       <p>
         Once the tank is full, the pressure in it can rise arbitrarily, because there is no longer atmospheric air in it. The pressure in the inlet needs to rise to create the extra pressure within the tank.
       </p>
-    </answer>
+    </solution>
   </p>
       </p>
     </li>
@@ -1420,10 +1427,11 @@ of one metre or so might be reasonable!
 <exercise xml:id="ex-euler-check">
   <title>Derivation of governing equations</title>
 
-  <p>
-    <em>This is a re-derivation of what is already presented in the notes, giving you valuable practice to understand the concepts.</em>
-  </p>
- 
+  <statement>
+    <p>
+      <em>This is a re-derivation of what is already presented in the notes, giving you valuable practice to understand the concepts.</em>
+    </p>
+    
   <p>
     Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid,
     use Reynolds' Transport Theorem <xref ref="eqn-RTT"/> to derive the equations:
@@ -1432,12 +1440,13 @@ of one metre or so might be reasonable!
       <mrow>\DD{\bu}{t} = -\frac{1}{\rho} \nabla p + \bg. </mrow>
     </mdn>
   </p>
-
+  
   <p>
     What additional assumptions are required to transform the set of equations to the Euler equations of <xref ref="def-euler"/>? Apply these assumptions and conclude with the Euler equations.
   </p>
-
-  <answer>
+</statement>
+  
+  <solution>
     <p>
       The proof of the continuity equation is given in <xref ref="thm-mass"/> and the proof of the
       momentum equation is given in <xref ref="thm-momentum"/>, so make sure you can follow these
@@ -1450,7 +1459,7 @@ of one metre or so might be reasonable!
       Incompressibility implies that <m>\nabla \cdot \bu = 0</m>,
       and this equation then replaces the continuity equation.
     </p>
-  </answer>
+  </solution>
   
   
 </exercise>
@@ -1469,7 +1478,7 @@ Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1
 If the wind speed is 150 m/s at an altitude of 8 m, what is the total energy
 per unit mass of the air, relative to zero altitude?
 </p>
-<answer>
+<solution>
 <p>
 The total energy per unit mass of the fluid is
 <md>
@@ -1479,19 +1488,19 @@ The total energy per unit mass of the fluid is
 \approx2.2\times10^5\,\mbox{J/kg}.</mrow>
 </md>
 </p>
-</answer>
+</solution>
 </li>
 <li>
 <p>
 Are any of the contributions negligible?
 </p>
-<answer>
+<solution>
 <p>
 The three terms have orders of magnitude <m>10^5</m>, <m>10^4</m> and <m>10^2</m> J/kg,
 respectively. Thus the gravitational potential energy is relatively unimportant,
 compared to the contributions due to the internal energy and the kinetic energy.
 </p>
-</answer>
+</solution>
 </li>
 </ol>
 </statement>
@@ -1499,7 +1508,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
 
 <exercise xml:id="ex-fluid-pressure-uniform-velocity">
 <title>Pressure field in uniform flow</title>
-  <statement>
+  <introduction>
     <p>
       An ideal (incompressible and irrotational) fluid in a gravitational field with density <m>\rho</m> and acceleration
       vector <m>\bg = -g \bk</m> (with <m>\bk</m> being the unit vector in the positive <m>z</m>-direction) has uniform velocity
@@ -1508,13 +1517,16 @@ compared to the contributions due to the internal energy and the kinetic energy.
     </me>
       The pressure at the origin is fixed at <m>p_0</m>.
     </p>
+  </introduction>
 
-    <ol marker="a">
-      <li>
+  <task>
+    <statement>
         <p>
           Using the Euler equations in <xref ref="def-euler"/>, find the pressure field in terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>.
         </p>
-        <answer>
+    </statement>
+
+        <solution>
         <p>
           The fluid has a uniform velocity, which means that all components of <m>\nabla\bu</m>
            vanish. The Euler equation simplifies to
@@ -1563,39 +1575,43 @@ compared to the contributions due to the internal energy and the kinetic energy.
           p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
         </me>
       </p>  
-      </answer>
-      </li>
-      <li>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
         <p>
           Draw the contours of the pressure at a fixed time <m>t</m>, and hence describe the pressure field.
         </p>
-        <answer>
+      </statement>
+
+        <solution>
         <p>
           The pressure is constant on planes normal to the vector
           <m>(b, \; 3t^2, \; e^t + g)</m>, as illustrated below:
         </p>
         <figure xml:id="fig-pressure-contours">
-          <image source="ch-chapter03-pressure-contours.png"/>
           <caption>Contours of the pressure field at fixed <m>t</m>.</caption>
+          <image source="ch-chapter03-pressure-contours.png"/>
         </figure>
-        </answer>
-      </li>
-    </ol>
-  </statement>
+        </solution>
+      </task>
 </exercise>
 
 <exercise xml:id="ex-piston-fluid-problem">
 <title>Piston problem</title>
   <statement>
-    <figure xml:id="fig-piston">
-      <image source="ch-chapter03-piston.png"/>
-      <caption>Schematic of piston and pipe system.</caption>
-    </figure>
     <p>
       The piston shown in the diagram below is pushed with a force <m>F(t)</m>
       into a pipe of length <m>L</m> and cross-sectional area <m>A</m>
       containing incompressible and irrotational fluid of density <m>\rho</m>.
     </p>
+
+    <figure xml:id="fig-piston">
+      <caption>Schematic of piston and pipe system.</caption>
+      <image source="ch-chapter03-piston.png"/>
+    </figure>
+
     <p>Assume that the pressure at the open end is held at atmospheric pressure, <m>p = p_\text{atm}</m>.</p>
 
     <p>
@@ -1605,7 +1621,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
     </p>
   </statement>
 
-  <answer>
+  <solution>
     <p>
       We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
       Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
@@ -1632,20 +1648,22 @@ compared to the contributions due to the internal energy and the kinetic energy.
         \dd{^2X}{t^2} = \frac{F}{A\rho(L-X)}.
       </me>
     </p>
-  </answer>
+  </solution>
 </exercise>
 
 <exercise xml:id="ex-vorticity-equation">
   <title>The vorticity equation</title>
-  <statement>
+  <introduction>
     <p>
       Consider an incompressible fluid, with constant density 
       <m>\rho</m>, subject to a conservative body force 
       (i.e. <m>{\bg} = -\nabla \chi</m> for some potential function 
       <m>\chi</m>).
     </p>
-    <ol>
-      <li>
+  </introduction>
+
+  <task>
+    <statement>
         <p>
           Starting from the Euler equations, show that the 
          vorticity <m>\bomega = \nabla \times {\bu}</m> satisfies
@@ -1656,7 +1674,8 @@ compared to the contributions due to the internal energy and the kinetic energy.
           The method given in the notes uses an alternative expression for the momentum equation
           combined with a vector identity to get the same result with less effort.
         </p>
-        <answer>
+    </statement>
+        <solution>
         <p>
           The Euler equation reads:
           <me>
@@ -1713,14 +1732,18 @@ compared to the contributions due to the internal energy and the kinetic energy.
               +\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l},</mrow>
           </md>
         </p>-->
-      </answer>
-      </li>
-      <li>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
         <p>
           Deduce that, in two-dimensional incompressible flow, 
           <m>\omega</m> is conserved following the flow.
         </p>
-        <answer>
+      </statement>
+
+        <solution>
           <p>
             If the flow is the <m>(x,y)</m>-plane, we have <m>w=0</m> and all <m>z</m>-derivatives
             are zero. Hence the only non-zero component of the vorticity is the <m>z</m>-component,
@@ -1734,15 +1757,13 @@ compared to the contributions due to the internal energy and the kinetic energy.
             </me>
             meaning that <m>\bomega</m> is conserved following the flow.
           </p>
-        </answer>
-      </li>
-    </ol>
-  </statement>
+        </solution>
+      </task>
 </exercise>
 
 <exercise xml:id="ex-bernoulli-streamline">
   <title>Using streamlines: The clepsydra</title>
-  <statement>
+  <introduction>
   <p>
     One of the earliest means for measuring the passage of time, invented by the ancient
     Egyptians, was the <term>clepsydra</term> (or ‘water thief’): a large jar with a hole in its base is
@@ -1750,24 +1771,25 @@ compared to the contributions due to the internal energy and the kinetic energy.
     water surface to pass two equally-spaced markers on the side of the jar is constant.
   </p>
 
-  <p>
     <figure xml:id="fig-clepsydra">
       <caption>Clepsyndra</caption>
       <image source="clepsydra.png" width="50%">
         <shortdescription>clepsyndra</shortdescription>
       </image>
     </figure>
-  </p>
 
   <p>
     In this question you will determine the shape of jar required to achieve this.
     In particular, we denote the (axisymmetric) jar radius a height <m>z</m> above the hole by <m>r = a(z)</m>.
     The radius of the hole, <m>a_h \ne a(0)</m>, in general.
   </p>
-  <ol marker="(a)">
-    <li>
+  </introduction>
+
+  <task>
+    <statement>
       <p>Explain why the curve <m>r = a(z)</m> is a streamline.</p>
-      <answer>
+    </statement>
+      <solution>
       <p>
         The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>,
         so that no fluid leaves or enters the jar through its sides. Thus,
@@ -1776,9 +1798,11 @@ compared to the contributions due to the internal energy and the kinetic energy.
         </me>
         This is precisely the condition for <m>r = a(z)</m> to be a streamline.
       </p>
-    </answer>
-    </li>
-    <li>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
       <p>
         If the surface of the water lies at <m>z = h(t)</m>, use an appropriate form of
         Bernoulli’s principle to calculate the speed of liquid, <m>u</m>, leaving the jar at <m>z = 0</m>.
@@ -1787,7 +1811,9 @@ compared to the contributions due to the internal energy and the kinetic energy.
         [You may assume that the desired surface speed <m>u_S = |\dot{h}| \ll u</m>, so that the flow is
         approximately steady and that the fluid pressure is atmospheric at <m>z = 0</m>.]
       </p>
-      <answer>
+</statement>
+
+          <solution>
         <p>
           We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface
           at <m>z = h(t)</m> and the fluid leaving the hole at <m>z = 0</m>.
@@ -1803,15 +1829,19 @@ compared to the contributions due to the internal energy and the kinetic energy.
             gh = \frac12 u^2.
           </me>
         </p>
-      </answer>
-    </li>
-    <li>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
       <p>
         Use the principle of conservation of mass to link <m>u_S</m>, <m>u</m>, <m>a_h</m>
         and <m>a(h(t))</m>;
         thereby determine the correct shape for a clepsydra.
       </p>
-      <answer>
+      </statement>
+
+      <solution>
         <p>
           The volume flux out of the hole is <m>\pi a_h^2 u</m>, while the rate of decrease of
           the volume of fluid in the jar is <m>\pi a(h(t))^2 u_S</m>. Conservation of mass
@@ -1835,10 +1865,8 @@ compared to the contributions due to the internal energy and the kinetic energy.
           The terms in the brackets are constant, so we have that
           the radius of the jar must vary as the fourth root of the height.
         </p>
-      </answer>
-    </li>
-  </ol>
-  </statement>
+      </solution>
+    </task>
 </exercise>
 
 </exercises>

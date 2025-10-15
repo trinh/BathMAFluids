@@ -224,6 +224,58 @@
         </men>
       You will practice using this formula in <xref ref="ex-eulerian-lagrangian2"/> of the problem set.
       </p>
+
+      <remark xml:id="remark-vector-gradient">
+        <title>Vector gradient</title>
+        <p>
+          In the formula for the acceleration in <xref ref="eqn-accel"/>, the quantity 
+          <me>
+            \nabla \bu
+          </me>
+         appears. This is a tensor (matrix). One mustn't be too intimidated as it is just a convenient notation.</p>
+         
+         <p>It is worth considering what this must be by considering each individual element of the acceleration. The acceleration is calculated simply by taking the velocity,
+         <me>
+          \bu = (u, v, w) = (u_1, u_2, u_3). 
+         </me>
+         and working out the material derivative for each individual component. So we have
+         <men xml:id="eqn-material-deriv-ui">
+          \DD{u_i}{t} = \pd{u_i}{t} + \bu \cdot \nabla u_i.
+         </men>
+         So the above gives each of the three components of <m>\DD{\bu}{t}</m>. 
+        </p>
+
+        <p>
+          You may prefer to see the above written in terms of the notation for <m>\bu = (u, v, w)</m>, so it is
+        <md>
+          <mrow>\DD{u}{t} \amp= u_t + (u u_x + v u_y + w u_z)</mrow>
+          <mrow>\DD{v}{t} \amp= v_t + (u v_x + v v_y + w v_z)</mrow>
+          <mrow>\DD{w}{t} \amp= w_t + (u w_x + v w_y + w w_z)</mrow>
+        </md>          
+        </p>
+
+        <p>
+          You can also re-arrange the above in something closer to "matrix" form. So 
+          <me>
+            \DD{\bu}{t} = \pd{}{t}(u, v, w) + (u, v, w) \cdot \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix},
+          </me>
+          and where the last quantity corresponds to 
+          <men xml:id="eqn-grad-bu">
+            \nabla \bu \equiv \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix} = 
+            \begin{pmatrix}
+            u_x &amp; u_y &amp; u_z \\
+            v_x &amp; v_y &amp; v_z \\
+            w_x &amp; w_y &amp; w_z 
+            \end{pmatrix}.
+          </men>
+          And hence the vector gradient can be defined as a matrix, where each row of the matrix is the gradient of the elements of the vector.
+        </p>
+
+        <p>
+          The author's opinionated note it is that it is easier simply to remember that the material derivative is applied via <xref ref="eqn-material-deriv-ui"/> then it is to try and untangle the multiplication of matrix via <xref ref="eqn-grad-bu"/>.
+        </p>
+
+      </remark>
     </subsection>
   </section>
 
