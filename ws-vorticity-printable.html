@@ -292,7 +292,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
 <li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
@@ -345,8 +351,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-streamfunction.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Streamfunction formulation for two-dimensional flow</span></a></div></li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Worksheet</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -401,7 +406,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">The circulation <span class="process-math">\(\Gamma\)</span> around a closed curve <span class="process-math">\(C(t)\)</span> is defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\Gamma = \oint_{C} \mathbf{u} \cdot d\mathbf{x}.
+\Gamma = \oint_{C} \mathbf{u} \cdot \de\mathbf{x}.
 \end{equation*}
 </div>
 <div class="para">By transforming to Lagrangian variables show that <span class="process-math">\(\Gamma\)</span> is independent of <span class="process-math">\(t\text{.}\)</span> Deduce that a flow that is initially irrotational (i.e. <span class="process-math">\(\bomega = 0\)</span> at <span class="process-math">\(t=0\)</span>) remains irrotational for all time.</div>
