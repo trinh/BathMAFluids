@@ -528,6 +528,10 @@
     </me>
     So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
    </p>
+
+   <p>
+    In <xref ref="ps-streamfunction-flux-compute"/>, you will practice the computation of fluxes using line integrals. 
+   </p>
   </example>
 </subsection>
 </section>
@@ -570,6 +574,14 @@
       <mrow>\dd{(\log (z+1))}{z} = \frac{1}{z + 1}, \quad \dd{\sin(z^2)}{z} = 2z\cos(z^2). </mrow>
       </md>
       and the usual rules of algebraic manipulations hold. There are some caveats, however, which are dealt with on an individual manner.
+    </p>
+  </remark>
+
+    <remark>
+    <title>Examinable content</title>
+   
+    <p>
+      The proofs of all theorems from this section are non-examinable, but you are expected to understand the theorems and their relevance to the theory of potential flow.
     </p>
   </remark>
  
@@ -616,6 +628,8 @@
       In this module, we will not be concerned with formalities when they are not relevant. For example, in our definition of analyticity, we do not specify if the relevant domains are open or closed. The functions we work with are generally non-pathological---they may have isolated singularities or exceptional points, but generally the application and context will make it clear the limits of our results.
     </p>
   </remark>
+
+
  
   <p>
     Now we have one of the most important theorems of complex analysis. </p>
@@ -666,7 +680,7 @@
     <title>Cauchy-Riemann equations II</title>
     <statement>
       <p>
-      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z0 = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
+      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z) = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
       </p>
     </statement>
 
@@ -858,7 +872,8 @@
         <me>
           f(z) = \frac{\Gamma}{2\pi} (\theta - \im \log r),
         </me>
-        where <m>z = r\e^{\im\theta}</m>>.
+        where <m>z = r\e^{\im\theta}</m>.</p>
+        <p>
        Therefore, the streamfunction is given by <m>\psi = -(\Gamma/2\pi) \log r</m> and is constant along circular trajectories with constant distance from the origin, <m>r</m>. 
       </p>
     </example>
@@ -893,7 +908,7 @@
     Consider the situation illustrated in <xref ref="image-planar01"/>.
 </p> 
     <figure xml:id="image-planar01">
-      <caption>Blah</caption>
+      <caption>A flow region in the right half-plane, with a single source placed at <m>x = d</m>.</caption>
       <image source="image-planar01.jpg" width="80%"/>
     </figure>
    
@@ -943,7 +958,7 @@
     This yields the illustration of the flow in <xref ref="fig-image-planar02"/>
 </p> 
      <figure xml:id="fig-image-planar02">
-      <caption>Blah</caption>
+      <caption>Placement of the image source at <m>x = -d</m> makes it so the boundary condition on <m>x = 0</m> can be satisfied.</caption>
       <image source="image-planar02.jpg" width="80%"/>
     </figure>
    
@@ -971,7 +986,7 @@
     The definitions of <m>r_1, r_2</m> and <m>\theta_1, \theta_2</m>, are shown in the below figure. In order for each logarithm to be well defined, the angles <m>\theta_1</m> and <m>\theta_2</m> must be restricted to be less than a complete revolution. We thus restrict <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_1 \in [-\pi, \pi)</m>. 
   </p>
     <figure xml:id="fig-image-duallog">
-      <caption>Blah</caption>
+      <caption>When considering the evaluation of the flow, we must take care of the fact that the logarithm is multi-valued. A branch cut from each of the two branch points is imposed.</caption>
       <image source="image-duallog.jpg" width="100%"/>
     </figure>
   <p>
@@ -1231,6 +1246,24 @@
 </warning>
   </introduction>
 
+  <exercise>
+    <title>Potential flow simulator</title>
+   
+    <p>
+      There is an excellent <url href="https://potentialflow.com/">website at www.potentialflows.com</url> that allows you to plug in different flow elements (sources/sinks, vortices, etc.) into a potential flow and observe the streamlines and potential-flow lines. In your exercises, use this to help you visualise the flow.
+    </p>
+  </exercise>
+
+  <exercise xml:id="ps-streamfunction-flux-compute">
+    <title>Computation of the flux</title>
+    <statement>
+      <p>
+        A check point to make sure that students know how to compute fluxes. 
+      </p>
+    </statement>
+    
+  </exercise>
+
     <exercise xml:id="ps-image-planar01">
       <title>Single source in a semi-infinite flow</title>
       <statement>
@@ -1274,6 +1307,88 @@
       Check.
      </p> 
     </exercise>
+
+
+  <exercise>
+    <title>Doublet</title>
+   
+    <introduction>
+      <p>
+        A line source of strength <m>Q</m> is at <m>z = a</m> and a line sink of the same strength is at <m>z = -a</m> where <m>a > 0</m>. 
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Write down the complex potential, <m>f(z)</m>. Find <m>f'(z)</m>. Locate any stagnation points and derive an equation for the streamlines of the flow. Finally, use a plotter, such as the one at <url href="https://potentialflow.com/">the potential flow simulator</url> to sketch the streamlines. 
+        </p>
+      </statement>
+
+      <answer>
+        <p>
+          The complex potential is the sum of a line source and line sink:
+          <me>
+            f(z) = \frac{Q}{2\pi} [\log(z - a) - \log(z + a)].
+          </me>
+          Therefore the complex velocity is given by 
+          <me>
+            f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
+          </me>
+          Stagnation points are where <m>f'(z) = 0</m>. There are no stagnation points. The streamfunction is given by 
+          <me>
+            \Im f = \frac{Q}{2\pi}(\theta_1 - \theta_2), 
+          </me> 
+          where <m>\theta_1</m> and <m>\theta_2</m> are angles measured relative to the positions about <m>\pm a</m>. Thus,
+          <me>
+            \theta_{1,2} = \tan^{-1} \left( \frac{y}{x \mp a} \right).
+          </me>
+         The streamlines are given where <m>\psi</m> is constant. The streamlines are shown below.
+      </p>
+
+      <figure>
+        <caption>Streamlines for a sink and source</caption>
+        <image source="potential_almostdoublet.png">
+          <shortdescription>Almost doublet</shortdescription>
+        </image>
+      </figure>
+    </answer>
+  </task>
+
+    <task>
+      <statement>
+        <p>
+    Let <m>a \to 0</m> and <m>Q \to \infty</m> while keeping the product <m>aQ</m> fixed. This gives the flow due to a <em>doublet</em><idx><h>doublet</h></idx>. Show that its complex potential is <m>\mu/z</m> where <m>\mu</m> is expressed in terms of <m>a</m> and <m>Q</m>. It will be useful for you to use the fact that 
+   <me>
+    \log(1 + \alpha) = \alpha + O(\alpha^2)
+   </me>
+   considered as an appropriate approximation when <m>\alpha</m> is small. 
+    
+    Show that the streamlines are circles through the origin with centres on the <m>y</m>-axis.           
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Expanding the logarithms for small <m>a</m> gives
+          <me>
+            \log z - \log z + \log(1 - a/z) - \log(1 + a/z) \sim -\frac{2a}{z}.
+          </me>
+         Thus in the limit <m>a \to 0</m>, we have
+         <me>
+          f(z) \sim -\frac{Qa}{\pi} \frac{1}{z}.
+         </me>
+         Therefore, we let both <m>a \to 0</m> and <m>Q \to \infty</m> in a fashion such that <m>m = aQ</m> is fixed. We then have the potential
+         <me>
+          f(z) = \frac{\mu}{z}
+         </me>
+         where <m>\mu = -Qa/\pi.</m>
+         
+        </p>
+      </solution>
+    </task>
+
+  </exercise>
 
 </exercises>
 

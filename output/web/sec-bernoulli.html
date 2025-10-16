@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<html lang="en-US" dir="ltr">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -132,7 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-incompressible.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter03-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-equations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-incompressible.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter03-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-equations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -362,14 +363,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-bernoulli"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Bernoulli’s equation</span>
 </h2>
-<section class="introduction" id="sec-bernoulli-2"><div class="para" id="sec-bernoulli-2-1">There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a> and yields the famous <em class="emphasis">Bernoulli equation(s)</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec-bernoulli-2"><div class="para" id="sec-bernoulli-2-1">There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a> and yields the famous <em class="emphasis">Bernoulli equation(s)</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-bernoulli-2-2">We will first need a vector identity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-bernoulli-2-2">We will first need a vector identity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="identity theorem-like" id="ident-ugradu"><h3 class="heading">
-<span class="type">Identity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Identity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="ident-ugradu-1-1">
 <div class="para">Note the following identity:</div>
@@ -378,14 +379,14 @@ eBookConfig.enable_chatcodes =  false;
 (\bu \cdot \nabla) \bu = \nabla \left(\frac{1}{2}|\bu|^2\right) + (\nabla \times \bu) \times \bu. \tag{3.5.1}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Identity 3.5.1"><a href="#ident-ugradu" title="Copy heading and permalink for Identity 3.5.1" aria-label="Copy heading and permalink for Identity 3.5.1">🔗</a></div></article><details id="ident-ugradu-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="ident-ugradu-2-1">The proof follows from direct expansion of both sides.<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Identity 3.5.1"><a href="#ident-ugradu" title="Copy heading and permalink for Identity 3.5.1">🔗</a></div></article><details id="ident-ugradu-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="ident-ugradu-2-1">The proof follows from direct expansion of both sides.<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.5.1.1"><a href="#ident-ugradu-2" title="Copy heading and permalink for Proof 3.5.1.1" aria-label="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-4">It will also be useful for us to introduce the notion of vorticity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.5.1.1"><a href="#ident-ugradu-2" title="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-4">It will also be useful for us to introduce the notion of vorticity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-vorticity"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vorticity of a vector field.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Vorticity of a vector field.</span>
 </h3>
 <div class="para logical" id="def-vorticity-2-1">
 <div class="para">The <em class="emphasis">vorticity</em>, <span class="process-math">\(\omega\text{,}\)</span> of a vector field is defined by</div>
@@ -395,12 +396,12 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation}
 </div>
 <div class="para">The vorticity is a measure of the local rotation of the flow.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-vorticity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-vorticity-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.5.2: Vorticity of a vector field"><a href="#def-vorticity" title="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field" aria-label="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field">🔗</a></div></article><div class="para" id="sec-bernoulli-2-6">Let us recall the definition of a <em class="emphasis">conservative force</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.5.2: Vorticity of a vector field"><a href="#def-vorticity" title="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field">🔗</a></div></article><div class="para" id="sec-bernoulli-2-6">Let us recall the definition of a <em class="emphasis">conservative force</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-conservative-force"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conservative forces.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Conservative forces.</span>
 </h3>
 <div class="para logical" id="def-conservative-force-2-1">
 <div class="para">A force <span class="process-math">\(\bF\)</span> is a <em class="emphasis">conservative force</em> if and only if there exists a potential <span class="process-math">\(\chi\text{,}\)</span> such that</div>
@@ -410,12 +411,12 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">in a simply connected region where the quantities are defined.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-conservative-force-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-conservative-force-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.5.3: Conservative forces"><a href="#def-conservative-force" title="Copy heading and permalink for Definition 3.5.3: Conservative forces" aria-label="Copy heading and permalink for Definition 3.5.3: Conservative forces">🔗</a></div></article><div class="para" id="sec-bernoulli-2-8">Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.5.3: Conservative forces"><a href="#def-conservative-force" title="Copy heading and permalink for Definition 3.5.3: Conservative forces">🔗</a></div></article><div class="para" id="sec-bernoulli-2-8">Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-bernoulli-steady"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady flow.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Bernoulli’s equation for steady flow.</span>
 </h3>
 <div class="para logical" id="thm-bernoulli-steady-2-1">
 <div class="para">Bernoulli’s equation (theorem) for steady flow states that</div>
@@ -432,9 +433,9 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 </div>
 <div class="para">for a potential function, <span class="process-math">\(\chi\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.5.4: Bernoulli’s equation for steady flow"><a href="#thm-bernoulli-steady" title="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow" aria-label="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow">🔗</a></div></article><details id="thm-bernoulli-steady-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-steady-3-1">
+<div class="autopermalink" data-description="Theorem 3.5.4: Bernoulli’s equation for steady flow"><a href="#thm-bernoulli-steady" title="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow">🔗</a></div></article><details id="thm-bernoulli-steady-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-steady-3-1">
 <div class="para">Start from the momentum equation <a href="subsec-euler-momentum.html#eqn-consvmoment" class="xref" data-knowl="./knowl/xref/eqn-consvmoment.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a>,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-consvmoment.html ./knowl/xref/eqn-ugradu.html">
 \begin{equation*}
@@ -447,7 +448,7 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p + \frac{1}{2} |\bu|^2 + \chi\right).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-bernoulli-steady-3-2">
 <div class="para">Next, the flow is steady, and therefore we can zero the first term. This leaves</div>
@@ -469,7 +470,7 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \end{equation*}
 </div>
 <div class="para">Notice that this is the steady component that comes from the material derivative, <span class="process-math">\(\DD{B}{t} = 0\text{.}\)</span> So we conclude that <span class="process-math">\(B\)</span> is constant along streamlines of the flow.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-bernoulli-steady-3-3">
 <div class="para">It is useful to note that if we use the definition of vorticity in <a href="sec-bernoulli.html#eqn-vorticity" class="xref" data-knowl="./knowl/xref/eqn-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.2">(3.5.2)</a>, and the definition of <span class="process-math">\(B\)</span> in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a>, we have from the above that</div>
@@ -479,17 +480,17 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \end{equation}
 </div>
 <div class="para">a form that will be useful, shortly.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.5.4.1"><a href="#thm-bernoulli-steady-3" title="Copy heading and permalink for Proof 3.5.4.1" aria-label="Copy heading and permalink for Proof 3.5.4.1">🔗</a></div></article></details><article class="remark remark-like" id="sec-bernoulli-2-10"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Proof 3.5.4.1"><a href="#thm-bernoulli-steady-3" title="Copy heading and permalink for Proof 3.5.4.1">🔗</a></div></article></details><article class="remark remark-like" id="sec-bernoulli-2-10"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.5.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-bernoulli-2-10-1">For the typical gravity force directed in the <span class="process-math">\(-z\)</span> direction, we can write <span class="process-math">\(\bg = -g[0, 0, 1] = -g \be_z\text{.}\)</span> So in this case, the (gravitational) potential is <span class="process-math">\(\chi = gz\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-bernoulli-2-10-1">For the typical gravity force directed in the <span class="process-math">\(-z\)</span> direction, we can write <span class="process-math">\(\bg = -g[0, 0, 1] = -g \be_z\text{.}\)</span> So in this case, the (gravitational) potential is <span class="process-math">\(\chi = gz\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-10-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 3.5.5"><a href="#sec-bernoulli-2-10" title="Copy heading and permalink for Remark 3.5.5" aria-label="Copy heading and permalink for Remark 3.5.5">🔗</a></div></article><div class="para" id="sec-bernoulli-2-11">The proof of <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a> introduced a useful form of the momentum equation using the vorticity function, resulting in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>. This leads to the so-called <em class="emphasis">vorticity equation</em> form of the momentum equation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 3.5.5"><a href="#sec-bernoulli-2-10" title="Copy heading and permalink for Remark 3.5.5">🔗</a></div></article><div class="para" id="sec-bernoulli-2-11">The proof of <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a> introduced a useful form of the momentum equation using the vorticity function, resulting in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>. This leads to the so-called <em class="emphasis">vorticity equation</em> form of the momentum equation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-vorticity-equation"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation for incompressible flow.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">The vorticity equation for incompressible flow.</span>
 </h3>
 <div class="para logical" id="thm-vorticity-equation-2-1">
 <div class="para">The momentum equation for incompressible flow, reposed in terms of the vorticity is:</div>
@@ -505,18 +506,18 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \end{equation}
 </div>
 <div class="para">and is known as the <em class="emphasis">vorticity equation</em>.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-vorticity-equation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-vorticity-equation-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.5.6: The vorticity equation for incompressible flow"><a href="#thm-vorticity-equation" title="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow" aria-label="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow">🔗</a></div></article><div class="para logical" id="sec-bernoulli-2-13">
+<div class="autopermalink" data-description="Theorem 3.5.6: The vorticity equation for incompressible flow"><a href="#thm-vorticity-equation" title="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow">🔗</a></div></article><div class="para logical" id="sec-bernoulli-2-13">
 <div class="para">In the proof, it is useful to use the vector identity for the curl of a cross product:</div>
 <div class="displaymath process-math" id="eqn-curlcross">
 \begin{equation}
 \nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.  \tag{3.5.8}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-13" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="sec-bernoulli-2-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-bernoulli-2-14-1">
+<details id="sec-bernoulli-2-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-bernoulli-2-14-1">
 <div class="para">Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>, we take the curl of both sides to obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html ./knowl/xref/eqn-curlcross.html">
 \begin{equation*}
@@ -530,7 +531,7 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \end{equation*}
 </div>
 <div class="para">with the first zero resulting in the fact that "div curl equals zero", while the second results from incompressibility.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-bernoulli-2-14-2">
 <div class="para">Thus we have,</div>
@@ -540,18 +541,18 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \end{equation*}
 </div>
 <div class="para">which is the main result.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 1"><a href="#sec-bernoulli-2-14" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-15">You will prove this result from first principles in <a href="ws-equations.html#ex-vorticity-equation" class="xref" data-knowl="./knowl/xref/ex-vorticity-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.7: The vorticity equation">Exercise 3.6.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-bernoulli-2-14" title="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-15">You will prove this result from first principles in <a href="ws-equations.html#ex-vorticity-equation" class="xref" data-knowl="./knowl/xref/ex-vorticity-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.7: The vorticity equation">Exercise 3.6.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-15" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="subsection" id="subsec-potential"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Potential flow</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="space"> </span><span class="title">Potential flow</span>
 </h3>
-<div class="para" id="subsec-potential-2">We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> and in particular, the reduction of the mass conservation equation to <span class="process-math">\(\nabla \cdot \bu = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-potential-2">We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> and in particular, the reduction of the mass conservation equation to <span class="process-math">\(\nabla \cdot \bu = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-potential-3">We attempt to reduce further by assuming that the fluid is <em class="emphasis">irrotational</em>. This lends to the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-potential-3">We attempt to reduce further by assuming that the fluid is <em class="emphasis">irrotational</em>. This lends to the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-irrotational"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrotational flows.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Irrotational flows.</span>
 </h4>
 <div class="para logical" id="def-irrotational-2-1">
 <div class="para">A flow is said to be <em class="emphasis">irrotational</em> if the vorticity is identically zero:</div>
@@ -560,12 +561,12 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant alo
 \textrm{flow is irrotational} \Longleftrightarrow  \bomega = \nabla \times \bu \equiv 0.\tag{3.5.9}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-irrotational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-irrotational-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 3.5.7: Irrotational flows"><a href="#def-irrotational" title="Copy heading and permalink for Definition 3.5.7: Irrotational flows" aria-label="Copy heading and permalink for Definition 3.5.7: Irrotational flows">🔗</a></div></article><div class="para" id="subsec-potential-5">For an irrotational and incompressible flow, there is a more powerful version of Bernoulli’s equation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 3.5.7: Irrotational flows"><a href="#def-irrotational" title="Copy heading and permalink for Definition 3.5.7: Irrotational flows">🔗</a></div></article><div class="para" id="subsec-potential-5">For an irrotational and incompressible flow, there is a more powerful version of Bernoulli’s equation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-bernoulli-potential"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady irrotational flow.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Bernoulli’s equation for steady irrotational flow.</span>
 </h4>
 <div class="para logical" id="thm-bernoulli-potential-2-1">
 <div class="para">For an incompressible and irrotational flow, Bernoulli’s theorem states that</div>
@@ -575,9 +576,9 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant eve
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(\bg = -\nabla \chi\)</span> is the body force.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow"><a href="#thm-bernoulli-potential" title="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow" aria-label="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">🔗</a></div></article><details id="thm-bernoulli-potential-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-potential-3-1">
+<div class="autopermalink" data-description="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow"><a href="#thm-bernoulli-potential" title="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">🔗</a></div></article><details id="thm-bernoulli-potential-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-potential-3-1">
 <div class="para">The proof of this relies on returning to the proof of the unsteady Bernoulli’s equation in <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a>. In the proof, we arrived at the result in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a> that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html ./knowl/xref/eqn-bernoulli-steady.html">
 \begin{equation*}
@@ -591,23 +592,23 @@ B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant eve
 \end{equation*}
 </div>
 <div class="para">But the only way that all spatial derivatives is zero is if the function is constant.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.5.8.1"><a href="#thm-bernoulli-potential-3" title="Copy heading and permalink for Proof 3.5.8.1" aria-label="Copy heading and permalink for Proof 3.5.8.1">🔗</a></div></article></details><div class="para" id="subsec-potential-7">You will practice an application of Bernoulli’s equation in <a href="ws-equations.html#ex-bernoulli-streamline" class="xref" data-knowl="./knowl/xref/ex-bernoulli-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.8: Using streamlines: The clepsydra">Exercise 3.6.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 3.5.8.1"><a href="#thm-bernoulli-potential-3" title="Copy heading and permalink for Proof 3.5.8.1">🔗</a></div></article></details><div class="para" id="subsec-potential-7">You will practice an application of Bernoulli’s equation in <a href="ws-equations.html#ex-bernoulli-streamline" class="xref" data-knowl="./knowl/xref/ex-bernoulli-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.8: Using streamlines: The clepsydra">Exercise 3.6.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="subsec-potential-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Airflow into or out of a room.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-8-2">During the lecture, just for fun, we will play <a class="external" href="https://www.youtube.com/watch?v=1L2ef1CP-yw" target="_blank">this video by Matthias Wandel</a> about airflow out of a room. This is somewhat related to Bernoulli’s equation (the connection between pressure and velocity), though the situation is considerably more difficult.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Airflow into or out of a room.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-8-2">During the lecture, just for fun, we will play <a class="external" href="https://www.youtube.com/watch?v=1L2ef1CP-yw" target="_blank">this video by Matthias Wandel</a><details class="ptx-footnote" aria-live="polite" id="subsec-potential-8-2-2"><summary class="ptx-footnote__number" title="Footnote 3.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsec-potential-8-2-2"><code class="code-inline tex2jax_ignore">www.youtube.com/watch?v=1L2ef1CP-yw</code></div></details> about airflow out of a room. This is somewhat related to Bernoulli’s equation (the connection between pressure and velocity), though the situation is considerably more difficult.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-8-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.5.9: Airflow into or out of a room"><a href="#subsec-potential-8" title="Copy heading and permalink for Example 3.5.9: Airflow into or out of a room" aria-label="Copy heading and permalink for Example 3.5.9: Airflow into or out of a room">🔗</a></div></article></details><details id="subsec-potential-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pascal’s bursting barrel.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-9-2">For fun during the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EJHrr21UvY8" target="_blank">this video demonstration done at Princeton</a> demonstrating the power of hydrostatic pressure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.5.9: Airflow into or out of a room"><a href="#subsec-potential-8" title="Copy heading and permalink for Example 3.5.9: Airflow into or out of a room">🔗</a></div></article></details><details id="subsec-potential-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Pascal’s bursting barrel.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-9-2">For fun during the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EJHrr21UvY8" target="_blank">this video demonstration done at Princeton</a><details class="ptx-footnote" aria-live="polite" id="subsec-potential-9-2-2"><summary class="ptx-footnote__number" title="Footnote 3.5.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="subsec-potential-9-2-2"><code class="code-inline tex2jax_ignore">www.youtube.com/watch?v=EJHrr21UvY8</code></div></details> demonstrating the power of hydrostatic pressure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-9-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.5.10: Pascal’s bursting barrel"><a href="#subsec-potential-9" title="Copy heading and permalink for Example 3.5.10: Pascal’s bursting barrel" aria-label="Copy heading and permalink for Example 3.5.10: Pascal’s bursting barrel">🔗</a></div></article></details><details id="subsec-potential-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Urination across species.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-10-2">During the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EidLGwyYpBE" target="_blank">this video describing</a> the work by Yang et al. on <a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111" target="_blank">"Duration of urination does not change with body size"</a>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli’s equation is used.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.5.10: Pascal’s bursting barrel"><a href="#subsec-potential-9" title="Copy heading and permalink for Example 3.5.10: Pascal’s bursting barrel">🔗</a></div></article></details><details id="subsec-potential-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Urination across species.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-10-2">During the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EidLGwyYpBE" target="_blank">this video describing</a><details class="ptx-footnote" aria-live="polite" id="subsec-potential-10-2-2"><summary class="ptx-footnote__number" title="Footnote 3.5.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="subsec-potential-10-2-2"><code class="code-inline tex2jax_ignore">www.youtube.com/watch?v=EidLGwyYpBE</code></div></details> the work by Yang et al. on <a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111" target="_blank">"Duration of urination does not change with body size"</a><details class="ptx-footnote" aria-live="polite" id="subsec-potential-10-2-4"><summary class="ptx-footnote__number" title="Footnote 3.5.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="subsec-potential-10-2-4"><code class="code-inline tex2jax_ignore">www.pnas.org/doi/pdf/10.1073/pnas.1402289111</code></div></details>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli’s equation is used.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-10-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.5.11: Urination across species"><a href="#subsec-potential-10" title="Copy heading and permalink for Example 3.5.11: Urination across species" aria-label="Copy heading and permalink for Example 3.5.11: Urination across species">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.5.1: Potential flow"><a href="#subsec-potential" title="Copy heading and permalink for Subsection 3.5.1: Potential flow" aria-label="Copy heading and permalink for Subsection 3.5.1: Potential flow">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Bernoulli’s equation"><a href="#sec-bernoulli" title="Copy heading and permalink for Section 3.5: Bernoulli’s equation" aria-label="Copy heading and permalink for Section 3.5: Bernoulli’s equation">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 3.5.11: Urination across species"><a href="#subsec-potential-10" title="Copy heading and permalink for Example 3.5.11: Urination across species">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.5.1: Potential flow"><a href="#subsec-potential" title="Copy heading and permalink for Subsection 3.5.1: Potential flow">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Bernoulli’s equation"><a href="#sec-bernoulli" title="Copy heading and permalink for Section 3.5: Bernoulli’s equation">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-incompressible.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-equations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
