@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introduction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
+<meta property="book:title" content="Mathematics of fluid dynamics">
+<meta property="book:author" content=" ">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<p class="byline"> </p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-preliminary-vector-calculus.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
+\renewcommand*{\Im}{\operatorname{Im}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} 
+\newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
+\newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\renewcommand{\bf}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and other references</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-circulation" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-chapter01-introduction"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction</span>
+</h2>
+<section class="introduction" id="ch-chapter01-introduction-2"><blockquote class="blockquote" id="ch-chapter01-introduction-2-1">
+<div class="para" id="ch-chapter01-introduction-2-1-1">Now I think hydrodynamics is to be the root of all physical science, and is at present second to none in the beauty of its mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<cite class="attribution">―William Thompson (Lord Kelvin), Dec. 1857.</cite><div class="autopermalink" data-description="Quotation"><a href="#ch-chapter01-introduction-2-1" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="ch-chapter01-introduction-2-2">As evidenced by the quotation above, during the great Victorian era, Lord Kelvin had predicted that the field of hydronamics (predominantly, the study of liquids) would reign over all the physical sciences. Today that is not quite true, in the sense that hydrodynamics is only one of many sub-branches of the wider study of fluid motion. However, Kelvin’s prediction is certainly true in spirit: there are very few branches in the physical sciences, from biology and chemistry, to engineering and physics, where the study of fluid mechanics does not possess strong historical and scientific connections. The principles, language, and techniques of fluid mechanics begin from the fundamental laws of conservation; in their form, one can argue that all of nature can be derived---this grandiose point is, to some extent, what Kelvin had meant when he referred to being the "root of all physical science".<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-introduction-2-3">Moreover, countless areas of mathematics, from the 19th century and onwards, have been developed as a direct consequence of the need to investigate the beautiful nature of fluid motion. These include everything from the theory of ordinary and partial differential equations, calculus, complex analysis, mathematical methods and approximation theory, geometry and topology, analysis, numerical methods and numerical analysis, industrial and applied mathematics, and so forth and so on.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="ch-chapter01-introduction-2-4"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluid mechanics vs. fluid dynamics.</span>
+</h2>
+<div class="para" id="ch-chapter01-introduction-2-4-2">Why is this course called fluid dynamics and yet fluid mechanics? What is the difference?<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-introduction-2-4-3">In general, fluid mechanics includes both "statics" (fluids at rest) and "dynamics" (things in motion). This is a distinction that, in the authors’ opinions, mathematicians rarely use (we probably refer to "fluid mechanics" more commonly so as to avoid being specific); these distinctions are perhaps more important in engineering. For example, the study of the shape of a soap film or bubble between a wire hoop is a question of statics; but the behaviour of the soap or bubble if it moves or pops is a question of dynamics!<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-introduction-2-4-4">A tree diagram of different subfields and their applications might be made as follows.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="code-block tex2jax_ignore clipboardable">Fluid Mechanics
+ ├── Fluid Statics
+ │     ├── Hydrostatics → Pressure in tanks and dams
+ │     ├── Buoyancy → Ship and submarine design
+ │     └── Manometry → Pressure measurement in pipelines
+ │
+ └── Fluid Dynamics
+       ├── Inviscid Flow
+       │     ├── Potential Flow → Aerodynamics of airfoils
+       │     └── Compressible Flow (ideal gases) → Supersonic jet nozzles
+       │
+       ├── Viscous Flow
+       │     ├── Internal Flows (pipe/duct flow) → Water distribution networks
+       │     ├── External Flows (boundary layers) → Drag on cars and airplanes
+       │     └── Lubrication Theory → Bearings in machines
+       │
+       ├── Turbulence
+       │     ├── Atmospheric Turbulence → Weather prediction
+       │     └── Industrial Turbulence → Mixing in chemical reactors
+       │
+       └── Multiphase Flow
+             ├── Gas–Liquid Flow → Oil &amp; gas pipelines
+             ├── Liquid–Solid Flow → Slurry transport in mining
+             └── Gas–Solid Flow → Fluidized bed reactors
+</pre>
+<div class="para" id="ch-chapter01-introduction-2-4-6">It is not uncommon for some scientists and mathematicians to devote their entire careers to an entire subbranch of fluid mechanics. Some university departments will focus solely on certain subbranches as well! Hence fluid mechanics is for many, a lifelong pursuit!<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 1.0.1: Fluid mechanics vs. fluid dynamics"><a href="#ch-chapter01-introduction-2-4" title="Copy heading and permalink for Remark 1.0.1: Fluid mechanics vs. fluid dynamics" aria-label="Copy heading and permalink for Remark 1.0.1: Fluid mechanics vs. fluid dynamics">🔗</a></div></article><div class="para" id="ch-chapter01-introduction-2-5">What is the course about?<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch-chapter01-introduction-2-6">
+<div class="para">Our first task, starting in <a href="ch-chapter02-kinematics.html" class="internal" title="Chapter 2: Kinematics">Chapter 2</a> and <a href="ch-chapter03-equations.html" class="internal" title="Chapter 3: Equations of motion">Chapter 3</a> is to derive the so-called Euler equation, given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch-chapter02-kinematics.html ./knowl/xref/ch-chapter03-equations.html">
+\begin{equation*}
+\rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho\bg.
+\end{equation*}
+</div>
+<div class="para">Euler’s equation relates the velocity of a fluid, <span class="process-math">\(\bu\text{,}\)</span> with its density <span class="process-math">\(\rho\text{,}\)</span> pressure <span class="process-math">\(p\text{,}\)</span> and associated forces, <span class="process-math">\(\bg\text{.}\)</span> It is an expression of the conservation of momentum of fluid, and is completed with an accompanying equation for conservation of mass. Together, the two equations are solved with the specification of additional boundary conditions to describe many liquids, from the water in your bathtub, to the water in the ocean as a ship travels through the surface.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-chapter01-introduction-2-7">Slowly, we will begin to appreciate the use of conservation laws, and the mathematics necessary, to derive the above equations (compressing some hundred years of scientific work into only a handful of lectures!). We will also appreciate that, despite their compact form, the above equations are certainly not easy to solve!<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch-chapter01-introduction-2-8"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/airfoil.png" class="contained" alt="Airfoil"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow around an airfoil is an example of potential flow theory. From Van Dyke, An Album of Fluid Motion.<div class="autopermalink" data-description="Figure 1.0.2"><a href="#ch-chapter01-introduction-2-8" title="Copy heading and permalink for Figure 1.0.2" aria-label="Copy heading and permalink for Figure 1.0.2">🔗</a></div></figcaption></figure><div class="para logical" id="ch-chapter01-introduction-2-9">
+<div class="para">Our next task, starting in <a href="ch-chapter04-potentialflows.html" class="internal" title="Chapter 4: Potential flows">Chapter 4</a> is to study a particular simplification of the Euler equation that yields the flow of an <em class="emphasis">ideal</em> or <em class="emphasis">potential</em> fluid. Under such constraints, instead of solving the above difficult equations, we solve a much simpler equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch-chapter04-potentialflows.html">
+\begin{equation*}
+\nabla^2 \phi = 0,
+\end{equation*}
+</div>
+<div class="para">for a so-called <em class="emphasis">velocity potential</em>, <span class="process-math">\(\phi\text{,}\)</span> related to the velocity by <span class="process-math">\(\bu = \nabla \phi\text{.}\)</span> Potential flow theory would have occupied some of the greatest minds of our time, from Euler, Lagrange, Bernoulli, d’Alembert, and Laplace of the 18th century; to the great Victorian scientists of the 19th century: Kelvin, Green, Stokes, Helmholtz; then towards the modern 20th century workers such as Prandtl, Lighthill, Milne-Thompson, and so forth. It is the simplest framework for studying the motion of a liquid, such as water, but enjoys incredibly deep connections with the beautiful theory of complex variables. We will study some of these connections, leading to learning about things such as conformal mapping theory.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch-chapter01-introduction-2-10"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/kelvinwave.png" class="contained" alt="Ship waves"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>In 1887, Kelvin famously predicted that the waves trailing a ship produce a wedge of approximately <span class="process-math">\(2 \times 19.5^\circ\text{.}\)</span> This theory belongs to the analysis of linear water waves (though it is unlikely we will have time to reproduce Kelvin’s approximation!) From Van Dyke, An Album of Fluid Motion.<div class="autopermalink" data-description="Figure 1.0.3"><a href="#ch-chapter01-introduction-2-10" title="Copy heading and permalink for Figure 1.0.3" aria-label="Copy heading and permalink for Figure 1.0.3">🔗</a></div></figcaption></figure><div class="para" id="ch-chapter01-introduction-2-11">Water waves is probably the application that was at the forefront of Lord Kelvin’s thoughts when he discussed the state of hydrodynamics in the quotation that begins in <a href="ch-chapter05-waves.html" class="internal" title="Chapter 5: Water waves">Chapter 5</a>. The study of the surface motion of water introduces a seemingly minor complexity that is responsible for great heartache: the fluid is now bounded by an unknown free surface, which much now be solved as part of the problem! The theory of water waves was at the heart of many minds in the 19th century, given its importance in all applications naval and oceanic. The study of water waves begins with so-called linear wave theory, and moves towards numerical solutions of the full Euler equations.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch-chapter01-introduction-2-12"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/vortexring.png" class="contained" alt="Vortex ring"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Water ejected from a nozzle forms a vortex sheet that rolls up into two vortex rings. From Van Dyke (1982) "An Album of Fluid Motion" <a href="refs-references.html#ref-album" class="xref" data-knowl="./knowl/xref/ref-album.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3">[3]</a>.<div class="autopermalink" data-description="Figure 1.0.4"><a href="#ch-chapter01-introduction-2-12" title="Copy heading and permalink for Figure 1.0.4" aria-label="Copy heading and permalink for Figure 1.0.4">🔗</a></div></figcaption></figure><div class="para" id="ch-chapter01-introduction-2-13">In the above applications, our attention will be focused on so-called irrotational flows: flows that either do not contain or do not introduce new rotational characteristics. Of course, real life fluids are rarely so well-behaved and indeed, the study of vortices is an important domain in its own right, leading to models for tornados, flight, and many other fluid phenomena. The principle character of <a href="ch-chapter06-vorticity.html" class="internal" title="Chapter 6: Vortex motion">Chapter 6</a> is the vorticity, <span class="process-math">\(\omega = \nabla \times \bu\text{.}\)</span> What is vorticity, how does one measure it, and what is its role in governing fluid motion: these are the topics of this chapter.<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ch-chapter01-introduction-2-14"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/turbulence.png" class="contained" alt="Turbulence"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>As illustrated in <a href="frontmatter-3.html#fig-rayleigh" class="xref" data-knowl="./knowl/xref/fig-rayleigh.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 0.0.1">Figure 0.0.1</a>, in 1883 Rayleigh performed a famous experiment of stability of flow in a tube, showing the emergence of an instability as the speed of the flow is increased. This leads to turbulence, which is predicted, in principle, from the Navier-Stokes equations of viscous flows. (From Van Dyke, An Album of Fluid Motion.<div class="autopermalink" data-description="Figure 1.0.5"><a href="#ch-chapter01-introduction-2-14" title="Copy heading and permalink for Figure 1.0.5" aria-label="Copy heading and permalink for Figure 1.0.5">🔗</a></div></figcaption></figure><div class="para logical" id="ch-chapter01-introduction-2-15">
+<div class="para">Finally, the last part of this course will open up to the important discpline of viscous flows in <a href="ch-viscousflows.html" class="internal" title="Chapter 7: Viscous flows">Chapter 7</a>. For this, the Euler equations are no longer sufficient, and we must include a dissipative component,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ch-viscousflows.html">
+\begin{equation*}
+\rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho \bg + \mu \nabla^2 \bu,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(\mu\)</span> being the <em class="emphasis">viscosity</em> of the fluid. The above equation, together with an equation for conservation of mass, forms the so-called <em class="emphasis">Navier-Stokes equations</em>. All fluids are viscous to some extent, though some moreso than others. You will learn about the connections between viscous flow theory and inviscid theory, and some of the simple viscous flows that are foundational in this subbranch.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ch-chapter01-introduction-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><nav class="summary-links"><ul>
+<li><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></li>
+<li><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></li>
+<li><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></li>
+</ul></nav><div class="autopermalink" data-description="Chapter 1: Introduction"><a href="#ch-chapter01-introduction" title="Copy heading and permalink for Chapter 1: Introduction" aria-label="Copy heading and permalink for Chapter 1: Introduction">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-preliminary-vector-calculus.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

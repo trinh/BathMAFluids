@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The velocity potential</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
+<meta property="book:title" content="Mathematics of fluid dynamics">
+<meta property="book:author" content=" ">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<p class="byline"> </p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter04-potentialflows.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter04-potentialflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter04-potentialflows-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
+\renewcommand*{\Im}{\operatorname{Im}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} 
+\newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
+\newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\renewcommand{\bf}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and other references</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-9" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-8" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-8" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsubsec-rtt-lhs-bodyforces" class="internal"><span class="codenumber">7.5.1.1</span> <span class="title">Body forces</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsubsec-rtt-lhs-surfaceforces" class="internal"><span class="codenumber">7.5.1.2</span> <span class="title">Surface forces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Worksheet</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Potential-and-streamfunction"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The velocity potential</span>
+</h2>
+<div class="para logical" id="sec-Potential-and-streamfunction-2">
+<div class="para">In this chapter, we focus on 2D flows where the velocity vector is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-irrotational.html">
+\begin{equation*}
+\bu(x, y, t) = u(x, y, t)\bi + v(x, y, z)\bj = [u, v].
+\end{equation*}
+</div>
+<div class="para">With the velocity given as above, the vorticity is then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-irrotational.html" id="eqn-2d-vorticity">
+\begin{equation}
+\bomega = \nabla \times \bu = \left(\pd{v}{x} - \pd{u}{y}\right)\bk.\tag{4.1.1}
+\end{equation}
+</div>
+<div class="para">If we assume that the flow is irrotational according to <a href="sec-bernoulli.html#def-irrotational" class="xref" data-knowl="./knowl/xref/def-irrotational.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.5.7: Irrotational flows">Definition 3.5.7</a>, then <span class="process-math">\(\nabla \times \bu = 0\)</span> and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-irrotational.html" id="eqn-2d-irrotational">
+\begin{equation}
+\pd{v}{x} - \pd{u}{y} = 0.\tag{4.1.2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-Potential-and-streamfunction-3">
+<div class="para">Further, we know that if the flow is irrotational, then there exists a <em class="emphasis">velocity potential</em>, <span class="process-math">\(\phi\text{,}\)</span> such that <span class="process-math">\(\bu = \nabla \phi\text{.}\)</span> Thus the velocities are expressed as</div>
+<div class="displaymath process-math" id="eqn-vel-potential">
+\begin{equation}
+u = \pd{\phi}{x} \quad \textrm{and} \quad v = \pd{\phi}{y}.\tag{4.1.3}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-4">The above result about irrotational flows is a standard result in Vector Calculus, but we will re-state the result here for reference, and provide a review of its proof. <article class="theorem theorem-like" id="thm-exist-potential"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence of a potential.</span>
+</h3>
+<div class="para" id="thm-exist-potential-2-1">Consider a three-dimensional time-dependent velocity field, <span class="process-math">\(\bu = \bu(\bx, t)\)</span> defined on a simply connected domain <span class="process-math">\(\bx\in D \subset \mathbb{R}^3 \times \mathbb{R}^+.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="thm-exist-potential-2-2">Then <span class="process-math">\(\bu\)</span> is irrotational, i.e. <span class="process-math">\(\nabla \times \bu = 0\)</span> if and only if there exists a scalar potential, defined on <span class="process-math">\(D \times \mathbb{R}^+\text{,}\)</span> such that <span class="process-math">\(\bu = \nabla \phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-exist-potential-3">
+<details id="thm-exist-potential-3-1" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-exist-potential-3-1-1">
+<div class="para">Define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(\bx, t) \equiv \phi_0(t) + \int_C \bu \cdot \de{x},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C\)</span> is any contour connecting an arbitrary origin point to the point <span class="process-math">\(\bx\)</span> (changing the origin point will change the "constant" of integration <span class="process-math">\(\phi_0(t)\)</span>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-exist-potential-3-1-2">We can verify, using the definition of differentiation, and the fundamental theorme of calculus, applied along each of the three coordinate directions, that <span class="process-math">\(\nabla \phi = \bu\)</span> as desired.<div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-exist-potential-3-1-3">The key is to prove that the above definition is unique, regardless of the choice of contour <span class="process-math">\(C\text{.}\)</span> To this end, consider two contours, <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\text{,}\)</span> both with the same origin point, <span class="process-math">\(O\text{,}\)</span> and end point <span class="process-math">\(P\text{.}\)</span> Then the contour <span class="process-math">\(C_1 - C_2\)</span> is a close contour beginning and ending at <span class="process-math">\(O\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-potential-proof"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/potentialproof.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Proof of the uniqueness of the potential<div class="autopermalink" data-description="Figure 4.1.2"><a href="#fig-potential-proof" title="Copy heading and permalink for Figure 4.1.2" aria-label="Copy heading and permalink for Figure 4.1.2">🔗</a></div></figcaption></figure><div class="para logical" id="thm-exist-potential-3-1-5">
+<div class="para">By Stokes’ theorem,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{C_1 - C_2} \bu \cdot \de{x} = \iint_S (\nabla \times \bu) \, \bn \, \de{S}, 
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(S\)</span> is any surface with bounding curve <span class="process-math">\(C_1 - C_2\text{,}\)</span> and with unit normal <span class="process-math">\(\bn\)</span> positively oriented with the bounding curve. However, the right hand-side is zero by irrotationality, and therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{C_1} \bu \cdot \de{x} = \int_{C_2} \bu \cdot \de{x},
+\end{equation*}
+</div>
+<div class="para">and our choice of curve in the definition of the potential is irrelevant.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-exist-potential-3-1-6">The converse direction of the theorem follows directly from the fact that "curl grad equals zero", i.e. <span class="process-math">\(\nabla \times \nabla \phi = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3-1-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#thm-exist-potential-3-1" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#thm-exist-potential-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.1.1: Existence of a potential"><a href="#thm-exist-potential" title="Copy heading and permalink for Theorem 4.1.1: Existence of a potential" aria-label="Copy heading and permalink for Theorem 4.1.1: Existence of a potential">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-5">Let us return to discussing the setting of potential flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-Potential-and-streamfunction-6">
+<div class="para">In addition to being irrotational, we furthermore have assumed that the flow is incompressible. Therefore from <a href="sec-incompressible.html#def-incompressible" class="xref" data-knowl="./knowl/xref/def-incompressible.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.1: Incompressible fluids">Theorem 3.4.1</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-incompressible.html" id="eqn-2d-divu">
+\begin{equation}
+\nabla \cdot \bu = \pd{u}{x} + \pd{v}{y} = \pd{^2\phi}{x^2} + \pd{^2\phi}{y^2} = 0.\tag{4.1.4}
+\end{equation}
+</div>
+<div class="para">This is the crucial result, which is that in potential flows, we need only solve the Laplace equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-incompressible.html" id="eqn-2d-laplace">
+\begin{equation}
+\nabla^2 \phi = 0,\tag{4.1.5}
+\end{equation}
+</div>
+<div class="para">within the flow region. This is effectively a single linear equation for the single unknown <span class="process-math">\(\phi\text{.}\)</span> However, for different problems, the boundary conditions can render even this "simple" problem difficult.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-Potential-and-streamfunction-7">
+<div class="para">Once the velocity potential <span class="process-math">\(\phi\)</span> has been solved, the velocities in the flow can be recovered from the relationship <a href="sec-Potential-and-streamfunction.html#eqn-vel-potential" class="xref" data-knowl="./knowl/xref/eqn-vel-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.1.3">(4.1.3)</a>. The pressure in the flow also follows from Bernoulli’s equation. For the situation of a steady potential flow, following <a href="sec-bernoulli.html#thm-bernoulli-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">Theorem 3.5.8</a>, it is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-vel-potential.html ./knowl/xref/thm-bernoulli-potential.html" id="eqn-2d-bernoulli">
+\begin{equation}
+\frac{p}{\rho} + \frac{1}{2} |\nabla \phi|^2 + \chi = \textrm{constant}.\tag{4.1.6}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="sec-Potential-and-streamfunction-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elementary flows</span>
+</h3>
+<div class="para" id="sec-Potential-and-streamfunction-8-2">The next three examples will introduce you to the elementary flows consisting of uniform flow, stagnation point flow, and line source/sink flows. You will also investigate the notion of a source "strength".<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-8-3">
+<details id="example-potential-uniform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform flow.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-potential-uniform-3">
+<div class="para">Consider the potential given by the linear function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(x, y) = Ux \cos\alpha + Uy \sin\alpha,
+\end{equation*}
+</div>
+<div class="para">with constants <span class="process-math">\(U\)</span> and <span class="process-math">\(\alpha\text{.}\)</span> Then by differentiation we have that the velicity is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = U[\cos\alpha, \sin\alpha].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-uniform-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-uniform-4">The image shown below shows the streamlines of the flow. c <figure class="figure figure-like" id="fig-potential-uniform"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/uniformflow.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines (or velocity field) of uniform flow with <span class="process-math">\(U = 1\)</span> and <span class="process-math">\(\alpha = \pi/4\text{.}\)</span><div class="autopermalink" data-description="Figure 4.1.4"><a href="#fig-potential-uniform" title="Copy heading and permalink for Figure 4.1.4" aria-label="Copy heading and permalink for Figure 4.1.4">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-potential-uniform-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.3: Uniform flow"><a href="#example-potential-uniform" title="Copy heading and permalink for Example 4.1.3: Uniform flow" aria-label="Copy heading and permalink for Example 4.1.3: Uniform flow">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-8-4">
+<details id="example-potential-stagnation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stagnation point flow.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-potential-stagnation-3">
+<div class="para">We can verify that the velocity potential</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi = \frac{1}{2} (x^2 - y^2),
+\end{equation*}
+</div>
+<div class="para">satisfies Laplace’s equation. The corresponding velocity field is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+[u, v] = [x, -y]. 
+\end{equation*}
+</div>
+<div class="para">and corresponds to <em class="emphasis">stagnation point flow</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-stagnation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-stagnation-4">The streamlines (or velocity field) is shown below. <figure class="figure figure-like" id="fig-potential-stagnation"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/stagnationflow.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines (or velocity field) of stagnation point flow.<div class="autopermalink" data-description="Figure 4.1.6"><a href="#fig-potential-stagnation" title="Copy heading and permalink for Figure 4.1.6" aria-label="Copy heading and permalink for Figure 4.1.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-potential-stagnation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.5: Stagnation point flow"><a href="#example-potential-stagnation" title="Copy heading and permalink for Example 4.1.5: Stagnation point flow" aria-label="Copy heading and permalink for Example 4.1.5: Stagnation point flow">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-8-5">
+<details id="example-potential-linesource" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Line source.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-potential-linesource-3">
+<div class="para">We aim to derive the potential and velocity for a <em class="emphasis">line source</em>, imagined as the flow consisting of a point source or point sink that ejects/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve <span class="process-math">\(\nabla^2 \phi = 0\)</span> in plane polar coordinates. This is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla^2 \phi = \frac{1}{r} \pd{}{r}\left(r \pd{\phi}{r}\right) + \frac{1}{r^2} \pd{^2 \phi}{\theta^2} = 0.
+\end{equation*}
+</div>
+<div class="para">We assume that the potential takes the form <span class="process-math">\(\phi = \phi(r)\text{.}\)</span> Then direct integration gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi = \frac{Q}{2\pi} \log r, 
+\end{equation*}
+</div>
+<div class="para">where we have set an additional constant of integration to zero without loss of generality. The leading constant has been set to <span class="process-math">\(Q/(2\pi)\)</span> so that <span class="process-math">\(Q\)</span> can be later identified with a physical quantity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-potential-linesource-4">
+<div class="para">The velocity then follows from consideration of the gradient in polar form,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = \nabla \phi = \pd{\phi}{r} \be_r + \frac{1}{r}\pd{\phi}{\theta} \be_{\theta} = \frac{Q}{2\pi r} \be_r,
+\end{equation*}
+</div>
+<div class="para">where the unit vectors written in the Cartesian basis are <span class="process-math">\(\be_r = [\cos\theta, \sin\theta]\)</span> and <span class="process-math">\(\be_{\theta} = [-\sin\theta, \cos\theta]\text{.}\)</span> Thus we can write the velocity as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = \frac{Q}{2\pi r^2} r[\cos\theta, \sin\theta] = \frac{Q}{2\pi r^2} [x, y].
+\end{equation*}
+</div>
+<div class="para">The above corresponds to a velocity field directed radially outwards from the origin. The flow is a called a <em class="emphasis">line source</em> because fluid is ejected from the origin (a source). It refers to a "line" because in <span class="process-math">\((x, y, z)\text{,}\)</span> the source runs parallel to the <span class="process-math">\(z\)</span>-axis.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-linesource-5">The streamlines (or velocity field) are shown below. <figure class="figure figure-like" id="fig-potential-linesource"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/linesource.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines (or velocity field) of line source flow.<div class="autopermalink" data-description="Figure 4.1.8"><a href="#fig-potential-linesource" title="Copy heading and permalink for Figure 4.1.8" aria-label="Copy heading and permalink for Figure 4.1.8">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-potential-linesource-6">
+<div class="para">Let us also identify the <em class="emphasis">strength</em> of this line source. Consider a closed contour <span class="process-math">\(C\)</span> around the origin. Then the quantity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_C \bu \cdot \bn \, \de{s},
+\end{equation*}
+</div>
+<div class="para">is the flux (the flow per unit time) of fluid crossing the contour, with <span class="process-math">\(\bn\)</span> denoting the unit normal along <span class="process-math">\(C\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-potential-linesource-7">
+<div class="para">For simplicity, let us take the contour <span class="process-math">\(C\)</span> to be a circle of constant radius <span class="process-math">\(r = a\text{.}\)</span> Then since the unit normal is precisely <span class="process-math">\(\be_r\text{,}\)</span> we have that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_C \bu \cdot \bn \, \de{s} = \int_0^{2\pi} \frac{Q}{2\pi a} \be_r \cdot \be_r \, (a \, \de\theta) = Q. 
+\end{equation*}
+</div>
+<div class="para">In computing the above integral, remember that the conversion following the polar Jacobian is <span class="process-math">\(\de{s} = r \de{\theta}\)</span> where <span class="process-math">\(r = a\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-linesource-8">Therefore, <span class="process-math">\(Q\)</span> is the rate at which fluid is produced from the line source. If <span class="process-math">\(Q \lt 0\text{,}\)</span> we refer to the flow as a <em class="emphasis">line sink</em>. <div class="autopermalink" data-description="Paragraph"><a href="#example-potential-linesource-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.7: Line source"><a href="#example-potential-linesource" title="Copy heading and permalink for Example 4.1.7: Line source" aria-label="Copy heading and permalink for Example 4.1.7: Line source">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-8-6">Crucially, because the governing fluid mechanical equation is only Laplace’s equation: this is a linear partial differential equation, and therefore the summation of elementary flows also produces an admissible flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Potential-and-streamfunction-8-7">
+<details id="example-potential-movingsource" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Line source in a uniform flow.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-potential-movingsource-2">
+<div class="para">For instance, we may combine a uniform flow in the <span class="process-math">\(x\)</span>-direction with a line source:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi = Ux + \frac{Q}{2\pi} \log r = Ux + \frac{Q}{2\pi} \log \sqrt{x^2 + y^2}.
+\end{equation*}
+</div>
+<div class="para">We can then obtain the velocity field as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = [U, 0] + \frac{Q}{2\pi(x^2 + y^2)} [x, y].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-movingsource-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-movingsource-3">The streamlines (or velocity field) is shown below. <figure class="figure figure-like" id="fig-potential-movinglinesource"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/movinglinesource.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines (or velocity field) of a line source in a uniform flow with <span class="process-math">\(U = 1\)</span> and <span class="process-math">\(Q = 1\text{.}\)</span><div class="autopermalink" data-description="Figure 4.1.10"><a href="#fig-potential-movinglinesource" title="Copy heading and permalink for Figure 4.1.10" aria-label="Copy heading and permalink for Figure 4.1.10">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-potential-movingsource-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-potential-movingsource-4">Where do you think the stagnation point lies in this flow?<div class="autopermalink" data-description="Paragraph"><a href="#example-potential-movingsource-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.9: Line source in a uniform flow"><a href="#example-potential-movingsource" title="Copy heading and permalink for Example 4.1.9: Line source in a uniform flow" aria-label="Copy heading and permalink for Example 4.1.9: Line source in a uniform flow">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-Potential-and-streamfunction-8-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 4.1.1: Elementary flows"><a href="#sec-Potential-and-streamfunction-8" title="Copy heading and permalink for Subsection 4.1.1: Elementary flows" aria-label="Copy heading and permalink for Subsection 4.1.1: Elementary flows">🔗</a></div></section><div class="autopermalink" data-description="Section 4.1: The velocity potential"><a href="#sec-Potential-and-streamfunction" title="Copy heading and permalink for Section 4.1: The velocity potential" aria-label="Copy heading and permalink for Section 4.1: The velocity potential">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-chapter04-potentialflows.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter04-potentialflows-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

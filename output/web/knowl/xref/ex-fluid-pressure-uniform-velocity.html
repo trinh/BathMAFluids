@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pressure field in uniform flow.</span>
+</h3>
+<div class="introduction"><div class="para logical">
+<div class="para">An ideal (incompressible and irrotational) fluid in a gravitational field with density <span class="process-math">\(\rho\)</span> and acceleration vector <span class="process-math">\(\bg = -g \bk\)</span> (with <span class="process-math">\(\bk\)</span> being the unit vector in the positive <span class="process-math">\(z\)</span>-direction) has uniform velocity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = (a + b t, \; t^3, \; e^t).
+\end{equation*}
+</div>
+<div class="para">The pressure at the origin is fixed at <span class="process-math">\(p_0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-fluid-pressure-uniform-velocity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Using the Euler equations in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a>, find the pressure field in terms of <span class="process-math">\(x, y, z, t, a, b, g, \rho\)</span> and <span class="process-math">\(p_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-fluid-pressure-uniform-velocity-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The fluid has a uniform velocity, which means that all components of <span class="process-math">\(\nabla\bu\)</span> vanish. The Euler equation simplifies to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\pd{\bu}{t}=-\nabla p-\rho g \bk,
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\bu}{t}=(b, \; 3t^2, \; e^t).
+\end{equation*}
+</div>
+<div class="para">Hence, the pressure is given by solving the equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla p = -\rho \pd{\bu}{t} - \rho g \bk
+= -\rho (\, b, \; 3t^2, \; e^t + g \,),
+\end{equation*}
+</div>
+<div class="para">which is a vector equation. Splitting into components, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial p}{\partial x} = -\rho b, \quad
+\frac{\partial p}{\partial y} = -3\rho t^2, \quad
+\frac{\partial p}{\partial z} = -\rho (e^t + g).
+\end{equation*}
+</div>
+<div class="para">Solving sequentially, the first equation gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = -\rho b x + f_1(y,z,t).
+\end{equation*}
+</div>
+<div class="para">Substituting into the second equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial f_1}{\partial y} = -3\rho t^2
+\;\;\Rightarrow\;\;
+f_1 = -3\rho t^2 y + f_2(z,t),
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = -\rho b x - 3\rho t^2 y + f_2(z,t).
+\end{equation*}
+</div>
+<div class="para">The third equation then implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial f_2}{\partial z} = -\rho(e^t+g)
+\;\;\Rightarrow\;\;
+f_2 = -\rho(e^t+g)z + f_3(t),
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = -\rho b x - 3\rho t^2 y - \rho(e^t+g)z + f_3(t).
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(p = p_0\)</span> at the origin gives <span class="process-math">\(f_3(t) = p_0\)</span> for all <span class="process-math">\(t\text{.}\)</span> Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-fluid-pressure-uniform-velocity-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.6.5.a.1"><a href="#ex-fluid-pressure-uniform-velocity-3-2" title="Copy heading and permalink for Solution 3.6.5.a.1" aria-label="Copy heading and permalink for Solution 3.6.5.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.6.5.a"><a href="#ex-fluid-pressure-uniform-velocity-3" title="Copy heading and permalink for Task 3.6.5.a" aria-label="Copy heading and permalink for Task 3.6.5.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Draw the contours of the pressure at a fixed time <span class="process-math">\(t\text{,}\)</span> and hence describe the pressure field.<div class="autopermalink" data-description="Paragraph"><a href="#ex-fluid-pressure-uniform-velocity-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">The pressure is constant on planes normal to the vector <span class="process-math">\((b, \; 3t^2, \; e^t + g)\text{,}\)</span> as illustrated below:<div class="autopermalink" data-description="Paragraph"><a href="#ex-fluid-pressure-uniform-velocity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter03-pressure-contours.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Contours of the pressure field at fixed <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Figure 3.6.2"><a href="#fig-pressure-contours" title="Copy heading and permalink for Figure 3.6.2" aria-label="Copy heading and permalink for Figure 3.6.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 3.6.5.b.1"><a href="#ex-fluid-pressure-uniform-velocity-4-2" title="Copy heading and permalink for Solution 3.6.5.b.1" aria-label="Copy heading and permalink for Solution 3.6.5.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.6.5.b"><a href="#ex-fluid-pressure-uniform-velocity-4" title="Copy heading and permalink for Task 3.6.5.b" aria-label="Copy heading and permalink for Task 3.6.5.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 3.6.5: Pressure field in uniform flow"><a href="#ex-fluid-pressure-uniform-velocity" title="Copy heading and permalink for Exercise 3.6.5: Pressure field in uniform flow" aria-label="Copy heading and permalink for Exercise 3.6.5: Pressure field in uniform flow">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-equations.html#ex-fluid-pressure-uniform-velocity">in-context</a></span>
+</body>
+</html>

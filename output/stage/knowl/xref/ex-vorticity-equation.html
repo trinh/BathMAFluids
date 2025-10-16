@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation.</span>
+</h3>
+<div class="para">Consider an incompressible fluid, with constant density <span class="process-math">\(\rho\text{,}\)</span> subject to a conservative body force (i.e. <span class="process-math">\({\bg} = -\nabla \chi\)</span> for some potential function <span class="process-math">\(\chi\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#ex-vorticity-equation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="ex-vorticity-equation-2-2">
+<li>
+<div class="para logical">
+<div class="para">Starting from the Euler equations, show that the vorticity <span class="process-math">\(\bomega = \nabla \times {\bu}\)</span> satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bu}.
+\end{equation*}
+</div>
+<div class="para">Note that, in this question, you are expected to do a long-form calculation. The method given in the notes uses an alternative expression for the momentum equation combined with a vector identity to get the same result with less effort.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-vorticity-equation-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The Euler equation reads:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p - \rho\nabla \chi.
+\end{equation*}
+</div>
+<div class="para">Since the curl of a gradient is zero, <span class="process-math">\(\rho\)</span> is constant and we can commute derivatives, taking the curl of both sides gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\left(\pd{\bomega}{t} + \nabla \times(\bu \cdot \nabla)\bu\right) = 0.
+\end{equation*}
+</div>
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+&amp; \nabla \times(\bu \cdot \nabla)\bu,\\
+=&amp;\begin{vmatrix}
+\bi &amp; \bj &amp; \bk \\
+\pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
+\bu \cdot \nabla u &amp; \bu \cdot \nabla v &amp; \bu \cdot \nabla w
+\end{vmatrix},\\
+=&amp;\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla w-\pd{\bu}{z}\cdot\nabla v\right)\\
+&amp;+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla u-\pd{\bu}{x}\cdot\nabla w\right)\\
+&amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla v-\pd{\bu}{y}\cdot\nabla u\right),\\
+=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu\\
+&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)\\
+&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)\\
+&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),\\
+=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu\\
+&amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)\\
+&amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)\\
+&amp;+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)\\
+&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)\\
+&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)\\
+&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),\\
+=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,\\
+=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,
+\end{align*}
+</div>
+<div class="para">where the final equality follows from incompressibility. Hence,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\bomega}{t} + \bu\cdot\nabla\bomega - \bomega\cdot\nabla\bu = 0
+\quad\Rightarrow\quad
+\DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-vorticity-equation-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.6.7.a.1"><a href="#ex-vorticity-equation-2-2-1-2" title="Copy heading and permalink for Answer 3.6.7.a.1" aria-label="Copy heading and permalink for Answer 3.6.7.a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 3.6.7.a"><a href="#ex-vorticity-equation-2-2-1" title="Copy heading and permalink for Item 3.6.7.a" aria-label="Copy heading and permalink for Item 3.6.7.a">🔗</a></div>
+</li>
+<li>
+<div class="para">Deduce that, in two-dimensional incompressible flow, <span class="process-math">\(\omega\)</span> is conserved following the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ex-vorticity-equation-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">If the flow is the <span class="process-math">\((x,y)\)</span>-plane, we have <span class="process-math">\(w=0\)</span> and all <span class="process-math">\(z\)</span>-derivatives are zero. Hence the only non-zero component of the vorticity is the <span class="process-math">\(z\)</span>-component, <span class="process-math">\(\omega_z=\partial v/\partial x-\partial u/\partial y\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bomega\cdot\nabla\bu=\omega_z\pd{\bu}{z}=0.
+\end{equation*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{\bomega}{t} = 0,
+\end{equation*}
+</div>
+<div class="para">meaning that <span class="process-math">\(\bomega\)</span> is conserved following the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-vorticity-equation-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.6.7.b.1"><a href="#ex-vorticity-equation-2-2-2-2" title="Copy heading and permalink for Answer 3.6.7.b.1" aria-label="Copy heading and permalink for Answer 3.6.7.b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 3.6.7.b"><a href="#ex-vorticity-equation-2-2-2" title="Copy heading and permalink for Item 3.6.7.b" aria-label="Copy heading and permalink for Item 3.6.7.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.6.7: The vorticity equation"><a href="#ex-vorticity-equation" title="Copy heading and permalink for Exercise 3.6.7: The vorticity equation" aria-label="Copy heading and permalink for Exercise 3.6.7: The vorticity equation">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-equations.html#ex-vorticity-equation">in-context</a></span>
+</body>
+</html>

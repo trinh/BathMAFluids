@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Bernoulli’s equation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
+<meta property="book:title" content="Mathematics of fluid dynamics">
+<meta property="book:author" content=" ">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.13';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<p class="byline"> </p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-incompressible.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter03-equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-equations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
+\renewcommand*{\Im}{\operatorname{Im}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} 
+\newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
+\newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\renewcommand{\bf}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and other references</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-circulation" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-bernoulli"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation</span>
+</h2>
+<section class="introduction" id="sec-bernoulli-2"><div class="para" id="sec-bernoulli-2-1">There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a> and yields the famous <em class="emphasis">Bernoulli equation(s)</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-bernoulli-2-2">We will first need a vector identity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="identity theorem-like" id="ident-ugradu"><h3 class="heading">
+<span class="type">Identity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ident-ugradu-1-1">
+<div class="para">Note the following identity:</div>
+<div class="displaymath process-math" id="eqn-ugradu">
+\begin{equation}
+(\bu \cdot \nabla) \bu = \nabla \left(\frac{1}{2}|\bu|^2\right) + (\nabla \times \bu) \times \bu. \tag{3.5.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Identity 3.5.1"><a href="#ident-ugradu" title="Copy heading and permalink for Identity 3.5.1" aria-label="Copy heading and permalink for Identity 3.5.1">🔗</a></div></article><details id="ident-ugradu-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="ident-ugradu-2-1">The proof follows from direct expansion of both sides.<div class="autopermalink" data-description="Paragraph"><a href="#ident-ugradu-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.5.1.1"><a href="#ident-ugradu-2" title="Copy heading and permalink for Proof 3.5.1.1" aria-label="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-4">It will also be useful for us to introduce the notion of vorticity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-vorticity"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vorticity of a vector field.</span>
+</h3>
+<div class="para logical" id="def-vorticity-2-1">
+<div class="para">The <em class="emphasis">vorticity</em>, <span class="process-math">\(\omega\text{,}\)</span> of a vector field is defined by</div>
+<div class="displaymath process-math" id="eqn-vorticity">
+\begin{equation}
+\omega \equiv \nabla \times \bu.\tag{3.5.2}
+\end{equation}
+</div>
+<div class="para">The vorticity is a measure of the local rotation of the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-vorticity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.5.2: Vorticity of a vector field"><a href="#def-vorticity" title="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field" aria-label="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field">🔗</a></div></article><div class="para" id="sec-bernoulli-2-6">Let us recall the definition of a <em class="emphasis">conservative force</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-conservative-force"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conservative forces.</span>
+</h3>
+<div class="para logical" id="def-conservative-force-2-1">
+<div class="para">A force <span class="process-math">\(\bF\)</span> is a <em class="emphasis">conservative force</em> if and only if there exists a potential <span class="process-math">\(\chi\text{,}\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bF = -\nabla \chi,
+\end{equation*}
+</div>
+<div class="para">in a simply connected region where the quantities are defined.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-conservative-force-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.5.3: Conservative forces"><a href="#def-conservative-force" title="Copy heading and permalink for Definition 3.5.3: Conservative forces" aria-label="Copy heading and permalink for Definition 3.5.3: Conservative forces">🔗</a></div></article><div class="para" id="sec-bernoulli-2-8">Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-bernoulli-steady"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady flow.</span>
+</h3>
+<div class="para logical" id="thm-bernoulli-steady-2-1">
+<div class="para">Bernoulli’s equation (theorem) for steady flow states that</div>
+<div class="displaymath process-math" id="eqn-bernoulli-steady">
+\begin{equation}
+B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along streamlines},\tag{3.5.3}
+\end{equation}
+</div>
+<div class="para">where we have assumed that the body force is <em class="emphasis">conservative</em>, i.e. it can be written as</div>
+<div class="displaymath process-math" id="eqn-gravity-potential">
+\begin{equation}
+\bg = -\nabla \chi, \tag{3.5.4}
+\end{equation}
+</div>
+<div class="para">for a potential function, <span class="process-math">\(\chi\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.5.4: Bernoulli’s equation for steady flow"><a href="#thm-bernoulli-steady" title="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow" aria-label="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow">🔗</a></div></article><details id="thm-bernoulli-steady-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-steady-3-1">
+<div class="para">Start from the momentum equation <a href="subsec-euler-momentum.html#eqn-consvmoment" class="xref" data-knowl="./knowl/xref/eqn-consvmoment.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-consvmoment.html ./knowl/xref/eqn-ugradu.html">
+\begin{equation*}
+\pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
+\end{equation*}
+</div>
+<div class="para">and use the vector identity <a href="sec-bernoulli.html#eqn-ugradu" class="xref" data-knowl="./knowl/xref/eqn-ugradu.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.1">(3.5.1)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-consvmoment.html ./knowl/xref/eqn-ugradu.html">
+\begin{equation*}
+\pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p + \frac{1}{2} |\bu|^2 + \chi\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-bernoulli-steady-3-2">
+<div class="para">Next, the flow is steady, and therefore we can zero the first term. This leaves</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bomega \times \bu = -\nabla B.
+\end{equation*}
+</div>
+<div class="para">We now take the dot product of both sides of the equation with <span class="process-math">\(\bu\text{.}\)</span> We use the fact that,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu \cdot (\bomega \times \bu ) = 0,
+\end{equation*}
+</div>
+<div class="para">since it is a triple scalar product with two repeated entries. It therefore results in the fact that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu \cdot \nabla B = 0.
+\end{equation*}
+</div>
+<div class="para">Notice that this is the steady component that comes from the material derivative, <span class="process-math">\(\DD{B}{t} = 0\text{.}\)</span> So we conclude that <span class="process-math">\(B\)</span> is constant along streamlines of the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-bernoulli-steady-3-3">
+<div class="para">It is useful to note that if we use the definition of vorticity in <a href="sec-bernoulli.html#eqn-vorticity" class="xref" data-knowl="./knowl/xref/eqn-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.2">(3.5.2)</a>, and the definition of <span class="process-math">\(B\)</span> in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a>, we have from the above that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-vorticity.html ./knowl/xref/eqn-bernoulli-steady.html" id="eqn-bernoulli-vorticity">
+\begin{equation}
+\pd{\bu}{t} + \bomega \times \bu = -\nabla B,\tag{3.5.5}
+\end{equation}
+</div>
+<div class="para">a form that will be useful, shortly.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-steady-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.5.4.1"><a href="#thm-bernoulli-steady-3" title="Copy heading and permalink for Proof 3.5.4.1" aria-label="Copy heading and permalink for Proof 3.5.4.1">🔗</a></div></article></details><article class="remark remark-like" id="sec-bernoulli-2-10"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-bernoulli-2-10-1">For the typical gravity force directed in the <span class="process-math">\(-z\)</span> direction, we can write <span class="process-math">\(\bg = -g[0, 0, 1] = -g \be_z\text{.}\)</span> So in this case, the (gravitational) potential is <span class="process-math">\(\chi = gz\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.5.5"><a href="#sec-bernoulli-2-10" title="Copy heading and permalink for Remark 3.5.5" aria-label="Copy heading and permalink for Remark 3.5.5">🔗</a></div></article><div class="para" id="sec-bernoulli-2-11">The proof of <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a> introduced a useful form of the momentum equation using the vorticity function, resulting in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>. This leads to the so-called <em class="emphasis">vorticity equation</em> form of the momentum equation.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-vorticity-equation"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation for incompressible flow.</span>
+</h3>
+<div class="para logical" id="thm-vorticity-equation-2-1">
+<div class="para">The momentum equation for incompressible flow, reposed in terms of the vorticity is:</div>
+<div class="displaymath process-math" id="eqn-vorticity-equation">
+\begin{equation}
+\pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,\tag{3.5.6}
+\end{equation}
+</div>
+<div class="para">or, equivalently,</div>
+<div class="displaymath process-math" id="eqn-vorticity-equation-lagrange">
+\begin{equation}
+\DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,\tag{3.5.7}
+\end{equation}
+</div>
+<div class="para">and is known as the <em class="emphasis">vorticity equation</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-vorticity-equation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.5.6: The vorticity equation for incompressible flow"><a href="#thm-vorticity-equation" title="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow" aria-label="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow">🔗</a></div></article><div class="para logical" id="sec-bernoulli-2-13">
+<div class="para">In the proof, it is useful to use the vector identity for the curl of a cross product:</div>
+<div class="displaymath process-math" id="eqn-curlcross">
+\begin{equation}
+\nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.  \tag{3.5.8}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-bernoulli-2-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-bernoulli-2-14-1">
+<div class="para">Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>, we take the curl of both sides to obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html ./knowl/xref/eqn-curlcross.html">
+\begin{equation*}
+\nabla \times \left(\pd{\bu}{t} + \bomega \times \bu\right) = 0.
+\end{equation*}
+</div>
+<div class="para">Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity <a href="sec-bernoulli.html#eqn-curlcross" class="xref" data-knowl="./knowl/xref/eqn-curlcross.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a>. For the second term, we get</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html ./knowl/xref/eqn-curlcross.html">
+\begin{equation*}
+-\nabla \times (\bu \times \bomega) = 0 - 0 + (\bomega \cdot \nabla)\bu - (\bu \cdot \nabla)\bomega,
+\end{equation*}
+</div>
+<div class="para">with the first zero resulting in the fact that "div curl equals zero", while the second results from incompressibility.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-bernoulli-2-14-2">
+<div class="para">Thus we have,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
+\end{equation*}
+</div>
+<div class="para">which is the main result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-bernoulli-2-14" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><div class="para" id="sec-bernoulli-2-15">You will prove this result from first principles in <a href="ws-equations.html#ex-vorticity-equation" class="xref" data-knowl="./knowl/xref/ex-vorticity-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.7: The vorticity equation">Exercise 3.6.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bernoulli-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-potential"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Potential flow</span>
+</h3>
+<div class="para" id="subsec-potential-2">We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> and in particular, the reduction of the mass conservation equation to <span class="process-math">\(\nabla \cdot \bu = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-potential-3">We attempt to reduce further by assuming that the fluid is <em class="emphasis">irrotational</em>. This lends to the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-irrotational"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrotational flows.</span>
+</h4>
+<div class="para logical" id="def-irrotational-2-1">
+<div class="para">A flow is said to be <em class="emphasis">irrotational</em> if the vorticity is identically zero:</div>
+<div class="displaymath process-math" id="eqn-irrotational">
+\begin{equation}
+\textrm{flow is irrotational} \Longleftrightarrow  \bomega = \nabla \times \bu \equiv 0.\tag{3.5.9}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-irrotational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.5.7: Irrotational flows"><a href="#def-irrotational" title="Copy heading and permalink for Definition 3.5.7: Irrotational flows" aria-label="Copy heading and permalink for Definition 3.5.7: Irrotational flows">🔗</a></div></article><div class="para" id="subsec-potential-5">For an irrotational and incompressible flow, there is a more powerful version of Bernoulli’s equation.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-bernoulli-potential"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady irrotational flow.</span>
+</h4>
+<div class="para logical" id="thm-bernoulli-potential-2-1">
+<div class="para">For an incompressible and irrotational flow, Bernoulli’s theorem states that</div>
+<div class="displaymath process-math" id="eqn-bernoulli-potential">
+\begin{equation}
+B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant everywhere},\tag{3.5.10}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(\bg = -\nabla \chi\)</span> is the body force.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow"><a href="#thm-bernoulli-potential" title="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow" aria-label="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">🔗</a></div></article><details id="thm-bernoulli-potential-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-bernoulli-potential-3-1">
+<div class="para">The proof of this relies on returning to the proof of the unsteady Bernoulli’s equation in <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a>. In the proof, we arrived at the result in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a> that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html ./knowl/xref/eqn-bernoulli-steady.html">
+\begin{equation*}
+\pd{\bu}{t} + \bomega \times \bu = -\nabla B.
+\end{equation*}
+</div>
+<div class="para">For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that <span class="process-math">\(\bomega = 0\text{,}\)</span> and therefore we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html ./knowl/xref/eqn-bernoulli-steady.html">
+\begin{equation*}
+\nabla B = 0.
+\end{equation*}
+</div>
+<div class="para">But the only way that all spatial derivatives is zero is if the function is constant.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-bernoulli-potential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.5.8.1"><a href="#thm-bernoulli-potential-3" title="Copy heading and permalink for Proof 3.5.8.1" aria-label="Copy heading and permalink for Proof 3.5.8.1">🔗</a></div></article></details><div class="para" id="subsec-potential-7">You will practice an application of Bernoulli’s equation in <a href="ws-equations.html#ex-bernoulli-streamline" class="xref" data-knowl="./knowl/xref/ex-bernoulli-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.8: Using streamlines: The clepsydra">Exercise 3.6.8</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-potential-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Airflow into or out of a room.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-8-2">During the lecture, just for fun, we will play <a class="external" href="https://www.youtube.com/watch?v=1L2ef1CP-yw" target="_blank">this video by Matthias Wandel</a> about airflow out of a room. This is somewhat related to Bernoulli’s equation (the connection between pressure and velocity), though the situation is considerably more difficult.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.5.9: Airflow into or out of a room"><a href="#subsec-potential-8" title="Copy heading and permalink for Example 3.5.9: Airflow into or out of a room" aria-label="Copy heading and permalink for Example 3.5.9: Airflow into or out of a room">🔗</a></div></article></details><details id="subsec-potential-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pascal’s bursting barrel.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-9-2">For fun during the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EJHrr21UvY8" target="_blank">this video demonstration done at Princeton</a> demonstrating the power of hydrostatic pressure.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.5.10: Pascal’s bursting barrel"><a href="#subsec-potential-9" title="Copy heading and permalink for Example 3.5.10: Pascal’s bursting barrel" aria-label="Copy heading and permalink for Example 3.5.10: Pascal’s bursting barrel">🔗</a></div></article></details><details id="subsec-potential-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Urination across species.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-potential-10-2">During the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EidLGwyYpBE" target="_blank">this video describing</a> the work by Yang et al. on <a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111" target="_blank">"Duration of urination does not change with body size"</a>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli’s equation is used.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-potential-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.5.11: Urination across species"><a href="#subsec-potential-10" title="Copy heading and permalink for Example 3.5.11: Urination across species" aria-label="Copy heading and permalink for Example 3.5.11: Urination across species">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.5.1: Potential flow"><a href="#subsec-potential" title="Copy heading and permalink for Subsection 3.5.1: Potential flow" aria-label="Copy heading and permalink for Subsection 3.5.1: Potential flow">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Bernoulli’s equation"><a href="#sec-bernoulli" title="Copy heading and permalink for Section 3.5: Bernoulli’s equation" aria-label="Copy heading and permalink for Section 3.5: Bernoulli’s equation">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-incompressible.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-equations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

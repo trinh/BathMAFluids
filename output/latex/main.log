@@ -1,0 +1,4586 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  15 OCT 2025 23:59
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex
+(/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count271
+\Gm@cntv=\count272
+\c@Gm@tempcnt=\count273
+\Gm@bindingoffset=\dimen142
+\Gm@wd@mp=\dimen143
+\Gm@odd@mp=\dimen144
+\Gm@even@mp=\dimen145
+\Gm@layoutwidth=\dimen146
+\Gm@layoutheight=\dimen147
+\Gm@layouthoffset=\dimen148
+\Gm@layoutvoffset=\dimen149
+\Gm@dimlist=\toks18
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count274
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2024/09/29 v3.02 Predefined colors according to SVG 1.1 (UK)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen152
+\ar@mcellbox=\box52
+\extrarowheight=\dimen153
+\NC@list=\toks19
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box53
+)
+\everycr=\toks20
+\minrowclearance=\skip53
+\rownum=\count275
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen154
+\pgfutil@tempdimb=\dimen155
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count276
+\c@pgf@countb=\count277
+\c@pgf@countc=\count278
+\c@pgf@countd=\count279
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count280
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count283
+\pgfmath@box=\box55
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count284
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count285
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen185
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen189
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box59
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box60
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen195
+)
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
+)
+\tikz@expandcount=\count296
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks33
+\verbatim@line=\toks34
+\verbatim@in@stream=\read3
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks35
+)
+\tcb@titlebox=\box65
+\tcb@upperbox=\box66
+\tcb@lowerbox=\box67
+\tcb@phantombox=\box68
+\c@tcbbreakpart=\count297
+\c@tcblayer=\count298
+\c@tcolorbox@number=\count299
+\l__tcobox_tmpa_box=\box69
+\l__tcobox_tmpa_dim=\dimen260
+\tcb@temp=\box70
+\tcb@temp=\box71
+\tcb@temp=\box72
+\tcb@temp=\box73
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box74
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.4.1'
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box75
+\tcb@totalupperbox=\box76
+\tcb@totallowerbox=\box77
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
+\c@tcbrastercolumn=\count300
+\c@tcbrasterrow=\count301
+\c@tcbrasternum=\count302
+\c@tcbraster=\count303
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '6.4.1'
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count304
+\l__pdf_internal_box=\box78
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.4.1'
+)
+\normalparindent=\skip54
+\normalparskip=\skip55
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count305
+\xs_countb=\count306
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks36
+\inpenc@posthook=\toks37
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 116.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+Package: inconsolata 2019/05/17 v1.12
+ `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+)
+\XKV@depth=\count307
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\zifour@ocount=\count308
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2024/12/12 v3.2 Micro-typographical refinements (RS)
+\MT@toks=\toks40
+\MT@tempbox=\box79
+\MT@count=\count309
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1075.
+LaTeX Info: Redefining \leftprotrusion on input line 1076.
+\MT@prot@toks=\toks41
+LaTeX Info: Redefining \rightprotrusion on input line 1095.
+LaTeX Info: Redefining \textls on input line 1437.
+\MT@outer@kern=\dimen261
+LaTeX Info: Redefining \microtypecontext on input line 2041.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2058.
+\MT@listname@count=\count310
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2024/12/12 v3.2 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip56
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2024/12/12 v3.2 microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3053.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks42
+\ex@=\dimen262
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen263
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count311
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count312
+\leftroot@=\count313
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count314
+\DOTSCASE@=\count315
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box80
+\strutbox@=\box81
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen264
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count316
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count317
+\dotsspace@=\muskip17
+\c@parentequation=\count318
+\dspbrk@lvl=\count319
+\tag@help=\toks43
+\row@=\count320
+\column@=\count321
+\maxfields@=\count322
+\andhelp@=\toks44
+\eqnshift@=\dimen265
+\alignsep@=\dimen266
+\tagshift@=\dimen267
+\tagwidth@=\dimen268
+\totwidth@=\dimen269
+\lineht@=\dimen270
+\@envbody=\toks45
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks46
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks47
+\minaw@=\dimen271
+\bigaw@=\dimen272
+\minCDarrowwidth=\dimen273
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box82
+\beforetitleunit=\skip60
+\aftertitleunit=\skip61
+\ttl@plus=\dimen274
+\ttl@minus=\dimen275
+\ttl@toksa=\toks48
+\titlewidth=\dimen276
+\titlewidthlast=\dimen277
+\titlewidthfirst=\dimen278
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titleps.sty)) (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2025/01/04 v2.17 TOC entries
+\ttl@leftsep=\dimen279
+)
+\Oldarrayrulewidth=\skip62
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count323
+\FV@InFile=\read4
+\FV@TabBox=\box83
+\c@FancyVerbLine=\count324
+\FV@StepNumber=\count325
+\FV@OutFile=\write4
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/01/19 v3.10 Customized lists
+\labelindent=\skip63
+\enit@outerparindent=\dimen280
+\enit@toks=\toks49
+\enit@inbox=\box84
+\enit@count@id=\count326
+\enitdp@description=\count327
+)
+\enitdp@referencelist=\count328
+\dlititlewidth=\skip64
+\dlimaxnarrowtitle=\skip65
+\dlimaxmediumtitle=\skip66
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
+\c@tracingmulticols=\count329
+\mult@box=\box85
+\multicol@leftmargin=\dimen281
+\c@unbalance=\count330
+\c@collectmore=\count331
+\doublecol@number=\count332
+\multicoltolerance=\count333
+\multicolpretolerance=\count334
+\full@width=\dimen282
+\page@free=\dimen283
+\premulticols=\dimen284
+\postmulticols=\dimen285
+\multicolsep=\skip67
+\multicolbaselineskip=\skip68
+\partial@page=\box86
+\last@line=\box87
+\mc@boxedresult=\box88
+\maxbalancingoverflow=\dimen286
+\mult@rightbox=\box89
+\mult@grightbox=\box90
+\mult@firstbox=\box91
+\mult@gfirstbox=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\c@minrows=\count335
+\c@columnbadness=\count336
+\c@finalcolumnbadness=\count337
+\last@try=\dimen287
+\multicolovershoot=\dimen288
+\multicolundershoot=\dimen289
+\mult@nat@firstbox=\box129
+\colbreak@box=\box130
+\mc@col@check@num=\count338
+))
+\main@idxfile=\write5
+\openout5 = `main.idx'.
+
+
+Writing index file main.idx
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip69
+\LTright=\skip70
+\LTpre=\skip71
+\LTpost=\skip72
+\LTchunksize=\count339
+\LTcapwidth=\dimen290
+\LT@head=\box131
+\LT@firsthead=\box132
+\LT@foot=\box133
+\LT@lastfoot=\box134
+\LT@gbox=\box135
+\LT@cols=\count340
+\LT@rows=\count341
+\c@LT@tables=\count342
+\c@LT@chunks=\count343
+\LT@p@ftn=\toks50
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count344
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen291
+\Hy@linkcounter=\count345
+\Hy@pagecounter=\count346
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count347
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count348
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen292
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count349
+\Field@Width=\dimen293
+\Fld@charsize=\dimen294
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count350
+\c@Item=\count351
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count352
+\c@bookmark@seq@number=\count353
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip73
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 567.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 570.
+\c@tcb@cnt@block=\count354
+\c@tcb@cnt@project-distinct=\count355
+\c@tcb@cnt@subdisplay=\count356
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks51
+\t@pgfplots@tokb=\toks52
+\t@pgfplots@tokc=\toks53
+\pgfplots@tmpa=\dimen295
+\c@pgfplots@coordindex=\count357
+\c@pgfplots@scanlineindex=\count358
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks54
+\t@pgf@tokb=\toks55
+\t@pgf@tokc=\toks56
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count359
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count360
+\t@pgfplotstable@a=\toks57
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count361
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen296
+\pgfdecoratedremainingdistance=\dimen297
+\pgfdecoratedinputsegmentcompleteddistance=\dimen298
+\pgfdecoratedinputsegmentremainingdistance=\dimen299
+\pgf@decorate@distancetomove=\dimen300
+\pgf@decorate@repeatstate=\count362
+\pgfdecorationsegmentamplitude=\dimen301
+\pgfdecorationsegmentlength=\dimen302
+)
+\tikz@lib@dec@box=\box136
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count363
+\pgfplots@xmin@reg=\dimen303
+\pgfplots@xmax@reg=\dimen304
+\pgfplots@ymin@reg=\dimen305
+\pgfplots@ymax@reg=\dimen306
+\pgfplots@zmin@reg=\dimen307
+\pgfplots@zmax@reg=\dimen308
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen309
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box137
+\pgfnodeparttwobox=\box138
+\pgfnodepartthreebox=\box139
+\pgfnodepartfourbox=\box140
+\pgfnodeparttwentybox=\box141
+\pgfnodepartnineteenbox=\box142
+\pgfnodeparteighteenbox=\box143
+\pgfnodepartseventeenbox=\box144
+\pgfnodepartsixteenbox=\box145
+\pgfnodepartfifteenbox=\box146
+\pgfnodepartfourteenbox=\box147
+\pgfnodepartthirteenbox=\box148
+\pgfnodeparttwelvebox=\box149
+\pgfnodepartelevenbox=\box150
+\pgfnodeparttenbox=\box151
+\pgfnodepartninebox=\box152
+\pgfnodeparteightbox=\box153
+\pgfnodepartsevenbox=\box154
+\pgfnodepartsixbox=\box155
+\pgfnodepartfivebox=\box156
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/extpfeil/extpfeil.sty
+Package: extpfeil 2009/10/31 v0.4 Extensible Pfeile (PE)
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count364
+\calc@Bcount=\count365
+\calc@Adimen=\dimen310
+\calc@Bdimen=\dimen311
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count366
+\calc@Cskip=\skip76
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count367
+\l_MT_multwidth_dim=\dimen312
+\origjot=\skip77
+\l_MT_shortvdotswithinadjustabove_dim=\dimen313
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen314
+\l_MT_above_intertext_sep=\dimen315
+\l_MT_below_intertext_sep=\dimen316
+\l_MT_above_shortintertext_sep=\dimen317
+\l_MT_below_shortintertext_sep=\dimen318
+\xmathstrut@box=\box157
+\xmathstrut@dim=\dimen319
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+))
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 743.
+LaTeX Font Info:    ... okay on input line 743.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(137.14749pt, 340.0pt, 137.1475pt)
+* v-part:(T,H,B)=(57.81598pt, 650.43pt, 86.72401pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=340.0pt
+* \textheight=650.43pt
+* \oddsidemargin=64.8775pt
+* \evensidemargin=64.8775pt
+* \topmargin=-44.5215pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=69.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count368
+\scratchdimen=\dimen320
+\scratchbox=\box158
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen321
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks59
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
+LaTeX Info: Redefining \microtypecontext on input line 743.
+Package microtype Info: Applying patch `item' on input line 743.
+Package microtype Info: Applying patch `toc' on input line 743.
+Package microtype Info: Applying patch `eqnum' on input line 743.
+Package microtype Info: Applying patch `footnote' on input line 743.
+Package microtype Info: Applying patch `verbatim' on input line 743.
+LaTeX Info: Redefining \microtypesetup on input line 743.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 743.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+Package hyperref Info: Link coloring ON on input line 743.
+\@outlinefile=\write6
+\openout6 = `main.out'.
+
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+ on input line 743.
+
+
+
+[1
+
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+
+[2
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 774.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[3
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+************************************************
+Preface Official description
+************************************************
+<external/rayleigh_tubulence.jpg, id=51, 240.9pt x 230.3004pt>
+File: external/rayleigh_tubulence.jpg Graphic file (type jpg)
+<use external/rayleigh_tubulence.jpg>
+Package pdftex.def Info: external/rayleigh_tubulence.jpg  used on input line 788.
+(pdftex.def)             Requested size: 273.08104pt x 261.09035pt.
+
+
+[4
+
+
+ <./external/rayleigh_tubulence.jpg>]
+************************************************
+Preface History of the unit
+************************************************
+
+
+[5]
+************************************************
+Preface Related units at Bath
+************************************************
+
+
+[6
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 837.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 837.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 837.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 837.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+************************************************
+Preface Moodle and other references
+************************************************
+
+
+[7
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+<external/intro_book_acheson.png, id=92, 263.98625pt x 409.53pt>
+File: external/intro_book_acheson.png Graphic file (type png)
+<use external/intro_book_acheson.png>
+Package pdftex.def Info: external/intro_book_acheson.png  used on input line 859.
+(pdftex.def)             Requested size: 95.10095pt x 147.53065pt.
+<external/ch-frontmatter-9781108583756.jpg, id=95, 180.675pt x 212.795pt>
+File: external/ch-frontmatter-9781108583756.jpg Graphic file (type jpg)
+<use external/ch-frontmatter-9781108583756.jpg>
+Package pdftex.def Info: external/ch-frontmatter-9781108583756.jpg  used on input line 865.
+(pdftex.def)             Requested size: 95.10095pt x 112.00801pt.
+
+
+[8
+
+ <./external/intro_book_acheson.png>]
+<external/intro_book_vandyke.png, id=105, 268.00125pt x 343.2825pt>
+File: external/intro_book_vandyke.png Graphic file (type png)
+<use external/intro_book_vandyke.png>
+Package pdftex.def Info: external/intro_book_vandyke.png  used on input line 871.
+(pdftex.def)             Requested size: 95.10095pt x 121.81113pt.
+<external/intro_book_eng.png, id=107, 265.99374pt x 333.245pt>
+File: external/intro_book_eng.png Graphic file (type png)
+<use external/intro_book_eng.png>
+Package pdftex.def Info: external/intro_book_eng.png  used on input line 877.
+(pdftex.def)             Requested size: 95.10095pt x 119.14435pt.
+
+
+[9 <./external/ch-frontmatter-9781108583756.jpg> <./external/intro_book_vandyke.png> <./external/intro_book_eng.png>]
+No file main.toc.
+\tf@toc=\write7
+\openout7 = `main.toc'.
+
+
+
+[10
+
+]
+************************************************
+Chapter 1 Introduction
+************************************************
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 915.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 915.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:917: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.917  ├── Fluid Statics
+                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:917: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.917  ├── Fluid Statics
+                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:917: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.917  ├── Fluid Statics
+                              
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:918: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.918 ...drostatics → Pressure in tanks and dams
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:918: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.918 ...drostatics → Pressure in tanks and dams
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:918: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.918 ...drostatics → Pressure in tanks and dams
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:918: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.918 ...drostatics → Pressure in tanks and dams
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 918.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:919: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.919 ...�� Buoyancy → Ship and submarine design
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:919: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.919 ...�� Buoyancy → Ship and submarine design
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:919: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.919 ...�� Buoyancy → Ship and submarine design
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:919: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.919 ...�� Buoyancy → Ship and submarine design
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 919.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:920: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920 ...try → Pressure measurement in pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:920: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920 ...try → Pressure measurement in pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:920: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920 ...try → Pressure measurement in pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:920: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920 ...try → Pressure measurement in pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 920.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:921: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.921  │
+          
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:922: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.922  └── Fluid Dynamics
+                               
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:922: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.922  └── Fluid Dynamics
+                               
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:922: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.922  └── Fluid Dynamics
+                               
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:923: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.923        ├── Inviscid Flow
+                                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:923: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.923        ├── Inviscid Flow
+                                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:923: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.923        ├── Inviscid Flow
+                                    
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:924: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.924 ...tential Flow → Aerodynamics of airfoils
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:924: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.924 ...tential Flow → Aerodynamics of airfoils
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:924: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.924 ...tential Flow → Aerodynamics of airfoils
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:924: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.924 ...tential Flow → Aerodynamics of airfoils
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 924.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:925: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.925 ... (ideal gases) → Supersonic jet nozzles
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:925: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.925 ... (ideal gases) → Supersonic jet nozzles
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:925: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.925 ... (ideal gases) → Supersonic jet nozzles
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:925: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.925 ... (ideal gases) → Supersonic jet nozzles
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 925.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:926: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.926        │
+                
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:927: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.927        ├── Viscous Flow
+                                   
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:927: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.927        ├── Viscous Flow
+                                   
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:927: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.927        ├── Viscous Flow
+                                   
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:928: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.928 ...uct flow) → Water distribution networks
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:928: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.928 ...uct flow) → Water distribution networks
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:928: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.928 ...uct flow) → Water distribution networks
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:928: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.928 ...uct flow) → Water distribution networks
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 928.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:929: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.929 ...ry layers) → Drag on cars and airplanes
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:929: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.929 ...ry layers) → Drag on cars and airplanes
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:929: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.929 ...ry layers) → Drag on cars and airplanes
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:929: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.929 ...ry layers) → Drag on cars and airplanes
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 929.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:930: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.930 ...brication Theory → Bearings in machines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:930: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.930 ...brication Theory → Bearings in machines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:930: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.930 ...brication Theory → Bearings in machines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:930: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.930 ...brication Theory → Bearings in machines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 930.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:931: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.931        │
+                
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:932: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.932        ├── Turbulence
+                                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:932: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.932        ├── Turbulence
+                                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:932: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.932        ├── Turbulence
+                                 
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:933: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.933 ...spheric Turbulence → Weather prediction
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:933: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.933 ...spheric Turbulence → Weather prediction
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:933: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.933 ...spheric Turbulence → Weather prediction
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:933: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.933 ...spheric Turbulence → Weather prediction
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 933.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:934: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.934 ...urbulence → Mixing in chemical reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:934: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.934 ...urbulence → Mixing in chemical reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:934: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.934 ...urbulence → Mixing in chemical reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:934: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.934 ...urbulence → Mixing in chemical reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 934.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:935: LaTeX Error: Unicode character │ (U+2502)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.935        │
+                
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:936: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.936        └── Multiphase Flow
+                                      
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:936: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.936        └── Multiphase Flow
+                                      
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:936: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.936        └── Multiphase Flow
+                                      
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:937: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.937 ...Gas–Liquid Flow → Oil & gas pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:937: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.937 ...Gas–Liquid Flow → Oil & gas pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:937: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.937 ...Gas–Liquid Flow → Oil & gas pipelines
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 937.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:938: LaTeX Error: Unicode character ├ (U+251C)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.938 ...Solid Flow → Slurry transport in mining
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:938: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.938 ...Solid Flow → Slurry transport in mining
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:938: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.938 ...Solid Flow → Slurry transport in mining
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 938.
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:939: LaTeX Error: Unicode character └ (U+2514)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.939 ...s–Solid Flow → Fluidized bed reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:939: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.939 ...s–Solid Flow → Fluidized bed reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/trinh/GoogleDrive/work-cloud/work-teaching/MA30351_Fluids/BathMAFluids/output/latex/main.tex:939: LaTeX Error: Unicode character ─ (U+2500)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.939 ...s–Solid Flow → Fluidized bed reactors
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family zi4 in TS1 encoding.
+            Default family used instead on input line 939.
+
+
+[1
+
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-5.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+LaTeX Warning: Hyper reference `ch-chapter02-kinematics' on page 2 undefined on input line 945.
+
+
+LaTeX Warning: Reference `ch-chapter02-kinematics' on page 2 undefined on input line 945.
+
+
+LaTeX Warning: Hyper reference `ch-chapter03-equations' on page 2 undefined on input line 945.
+
+
+LaTeX Warning: Reference `ch-chapter03-equations' on page 2 undefined on input line 945.
+
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 947.
+
+<external/airfoil.png, id=130, 838.13126pt x 668.4975pt>
+File: external/airfoil.png Graphic file (type png)
+<use external/airfoil.png>
+Package pdftex.def Info: external/airfoil.png  used on input line 954.
+(pdftex.def)             Requested size: 341.20001pt x 272.13747pt.
+
+
+[2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 3 undefined on input line 958.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 3 undefined on input line 958.
+
+<external/kelvinwave.png, id=138, 843.15pt x 1063.975pt>
+File: external/kelvinwave.png Graphic file (type png)
+<use external/kelvinwave.png>
+Package pdftex.def Info: external/kelvinwave.png  used on input line 965.
+(pdftex.def)             Requested size: 239.01897pt x 301.61253pt.
+
+
+[3 <./external/airfoil.png>]
+
+LaTeX Warning: Hyper reference `ch-chapter05-waves' on page 4 undefined on input line 969.
+
+
+LaTeX Warning: Reference `ch-chapter05-waves' on page 4 undefined on input line 969.
+
+<external/vortexring.png, id=147, 761.84625pt x 980.66376pt>
+File: external/vortexring.png Graphic file (type png)
+<use external/vortexring.png>
+Package pdftex.def Info: external/vortexring.png  used on input line 972.
+(pdftex.def)             Requested size: 239.01897pt x 307.66873pt.
+
+
+[4 <./external/kelvinwave.png>]
+
+LaTeX Warning: Hyper reference `ch-chapter06-vorticity' on page 5 undefined on input line 976.
+
+
+LaTeX Warning: Reference `ch-chapter06-vorticity' on page 5 undefined on input line 976.
+
+<external/turbulence.png, id=157, 749.80125pt x 983.675pt>
+File: external/turbulence.png Graphic file (type png)
+<use external/turbulence.png>
+Package pdftex.def Info: external/turbulence.png  used on input line 979.
+(pdftex.def)             Requested size: 239.01897pt x 313.56665pt.
+
+LaTeX Warning: Hyper reference `fig-rayleigh' on page 5 undefined on input line 981.
+
+
+LaTeX Warning: Reference `fig-rayleigh' on page 5 undefined on input line 981.
+
+
+
+[5 <./external/vortexring.png>]
+
+LaTeX Warning: Hyper reference `ch-viscousflows' on page 6 undefined on input line 983.
+
+
+LaTeX Warning: Reference `ch-viscousflows' on page 6 undefined on input line 983.
+
+************************************************
+Section 1.1 A reminder of vector calculus
+************************************************
+<external/GreenEssay.png, id=165, 953.5625pt x 1253.68375pt>
+File: external/GreenEssay.png Graphic file (type png)
+<use external/GreenEssay.png>
+Package pdftex.def Info: external/GreenEssay.png  used on input line 998.
+(pdftex.def)             Requested size: 170.90001pt x 224.67772pt.
+
+
+[6 <./external/turbulence.png>]
+************************************************
+Section 1.2 A reminder of complex variables
+************************************************
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 7 undefined on input line 1023.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 7 undefined on input line 1023.
+
+<external/intro_needham.png, id=175, 862.22125pt x 386.44376pt>
+File: external/intro_needham.png Graphic file (type png)
+<use external/intro_needham.png>
+Package pdftex.def Info: external/intro_needham.png  used on input line 1026.
+(pdftex.def)             Requested size: 273.08104pt x 122.39084pt.
+
+
+[7 <./external/GreenEssay.png>]
+************************************************
+Subsection 1.2.1 Basic complex representations
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-intro-complex-log' on page 8 undefined on input line 1064.
+
+
+LaTeX Warning: Reference `eqn-intro-complex-log' on page 8 undefined on input line 1064.
+
+************************************************
+Subsection 1.2.2 Complex functions
+************************************************
+
+LaTeX Warning: Hyper reference `fig-intro-z2map' on page 8 undefined on input line 1079.
+
+
+LaTeX Warning: Reference `fig-intro-z2map' on page 8 undefined on input line 1079.
+
+<external/intro_z2map.png, id=186, 1326.045pt x 631.2675pt>
+File: external/intro_z2map.png Graphic file (type png)
+<use external/intro_z2map.png>
+Package pdftex.def Info: external/intro_z2map.png  used on input line 1082.
+(pdftex.def)             Requested size: 341.20001pt x 162.43037pt.
+
+
+[8 <./external/intro_needham.png>]
+
+LaTeX Warning: Hyper reference `fig-intro-z2map_02' on page 9 undefined on input line 1086.
+
+
+LaTeX Warning: Reference `fig-intro-z2map_02' on page 9 undefined on input line 1086.
+
+<external/intro_z2map_02.jpg, id=201, 1790.18813pt x 1128.46594pt>
+File: external/intro_z2map_02.jpg Graphic file (type jpg)
+<use external/intro_z2map_02.jpg>
+Package pdftex.def Info: external/intro_z2map_02.jpg  used on input line 1089.
+(pdftex.def)             Requested size: 341.20001pt x 215.08229pt.
+************************************************
+Subsection 1.2.3 Multifunctions, branch cuts, and Riemann sheets
+************************************************
+
+
+[9 <./external/intro_z2map.png> <./external/intro_z2map_02.jpg>]
+
+LaTeX Warning: Hyper reference `fig-intro-branchcut' on page 10 undefined on input line 1125.
+
+
+LaTeX Warning: Reference `fig-intro-branchcut' on page 10 undefined on input line 1125.
+
+<external/intro_branchcut.jpg, id=213, 1033.8625pt x 1005.7575pt>
+File: external/intro_branchcut.jpg Graphic file (type jpg)
+<use external/intro_branchcut.jpg>
+Package pdftex.def Info: external/intro_branchcut.jpg  used on input line 1128.
+(pdftex.def)             Requested size: 273.08104pt x 265.6497pt.
+
+
+[10 <./external/intro_branchcut.jpg>]
+<external/intro_sqrt_01.png, id=223, 803.0pt x 602.25pt>
+File: external/intro_sqrt_01.png Graphic file (type png)
+<use external/intro_sqrt_01.png>
+Package pdftex.def Info: external/intro_sqrt_01.png  used on input line 1162.
+(pdftex.def)             Requested size: 341.20001pt x 255.90231pt.
+
+
+LaTeX Warning: Hyper reference `eqn-intro-complex-log' on page 11 undefined on input line 1174.
+
+
+LaTeX Warning: Reference `eqn-intro-complex-log' on page 11 undefined on input line 1174.
+
+************************************************
+Subsection 1.2.4 Other functions and visualisations
+************************************************
+<generated/youtube/sec-preliminary-complex-variables-6-3.jpg, id=226, 120.45pt x 90.3375pt>
+File: generated/youtube/sec-preliminary-complex-variables-6-3.jpg Graphic file (type jpg)
+<use generated/youtube/sec-preliminary-complex-variables-6-3.jpg>
+Package pdftex.def Info: generated/youtube/sec-preliminary-complex-variables-6-3.jpg  used on input line 1186.
+(pdftex.def)             Requested size: 160.40042pt x 120.31137pt.
+<generated/qrcode/sec-preliminary-complex-variables-6-3.png, id=227, 291.0875pt x 291.0875pt>
+File: generated/qrcode/sec-preliminary-complex-variables-6-3.png Graphic file (type png)
+<use generated/qrcode/sec-preliminary-complex-variables-6-3.png>
+Package pdftex.def Info: generated/qrcode/sec-preliminary-complex-variables-6-3.png  used on input line 1189.
+(pdftex.def)             Requested size: 72.00229pt x 71.99884pt.
+
+
+[11 <./external/intro_sqrt_01.png>]
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1194.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1194.
+
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1198.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1198.
+
+************************************************
+Subsection 1.2.5 Differentiation of complex functions
+************************************************
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1208.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1208.
+
+************************************************
+Subsection 1.2.6 Summary
+************************************************
+************************************************
+Exercises 1.3 Exercises
+************************************************
+
+LaTeX Warning: Hyper reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1228.
+
+
+LaTeX Warning: Reference `ch-chapter04-potentialflows' on page 12 undefined on input line 1228.
+
+
+LaTeX Warning: Hyper reference `ch-chapter05-waves' on page 12 undefined on input line 1228.
+
+
+LaTeX Warning: Reference `ch-chapter05-waves' on page 12 undefined on input line 1228.
+
+<external/intro_squareroot.jpg, id=242, 1476.26532pt x 1599.72656pt>
+File: external/intro_squareroot.jpg Graphic file (type jpg)
+<use external/intro_squareroot.jpg>
+Package pdftex.def Info: external/intro_squareroot.jpg  used on input line 1245.
+(pdftex.def)             Requested size: 236.3389pt x 256.08353pt.
+
+
+[12 <./generated/youtube/sec-preliminary-complex-variables-6-3.jpg> <./generated/qrcode/sec-preliminary-complex-variables-6-3.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `eq-intro-twobranch' on page 13 undefined on input line 1252.
+
+
+LaTeX Warning: Reference `eq-intro-twobranch' on page 13 undefined on input line 1252.
+
+<external/intro_doublesqrt_branch01.jpg, id=258, 814.54312pt x 451.6875pt>
+File: external/intro_doublesqrt_branch01.jpg Graphic file (type jpg)
+<use external/intro_doublesqrt_branch01.jpg>
+Package pdftex.def Info: external/intro_doublesqrt_branch01.jpg  used on input line 1289.
+(pdftex.def)             Requested size: 206.86984pt x 114.71356pt.
+<external/intro_doublesqrt_branch02.jpg, id=259, 682.80093pt x 753.5653pt>
+File: external/intro_doublesqrt_branch02.jpg Graphic file (type jpg)
+<use external/intro_doublesqrt_branch02.jpg>
+Package pdftex.def Info: external/intro_doublesqrt_branch02.jpg  used on input line 1310.
+(pdftex.def)             Requested size: 206.86984pt x 228.30203pt.
+<external/intro_doublesqrt_surf.png, id=260, 695.59875pt x 575.14874pt>
+File: external/intro_doublesqrt_surf.png Graphic file (type png)
+<use external/intro_doublesqrt_surf.png>
+Package pdftex.def Info: external/intro_doublesqrt_surf.png  used on input line 1319.
+(pdftex.def)             Requested size: 206.86984pt x 171.04524pt.
+
+
+[13 <./external/intro_squareroot.jpg>]
+
+[14 <./external/intro_doublesqrt_branch01.jpg>]
+
+[15 <./external/intro_doublesqrt_branch02.jpg>]
+
+LaTeX Warning: Hyper reference `eqn-intro-complex-log' on page 16 undefined on input line 1326.
+
+
+LaTeX Warning: Reference `eqn-intro-complex-log' on page 16 undefined on input line 1326.
+
+<external/intro_log_surf.jpg, id=289, 752.8125pt x 620.3175pt>
+File: external/intro_log_surf.jpg Graphic file (type jpg)
+<use external/intro_log_surf.jpg>
+Package pdftex.def Info: external/intro_log_surf.jpg  used on input line 1335.
+(pdftex.def)             Requested size: 295.2725pt x 243.30478pt.
+
+Underfull \hbox (badness 1152) in paragraph at lines 1341--1342
+\T1/lmr/bx/n/10 (+20) Solution\T1/lmr/m/n/10 (+20) .[] There is a pic-ture of the com-plex log-a-rithm on
+ []
+
+
+
+[16 <./external/intro_doublesqrt_surf.png> <./external/intro_log_surf.jpg>]
+************************************************
+Chapter 2 Kinematics
+************************************************
+
+
+[17]
+Chapter 2.
+<external/01_euler_trim.png, id=310, 595.22375pt x 394.47375pt>
+File: external/01_euler_trim.png Graphic file (type png)
+<use external/01_euler_trim.png>
+Package pdftex.def Info: external/01_euler_trim.png  used on input line 1358.
+(pdftex.def)             Requested size: 239.01897pt x 158.40065pt.
+<external/ch-chapter01-kinematics-tube01.png, id=312, 846.16125pt x 499.36563pt>
+File: external/ch-chapter01-kinematics-tube01.png Graphic file (type png)
+<use external/ch-chapter01-kinematics-tube01.png>
+Package pdftex.def Info: external/ch-chapter01-kinematics-tube01.png  used on input line 1367.
+(pdftex.def)             Requested size: 273.08104pt x 161.15657pt.
+
+
+[18
+
+ <./external/01_euler_trim.png>]
+<external/ch-chapter01-kinematics-tube02.png, id=322, 846.16125pt x 404.51125pt>
+File: external/ch-chapter01-kinematics-tube02.png Graphic file (type png)
+<use external/ch-chapter01-kinematics-tube02.png>
+Package pdftex.def Info: external/ch-chapter01-kinematics-tube02.png  used on input line 1381.
+(pdftex.def)             Requested size: 273.08104pt x 130.5449pt.
+
+
+[19 <./external/ch-chapter01-kinematics-tube01.png> <./external/ch-chapter01-kinematics-tube02.png>]
+************************************************
+Section 2.1 Eulerian and Lagrangian coordinates
+************************************************
+<external/ch-chapter01-kinematics-euler-vs-lagrange.png, id=333, 914.91812pt x 445.665pt>
+File: external/ch-chapter01-kinematics-euler-vs-lagrange.png Graphic file (type png)
+<use external/ch-chapter01-kinematics-euler-vs-lagrange.png>
+Package pdftex.def Info: external/ch-chapter01-kinematics-euler-vs-lagrange.png  used on input line 1412.
+(pdftex.def)             Requested size: 341.20001pt x 166.19911pt.
+
+LaTeX Warning: Hyper reference `rem-continuum' on page 20 undefined on input line 1428.
+
+
+LaTeX Warning: Reference `rem-continuum' on page 20 undefined on input line 1428.
+
+
+
+[20 <./external/ch-chapter01-kinematics-euler-vs-lagrange.png>]
+************************************************
+Subsection 2.1.1 The convective derivative
+************************************************
+
+
+[21]
+
+LaTeX Warning: Hyper reference `thm-material-derivative' on page 22 undefined on input line 1491.
+
+
+LaTeX Warning: Reference `thm-material-derivative' on page 22 undefined on input line 1491.
+
+
+LaTeX Warning: Hyper reference `eqn-accel' on page 22 undefined on input line 1499.
+
+
+LaTeX Warning: Reference `eqn-accel' on page 22 undefined on input line 1499.
+
+
+LaTeX Warning: Hyper reference `eqn-material-deriv-ui' on page 22 undefined on input line 1538.
+
+
+LaTeX Warning: Reference `eqn-material-deriv-ui' on page 22 undefined on input line 1538.
+
+
+LaTeX Warning: Hyper reference `eqn-grad-bu' on page 22 undefined on input line 1538.
+
+
+LaTeX Warning: Reference `eqn-grad-bu' on page 22 undefined on input line 1538.
+
+
+
+[22]
+************************************************
+Section 2.2 Examples and flow visualisation
+************************************************
+************************************************
+Subsection 2.2.1 Definitions of streamlines, pathlines, streaklines
+************************************************
+
+
+[23]
+************************************************
+Subsection 2.2.2 Examples of streamlines, pathlines, and streaklines
+************************************************
+<external/directionfieldexample.png, id=390, 913.4125pt x 636.3775pt>
+File: external/directionfieldexample.png Graphic file (type png)
+<use external/directionfieldexample.png>
+Package pdftex.def Info: external/directionfieldexample.png  used on input line 1620.
+(pdftex.def)             Requested size: 307.67793pt x 214.35545pt.
+
+LaTeX Warning: Hyper reference `def-streamline' on page 24 undefined on input line 1624.
+
+
+LaTeX Warning: Reference `def-streamline' on page 24 undefined on input line 1624.
+
+
+
+[24]
+
+LaTeX Warning: Hyper reference `def-streamline' on page 25 undefined on input line 1655.
+
+
+LaTeX Warning: Reference `def-streamline' on page 25 undefined on input line 1655.
+
+
+LaTeX Warning: Hyper reference `def-particle-path' on page 25 undefined on input line 1669.
+
+
+LaTeX Warning: Reference `def-particle-path' on page 25 undefined on input line 1669.
+
+
+LaTeX Warning: Hyper reference `fig-streamlines-example-02' on page 25 undefined on input line 1679.
+
+
+LaTeX Warning: Reference `fig-streamlines-example-02' on page 25 undefined on input line 1679.
+
+<external/streamlines_example02.png, id=405, 858.20625pt x 827.09pt>
+File: external/streamlines_example02.png Graphic file (type png)
+<use external/streamlines_example02.png>
+Package pdftex.def Info: external/streamlines_example02.png  used on input line 1682.
+(pdftex.def)             Requested size: 171.20001pt x 164.98596pt.
+
+LaTeX Warning: Hyper reference `def-streakline' on page 25 undefined on input line 1686.
+
+
+LaTeX Warning: Reference `def-streakline' on page 25 undefined on input line 1686.
+
+
+
+[25 <./external/directionfieldexample.png>]
+<external/hose01.png, id=416, 562.1pt x 421.575pt>
+File: external/hose01.png Graphic file (type png)
+<use external/hose01.png>
+Package pdftex.def Info: external/hose01.png  used on input line 1703.
+(pdftex.def)             Requested size: 273.56105pt x 205.17122pt.
+<external/hose02.png, id=417, 562.1pt x 421.575pt>
+File: external/hose02.png Graphic file (type png)
+<use external/hose02.png>
+Package pdftex.def Info: external/hose02.png  used on input line 1709.
+(pdftex.def)             Requested size: 273.56105pt x 205.17122pt.
+
+
+[26 <./external/streamlines_example02.png>]
+************************************************
+Exercises 2.3 Exercises
+************************************************
+
+
+[27 <./external/hose01.png (PNG copy)> <./external/hose02.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `thm-material-derivative' on page 28 undefined on input line 1737.
+
+
+LaTeX Warning: Reference `thm-material-derivative' on page 28 undefined on input line 1737.
+
+
+LaTeX Warning: Hyper reference `def-eulerlag' on page 28 undefined on input line 1741.
+
+
+LaTeX Warning: Reference `def-eulerlag' on page 28 undefined on input line 1741.
+
+
+LaTeX Warning: Hyper reference `eqn-appendix-polar-er-etheta' on page 28 undefined on input line 1797.
+
+
+LaTeX Warning: Reference `eqn-appendix-polar-er-etheta' on page 28 undefined on input line 1797.
+
+
+
+[28]
+<external/ch-chapter02-nozzle.png, id=454, 245.718pt x 233.07076pt>
+File: external/ch-chapter02-nozzle.png Graphic file (type png)
+<use external/ch-chapter02-nozzle.png>
+Package pdftex.def Info: external/ch-chapter02-nozzle.png  used on input line 1812.
+(pdftex.def)             Requested size: 192.40547pt x 182.51283pt.
+
+Overfull \hbox (103.13597pt too wide) detected at line 1829
+[]
+ []
+
+
+
+[29 <./external/ch-chapter02-nozzle.png>]
+
+[30]
+<external/ch-chapter02-lagrange-problem2.jpg, id=477, 574.145pt x 424.58624pt>
+File: external/ch-chapter02-lagrange-problem2.jpg Graphic file (type jpg)
+<use external/ch-chapter02-lagrange-problem2.jpg>
+Package pdftex.def Info: external/ch-chapter02-lagrange-problem2.jpg  used on input line 1904.
+(pdftex.def)             Requested size: 236.3389pt x 174.7747pt.
+
+
+LaTeX Warning: Hyper reference `lagrange-problem' on page 31 undefined on input line 1908.
+
+
+LaTeX Warning: Reference `lagrange-problem' on page 31 undefined on input line 1908.
+
+
+Overfull \hbox (1.47897pt too wide) detected at line 1914
+[]
+ []
+
+
+LaTeX Warning: Hyper reference `lagrange-problem' on page 31 undefined on input line 1922.
+
+
+LaTeX Warning: Reference `lagrange-problem' on page 31 undefined on input line 1922.
+
+
+
+[31 <./external/ch-chapter02-lagrange-problem2.jpg>]
+
+LaTeX Warning: Hyper reference `flowvisualisationproblem' on page 32 undefined on input line 1946.
+
+
+LaTeX Warning: Reference `flowvisualisationproblem' on page 32 undefined on input line 1946.
+
+<external/ch-chapter02-flowvisualisationproblem.png, id=490, 1184.425pt x 1033.8625pt>
+File: external/ch-chapter02-flowvisualisationproblem.png Graphic file (type png)
+<use external/ch-chapter02-flowvisualisationproblem.png>
+Package pdftex.def Info: external/ch-chapter02-flowvisualisationproblem.png  used on input line 1949.
+(pdftex.def)             Requested size: 295.2725pt x 257.73932pt.
+
+LaTeX Warning: Hyper reference `flowvisualisationproblem' on page 32 undefined on input line 1972.
+
+
+LaTeX Warning: Reference `flowvisualisationproblem' on page 32 undefined on input line 1972.
+
+
+LaTeX Warning: Hyper reference `flowvisualisationproblem' on page 32 undefined on input line 1995.
+
+
+LaTeX Warning: Reference `flowvisualisationproblem' on page 32 undefined on input line 1995.
+
+
+LaTeX Warning: Hyper reference `flowvisualisationproblem' on page 32 undefined on input line 2010.
+
+
+LaTeX Warning: Reference `flowvisualisationproblem' on page 32 undefined on input line 2010.
+
+
+LaTeX Warning: Hyper reference `flowvisualisationproblem' on page 32 undefined on input line 2018.
+
+
+LaTeX Warning: Reference `flowvisualisationproblem' on page 32 undefined on input line 2018.
+
+
+
+[32]
+
+[33 <./external/ch-chapter02-flowvisualisationproblem.png>]
+************************************************
+Chapter 3 Equations of motion
+************************************************
+
+
+[34]
+Chapter 3.
+<external/ch-chapter01-equations-fluid.png, id=523, 510.40688pt x 483.30562pt>
+File: external/ch-chapter01-equations-fluid.png Graphic file (type png)
+<use external/ch-chapter01-equations-fluid.png>
+Package pdftex.def Info: external/ch-chapter01-equations-fluid.png  used on input line 2052.
+(pdftex.def)             Requested size: 170.90001pt x 161.8291pt.
+
+
+[35
+
+ <./external/ch-chapter01-equations-fluid.png>]
+<external/saltflow.png, id=536, 1027.84pt x 1541.76pt>
+File: external/saltflow.png Graphic file (type png)
+<use external/saltflow.png>
+Package pdftex.def Info: external/saltflow.png  used on input line 2078.
+(pdftex.def)             Requested size: 136.83792pt x 205.25853pt.
+
+
+[36 <./external/saltflow.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `eqn-mass' on page 37 undefined on input line 2090.
+
+
+LaTeX Warning: Reference `eqn-mass' on page 37 undefined on input line 2090.
+
+************************************************
+Section 3.1 Reynolds' Transport Theorem
+************************************************
+************************************************
+Subsection 3.1.1 Jacobian of Lagrangian to Eulerian
+************************************************
+
+
+[37]
+************************************************
+Subsection 3.1.2 Reynolds' Transport Theorem
+************************************************
+
+LaTeX Warning: Hyper reference `thm-material-derivative' on page 38 undefined on input line 2182.
+
+
+LaTeX Warning: Reference `thm-material-derivative' on page 38 undefined on input line 2182.
+
+
+LaTeX Warning: Hyper reference `thm-Euleridentity' on page 38 undefined on input line 2189.
+
+
+LaTeX Warning: Reference `thm-Euleridentity' on page 38 undefined on input line 2189.
+
+
+
+[38]
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 39 undefined on input line 2210.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 39 undefined on input line 2210.
+
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 39 undefined on input line 2211.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 39 undefined on input line 2211.
+
+
+LaTeX Warning: Hyper reference `ch-viscousflows' on page 39 undefined on input line 2213.
+
+
+LaTeX Warning: Reference `ch-viscousflows' on page 39 undefined on input line 2213.
+
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 39 undefined on input line 2223.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 39 undefined on input line 2223.
+
+************************************************
+Section 3.2 Conservation of mass
+************************************************
+
+
+[39]
+
+LaTeX Warning: Hyper reference `thm-RTT' on page 40 undefined on input line 2259.
+
+
+LaTeX Warning: Reference `thm-RTT' on page 40 undefined on input line 2259.
+
+
+LaTeX Warning: Hyper reference `thm-RTT' on page 40 undefined on input line 2267.
+
+
+LaTeX Warning: Reference `thm-RTT' on page 40 undefined on input line 2267.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmass1' on page 40 undefined on input line 2271.
+
+
+LaTeX Warning: Reference `eqn-consvmass1' on page 40 undefined on input line 2271.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmass2' on page 40 undefined on input line 2273.
+
+
+LaTeX Warning: Reference `eqn-consvmass2' on page 40 undefined on input line 2273.
+
+
+LaTeX Warning: Hyper reference `eqn-DDt' on page 40 undefined on input line 2273.
+
+
+LaTeX Warning: Reference `eqn-DDt' on page 40 undefined on input line 2273.
+
+************************************************
+Subsection 3.2.1 Derivation of mass conservation using Eulerian methods
+************************************************
+
+LaTeX Warning: Hyper reference `thm-mass' on page 40 undefined on input line 2296.
+
+
+LaTeX Warning: Reference `thm-mass' on page 40 undefined on input line 2296.
+
+
+
+[40]
+
+LaTeX Warning: Hyper reference `fig-normalvolume' on page 41 undefined on input line 2298.
+
+
+LaTeX Warning: Reference `fig-normalvolume' on page 41 undefined on input line 2298.
+
+<external/ch-chapter01-equations-09-54-13.png, id=602, 563.10374pt x 564.1075pt>
+File: external/ch-chapter01-equations-09-54-13.png Graphic file (type png)
+<use external/ch-chapter01-equations-09-54-13.png>
+Package pdftex.def Info: external/ch-chapter01-equations-09-54-13.png  used on input line 2301.
+(pdftex.def)             Requested size: 204.96208pt x 205.32512pt.
+
+LaTeX Warning: Hyper reference `fig-normalvolume' on page 41 undefined on input line 2328.
+
+
+LaTeX Warning: Reference `fig-normalvolume' on page 41 undefined on input line 2328.
+
+
+
+[41 <./external/ch-chapter01-equations-09-54-13.png>]
+
+LaTeX Warning: Hyper reference `eqn-integralconservation' on page 42 undefined on input line 2332.
+
+
+LaTeX Warning: Reference `eqn-integralconservation' on page 42 undefined on input line 2332.
+
+
+LaTeX Warning: Hyper reference `lem-bump' on page 42 undefined on input line 2336.
+
+
+LaTeX Warning: Reference `lem-bump' on page 42 undefined on input line 2336.
+
+
+LaTeX Warning: Hyper reference `thm-mass' on page 42 undefined on input line 2336.
+
+
+LaTeX Warning: Reference `thm-mass' on page 42 undefined on input line 2336.
+
+************************************************
+Subsection 3.2.2 Corollary of the Transport Theorem
+************************************************
+
+LaTeX Warning: Hyper reference `thm-RTT' on page 42 undefined on input line 2346.
+
+
+LaTeX Warning: Reference `thm-RTT' on page 42 undefined on input line 2346.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmass1' on page 42 undefined on input line 2346.
+
+
+LaTeX Warning: Reference `eqn-consvmass1' on page 42 undefined on input line 2346.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmass2' on page 42 undefined on input line 2346.
+
+
+LaTeX Warning: Reference `eqn-consvmass2' on page 42 undefined on input line 2346.
+
+************************************************
+Section 3.3 Momentum balance
+************************************************
+
+LaTeX Warning: Hyper reference `remark-vector-gradient' on page 42 undefined on input line 2379.
+
+
+LaTeX Warning: Reference `remark-vector-gradient' on page 42 undefined on input line 2379.
+
+************************************************
+Subsection 3.3.1 Proof of the momentum equation for an inviscid fluid
+************************************************
+
+
+[42]
+
+LaTeX Warning: Hyper reference `eqn-momentum-force' on page 43 undefined on input line 2410.
+
+
+LaTeX Warning: Reference `eqn-momentum-force' on page 43 undefined on input line 2410.
+
+
+LaTeX Warning: Hyper reference `cor-convmass' on page 43 undefined on input line 2429.
+
+
+LaTeX Warning: Reference `cor-convmass' on page 43 undefined on input line 2429.
+
+
+
+[43]
+
+LaTeX Warning: Hyper reference `thm-momentum' on page 44 undefined on input line 2433.
+
+
+LaTeX Warning: Reference `thm-momentum' on page 44 undefined on input line 2433.
+
+************************************************
+Section 3.4 The Euler equations
+************************************************
+************************************************
+Subsection 3.4.1 Incompressible fluids and the Euler equations
+************************************************
+
+LaTeX Warning: Hyper reference `thm-Euleridentity' on page 44 undefined on input line 2456.
+
+
+LaTeX Warning: Reference `thm-Euleridentity' on page 44 undefined on input line 2456.
+
+
+LaTeX Warning: Hyper reference `eq-dxyz-Jacobian' on page 44 undefined on input line 2462.
+
+
+LaTeX Warning: Reference `eq-dxyz-Jacobian' on page 44 undefined on input line 2462.
+
+
+LaTeX Warning: Hyper reference `eq-dxyz-Jacobian' on page 44 undefined on input line 2475.
+
+
+LaTeX Warning: Reference `eq-dxyz-Jacobian' on page 44 undefined on input line 2475.
+
+
+LaTeX Warning: Hyper reference `thm-Euleridentity' on page 44 undefined on input line 2475.
+
+
+LaTeX Warning: Reference `thm-Euleridentity' on page 44 undefined on input line 2475.
+
+
+LaTeX Warning: Hyper reference `thm-mass' on page 44 undefined on input line 2481.
+
+
+LaTeX Warning: Reference `thm-mass' on page 44 undefined on input line 2481.
+
+
+LaTeX Warning: Hyper reference `thm-mass' on page 44 undefined on input line 2483.
+
+
+LaTeX Warning: Reference `thm-mass' on page 44 undefined on input line 2483.
+
+
+LaTeX Warning: Hyper reference `thm-mass' on page 44 undefined on input line 2492.
+
+
+LaTeX Warning: Reference `thm-mass' on page 44 undefined on input line 2492.
+
+
+
+[44]
+
+LaTeX Warning: Hyper reference `thm-mass' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Reference `thm-mass' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Hyper reference `eqn-divu' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Reference `eqn-divu' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Hyper reference `thm-momentum' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Reference `thm-momentum' on page 45 undefined on input line 2494.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmass1' on page 45 undefined on input line 2502.
+
+
+LaTeX Warning: Reference `eqn-consvmass1' on page 45 undefined on input line 2502.
+
+
+LaTeX Warning: Hyper reference `def-incompressible' on page 45 undefined on input line 2502.
+
+
+LaTeX Warning: Reference `def-incompressible' on page 45 undefined on input line 2502.
+
+
+LaTeX Warning: Hyper reference `eqn-divu' on page 45 undefined on input line 2508.
+
+
+LaTeX Warning: Reference `eqn-divu' on page 45 undefined on input line 2508.
+
+
+LaTeX Warning: Hyper reference `eqn-consvmoment' on page 45 undefined on input line 2508.
+
+
+LaTeX Warning: Reference `eqn-consvmoment' on page 45 undefined on input line 2508.
+
+************************************************
+Subsection 3.4.2 Boundary conditions
+************************************************
+
+
+[45]
+
+LaTeX Warning: Hyper reference `ch-viscousflows' on page 46 undefined on input line 2544.
+
+
+LaTeX Warning: Reference `ch-viscousflows' on page 46 undefined on input line 2544.
+
+************************************************
+Section 3.5 Bernoulli's equation
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-euler-momentum' on page 46 undefined on input line 2555.
+
+
+LaTeX Warning: Reference `eqn-euler-momentum' on page 46 undefined on input line 2555.
+
+
+
+[46]
+
+LaTeX Warning: Hyper reference `eqn-consvmoment' on page 47 undefined on input line 2597.
+
+
+LaTeX Warning: Reference `eqn-consvmoment' on page 47 undefined on input line 2597.
+
+
+LaTeX Warning: Hyper reference `eqn-ugradu' on page 47 undefined on input line 2601.
+
+
+LaTeX Warning: Reference `eqn-ugradu' on page 47 undefined on input line 2601.
+
+
+LaTeX Warning: Hyper reference `eqn-vorticity' on page 47 undefined on input line 2621.
+
+
+LaTeX Warning: Reference `eqn-vorticity' on page 47 undefined on input line 2621.
+
+
+LaTeX Warning: Hyper reference `eqn-bernoulli-steady' on page 47 undefined on input line 2621.
+
+
+LaTeX Warning: Reference `eqn-bernoulli-steady' on page 47 undefined on input line 2621.
+
+
+LaTeX Warning: Hyper reference `thm-bernoulli-steady' on page 47 undefined on input line 2630.
+
+
+LaTeX Warning: Reference `thm-bernoulli-steady' on page 47 undefined on input line 2630.
+
+
+LaTeX Warning: Hyper reference `eqn-bernoulli-vorticity' on page 47 undefined on input line 2630.
+
+
+LaTeX Warning: Reference `eqn-bernoulli-vorticity' on page 47 undefined on input line 2630.
+
+
+
+[47]
+
+LaTeX Warning: Hyper reference `eqn-bernoulli-vorticity' on page 48 undefined on input line 2648.
+
+
+LaTeX Warning: Reference `eqn-bernoulli-vorticity' on page 48 undefined on input line 2648.
+
+
+LaTeX Warning: Hyper reference `eqn-curlcross' on page 48 undefined on input line 2652.
+
+
+LaTeX Warning: Reference `eqn-curlcross' on page 48 undefined on input line 2652.
+
+************************************************
+Subsection 3.5.1 Potential flow
+************************************************
+
+LaTeX Warning: Hyper reference `def-euler' on page 48 undefined on input line 2673.
+
+
+LaTeX Warning: Reference `def-euler' on page 48 undefined on input line 2673.
+
+
+
+[48]
+
+LaTeX Warning: Hyper reference `thm-bernoulli-steady' on page 49 undefined on input line 2692.
+
+
+LaTeX Warning: Reference `thm-bernoulli-steady' on page 49 undefined on input line 2692.
+
+
+LaTeX Warning: Hyper reference `eqn-bernoulli-steady' on page 49 undefined on input line 2692.
+
+
+LaTeX Warning: Reference `eqn-bernoulli-steady' on page 49 undefined on input line 2692.
+
+************************************************
+Exercises 3.6 Exercises
+************************************************
+
+LaTeX Warning: Hyper reference `rem-continuum' on page 49 undefined on input line 2725.
+
+
+LaTeX Warning: Reference `rem-continuum' on page 49 undefined on input line 2725.
+
+
+LaTeX Warning: Hyper reference `lem-bump' on page 49 undefined on input line 2732.
+
+
+LaTeX Warning: Reference `lem-bump' on page 49 undefined on input line 2732.
+
+
+
+[49]
+
+LaTeX Warning: Hyper reference `thm-RTT' on page 50 undefined on input line 2741.
+
+
+LaTeX Warning: Reference `thm-RTT' on page 50 undefined on input line 2741.
+
+
+LaTeX Warning: Hyper reference `ex-fig-leibnitz' on page 50 undefined on input line 2748.
+
+
+LaTeX Warning: Reference `ex-fig-leibnitz' on page 50 undefined on input line 2748.
+
+<external/equations_leibnitz.jpg, id=754, 889.07156pt x 710.655pt>
+File: external/equations_leibnitz.jpg Graphic file (type jpg)
+<use external/equations_leibnitz.jpg>
+Package pdftex.def Info: external/equations_leibnitz.jpg  used on input line 2751.
+(pdftex.def)             Requested size: 265.80345pt x 212.46077pt.
+
+LaTeX Warning: Hyper reference `eqn-leibnitz-rule' on page 50 undefined on input line 2774.
+
+
+LaTeX Warning: Reference `eqn-leibnitz-rule' on page 50 undefined on input line 2774.
+
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 50 undefined on input line 2774.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 50 undefined on input line 2774.
+
+
+
+[50 <./external/equations_leibnitz.jpg>]
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 51 undefined on input line 2786.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 51 undefined on input line 2786.
+
+
+LaTeX Warning: Hyper reference `def-euler' on page 51 undefined on input line 2793.
+
+
+LaTeX Warning: Reference `def-euler' on page 51 undefined on input line 2793.
+
+
+LaTeX Warning: Hyper reference `thm-mass' on page 51 undefined on input line 2795.
+
+
+LaTeX Warning: Reference `thm-mass' on page 51 undefined on input line 2795.
+
+
+LaTeX Warning: Hyper reference `thm-momentum' on page 51 undefined on input line 2795.
+
+
+LaTeX Warning: Reference `thm-momentum' on page 51 undefined on input line 2795.
+
+
+LaTeX Warning: Hyper reference `def-euler' on page 51 undefined on input line 2797.
+
+
+LaTeX Warning: Reference `def-euler' on page 51 undefined on input line 2797.
+
+
+LaTeX Warning: Hyper reference `def-incompressible' on page 51 undefined on input line 2797.
+
+
+LaTeX Warning: Reference `def-incompressible' on page 51 undefined on input line 2797.
+
+
+LaTeX Warning: Hyper reference `def-euler' on page 51 undefined on input line 2806.
+
+
+LaTeX Warning: Reference `def-euler' on page 51 undefined on input line 2806.
+
+<external/ch-chapter03-pressure-contours.png, id=766, 383.031pt x 214.09987pt>
+File: external/ch-chapter03-pressure-contours.png Graphic file (type png)
+<use external/ch-chapter03-pressure-contours.png>
+Package pdftex.def Info: external/ch-chapter03-pressure-contours.png  used on input line 2861.
+(pdftex.def)             Requested size: 295.2725pt x 165.05667pt.
+
+
+[51]
+
+[52 <./external/ch-chapter03-pressure-contours.png>]
+<external/ch-chapter03-piston.png, id=789, 359.54324pt x 61.4295pt>
+File: external/ch-chapter03-piston.png Graphic file (type png)
+<use external/ch-chapter03-piston.png>
+Package pdftex.def Info: external/ch-chapter03-piston.png  used on input line 2871.
+(pdftex.def)             Requested size: 320.27254pt x 54.72081pt.
+
+
+LaTeX Warning: Hyper reference `def-euler' on page 53 undefined on input line 2877.
+
+
+LaTeX Warning: Reference `def-euler' on page 53 undefined on input line 2877.
+
+
+
+[53
+
+ <./external/ch-chapter03-piston.png>]
+
+[54]
+<external/clepsydra.png, id=805, 403.5075pt x 573.14125pt>
+File: external/clepsydra.png Graphic file (type png)
+<use external/clepsydra.png>
+Package pdftex.def Info: external/clepsydra.png  used on input line 2969.
+(pdftex.def)             Requested size: 160.43626pt x 227.8794pt.
+
+
+[55 <./external/clepsydra.png>]
+************************************************
+Chapter 4 Potential flows
+************************************************
+
+
+[56]
+Chapter 4.
+<generated/youtube/ch-chapter04-potentialflows-2-3-2.jpg, id=825, 120.45pt x 90.3375pt>
+File: generated/youtube/ch-chapter04-potentialflows-2-3-2.jpg Graphic file (type jpg)
+<use generated/youtube/ch-chapter04-potentialflows-2-3-2.jpg>
+Package pdftex.def Info: generated/youtube/ch-chapter04-potentialflows-2-3-2.jpg  used on input line 3033.
+(pdftex.def)             Requested size: 160.68242pt x 120.52365pt.
+<generated/qrcode/ch-chapter04-potentialflows-2-3-2.png, id=826, 291.0875pt x 291.0875pt>
+File: generated/qrcode/ch-chapter04-potentialflows-2-3-2.png Graphic file (type png)
+<use generated/qrcode/ch-chapter04-potentialflows-2-3-2.png>
+Package pdftex.def Info: generated/qrcode/ch-chapter04-potentialflows-2-3-2.png  used on input line 3036.
+(pdftex.def)             Requested size: 72.12828pt x 72.12766pt.
+************************************************
+Section 4.1 The velocity potential
+************************************************
+
+LaTeX Warning: Hyper reference `def-irrotational' on page 57 undefined on input line 3059.
+
+
+LaTeX Warning: Reference `def-irrotational' on page 57 undefined on input line 3059.
+
+
+
+[57
+
+ <./generated/youtube/ch-chapter04-potentialflows-2-3-2.jpg> <./generated/qrcode/ch-chapter04-potentialflows-2-3-2.png (PNG copy)>]
+<external/potentialproof.jpg, id=841, 919.93687pt x 794.97pt>
+File: external/potentialproof.jpg Graphic file (type jpg)
+<use external/potentialproof.jpg>
+Package pdftex.def Info: external/potentialproof.jpg  used on input line 3089.
+(pdftex.def)             Requested size: 273.56105pt x 236.40643pt.
+
+
+[58 <./external/potentialproof.jpg>]
+
+LaTeX Warning: Hyper reference `def-incompressible' on page 59 undefined on input line 3107.
+
+
+LaTeX Warning: Reference `def-incompressible' on page 59 undefined on input line 3107.
+
+
+LaTeX Warning: Hyper reference `eqn-vel-potential' on page 59 undefined on input line 3117.
+
+
+LaTeX Warning: Reference `eqn-vel-potential' on page 59 undefined on input line 3117.
+
+
+LaTeX Warning: Hyper reference `thm-bernoulli-potential' on page 59 undefined on input line 3117.
+
+
+LaTeX Warning: Reference `thm-bernoulli-potential' on page 59 undefined on input line 3117.
+
+************************************************
+Subsection 4.1.1 Elementary flows
+************************************************
+<external/uniformflow.pdf, id=852, 462.52798pt x 346.89601pt>
+File: external/uniformflow.pdf Graphic file (type pdf)
+<use external/uniformflow.pdf>
+Package pdftex.def Info: external/uniformflow.pdf  used on input line 3146.
+(pdftex.def)             Requested size: 307.67793pt x 230.76764pt.
+
+
+[59]
+<external/stagnationflow.pdf, id=863, 462.52798pt x 346.89601pt>
+File: external/stagnationflow.pdf Graphic file (type pdf)
+<use external/stagnationflow.pdf>
+Package pdftex.def Info: external/stagnationflow.pdf  used on input line 3166.
+(pdftex.def)             Requested size: 307.67793pt x 230.76764pt.
+
+
+[60 <./external/uniformflow.pdf> <./external/stagnationflow.pdf>]
+<external/linesource.pdf, id=876, 462.52798pt x 346.89601pt>
+File: external/linesource.pdf Graphic file (type pdf)
+<use external/linesource.pdf>
+Package pdftex.def Info: external/linesource.pdf  used on input line 3196.
+(pdftex.def)             Requested size: 307.67793pt x 230.76764pt.
+
+
+[61 <./external/linesource.pdf>]
+<external/movinglinesource.pdf, id=886, 462.52798pt x 346.89601pt>
+File: external/movinglinesource.pdf Graphic file (type pdf)
+<use external/movinglinesource.pdf>
+Package pdftex.def Info: external/movinglinesource.pdf  used on input line 3229.
+(pdftex.def)             Requested size: 307.67793pt x 230.76764pt.
+
+************************************************
+Section 4.2 The streamfunction
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-2d-irrotational' on page 62 undefined on input line 3245.
+
+
+LaTeX Warning: Reference `eqn-2d-irrotational' on page 62 undefined on input line 3245.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-divu' on page 62 undefined on input line 3245.
+
+
+LaTeX Warning: Reference `eqn-2d-divu' on page 62 undefined on input line 3245.
+
+
+
+[62 <./external/movinglinesource.pdf>]
+
+LaTeX Warning: Hyper reference `thm-exist-potential' on page 63 undefined on input line 3257.
+
+
+LaTeX Warning: Reference `thm-exist-potential' on page 63 undefined on input line 3257.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-uv-streamfunction' on page 63 undefined on input line 3272.
+
+
+LaTeX Warning: Reference `eqn-2d-uv-streamfunction' on page 63 undefined on input line 3272.
+
+
+LaTeX Warning: Hyper reference `thm-streamfunction' on page 63 undefined on input line 3276.
+
+
+LaTeX Warning: Reference `thm-streamfunction' on page 63 undefined on input line 3276.
+
+<external/streamfunction.jpg, id=896, 1365.60187pt x 1187.93813pt>
+File: external/streamfunction.jpg Graphic file (type jpg)
+<use external/streamfunction.jpg>
+Package pdftex.def Info: external/streamfunction.jpg  used on input line 3279.
+(pdftex.def)             Requested size: 239.01897pt x 207.91042pt.
+
+
+[63]
+
+[64 <./external/streamfunction.jpg>]
+
+LaTeX Warning: Hyper reference `eqn-2d-uv-streamfunction' on page 65 undefined on input line 3316.
+
+
+LaTeX Warning: Reference `eqn-2d-uv-streamfunction' on page 65 undefined on input line 3316.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-irrotational' on page 65 undefined on input line 3316.
+
+
+LaTeX Warning: Reference `eqn-2d-irrotational' on page 65 undefined on input line 3316.
+
+
+LaTeX Warning: Hyper reference `example-potential-linesource' on page 65 undefined on input line 3318.
+
+
+LaTeX Warning: Reference `example-potential-linesource' on page 65 undefined on input line 3318.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-streamfunction' on page 65 undefined on input line 3318.
+
+
+LaTeX Warning: Reference `eqn-2d-streamfunction' on page 65 undefined on input line 3318.
+
+
+LaTeX Warning: Hyper reference `eqn-identity-curlpolar' on page 65 undefined on input line 3318.
+
+
+LaTeX Warning: Reference `eqn-identity-curlpolar' on page 65 undefined on input line 3318.
+
+************************************************
+Subsection 4.2.1 Elementary flows
+************************************************
+
+LaTeX Warning: Hyper reference `sec-Potential-and-streamfunction' on page 65 undefined on input line 3331.
+
+
+LaTeX Warning: Reference `sec-Potential-and-streamfunction' on page 65 undefined on input line 3331.
+
+
+LaTeX Warning: Hyper reference `example-potential-uniform' on page 65 undefined on input line 3334.
+
+
+LaTeX Warning: Reference `example-potential-uniform' on page 65 undefined on input line 3334.
+
+
+LaTeX Warning: Hyper reference `fig-potential-uniform' on page 65 undefined on input line 3342.
+
+
+LaTeX Warning: Reference `fig-potential-uniform' on page 65 undefined on input line 3342.
+
+
+LaTeX Warning: Hyper reference `example-potential-stagnation' on page 65 undefined on input line 3346.
+
+
+LaTeX Warning: Reference `example-potential-stagnation' on page 65 undefined on input line 3346.
+
+
+LaTeX Warning: Hyper reference `fig-potential-stagnation' on page 65 undefined on input line 3350.
+
+
+LaTeX Warning: Reference `fig-potential-stagnation' on page 65 undefined on input line 3350.
+
+
+LaTeX Warning: Hyper reference `example-potential-linesource' on page 65 undefined on input line 3354.
+
+
+LaTeX Warning: Reference `example-potential-linesource' on page 65 undefined on input line 3354.
+
+
+LaTeX Warning: Hyper reference `eqn-identity-grad-polar' on page 65 undefined on input line 3354.
+
+
+LaTeX Warning: Reference `eqn-identity-grad-polar' on page 65 undefined on input line 3354.
+
+
+LaTeX Warning: Hyper reference `eqn-streamfunction-polar' on page 65 undefined on input line 3358.
+
+
+LaTeX Warning: Reference `eqn-streamfunction-polar' on page 65 undefined on input line 3358.
+
+
+LaTeX Warning: Hyper reference `fig-potential-linesource' on page 65 undefined on input line 3362.
+
+
+LaTeX Warning: Reference `fig-potential-linesource' on page 65 undefined on input line 3362.
+
+
+LaTeX Warning: Hyper reference `example-streamfunction-linesource' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Reference `example-streamfunction-linesource' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Hyper reference `thm-exist-potential' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Reference `thm-exist-potential' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Hyper reference `eqn-streamfunction-def-psi' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Reference `eqn-streamfunction-def-psi' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Hyper reference `example-streamfunction-linesource' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Reference `example-streamfunction-linesource' on page 65 undefined on input line 3364.
+
+
+LaTeX Warning: Hyper reference `example-potential-movingsource' on page 65 undefined on input line 3366.
+
+
+LaTeX Warning: Reference `example-potential-movingsource' on page 65 undefined on input line 3366.
+
+
+
+[65]
+
+LaTeX Warning: Hyper reference `example-potential-linesource' on page 66 undefined on input line 3380.
+
+
+LaTeX Warning: Reference `example-potential-linesource' on page 66 undefined on input line 3380.
+
+<external/linevortex.pdf, id=937, 433.62pt x 433.62pt>
+File: external/linevortex.pdf Graphic file (type pdf)
+<use external/linevortex.pdf>
+Package pdftex.def Info: external/linevortex.pdf  used on input line 3392.
+(pdftex.def)             Requested size: 307.67793pt x 307.69371pt.
+
+LaTeX Warning: Hyper reference `eqn-streamfunction-polar' on page 66 undefined on input line 3396.
+
+
+LaTeX Warning: Reference `eqn-streamfunction-polar' on page 66 undefined on input line 3396.
+
+
+LaTeX Warning: Hyper reference `example-potential-linesource' on page 66 undefined on input line 3402.
+
+
+LaTeX Warning: Reference `example-potential-linesource' on page 66 undefined on input line 3402.
+
+
+
+[66]
+************************************************
+Section 4.3 The complex potential
+************************************************
+
+
+[67 <./external/linevortex.pdf>]
+************************************************
+Subsection 4.3.1 Cauchy's theorem and harmonic functions
+************************************************
+
+
+[68]
+
+LaTeX Warning: Hyper reference `eqn-CR' on page 69 undefined on input line 3481.
+
+
+LaTeX Warning: Reference `eqn-CR' on page 69 undefined on input line 3481.
+
+
+LaTeX Warning: Hyper reference `eqn-complex-derivative' on page 69 undefined on input line 3486.
+
+
+LaTeX Warning: Reference `eqn-complex-derivative' on page 69 undefined on input line 3486.
+
+
+LaTeX Warning: Hyper reference `eqn-CR' on page 69 undefined on input line 3500.
+
+
+LaTeX Warning: Reference `eqn-CR' on page 69 undefined on input line 3500.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-laplace' on page 69 undefined on input line 3510.
+
+
+LaTeX Warning: Reference `eqn-2d-laplace' on page 69 undefined on input line 3510.
+
+
+LaTeX Warning: Hyper reference `eqn-2d-streamfunction-laplace' on page 69 undefined on input line 3510.
+
+
+LaTeX Warning: Reference `eqn-2d-streamfunction-laplace' on page 69 undefined on input line 3510.
+
+
+LaTeX Warning: Hyper reference `thm-CR1' on page 69 undefined on input line 3520.
+
+
+LaTeX Warning: Reference `thm-CR1' on page 69 undefined on input line 3520.
+
+
+LaTeX Warning: Hyper reference `thm-complex-inf-derivatives' on page 69 undefined on input line 3520.
+
+
+LaTeX Warning: Reference `thm-complex-inf-derivatives' on page 69 undefined on input line 3520.
+
+
+
+[69]
+************************************************
+Subsection 4.3.2 Examples of elementary flows
+************************************************
+
+LaTeX Warning: Hyper reference `sec-Potential-and-streamfunction' on page 70 undefined on input line 3543.
+
+
+LaTeX Warning: Reference `sec-Potential-and-streamfunction' on page 70 undefined on input line 3543.
+
+
+LaTeX Warning: Hyper reference `example-potential-uniform' on page 70 undefined on input line 3569.
+
+
+LaTeX Warning: Reference `example-potential-uniform' on page 70 undefined on input line 3569.
+
+
+LaTeX Warning: Hyper reference `example-potential-stagnation' on page 70 undefined on input line 3577.
+
+
+LaTeX Warning: Reference `example-potential-stagnation' on page 70 undefined on input line 3577.
+
+
+
+[70]
+
+LaTeX Warning: Hyper reference `example-potential-linesource' on page 71 undefined on input line 3585.
+
+
+LaTeX Warning: Reference `example-potential-linesource' on page 71 undefined on input line 3585.
+
+
+LaTeX Warning: Hyper reference `eqn-complex-linesource' on page 71 undefined on input line 3602.
+
+
+LaTeX Warning: Reference `eqn-complex-linesource' on page 71 undefined on input line 3602.
+
+
+LaTeX Warning: Hyper reference `eqn-complex-velocity' on page 71 undefined on input line 3602.
+
+
+LaTeX Warning: Reference `eqn-complex-velocity' on page 71 undefined on input line 3602.
+
+
+LaTeX Warning: Hyper reference `example-streamfunction-linevortex' on page 71 undefined on input line 3614.
+
+
+LaTeX Warning: Reference `example-streamfunction-linevortex' on page 71 undefined on input line 3614.
+
+
+LaTeX Warning: Hyper reference `eqn-complex-logarithm' on page 71 undefined on input line 3616.
+
+
+LaTeX Warning: Reference `eqn-complex-logarithm' on page 71 undefined on input line 3616.
+
+************************************************
+Section 4.4 The method of images
+************************************************
+
+
+[71]
+
+LaTeX Warning: Hyper reference `note-noflux-BC' on page 72 undefined on input line 3636.
+
+
+LaTeX Warning: Reference `note-noflux-BC' on page 72 undefined on input line 3636.
+
+************************************************
+Subsection 4.4.1 Planar boundaries: a half-plane
+************************************************
+
+LaTeX Warning: Hyper reference `image-planar01' on page 72 undefined on input line 3649.
+
+
+LaTeX Warning: Reference `image-planar01' on page 72 undefined on input line 3649.
+
+<external/image-planar01.jpg, id=1039, 1108.8928pt x 988.44281pt>
+File: external/image-planar01.jpg Graphic file (type jpg)
+<use external/image-planar01.jpg>
+Package pdftex.def Info: external/image-planar01.jpg  used on input line 3652.
+(pdftex.def)             Requested size: 273.08104pt x 243.4149pt.
+
+LaTeX Warning: Hyper reference `eqn-complex-linesource' on page 72 undefined on input line 3656.
+
+
+LaTeX Warning: Reference `eqn-complex-linesource' on page 72 undefined on input line 3656.
+
+
+
+[72 <./external/image-planar01.jpg>]
+
+LaTeX Warning: Hyper reference `fig-image-planar02' on page 73 undefined on input line 3686.
+
+
+LaTeX Warning: Reference `fig-image-planar02' on page 73 undefined on input line 3686.
+
+<external/image-planar02.jpg, id=1050, 1348.28719pt x 1136.74687pt>
+File: external/image-planar02.jpg Graphic file (type jpg)
+<use external/image-planar02.jpg>
+Package pdftex.def Info: external/image-planar02.jpg  used on input line 3689.
+(pdftex.def)             Requested size: 273.08104pt x 230.22467pt.
+
+
+[73 <./external/image-planar02.jpg>]
+
+LaTeX Warning: Hyper reference `eqn-complex-logarithm' on page 74 undefined on input line 3707.
+
+
+LaTeX Warning: Reference `eqn-complex-logarithm' on page 74 undefined on input line 3707.
+
+<external/image-duallog.jpg, id=1059, 1333.23094pt x 820.56563pt>
+File: external/image-duallog.jpg Graphic file (type jpg)
+<use external/image-duallog.jpg>
+Package pdftex.def Info: external/image-duallog.jpg  used on input line 3714.
+(pdftex.def)             Requested size: 341.20001pt x 209.99898pt.
+
+
+[74 <./external/image-duallog.jpg>]
+************************************************
+Section 4.5 Conformal mapping
+************************************************
+
+LaTeX Warning: Hyper reference `fig-conformal-general' on page 75 undefined on input line 3758.
+
+
+LaTeX Warning: Reference `fig-conformal-general' on page 75 undefined on input line 3758.
+
+<external/conformal_generalmap.jpg, id=1070, 1129.21875pt x 451.6875pt>
+File: external/conformal_generalmap.jpg Graphic file (type jpg)
+<use external/conformal_generalmap.jpg>
+Package pdftex.def Info: external/conformal_generalmap.jpg  used on input line 3767.
+(pdftex.def)             Requested size: 341.20001pt x 136.47908pt.
+
+
+[75]
+************************************************
+Subsection 4.5.1 Source in a wedge
+************************************************
+
+LaTeX Warning: Hyper reference `fig-conformal-wedge' on page 76 undefined on input line 3785.
+
+
+LaTeX Warning: Reference `fig-conformal-wedge' on page 76 undefined on input line 3785.
+
+<external/conformal_wedge.jpg, id=1080, 1129.21875pt x 418.56375pt>
+File: external/conformal_wedge.jpg Graphic file (type jpg)
+<use external/conformal_wedge.jpg>
+Package pdftex.def Info: external/conformal_wedge.jpg  used on input line 3788.
+(pdftex.def)             Requested size: 341.20001pt x 126.47061pt.
+************************************************
+Subsection 4.5.2 The conformal mapping method
+************************************************
+
+
+[76 <./external/conformal_generalmap.jpg> <./external/conformal_wedge.jpg>]
+************************************************
+Subsection 4.5.3 Standard conformal maps
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-conformal-exp-map' on page 77 undefined on input line 3839.
+
+
+LaTeX Warning: Reference `eqn-conformal-exp-map' on page 77 undefined on input line 3839.
+
+<external/conformal_exp.jpg, id=1093, 1129.21875pt x 313.9228pt>
+File: external/conformal_exp.jpg Graphic file (type jpg)
+<use external/conformal_exp.jpg>
+Package pdftex.def Info: external/conformal_exp.jpg  used on input line 3842.
+(pdftex.def)             Requested size: 341.20001pt x 94.85295pt.
+
+LaTeX Warning: Hyper reference `eqn-conformal-sin-map' on page 77 undefined on input line 3846.
+
+
+LaTeX Warning: Reference `eqn-conformal-sin-map' on page 77 undefined on input line 3846.
+
+<external/conformal_sin.jpg, id=1094, 1129.21875pt x 425.33907pt>
+File: external/conformal_sin.jpg Graphic file (type jpg)
+<use external/conformal_sin.jpg>
+Package pdftex.def Info: external/conformal_sin.jpg  used on input line 3849.
+(pdftex.def)             Requested size: 341.20001pt x 128.5178pt.
+
+
+[77 <./external/conformal_exp.jpg>]
+
+LaTeX Warning: Hyper reference `fig-conformal-sinh' on page 78 undefined on input line 3859.
+
+
+LaTeX Warning: Reference `fig-conformal-sinh' on page 78 undefined on input line 3859.
+
+<external/conformal_sinh.jpg, id=1111, 1129.21875pt x 514.92375pt>
+File: external/conformal_sinh.jpg Graphic file (type jpg)
+<use external/conformal_sinh.jpg>
+Package pdftex.def Info: external/conformal_sinh.jpg  used on input line 3868.
+(pdftex.def)             Requested size: 341.80002pt x 155.86116pt.
+************************************************
+Exercises 4.6 Exercises
+************************************************
+
+
+[78 <./external/conformal_sin.jpg> <./external/conformal_sinh.jpg>]
+************************************************
+Chapter 5 Water waves
+************************************************
+
+
+[79]
+Chapter 5.
+************************************************
+Chapter 6 Vortex motion
+************************************************
+
+
+[80
+
+]
+Chapter 6.
+
+LaTeX Warning: Hyper reference `ch-chapter02-kinematics' on page 81 undefined on input line 3930.
+
+
+LaTeX Warning: Reference `ch-chapter02-kinematics' on page 81 undefined on input line 3930.
+
+<external/ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg, id=1137, 4255.9pt x 2842.62pt>
+File: external/ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg Graphic file (type jpg)
+<use external/ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg>
+Package pdftex.def Info: external/ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg  used on input line 3934.
+(pdftex.def)             Requested size: 114.53162pt x 76.46982pt.
+<external/ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg, id=1138, 732.7375pt x 567.11874pt>
+File: external/ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg Graphic file (type jpg)
+<use external/ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg>
+Package pdftex.def Info: external/ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg  used on input line 3940.
+(pdftex.def)             Requested size: 114.53162pt x 88.63805pt.
+
+Underfull \hbox (badness 1117) in paragraph at lines 3941--3942
+\T1/lmr/m/n/10 (+20) tices be-hind an air-craft
+ []
+
+<external/ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png, id=1139, 220.825pt x 172.645pt>
+File: external/ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png Graphic file (type png)
+<use external/ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png>
+Package pdftex.def Info: external/ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png  used on input line 3946.
+(pdftex.def)             Requested size: 114.53162pt x 89.54408pt.
+
+LaTeX Warning: Hyper reference `def-vorticity' on page 81 undefined on input line 3954.
+
+
+LaTeX Warning: Reference `def-vorticity' on page 81 undefined on input line 3954.
+
+
+
+[81
+
+ <./external/ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg> <./external/ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg> <./external/ch-chapter06-220px-Tea_leaf_Paradox_Illustration.png>]
+Overfull \hbox (45.36848pt too wide) in paragraph at lines 3959--3960
+[]\T1/lmr/m/n/10 (-20) In the spe-cial case of a two-dimensional flow (that is $[]\OT1/lmr/m/n/10 (-20) ([]\OML/lmm/m/it/10 ; t\OT1/lmr/m/n/10 (-20) ) = (\OML/lmm/m/it/10 u\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 x; y; t\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 ; v\OT1/lmr/m/n/10 (-20) (\OML/lmm/m/it/10 x; y; t\OT1/lmr/m/n/10 (-20) )\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (-20) 0)$\T1/lmr/m/n/10 (-20) ),
+ []
+
+
+
+[82]
+************************************************
+Section 6.1 The Helmholtz principle
+************************************************
+
+LaTeX Warning: Hyper reference `ch-chapter03-equations' on page 83 undefined on input line 4032.
+
+
+LaTeX Warning: Reference `ch-chapter03-equations' on page 83 undefined on input line 4032.
+
+
+LaTeX Warning: Hyper reference `eqn-vorticity-equation-lagrange' on page 83 undefined on input line 4032.
+
+
+LaTeX Warning: Reference `eqn-vorticity-equation-lagrange' on page 83 undefined on input line 4032.
+
+************************************************
+Subsection 6.1.1 The circulation in a flow
+************************************************
+************************************************
+Subsection 6.1.2 Vortex lines and the Helmholtz vortex theorems
+************************************************
+
+
+[83]
+
+LaTeX Warning: Hyper reference `fig-vortextube' on page 84 undefined on input line 4093.
+
+
+LaTeX Warning: Reference `fig-vortextube' on page 84 undefined on input line 4093.
+
+<external/ch-chapter06-vortextube.jpg, id=1192, 234.8775pt x 250.9375pt>
+File: external/ch-chapter06-vortextube.jpg Graphic file (type jpg)
+<use external/ch-chapter06-vortextube.jpg>
+Package pdftex.def Info: external/ch-chapter06-vortextube.jpg  used on input line 4096.
+(pdftex.def)             Requested size: 158.7pt x 169.55162pt.
+
+LaTeX Warning: Hyper reference `eq-circulationvorticity' on page 84 undefined on input line 4100.
+
+
+LaTeX Warning: Reference `eq-circulationvorticity' on page 84 undefined on input line 4100.
+
+<external/ch-chapter06-spinup.jpg, id=1193, 536.0025pt x 325.215pt>
+File: external/ch-chapter06-spinup.jpg Graphic file (type jpg)
+<use external/ch-chapter06-spinup.jpg>
+Package pdftex.def Info: external/ch-chapter06-spinup.jpg  used on input line 4114.
+(pdftex.def)             Requested size: 171.50002pt x 104.05603pt.
+<external/ch-chapter06-spindown.jpg, id=1194, 590.205pt x 194.7275pt>
+File: external/ch-chapter06-spindown.jpg Graphic file (type jpg)
+<use external/ch-chapter06-spindown.jpg>
+Package pdftex.def Info: external/ch-chapter06-spindown.jpg  used on input line 4120.
+(pdftex.def)             Requested size: 171.50002pt x 56.58243pt.
+
+LaTeX Warning: Hyper reference `fig-spinup' on page 84 undefined on input line 4126.
+
+
+LaTeX Warning: Reference `fig-spinup' on page 84 undefined on input line 4126.
+
+
+LaTeX Warning: Hyper reference `fig-spindown' on page 84 undefined on input line 4126.
+
+
+LaTeX Warning: Reference `fig-spindown' on page 84 undefined on input line 4126.
+
+
+
+[84 <./external/ch-chapter06-vortextube.jpg>]
+************************************************
+Section 6.2 Examples illustrating the use of the Helmholtz principle
+************************************************
+
+Overfull \hbox (2.49951pt too wide) in paragraph at lines 4136--4136
+|[]\T1/lmr/bx/n/14.4 (-20) Examples il-lus-trat-ing the use of the Helmholtz
+ []
+
+************************************************
+Exercises 6.3 Exercises
+************************************************
+<external/ch-chapter03-kelvin-circulation.png, id=1217, 400.19513pt x 178.86826pt>
+File: external/ch-chapter03-kelvin-circulation.png Graphic file (type png)
+<use external/ch-chapter03-kelvin-circulation.png>
+Package pdftex.def Info: external/ch-chapter03-kelvin-circulation.png  used on input line 4162.
+(pdftex.def)             Requested size: 256.339pt x 114.57082pt.
+
+Overfull \hbox (48.70071pt too wide) detected at line 4175
+[]
+ []
+
+
+
+[85 <./external/ch-chapter06-spinup.jpg> <./external/ch-chapter06-spindown.jpg>]
+************************************************
+Chapter 7 Viscous flows
+************************************************
+
+
+[86 <./external/ch-chapter03-kelvin-circulation.png>]
+Chapter 7.
+<external/ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png, id=1241, 172.9662pt x 68.4156pt>
+File: external/ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png Graphic file (type png)
+<use external/ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png>
+Package pdftex.def Info: external/ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png  used on input line 4200.
+(pdftex.def)             Requested size: 204.96208pt x 81.07628pt.
+<external/ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png, id=1242, 803.0pt x 1155.31625pt>
+File: external/ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png Graphic file (type png)
+<use external/ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png>
+Package pdftex.def Info: external/ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png  used on input line 4207.
+(pdftex.def)             Requested size: 171.20001pt x 246.30797pt.
+<external/ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg, id=1243, 494.84875pt x 416.55624pt>
+File: external/ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg Graphic file (type jpg)
+<use external/ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg>
+Package pdftex.def Info: external/ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg  used on input line 4213.
+(pdftex.def)             Requested size: 171.20001pt x 144.11249pt.
+
+
+[87
+
+ <./external/ch-chapter07-Fu-Liang-Zhang-Symmetry-2020-12-00846-g001a-crop.png>]
+************************************************
+Section 7.1 Important definitions
+************************************************
+************************************************
+Subsection 7.1.1 Viscosity
+************************************************
+
+LaTeX Warning: Hyper reference `subsec-newtonian-fluids' on page 88 undefined on input line 4246.
+
+
+LaTeX Warning: Reference `subsec-newtonian-fluids' on page 88 undefined on input line 4246.
+
+
+LaTeX Warning: Hyper reference `fig-viscosity-measurement' on page 88 undefined on input line 4248.
+
+
+LaTeX Warning: Reference `fig-viscosity-measurement' on page 88 undefined on input line 4248.
+
+<external/ch-chapter07-viscosity-measurement.png, id=1253, 291.79013pt x 84.01387pt>
+File: external/ch-chapter07-viscosity-measurement.png Graphic file (type png)
+<use external/ch-chapter07-viscosity-measurement.png>
+Package pdftex.def Info: external/ch-chapter07-viscosity-measurement.png  used on input line 4255.
+(pdftex.def)             Requested size: 205.32208pt x 59.11824pt.
+
+
+[88 <./external/ch-chapter07-Kraaiennest_CC-BY-SA-3.0-Stokes_sphere.svg.png> <./external/ch-chapter07-J_Mo_Painting-still-from-video-paint-on-surface.jpg>]
+
+LaTeX Warning: Hyper reference `example-viscosity' on page 89 undefined on input line 4283.
+
+
+LaTeX Warning: Reference `example-viscosity' on page 89 undefined on input line 4283.
+
+
+LaTeX Warning: Hyper reference `sec-stress' on page 89 undefined on input line 4283.
+
+
+LaTeX Warning: Reference `sec-stress' on page 89 undefined on input line 4283.
+
+
+
+[89 <./external/ch-chapter07-viscosity-measurement.png>]
+************************************************
+Subsection 7.1.2 Reynolds number
+************************************************
+
+LaTeX Warning: Hyper reference `example-choice-of-scales' on page 90 undefined on input line 4306.
+
+
+LaTeX Warning: Reference `example-choice-of-scales' on page 90 undefined on input line 4306.
+
+
+LaTeX Warning: Hyper reference `def-euler' on page 90 undefined on input line 4334.
+
+
+LaTeX Warning: Reference `def-euler' on page 90 undefined on input line 4334.
+
+
+
+[90]
+************************************************
+Subsection 7.1.3 State relations
+************************************************
+
+
+[91]
+************************************************
+Subsubsection 7.1.3.1 Liquids
+************************************************
+************************************************
+Subsubsection 7.1.3.2 Gases
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-idealgas' on page 92 undefined on input line 4409.
+
+
+LaTeX Warning: Reference `eqn-idealgas' on page 92 undefined on input line 4409.
+
+
+LaTeX Warning: Hyper reference `eqn-idealgas' on page 92 undefined on input line 4416.
+
+
+LaTeX Warning: Reference `eqn-idealgas' on page 92 undefined on input line 4416.
+
+
+
+[92]
+************************************************
+Section 7.2 Boundaries, surfaces and interfaces of fluids
+************************************************
+
+LaTeX Warning: Hyper reference `def-fluid-solid-boundary' on page 93 undefined on input line 4431.
+
+
+LaTeX Warning: Reference `def-fluid-solid-boundary' on page 93 undefined on input line 4431.
+
+
+LaTeX Warning: Hyper reference `def-fluid-fluid-interface' on page 93 undefined on input line 4432.
+
+
+LaTeX Warning: Reference `def-fluid-fluid-interface' on page 93 undefined on input line 4432.
+
+************************************************
+Subsection 7.2.1 Boundary conditions on the velocity
+************************************************
+
+
+[93]
+************************************************
+Subsection 7.2.2 Force balance at the boundary\slash {}interface
+************************************************
+
+LaTeX Warning: Hyper reference `boundary-conditions-velocity' on page 94 undefined on input line 4483.
+
+
+LaTeX Warning: Reference `boundary-conditions-velocity' on page 94 undefined on input line 4483.
+
+************************************************
+Subsection 7.2.3 Surface tension
+************************************************
+<external/ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg, id=1337, 323.70938pt x 203.25937pt>
+File: external/ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg Graphic file (type jpg)
+<use external/ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg>
+Package pdftex.def Info: external/ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg  used on input line 4501.
+(pdftex.def)             Requested size: 170.90001pt x 107.30824pt.
+<external/ch-chapter07-surfacetension1.jpg, id=1338, 264.68887pt x 167.12437pt>
+File: external/ch-chapter07-surfacetension1.jpg Graphic file (type jpg)
+<use external/ch-chapter07-surfacetension1.jpg>
+Package pdftex.def Info: external/ch-chapter07-surfacetension1.jpg  used on input line 4508.
+(pdftex.def)             Requested size: 170.90001pt x 107.9053pt.
+
+
+[94 <./external/ch-chapter07-waterstrider-J-Bush-and-D-Hu.jpg>]
+<external/ch-chapter07-droplet.jpg, id=1350, 163.3302pt x 134.4222pt>
+File: external/ch-chapter07-droplet.jpg Graphic file (type jpg)
+<use external/ch-chapter07-droplet.jpg>
+Package pdftex.def Info: external/ch-chapter07-droplet.jpg  used on input line 4521.
+(pdftex.def)             Requested size: 171.20001pt x 140.89928pt.
+<external/ch-chapter07-meniscus.png, id=1351, 273.72263pt x 185.19188pt>
+File: external/ch-chapter07-meniscus.png Graphic file (type png)
+<use external/ch-chapter07-meniscus.png>
+Package pdftex.def Info: external/ch-chapter07-meniscus.png  used on input line 4529.
+(pdftex.def)             Requested size: 171.20001pt x 115.82939pt.
+
+
+[95 <./external/ch-chapter07-surfacetension1.jpg> <./external/ch-chapter07-droplet.jpg> <./external/ch-chapter07-meniscus.png>]
+************************************************
+Section 7.3 Stress in a fluid
+************************************************
+************************************************
+Subsection 7.3.1 Stress at a surface
+************************************************
+<external/ch-chapter07-Cone_and_plate.jpg, id=1366, 263.98625pt x 311.1625pt>
+File: external/ch-chapter07-Cone_and_plate.jpg Graphic file (type jpg)
+<use external/ch-chapter07-Cone_and_plate.jpg>
+Package pdftex.def Info: external/ch-chapter07-Cone_and_plate.jpg  used on input line 4601.
+(pdftex.def)             Requested size: 171.20001pt x 201.79268pt.
+
+
+[96]
+
+LaTeX Warning: Hyper reference `figure-falling-ball' on page 97 undefined on input line 4607.
+
+
+LaTeX Warning: Reference `figure-falling-ball' on page 97 undefined on input line 4607.
+
+************************************************
+Subsection 7.3.2 The stress tensor
+************************************************
+
+LaTeX Warning: Hyper reference `def-stress-surface' on page 97 undefined on input line 4627.
+
+
+LaTeX Warning: Reference `def-stress-surface' on page 97 undefined on input line 4627.
+
+<external/ch-chapter07-stress-surface.jpg, id=1385, 366.36874pt x 205.76875pt>
+File: external/ch-chapter07-stress-surface.jpg Graphic file (type jpg)
+<use external/ch-chapter07-stress-surface.jpg>
+Package pdftex.def Info: external/ch-chapter07-stress-surface.jpg  used on input line 4644.
+(pdftex.def)             Requested size: 190.32191pt x 106.8936pt.
+<external/ch-chapter07-stress-on-square.jpg, id=1386, 288.07625pt x 203.76125pt>
+File: external/ch-chapter07-stress-on-square.jpg Graphic file (type jpg)
+<use external/ch-chapter07-stress-on-square.jpg>
+Package pdftex.def Info: external/ch-chapter07-stress-on-square.jpg  used on input line 4653.
+(pdftex.def)             Requested size: 190.32191pt x 134.62274pt.
+
+LaTeX Warning: Hyper reference `fig-stress-cuboid' on page 97 undefined on input line 4657.
+
+
+LaTeX Warning: Reference `fig-stress-cuboid' on page 97 undefined on input line 4657.
+
+
+
+[97 <./external/ch-chapter07-Cone_and_plate.jpg>]
+
+[98 <./external/ch-chapter07-stress-surface.jpg> <./external/ch-chapter07-stress-on-square.jpg>]
+
+LaTeX Warning: Hyper reference `eq-defofp' on page 99 undefined on input line 4687.
+
+
+LaTeX Warning: Reference `eq-defofp' on page 99 undefined on input line 4687.
+
+
+LaTeX Warning: Hyper reference `eq-defofp' on page 99 undefined on input line 4691.
+
+
+LaTeX Warning: Reference `eq-defofp' on page 99 undefined on input line 4691.
+
+************************************************
+Section 7.4 Newtonian fluids
+************************************************
+
+LaTeX Warning: Hyper reference `eq-rateofstrain' on page 99 undefined on input line 4740.
+
+
+LaTeX Warning: Reference `eq-rateofstrain' on page 99 undefined on input line 4740.
+
+
+LaTeX Warning: Hyper reference `eq-cartesianrateofstrain' on page 99 undefined on input line 4740.
+
+
+LaTeX Warning: Reference `eq-cartesianrateofstrain' on page 99 undefined on input line 4740.
+
+
+LaTeX Warning: Hyper reference `eq-Newtonianstress-incompressible-vectorform' on page 99 undefined on input line 4740.
+
+
+LaTeX Warning: Reference `eq-Newtonianstress-incompressible-vectorform' on page 99 undefined on input line 4740.
+
+
+
+[99]
+
+LaTeX Warning: Hyper reference `eq-Newtonianstress' on page 100 undefined on input line 4784.
+
+
+LaTeX Warning: Reference `eq-Newtonianstress' on page 100 undefined on input line 4784.
+
+
+LaTeX Warning: Hyper reference `eq-Newtonianstress-incompressible' on page 100 undefined on input line 4784.
+
+
+LaTeX Warning: Reference `eq-Newtonianstress-incompressible' on page 100 undefined on input line 4784.
+
+
+
+[100]
+Overfull \hbox (91.16325pt too wide) detected at line 4802
+[][][][] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 :
+ []
+
+
+LaTeX Warning: Hyper reference `eq-cartesianrateofstrain' on page 101 undefined on input line 4803.
+
+
+LaTeX Warning: Reference `eq-cartesianrateofstrain' on page 101 undefined on input line 4803.
+
+
+LaTeX Warning: Hyper reference `def-stress-surface-calculation' on page 101 undefined on input line 4814.
+
+
+LaTeX Warning: Reference `def-stress-surface-calculation' on page 101 undefined on input line 4814.
+
+
+LaTeX Warning: Hyper reference `eq-normalstress' on page 101 undefined on input line 4826.
+
+
+LaTeX Warning: Reference `eq-normalstress' on page 101 undefined on input line 4826.
+
+
+LaTeX Warning: Hyper reference `eq-cartesiannewtonianstress' on page 101 undefined on input line 4848.
+
+
+LaTeX Warning: Reference `eq-cartesiannewtonianstress' on page 101 undefined on input line 4848.
+
+
+
+[101]
+
+LaTeX Warning: Hyper reference `eq-cartesiannewtonianstress' on page 102 undefined on input line 4877.
+
+
+LaTeX Warning: Reference `eq-cartesiannewtonianstress' on page 102 undefined on input line 4877.
+
+
+
+[102]
+<external/ch-chapter07-nonnewtonian.jpg, id=1463, 469.755pt x 230.8625pt>
+File: external/ch-chapter07-nonnewtonian.jpg Graphic file (type jpg)
+<use external/ch-chapter07-nonnewtonian.jpg>
+Package pdftex.def Info: external/ch-chapter07-nonnewtonian.jpg  used on input line 4897.
+(pdftex.def)             Requested size: 316.79999pt x 155.69159pt.
+
+
+LaTeX Warning: Hyper reference `fig-artery' on page 103 undefined on input line 4903.
+
+
+LaTeX Warning: Reference `fig-artery' on page 103 undefined on input line 4903.
+
+<external/ch-chapter07-artery.jpg, id=1465, 410.53375pt x 187.70125pt>
+File: external/ch-chapter07-artery.jpg Graphic file (type jpg)
+<use external/ch-chapter07-artery.jpg>
+Package pdftex.def Info: external/ch-chapter07-artery.jpg  used on input line 4906.
+(pdftex.def)             Requested size: 285.17805pt x 130.38467pt.
+
+LaTeX Warning: Hyper reference `fig-liquid-crystals' on page 103 undefined on input line 4910.
+
+
+LaTeX Warning: Reference `fig-liquid-crystals' on page 103 undefined on input line 4910.
+
+<external/ch-chapter07-liquid-crystals.jpg, id=1466, 90.3375pt x 139.52126pt>
+File: external/ch-chapter07-liquid-crystals.jpg Graphic file (type jpg)
+<use external/ch-chapter07-liquid-crystals.jpg>
+Package pdftex.def Info: external/ch-chapter07-liquid-crystals.jpg  used on input line 4913.
+(pdftex.def)             Requested size: 95.46095pt x 147.43622pt.
+
+
+[103 <./external/ch-chapter07-nonnewtonian.jpg>]
+<external/ch-chapter07-sample-flow1.jpg, id=1478, 209.78375pt x 125.46875pt>
+File: external/ch-chapter07-sample-flow1.jpg Graphic file (type jpg)
+<use external/ch-chapter07-sample-flow1.jpg>
+Package pdftex.def Info: external/ch-chapter07-sample-flow1.jpg  used on input line 4923.
+(pdftex.def)             Requested size: 171.20001pt x 102.393pt.
+
+
+LaTeX Warning: Hyper reference `def-stress-surface-calculation' on page 104 undefined on input line 4958.
+
+
+LaTeX Warning: Reference `def-stress-surface-calculation' on page 104 undefined on input line 4958.
+
+
+LaTeX Warning: Hyper reference `def-stress-surface-calculation' on page 104 undefined on input line 4959.
+
+
+LaTeX Warning: Reference `def-stress-surface-calculation' on page 104 undefined on input line 4959.
+
+
+
+[104 <./external/ch-chapter07-artery.jpg> <./external/ch-chapter07-liquid-crystals.jpg>]
+
+LaTeX Warning: Hyper reference `eq-strainrate-cyl' on page 105 undefined on input line 4970.
+
+
+LaTeX Warning: Reference `eq-strainrate-cyl' on page 105 undefined on input line 4970.
+
+
+LaTeX Warning: Hyper reference `def-stress-surface-calculation' on page 105 undefined on input line 4994.
+
+
+LaTeX Warning: Reference `def-stress-surface-calculation' on page 105 undefined on input line 4994.
+
+
+
+[105 <./external/ch-chapter07-sample-flow1.jpg>]
+************************************************
+Section 7.5 Conservation of linear momentum
+************************************************
+<external/ch-chapter07-small-cube.jpg, id=1499, 734.745pt x 481.8pt>
+File: external/ch-chapter07-small-cube.jpg Graphic file (type jpg)
+<use external/ch-chapter07-small-cube.jpg>
+Package pdftex.def Info: external/ch-chapter07-small-cube.jpg  used on input line 5011.
+(pdftex.def)             Requested size: 170.90001pt x 112.06145pt.
+
+
+[106]
+
+LaTeX Warning: Hyper reference `fig-small-cube' on page 107 undefined on input line 5015.
+
+
+LaTeX Warning: Reference `fig-small-cube' on page 107 undefined on input line 5015.
+
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 107 undefined on input line 5015.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 107 undefined on input line 5015.
+
+************************************************
+Subsection 7.5.1 Left-hand side
+************************************************
+
+LaTeX Warning: Hyper reference `eq-cartesiannewtonianstress' on page 107 undefined on input line 5043.
+
+
+LaTeX Warning: Reference `eq-cartesiannewtonianstress' on page 107 undefined on input line 5043.
+
+
+
+[107 <./external/ch-chapter07-small-cube.jpg>]
+Overfull \hbox (65.32323pt too wide) detected at line 5135
+[]
+ []
+
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 108 undefined on input line 5136.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 108 undefined on input line 5136.
+
+
+
+[108]
+************************************************
+Subsection 7.5.2 Right-hand side
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 109 undefined on input line 5160.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 109 undefined on input line 5160.
+
+************************************************
+Subsection 7.5.3 Equating the two sides
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 109 undefined on input line 5187.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 109 undefined on input line 5187.
+
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 109 undefined on input line 5187.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 109 undefined on input line 5187.
+
+
+
+[109]
+************************************************
+Subsection 7.5.4 Discussion of the Navier\textendash {}Stokes equation
+************************************************
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 110 undefined on input line 5198.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 110 undefined on input line 5198.
+
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 110 undefined on input line 5213.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 110 undefined on input line 5213.
+
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 110 undefined on input line 5213.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 110 undefined on input line 5213.
+
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 110 undefined on input line 5216.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 110 undefined on input line 5216.
+
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 110 undefined on input line 5216.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 110 undefined on input line 5216.
+
+
+
+[110]
+
+LaTeX Warning: Hyper reference `rem-RTT-control-volume' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Reference `rem-RTT-control-volume' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Hyper reference `eqn-incompressibledef' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Reference `eqn-incompressibledef' on page 111 undefined on input line 5234.
+
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 111 undefined on input line 5237.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 111 undefined on input line 5237.
+
+
+LaTeX Warning: Hyper reference `eq-cartesiannewtonianstress' on page 111 undefined on input line 5241.
+
+
+LaTeX Warning: Reference `eq-cartesiannewtonianstress' on page 111 undefined on input line 5241.
+
+
+LaTeX Warning: Hyper reference `eqn-euler-momentum' on page 111 undefined on input line 5252.
+
+
+LaTeX Warning: Reference `eqn-euler-momentum' on page 111 undefined on input line 5252.
+
+************************************************
+Subsection 7.5.5 Example of the application
+************************************************
+
+
+[111]
+
+[112]
+
+LaTeX Warning: Hyper reference `eq-altflow' on page 113 undefined on input line 5360.
+
+
+LaTeX Warning: Reference `eq-altflow' on page 113 undefined on input line 5360.
+
+************************************************
+Exercises 7.6 Exercises
+************************************************
+<external/ch-chapter07-ball-low-re.png, id=1571, 323.40825pt x 121.05225pt>
+File: external/ch-chapter07-ball-low-re.png Graphic file (type png)
+<use external/ch-chapter07-ball-low-re.png>
+Package pdftex.def Info: external/ch-chapter07-ball-low-re.png  used on input line 5436.
+(pdftex.def)             Requested size: 236.3389pt x 88.4616pt.
+
+
+[113]
+
+[114]
+
+LaTeX Warning: Hyper reference `fig-small-cube' on page 115 undefined on input line 5461.
+
+
+LaTeX Warning: Reference `fig-small-cube' on page 115 undefined on input line 5461.
+
+
+LaTeX Warning: Hyper reference `eqn-navierstokes' on page 115 undefined on input line 5463.
+
+
+LaTeX Warning: Reference `eqn-navierstokes' on page 115 undefined on input line 5463.
+
+
+LaTeX Warning: Hyper reference `eq-inviscidstress' on page 115 undefined on input line 5498.
+
+
+LaTeX Warning: Reference `eq-inviscidstress' on page 115 undefined on input line 5498.
+
+
+
+[115 <./external/ch-chapter07-ball-low-re.png>]
+
+[116]
+
+LaTeX Warning: Hyper reference `eqn-cauchy-equation' on page 117 undefined on input line 5521.
+
+
+LaTeX Warning: Reference `eqn-cauchy-equation' on page 117 undefined on input line 5521.
+
+
+LaTeX Warning: Hyper reference `fig-small-cube' on page 117 undefined on input line 5521.
+
+
+LaTeX Warning: Reference `fig-small-cube' on page 117 undefined on input line 5521.
+
+
+LaTeX Warning: Hyper reference `eqn-RTT' on page 117 undefined on input line 5521.
+
+
+LaTeX Warning: Reference `eqn-RTT' on page 117 undefined on input line 5521.
+
+
+
+[117
+
+]
+************************************************
+Appendix A Vector calculus
+************************************************
+Appendix A.
+************************************************
+Section A.1 Identities for plane polar coordinates
+************************************************
+************************************************
+Appendix B List of Symbols
+************************************************
+
+
+[118
+
+
+]
+Appendix B.
+
+
+[119
+
+]
+runsystem(makeindex main.idx)...executed safely (allowed).
+
+ (./main.ind)
+************************************************
+References References and further reading
+************************************************
+
+
+[120
+
+
+
+
+]
+
+[121
+
+] (./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  A04F28D33DC683F781C156B79861151F;7111.
+ ) 
+Here is how much of TeX's memory you used:
+ 46633 strings out of 473201
+ 1087067 string characters out of 5716121
+ 1708144 words of memory out of 5000000
+ 67765 multiletter control sequences out of 15000+600000
+ 664342 words of font info for 281 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 98i,20n,101p,1104b,2165s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmib7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (131 pages, 13903089 bytes).
+PDF statistics:
+ 2004 PDF objects out of 2073 (max. 8388607)
+ 1663 compressed objects within 17 object streams
+ 964 named destinations out of 1000 (max. 500000)
+ 55298 words of extra memory for PDF output out of 61914 (max. 10000000)
+
