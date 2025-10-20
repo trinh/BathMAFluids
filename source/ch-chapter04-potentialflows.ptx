@@ -376,8 +376,36 @@
     </theorem>
 
     <p>
-      An example of the use of the above theorem is given in <xref ref="ps-potential-fluxcalc"/>
+      An example of the use of the above theorem is given in <xref ref="ps-potential-fluxcalc"/>. 
     </p>
+
+    <example>
+      <statement>
+        <p>
+          Let the velocity of a two-dimensional flow be given by the formula
+          <me>
+            \bu = [3ax^2 - 3ay^2, \, -6axy]
+          </me>
+          where <m>a</m> is a positive constant. By finding the streamfunction, <m>\psi</m>, calculate the volume flux across a curve connecting points <m>A = (0, 0)</m> and <m>B = (1, 1)</m> using <xref ref="thm-flux-streamlines"/>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          (Done in problem class)
+
+          We can check, using the integration of velocity components that 
+          <me>
+            \psi = 3ax^2 y - a y^3 + C.
+          </me>
+          Hence the flux is
+          <me>
+            Q = \psi(B) - \psi(A) = 2a.
+          </me>
+          We can verify this flux should be positive if the normal is oriented to the right of the curve from A to B. 
+        </p>
+      </solution>
+    </example>
       
     
     <p>
