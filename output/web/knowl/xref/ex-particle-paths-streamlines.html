@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Particle paths and streamlines.</span>
+</h3>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Define the particle paths and streamlines for a velocity field <span class="process-math">\(\bu(\bx,t)\text{.}\)</span> When do these coincide?<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\bx}{t} = \bu(\bx,t).
+\end{equation*}
+</div>
+<div class="para">Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\bx}{s} = \bu(\bx,t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(s\)</span> is a parameter along the streamline. The two coincide if the flow is steady, i.e. <span class="process-math">\(\bu(\bx,t)=\bu(\bx)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.5.a.1"><a href="#ex-particle-paths-streamlines-2-2" title="Copy heading and permalink for Answer 2.3.5.a.1" aria-label="Copy heading and permalink for Answer 2.3.5.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.5.a"><a href="#ex-particle-paths-streamlines-2" title="Copy heading and permalink for Task 2.3.5.a" aria-label="Copy heading and permalink for Task 2.3.5.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical">
+<div class="para">Show that a quantity <span class="process-math">\(f(\bx,t)\)</span> is preserved following the flow if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter02-lagrange-problem2.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pathline, showing the particle positions at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span><div class="autopermalink" data-description="Figure 2.3.2"><a href="#lagrange-problem" title="Copy heading and permalink for Figure 2.3.2" aria-label="Copy heading and permalink for Figure 2.3.2">🔗</a></div></figcaption></figure><div class="para logical">
+<div class="para">
+<a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.2">Figure 2.3.2</a> shows the points <span class="process-math">\(\bx(t)\)</span> and <span class="process-math">\(\bx(t+dt)=\bx(t)+\de\bx\text{,}\)</span> and the equation for pathlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de
+t\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> following a particle:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lagrange-problem.html">
+\begin{align*}
+\dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de
+t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla
+f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)\\
+&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla
+f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)\\
+&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},
+\end{align*}
+</div>
+<div class="para">(’’<span class="process-math">\(\dots\)</span>’’ denotes higher order terms). Thus the value is preserved if <span class="process-math">\(\DD{f}{t}=0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.5.b.1"><a href="#ex-particle-paths-streamlines-3-2" title="Copy heading and permalink for Answer 2.3.5.b.1" aria-label="Copy heading and permalink for Answer 2.3.5.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.5.b"><a href="#ex-particle-paths-streamlines-3" title="Copy heading and permalink for Task 2.3.5.b" aria-label="Copy heading and permalink for Task 2.3.5.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical">
+<div class="para">Show also that <span class="process-math">\(f\)</span> is constant along streamlines if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu\cdot\nabla f=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para">Now suppose that in <a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.2">Figure 2.3.2</a>, we have shown instead the situation of a streamline.<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">In this case, the points <span class="process-math">\(\bx(s)\)</span> and <span class="process-math">\(\bx(s+ds)=\bx(s)+\de\bx\)</span> are shown, and the equation for streamlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de s\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> along the streamline:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de
+s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla
+f(\bx,t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla
+f(\bx,t)\right)\\
+&amp;=\bu\cdot\nabla f.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Thus the value of <span class="process-math">\(f\)</span> is preserved if <span class="process-math">\(\bu\cdot\nabla f=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.5.c.1"><a href="#ex-particle-paths-streamlines-4-2" title="Copy heading and permalink for Answer 2.3.5.c.1" aria-label="Copy heading and permalink for Answer 2.3.5.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.5.c"><a href="#ex-particle-paths-streamlines-4" title="Copy heading and permalink for Task 2.3.5.c" aria-label="Copy heading and permalink for Task 2.3.5.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 2.3.5: Particle paths and streamlines"><a href="#ex-particle-paths-streamlines" title="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines" aria-label="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-kinematics.html#ex-particle-paths-streamlines">in-context</a></span>
+</body>
+</html>

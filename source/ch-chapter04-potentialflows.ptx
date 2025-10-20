@@ -337,10 +337,11 @@
       <title>Flux between streamlines</title>
       <statement>
         <p>
-        Consider streamlines <m>\psi = \psi_1</m> and <m>\psi = \psi_2</m>. The <em>flux</em> (net flow of fluid) between the two streamlines is given by
+        Consider two streamlines <m>\psi = \psi_1</m> and <m>\psi = \psi_2</m>. We assume that the streamlines pass through the points A and B respectively. Consider a contour <m>C</m> connecting A and B. The <em>flux</em> (net flow of fluid) through <m>C</m> and hence between the streamlines is
         <me>
-          \textrm{flux} = \psi_1 - \psi_2.
+          |\textrm{flux}| = |\psi_2 - \psi_1|
         </me>
+        We have not specified the sign of the flux as it is subject to the considered direction through <m>C</m>.
         </p>
       </statement>
 
@@ -350,23 +351,61 @@
             <me>
               \int_C \bu \cdot \bn \, \de{s},
             </me>
-            where <m>C</m> is any smooth path joining the two streamlines with unit normal <m>\bn</m>, as shown in FIGURE. 
+            where <m>C</m> is any smooth path joining the two streamlines with unit normal <m>\bn</m>, as shown in <xref ref="fig-streamfunction"/>.
           </p>
 
           <p>
-            Note that given the curve, the unit normal is written as <m>[-\de{y}, \de{x}]/\de s</m>, so <m>\bn \de{s} = [\de{y}, -\de{x}]</m>. Then the flux is re-written as the following: 
+            Note that given the curve, and in consideration of a small arclength element <m>\de{s}</m>, the tangent and normal are given by 
+            <me>
+              \bt = \frac{[\de{x}, \de{y}]}{\sqrt{\de{x}^2 + \de{y}^2}} = \frac{[\de{x}, \de{y}]}{\de{s}}, \qquad 
+              \bn = \frac{[-\de{y}, \de{x}]}{\de{s}}.
+            </me>
+            Therefore we can write <m>\bn \de{s} = [\de{y}, -\de{x}]</m>. Then the flux is re-written as the following: 
             <md>
               <mrow>\textrm{flux} \amp= \int_C \left[\pd{\psi}{y}, -\pd{\psi}{x}\right] \cdot [\de{y}, \de{x}], </mrow>
               <mrow>\amp= \int_C \left(\pd{\psi}{x} \, \de{x} + \pd{\psi}{y} \right), </mrow>
               <mrow>\amp= \bigl[ \psi \bigr]_C, </mrow>
-              <mrow>\amp= \psi_2 - \psi_1. </mrow>
+              <mrow>\amp= \psi(B) - \psi(A), </mrow>
+              <mrow>\amp= \psi_2 - \psi_1, </mrow>
             </md>
           In the third line above, <m>[\psi]_C</m> is the change of <m>\psi</m> across the contour.  
-          Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. 
+          Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. To be safe, we have taken the absolute value in the problem.
         </p>
         </proof>
 
     </theorem>
+
+    <p>
+      An example of the use of the above theorem is given in <xref ref="ps-potential-fluxcalc"/>. 
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Let the velocity of a two-dimensional flow be given by the formula
+          <me>
+            \bu = [3ax^2 - 3ay^2, \, -6axy]
+          </me>
+          where <m>a</m> is a positive constant. By finding the streamfunction, <m>\psi</m>, calculate the volume flux across a curve connecting points <m>A = (0, 0)</m> and <m>B = (1, 1)</m> using <xref ref="thm-flux-streamlines"/>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          (Done in problem class)
+
+          We can check, using the integration of velocity components that 
+          <me>
+            \psi = 3ax^2 y - a y^3 + C.
+          </me>
+          Hence the flux is
+          <me>
+            Q = \psi(B) - \psi(A) = 2a.
+          </me>
+          We can verify this flux should be positive if the normal is oriented to the right of the curve from A to B. 
+        </p>
+      </solution>
+    </example>
       
     
     <p>
@@ -528,6 +567,10 @@
     </me>
     So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
    </p>
+
+   <p>
+    In <xref ref="ps-streamfunction-flux-compute"/>, you will practice the computation of fluxes using line integrals. 
+   </p>
   </example>
 </subsection>
 </section>
@@ -570,6 +613,14 @@
       <mrow>\dd{(\log (z+1))}{z} = \frac{1}{z + 1}, \quad \dd{\sin(z^2)}{z} = 2z\cos(z^2). </mrow>
       </md>
       and the usual rules of algebraic manipulations hold. There are some caveats, however, which are dealt with on an individual manner.
+    </p>
+  </remark>
+
+    <remark>
+    <title>Examinable content</title>
+   
+    <p>
+      The proofs of all theorems from this section are non-examinable, but you are expected to understand the theorems and their relevance to the theory of potential flow.
     </p>
   </remark>
  
@@ -616,6 +667,8 @@
       In this module, we will not be concerned with formalities when they are not relevant. For example, in our definition of analyticity, we do not specify if the relevant domains are open or closed. The functions we work with are generally non-pathological---they may have isolated singularities or exceptional points, but generally the application and context will make it clear the limits of our results.
     </p>
   </remark>
+
+
  
   <p>
     Now we have one of the most important theorems of complex analysis. </p>
@@ -666,7 +719,7 @@
     <title>Cauchy-Riemann equations II</title>
     <statement>
       <p>
-      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z0 = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
+      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z) = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
       </p>
     </statement>
 
@@ -858,7 +911,8 @@
         <me>
           f(z) = \frac{\Gamma}{2\pi} (\theta - \im \log r),
         </me>
-        where <m>z = r\e^{\im\theta}</m>>.
+        where <m>z = r\e^{\im\theta}</m>.</p>
+        <p>
        Therefore, the streamfunction is given by <m>\psi = -(\Gamma/2\pi) \log r</m> and is constant along circular trajectories with constant distance from the origin, <m>r</m>. 
       </p>
     </example>
@@ -893,7 +947,7 @@
     Consider the situation illustrated in <xref ref="image-planar01"/>.
 </p> 
     <figure xml:id="image-planar01">
-      <caption>Blah</caption>
+      <caption>A flow region in the right half-plane, with a single source placed at <m>x = d</m>.</caption>
       <image source="image-planar01.jpg" width="80%"/>
     </figure>
    
@@ -943,7 +997,7 @@
     This yields the illustration of the flow in <xref ref="fig-image-planar02"/>
 </p> 
      <figure xml:id="fig-image-planar02">
-      <caption>Blah</caption>
+      <caption>Placement of the image source at <m>x = -d</m> makes it so the boundary condition on <m>x = 0</m> can be satisfied.</caption>
       <image source="image-planar02.jpg" width="80%"/>
     </figure>
    
@@ -971,7 +1025,7 @@
     The definitions of <m>r_1, r_2</m> and <m>\theta_1, \theta_2</m>, are shown in the below figure. In order for each logarithm to be well defined, the angles <m>\theta_1</m> and <m>\theta_2</m> must be restricted to be less than a complete revolution. We thus restrict <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_1 \in [-\pi, \pi)</m>. 
   </p>
     <figure xml:id="fig-image-duallog">
-      <caption>Blah</caption>
+      <caption>When considering the evaluation of the flow, we must take care of the fact that the logarithm is multi-valued. A branch cut from each of the two branch points is imposed.</caption>
       <image source="image-duallog.jpg" width="100%"/>
     </figure>
   <p>
@@ -1165,7 +1219,7 @@
     </p>
 
     <figure xml:id="fig-conformal-sin">
-      <caption>The exponential maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
+      <caption>The sinusoidal transformation maps the semi-infinite strip of width <m>2a</m> to the upper half-plane.</caption>
       <image source="conformal_sin.jpg" width="100%">
         <shortdescription>conformal map</shortdescription>
       </image>
@@ -1197,7 +1251,7 @@
       </p>
 
       <figure xml:id="fig-conformal-sinh">
-      <caption>The exponential maps the infinite strip of height <m>h</m> to the upper half-plane.</caption>
+      <caption>The sinh transformation maps the semi-infinite channel with height <m>2a</m> to the right half-plane.</caption>
       <image source="conformal_sinh.jpg" width="100%">
         <shortdescription>conformal map</shortdescription>
       </image>
@@ -1222,16 +1276,292 @@
 </section>
 
 
+
+
 <exercises xml:id="ws-potentialflows">
 
   <introduction>
-  <warning>
-  <p>We look to complete worksheets in the week prior to the content being delivered.
-    Once this is done, this disclaimer message will be removed.</p>
-</warning>
+ <p>
+      There is an excellent <url href="https://potentialflow.com/">website at www.potentialflows.com</url> that allows you to plug in different flow elements (sources/sinks, vortices, etc.) into a potential flow and observe the streamlines and potential-flow lines. In your exercises, use this to help you visualise the flow.
+    </p>
   </introduction>
 
-    <exercise xml:id="ps-image-planar01">
+  <exercisegroup>
+    <title>Potential flows, part 1</title>
+    
+  
+  <introduction>
+    <p>
+      These exercises cover approximately around sections 4.1 (the velocity potential) to 4.3 (the complex potential). 
+    </p>
+  <!-- <warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered.
+    Once this is done, this disclaimer message will be removed.</p>
+</warning> -->
+  </introduction>
+
+  <exercise xml:id="ps-streamfunction-flux-compute">
+    <title>Basic calculations</title>
+    <introduction>
+
+      <p>
+        The following question relates to two-dimensional potential flow.  Remember that the fluid flux through a surface given by contour <m>C</m> is given by <xref ref="eqn-2d-flux"/>, or
+        <me>
+          \int_C \bu \cdot \bn \, \de{s}.
+        </me>
+        You will get some practice on calculating this quantity below. 
+      </p>
+
+      <p>
+        We can also calculate the total force on the surface specified by <m>C</m> by using the integral in <xref ref="eqn-total-force"/>. Since the force in potential flow is given by <xref ref="thm-inviscid-force"/>, then the total force is 
+        <me>
+          \text{total force} = \int_C (-p\bn) \, \de{s}
+        </me>
+       where <m>p</m> is the pressure force given by Bernoulli's equation: 
+       <me>
+        p = p_0 - \frac{\rho}{2} |\bu|^2,
+       </me>
+       and <m>p_0</m> is a reference value and we ignore gravity.
+      </p>
+
+
+      <p>
+      For each of the following elementary flows, state or calculate: 
+
+      <ul>
+        <li>
+          <p>
+             the complex potential, <m>f(z)</m>; 
+          </p>
+        </li>
+        <li>
+          <p>
+            the velocity vector, written in vector form <m>\bu = [u, v]</m>;
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the flux and fluid force on a surface consisting of a circle of unit radius;
+          </p>
+
+          <p>
+            <em>Hint:</em> the unit normal for the circle is <m>\bn = [\cos\theta, \sin\theta]</m>; when converting to polar coordinates remember that <m>\de{s} = r\de{\theta}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+           the flux and fluid force on a surface consisting of a plate given by the line <m>y = -x + 1</m> with <m>x > 0</m>.  
+          </p>
+        </li>
+      </ul>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Uniform flow of velocity <m>U</m> oriented at an angle of <m>\pi/4</m> to the horizontal. 
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          (i) complex potential given in the notes is <me>f(z) = U\e^{-\im\alpha}z = U\e^{-\im \pi/4}z</me>;</p>
+          
+        <p>(ii) complex velocity is given by <m>f'(z) = u - \im v = U\e^{-\im \pi/4}</m>. Writing out the velocity components in vector form, we have 
+        <me>
+          \bu = U \Bigl[ \cos(\pi/4), \, \sin(\pi/4) \Bigr] = U \frac{\sqrt{2}}{2} \Bigl[1, 1\Bigr].
+        </me>
+        
+        </p>
+
+        <p>
+          (iii) We expect the flux past a circle will be zero (since the flow will enter one side and exit the other). The flux is given by 
+          <me>
+            \int_{r = 1} \bu \cdot \bn \, \de{s} = U\frac{\sqrt{2}}{2} \int_0^{2\pi} [1, 1] \cdot [\cos\theta, \sin\theta] \de{\theta} = 0.
+          </me>
+        </p>
+
+        <p>
+          The force is given by 
+          <me>
+          \bF_{\text{total}} = \left(\frac{\rho}{2} U^2 - p_0\right) \int_0^{2\pi} [\cos\theta, \sin\theta] \, \de{\theta} = [0, 0]. 
+          </me>
+          The total force again is zero since the force on the two hemispheres will cancel themselves out.
+        </p>
+
+        <p>
+          (iv) The normal of the plate is given by 
+          <me>\bn = \frac{[1, 1]}{\sqrt{2}}</me> 
+          (here we assume this normal is pointing 'out'). We can parameterise the plate using a vector equation for the position vector:
+          <me>
+            \br(t) = [t, -t + 1], \quad 0 \leq t \leq 1,
+          </me>
+          since the equation of the line is <m>y = -x + 1</m>. Then 
+          <me>
+            |\br'(t)| = |[1, -1]| = \sqrt{2}. 
+          </me>
+          So the surface conversion is 
+          <me>
+            \de{s} = |\br'(t)| \, \de{t} = \sqrt{2} \de{t}.
+          </me>
+          The flux is then 
+          <me>
+            U\frac{\sqrt{2}}{2} \int_{t = 0}^1 \frac{[1, 1]}{\sqrt{2}} \cdot [1, 1] \sqrt{2} \de{t} = \sqrt{2}U.
+          </me>
+          The above makes perfect sense. The fluid is entirely normal to the plate, and the plate has length <m>\sqrt{2}</m>. 
+        </p>
+
+        <p>
+          For the force, remember that the pressure is constant, since the speed is constant. Thus 
+          <me>
+            \bF_{\text{total}}= \left(\frac{\rho}{2}U^2 - p_0\right) \int_0^1 \frac{[1, 1]}{\sqrt{2}} \cdot \, \sqrt{2} \, \de{t} =\left(\frac{\rho}{2}U^2 - p_0\right) [1, 1].
+          </me>
+          
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          A line source of strength <m>Q</m> located at the origin. 
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Stagnation point flow with a stagnation point at the origin. 
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          A line vortex flow of strength <m>\Gamma</m> placed at the origin. 
+        </p>
+      </statement>
+    </task>
+
+    <!-- <task>
+      <statement>
+        <p>
+        A flow consisting of a uniform flow of speed <m>U</m> moving horizontally to the right, combined with a line source of strength <m>Q</m> placed at the origin.   
+        </p>
+      </statement>
+    </task> -->
+
+    
+  </exercise>
+
+  
+  <exercise xml:id="ps-potential-fluxcalc">
+    <title>Evaluation of the flux</title>
+
+    <statement>
+      <p>
+        Return to the previous question and, instead of directly calculating the flux via a line integral, use <xref ref="thm-flux-streamlines"/> to calculate the flux for the two geometries (unit circle and straight plate) for each of the flows given. 
+      </p>
+    </statement>
+  </exercise> 
+
+   <exercise>
+    <title>Doublet</title>
+   
+    <introduction>
+      <p>
+        A line source of strength <m>Q</m> is at <m>z = a</m> and a line sink of the same strength is at <m>z = -a</m> where <m>a > 0</m>. 
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Write down the complex potential, <m>f(z)</m>. Find <m>f'(z)</m>. Locate any stagnation points and derive an equation for the streamlines of the flow. Finally, use a plotter, such as the one at <url href="https://potentialflow.com/">the potential flow simulator</url> to sketch the streamlines. 
+        </p>
+      </statement>
+
+      <answer>
+        <p>
+          The complex potential is the sum of a line source and line sink:
+          <me>
+            f(z) = \frac{Q}{2\pi} [\log(z - a) - \log(z + a)].
+          </me>
+          Therefore the complex velocity is given by 
+          <me>
+            f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
+          </me>
+          Stagnation points are where <m>f'(z) = 0</m>. There are no stagnation points. The streamfunction is given by 
+          <me>
+            \Im f = \frac{Q}{2\pi}(\theta_1 - \theta_2), 
+          </me> 
+          where <m>\theta_1</m> and <m>\theta_2</m> are angles measured relative to the positions about <m>\pm a</m>. Thus,
+          <me>
+            \theta_{1,2} = \tan^{-1} \left( \frac{y}{x \mp a} \right).
+          </me>
+         The streamlines are given where <m>\psi</m> is constant. The streamlines are shown below.
+      </p>
+
+      <figure>
+        <caption>Streamlines for a sink and source</caption>
+        <image source="potential_almostdoublet.png">
+          <shortdescription>Almost doublet</shortdescription>
+        </image>
+      </figure>
+    </answer>
+  </task>
+
+    <task>
+      <statement>
+        <p>
+    Let <m>a \to 0</m> and <m>Q \to \infty</m> while keeping the product <m>aQ</m> fixed. This gives the flow due to a <em>doublet</em><idx><h>doublet</h></idx>. Show that its complex potential is <m>\mu/z</m> where <m>\mu</m> is expressed in terms of <m>a</m> and <m>Q</m>. It will be useful for you to use the fact that 
+   <me>
+    \log(1 + \alpha) = \alpha + O(\alpha^2)
+   </me>
+   considered as an appropriate approximation when <m>\alpha</m> is small. 
+    
+    Show that the streamlines are circles through the origin with centres on the <m>y</m>-axis.           
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Expanding the logarithms for small <m>a</m> gives
+          <me>
+            \log z - \log z + \log(1 - a/z) - \log(1 + a/z) \sim -\frac{2a}{z}.
+          </me>
+         Thus in the limit <m>a \to 0</m>, we have
+         <me>
+          f(z) \sim -\frac{Qa}{\pi} \frac{1}{z}.
+         </me>
+         Therefore, we let both <m>a \to 0</m> and <m>Q \to \infty</m> in a fashion such that <m>m = aQ</m> is fixed. We then have the potential
+         <me>
+          f(z) = \frac{\mu}{z}
+         </me>
+         where <m>\mu = -Qa/\pi.</m>
+         
+        </p>
+      </solution>
+    </task>
+
+  </exercise>
+
+  </exercisegroup>
+
+  <exercisegroup>
+    <title>Potential flows, part 2</title>
+    <introduction>
+      <p>
+        These exercises will cover the second part of Chapter 4, from sec. 4.4 (the method of images).
+      </p>
+    </introduction>
+  
+ <exercise xml:id="ps-image-planar01">
       <title>Single source in a semi-infinite flow</title>
       <statement>
         <p>
@@ -1269,11 +1599,117 @@
       </statement>
     </exercise>
 
-    <exercise xml:id='ps-conformal-check-exp-sin'>
-     <p>
-      Check.
-     </p> 
+
+    <exercise>
+      <title>A line source in a flow; stagnation points</title>
+
+      <statement>
+        <p>
+              Incompressible inviscid fluid occupies the region <m>y > 0</m>, and there is a rigid plane
+wall at <m>y = 0</m>. There is a uniform flow, speed <m>U</m>, in the positive <m>x</m>-direction, and a
+line source of strength <m>Q</m> at <m>(0, a)</m>, where <m>a &gt; 0</m>. Find the complex potential <m>f(z)</m>
+and calculate <m>f'(z)</m>. Let <m>\beta = Q/(2\pi aU)</m>. Show that if <m>\beta &gt; 1</m> there are two stagnation
+points, both on the wall, while if <m>\beta &lt; 1</m> there is only one, in the fluid, a distance <m>a</m>
+from the origin. Try to sketch the streamlines in either case  
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The potential is given by 
+          <me>
+            f(z) = Uz + \frac{Q}{2\pi} [\log(z - a\im) + \log(z + a\im)] = Uz + \frac{Q}{2\pi} \log(z^2 + a^2).
+          </me>
+          The complex velocity is then 
+          <me>
+            f'(z) = U + \frac{Qz}{\pi(z^2 + a^2)}.
+          </me>
+        </p>
+
+        <p>
+          A stagnation point requires <m>f'(z) = 0</m> and so we solve the resultant quadratic to obtain 
+          <me>
+            z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
+          </me>
+          Setting <m>\beta = Q/(2\pi a U)</m>, there are two real roots if <m>\beta &gt; 1</m>. Hence this is the case of two stagnation points along the axis. If <m>\beta &lt; 1</m>, then there two complex conjugate points, and hence only one stagnation point in the flow field. 
+        </p>
+
+        <figure>
+          <caption><m>\beta = 0.94</m></caption>
+          <image source="potential_stag_2_inflow.png" width="70%">
+            <shortdescription>image</shortdescription>
+          </image>
+        </figure>
+        
+        <figure>
+          <caption><m>\beta = 1.3</m></caption>
+          <image source="potential_stag_2_onbound.png" width="70%">
+            <shortdescription>image</shortdescription>
+          </image>
+        </figure>
+      </solution>
     </exercise>
+
+    <exercise xml:id='ps-conformal-check-exp-sin'>
+      <title>The exponential and sinusoidal conformal maps</title>
+     <p>
+     Check where each of the labeled points in the associated diagrams for the exponential map <xref ref="eqn-conformal-exp-map"/> and <xref ref="eqn-conformal-sin-map"/> are sent, from the <m>z</m>-plane to the <m>\zeta</m>-plane. In each of these cases, verify that an interior (within the fluid domain) is sent to the upper half-plane. 
+     </p> 
+
+     <p>
+      Construct the complex potential that corresponds to a single line source placed within the fluid in each of these cases (an infinite strip of height <m>h</m> and a semi-infinite strip). 
+     </p>
+    </exercise>
+
+    <exercise>
+        <title>Elementary conformal maps</title>
+      <statement>
+        <p>
+          Define the term <em>conformal map</em>. 
+        </p>
+
+        <p>
+          Write down the conformal maps from the wedge <m>0 &lt; \textrm{arg}(z) &lt; \alpha</m>, from the strip <m>-a &lt; y &lt; a</m> and from the semi-infinite strip <m>0 &lt; y &lt; a</m>, <m>x &gt; 0</m> into the upper half-plane. Find all the points at which the map is not conformal. 
+        </p>
+      </statement>
+      
+    </exercise>
+
+      <exercise>
+        <title>Flow past a flat plate</title>
+       
+        <statement>
+          <p>
+            Show that the circle <m>|\zeta| = a</m> is mapped tro a line segment 
+            <me>
+              S = \{ z: \Im z = 0, -2a \leq \Re z \leq 2a\}
+            </me>
+            along the real <m>z</m>-axis by the Joukowski transformation 
+            <me>
+              z = \zeta + \frac{a^2}{\zeta}.
+            </me>
+          </p>
+
+          <p>
+            Deduce that the extttterior of the line segment is mapped to the exterior of the circle <m>|\zeta| = a</m> by the transformation 
+            <me>
+              \zeta = \frac{1}{2}\left( z + \sqrt{z^2 - 4a^2}\right).
+            </me>
+            Carefully define the function <m>\sqrt{z^2 - 4a^2}</m> and determine where the mapping above is conformal.
+          </p>
+        </statement>
+        
+        
+      </exercise>
+
+      
+
+<!-- Suggest to do Oxford Sheet 3, Q1, 3  -->
+<!-- Suggest Imperial sheet 7, Q1, Q3, maybe Q5  -->
+ 
+
+  
+  </exercisegroup>
 
 </exercises>
 

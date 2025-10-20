@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Important definitions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
+<meta property="book:title" content="Mathematics of fluid dynamics">
+<meta property="book:author" content=" ">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.14';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<p class="byline"> </p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-viscousflows.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-viscousflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="boundaries-surfaces-interfaces.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
+\renewcommand*{\Im}{\operatorname{Im}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} 
+\newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
+\newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\renewcommand{\bf}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\br}{\boldsymbol{r}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and other references</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-circulation" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="definitions"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Important definitions</span>
+</h2>
+<section class="subsection" id="viscosity"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Viscosity</span>
+</h3>
+<div class="para" id="viscosity-2">Viscosity quantifies the fluid’s internal resistance to flow when a force is applied (the higher the resistance the higher the viscosity). One of the most common mathematical models of an idealised fluid is a <em class="emphasis">Newtonian</em> fluid, which will be defined precisely in <a href="subsec-newtonian-fluids.html" class="internal" title="Section 7.4: Newtonian fluids">Section 7.4</a>. For these fluids, the shear viscosity <span class="process-math">\(\mu\)</span> (sometimes called dynamic viscosity, or just viscosity) is a scalar quantity. In S.I. units, it is measured in <span class="process-math">\(\textrm{Pa\,s} = \mathrm{kg\,m^{-1}\,s^{-1}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#viscosity-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-viscosity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Thought experiment to measure viscosity.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-viscosity-2-1">
+<div class="para">We could imagine a thought experiment to measure the shear viscosity of a fluid as follows, see also <a href="definitions.html#fig-viscosity-measurement" class="xref" data-knowl="./knowl/xref/fig-viscosity-measurement.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.1.2">Figure 7.1.2</a>. A solid block of area <span class="process-math">\(A\)</span> floats on the surface of a thin layer of the fluid of thickness <span class="process-math">\(h\text{.}\)</span> The block is pushed with a force <span class="process-math">\(F\)</span> parallel to the surface of the fluid, causing it to move with a steady velocity <span class="process-math">\(U\text{.}\)</span> The shear viscosity is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-viscosity-measurement.html ./knowl/xref/ps-falling-ball-viscometer.html">
+\begin{equation*}
+\mu = \frac{F h}{A U}.
+\end{equation*}
+</div>
+<div class="para">In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see <a href="ws-viscousflows.html#ps-falling-ball-viscometer" class="xref" data-knowl="./knowl/xref/ps-falling-ball-viscometer.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.6.1: Falling ball viscometer">Exercise 7.6.1</a> in the worksheet at the end of this chapter).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-viscosity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-viscosity-measurement"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ch-chapter07-viscosity-measurement.png" class="contained" alt="Fluid"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Experiment to determine the shear viscosity of a fluid.<div class="autopermalink" data-description="Figure 7.1.2"><a href="#fig-viscosity-measurement" title="Copy heading and permalink for Figure 7.1.2" aria-label="Copy heading and permalink for Figure 7.1.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 7.1.1: Thought experiment to measure viscosity"><a href="#example-viscosity" title="Copy heading and permalink for Example 7.1.1: Thought experiment to measure viscosity" aria-label="Copy heading and permalink for Example 7.1.1: Thought experiment to measure viscosity">🔗</a></div></article></details><article class="definition definition-like" id="viscosity-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Kinematic viscosity.</span>
+</h4>
+<div class="para logical" id="viscosity-4-2-1">
+<div class="para">It is sometimes mathematically more convenient to work in terms of the kinematic viscosity <span class="process-math">\(\nu\)</span> (measured in <span class="process-math">\(\mathrm{m^2\,s^{-1}}\)</span>). This is related to the shear viscosity via</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nu = \frac{\mu}{\rho}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#viscosity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.1.3: Kinematic viscosity"><a href="#viscosity-4" title="Copy heading and permalink for Definition 7.1.3: Kinematic viscosity" aria-label="Copy heading and permalink for Definition 7.1.3: Kinematic viscosity">🔗</a></div></article><figure class="table table-like" id="viscosity-5"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Shear viscosities at <span class="process-math">\(1\,\mathrm{atm}\)</span> pressure and <span class="process-math">\(20\,^\circ\mathrm{C}\text{.}\)</span><div class="autopermalink" data-description="Table 7.1.4: Shear viscosities at 1\,\mathrm{atm} pressure and 20\,^\circ\mathrm{C}"><a href="#viscosity-5" title="Copy heading and permalink for Table 7.1.4: Shear viscosities at 1\,\mathrm{atm} pressure and 20\,^\circ\mathrm{C}" aria-label="Copy heading and permalink for Table 7.1.4: Shear viscosities at 1\,\mathrm{atm} pressure and 20\,^\circ\mathrm{C}">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines"></th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\mu\)</span> (<span class="process-math">\(\mathrm{kg\,m^{-1}\,s^{-1}}\)</span>)</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\rho\)</span> (<span class="process-math">\(\mathrm{kg\,m^{-3}}\)</span>)</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\nu\)</span> (<span class="process-math">\(\mathrm{m^2\,s^{-1}}\)</span>)</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Air</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.8\times 10^{-5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.51\times 10^{-5}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Water</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.0\times 10^{-3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(998\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.01\times 10^{-6}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Blood</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2.5\times 10^{-3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1050\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2.4\times 10^{-6}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Glycerol</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1260\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1.19\times 10^{-3}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Honey</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1420\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7.04\times 10^{-3}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Tar</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1000\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1420\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0.70\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="viscosity-6">The shear viscosity of air increases with increasing temperature, whereas that of water decreases with increasing temperature. This is typical behaviour for gases and liquids, respectively. Many real fluids have more complicated viscosity properties, for example blood, mucus, shampoo, egg white and custard. In this course we mainly consider Newtonian fluids, thereby avoiding a lot of complexity!<div class="autopermalink" data-description="Paragraph"><a href="#viscosity-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="viscosity-7"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="viscosity-7-1">Note that we have not yet formally defined the shear viscosity, although the example given in <a href="definitions.html#example-viscosity" class="xref" data-knowl="./knowl/xref/example-viscosity.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.1.1: Thought experiment to measure viscosity">Example 7.1.1</a> provides an informal definition. This concept will be formalised in <a href="sec-stress.html" class="internal" title="Section 7.3: Stress in a fluid">Section 7.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#viscosity-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.5"><a href="#viscosity-7" title="Copy heading and permalink for Remark 7.1.5" aria-label="Copy heading and permalink for Remark 7.1.5">🔗</a></div></article><div class="autopermalink" data-description="Subsection 7.1.1: Viscosity"><a href="#viscosity" title="Copy heading and permalink for Subsection 7.1.1: Viscosity" aria-label="Copy heading and permalink for Subsection 7.1.1: Viscosity">🔗</a></div></section><section class="subsection" id="reynolds-number"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Reynolds number</span>
+</h3>
+<div class="para" id="reynolds-number-2">This is one of the most important flow parameters in the study of fluid dynamics, as its order of magnitude determines many of the qualitative features of the flow. In a given flow, it quantifies the relative importance of inertial and viscous effects.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="reynolds-number-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Reynolds number.</span>
+</h4>
+<div class="para logical" id="reynolds-number-3-2-1">
+<div class="para">The Reynolds number is a dimensionless quantity, defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\textrm{Re} = \frac{\rho U L}{\mu} = \frac{U L}{\nu},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(U\)</span> is a <em class="emphasis">characteristic</em> (or typical) velocity of the flow and <span class="process-math">\(L\)</span> is a <em class="emphasis">characteristic</em> lengthscale. It equals the typical size of an inertial acceleration divided by a typical size of a viscous acceleration in the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.1.6: The Reynolds number"><a href="#reynolds-number-3" title="Copy heading and permalink for Definition 7.1.6: The Reynolds number" aria-label="Copy heading and permalink for Definition 7.1.6: The Reynolds number">🔗</a></div></article><article class="remark remark-like" id="example-choice-of-scales"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choice of characteristic scales.</span>
+</h4>
+<div class="para" id="example-choice-of-scales-2">What do we pick as the <em class="emphasis">characteristic</em> length and velocity scales? This is something that gets easier with increasing experience. For a given problem there are usually ‘natural’ scales that arise within it.<div class="autopermalink" data-description="Paragraph"><a href="#example-choice-of-scales-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-choice-of-scales-3">As an illustrative example of how we might think about choosing suitable scales, consider a steady flow along a pipe with a circular cross-section. An appropriate choice of <span class="process-math">\(L\)</span> could be the pipe radius or diameter, while an appropriate value of <span class="process-math">\(U\)</span> could be the velocity along the centreline (axis) of the pipe or the average velocity across the pipe cross-section (equal to the volumetric flux (volume per unit time) of fluid passing along the pipe divided by the cross-sectional area of the pipe).<div class="autopermalink" data-description="Paragraph"><a href="#example-choice-of-scales-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-choice-of-scales-4">
+<div class="para">Different choices of scales (for example radius vs. diameter and centreline vs. average velocity in the pipe example given in <a href="definitions.html#example-choice-of-scales" class="xref" data-knowl="./knowl/xref/example-choice-of-scales.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 7.1.7: Choice of characteristic scales">Remark 7.1.7</a>) would lead to different numerical values of <span class="process-math">\(\textrm{Re}\text{.}\)</span> However, note:</div>
+<ul class="disc" id="example-choice-of-scales-4-3">
+<li id="example-choice-of-scales-4-3-1">
+<div class="para" id="example-choice-of-scales-4-3-1-1">The order of magnitude of the Reynolds number is the same for all choices. Thus, when describing a flow, the value of <span class="process-math">\(\textrm{Re}\)</span> is often quoted as an order-of-magnitude property.<div class="autopermalink" data-description="Paragraph"><a href="#example-choice-of-scales-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-choice-of-scales-4-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="example-choice-of-scales-4-3-2">
+<div class="para" id="example-choice-of-scales-4-3-2-1">If we give detailed information about exactly which length and velocity scales are being used then we can directly compare different values of <span class="process-math">\(\textrm{Re}\text{,}\)</span> even if they are of the same order of magnitude. For example, we might do this in a plot of a property of the flow against the Reynolds number. In this case, it would be good scientific practice to specify the choice of velocity and length scales used.<div class="autopermalink" data-description="Paragraph"><a href="#example-choice-of-scales-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#example-choice-of-scales-4-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-choice-of-scales-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.7: Choice of characteristic scales"><a href="#example-choice-of-scales" title="Copy heading and permalink for Remark 7.1.7: Choice of characteristic scales" aria-label="Copy heading and permalink for Remark 7.1.7: Choice of characteristic scales">🔗</a></div></article><article class="remark remark-like" id="reynolds-number-5"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow characteristics at different Reynolds numbers.</span>
+</h4>
+<div class="para logical" id="reynolds-number-5-2">
+<div class="para">Typical characteristics of the flow are strongly associated with the order of magnitude of the Reynolds number:</div>
+<ul class="disc" id="reynolds-number-5-2-1">
+<li id="reynolds-number-5-2-1-1">
+<div class="para logical" id="reynolds-number-5-2-1-1-1">
+<div class="para"><em class="emphasis">Low-Reynolds-number flows (<span class="process-math">\(Re \ll 1\)</span>):</em></div>
+<ul class="circle" id="reynolds-number-5-2-1-1-1-2">
+<li id="reynolds-number-5-2-1-1-1-2-1">
+<div class="para" id="p-derived-reynolds-number-5-2-1-1-1-2-1">Examples include several biological examples, such as flow in capillaries (the smallest blood vessels) swimming bacteria or other single cell organisms, lymphatic system flow, and other examples include microfluidics, glacier flow, and spreading honey on toast.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-1-1-2-2">
+<div class="para" id="p-derived-reynolds-number-5-2-1-1-1-2-2">These flows are called Stokes flows (after G. G. Stokes who studied them) or creeping flows.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-1-1-2-3">
+<div class="para" id="p-derived-reynolds-number-5-2-1-1-1-2-3">Low-Reynolds-number flows are also reversible, meaning that if a force is applied, followed by the reverse of that force then the fluid particles return to their original positions. This <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/95" target="_blank">movie</a> shows a low-Reynolds-number flow that is reversible, whereas this <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/96" target="_blank">movie</a> shows a flow with a higher Reynolds number that is not reversible.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-1-1-2-4">
+<div class="para" id="p-derived-reynolds-number-5-2-1-1-1-2-4">Inertial effects are negligible and viscous effects are important.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-1-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-2">
+<div class="para logical" id="reynolds-number-5-2-1-2-1">
+<div class="para"><em class="emphasis">Flows with moderate Reynolds number (<span class="process-math">\(1 \ll Re \ll 2{,}000\)</span>):</em></div>
+<ul class="circle" id="reynolds-number-5-2-1-2-1-2">
+<li id="reynolds-number-5-2-1-2-1-2-1">
+<div class="para" id="p-derived-reynolds-number-5-2-1-2-1-2-1">Examples include flows in most blood vessels that are not capillaries, small fish swimming, not-too-fast flow out of a domestic tap, stirring a cup of tea.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-2-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-2-1-2-2">
+<div class="para" id="p-derived-reynolds-number-5-2-1-2-1-2-2">Flows in pipes with moderate Reynolds number are often described as <em class="emphasis">laminar</em>, meaning that the fluid moves in ‘layers’ sliding past each other (in fluid dynamics, the word ‘laminar’ is often used to mean that the flow is not <em class="emphasis">turbulent</em>).</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-2-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-3">
+<div class="para logical" id="reynolds-number-5-2-1-3-1">
+<div class="para"><em class="emphasis">High-Reynolds-number flows (typically <span class="process-math">\(Re\)</span> above about <span class="process-math">\(1{,}000\)</span>):</em></div>
+<ul class="circle" id="reynolds-number-5-2-1-3-1-2">
+<li id="reynolds-number-5-2-1-3-1-2-1">
+<div class="para" id="p-derived-reynolds-number-5-2-1-3-1-2-1">Examples include atmospheric and ocean flows, rivers, large industrial processes, flows around vehicles, airflow in trachea and ships or large animals swimming.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-3-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-3-1-2-2">
+<div class="para" id="p-derived-reynolds-number-5-2-1-3-1-2-2">Inertial effects are important and viscous effects are small.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-3-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-3-1-2-3">
+<div class="para" id="p-derived-reynolds-number-5-2-1-3-1-2-3">Since viscous effects are small, they may often be neglected in these flows, and the <em class="emphasis">Euler equations</em> <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> govern the dynamics.</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-3-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="reynolds-number-5-2-1-3-1-2-4">
+<div class="para" id="p-derived-reynolds-number-5-2-1-3-1-2-4">These flows are often unstable or turbulent (especially for very high Reynolds numbers).</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-3-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#reynolds-number-5-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">This <a class="external" href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/67" target="_blank">movie</a> shows flows for a range of Reynolds numbers.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.8: Flow characteristics at different Reynolds numbers"><a href="#reynolds-number-5" title="Copy heading and permalink for Remark 7.1.8: Flow characteristics at different Reynolds numbers" aria-label="Copy heading and permalink for Remark 7.1.8: Flow characteristics at different Reynolds numbers">🔗</a></div></article><article class="remark remark-like" id="reynolds-number-6"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Turbulent flow.</span>
+</h4>
+<div class="para" id="reynolds-number-6-2">This is a qualitative type of flow that is characterised as having many different length scales, and the flow is mathematically <em class="emphasis">chaotic</em>. Chaotic flow means that fluid particles that start close together can become widely separated over time. As well as the scale of the whole experiment, the turbulence has eddies on all small length scales. Turbulent flows are analysed mathematically by decomposing the fluid velocity into a <em class="emphasis">mean flow</em>, which describes the large-scale flow and a <em class="emphasis">fluctuating flow</em>, which describes the eddies. Equations can be written for each of these, but this decomposition leads to the so-called <em class="emphasis">closure problem</em>, in which an assumption needs to be made to provide a final equation that governs the dynamics.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-6-3">Turbulence is of great importance in applications such as aeronautical engineering, weather forecasting and large-scale industrial flows, basically because large and fast moving flows have a sufficiently high Reynolds number that turbulence is unavoidable and it dominates the flow characteristics.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="reynolds-number-6-4">The study of turbulence could constitute a lecture course in its own right, and therefore a detailed analysis is beyond the scope of this course.<div class="autopermalink" data-description="Paragraph"><a href="#reynolds-number-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.9: Turbulent flow"><a href="#reynolds-number-6" title="Copy heading and permalink for Remark 7.1.9: Turbulent flow" aria-label="Copy heading and permalink for Remark 7.1.9: Turbulent flow">🔗</a></div></article><div class="autopermalink" data-description="Subsection 7.1.2: Reynolds number"><a href="#reynolds-number" title="Copy heading and permalink for Subsection 7.1.2: Reynolds number" aria-label="Copy heading and permalink for Subsection 7.1.2: Reynolds number">🔗</a></div></section><section class="subsection" id="state-relations"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">State relations</span>
+</h3>
+<section class="introduction" id="state-relations-2"><div class="para" id="state-relations-2-1">In addition to the balances implied by mass and momentum conservation that you have so far been working on in this course, there is an additional condition needed, and this is called a <em class="emphasis">state relation</em>. This relates the thermodynamic variables density <span class="process-math">\(\rho\text{,}\)</span> pressure <span class="process-math">\(p\)</span> and temperature <span class="process-math">\(T\text{.}\)</span> In this section, we give two of the most common state relations that are used mathematically, the first for liquids and the second for gases.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsubsection" id="state-relations-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Liquids</span>
+</h4>
+<div class="para" id="state-relations-3-2">Liquids are often assumed to be incompressible, that is we assume <span class="process-math">\(\rho = \textrm{constant}\text{.}\)</span> This is the most common assumption made in this course. However, it is important to be aware that it is not always appropriate.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="state-relations-3-3"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="state-relations-3-3-1">One of the most common reasons that making the assumption <span class="process-math">\(\rho = \textrm{constant}\)</span> does not capture the flow dynamics accurately is if there are significant temperature variations within the liquid. Typically, liquids expand as the temperature rises, and this leads to <em class="emphasis">thermal convection</em>, which needs to be taken into account in the mathematical analysis.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.10"><a href="#state-relations-3-3" title="Copy heading and permalink for Remark 7.1.10" aria-label="Copy heading and permalink for Remark 7.1.10">🔗</a></div></article><article class="definition definition-like" id="def-boussinesq"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Boussinesq approximation.</span>
+</h5>
+<div class="para logical" id="def-boussinesq-2-1">
+<div class="para">In a problem in which temperature variations are important in the fluid dynamics, it is often sufficient to assume the <em class="emphasis">Boussinesq approximation</em>:</div>
+<ul class="disc" id="def-boussinesq-2-1-2">
+<li id="def-boussinesq-2-1-2-1">
+<div class="para logical" id="def-boussinesq-2-1-2-1-1">
+<div class="para">In the buoyancy term of the momentum conservation equation (that is the term <span class="process-math">\(\rho g\)</span> appearing in the Euler equation), we assume the density is a linear function of the temperature. Thus we write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho = \rho_0(1 - \alpha(T - T_0))\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(T_0\)</span> and <span class="process-math">\(\rho_0\)</span> are a reference temperature and density, respectively, and <span class="process-math">\(\alpha\)</span> is the <em class="emphasis">coefficient of thermal expansion</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-boussinesq-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-boussinesq-2-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-boussinesq-2-1-2-2">
+<div class="para" id="def-boussinesq-2-1-2-2-1">In all other appearances in the governing equations, <span class="process-math">\(\rho\)</span> is replaced by the constant value <span class="process-math">\(\rho_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-boussinesq-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-boussinesq-2-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-boussinesq-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.1.11: The Boussinesq approximation"><a href="#def-boussinesq" title="Copy heading and permalink for Definition 7.1.11: The Boussinesq approximation" aria-label="Copy heading and permalink for Definition 7.1.11: The Boussinesq approximation">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection 7.1.3.1: Liquids"><a href="#state-relations-3" title="Copy heading and permalink for Subsubsection 7.1.3.1: Liquids" aria-label="Copy heading and permalink for Subsubsection 7.1.3.1: Liquids">🔗</a></div></section><section class="subsubsection" id="state-relations-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gases</span>
+</h4>
+<div class="para" id="state-relations-4-2">Gases (especially at high temperatures and low pressures) closely follow the <em class="emphasis">ideal or perfect gas law</em>.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="state-relations-4-3"><h5 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The ideal or perfect gas law.</span>
+</h5>
+<div class="para logical" id="state-relations-4-3-2-1">
+<div class="para">This law states</div>
+<div class="displaymath process-math" id="eqn-idealgas">
+\begin{equation}
+p = \rho R_{\textrm{spec}} T,\tag{7.1.1}
+\end{equation}
+</div>
+<div class="para">where</div>
+<ul class="disc" id="state-relations-4-3-2-1-2">
+<li id="state-relations-4-3-2-1-2-1">
+<div class="para" id="p-derived-state-relations-4-3-2-1-2-1">
+<span class="process-math">\(R_{\textrm{spec}} = c_p - c_v = R / M\)</span> is the specific gas constant,</div>
+<div class="autopermalink" data-description="Item"><a href="#state-relations-4-3-2-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="state-relations-4-3-2-1-2-2">
+<div class="para" id="p-derived-state-relations-4-3-2-1-2-2">
+<span class="process-math">\(c_p = 1005\)</span> m<span class="process-math">\(^2\)</span>/s<span class="process-math">\(^2\)</span>/K (for air) is the specific heat capacity at constant pressure,</div>
+<div class="autopermalink" data-description="Item"><a href="#state-relations-4-3-2-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="state-relations-4-3-2-1-2-3">
+<div class="para" id="p-derived-state-relations-4-3-2-1-2-3">
+<span class="process-math">\(c_v = 718\)</span> m<span class="process-math">\(^2\)</span>/s<span class="process-math">\(^2\)</span>/K (for air) is the specific heat capacity at constant temperature,</div>
+<div class="autopermalink" data-description="Item"><a href="#state-relations-4-3-2-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="state-relations-4-3-2-1-2-4">
+<div class="para" id="p-derived-state-relations-4-3-2-1-2-4">
+<span class="process-math">\(R = 8.314\)</span> J/mol/K is the universal gas constant,</div>
+<div class="autopermalink" data-description="Item"><a href="#state-relations-4-3-2-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="state-relations-4-3-2-1-2-5">
+<div class="para" id="p-derived-state-relations-4-3-2-1-2-5">
+<span class="process-math">\(M = 28.96\,\textrm{g/mol}=0.02896\)</span> kg/mol for dry air.</div>
+<div class="autopermalink" data-description="Item"><a href="#state-relations-4-3-2-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.1.12: The ideal or perfect gas law"><a href="#state-relations-4-3" title="Copy heading and permalink for Definition 7.1.12: The ideal or perfect gas law" aria-label="Copy heading and permalink for Definition 7.1.12: The ideal or perfect gas law">🔗</a></div></article><article class="remark remark-like" id="state-relations-4-4"><h5 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="state-relations-4-4-1">You have probably previously encountered the <em class="emphasis">ideal gas law</em> in the form <span class="process-math">\(pV=nRT\text{,}\)</span> where <span class="process-math">\(V\)</span> is the volume occupied by <span class="process-math">\(n\)</span> moles of a gas.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="state-relations-4-4-2">
+<div class="para">
+<em class="emphasis">Proof that this is equivalent to <a href="definitions.html#eqn-idealgas" class="xref" data-knowl="./knowl/xref/eqn-idealgas.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.1">(7.1.1)</a>.</em> The relationship <span class="process-math">\(pV=nRT\)</span> implies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-idealgas.html">
+\begin{equation*}
+p=\frac{n}{V}RT=\left(\frac{nM}{V}\right)\left(\frac{R}{M}\right)T
+=\rho R_{\textrm{spec}} T,
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(nM\)</span> is the mass of the gas molecules in <span class="process-math">\(V\)</span> and therefore <span class="process-math">\(nM/V\)</span> is the average density.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="state-relations-4-4-3">In fluid dynamics the form <a href="definitions.html#eqn-idealgas" class="xref" data-knowl="./knowl/xref/eqn-idealgas.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.1">(7.1.1)</a> is more convenient than <span class="process-math">\(pV=nRT\)</span> because it can be applied at each point in the gas, whereas <span class="process-math">\(pV=nRT\)</span> is a law applying to a fixed finite volume.<div class="autopermalink" data-description="Paragraph"><a href="#state-relations-4-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.13"><a href="#state-relations-4-4" title="Copy heading and permalink for Remark 7.1.13" aria-label="Copy heading and permalink for Remark 7.1.13">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection 7.1.3.2: Gases"><a href="#state-relations-4" title="Copy heading and permalink for Subsubsection 7.1.3.2: Gases" aria-label="Copy heading and permalink for Subsubsection 7.1.3.2: Gases">🔗</a></div></section><div class="autopermalink" data-description="Subsection 7.1.3: State relations"><a href="#state-relations" title="Copy heading and permalink for Subsection 7.1.3: State relations" aria-label="Copy heading and permalink for Subsection 7.1.3: State relations">🔗</a></div></section><div class="autopermalink" data-description="Section 7.1: Important definitions"><a href="#definitions" title="Copy heading and permalink for Section 7.1: Important definitions" aria-label="Copy heading and permalink for Section 7.1: Important definitions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch-viscousflows.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="boundaries-surfaces-interfaces.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

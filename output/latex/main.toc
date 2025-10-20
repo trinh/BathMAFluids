@@ -1,0 +1,89 @@
+\hypertarget {my-great-book}{}
+\contentsline {chapter}{Official description}{iv}{chapter*.1}%
+\contentsline {chapter}{History of the unit}{vi}{chapter*.4}%
+\contentsline {chapter}{Related units at Bath}{vii}{chapter*.5}%
+\contentsline {chapter}{Moodle and other references}{viii}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.8}%
+\contentsline {section}{\numberline {1.1}A reminder of vector calculus}{7}{section.19}%
+\contentsline {section}{\numberline {1.2}A reminder of complex variables}{7}{section.22}%
+\contentsline {subsection}{\numberline {1.2.1}Basic complex representations}{8}{subsection.25}%
+\contentsline {subsection}{\numberline {1.2.2}Complex functions}{8}{subsection.29}%
+\contentsline {subsection}{\numberline {1.2.3}Multifunctions, branch cuts, and Riemann sheets}{9}{subsection.34}%
+\contentsline {subsection}{\numberline {1.2.4}Other functions and visualisations}{11}{subsection.42}%
+\contentsline {subsection}{\numberline {1.2.5}Differentiation of complex functions}{12}{subsection.47}%
+\contentsline {subsection}{\numberline {1.2.6}Summary}{12}{subsection.48}%
+\contentsline {section}{\numberline {1.3}Exercises}{12}{section.49}%
+\contentsline {chapter}{\numberline {2}Kinematics}{18}{chapter.68}%
+\contentsline {section}{\numberline {2.1}Eulerian and Lagrangian coordinates}{20}{section.75}%
+\contentsline {subsection}{\numberline {2.1.1}The convective derivative}{21}{subsection.82}%
+\contentsline {section}{\numberline {2.2}Examples and flow visualisation}{23}{section.95}%
+\contentsline {subsection}{\numberline {2.2.1}Definitions of streamlines, pathlines, streaklines}{23}{subsection.96}%
+\contentsline {subsection}{\numberline {2.2.2}Examples of streamlines, pathlines, and streaklines}{24}{subsection.103}%
+\contentsline {section}{\numberline {2.3}Exercises}{27}{section.118}%
+\contentsline {chapter}{\numberline {3}Equations of motion}{35}{chapter.147}%
+\contentsline {section}{\numberline {3.1}Reynolds' Transport Theorem}{37}{section.160}%
+\contentsline {subsection}{\numberline {3.1.1}Jacobian of Lagrangian to Eulerian}{37}{subsection.161}%
+\contentsline {subsection}{\numberline {3.1.2}Reynolds' Transport Theorem}{38}{subsection.167}%
+\contentsline {section}{\numberline {3.2}Conservation of mass}{40}{section.180}%
+\contentsline {subsection}{\numberline {3.2.1}Derivation of mass conservation using Eulerian methods}{41}{subsection.187}%
+\contentsline {subsection}{\numberline {3.2.2}Corollary of the Transport Theorem}{42}{subsection.193}%
+\contentsline {section}{\numberline {3.3}Momentum balance}{42}{section.197}%
+\contentsline {subsection}{\numberline {3.3.1}Proof of the momentum equation for an inviscid fluid}{43}{subsection.201}%
+\contentsline {section}{\numberline {3.4}The Euler equations}{44}{section.208}%
+\contentsline {subsection}{\numberline {3.4.1}Incompressible fluids and the Euler equations}{44}{subsection.209}%
+\contentsline {subsection}{\numberline {3.4.2}Boundary conditions}{46}{subsection.227}%
+\contentsline {section}{\numberline {3.5}Bernoulli's equation}{46}{section.231}%
+\contentsline {subsection}{\numberline {3.5.1}Potential flow}{48}{subsection.252}%
+\contentsline {section}{\numberline {3.6}Exercises}{49}{section.265}%
+\contentsline {chapter}{\numberline {4}Potential flows}{57}{chapter.289}%
+\contentsline {section}{\numberline {4.1}The velocity potential}{57}{section.294}%
+\contentsline {subsection}{\numberline {4.1.1}Elementary flows}{59}{subsection.305}%
+\contentsline {section}{\numberline {4.2}The streamfunction}{63}{section.322}%
+\contentsline {subsection}{\numberline {4.2.1}Elementary flows}{65}{subsection.337}%
+\contentsline {section}{\numberline {4.3}The complex potential}{68}{section.352}%
+\contentsline {subsection}{\numberline {4.3.1}Cauchy's theorem and harmonic functions}{68}{subsection.356}%
+\contentsline {subsection}{\numberline {4.3.2}Examples of elementary flows}{70}{subsection.370}%
+\contentsline {section}{\numberline {4.4}The method of images}{71}{section.385}%
+\contentsline {subsection}{\numberline {4.4.1}Planar boundaries: a half-plane}{72}{subsection.386}%
+\contentsline {section}{\numberline {4.5}Conformal mapping}{75}{section.397}%
+\contentsline {subsection}{\numberline {4.5.1}Source in a wedge}{76}{subsection.400}%
+\contentsline {subsection}{\numberline {4.5.2}The conformal mapping method}{77}{subsection.406}%
+\contentsline {subsection}{\numberline {4.5.3}Standard conformal maps}{77}{subsection.414}%
+\contentsline {section}{\numberline {4.6}Exercises}{78}{section.426}%
+\contentsline {chapter}{\numberline {5}Water waves}{80}{chapter.429}%
+\contentsline {chapter}{\numberline {6}Vortex motion}{81}{chapter.430}%
+\contentsline {section}{\numberline {6.1}The Helmholtz principle}{83}{section.450}%
+\contentsline {subsection}{\numberline {6.1.1}The circulation in a flow}{83}{subsection.451}%
+\contentsline {subsection}{\numberline {6.1.2}Vortex lines and the Helmholtz vortex theorems}{84}{subsection.461}%
+\contentsline {section}{\numberline {6.2}Examples illustrating the use of the Helmholtz principle}{85}{section.484}%
+\contentsline {section}{\numberline {6.3}Exercises}{85}{section.485}%
+\contentsline {chapter}{\numberline {7}Viscous flows}{87}{chapter.490}%
+\contentsline {section}{\numberline {7.1}Important definitions}{89}{section.499}%
+\contentsline {subsection}{\numberline {7.1.1}Viscosity}{89}{subsection.500}%
+\contentsline {subsection}{\numberline {7.1.2}Reynolds number}{90}{subsection.511}%
+\contentsline {subsection}{\numberline {7.1.3}State relations}{91}{subsection.520}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}Liquids}{92}{subsubsection.521}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}Gases}{92}{subsubsection.526}%
+\contentsline {section}{\numberline {7.2}Boundaries, surfaces and interfaces of fluids}{93}{section.532}%
+\contentsline {subsection}{\numberline {7.2.1}Boundary conditions on the velocity}{93}{subsection.533}%
+\contentsline {subsection}{\numberline {7.2.2}Force balance at the boundary\slash {}interface}{94}{subsection.544}%
+\contentsline {subsection}{\numberline {7.2.3}Surface tension}{94}{subsection.547}%
+\contentsline {section}{\numberline {7.3}Stress in a fluid}{96}{section.560}%
+\contentsline {subsection}{\numberline {7.3.1}Stress at a surface}{96}{subsection.561}%
+\contentsline {subsection}{\numberline {7.3.2}The stress tensor}{97}{subsection.578}%
+\contentsline {section}{\numberline {7.4}Newtonian fluids}{99}{section.600}%
+\contentsline {section}{\numberline {7.5}Conservation of linear momentum}{107}{section.640}%
+\contentsline {subsection}{\numberline {7.5.1}Left-hand side}{107}{subsection.643}%
+\contentsline {subsection}{\numberline {7.5.2}Right-hand side}{109}{subsection.644}%
+\contentsline {subsection}{\numberline {7.5.3}Equating the two sides}{109}{subsection.645}%
+\contentsline {subsection}{\numberline {7.5.4}Discussion of the Navier\textendash {}Stokes equation}{110}{subsection.651}%
+\contentsline {subsection}{\numberline {7.5.5}Example of the application}{111}{subsection.667}%
+\contentsline {section}{\numberline {7.6}Exercises}{113}{section.675}%
+\contentsline {part}{Appendices}{118}{section*.691}%
+\contentsline {chapter}{\numberline {A}Vector calculus}{118}{appendix.692}%
+\contentsline {section}{\numberline {A.1}Identities for plane polar coordinates}{118}{section.693}%
+\contentsline {chapter}{\numberline {B}List of Symbols}{119}{appendix.698}%
+\contentsline {part}{Back Matter}{120}{section*.699}%
+\contentsline {chapter}{Index}{120}{section*.700}%
+\contentsline {chapter}{References and further reading}{121}{appendix*.702}%
+\contentsfinish 

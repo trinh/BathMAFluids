@@ -9,68 +9,67 @@
       scenario, this leads to Euler's equation for a perfect (or ideal) fluid. Eventually, we relax
       these assumptions so as to incorporate the effects of viscosity.</p>
 
-  <p> Let <m>D</m> be a region in a 2D or 3D region filled with fluid. The fluid is in motion and we
-    wish to describe this motion.</p>
+    <p> Let <m>D</m> be a region in a 2D or 3D region filled with fluid. The fluid is in motion and
+      we wish to describe this motion.</p>
 
-  <p>Let <m>\bx\in D</m> be a point in <m>D</m> and consider the particle of fluid that moves
-    through the point <m>\bx</m> at time <m>t</m>. In the figure below, we sketch the
-    trajectory that this particle might take within the fluid. Also at the point <m>\bx</m>
-    at time <m>t</m>, we let <m>\bu(\bx, t)</m> be the velocity of the particle. At
-    each fixed time, we can imagine the velocity vectors drawn at each point in the fluid; thus we
-    call <m>\bu</m> the <em>velocity field</em> of the fluid. </p>
+    <p>Let <m>\bx\in D</m> be a point in <m>D</m> and consider the particle of fluid that moves
+      through the point <m>\bx</m> at time <m>t</m>. In the figure below, we sketch the trajectory
+      that this particle might take within the fluid. Also at the point <m>\bx</m> at time <m>t</m>,
+      we let <m>\bu(\bx, t)</m> be the velocity of the particle. At each fixed time, we can imagine
+      the velocity vectors drawn at each point in the fluid; thus we call <m>\bu</m> the <em>velocity
+      field</em> of the fluid. </p>
 
-  <figure xml:id="ch01-fluid">
-    <caption>Image of the fluid domain <m>D</m>.</caption>
-    <image source="ch-chapter01-equations-fluid.png" width="50%" />
-  </figure>
+    <figure xml:id="ch01-fluid">
+      <caption>Image of the fluid domain <m>D</m>.</caption>
+      <image source="ch-chapter01-equations-fluid.png" width="50%" />
+    </figure>
 
-  <p>At each point in space and moment in time, we assume that the fluid has a well-defined mass
-    density, <m>\rho(\bx, t)</m>. Let <m>V \subseteq D</m> be any subregion of <m>D</m>. Then
-    the mass of the fluid in <m>V</m> at time <m>t</m> is given by 
-    <men xml:id="eqn-mass">
-    m(t) = \iiint_{V(t)} \rho(\bx, t) \, \mathrm{d}V.     
-    </men>
-  </p>
-
-  <remark>
-    <title>Smoothness and well-posedness</title>
-    <p> In most of what follows in this chapter, we shall always assume that the functions <m>
-      \bu</m>, <m>\rho</m>, and similarly for others describing fluid quantities are
-      sufficiently smooth that the standard calculus operations can be applied to them. <em>Can you
-      think of some situations in fluid dynamics where smoothness might not be guaranteed?</em>
+    <p>At each point in space and moment in time, we assume that the fluid has a well-defined mass
+      density, <m>\rho(\bx, t)</m>. Let <m>V \subseteq D</m> be any subregion of <m>D</m>. Then the
+      mass of the fluid in <m>V</m> at time <m>t</m> is given by <men xml:id="eqn-mass">
+        m(t) = \iiint_{V(t)} \rho(\bx, t) \, \mathrm{d}V.
+      </men>
     </p>
-  </remark>
 
-  <remark xml:id="rem-continuum">
-    <title>Continuum assumption</title>
-    <p> The assumption that the fluid can be described by a smooth scalar density field, <m>\rho</m>,
-      is a <em>continuum assumption.</em> This is indeed one of the core assumptions that underlies
-      this course, but it is worth noting that this is only an assumption (albeit a widely accepted
-      one, applicable to most real-life scenarios). On the other extreme of this view is the
-      assumption that the fluid is composed of a discrete set of molecules, all bouncing around, and
-      hence fluid dynamics might be posed as the study of the kinetic motion of molecules! </p>
-<p>
-  In the continuum description, we are averaging properties (e.g. velocity) over groups of individual
-  fluid particles that are close to each other. Thus there is a minimum size of the fluid body required
-  for this approach to be valid (if we consider smaller sizes of fluid, the motion of individual particles
-  becomes important):
-<ul>
-  <li> For gases at standard temperature and pressure (STP): the minimum volume is around
-    <m>10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m> molecules).</li>
-<li> For liquids: the minimum volume of fluid is smaller as the particles are closer together. For
-  water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m>
-  (this contains around <m>3\times10^7</m> molecules).</li>
-<li> For complex fluids: the minimum volume needed to invoke the continuum approximation is often larger,
-  e.g. blood contains red blood cells, which significantly affect its mechanics
-  (the mechanics of blood plasma approximates that of water) and the volume of a single red blood cell
-  is around <m>10^{-16}</m> m<m>^3</m>.</li>
-</ul>
-</p>
-  </remark>
+    <remark>
+      <title>Smoothness and well-posedness</title>
+      <p> In most of what follows in this chapter, we shall always assume that the functions <m>
+          \bu</m>, <m>\rho</m>, and similarly for others describing fluid quantities are
+        sufficiently smooth that the standard calculus operations can be applied to them. <em>Can
+          you
+          think of some situations in fluid dynamics where smoothness might not be guaranteed?</em>
+      </p>
+    </remark>
 
-  <p>
-    In <xref ref="ex-continuum-assumption"/>, you will consider whether salt flow can be considered under a continuum assumption.
-  </p>
+    <remark xml:id="rem-continuum">
+      <title>Continuum assumption</title>
+      <p> The assumption that the fluid can be described by a smooth scalar density field, <m>\rho</m>,
+        is a <em>continuum assumption.</em> This is indeed one of the core assumptions that
+        underlies this course, but it is worth noting that this is only an assumption (albeit a
+        widely accepted one, applicable to most real-life scenarios). On the other extreme of this
+        view is the assumption that the fluid is composed of a discrete set of molecules, all
+        bouncing around, and hence fluid dynamics might be posed as the study of the kinetic motion
+        of molecules! </p>
+      <p> In the continuum description, we are averaging properties (e.g. velocity) over groups of
+        individual fluid particles that are close to each other. Thus there is a minimum size of the
+        fluid body required for this approach to be valid (if we consider smaller sizes of fluid,
+        the motion of individual particles becomes important): <ul>
+          <li> For gases at standard temperature and pressure (STP): the minimum volume is around <m>
+        10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m>
+        molecules).</li>
+          <li> For liquids: the minimum volume of fluid is smaller as the particles are closer
+        together. For water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m> (this contains
+        around <m>3\times10^7</m> molecules).</li>
+          <li> For complex fluids: the minimum volume needed to invoke the continuum approximation
+        is often larger, e.g. blood contains red blood cells, which significantly affect its
+        mechanics (the mechanics of blood plasma approximates that of water) and the volume of a
+        single red blood cell is around <m>10^{-16}</m> m<m>^3</m>.</li>
+        </ul>
+      </p>
+    </remark>
+
+    <p> In <xref ref="ex-continuum-assumption" />, you will consider whether salt flow can be
+      considered under a continuum assumption. </p>
 
     <figure xml:id="fig-salt-flow">
       <caption>An AI-generated image of salt flowing out of a large orifice.</caption>
@@ -79,27 +78,26 @@
       </image>
     </figure>
 
-  <p> The derivation of the governing equations for a fluid is then based on three basic principles
-    of physics: <ol>
-      <li>
-        <p>
-          <em>Conservation of mass:</em> mass is neither created nor destroyed. </p>
-      </li>
-      <li>
-        <p>
-          <em>Conservation of momentum:</em> the rate of change of momentum of a portion of the
-    fluid is equal to the applied force (Newton's second law). </p>
-      </li>
-      <li>
-        <p>
-          <em>Conservation of energy:</em> energy is neither created nor destroyed. </p>
-      </li>
-    </ol>
-  </p>
+    <p> The derivation of the governing equations for a fluid is then based on three basic
+      principles of physics: <ol>
+        <li>
+          <p>
+            <em>Conservation of mass:</em> mass is neither created nor destroyed. </p>
+        </li>
+        <li>
+          <p>
+            <em>Conservation of momentum:</em> the rate of change of momentum of a portion of the
+      fluid is equal to the applied force (Newton's second law). </p>
+        </li>
+        <li>
+          <p>
+            <em>Conservation of energy:</em> energy is neither created nor destroyed. </p>
+        </li>
+      </ol>
+    </p>
 
-  <p>
-    Before starting, though, our first task is to derive some helpful results on the differentiation of quantities such as <xref ref="eqn-mass"/>.
-  </p>
+    <p> Before starting, though, our first task is to derive some helpful results on the
+      differentiation of quantities such as <xref ref="eqn-mass" />. </p>
 
   </introduction>
 
@@ -157,23 +155,23 @@
       </theorem>
 
       <p> The following requires a bit of algebra, and you are not required to prove the result.</p>
-        <theorem xml:id="thm-Euleridentity">
-          <title>Euler's identity</title>
-          <statement>
-            <p> The material derivative of the Jacobian of the transformation <m>\bx = \bx(\bX, t)</m>
-        is given by <men xml:id="eqn-euler-identity">
-                \DD{J}{t} = J \nabla \cdot \bu,
-              </men> where <m>\bu =
-        \DD{\bx}{t}</m>. </p>
-          </statement>
+      <theorem xml:id="thm-Euleridentity">
+        <title>Euler's identity</title>
+        <statement>
+          <p> The material derivative of the Jacobian of the transformation <m>\bx = \bx(\bX, t)</m>
+            is given by <men xml:id="eqn-euler-identity">
+              \DD{J}{t} = J \nabla \cdot \bu,
+            </men> where <m>\bu =
+            \DD{\bx}{t}</m>. </p>
+        </statement>
 
-          <proof>
-            <p>
-              The proof follows from direct differentiation on the determinant and use of the
-        identity of the material derivative.
-            </p>
-          </proof>
-        </theorem>
+        <proof>
+          <p>
+            The proof follows from direct differentiation on the determinant and use of the
+            identity of the material derivative.
+          </p>
+        </proof>
+      </theorem>
     </subsection>
 
     <subsection xml:id="subsec-RTT">
@@ -181,111 +179,100 @@
 
       <p> We are now ready to derive a key result that eases our path towards developing the
         governing equations for a fluid. The result is as follows.</p>
-       
-        <theorem xml:id="thm-RTT">
-          <title>Reynolds' Transport Theorem</title>
-          <statement>
-            <p> Consider a time-dependent volume, <m>V(t)</m>, that is transported by the fluid so
-        that it always consists of the same fluid particles. Then, for any function, <m>f(\bx, t)</m>,
-        continuously differentiable with respect to its arguments, <em>Reynolds' Transport Theorem</em>
-        is as follows: <men xml:id="eqn-RTT">
-                \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
-        \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
-              </men>
-            </p>
-          </statement>
 
-          <proof>
-            <p> We transform the integral in Euclidean coordinates to Lagrangian coordinates,
-        integrating in the label space: <me>
-                I(t) \equiv \iiint_{V(t)} f \, \de{x} \de{y} \de{z}
-                = \iiint_{V(0)} f J \, \de{X} \de{Y} \de{Z},
-              </me>
-        and notice that we now only need to integrate over the fixed volume as defined in Lagrangian
-        space, at the expense of adding the Jacobian factor. We now write <md>
-                <mrow> \dd{I}{t} &amp;= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
-              </md>
-        and the material derivative passes through since the domain is fixed. The <xref ref="thm-material-derivative"/> now allows us to convert the material derivative to regular
-        partial derivatives. By the chain rule: <md>
-                <mrow>\DD{(fJ)}{t} &amp;= \DD{f}{t}J + f\DD{J}{t} </mrow>
-                <mrow> &amp;= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
-                  + f \left[J \nabla \cdot \bu\right] </mrow>
-                <mrow> &amp;= \left[ \pd{f}{t} + \nabla \cdot (f\bu) \right]J </mrow>
-              </md>
-        and we have differentiated the Jacobian via Euler's identity <xref ref="thm-Euleridentity" />
-        in the second line. The last line follows from the chain rule applied to the vector
-        identity: <me>
-                \nabla \cdot (f\bu) = f \nabla \cdot \bu + \nabla f \cdot \bu.
-              </me>
-        We can now revert from Lagrangian to Eulerian integration, and this thus completes the proof
-        of the Reynolds' Transport Theorem.</p>
-      </proof>
-        </theorem>
-
-        <note>
-                <p>It is helpful for you to convince yourself that the vector identity used in the proof is the
-        only possible arrangement of operations that makes sense, i.e. in order for <m>\nabla \cdot
-        (f\bu)</m> to return a scalar.</p>
-              </note>
-
-        <p>In summary: the Reynolds' Transport Theorem thus gives an identity for how time differentiation can
-            pass through the integral when the domain of integration is changing in time!</p>
-
-        <remark>
-          <title>A 1D version of the Reynolds' Transport Theorem</title>
-          <p>
-            In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule.
-            This is presented as an exercise in <xref ref="ex-leibnitz-rule"/>.
+      <theorem xml:id="thm-RTT">
+        <title>Reynolds' Transport Theorem</title>
+        <statement>
+          <p> Consider a time-dependent volume, <m>V(t)</m>, that is transported by the fluid so
+            that it always consists of the same fluid particles. Then, for any function, <m>f(\bx,
+              t)</m>, continuously differentiable with respect to its arguments, <em>Reynolds'
+            Transport Theorem</em> is as follows: <men xml:id="eqn-RTT">
+              \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
+              \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
+            </men>
           </p>
-        </remark>
+        </statement>
 
-        <remark>
-          <title>RTT and conserved quantities</title>
-          <p>
-            Reynolds' Transport Theorem is particularly useful when the integral quantity
-            <me>
-              B = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+        <proof>
+          <p> We transform the integral in Euclidean coordinates to Lagrangian coordinates,
+            integrating in the label space: <me>
+              I(t) \equiv \iiint_{V(t)} f \, \de{x} \de{y} \de{z}
+              = \iiint_{V(0)} f J \, \de{X} \de{Y} \de{Z},
             </me>
-            is a <em>conserved quantity</em>. A conserved quantity is something for which
-            we can apply a <em>principle of conservation</em>. In practice for this course, this is
-            usually mass or linear momentum:
-            <ul>
-              <li>
-                <p>
-                  Mass: <m>f=\rho</m> and the left-hand side of <xref ref="eqn-RTT"/> is zero
-                  because mass is conserved.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity
-                  and, by <em>Newton's second law</em>, the left-hand side of <xref ref="eqn-RTT"/> equals
-                  the sum of the all the forces acting on the fluid in the control volume <m>V</m>,
-                  which are:
-                  <ul>
-                    <li>
-                      <p>
-                        Surface forces: Forces acting on the surfaces of the fluid,
-                        which could be reaction forces from the walls of a container,
-                        or forces due to pressure or stress from surrounding fluid.
-                        (Note that we will cover stress in <xref ref="ch-viscousflows"/>.)
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        Body forces: Forces acting over the interior of the fluid,
-                        and in this course you will usually only need to consider the force
-                        of gravity, although in principle other body forces could act
-                        such as an electromagnetic force. In addition, if working in
-                        a noninertial frame of reference, other apparent forces need to
-                        be added (forces due to linear acceleration, angular acceleration
-                        and the Coriolis and centrifugal forces).
-                      </p>
-                    </li>
-                  </ul>
-                </p>
-              </li>
-<!--              <li>
+            and notice that we now only need to integrate over the fixed volume as defined in
+            Lagrangian space, at the expense of adding the Jacobian factor. We now write <md>
+              <mrow> \dd{I}{t} &amp;= \iiint_{V(0)} \DD{(fJ)}{t} \, \de{X}\de{Y}\de{Z} </mrow>
+            </md>
+            and the material derivative passes through since the domain is fixed. The <xref
+              ref="thm-material-derivative" /> now allows us to convert the material derivative to
+            regular partial derivatives. By the chain rule: <md>
+              <mrow>\DD{(fJ)}{t} &amp;= \DD{f}{t}J + f\DD{J}{t} </mrow>
+              <mrow> &amp;= \left[ \pd{f}{t} + \bu \cdot \nabla f\right]J
+                + f \left[J \nabla \cdot \bu\right] </mrow>
+              <mrow> &amp;= \left[ \pd{f}{t} + \nabla \cdot (f\bu) \right]J </mrow>
+            </md>
+            and we have differentiated the Jacobian via Euler's identity <xref
+              ref="thm-Euleridentity" /> in the second line. The last line follows from the chain
+            rule applied to the vector identity: <me>
+              \nabla \cdot (f\bu) = f \nabla \cdot \bu + \nabla f \cdot \bu.
+            </me>
+            We can now revert from Lagrangian to Eulerian integration, and this thus completes the
+            proof of the Reynolds' Transport Theorem.</p>
+        </proof>
+      </theorem>
+
+      <note>
+        <p>It is helpful for you to convince yourself that the vector identity used in the proof is
+          the only possible arrangement of operations that makes sense, i.e. in order for <m>\nabla
+          \cdot
+            (f\bu)</m> to return a scalar.</p>
+      </note>
+
+      <p>In summary: the Reynolds' Transport Theorem thus gives an identity for how time
+        differentiation can
+        pass through the integral when the domain of integration is changing in time!</p>
+
+      <remark>
+        <title>A 1D version of the Reynolds' Transport Theorem</title>
+        <p> In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule. This
+          is presented as an exercise in <xref ref="ex-leibnitz-rule" />. </p>
+      </remark>
+
+      <remark>
+        <title>RTT and conserved quantities</title>
+        <p> Reynolds' Transport Theorem is particularly useful when the integral quantity <me>
+            B = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+          </me> is a <em>conserved
+          quantity</em>. A conserved quantity is something for which we can apply a <em>principle of
+          conservation</em>. In practice for this course, this is usually mass or linear momentum: <ul>
+            <li>
+              <p> Mass: <m>f=\rho</m> and the left-hand side of <xref ref="eqn-RTT" /> is zero
+          because mass is conserved. </p>
+            </li>
+            <li>
+              <p> Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity and, by <em>Newton's
+          second law</em>, the left-hand side of <xref ref="eqn-RTT" /> equals the sum of the all
+          the forces acting on the fluid in the control volume <m>V</m>, which are: <ul>
+                  <li>
+                    <p> Surface forces: Forces acting on the surfaces of the fluid, which could be
+          reaction forces from the walls of a container, or forces due to pressure or stress from
+          surrounding fluid. (Note that we will cover stress in <xref ref="ch-viscousflows" />.) </p>
+                  </li>
+                  <li>
+                    <p>
+                      Body forces: Forces acting over the interior of the fluid,
+                      and in this course you will usually only need to consider the force
+                      of gravity, although in principle other body forces could act
+                      such as an electromagnetic force. In addition, if working in
+                      a noninertial frame of reference, other apparent forces need to
+                      be added (forces due to linear acceleration, angular acceleration
+                      and the Coriolis and centrifugal forces).
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <!--              <li>
                 <p>
                   Angular momentum: In this case, the angular momentum per unit volume is
                   <m>\bf=\rho\br\times\bu</m> and the left-hand side of <xref ref="eqn-RTT"/>
@@ -297,50 +284,47 @@
                   Energy: Energy can be classified as internal, kinetic, gravitational potential, etc.
                 </p>
               </li>-->
-            </ul>
-          </p>
-        </remark>
+          </ul>
+        </p>
+      </remark>
 
 
-        <remark xml:id="rem-RTT-control-volume">
-          <title>General statement of RTT</title>
-          <p>
-            <em>Non-examinable:</em></p>
+      <remark xml:id="rem-RTT-control-volume">
+        <title>General statement of RTT</title>
+        <p>
+          <em>Non-examinable:</em>
+        </p>
 
-            <p>A more general statement of the Reynolds' Transport Theorem is as follows:
-            We define a <em>control volume</em> <m>V(t)</m>.
-            This is a region of the fluid that we specify;
-            it could be any fluid-containing volume, and in particular it doesn't need to follow the fluid particles
-            (unlike <xref ref="eqn-RTT"/>). Then the rate of change of <m>B</m> in the system of particles
-            equals the integral of the rate of change of <m>f</m> over the control volume
-            plus the net flux of the <m>f</m> through the surface of the control volume:
-            <men xml:id="eqn-RTT-simp">
-              \dd{B_{\textrm{syst}}}{t} = \dd{B_{CV}}{t}+\dot{B}_{CS}.
-            </men>
-            Here, <m>B_{\textrm{syst}}</m> is the amount of <m>B</m> in the system of particles,
-            that is the Lagrangian derivative of <m>B</m>, <m>B_{CV}</m> is the amount of <m>B</m>
-            in the control volume and <m>\dot{B}_{CS}</m> is the flux of <m>B</m> across the surface
-            of the control volume. Note that, if <m>B</m> is conserved then we can write the left-hand side
-            in terms of other things (zero if <m>B</m> is mass and the sum of the forces if <m>B</m> is
-            linear momentum).
-          </p>
-          <p>
-            This is in a form that can be used to solve many problems in engineering.
-            The key point is that these problems are about quantities on the scale of the
-            <em>control volume</em> and not about the details of the flow at particular points.
-          </p>
-          <p>
-            Thus, for example we could consider a tank with inlets and outlets and,
-            using the fluid in the tank as the control volume, we can apply the conservation
-            of mass to find the volume flow rates in the inlets and outlets and the level of
-            fluid in the tank.
-          </p>
-          <p>
-            We can use momentum conservation to find the force on a section of a pipe
-            or the dynamics of a piston moving a fluid to which a known force is applied.
-          </p>
-        </remark>
-<!--      <p>
+        <p>A more general statement of the Reynolds' Transport Theorem is as follows: We define a <em>control
+          volume</em> <m>V(t)</m>. This is a region of the fluid that we specify; it could be any
+          fluid-containing volume, and in particular it doesn't need to follow the fluid particles
+          (unlike <xref ref="eqn-RTT" />). Then the rate of change of <m>B</m> in the system of
+          particles equals the integral of the rate of change of <m>f</m> over the control volume
+          plus the net flux of the <m>f</m> through the surface of the control volume: <men
+            xml:id="eqn-RTT-simp">
+            \dd{B_{\textrm{syst}}}{t} = \dd{B_{CV}}{t}+\dot{B}_{CS}.
+          </men>
+          Here, <m>B_{\textrm{syst}}</m> is the amount of <m>B</m> in the system of particles, that
+          is the Lagrangian derivative of <m>B</m>, <m>B_{CV}</m> is the amount of <m>B</m> in the
+          control volume and <m>\dot{B}_{CS}</m> is the flux of <m>B</m> across the surface of the
+          control volume. Note that, if <m>B</m> is conserved then we can write the left-hand side
+          in terms of other things (zero if <m>B</m> is mass and the sum of the forces if <m>B</m>
+          is linear momentum). </p>
+        <p> This is in a form that can be used to solve many problems in engineering. The key point
+          is that these problems are about quantities on the scale of the <em>control volume</em>
+          and not about the details of the flow at particular points. </p>
+        <p>
+          Thus, for example we could consider a tank with inlets and outlets and,
+          using the fluid in the tank as the control volume, we can apply the conservation
+          of mass to find the volume flow rates in the inlets and outlets and the level of
+          fluid in the tank.
+        </p>
+        <p>
+          We can use momentum conservation to find the force on a section of a pipe
+          or the dynamics of a piston moving a fluid to which a known force is applied.
+        </p>
+      </remark>
+      <!--      <p>
         You will apply the Reynolds' Transport Theorem to a problem involving the conservation
         of mass in <xref ref="ex-rtt-mass-tank"/> and problems on momentum conservation in
         <xref ref="ex-rtt-momentum-artery"/> and <xref ref="ex-rtt-momentum-pipe"/>
@@ -353,847 +337,829 @@
     <title>Conservation of mass</title>
 
     <introduction>
-    <p>
-    Our task from this section is to prove the following equation for the conservation of mass of a fluid:</p>
+      <p>
+        Our task from this section is to prove the following equation for the conservation of mass
+        of a fluid:</p>
 
       <theorem xml:id="thm-mass">
         <title>Continuity equation</title>
         <statement>
           <p> The differential form of the law of conservation of mass, otherwise known as the <em>continuity
-      equation</em> is 
-              <men xml:id="eqn-consvmass1">
-                \pd{\rho}{t} + \nabla \cdot (\rho \bu) = 0,
-              </men>
-          where <m>\rho = \rho(\bx,t)</m> is the density of the fluid and <m>\bu = \bu(\bx, t)</m> is the velocity of the fluid.
-          </p>
+            equation</em> is <men xml:id="eqn-consvmass1">
+              \pd{\rho}{t} + \nabla \cdot (\rho \bu) = 0,
+            </men> where <m>\rho
+            = \rho(\bx,t)</m> is the density of the fluid and <m>\bu = \bu(\bx, t)</m> is the
+            velocity of the fluid. </p>
 
-          <p>
-            The above form is equivalent, by the definition of the convective derivative, to 
-            <men xml:id="eqn-consvmass2">
-             \DD{\rho}{t} + \rho(\nabla \cdot \bu) = 0. 
+          <p> The above form is equivalent, by the definition of the convective derivative, to <men
+              xml:id="eqn-consvmass2">
+              \DD{\rho}{t} + \rho(\nabla \cdot \bu) = 0.
             </men>
-            
+
           </p>
         </statement>
       </theorem>
 
-    <p>
-      In fact, as it turns out, the proof of this result is trivial
-      if we use the Reynolds' Transport Theorem and Lagrangian formulation
-      following <xref ref="thm-RTT"/>.</p>
+      <p> In fact, as it turns out, the proof of this result is trivial if we use the Reynolds'
+        Transport Theorem and Lagrangian formulation following <xref ref="thm-RTT" />.</p>
 
       <proof>
-        <p>
-          We consider the time differentiation of the mass integral,
-          <me>
+        <p> We consider the time differentiation of the mass integral, <me>
             \iiint_{V(t)} \rho \, \de{V},
-          </me>
-         for an arbitrary material volume <m>V(t)</m> in the fluid. 
-        </p>
+          </me> for an arbitrary material
+          volume <m>V(t)</m> in the fluid. </p>
 
-          
-          
-         <p> By <xref ref="thm-RTT"/>, we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives:
-          <me>
-            \dd{}{t}\iiint_{V(t)} \rho \de{V} = \iiint_{V(t)} \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V},
+
+        <p> By <xref ref="thm-RTT" />, we can use the Reynolds' Transport Theorem to pass the time
+          derivative through the integral. This gives: <me>
+            \dd{}{t}\iiint_{V(t)} \rho \de{V} = \iiint_{V(t)} \left[ \pd{\rho}{t} + \nabla \cdot
+          (\rho \bu)\right] \, \de{V},
           </me>
-          which is satisfied for any volume <m>V \subseteq D</m> where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately <xref ref="eqn-consvmass1"/>. 
-        </p>
-        <p>
-          The proof of <xref ref="eqn-consvmass2"/> follows immediately from application of the definition of the convective derivative <xref ref="eqn-DDt"/>.
-        </p>
+          which is satisfied for any volume <m>V \subseteq D</m> where the fluid is defined. Since
+          the result is true for any such possible volume, then the integrand of the right
+          hand-side, itself, must be zero. This gives immediately <xref ref="eqn-consvmass1" />. </p>
+        <p> The proof of <xref ref="eqn-consvmass2" /> follows immediately from application of the
+          definition of the convective derivative <xref ref="eqn-DDt" />. </p>
       </proof>
 
-      <remark>
-        <title>Use of the bump lemma</title>
-       
-        <p>
-          Within the above proof, we use an idea used throughout this chapter,
-          which is that if an integral of a quantity (the integrand) is zero for all possible
-          domains of integration, then the integrand, itself, is zero.
-          This is sometimes referred to as the "Bump lemma".
-          In <xref ref="ex-bump"/>, you will prove this lemma. 
-        </p>
-        
-      </remark>
+      <p>
+        Within the above proof, we use an idea used throughout this chapter,
+        which is that if an integral of a quantity (the integrand) is zero for all possible
+        domains of integration, then the integrand, itself, is zero.
+        This is sometimes referred to as the "Bump lemma".
+      </p>
+
+      <lemma xml:id="lem-bump">
+        <title>Bump lemma</title>
+        <statement>
+          <p> Let <m>f(\bx)</m> be a sufficiently smooth function defined on <m>\Omega \subseteq
+            \mathbb{R}^n</m>. Suppose it is the case that <me>
+              \int_V f(\bx) \, \de{V} = 0,
+            </me> for all <m>V \subseteq
+            \Omega</m>. Then <me>
+              f(\bx) \equiv 0
+            </me> in <m>\Omega</m>. </p>
+        </statement>
+      </lemma>
+
+      <p> In <xref ref="ex-bump" />, you will prove the above lemma. </p>
     </introduction>
 
 
     <subsection>
       <title>Derivation of mass conservation using Eulerian methods</title>
-      
-      <p>
-        The derivation we have just shown for <xref ref="thm-mass"/>, using the Lagrangian viewpoint
-        and the Reynolds' Transport Theorem is misleadingly simple, and it can be instructive to see
-        how the result is proved purely from the perspective of Eulerian coordinates. 
-      </p>
 
-    <p> For this, let us consider <m>V</m> to be a <em>fixed and closed</em> subregion of the overall fluid, <m>D</m> that does not change with time. An illustration of this is shown in <xref ref="fig-normalvolume"/>.</p>
+      <p> The derivation we have just shown for <xref ref="thm-mass" />, using the Lagrangian
+        viewpoint and the Reynolds' Transport Theorem is misleadingly simple, and it can be
+        instructive to see how the result is proved purely from the perspective of Eulerian
+        coordinates. </p>
+
+      <p> For this, let us consider <m>V</m> to be a <em>fixed and closed</em> subregion of the
+        overall fluid, <m>D</m> that does not change with time. An illustration of this is shown in <xref
+          ref="fig-normalvolume" />.</p>
 
       <figure xml:id="fig-normalvolume">
-        <caption>Picture of the fluid volume, <m>V</m>, shown in blue, with a small surface element, <m>\partial V</m>, and the outwards flux.</caption>
+        <caption>Picture of the fluid volume, <m>V</m>, shown in blue, with a small surface element, <m>\partial
+          V</m>, and the outwards flux.</caption>
         <image source="ch-chapter01-equations-09-54-13.png" width="60%">
           <shortdescription>Fluid</shortdescription>
         </image>
       </figure>
 
-    <p>We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.</p>
+      <p>We want to prove the following result, which essentially equates the change in mass, due to
+        density changes, to the flow of mass in or out of the volume.</p>
 
       <theorem>
         <title>Integral form of the law of conservation of mass</title>
 
         <statement>
-        <p>Given a fixed volume element <m>V</m> and boundary <m>\partial V</m>, the integral form of the
-      law of mass conservation is
-      <men xml:id="eqn-integralconservation">
-        \dd{}{t} \iiint_V \rho \, \de{V} = -\iint_{\partial V} \rho \bu \cdot \bn \, \de{S}.
-      </men>
-      </p>
+          <p>Given a fixed volume element <m>V</m> and boundary <m>\partial V</m>, the integral form
+            of the law of mass conservation is <men xml:id="eqn-integralconservation">
+              \dd{}{t} \iiint_V \rho \, \de{V} = -\iint_{\partial V} \rho \bu \cdot \bn \, \de{S}.
+            </men>
+          </p>
         </statement>
 
-<proof>
-     <p> The
-      rate of change of mass in <m>V</m> is
-       <me>
-        \dd{}{t} \iiint_V \rho(\bx, t) \, \de V = \iiint_V \pd{\rho}{t} \, \de V,
-      </me> and note the derivative passes
-      through the integral since the volume, <m>V</m>, does not change with time. </p>
-    <p> Let the boundary of <m>V</m> be given by <m>\partial V</m>, and let <m>\bn</m> denote the
-      outward unit normal defined along the boundary <m>\partial V</m>. At each point on the
-      boundary, the volume flow rate (known as the <em>flux</em>) across the boundary is given by <m>\bu
-      \cdot \bn</m> and therefore the mass flow rate is <m>\rho \bu \cdot \bn</m>. 
-    </p>
-    <p> We now sum the total mass flow across the entire boundary. This is given by the surface
-      integral <me>
-        \text{rate of mass change across $\partial V$} = \iint_{\partial V} \rho \bu \cdot \bn \,
-      \de{S}.
-      </me>
-      The flux out of the boundary is also sketched in <xref ref="fig-normalvolume"/>.
-    </p>
+        <proof>
+          <p> The rate of change of mass in <m>V</m> is <me>
+              \dd{}{t} \iiint_V \rho(\bx, t) \, \de V = \iiint_V \pd{\rho}{t} \, \de V,
+            </me>
+            and note the derivative passes through the integral since the volume, <m>V</m>, does not
+            change with time. </p>
+          <p> Let the boundary of <m>V</m> be given by <m>\partial V</m>, and let <m>\bn</m> denote
+            the outward unit normal defined along the boundary <m>\partial V</m>. At each point on
+            the boundary, the volume flow rate (known as the <em>flux</em>) across the boundary is
+            given by <m>\bu
+              \cdot \bn</m> and therefore the mass flow rate is <m>\rho \bu \cdot \bn</m>. </p>
+          <p> We now sum the total mass flow across the entire boundary. This is given by the
+            surface integral <me>
+              \text{rate of mass change across $\partial V$} = \iint_{\partial V} \rho \bu \cdot \bn
+            \,
+              \de{S}.
+            </me>
+            The flux out of the boundary is also sketched in <xref ref="fig-normalvolume" />. </p>
 
-      <p>
-      Mass conservation is now applied. Therefore, the rate of change of pass in the volume <m>V</m>
-      is equal to the rate at which mass enters the boundary in the <em>inwards</em> direction. 
-    </p>
-  </proof>
+          <p> Mass conservation is now applied. Therefore, the rate of change of pass in the volume <m>
+            V</m> is equal to the rate at which mass enters the boundary in the <em>inwards</em>
+            direction. </p>
+        </proof>
       </theorem>
-      
-    <p> We now want to transform the integral form in <xref ref="eqn-integralconservation"/> into the form of a partial differential equation.
-      To do this, apply the <em>Divergence theorem</em> to the right hand-side of the above
-      integral, converting the surface integral to a volume integral. Moving all quantities to the
-      left hand side now yields <me>
-        \iiint_V \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V} = 0.
-      </me>
-      Since the above integral equation holds for all possible <m>V</m>, it must be equivalent to
-      the integrand equated to zero (<xref ref="lem-bump"/>). This yields our final result leading to <xref ref="thm-mass"/>.
-    </p>
+
+      <p> We now want to transform the integral form in <xref ref="eqn-integralconservation" /> into
+        the form of a partial differential equation. To do this, apply the <em>Divergence theorem</em>
+        to the right hand-side of the above integral, converting the surface integral to a volume
+        integral. Moving all quantities to the left hand side now yields <me>
+          \iiint_V \left[ \pd{\rho}{t} + \nabla \cdot (\rho \bu)\right] \, \de{V} = 0.
+        </me>
+        Since the above integral equation holds for all possible <m>V</m>, it must be equivalent to
+        the integrand equated to zero (<xref ref="lem-bump" />). This yields our final result
+        leading to <xref ref="thm-mass" />. </p>
     </subsection>
 
     <subsection xml:id="subsec-cor-consvmass">
       <title>Corollary of the Transport Theorem</title>
-      
-    <corollary xml:id="cor-convmass">
-      <statement>
-        <p>
-         There is a useful corollary to the transport theorem in <xref ref="thm-RTT"/>
-         in the case where the desired function of integration, <m>f</m>, is proportional to the density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>. Indeed consider a moving volume <m>V(t)</m>, and a density <m>\rho</m> that satisfies the continuity equation <xref ref="eqn-consvmass1"/> or <xref ref="eqn-consvmass2"/>. Then 
-         <men xml:id="eqn-cor-convmass">
-         \dd{}{t} \iiint_{V(t)} \rho h \, \de{V} = \iiint_{V(t)} \rho \DD{h}{t} \, \de{V}.
-         </men>
-        </p>
-      </statement>
 
-      <proof>
-        <p>
-          This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity:
-          <me>
-            \nabla \cdot (f\bu) = \nabla f \cdot \bu + f \nabla \cdot \bu.
-          </me>
-          where <m>f = \rho h</m>. Finally use the continuity equation on <m>\rho</m>.
-        </p>
-      </proof>
-    </corollary>
+      <corollary xml:id="cor-convmass">
+        <statement>
+          <p> There is a useful corollary to the transport theorem in <xref ref="thm-RTT" /> in the
+            case where the desired function of integration, <m>f</m>, is proportional to the
+            density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>. Indeed
+            consider a moving volume <m>V(t)</m>, and a density <m>\rho</m> that satisfies the
+            continuity equation <xref ref="eqn-consvmass1" /> or <xref ref="eqn-consvmass2" />. Then <men
+              xml:id="eqn-cor-convmass">
+              \dd{}{t} \iiint_{V(t)} \rho h \, \de{V} = \iiint_{V(t)} \rho \DD{h}{t} \, \de{V}.
+            </men>
+          </p>
+        </statement>
+
+        <proof>
+          <p> This proof just follows from expansion. Pass the derivative through the integral and
+            use the Reynolds' transport theorem formula. Then expand the quantity: <me>
+              \nabla \cdot (f\bu) = \nabla f \cdot \bu + f \nabla \cdot \bu.
+            </me>
+            where <m>f = \rho h</m>. Finally use the continuity equation on <m>\rho</m>. </p>
+        </proof>
+      </corollary>
 
     </subsection>
-   </section>
+  </section>
 
 
   <section xml:id="subsec-euler-momentum">
     <title>Momentum balance</title>
 
     <introduction>
-    <p>
-      With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum.
-      This is <em>Newton's second law</em> the rate of change of momentum of a body is equal to the sum of all forces acting on the body. 
-    </p>
+      <p> With mass conservation now handled, we turn our eyes towards a law that governs the
+        conservation of momentum. This is <em>Newton's second law</em> the rate of change of
+        momentum of a body is equal to the sum of all forces acting on the body. </p>
 
 
-        <p>
-    Our task from this section is to prove the following equation for the conservation of mass of a fluid:</p>
+      <p>
+        Our task from this section is to prove the following equation for the conservation of mass
+        of a fluid:</p>
 
       <theorem xml:id="thm-momentum">
         <title>Momentum equation</title>
         <statement>
-          <p> The differential form of the law of conservation of momentum, is              
-            <men xml:id="eqn-consvmoment">
-               \rho \DD{\bu}{t} = \rho \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) = - \nabla p + \rho \bg 
-              </men>
-          where <m>\rho = \rho(\bx,t)</m> is the density of the fluid, <m>\bu = \bu(\bx, t)</m> is the velocity of the fluid, <m>p = p(\bx, t)</m> is the pressure, and <m>\bg</m> is the acceleration due to a body force (typically gravity).
-          </p>
+          <p> The differential form of the law of conservation of momentum, is <men
+              xml:id="eqn-consvmoment">
+              \rho \DD{\bu}{t} = \rho \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) = - \nabla p +
+            \rho \bg
+            </men>
+            where <m>\rho = \rho(\bx,t)</m> is the density of the fluid, <m>\bu = \bu(\bx, t)</m> is
+            the velocity of the fluid, <m>p = p(\bx, t)</m> is the pressure, and <m>\bg</m> is the
+            acceleration due to a body force (typically gravity). </p>
         </statement>
       </theorem>
+
+      <p> Note that above, we have used the notation <m>\nabla \bu</m> for the gradient of a vector.
+        This is explained in <xref ref="remark-vector-gradient" />. </p>
     </introduction>
 
     <subsection>
       <title>Proof of the momentum equation for an inviscid fluid</title>
-      
-
-    <p>
-      Consider again a material volume <m>V(t)</m> of the fluid. Then the rate of change of net momentum of this volume is equal to 
-      <men xml:id="eqn-momentum1">
-       \dd{}{t} \iiint_{V(t)} \rho \bu(\bx, t) \, \de{V}. 
-      </men>
-      It is helpful to remember that the mass of a volume element is <m>\rho \de{V}</m> and the acceleration is <m>\dd{\bu}{t}</m>, so the above is similar to mass times acceleration. However, we work with the more general form above to allow for changes in the density throughout the fluid, and also for variable fluid elements, <m>V(t)</m>.
-    </p>
 
 
+      <p> Consider again a material volume <m>V(t)</m> of the fluid. Then the rate of change of net
+        momentum of this volume is equal to <men xml:id="eqn-momentum1">
+          \dd{}{t} \iiint_{V(t)} \rho \bu(\bx, t) \, \de{V}.
+        </men> It is helpful
+        to remember that the mass of a volume element is <m>\rho \de{V}</m> and the acceleration is <m>
+        \dd{\bu}{t}</m>, so the above is similar to mass times acceleration. However, we work with
+        the more general form above to allow for changes in the density throughout the fluid, and
+        also for variable fluid elements, <m>V(t)</m>. </p>
 
-    <p>
-      We must equate the above to the sum of all surface and body forces applied to the fluid element.
-    </p>
 
-    <p>
-      An example of a body force is the force of gravity. For a small volume element of mass <m>\rho \de{V}</m>, the force of gravity is equal to <m>(\rho \de{V})\bg</m>. Therefore, the total external force due to gravity on the volume is equal to 
-      <men xml:id="eqn-momentum2">
-       \iiint_{V} \rho \bg \, \de{V}.
-      </men>
-      There may be other external body forces. For example, if your fluid is electrically conductive (like a plasma), there may be electromagnetic forces that must be considered. In any case, <m>\bg</m> can be considered as the analogous body force.
-    </p>
+      <p>
+        We must equate the above to the sum of all surface and body forces applied to the fluid
+        element.
+      </p>
 
-    <p>
-      The final type of forces we should consider are <em>surface forces</em>, which are applied to the boundary of the fluid element, denoted <m>\partial V</m>. Let us assume that at each point on the boundary, there is a per-surface area surface force, <m>\bF</m>, that decomposes into component normal to the boundary, <m>F_n \bn</m>, and a component tangential to the boundary, <m>F_t \bt</m>. So the surface forces, summed over the boundary, will be 
-      <men xml:id="eqn-momentum-force">
-        \iint_{\partial V} \left[ F_n \bn + F_t \bt\right] \, \de{S}.
-      </men>
-      In the above, the interpretation is that the force on a small patch of surface area <m>\de{S}</m> is equal to the per-area force, say <m>F_n</m>, multiplied by the area, then directed into the normal direction, <m>\bn</m>.
-    </p>
+      <p> An example of a body force is the force of gravity. For a small volume element of mass <m>\rho
+        \de{V}</m>, the force of gravity is equal to <m>(\rho \de{V})\bg</m>. Therefore, the total
+        external force due to gravity on the volume is equal to <men xml:id="eqn-momentum2">
+        \iiint_{V} \rho \bg \, \de{V}.
+        </men> There may be other external body
+        forces. For example, if your fluid is electrically conductive (like a plasma), there may be
+        electromagnetic forces that must be considered. In any case, <m>\bg</m> can be considered as
+        the analogous body force. </p>
 
-    <p>
-      At this point, we make a key assumption that is applied in the particular case of <em>inviscid fluids</em>.</p>
+      <p> The final type of forces we should consider are <em>surface forces</em>, which are applied
+        to the boundary of the fluid element, denoted <m>\partial V</m>. Let us assume that at each
+        point on the boundary, there is a per-surface area surface force, <m>\bF</m>, that
+        decomposes into component normal to the boundary, <m>F_n \bn</m>, and a component tangential
+        to the boundary, <m>F_t \bt</m>. So the surface forces, summed over the boundary, will be <men
+          xml:id="eqn-momentum-force">
+          \iint_{\partial V} \left[ F_n \bn + F_t \bt\right] \, \de{S}.
+        </men> In
+        the above, the interpretation is that the force on a small patch of surface area <m>\de{S}</m>
+        is equal to the per-area force, say <m>F_n</m>, multiplied by the area, then directed into
+        the normal direction, <m>\bn</m>. </p>
 
-      <theorem xml:id="def-inviscid">
+      <p> At this point, we make a key assumption that is applied in the particular case of <em>inviscid
+        fluids</em>.</p>
+
+      <theorem xml:id="thm-inviscid-force">
+        <title>Forces in inviscid fluids</title>
         <statement>
-          <p>
-           In the case of <em>inviscid fluids</em>, we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, <m>p</m>, which acts in the inward normal direction at each point, with <m>F_n \bn = -p \bn</m>. Consequently, the surface force, given by <xref ref="eqn-momentum-force"/>, is 
-           <men xml:id="eqn-eqn-momentum-pressure">
-            \iint_{\partial V} (-p) \bn \, \de{S} = \iiint_V (-\nabla p) \, \de{V}.
-           </men>
+          <p> In the case of <em>inviscid fluids</em>, we assume that the surface pressure exerted
+            on (interior) volume elements is accounted solely by a pressure, <m>p</m>, which acts in
+            the inward normal direction at each point, with <m>F_n \bn = -p \bn</m>. Consequently,
+            the surface force, given by <xref ref="eqn-momentum-force" />, is <men
+              xml:id="eqn-eqn-momentum-pressure">
+              \iint_{\partial V} (-p) \bn \, \de{S} = \iiint_V (-\nabla p) \, \de{V}.
+            </men>
           </p>
           <p>
-            In particular, for the case of inviscid fluids, we ignore tangential internal forces. 
+            In particular, for the case of inviscid fluids, we ignore tangential internal forces.
           </p>
         </statement>
 
         <proof>
-          <p>
-            The result follows by a corollary of the diverence theorem. The divergence theorem is
-            <me>
-              \iiint_V \nabla \cdot \bF \, \de{V} = \iint_{\partial V} \bF \cdot \bn \, \de{S}.
+          <p> The result follows by a corollary of the diverence theorem. The divergence theorem is <me>
+            \iiint_V \nabla \cdot \bF \, \de{V} = \iint_{\partial V} \bF \cdot \bn \, \de{S}.
             </me>
-            Let <m>\bF = p \boldsymbol{c}</m> where <m>\boldsymbol{c} = [1, 1, 1]</m> and apply to the above.
-          </p>
+            Let <m>\bF = p \boldsymbol{c}</m> where <m>\boldsymbol{c} = [1, 1, 1]</m> and apply to
+            the above. </p>
         </proof>
       </theorem>
 
-    <p>
-      Finally, it follows by summation of the forces above that Newton's law states that 
-      <me>
-       \dd{}{t} \iiint_{V(t)} \rho \bu(\bx, t) \, \de{V} = -\iiint_V (\nabla p) \, \de{V} + \iiint \rho \bg \, \de{V}.
-      </me>
-     We can now use the corollary to the transport theorem <xref ref="cor-convmass"/>, with the assignment of <m>f = \rho u_x, \rho u_y, \rho u_z</m> and this allows us to the conclude that 
-     <me>
-      \iiint_{V} \left( \rho \DD{\bu}{t} + \nabla p - \rho \bg\right) \, \de{V} = 0.
-     </me>
-    Again, the above holds for all material volumes <m>V</m> and therefore it must follow that the integrand is zero. We conclude thus with the following result as stated in <xref ref="thm-momentum"/>:
-    <me>
-    \rho \DD{\bu}{t} = - \nabla p + \rho \bg.
-    </me>
-    </p>
+      <p> Finally, it follows by summation of the forces above that Newton's law states that <me>
+        \dd{}{t} \iiint_{V(t)} \rho \bu(\bx, t) \, \de{V} = -\iiint_V (\nabla p) \, \de{V} + \iiint
+        \rho \bg \, \de{V}.
+        </me>
+        We can now use the corollary to the transport theorem <xref ref="cor-convmass" />, with the
+        assignment of <m>f = \rho u_x, \rho u_y, \rho u_z</m> and this allows us to the conclude
+        that <me>
+          \iiint_{V} \left( \rho \DD{\bu}{t} + \nabla p - \rho \bg\right) \, \de{V} = 0.
+        </me>
+        Again, the above holds for all material volumes <m>V</m> and therefore it must follow that
+        the integrand is zero. We conclude thus with the following result as stated in <xref
+          ref="thm-momentum" />: <me>
+          \rho \DD{\bu}{t} = - \nabla p + \rho \bg.
+        </me>
+      </p>
 
-    <p>
-      In <xref ref="ex-euler-check"/>, you will practice the derivation of the mass and momentum equations.
-    </p>
+      <p> In <xref ref="ex-euler-check" />, you will practice the derivation of the mass and
+        momentum equations. </p>
     </subsection>
 
   </section>
-    <section xml:id="sec-incompressible">
-      <title>The Euler equations</title>
+  <section xml:id="sec-incompressible">
+    <title>The Euler equations</title>
 
-      <subsection>
-        <title>Incompressible fluids and the Euler equations</title>
-        
+    <subsection>
+      <title>Incompressible fluids and the Euler equations</title>
 
-    <p>
-      Recall from <xref ref="thm-Euleridentity"/> that the Jacobian relates
-      infinitessimal volumes in Eulerian and Lagrangian frames via 
-      <men xml:id="eq-dxyz-Jacobian">
-        \dxyz = J \dXYZ
-      </men>.
-      So the Jacobian is a measure of the local expansion or contraction of a
-      fluid (relative to its original state). If we use Euler's identity in the theorem,
-      we are led to an important interpretation for what it means for a fluid to satisfy
-      <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an
-      <em>incompressible fluid.</em> (You already previously encountered an intuitive
-      definition for an incompressible flow as part of <xref ref="ex-video-flow-visualisation"/>).
-      </p>
 
-        <theorem xml:id="def-incompressible">
-          <title>Incompressible fluids</title>
-          <statement>
-             <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes.
-              Since such volumes are related via <xref ref="eq-dxyz-Jacobian"/>, then this is equivalent
-              to 
-             <me>
+      <p> Recall from <xref ref="thm-Euleridentity" /> that the Jacobian relates infinitessimal
+        volumes in Eulerian and Lagrangian frames via <men xml:id="eq-dxyz-Jacobian">
+          \dxyz = J \dXYZ
+        </men>. So the Jacobian is a measure of the local
+        expansion or contraction of a fluid (relative to its original state). If we use Euler's
+        identity in the theorem, we are led to an important interpretation for what it means for a
+        fluid to satisfy <m>\nabla \cdot \bu = 0</m>. This leads us to defining the notion of an <em>incompressible
+        fluid.</em> (You already previously encountered an intuitive definition for an
+        incompressible flow as part of <xref ref="ex-video-flow-visualisation" />). </p>
+
+      <theorem xml:id="def-incompressible">
+        <title>Incompressible fluids</title>
+        <statement>
+          <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes.
+            Since such volumes are related via <xref ref="eq-dxyz-Jacobian" />, then this is
+            equivalent to <me>
               \DD{J}{t} \equiv 0,
-             </me>
-             within the relevant fluid (and temporal) domain.</p>
-             
-             <p>The following equivalence (iff) then follows:
-            <men xml:id="eqn-incompressibledef">
-             \textrm{Fluid is incompressible} \quad \Longleftrightarrow \quad \nabla \cdot \bu = 0.
+            </me> within the relevant fluid (and
+            temporal) domain.</p>
+
+          <p>The following equivalence (iff) then follows: <men xml:id="eqn-incompressibledef">
+            \textrm{Fluid is incompressible} \quad \Longleftrightarrow \quad \nabla \cdot \bu = 0.
             </men>
-            </p>
-          </statement>
+          </p>
+        </statement>
 
-            <proof>
-              <p>
-                Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element
-                must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian"/>.
-                Then by Euler's identity in <xref ref="thm-Euleridentity"/>, this implies
-                <m>\nabla \cdot \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>,
-                then again by the identity the fluid is incompressible. 
-              </p>
-            </proof>
-          </theorem>
+        <proof>
+          <p> Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element
+            must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian" />. Then
+            by Euler's identity in <xref ref="thm-Euleridentity" />, this implies <m>\nabla \cdot
+              \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>, then again by the identity
+            the fluid is incompressible. </p>
+        </proof>
+      </theorem>
 
 
-      <p>
-        So in conclusion, for the case of an incompressible fluid, it suffices to solve the equation 
-        <men xml:id="eqn-divu">
-         \nabla \cdot \bu = 0,
-        </men>
-        instead of the more complicated equation in <xref ref="thm-mass"/>.
-      </p>
+      <p> So in conclusion, for the case of an incompressible fluid, it suffices to solve the
+        equation <men xml:id="eqn-divu">
+          \nabla \cdot \bu = 0,
+        </men> instead of the more complicated equation in <xref
+          ref="thm-mass" />. </p>
 
-      <p>
-      By the way, what happens to the mass conservation equation in <xref ref="thm-mass"/> if the fluid is incompressible? This leads to the following corollary.</p>
+      <p> By the way, what happens to the mass conservation equation in <xref ref="thm-mass" /> if
+        the fluid is incompressible? This leads to the following corollary.</p>
 
       <corollary xml:id="cor-incompressible-density">
         <title>Constant density along streamlines</title>
         <statement>
-          <p>
-          For an incompressible fluid, the density is constant along streamlines, i.e. 
-          <me>
+          <p> For an incompressible fluid, the density is constant along streamlines, i.e. <me>
             \DD{\rho}{t} = \pd{\rho}{t} + (\bu \cdot \nabla)\rho = 0.
-          </me>
+            </me>
           </p>
         </statement>
 
         <proof>
-          <p>
-            This relies on setting <m>\nabla \cdot \bu = 0</m> in <xref ref="thm-mass"/>.
-          </p>
+          <p> This relies on setting <m>\nabla \cdot \bu = 0</m> in <xref ref="thm-mass" />. </p>
         </proof>
-      </corollary> 
-      
-      <p>
-        Let us return to consider the total sum of equations and unknowns.
-        We have introduced the scalar mass conservation equation found in <xref ref="thm-mass"/>
-        (or alternatively the more simplified equation <xref ref="eqn-divu"/> for incompressible fluids). Also the vector momentum equation found in <xref ref="thm-momentum"/>. This yields four scalar equations for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity components <m>\bu</m>.
-      </p>
+      </corollary>
+
+      <p> Let us return to consider the total sum of equations and unknowns. We have introduced the
+        scalar mass conservation equation found in <xref ref="thm-mass" /> (or alternatively the
+        more simplified equation <xref ref="eqn-divu" /> for incompressible fluids). Also the vector
+        momentum equation found in <xref ref="thm-momentum" />. This yields four scalar equations
+        for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity
+        components <m>\bu</m>. </p>
+
+      <p> One way of proceeding is to attempt to establish or to inuit a relationship between
+        pressure and density. For instance, the assumption of an ideal gas law can be derived from
+        kinetic theory, which leads to the empirical law that <m>p = RT\rho</m>, relating pressure
+        in a linear fashion to density, and depending on the temperature, <m>T</m>, and a (gas)
+        constant <m>R</m>. Other assumptions of the form <m>p = p(\rho)</m> are possible, and this
+        is involved in the study of gases and <em>compressible fluids</em>. </p>
+
 
       <p>
-        One way of proceeding is to attempt to establish or to inuit a relationship between pressure and density. For instance, the assumption of an ideal gas law can be derived from kinetic theory, which leads to the empirical law that <m>p = RT\rho</m>, relating pressure in a linear fashion to density, and depending on the temperature, <m>T</m>, and a (gas) constant <m>R</m>. Other assumptions of the form <m>p = p(\rho)</m> are possible, and this is involved in the study of gases and <em>compressible fluids</em>.
-      </p>
+        However, empirically, we observe that in most liquids, the density only varies within a few
+        percent under typical variations of temperature and pressure. Therefore, it is common to
+        assume:</p>
 
-    
+      <note>
+        <title>Constant density assumption</title>
+        <p> We often assume that in the situation of liquids, the density is taken to be constant, <m>\rho
+          = \textrm{constant}</m>. </p>
+      </note>
 
-      <p>
-        However, empirically, we observe that in most liquids, the density only varies within a few percent under typical variations of temperature and pressure. Therefore, it is common to assume:</p>
+      <p> Note, then that in the case of constant density fluids, if we consider the mass
+        conservation equation <xref ref="eqn-consvmass1" />, it follows that <m>\nabla \cdot \bu = 0</m>.
+        Therefore, from the definition <xref ref="def-incompressible" />, we conclude that the fluid
+        is indeed incompressible. </p>
 
-        <note>
-          <title>Constant density assumption</title>
-          <p>
-            We often assume that in the situation of liquids, the density is taken to be constant, <m>\rho = \textrm{constant}</m>.
-          </p>
-        </note>
+      <remark>
+        <p> Confusingly, in many references, authors define a fluid to be incompressible if <m>\rho</m>
+          is constant. However, we see this is not necessarily the case. A fluid can be
+          incompressible and therefore <m>\DD{\rho}{t} = 0</m> without <m>\rho</m> being constant. </p>
+      </remark>
 
-      <p>
-      Note, then that in the case of constant density fluids, if we consider the mass conservation equation <xref ref="eqn-consvmass1"/>, it follows that <m>\nabla \cdot \bu = 0</m>. Therefore, from the definition <xref ref="def-incompressible"/>, we conclude that the fluid is indeed incompressible. 
-      </p>
-
-        <remark>
-            <p>
-              Confusingly, in many references, authors define a fluid to be incompressible if <m>\rho</m> is constant. However, we see this is not necessarily the case. A fluid can be incompressible and therefore <m>\DD{\rho}{t} = 0</m> without <m>\rho</m> being constant.
-            </p>
-        </remark>
-
-    <p>
-      We are finally ready to state the <em>Euler equations</em>.</p>
+      <p> We are finally ready to state the <em>Euler equations</em>.</p>
 
       <definition xml:id="def-euler">
         <title>Euler equations</title>
 
         <statement>
-          <p>
-            The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu"/>
-            and momentum equations <xref ref="eqn-consvmoment"/>, considered in the situation of an
-            incompressible fluid:
-            <mdn>
+          <p> The <em>Euler equations</em> consist of the continuity equation <xref ref="eqn-divu" />
+            and momentum equations <xref ref="eqn-consvmoment" />, considered in the situation of an
+            incompressible fluid: <mdn>
               <mrow>\nabla \cdot \bu &amp;= 0, </mrow>
-              <mrow xml:id="eqn-euler-momentum"> 
-               \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) &amp;= - \frac{1}{\rho}\nabla p + \bg.
-            </mrow>
-          </mdn>
-          Note this is then four scalar equations for the three unknown velocities in <m>\bu</m>
-          and pressure <m>p</m>. We shall assume in the course that incompressible fluids have constant
-          density, <m>\rho</m>. The above Euler equations include the (gravitational) body force <m>\bg</m>.
-          </p>
+              <mrow xml:id="eqn-euler-momentum">
+                \left(\pd{\bu}{t} + \bu \cdot \nabla\bu\right) &amp;= - \frac{1}{\rho}\nabla p +
+                \bg.
+              </mrow>
+            </mdn>
+            Note this is then four scalar equations for the three unknown velocities in <m>\bu</m>
+            and pressure <m>p</m>. We shall assume in the course that incompressible fluids have
+            constant density, <m>\rho</m>. The above Euler equations include the (gravitational)
+            body force <m>\bg</m>. </p>
         </statement>
       </definition>
 
-    <p>
-      Simple applications of the Euler equations are given in <xref ref="ex-kelvin-circulation-theorem"/>,
-      <xref ref="ex-fluid-pressure-uniform-velocity"/> and <xref ref="ex-piston-fluid-problem"/>
-    </p>
+      <p> Simple applications of the Euler equations are given in <xref
+          ref="ex-kelvin-circulation-theorem" />, <xref ref="ex-fluid-pressure-uniform-velocity" />
+        and <xref ref="ex-piston-fluid-problem" />
+      </p>
 
-    <p>
-      You will consider the derivation of the Euler equations as part of <xref ref="ex-euler-check"/>.
-    </p>
+      <p> You will consider the derivation of the Euler equations as part of <xref
+          ref="ex-euler-check" />. </p>
 
       <example>
         <title>Computer graphics and fluid simulations</title>
-       <p>
-        There has always been an intimate link between the research field of fluid mechanics and the entertainment field, where cutting-edge applications in animation, movie, and video-game graphics use ideas from fluid mechanics to model fluids. Many fluid simulators will use things like the Euler equations (or "bastardised version") to simulate fluids. In some cases, such simulations can even happen in real time. Here is an example of a real-time Euler equation solver <url href="https://matthias-research.github.io/pages/tenMinutePhysics/17-fluidSim.html">coded in Javascript.</url>
-       </p> 
-        
+        <p> There has always been an intimate link between the research field of fluid mechanics and
+          the entertainment field, where cutting-edge applications in animation, movie, and
+          video-game graphics use ideas from fluid mechanics to model fluids. Many fluid simulators
+          will use things like the Euler equations (or "bastardised version") to simulate fluids. In
+          some cases, such simulations can even happen in real time. Here is an example of a
+          real-time Euler equation solver <url
+            href="https://matthias-research.github.io/pages/tenMinutePhysics/17-fluidSim.html">coded
+          in Javascript.</url>
+        </p>
+
       </example>
-      </subsection>
+    </subsection>
 
 
     <subsection xml:id="subsec-euler-BCs">
       <title>Boundary conditions</title>
-      <idx><h>boundary conditions</h></idx>
+      <idx>
+        <h>boundary conditions</h>
+      </idx>
 
-      <p>
-        A great deal of the complexity of fluid motion comes from the conditions that we must consider between the fluid and its bounding surfaces. For water in the ocean, a bounding surfaces might include the ocean floor bottom and the body of a boat, down to the vegetation in the water or the sand on a beach. <em>This can get quite complex!</em> In this module, and when we first learn fluid dynamics, we only consider simple bounded fluid regions (fluid above a plate, fluid in a box, fluid in a channel, etc.)</p>
-        
-        <p>In the case of a water wave, a bounding surface will also include the free surface of the wave, itself, which interacts with the surrounding atmospheric gas. This leads to the situation of free-boundary or free-surface conditions<idx><h>free-surface</h></idx>.
-      </p>
+      <p> A great deal of the complexity of fluid motion comes from the conditions that we must
+        consider between the fluid and its bounding surfaces. For water in the ocean, a bounding
+        surfaces might include the ocean floor bottom and the body of a boat, down to the vegetation
+        in the water or the sand on a beach. <em>This can get quite complex!</em> In this module,
+        and when we first learn fluid dynamics, we only consider simple bounded fluid regions (fluid
+        above a plate, fluid in a box, fluid in a channel, etc.)</p>
+
+      <p>In the case of a water wave, a bounding surface will also include the free surface of the
+        wave, itself, which interacts with the surrounding atmospheric gas. This leads to the
+        situation of free-boundary or free-surface conditions<idx>
+          <h>free-surface</h>
+        </idx>. </p>
 
       <p>
         For the situation of fluid at a solid boundary, this leads us to formulate the following. </p>
 
-        <p>
-        <note xml:id="note-noflux-BC">
-          <title>No-flux condition through a boundary</title>
-          <p>
-        For a fluid in contact with a fixed rigid boundary, <m>\partial V</m>, then we require that the normal velocity of the fluid there must be zero: 
-        <men xml:id="eqn-motion-noflux-BC">
-          <idx><h>boundary conditions, no penetration</h></idx>
-         \bu \cdot \bn = 0 \quad \textrm{on $\partial V$},
-        </men>
-        where <m>\bn</m> is the unit normal to <m>\partial V</m>.  
-        This condition states that the fluid cannot flow through <m>\partial V</m> or separate from <m>\partial V</m> (hence leaving a vacuum). 
-      </p>
-    </note>
-      </p>
+      <note xml:id="note-noflux-BC">
+        <title>No-flux condition through a boundary</title>
+        <p> For a fluid in contact with a fixed rigid boundary, <m>\partial V</m>, then we require
+          that the normal velocity of the fluid there must be zero: <men
+            xml:id="eqn-motion-noflux-BC">
+            <idx>
+              <h>boundary conditions, no penetration</h>
+            </idx> \bu \cdot \bn = 0 \quad
+          \textrm{on $\partial V$}, </men> where <m>\bn</m> is the unit normal to <m>\partial V</m>.
+          This condition states that the fluid cannot flow through <m>\partial V</m> or separate
+          from <m>\partial V</m> (hence leaving a vacuum). </p>
+      </note>
 
-      <p>
-        It turns out that the above no-flux condition is sufficient to provide well-posed boundary
+      <p> It turns out that the above no-flux condition is sufficient to provide well-posed boundary
         conditions for most inviscid fluids. Note that in particular, we have not constrained the
-        tangential velocity of the fluid, i.e. <m>\bu \cdot \bt</m>, where <m>\bt</m> is the tangential
-        vector at the boundary. 
-      </p>
+        tangential velocity of the fluid, i.e. <m>\bu \cdot \bt</m>, where <m>\bt</m> is the
+        tangential vector at the boundary. </p>
 
-      <p>
-        Later in <xref ref="ch-viscousflows"/>, you will study the situation of a <em>viscous fluid</em>, where it will be important to consider the tangential fluid velocity. 
-      </p>
-      
+      <p> Later in <xref ref="ch-viscousflows" />, you will study the situation of a <em>viscous
+        fluid</em>, where it will be important to consider the tangential fluid velocity. </p>
+
     </subsection>
-    </section>
+  </section>
 
-    <section xml:id="sec-bernoulli">
-      <title>Bernoulli's equation</title>
+  <section xml:id="sec-bernoulli">
+    <title>Bernoulli's equation</title>
 
-      <introduction>
+    <introduction>
 
-      <p>
-        There is a reformulation of the momentum equations that proves to be useful. In essence,
-        it emerges from attempting to integrate the momentum equation <xref ref="eqn-euler-momentum"/>
+      <p> There is a reformulation of the momentum equations that proves to be useful. In essence,
+        it emerges from attempting to integrate the momentum equation <xref ref="eqn-euler-momentum" />
         and yields the famous <em>Bernoulli equation(s)</em>.</p>
 
 
-        <p>
-          We will first need a vector identity.</p>
-
-          <identity xml:id="ident-ugradu">
-            <statement>
-           <p>
-            Note the following identity: 
-            <men xml:id="eqn-ugradu">
-             (\bu \cdot \nabla) \bu = \nabla \left(\frac{1}{2}|\bu|^2\right) + (\nabla \times \bu) \times \bu. 
-            </men>
-           </p>
-            </statement>
-                   <proof>
-            <p>
-              The proof follows from direct expansion of both sides. 
-            </p>
-          </proof> </identity>
-
-        <p>
-          It will also be useful for us to introduce the notion of vorticity.</p>
-
-          <definition xml:id="def-vorticity">
-            <title>Vorticity of a vector field</title>
-            <statement>
-              <p>
-                The <em>vorticity</em>, <m>\omega</m>, of a vector field is defined by 
-                <men xml:id="eqn-vorticity">
-                  \omega \equiv \nabla \times \bu.
-                </men>
-               The vorticity is a measure of the local rotation of the flow. 
-              </p>
-            </statement>
-          </definition>
-
-
-
-        <p>
-          Let us recall the definition of a <em>conservative force</em>.</p>
-
-          <definition xml:id="def-conservative-force">
-            <title>Conservative forces</title>
-            <statement>
-              <p>
-              A force <m>\bF</m> is a <em>conservative force</em> if and only if there exists a potential <m>\chi</m>, such that 
-              <me>
-                \bF = -\nabla \chi,
-              </me>
-              in a simply connected region where the quantities are defined.
-              </p>
-            </statement>
-          </definition>
-
-         <p> Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.
-        </p>
-
-        <theorem xml:id="thm-bernoulli-steady">
-          <title>Bernoulli's equation for steady flow</title>
-          <statement>
-            <p>Bernoulli's equation (theorem) for steady flow states that
-            <men xml:id="eqn-bernoulli-steady">
-            B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along streamlines},
-            </men>
-            where we have assumed that the body force is <em>conservative</em>, i.e. it can be written as 
-            <men xml:id="eqn-gravity-potential">
-             \bg = -\nabla \chi, 
-            </men>
-            for a potential function, <m>\chi</m>.
-            </p>
-          </statement>
-
-          <proof>
-            <p>
-              Start from the momentum equation <xref ref="eqn-consvmoment"/>, 
-              <me>
-                \pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
-              </me>
-              and use the vector identity <xref ref="eqn-ugradu"/> gives 
-              <me>
-                \pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p + \frac{1}{2} |\bu|^2 + \chi\right).
-              </me>
-            </p>
-
-            <p>
-              Next, the flow is steady, and therefore we can zero the first term. This leaves
-              <me>
-                \bomega \times \bu = -\nabla B.
-              </me>
-              We now take the dot product of both sides of the equation with <m>\bu</m>. We use the fact that, 
-              <me>
-              \bu \cdot (\bomega \times \bu ) = 0,
-              </me>
-              since it is a triple scalar product with two repeated entries. It therefore results in the fact that
-              <me>
-                \bu \cdot \nabla B = 0.
-              </me>
-             Notice that this is the steady component that comes from the material derivative, <m>\DD{B}{t} = 0</m>. So we conclude that <m>B</m> is constant along streamlines of the flow. 
-            </p>
-
-            <p>
-              It is useful to note that if we use the definition of vorticity in <xref ref="eqn-vorticity"/>, and the definition of <m>B</m> in <xref ref="eqn-bernoulli-steady"/>, we have from the above that 
-              <men xml:id="eqn-bernoulli-vorticity">
-                \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
-              </men>
-             a form that will be useful, shortly. 
-            </p>
-          </proof>
-        </theorem>
-
-        <remark>
-          <p>
-          For the typical gravity force directed in the <m>-z</m> direction, we can write <m>\bg = -g[0, 0, 1] = -g \be_z</m>. So in this case, the (gravitational) potential is <m>\chi = gz</m>.
-          </p>
-        </remark>
-     
       <p>
-        The proof of <xref ref="thm-bernoulli-steady"/> introduced a useful form of the momentum
-        equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity"/>.
+        We will first need a vector identity.</p>
+
+      <identity xml:id="ident-ugradu">
+        <statement>
+          <p> Note the following identity: <men xml:id="eqn-ugradu">
+              (\bu \cdot \nabla) \bu = \nabla \left(\frac{1}{2}|\bu|^2\right) + (\nabla \times \bu)
+            \times \bu.
+            </men>
+          </p>
+        </statement>
+        <proof>
+          <p>
+            The proof follows from direct expansion of both sides.
+          </p>
+        </proof>
+      </identity>
+
+      <p>
+        It will also be useful for us to introduce the notion of vorticity.</p>
+
+      <definition xml:id="def-vorticity">
+        <title>Vorticity of a vector field</title>
+        <statement>
+          <p> The <em>vorticity</em>, <m>\omega</m>, of a vector field is defined by <men
+              xml:id="eqn-vorticity">
+              \omega \equiv \nabla \times \bu.
+            </men> The vorticity is a
+            measure of the local rotation of the flow. </p>
+        </statement>
+      </definition>
+
+
+      <p> Let us recall the definition of a <em>conservative force</em>.</p>
+
+      <definition xml:id="def-conservative-force">
+        <title>Conservative forces</title>
+        <statement>
+          <p> A force <m>\bF</m> is a <em>conservative force</em> if and only if there exists a
+            potential <m>\chi</m>, such that <me>
+              \bF = -\nabla \chi,
+            </me> in a simply connected region where
+            the quantities are defined. </p>
+        </statement>
+      </definition>
+
+      <p> Note the distinction about a simply-connected neighbourhood. The above is not quite the
+        definition of a conservative force (typically defined to be a force for which the work done
+        on an object between two points is independent of path). For now, this is not an important
+        distinction since we will focus on fluid regions that are free of holes. Until told
+        otherwise, we will always assume that the fluid is simply connected and therefore the above
+        serves as a definition of conservative forces.
+      </p>
+
+      <theorem xml:id="thm-bernoulli-steady">
+        <title>Bernoulli's equation for steady flow</title>
+        <statement>
+          <p>Bernoulli's equation (theorem) for steady flow states that <men
+              xml:id="eqn-bernoulli-steady">
+              B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along
+            streamlines},
+            </men>
+            where we have assumed that the body force is <em>conservative</em>, i.e. it can be
+            written as <men xml:id="eqn-gravity-potential">
+              \bg = -\nabla \chi,
+            </men> for a potential function, <m>\chi</m>
+            . </p>
+        </statement>
+
+        <proof>
+          <p> Start from the momentum equation <xref ref="eqn-consvmoment" />, <me>
+              \pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
+            </me>
+            and use the vector identity <xref ref="eqn-ugradu" /> gives <me>
+              \pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p +
+            \frac{1}{2} |\bu|^2 + \chi\right).
+            </me>
+          </p>
+
+          <p> Next, the flow is steady, and therefore we can zero the first term. This leaves <me>
+            \bomega \times \bu = -\nabla B.
+            </me> We now take the dot
+            product of both sides of the equation with <m>\bu</m>. We use the fact that, <me>
+              \bu \cdot (\bomega \times \bu ) = 0,
+            </me> since it is a
+            triple scalar product with two repeated entries. It therefore results in the fact that <me>
+            \bu \cdot \nabla B = 0.
+            </me> Notice that this is the steady
+            component that comes from the material derivative, <m>\DD{B}{t} = 0</m>. So we conclude
+            that <m>B</m> is constant along streamlines of the flow. </p>
+
+          <p> It is useful to note that if we use the definition of vorticity in <xref
+              ref="eqn-vorticity" />, and the definition of <m>B</m> in <xref
+              ref="eqn-bernoulli-steady" />, we have from the above that <men
+              xml:id="eqn-bernoulli-vorticity">
+              \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+            </men> a form
+            that will be useful, shortly. </p>
+        </proof>
+      </theorem>
+
+      <remark>
+        <p> For the typical gravity force directed in the <m>-z</m> direction, we can write <m>\bg =
+          -g[0, 0, 1] = -g \be_z</m>. So in this case, the (gravitational) potential is <m>\chi = gz</m>
+          . </p>
+      </remark>
+
+      <p> The proof of <xref ref="thm-bernoulli-steady" /> introduced a useful form of the momentum
+        equation using the vorticity function, resulting in <xref ref="eqn-bernoulli-vorticity" />.
         This leads to the so-called <em>vorticity equation</em> form of the momentum equation.</p>
 
-        <theorem xml:id="thm-vorticity-equation">
-          <title>The vorticity equation for incompressible flow</title>
-          <statement>
-            <p>
-            The momentum equation for incompressible flow, reposed in terms of the vorticity is:
-            <men xml:id="eqn-vorticity-equation">
+      <theorem xml:id="thm-vorticity-equation">
+        <title>The vorticity equation for incompressible flow</title>
+        <statement>
+          <p> The momentum equation for incompressible flow, reposed in terms of the vorticity is: <men
+              xml:id="eqn-vorticity-equation">
               \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
             </men>
-            or, equivalently,
-            <men xml:id="eqn-vorticity-equation-lagrange">
+            or, equivalently, <men xml:id="eqn-vorticity-equation-lagrange">
               \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
-            </men>
-            and is known as the <em>vorticity equation</em>.
-            
-            </p>
-          </statement>
-        </theorem>
+            </men> and is
+            known as the <em>vorticity equation</em>. </p>
+        </statement>
+      </theorem>
 
-      <p>
-        In the proof, it is useful to use the vector identity for the curl of a cross product: 
-        <men xml:id="eqn-curlcross">
-         \nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.  
+      <p> In the proof, it is useful to use the vector identity for the curl of a cross product: <men
+          xml:id="eqn-curlcross">
+          \nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv
+          \cdot \nabla)\bu - (\bu \cdot \nabla)\bv.
         </men>
       </p>
 
 
+      <proof>
+        <p> Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <xref
+            ref="eqn-bernoulli-vorticity" />, we take the curl of both sides to obtain <me>
+            \nabla \times \left(\pd{\bu}{t} + \bomega \times \bu\right) = 0.
+          </me>
+          Expanding the outer cross product, the first term can be simplified by swapping
+          differentiation in space with differentiation in time. The second term requires the cross
+          product identity <xref ref="eqn-curlcross" />. For the second term, we get <me>
+            -\nabla \times (\bu \times \bomega) = 0 - 0 + (\bomega \cdot \nabla)\bu - (\bu \cdot
+          \nabla)\bomega,
+          </me>
+          with the first zero resulting in the fact that "div curl equals zero", while the second
+          results from incompressibility. </p>
+
+        <p> Thus we have, <me>
+            \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
+          </me>
+          which is the main result. </p>
+      </proof>
+
+      <p> You will prove this result from first principles in <xref ref="ex-vorticity-equation" />. </p>
+    </introduction>
+
+    <subsection xml:id="subsec-potential">
+      <title>Potential flow</title>
+
+      <p> We are interested in the simplest scenarios that will result in reducing the governing
+        equations. Previosly, we introduced the notion of incompressible flows, which results in the
+        Euler equations in <xref ref="def-euler" /> and in particular, the reduction of the mass
+        conservation equation to <m>\nabla \cdot \bu = 0</m>. </p>
+
+      <p> We attempt to reduce further by assuming that the fluid is <em>irrotational</em>. This
+        lends to the following definition. </p>
+
+      <definition xml:id="def-irrotational">
+        <title>Irrotational flows</title>
+        <statement>
+          <p> A flow is said to be <em>irrotational</em> if the vorticity is identically zero: <men
+              xml:id="eqn-irrotational">
+              \textrm{flow is irrotational} \Longleftrightarrow \bomega = \nabla \times \bu \equiv
+              0.
+            </men>
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's
+        equation.
+      </p>
+
+      <theorem xml:id="thm-bernoulli-potential">
+        <title>Bernoulli's equation for steady irrotational flow</title>
+        <statement>
+          <p> For an incompressible and irrotational flow, Bernoulli's theorem states that <men
+              xml:id="eqn-bernoulli-potential">
+              B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant
+            everywhere},
+            </men>
+            where <m>\bg = -\nabla \chi</m> is the body force. </p>
+        </statement>
+
         <proof>
-          <p>
-            Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <xref ref="eqn-bernoulli-vorticity"/>, we take the curl of both sides to obtain 
-            <me>
-              \nabla \times \left(\pd{\bu}{t} + \bomega \times \bu\right) = 0.
-            </me>
-            Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity <xref ref="eqn-curlcross"/>. For the second term, we get 
-            <me>
-            -\nabla \times (\bu \times \bomega) = 0 - 0 + (\bomega \cdot \nabla)\bu - (\bu \cdot \nabla)\bomega,
-            </me>
-            with the first zero resulting in the fact that "div curl equals zero", while the second results from incompressibility. 
-          </p>
-
-          <p>
-            Thus we have,
-            <me>
-              \pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
-            </me>
-            which is the main result.
-          </p>
+          <p> The proof of this relies on returning to the proof of the unsteady Bernoulli's
+            equation in <xref ref="thm-bernoulli-steady" />. In the proof, we arrived at the result
+            in <xref ref="eqn-bernoulli-steady" /> that <me>
+              \pd{\bu}{t} + \bomega \times \bu = -\nabla B.
+            </me> For
+            steady flow, the first term disappears. If we have the additional assumption that the
+            flow is irrotational, then we have that <m>\bomega = 0</m>, and therefore we have <me>
+            \nabla B = 0.
+            </me> But the only way that all spatial
+            derivatives is zero is if the function is constant. </p>
         </proof>
+      </theorem>
 
+      <p> You will practice an application of Bernoulli's equation in <xref
+          ref="ex-bernoulli-streamline" />. </p>
+
+      <example>
+        <title>Airflow into or out of a room</title>
+
+        <p> During the lecture, just for fun, we will play <url
+            href="https://www.youtube.com/watch?v=1L2ef1CP-yw">this video by Matthias Wandel</url>
+          about airflow out of a room. This is somewhat related to Bernoulli's equation (the
+          connection between pressure and velocity), though the situation is considerably more
+          difficult. </p>
+
+      </example>
+
+      <example>
+        <title>Pascal's bursting barrel</title>
+
+        <p>For fun during the lecture, we will play <url
+            href="https://www.youtube.com/watch?v=EJHrr21UvY8">this video demonstration done at
+          Princeton</url> demonstrating the power of hydrostatic pressure.</p>
+      </example>
+
+      <example>
+        <title>Urination across species</title>
+
+        <p>During the lecture, we will play <url href="https://www.youtube.com/watch?v=EidLGwyYpBE">this
+          video describing</url> the work by Yang et al. on <url
+            href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111">"Duration of urination does
+          not change with body size"</url>. The title is not quite accurate, and the article
+          describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's
+          equation is used.</p>
+      </example>
+
+    </subsection>
+  </section>
+
+  <exercises xml:id="ws-equations">
+
+    <introduction>
       <p>
-        You will prove this result from first principles in <xref ref="ex-vorticity-equation"/>.
-      </p>
-      </introduction>
-
-      <subsection xml:id="subsec-potential">
-        <title>Potential flow</title>
-        
-        <p>
-          We are interested in the simplest scenarios that will result in reducing the governing equations.
-          Previosly, we introduced the notion of incompressible flows,
-          which results in the Euler equations in <xref ref="def-euler"/> and in particular,
-          the reduction of the mass conservation equation to <m>\nabla \cdot \bu = 0</m>.
-        </p>
-
-        <p>
-          We attempt to reduce further by assuming that the fluid is <em>irrotational</em>.
-          This lends to the following definition. </p>
-
-          <definition xml:id="def-irrotational">
-            <title>Irrotational flows</title>
-            <statement>
-              <p>
-               A flow is said to be <em>irrotational</em> if the vorticity is identically zero: 
-               <men xml:id="eqn-irrotational">
-               \textrm{flow is irrotational} \Longleftrightarrow  \bomega = \nabla \times \bu \equiv 0.
-               </men>
-              </p>
-            </statement>
-          </definition>
-
-        <p>
-          For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation. 
-        </p>
-
-          <theorem xml:id="thm-bernoulli-potential">
-          <title>Bernoulli's equation for steady irrotational flow</title>
-            <statement>
-              <p>
-                For an incompressible and irrotational flow, Bernoulli's theorem states that 
-                <men xml:id="eqn-bernoulli-potential">
-                 B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant everywhere},
-                </men>
-                where <m>\bg = -\nabla \chi</m> is the body force. 
-              </p>
-            </statement>
-
-          <proof>
-            <p>
-              The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in <xref ref="thm-bernoulli-steady"/>. In the proof, we arrived at the result in <xref ref="eqn-bernoulli-steady"/> that 
-              <me>
-                \pd{\bu}{t} + \bomega \times \bu = -\nabla B.
-              </me>
-              For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that <m>\bomega = 0</m>, and therefore we have
-              <me>
-                \nabla B = 0.
-              </me>
-             But the only way that all spatial derivatives is zero is if the function is constant. 
-            </p>
-          </proof>
-          </theorem>
-
-      <p>
-        You will practice an application of Bernoulli's equation in <xref ref="ex-bernoulli-streamline"/>.
+        This chapter focused on deriving the key Euler equations for an inviscid and incompressible
+        flow,
+        starting from first principles, and deriving the conservation laws using vector calculus.
+        Eventually, we studied different variations of the Euler equations and its consequences.
       </p>
 
-        <example>
-          <title>Airflow into or out of a room</title>
-         
-          <p>
-            During the lecture, just for fun, we will play
-            <url href="https://www.youtube.com/watch?v=1L2ef1CP-yw">this video by Matthias Wandel</url> about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult. 
-          </p>
-          
-        </example>
-
-        <example>
-          <title>Pascal's bursting barrel</title>
-         
-          <p>For fun during the lecture, we will play <url href="https://www.youtube.com/watch?v=EJHrr21UvY8">this video demonstration done at Princeton</url> demonstrating the power of hydrostatic pressure.</p>
-        </example>
-
-        <example>
-          <title>Urination across species</title>
-         
-          <p>During the lecture, we will play <url href="https://www.youtube.com/watch?v=EidLGwyYpBE">this video describing</url> the work by Yang et al. on <url href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111">"Duration of urination does not change with body size"</url>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.</p>
-        </example>
-
-      </subsection>
-    </section>
-  
-<exercises xml:id="ws-equations">
-
-<introduction>
-<p>
-This chapter focused on deriving the key Euler equations for an inviscid and incompressible flow,
-starting from first principles, and deriving the conservation laws using vector calculus.
-Eventually, we studied different variations of the Euler equations and its consequences. 
-</p>
-
-<!-- <warning>
-  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+      <!-- <warning>
+  <p>We look to complete worksheets in the week prior to the content being delivered. Once this is
+      done, this disclaimer message will be removed.</p>
 </warning> -->
-</introduction>
+    </introduction>
 
-<exercise xml:id="ex-continuum-assumption">
-<title>Continuum approximation</title>
-<statement>
-<p>
-Domestic salt flows quite well out of a container with a hole in the bottom. Following <xref ref="rem-continuum"/>, consider whether salt matches up to the properties quoted for a fluid</p>
-
-<p>What is the size of a typical salt particle?
-What size of hole would required so that a continuum model of the salt flow is a reasonable assumption?
-(Based on Q1, p. 42 by Paterson <xref ref="ref-paterson"/>.)
-</p>
-</statement>
-
-<answer>
-<p>
-Salt is not like a fluid because you can make it into a pile,
-whereas the surface of a resting fluid is always horizontal.
-However, some aspects of salt flow are similar to the flow of a fluid.
-A typical salt particle is approximately a cube of side <m>0.5</m> mm,
-and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>.
-We need a size of hole that admits a very large number of particles.
-A reasonable value of the volume <m>V</m> appearing in the continuum approximation
-might be the volume of <m>3\times10^7</m> salt grains
-(this was the number of gas or liquid molecules quoted in the notes),
-i.e. <m>3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately
-<m>10</m> cm. We need a hole that is many times this distance, perhaps a hole with a diameter
-of one metre or so might be reasonable!
-</p>
-</answer>
-</exercise>
-
-
-
-<exercise xml:id="ex-bump">
-  <title>Bump lemma</title>
- 
-  <p>
-    Within our derivations of the governing equations, we often make use of the following lemma: 
-
-    <lemma xml:id="lem-bump">
-      <title>Bump lemma</title>
+    <exercise xml:id="ex-continuum-assumption">
+      <title>Continuum approximation</title>
       <statement>
+        <p> Domestic salt flows quite well out of a container with a hole in the bottom. Following <xref
+            ref="rem-continuum" />, consider whether salt matches up to the properties quoted for a
+          fluid</p>
+
+        <p>What is the size of a typical salt particle? What size of hole would required so that a
+          continuum model of the salt flow is a reasonable assumption? (Based on Q1, p. 42 by
+          Paterson <xref ref="ref-paterson" />.) </p>
+      </statement>
+
+      <solution>
+        <p> Salt is not like a fluid because you can make it into a pile, whereas the surface of a
+          resting fluid is always horizontal. However, some aspects of salt flow are similar to the
+          flow of a fluid. A typical salt particle is approximately a cube of side <m>0.5</m> mm,
+          and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>. We need a size of
+          hole that admits a very large number of particles. A reasonable value of the volume <m>V</m>
+          appearing in the continuum approximation might be the volume of <m>3\times10^7</m> salt
+          grains (this was the number of gas or liquid molecules quoted in the notes), i.e. <m>
+          3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately <m>10</m> cm.
+          We need a hole that is many times this distance, perhaps a hole with a diameter of one
+          metre or so might be reasonable! </p>
+      </solution>
+    </exercise>
+
+
+    <exercise xml:id="ex-bump">
+      <title>Bump lemma</title>
+
+      <statement>
+        <p> Within our derivations of the governing equations, we often make use of the so-called
+          "Bump lemma" given in <xref ref="lem-bump" />. </p>
         <p>
-        Let <m>f(\bx)</m> be a sufficiently smooth function defined on <m>\Omega \subseteq \mathbb{R}^n</m>. Suppose it is the case that 
-        <me>
-          \int_V f(\bx) \, \de{V} = 0,
-        </me>
-        for all <m>V \subseteq \Omega</m>. Then 
-        <me>
-          f(\bx) \equiv 0
-        </me>
-        in <m>\Omega</m>.
+          Give a proof of the lemma.
         </p>
       </statement>
-    </lemma>
-  </p>
 
-  <p>
-    Give a proof of the lemma.
-  </p>
+      <solution>
+        <p> This proof assumes that the function <m>f</m> is not pathological (e.g. it cannot
+          oscillate infinitely fast, take different values for rational vs. irrational, etc.).
+          That's what we mean by "sufficiently smooth". </p>
+        <p> Assume that there exists a point <m>\bx_0 \in \Omega</m> where <m>f(\bx_0) \neq 0</m>.
+          Suppose without loss of generality <m>f > 0</m> here. Since <m>f</m> is sufficiently
+          smooth (and in particular, it is continuous), then there exists a non-trivial
+          neighbourhood near <m>\bx_0</m> where <m>f > 0</m> everywhere in this neighbourhood, say <m>
+          V_0</m>. Then <m>\int_{V_0} f \, \de{V} = 0</m>, contradicting the assumption. Therefore <m>
+          f</m> must be zero everywhere. </p>
+      </solution>
+    </exercise>
 
-  <answer>
-    <p>
-      This proof assumes that the function <m>f</m> is not pathological (e.g. it cannot oscillate infinitely fast, take different values for rational vs. irrational, etc.). That's what we mean by "sufficiently smooth". 
-    </p>
-    <p>
-      Assume that there exists a point <m>\bx_0 \in \Omega</m> where <m>f(\bx_0) \neq 0</m>. Suppose without loss of generality <m>f > 0</m> here. Since <m>f</m> is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near <m>\bx_0</m> where <m>f > 0</m> everywhere in this neighbourhood, say <m>V_0</m>. Then <m>\int_{V_0} f \, \de{V} = 0</m>, contradicting the assumption. Therefore <m>f</m> must be zero everywhere.
-    </p>
-  </answer>
-</exercise>
+    <exercise xml:id="ex-leibnitz-rule">
+      <title>Leibnitz's rule</title>
 
-<exercise xml:id="ex-leibnitz-rule">
-  <title>Leibnitz's rule</title>
- 
-  <p>
-    The Reynolds' Transport Theorem <xref ref="thm-RTT"/>,
-    which relates to the passage of a time derivative through an integral,
-    is a general form of the 1D Leibnitz rule:
-    <mdn>
-     <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
-     <mrow xml:id="eqn-leibnitz-rule"> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} + f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
-    </mdn>
+      <introduction>
+        <p> The Reynolds' Transport Theorem <xref ref="thm-RTT" />, which relates to the passage of
+          a time derivative through an integral, is a general form of the 1D Leibnitz rule: <mdn>
+            <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
+            <mrow xml:id="eqn-leibnitz-rule"> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} +
+          f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
+          </mdn>
+        </p>
+      </introduction>
 
 
-    <ol>
-      <li>
-        <p>
-          Examine the figure in <xref ref="ex-fig-leibnitz"/>.
-          Can you associate the quantities in Leibnitz's rule with the circled elements in the figure?
+      <task>
+        <statement>
+          <p> Examine the figure in <xref ref="ex-fig-leibnitz" />. Can you associate the quantities
+            in Leibnitz's rule with the circled elements in the figure?</p>
 
           <figure xml:id="ex-fig-leibnitz">
             <caption>Visual "proof" of Leibnitz's rule</caption>
@@ -1201,60 +1167,52 @@ of one metre or so might be reasonable!
               <shortdescription>Leibnitz</shortdescription>
             </image>
           </figure>
-        </p>
+        </statement>
 
-        <answer>
-          <p>
-            The first circled element is associated with the quantity: 
-            <me>
+        <solution>
+          <p> The first circled element is associated with the quantity: <me>
               \frac{1}{\Delta t} \int_{a(t)}^{b(t)} [f(x, t + \Delta t) - f(x, t)] \, \de{x}.
             </me>
-           This is essentially the finite-difference version of the first term on the RHS.  
-          </p>
+            This is essentially the finite-difference version of the first term on the RHS. </p>
 
-          <p>
-            The second circled element is associated with the quantity:
-            <me>
+          <p> The second circled element is associated with the quantity: <me>
               f(x, t)[a(t + \Delta t) - a(t)] \frac{1}{\Delta t},
-            </me>
-            and is associated with the area of the rectangle. 
-          </p>
+            </me> and
+            is associated with the area of the rectangle. </p>
 
-          <p>
-            The third circled element is associated with 
-            <me>
+          <p> The third circled element is associated with <me>
               f(x, t + \Delta t)[b(t + \Delta t) - b(t)] \frac{1}{\Delta t},
             </me>
-            and is associated with the area of the rectangle. Notice that for small <m>\Delta t</m>, the rectangle height of <m>f(x, t+\Delta t)</m> is approximately the same as the rectangle height of <m>f(x, t)</m>.
-          </p>
-        </answer>
-      </li>
-      <li>
-        <p>
-         A nice proof of the Leibnitz rule is given in <url href="https://www.youtube.com/watch?v=zbWihK9ibhc">this YouTube video by Brian Storey</url>. Watch the video and follow the derivation, making your own notes. 
-        </p>
-      </li>
+            and is associated with the area of the rectangle. Notice that for small <m>\Delta t</m>,
+            the rectangle height of <m>f(x, t+\Delta t)</m> is approximately the same as the
+            rectangle height of <m>f(x, t)</m>. </p>
+        </solution>
+      </task>
 
-      <li>
-        <p>
-          Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule"/> 
-          to the Reynolds' Transport Theorem in <xref ref="eqn-RTT"/>?
-        </p>
+      <task>
+        <statement>
+          <p> A nice proof of the Leibnitz rule is given in <url
+              href="https://www.youtube.com/watch?v=zbWihK9ibhc">this YouTube video by Brian Storey</url>.
+            Watch the video and follow the derivation, making your own notes. </p>
+        </statement>
+      </task>
 
-        <answer>
-          <p>
-            Write the second and third terms on the RHS as 
-            <me>
+      <task>
+        <statement>
+          <p> Can you now connect the form of the rule in <xref ref="eqn-leibnitz-rule" /> to the
+            Reynolds' Transport Theorem in <xref ref="eqn-RTT" />? </p>
+        </statement>
+
+        <solution>
+          <p> Write the second and third terms on the RHS as <me>
               \int_{a(t)}^{b(t)} \dd{}{x}(f(x, t) u(x, t)) \, \de{x}.
             </me>
           </p>
-        </answer>
-      </li>
-    </ol>
-  </p>
-</exercise>
+        </solution>
+      </task>
+    </exercise>
 
-<!--
+    <!--
 <exercise xml:id="ex-rtt-mass-tank">
   <title>Filling tank</title>
   <exercise xml:id="tank-filling">
@@ -1279,7 +1237,8 @@ of one metre or so might be reasonable!
         than the inflow so that the tank continues to fill);</li>
       <li>When the tank is full, the inflow equals the outflow.</li>
     </ol>
-    During Phase (ii) you may assume that the flow through the outlet is proportional to the depth of fluid above the outlet, that is, the volumetric flux through the outlet is <m>k(h - H/2)</m>.
+    During Phase (ii) you may assume that the flow through the outlet is proportional to the depth of
+    fluid above the outlet, that is, the volumetric flux through the outlet is <m>k(h - H/2)</m>.
   </p>
   <p>
     In this question you will find the depth <m>h(t)</m> of the water in the tank over time.
@@ -1289,7 +1248,7 @@ of one metre or so might be reasonable!
     <li>
       <p>
         Use the Reynolds' Transport Theorem to find the depth of water in the tank during Phase (i).
-    <answer>
+    <solution>
       <p>
         We define the control volume <m>V(t)</m> to be the volume of water in the tank and apply
         mass conservation to the system of particles. We set <m>f=\rho</m> to be the mass per unit
@@ -1313,21 +1272,22 @@ of one metre or so might be reasonable!
         Substituting <m>V_{CV} = Ah</m>, where <m>h(t)</m> is the depth of fluid at time <m>t</m>, we get
       </p>
       <me>h = \frac{Qt}{A}</me>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>At what time does Phase (ii) start?</statement>
-    <answer>
+    <solution>
       <p>
-        The outlet is reached when <m>h = H/2</m>, which happens at time <m>t = \tfrac{AH}{2Q}</m>, the beginning of Phase (ii).
+        The outlet is reached when <m>h = H/2</m>, which happens at time <m>t = \tfrac{AH}{2Q}</m>, the
+    beginning of Phase (ii).
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>Find the height <m>h(t)</m> in the tank during Phase (ii).</statement>
-    <answer>
+    <solution>
       <p>
         We apply the RTT as before, so
       </p>
@@ -1345,17 +1305,19 @@ of one metre or so might be reasonable!
         h = \frac{Q}{k} + \frac{H}{2} + c e^{-kt/A}
       </me>
       <p>
-        where <m>c</m> is a constant of integration. Noting that <m>h = H/2</m> at <m>t = AH/2Q</m> gives <m>c = -\tfrac{Q}{k} e^{kH/2Q}</m>, and thus
+        where <m>c</m> is a constant of integration. Noting that <m>h = H/2</m> at <m>t = AH/2Q</m> gives
+    <m>c = -\tfrac{Q}{k} e^{kH/2Q}</m>, and thus
       </p>
       <me>
         h = \frac{H}{2} + \frac{Q}{k}\left(1 - e^{kH/2Q} e^{-kt/A}\right)
       </me>
-    </answer>
+    </solution>
   </task>
 
   <task>
-    <statement>Assuming that <m>k</m> is small enough that the tank actually fills, how long does Phase (ii) last?</statement>
-    <answer>
+    <statement>Assuming that <m>k</m> is small enough that the tank actually fills, how long does Phase
+    (ii) last?</statement>
+    <solution>
       <p>
         Phase (ii) ends when the tank is full, that is <m>h = H</m>, which implies
       </p>
@@ -1365,41 +1327,46 @@ of one metre or so might be reasonable!
       <p>
         Thus Phase (ii) lasts for a time <m> -\tfrac{A}{k} \ln(1 - kH/(2Q))</m>.
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>What is the largest possible value of <m>k</m> so that the tank fills?</statement>
-    <answer>
+    <solution>
       <p>
         We require <m>kH/(2Q) &lt; 1</m>. Thus the largest value of <m>k</m> is <m>2Q/H</m>.
       </p>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>Hence sketch a graph of the height of the water in the tank over time.</statement>
-    <answer>
+    <solution>
       <figure>
         <image source="tank-filling.pdf" />
       </figure>
-    </answer>
+    </solution>
   </task>
 
   <task>
     <statement>
-      Once the tank reaches the end of Phase (ii), the pressure suddenly rises so as to drive the required flow rate <m>Q</m> out of the tank during Phase (iii).
-      What height of the fluid in the tank would cause this outflow if it were not forced (that is, if the tank were much taller)?
+      Once the tank reaches the end of Phase (ii), the pressure suddenly rises so as to drive the
+    required flow rate <m>Q</m> out of the tank during Phase (iii).
+      What height of the fluid in the tank would cause this outflow if it were not forced (that is, if
+    the tank were much taller)?
       Where does the force come from that causes this pressure rise?
     </statement>
-    <answer>
+    <solution>
       <p>
-        Let the unknown height be <m>H_0</m>. We require <m>Q = k(H_0 - H/2)</m>, meaning that the required height is <m>H_0 = Q/k + H/2</m>.
+        Let the unknown height be <m>H_0</m>. We require <m>Q = k(H_0 - H/2)</m>, meaning that the required
+    height is <m>H_0 = Q/k + H/2</m>.
       </p>
       <p>
-        Once the tank is full, the pressure in it can rise arbitrarily, because there is no longer atmospheric air in it. The pressure in the inlet needs to rise to create the extra pressure within the tank.
+        Once the tank is full, the pressure in it can rise arbitrarily, because there is no longer
+    atmospheric air in it. The pressure in the inlet needs to rise to create the extra pressure
+    within the tank.
       </p>
-    </answer>
+    </solution>
   </p>
       </p>
     </li>
@@ -1417,50 +1384,49 @@ of one metre or so might be reasonable!
   Q8 off answers7
 </exercise>-->
 
-<exercise xml:id="ex-euler-check">
-  <title>Derivation of governing equations</title>
+    <exercise xml:id="ex-euler-check">
+      <title>Derivation of governing equations</title>
 
-  <p>
-    <em>This is a re-derivation of what is already presented in the notes, giving you valuable practice to understand the concepts.</em>
-  </p>
- 
-  <p>
-    Starting from conservation of mass and momentum for a material volume moving in an inviscid fluid,
-    use Reynolds' Transport Theorem <xref ref="eqn-RTT"/> to derive the equations:
-    <mdn>
-      <mrow>\pd{\rho}{t} + \nabla \cdot(\rho \bu) = 0, </mrow>
-      <mrow>\DD{\bu}{t} = -\frac{1}{\rho} \nabla p + \bg. </mrow>
-    </mdn>
-  </p>
+      <statement>
+        <p>
+          <em>This is a re-derivation of what is already presented in the notes, giving you valuable
+            practice to understand the concepts.</em>
+        </p>
 
-  <p>
-    What additional assumptions are required to transform the set of equations to the Euler equations of <xref ref="def-euler"/>? Apply these assumptions and conclude with the Euler equations.
-  </p>
+        <p> Starting from conservation of mass and momentum for a material volume moving in an
+          inviscid fluid, use Reynolds' Transport Theorem <xref ref="eqn-RTT" /> to derive the
+          equations: <mdn>
+            <mrow>\pd{\rho}{t} + \nabla \cdot(\rho \bu) = 0, </mrow>
+            <mrow>\DD{\bu}{t} = -\frac{1}{\rho} \nabla p + \bg. </mrow>
+          </mdn>
+        </p>
 
-  <answer>
-    <p>
-      The proof of the continuity equation is given in <xref ref="thm-mass"/> and the proof of the
-      momentum equation is given in <xref ref="thm-momentum"/>, so make sure you can follow these
-      arguments and produce your own notes. 
-    </p>
+        <p> What additional assumptions are required to transform the set of equations to the Euler
+          equations of <xref ref="def-euler" />? Apply these assumptions and conclude with the Euler
+          equations. </p>
+      </statement>
 
-    <p>
-      The derivation of the Euler equations, as given in <xref ref="def-euler"/> requires
-      the additional assumption of an incompressible fluid, following <xref ref="def-incompressible"/>.
-      Incompressibility implies that <m>\nabla \cdot \bu = 0</m>,
-      and this equation then replaces the continuity equation.
-    </p>
-  </answer>
-  
-  
-</exercise>
+      <solution>
+        <p> The proof of the continuity equation is given in <xref ref="thm-mass" /> and the proof
+          of the momentum equation is given in <xref ref="thm-momentum" />, so make sure you can
+          follow these arguments and produce your own notes. </p>
+
+        <p> The derivation of the Euler equations, as given in <xref ref="def-euler" /> requires the
+          additional assumption of an incompressible fluid, following <xref ref="def-incompressible" />.
+          Incompressibility implies that <m>\nabla \cdot \bu = 0</m>, and this equation then
+          replaces the continuity equation. </p>
+      </solution>
 
 
-<!-- <exercise xml:id="energy">
+    </exercise>
+
+
+    <!-- <exercise xml:id="energy">
 <title>Energy</title>
 <statement>
 <p>
-Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1\times10^5</m> J/kg.
+Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1\times10^5</m>
+    J/kg.
 (Based on Problem 1.24 by White <xref ref="ref-white-5"/>.)
 </p>
 <ol>
@@ -1469,7 +1435,7 @@ Air at 1 atm and <m>20^\circ</m>C has an internal energy of approximately <m>2.1
 If the wind speed is 150 m/s at an altitude of 8 m, what is the total energy
 per unit mass of the air, relative to zero altitude?
 </p>
-<answer>
+<solution>
 <p>
 The total energy per unit mass of the fluid is
 <md>
@@ -1479,228 +1445,219 @@ The total energy per unit mass of the fluid is
 \approx2.2\times10^5\,\mbox{J/kg}.</mrow>
 </md>
 </p>
-</answer>
+</solution>
 </li>
 <li>
 <p>
 Are any of the contributions negligible?
 </p>
-<answer>
+<solution>
 <p>
 The three terms have orders of magnitude <m>10^5</m>, <m>10^4</m> and <m>10^2</m> J/kg,
 respectively. Thus the gravitational potential energy is relatively unimportant,
 compared to the contributions due to the internal energy and the kinetic energy.
 </p>
-</answer>
+</solution>
 </li>
 </ol>
 </statement>
 </exercise> -->
 
-<exercise xml:id="ex-fluid-pressure-uniform-velocity">
-<title>Pressure field in uniform flow</title>
-  <statement>
-    <p>
-      An ideal (incompressible and irrotational) fluid in a gravitational field with density <m>\rho</m> and acceleration
-      vector <m>\bg = -g \bk</m> (with <m>\bk</m> being the unit vector in the positive <m>z</m>-direction) has uniform velocity
-    <me>
-      \bu = (a + b t, \; t^3, \; e^t).
-    </me>
-      The pressure at the origin is fixed at <m>p_0</m>.
-    </p>
+    <exercise xml:id="ex-fluid-pressure-uniform-velocity">
+      <title>Pressure field in uniform flow</title>
+      <introduction>
+        <p> An ideal (incompressible and irrotational) fluid in a gravitational field with density <m>
+          \rho</m> and acceleration vector <m>\bg = -g \bk</m> (with <m>\bk</m> being the unit
+          vector in the positive <m>z</m>-direction) has uniform velocity <me>
+            \bu = (a + b t, \; t^3, \; e^t).
+          </me> The pressure at the origin
+          is fixed at <m>
+            p_0</m>. </p>
+      </introduction>
 
-    <ol marker="a">
-      <li>
-        <p>
-          Using the Euler equations in <xref ref="def-euler"/>, find the pressure field in terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>.
-        </p>
-        <answer>
-        <p>
-          The fluid has a uniform velocity, which means that all components of <m>\nabla\bu</m>
-           vanish. The Euler equation simplifies to
+      <task>
+        <statement>
+          <p> Using the Euler equations in <xref ref="def-euler" />, find the pressure field in
+            terms of <m>x, y, z, t, a, b, g, \rho</m> and <m>p_0</m>. </p>
+        </statement>
+
+        <solution>
+          <p> The fluid has a uniform velocity, which means that all components of <m>\nabla\bu</m>
+            vanish. The Euler equation simplifies to <me>
+              \rho\pd{\bu}{t}=-\nabla p-\rho g \bk,
+            </me> where <me>
+            \pd{\bu}{t}=(b, \; 3t^2, \; e^t).
+            </me> Hence, the pressure
+            is given by solving the equation, <me>
+              \nabla p = -\rho \pd{\bu}{t} - \rho g \bk
+              = -\rho (\, b, \; 3t^2, \; e^t + g \,),
+            </me>
+            which is a vector equation. Splitting into components, we obtain <me>
+              \frac{\partial p}{\partial x} = -\rho b, \quad
+              \frac{\partial p}{\partial y} = -3\rho t^2, \quad
+              \frac{\partial p}{\partial z} = -\rho (e^t + g).
+            </me>
+            Solving sequentially, the first equation gives <me>
+              p = -\rho b x + f_1(y,z,t).
+            </me> Substituting into the
+            second equation, <me>
+              \frac{\partial f_1}{\partial y} = -3\rho t^2
+              \;\;\Rightarrow\;\;
+              f_1 = -3\rho t^2 y + f_2(z,t),
+            </me>
         <me>
-          \rho\pd{\bu}{t}=-\nabla p-\rho g \bk,
-        </me>
-        where
+            p = -\rho b x - 3\rho t^2 y + f_2(z,t).
+            </me> The third
+            equation then implies <me>
+              \frac{\partial f_2}{\partial z} = -\rho(e^t+g)
+              \;\;\Rightarrow\;\;
+              f_2 = -\rho(e^t+g)z + f_3(t),
+            </me>
         <me>
-          \pd{\bu}{t}=(b, \; 3t^2, \; e^t).
-        </me>
-        Hence, the pressure is given by solving the equation,
-        <me>
-          \nabla p = -\rho \pd{\bu}{t} - \rho g \bk
-          = -\rho (\, b, \; 3t^2, \; e^t + g \,),
-        </me>
-        which is a vector equation. Splitting into components, we obtain
-        <me>
-          \frac{\partial p}{\partial x} = -\rho b, \quad
-          \frac{\partial p}{\partial y} = -3\rho t^2, \quad
-          \frac{\partial p}{\partial z} = -\rho (e^t + g).
-        </me>
-        Solving sequentially, the first equation gives
-        <me>
-          p = -\rho b x + f_1(y,z,t).
-        </me>
-        Substituting into the second equation,
-        <me>
-          \frac{\partial f_1}{\partial y} = -3\rho t^2
-          \;\;\Rightarrow\;\;
-          f_1 = -3\rho t^2 y + f_2(z,t),
-        </me>
-        <me>
-          p = -\rho b x - 3\rho t^2 y + f_2(z,t).
-        </me>
-        The third equation then implies
-        <me>
-          \frac{\partial f_2}{\partial z} = -\rho(e^t+g)
-          \;\;\Rightarrow\;\;
-          f_2 = -\rho(e^t+g)z + f_3(t),
-        </me>
-        <me>
-          p = -\rho b x - 3\rho t^2 y - \rho(e^t+g)z + f_3(t).
-        </me>
-        Using <m>p = p_0</m> at the origin gives <m>f_3(t) = p_0</m> for all <m>t</m>. Hence
-        <me>
-          p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
-        </me>
-      </p>  
-      </answer>
-      </li>
-      <li>
-        <p>
-          Draw the contours of the pressure at a fixed time <m>t</m>, and hence describe the pressure field.
-        </p>
-        <answer>
-        <p>
-          The pressure is constant on planes normal to the vector
-          <m>(b, \; 3t^2, \; e^t + g)</m>, as illustrated below:
-        </p>
-        <figure xml:id="fig-pressure-contours">
-          <image source="ch-chapter03-pressure-contours.png"/>
-          <caption>Contours of the pressure field at fixed <m>t</m>.</caption>
+            p = -\rho b x - 3\rho t^2 y - \rho(e^t+g)z + f_3(t).
+            </me>
+            Using <m>p
+              = p_0</m> at the origin gives <m>f_3(t) = p_0</m> for all <m>t</m>. Hence <me>
+              p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
+            </me>
+          </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> Draw the contours of the pressure at a fixed time <m>t</m>, and hence describe the
+            pressure field. </p>
+        </statement>
+
+        <solution>
+          <p> The pressure is constant on planes normal to the vector <m>(b, \; 3t^2, \; e^t + g)</m>,
+            as illustrated below: </p>
+          <figure xml:id="fig-pressure-contours">
+            <caption>Contours of the pressure field at fixed <m>t</m>.</caption>
+            <image source="ch-chapter03-pressure-contours.png" />
+          </figure>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-piston-fluid-problem">
+      <title>Piston problem</title>
+      <statement>
+        <p> The piston shown in the diagram below is pushed with a force <m>F(t)</m> into a pipe of
+          length <m>L</m> and cross-sectional area <m>A</m> containing incompressible and
+          irrotational fluid of density <m>\rho</m>. </p>
+
+        <figure xml:id="fig-piston">
+          <caption>Schematic of piston and pipe system.</caption>
+          <image source="ch-chapter03-piston.png" />
         </figure>
-        </answer>
-      </li>
-    </ol>
-  </statement>
-</exercise>
 
-<exercise xml:id="ex-piston-fluid-problem">
-<title>Piston problem</title>
-  <statement>
-    <figure xml:id="fig-piston">
-      <image source="ch-chapter03-piston.png"/>
-      <caption>Schematic of piston and pipe system.</caption>
-    </figure>
-    <p>
-      The piston shown in the diagram below is pushed with a force <m>F(t)</m>
-      into a pipe of length <m>L</m> and cross-sectional area <m>A</m>
-      containing incompressible and irrotational fluid of density <m>\rho</m>.
-    </p>
-    <p>Assume that the pressure at the open end is held at atmospheric pressure, <m>p = p_\text{atm}</m>.</p>
+        <p>Assume that the pressure at the open end is held at atmospheric pressure, <m>p =
+          p_\text{atm}</m>.</p>
 
-    <p>
-      Assume the fluid moves as a rigid body and neglect friction and the mass of the piston. Using the Euler equations in <xref ref="def-euler"/>,
-      write down a differential equation governing the position, <m>X(t)</m>, of the piston
-      at time <m>t</m>. You may neglect gravity.
-    </p>
-  </statement>
+        <p> Assume the fluid moves as a rigid body and neglect friction and the mass of the piston.
+          Using the Euler equations in <xref ref="def-euler" />, write down a differential equation
+          governing the position, <m>X(t)</m>, of the piston at time <m>t</m>. You may neglect
+          gravity. </p>
+      </statement>
 
-  <answer>
-    <p>
-      We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
-      Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
-      hence the Euler equation reduces to
-      <me>
-        \rho\pd{\bu}{t}=-\nabla p,
-      </me>
-      where the velocity is uniformly <m>\bu = (\dot{X}(t), 0)</m>.</p>
+      <solution>
+        <p> We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
+          Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
+          hence the Euler equation reduces to <me>
+            \rho\pd{\bu}{t}=-\nabla p,
+          </me> where the velocity is uniformly <m>\bu
+          =
+            (\dot{X}(t), 0)</m>.</p>
 
-      <p>Solving for <m>p</m> and using the fact that <m>p</m> is atmospheric pressure at <m>x = L</m>, we have
-      <me>
-        p(x,t) = \rho\dd{^2 X}{t^2}(L-x)+p_\text{atm}.
-      </me>
-    </p>
-
-      <p>At the piston side, the pressure is equal to 
-      <me>
-        \frac{F}{A} + p_\text{atm},
-      </me>
-      (recall pressure is force per unit area, therefore the piston force must be divided by <m>A</m>). Then 
-      <me>
-        \frac{F+Ap_{atm}}{A} = \rho\dd{^2X}{t^2}(L-X)+p_{atm}
-        \quad\Rightarrow\quad
-        \dd{^2X}{t^2} = \frac{F}{A\rho(L-X)}.
-      </me>
-    </p>
-  </answer>
-</exercise>
-
-<exercise xml:id="ex-vorticity-equation">
-  <title>The vorticity equation</title>
-  <statement>
-    <p>
-      Consider an incompressible fluid, with constant density 
-      <m>\rho</m>, subject to a conservative body force 
-      (i.e. <m>{\bg} = -\nabla \chi</m> for some potential function 
-      <m>\chi</m>).
-    </p>
-    <ol>
-      <li>
-        <p>
-          Starting from the Euler equations, show that the 
-         vorticity <m>\bomega = \nabla \times {\bu}</m> satisfies
-          <me>
-          \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bu}.
+        <p>Solving for <m>p</m> and using the fact that <m>p</m> is atmospheric pressure at <m>x = L</m>,
+          we have <me>
+            p(x,t) = \rho\dd{^2 X}{t^2}(L-x)+p_\text{atm}.
           </me>
-          Note that, in this question, you are expected to do a long-form calculation.
-          The method given in the notes uses an alternative expression for the momentum equation
-          combined with a vector identity to get the same result with less effort.
         </p>
-        <answer>
-        <p>
-          The Euler equation reads:
-          <me>
-            \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p - \rho\nabla \chi.
+
+        <p>At the piston side, the pressure is equal to <me>
+            \frac{F}{A} + p_\text{atm},
+          </me> (recall pressure is force per
+          unit area, therefore the piston force must be divided by <m>A</m>). Then <me>
+          \frac{F+Ap_{atm}}{A} = \rho\dd{^2X}{t^2}(L-X)+p_{atm}
+            \quad\Rightarrow\quad
+            \dd{^2X}{t^2} = \frac{F}{A\rho(L-X)}.
           </me>
-          Since the curl of a gradient is zero, <m>\rho</m> is constant and we can commute derivatives,
-          taking the curl of both sides gives
-          <me>
-            \rho\left(\pd{\bomega}{t} + \nabla \times(\bu \cdot \nabla)\bu\right) = 0.
-          </me>
-          We have
-          <md>
-            <mrow>&amp; \nabla \times(\bu \cdot \nabla)\bu,</mrow>
-            <mrow>=&amp;\begin{vmatrix}
-              \bi &amp; \bj &amp; \bk \\
-              \pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
-              \bu \cdot \nabla u &amp; \bu \cdot \nabla v &amp; \bu \cdot \nabla w
-              \end{vmatrix},</mrow>
-            <mrow>=&amp;\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla w-\pd{\bu}{z}\cdot\nabla v\right)</mrow>
-            <mrow>&amp;+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
-            <mrow>&amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
-            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
-            <mrow>&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
-            <mrow>&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
-            <mrow>&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
-            <mrow>&amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
-            <mrow>&amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
-            <mrow>&amp;+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
-            <mrow>&amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
-            <mrow>&amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
-            <mrow>&amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
-            <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
-          </md>
-          where the final equality follows from incompressibility. Hence,
-          <me>
-          \pd{\bomega}{t} + \bu\cdot\nabla\bomega - \bomega\cdot\nabla\bu = 0
-          \quad\Rightarrow\quad
-          \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
-          </me>
-          as required.
         </p>
-        <!--<p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-vorticity-equation">
+      <title>The vorticity equation</title>
+      <introduction>
+        <p> Consider an incompressible fluid, with constant density <m>\rho</m>, subject to a
+          conservative body force (i.e. <m>{\bg} = -\nabla \chi</m> for some potential function <m>
+          \chi</m>). </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p> Starting from the Euler equations, show that the vorticity <m>\bomega = \nabla \times
+            {\bu}</m> satisfies <me>
+              \frac{D \bomega}{Dt} = (\bomega \cdot \nabla){\bu}.
+            </me>
+            Note that, in this question, you are expected to do a long-form calculation. The method
+            given in the notes uses an alternative expression for the momentum equation combined
+            with a vector identity to get the same result with less effort. </p>
+        </statement>
+        <solution>
+          <p> The Euler equation reads: <me>
+              \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p - \rho\nabla \chi.
+            </me>
+            Since the curl of a gradient is zero, <m>\rho</m> is constant and we can commute
+            derivatives, taking the curl of both sides gives <me>
+              \rho\left(\pd{\bomega}{t} + \nabla \times(\bu \cdot \nabla)\bu\right) = 0.
+            </me>
+            We have <md>
+              <mrow>&amp; \nabla \times(\bu \cdot \nabla)\bu,</mrow>
+              <mrow>=&amp;\begin{vmatrix}
+                \bi &amp; \bj &amp; \bk \\
+                \pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
+                \bu \cdot \nabla u &amp; \bu \cdot \nabla v &amp; \bu \cdot \nabla w
+                \end{vmatrix},</mrow>
+              <mrow>=&amp;\bi\left(\bu\cdot\nabla\left(\pd{w}{y}-\pd{v}{z}\right)+\pd{\bu}{y}\cdot\nabla
+            w-\pd{\bu}{z}\cdot\nabla v\right)</mrow>
+              <mrow>&amp;+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla
+            u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
+              <mrow>&amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla
+            v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
+              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
+              <mrow>
+            &amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
+              <mrow>
+            &amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
+              <mrow>
+            &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
+              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
+              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
+            </md> where
+            the final equality follows from incompressibility. Hence, <me>
+              \pd{\bomega}{t} + \bu\cdot\nabla\bomega - \bomega\cdot\nabla\bu = 0
+            \quad\Rightarrow\quad
+              \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,
+            </me>
+            as required. </p>
+          <!--<p>
           Alternatively, we can use indicial notation. The <m>i</m>-th component of
           <m>\nabla \times(\bu \cdot \nabla)\bu</m> is:
                   <md>
@@ -1713,134 +1670,116 @@ compared to the contributions due to the internal energy and the kinetic energy.
               +\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_i}{x_l},</mrow>
           </md>
         </p>-->
-      </answer>
-      </li>
-      <li>
-        <p>
-          Deduce that, in two-dimensional incompressible flow, 
-          <m>\omega</m> is conserved following the flow.
-        </p>
-        <answer>
-          <p>
-            If the flow is the <m>(x,y)</m>-plane, we have <m>w=0</m> and all <m>z</m>-derivatives
-            are zero. Hence the only non-zero component of the vorticity is the <m>z</m>-component,
-            <m>\omega_z=\partial v/\partial x-\partial u/\partial y</m>. Thus
-            <me>
-              \bomega\cdot\nabla\bu=\omega_z\pd{\bu}{z}=0.
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> Deduce that, in two-dimensional incompressible flow, <m>\omega</m> is conserved
+            following the flow. </p>
+        </statement>
+
+        <solution>
+          <p> If the flow is the <m>(x,y)</m>-plane, we have <m>w=0</m> and all <m>z</m>-derivatives
+            are zero. Hence the only non-zero component of the vorticity is the <m>z</m>-component, <m>\omega_z=\partial
+            v/\partial x-\partial u/\partial y</m>. Thus <me>
+            \bomega\cdot\nabla\bu=\omega_z\pd{\bu}{z}=0.
+            </me> Hence <me>
+            \DD{\bomega}{t} = 0,
+            </me> meaning that <m>\bomega</m> is
+            conserved following the flow. </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-bernoulli-streamline">
+      <title>Using streamlines: The clepsydra</title>
+      <introduction>
+        <p> One of the earliest means for measuring the passage of time, invented by the ancient
+          Egyptians, was the <term>clepsydra</term> (or ‘water thief’): a large jar with a hole in
+          its base is filled with water. The shape of the jar was such that the interval of time
+          taken for the water surface to pass two equally-spaced markers on the side of the jar is
+          constant. </p>
+
+        <figure xml:id="fig-clepsydra">
+          <caption>Clepsyndra</caption>
+          <image source="clepsydra.png" width="50%">
+            <shortdescription>clepsyndra</shortdescription>
+          </image>
+        </figure>
+
+        <p> In this question you will determine the shape of jar required to achieve this. In
+          particular, we denote the (axisymmetric) jar radius a height <m>z</m> above the hole by <m>r
+          = a(z)</m>. The radius of the hole, <m>a_h \ne a(0)</m>, in general. </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>Explain why the curve <m>r = a(z)</m> is a streamline.</p>
+        </statement>
+        <solution>
+          <p> The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>, so that
+            no fluid leaves or enters the jar through its sides. Thus, <me>
+              \bu \cdot \bn = u_r - u_z \pd{a}{z} = 0.
+            </me> This is
+            precisely the condition for <m>r = a(z)</m> to be a streamline. </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> If the surface of the water lies at <m>z = h(t)</m>, use an appropriate form of
+            Bernoulli’s principle to calculate the speed of liquid, <m>u</m>, leaving the jar at <m>z
+            = 0</m>. </p>
+          <p> [You may assume that the desired surface speed <m>u_S = |\dot{h}| \ll u</m>, so that
+            the flow is approximately steady and that the fluid pressure is atmospheric at <m>z = 0</m>
+            .] </p>
+        </statement>
+
+        <solution>
+          <p> We apply Bernoulli's equation to equate the energy at a point at the edge of the free
+            surface at <m>z = h(t)</m> and the fluid leaving the hole at <m>z = 0</m>. At the free
+            surface, the pressure is atmospheric, <m>p = p_{atm}</m>, and the speed is <m>
+            u_S\sqrt{1+a^{'2}}</m>. At the hole, the pressure is also atmospheric, <m>p = p_{atm}</m>,
+            and the velocity is <m>u</m>. Thus, Bernoulli's equation for the streamline joining the
+            two points gives <me>
+              \frac{p_{atm}}{\rho} + \frac12 u_S^2(1+a^{'2}) + gh = \frac{p_{atm}}{\rho} + \frac12
+            u^2.
             </me>
-            Hence
-            <me>
-              \DD{\bomega}{t} = 0,
+            Assuming that <m>u_S \ll u</m>, this simplifies to <me>
+              gh = \frac12 u^2.
             </me>
-            meaning that <m>\bomega</m> is conserved following the flow.
           </p>
-        </answer>
-      </li>
-    </ol>
-  </statement>
-</exercise>
+        </solution>
+      </task>
 
-<exercise xml:id="ex-bernoulli-streamline">
-  <title>Using streamlines: The clepsydra</title>
-  <statement>
-  <p>
-    One of the earliest means for measuring the passage of time, invented by the ancient
-    Egyptians, was the <term>clepsydra</term> (or ‘water thief’): a large jar with a hole in its base is
-    filled with water. The shape of the jar was such that the interval of time taken for the
-    water surface to pass two equally-spaced markers on the side of the jar is constant.
-  </p>
+      <task>
+        <statement>
+          <p> Use the principle of conservation of mass to link <m>u_S</m>, <m>u</m>, <m>a_h</m> and <m>
+            a(h(t))</m>; thereby determine the correct shape for a clepsydra. </p>
+        </statement>
 
-  <p>
-    <figure xml:id="fig-clepsydra">
-      <caption>Clepsyndra</caption>
-      <image source="clepsydra.png" width="50%">
-        <shortdescription>clepsyndra</shortdescription>
-      </image>
-    </figure>
-  </p>
+        <solution>
+          <p> The volume flux out of the hole is <m>\pi a_h^2 u</m>, while the rate of decrease of
+            the volume of fluid in the jar is <m>\pi a(h(t))^2 u_S</m>. Conservation of mass
+            therefore gives <me>
+              \pi a^2 u_S = \pi a_h^2 u,
+            </me> or <me>
+              u_S = \frac{a_h^2}{a^2}u.
+            </me> Using the result from part
+            (b) to eliminate <m>u</m> gives <me>
+              u_S = \frac{a_h^2}{a^2}\sqrt{2gh}.
+            </me> We require <m>u_S</m>
+            to be independent of time so that equally spaced intervals are traversed in equal times.
+            Hence, <me>
+              a=\left(\frac{a_h^2\sqrt{2g}}{u_S}\right)^{1/2} h^{1/4}.
+            </me>
+            The terms in the brackets are constant, so we have that the radius of the jar must vary
+            as the fourth root of the height. </p>
+        </solution>
+      </task>
+    </exercise>
 
-  <p>
-    In this question you will determine the shape of jar required to achieve this.
-    In particular, we denote the (axisymmetric) jar radius a height <m>z</m> above the hole by <m>r = a(z)</m>.
-    The radius of the hole, <m>a_h \ne a(0)</m>, in general.
-  </p>
-  <ol marker="(a)">
-    <li>
-      <p>Explain why the curve <m>r = a(z)</m> is a streamline.</p>
-      <answer>
-      <p>
-        The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>,
-        so that no fluid leaves or enters the jar through its sides. Thus,
-        <me>
-          \bu \cdot \bn = u_r - u_z \pd{a}{z} = 0.
-        </me>
-        This is precisely the condition for <m>r = a(z)</m> to be a streamline.
-      </p>
-    </answer>
-    </li>
-    <li>
-      <p>
-        If the surface of the water lies at <m>z = h(t)</m>, use an appropriate form of
-        Bernoulli’s principle to calculate the speed of liquid, <m>u</m>, leaving the jar at <m>z = 0</m>.
-      </p>
-      <p>
-        [You may assume that the desired surface speed <m>u_S = |\dot{h}| \ll u</m>, so that the flow is
-        approximately steady and that the fluid pressure is atmospheric at <m>z = 0</m>.]
-      </p>
-      <answer>
-        <p>
-          We apply Bernoulli's equation to equate the energy at a point at the edge of the free surface
-          at <m>z = h(t)</m> and the fluid leaving the hole at <m>z = 0</m>.
-          At the free surface, the pressure is atmospheric, <m>p = p_{atm}</m>, and the speed is
-          <m>u_S\sqrt{1+a^{'2}}</m>.
-          At the hole, the pressure is also atmospheric, <m>p = p_{atm}</m>, and the velocity is <m>u</m>.
-          Thus, Bernoulli's equation for the streamline joining the two points gives
-          <me>
-            \frac{p_{atm}}{\rho} + \frac12 u_S^2(1+a^{'2}) + gh = \frac{p_{atm}}{\rho} + \frac12 u^2.
-          </me>
-          Assuming that <m>u_S \ll u</m>, this simplifies to
-          <me>
-            gh = \frac12 u^2.
-          </me>
-        </p>
-      </answer>
-    </li>
-    <li>
-      <p>
-        Use the principle of conservation of mass to link <m>u_S</m>, <m>u</m>, <m>a_h</m>
-        and <m>a(h(t))</m>;
-        thereby determine the correct shape for a clepsydra.
-      </p>
-      <answer>
-        <p>
-          The volume flux out of the hole is <m>\pi a_h^2 u</m>, while the rate of decrease of
-          the volume of fluid in the jar is <m>\pi a(h(t))^2 u_S</m>. Conservation of mass
-          therefore gives
-          <me>
-            \pi a^2 u_S = \pi a_h^2 u,
-          </me>
-          or
-          <me>
-            u_S = \frac{a_h^2}{a^2}u.
-          </me>
-          Using the result from part (b) to eliminate <m>u</m> gives
-          <me>
-            u_S = \frac{a_h^2}{a^2}\sqrt{2gh}.
-          </me>
-          We require <m>u_S</m> to be independent of time so that equally spaced intervals are
-          traversed in equal times. Hence,
-          <me>
-            a=\left(\frac{a_h^2\sqrt{2g}}{u_S}\right)^{1/2} h^{1/4}.
-          </me>
-          The terms in the brackets are constant, so we have that
-          the radius of the jar must vary as the fourth root of the height.
-        </p>
-      </answer>
-    </li>
-  </ol>
-  </statement>
-</exercise>
-
-</exercises>
+  </exercises>
 
 </chapter>
