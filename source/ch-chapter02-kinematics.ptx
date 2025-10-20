@@ -5,15 +5,18 @@
 
   <introduction>
 
-    <p>
-      Fluid <em>kinematics</em> refers to the study of fluid motions without considering the associated forces (or energies) that cause such a fluid to move. In a nutshell, it relates to studying e.g. the general velocity and acceleration fields of a fluid, visualising the fluid trajectories, and so forth. 
-    </p>
+    <p> Fluid <em>kinematics</em> refers to the study of fluid motions without considering the
+      associated forces (or energies) that cause such a fluid to move. In a nutshell, it relates to
+      studying e.g. the general velocity and acceleration fields of a fluid, visualising the fluid
+      trajectories, and so forth. </p>
 
-     <figure xml:id="fig-euler-vid">
-       <caption>Eulerian description of flow from the <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" visual="NCFMF">NCFMF video</url>.</caption>
-        <!-- <image source="01_euler_trim.gif" width="70%"/>  -->
-        <image source="01_euler_trim.png" width="70%"/> 
-      </figure>
+    <figure xml:id="fig-euler-vid">
+      <caption>Eulerian description of flow from the <url
+          href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics"
+          visual="NCFMF">NCFMF video</url>.</caption>
+      <!-- <image source="01_euler_trim.gif" width="70%"/>  -->
+      <image source="01_euler_trim.png" width="70%" />
+    </figure>
 
     <p>
       There are some unintuitive challenges when it comes to defining even the most basic quantities
@@ -23,51 +26,57 @@
       at time <m>t = 0</m>. One can imagine that the entire column of fluid will fall under the
       effect of gravity.</p>
 
-      <figure xml:id="kinematic-tube01">
-        <caption>(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the effect of gravity with uniform acceleration everywhere.</caption>
-      <image source="ch-chapter01-kinematics-tube01.png" width="80%"/>
-      </figure>
+    <figure xml:id="kinematic-tube01">
+      <caption>(a) Tube filled with fluid with a plate to be removed; (b) fluid falls under the
+        effect of gravity with uniform acceleration everywhere.</caption>
+      <image source="ch-chapter01-kinematics-tube01.png" width="80%" />
+    </figure>
 
-    <p>Each particle within the fluid is accelerated downwards at a constant rate
-      (gravity). Therefore the velocity of the fluid is given by <m>\bu = (0, 0, -U(t)).</m>
-      In this case, we imagine that acceleration can be defined simply as the partial derivative, in time, of the velocity field, or 
-      <me>\ba
-      = \pd{\bu}{t} = (0, 0, -\dot{U}(t)) = (0, 0, -g),
-    </me>
-    where we have used the over-dot notation for a derivative in time. 
-  </p>
+    <p>Each particle within the fluid is accelerated downwards at a constant rate (gravity).
+      Therefore the velocity of the fluid is given by <m>\bu = (0, 0, -U(t)).</m> In this case, we
+      imagine that acceleration can be defined simply as the partial derivative, in time, of the
+      velocity field, or <me>\ba
+        = \pd{\bu}{t} = (0, 0, -\dot{U}(t)) = (0, 0, -g),
+      </me> where we have used
+      the over-dot notation for a derivative in time. </p>
 
     <p>
       However, consider now the second thought experiment of fluid being pumped through the vessel
-      shown in the figure below. The fluid has reached a steady-state (so the streamlines of the flow, if you can imagine them, are constant and travelling from left-to-right).
+      shown in the figure below. The fluid has reached a steady-state (so the streamlines of the
+      flow, if you can imagine them, are constant and travelling from left-to-right).
     </p>
 
     <figure xml:id="kinematic-tube02">
-      <caption>Fluid pumped through a tube with variable cross-sectional area, <m>A_1, A_2</m> and corresponding velocities <m>U_1, U_2</m>.</caption>
-      <image source="ch-chapter01-kinematics-tube02.png" width="80%"/>
+      <caption>Fluid pumped through a tube with variable cross-sectional area, <m>A_1, A_2</m> and
+        corresponding velocities <m>U_1, U_2</m>.</caption>
+      <image source="ch-chapter01-kinematics-tube02.png" width="80%" />
     </figure>
 
     <p> Upstream of the bottleneck, the volume flowrate is equal to the velocity times area, or <me>
       \textrm{Upstream flow rate (area times velocity)} = A_1 U_1.
-    </me>
-     This is the amount of fluid that is flowing through a cross section of the pipe
-      upstream. Similarly, we have 
-     <me>
-      \textrm{Downstream flow rate (area times velocity)} = A_2 U_2.
-    </me></p>
-    
-    <p>
-      However, since
-      mass must be conserved, that fact that there is a smaller cross-sectional area downstream must
-      mean that the velocity is higher downstream. Therefore, <m>U_2 > U_1</m>, and to achieve this, the fluid must therefore have been accelerated somewhere within the channel.</p>
+      </me> This is the
+      amount of fluid that is flowing through a cross section of the pipe upstream. Similarly, we
+      have <me>
+        \textrm{Downstream flow rate (area times velocity)} = A_2 U_2.
+      </me></p>
 
-    <p>
-      However, a thought to the situation might convince you that the velocity field in the channel is time-independent: it only changes as a function of its position and is therefore of the form <m>\bu = \bu(\bx)</m>. Indeed, at every fixed point in the channel, the velocity <em>at that point</em> is not changing in time. Therefore, if we use our previous definition that <m>\ba = \dot{\bu}</m> we see that the acceleration would be zero everywhere!
-    </p>
+    <p> However, since mass must be conserved, that fact that there is a smaller cross-sectional
+      area downstream must mean that the velocity is higher downstream. Therefore, <m>U_2 > U_1</m>,
+      and to achieve this, the fluid must therefore have been accelerated somewhere within the
+      channel.</p>
 
-    <p>
-      The crux of the issue, and the difference between the two thought experiments, is that velocity is both a function of space and time, i.e. <m>\bu = \bu(\bx, t)</m>. The change in velocity (acceleration) can therefore derive from changes in <m>\bu</m> at fixed space and variable time; but also due to changes in <m>\bu</m> at fixed time and variable space. Disentangling this leads us to define the nature of Eulerian and Lagrangian coordinates, presented next.
-    </p>
+    <p> However, a thought to the situation might convince you that the velocity field in the
+      channel is time-independent: it only changes as a function of its position and is therefore of
+      the form <m>\bu = \bu(\bx)</m>. Indeed, at every fixed point in the channel, the velocity <em>at
+      that point</em> is not changing in time. Therefore, if we use our previous definition that <m>\ba
+      = \dot{\bu}</m> we see that the acceleration would be zero everywhere! </p>
+
+    <p> The crux of the issue, and the difference between the two thought experiments, is that
+      velocity is both a function of space and time, i.e. <m>\bu = \bu(\bx, t)</m>. The change in
+      velocity (acceleration) can therefore derive from changes in <m>\bu</m> at fixed space and
+      variable time; but also due to changes in <m>\bu</m> at fixed time and variable space.
+      Disentangling this leads us to define the nature of Eulerian and Lagrangian coordinates,
+      presented next. </p>
   </introduction>
 
 
@@ -83,57 +92,57 @@
         measurements of the water temperature. </p>
 
 
-        <figure>
-          <caption>(a) The Eulerian interpretation; (b) the Lagrangian interpretation.</caption>
+      <figure>
+        <caption>(a) The Eulerian interpretation; (b) the Lagrangian interpretation.</caption>
         <image source="ch-chapter01-kinematics-euler-vs-lagrange.png" width="100%">
           <shortdescription>(a) The Eulerian interpretation; (b) the Lagrangian interpretation.</shortdescription>
         </image>
-        </figure>
+      </figure>
 
 
       <p> Alternatively, we can imagine tracking of a single fixed particle (or a fluid element)
         within the flow. The particle begins at some position. Let us define a label to describe the
         particle's initial position. For example, if the particle's position is given by <me>
           (x, y, z) = (x_1(t), y_1(t), z_1(t)),
-        </me> we can define the corresponding <em>Lagrangian
-        label</em> as <me>
+        </me> we can define the
+        corresponding <em>Lagrangian
+          label</em> as <me>
           \bX = (X, Y, Z) = (x_1(0), y_1(0), z_1(0)).
         </me> We then ask for the
         corresponding measurement of the fluid quantity that corresponds to the label <m>\bX</m>.
         For example, this is equivalent to tagging a free-floating buoy in the ocean with the label <m>
         \bX</m>, then measuring the temperature of the water as the buoy drifts in the ocean. This
-        Lagrangian temperature could be written <m>\mathcal{T}(\bX, t),</m> where <m>\bX</m> is simply a
-        fixed quantity for the particular buoy. </p>
+        Lagrangian temperature could be written <m>\mathcal{T}(\bX, t),</m> where <m>\bX</m> is
+        simply a fixed quantity for the particular buoy. </p>
 
       <p> We are now in a position to define the Eulerian velocity field of a fluid.</p>
 
-        <definition xml:id="def-velocity">
-          <statement>
-            <p> The Eulerian velocity <m>\bu(\bx,t)</m> is the velocity of the fluid at the
-              point with spatial coordinates <m>\bx</m> at time <m>t</m>. Note that, in physical terms
-              this velocity is the average velocity at the time <m>t</m> of the fluid particles
-              (e.g. molecules, ions) in a small box centred on the point <m>\bx</m>. See also <xref
-                ref="rem-continuum"/> for a discussion of the continuum assumption.
-            </p>
-          </statement>
-        </definition>
+      <definition xml:id="def-velocity">
+        <statement>
+          <p> The Eulerian velocity <m>\bu(\bx,t)</m> is the velocity of the fluid at the point with
+            spatial coordinates <m>\bx</m> at time <m>t</m>. Note that, in physical terms this
+            velocity is the average velocity at the time <m>t</m> of the fluid particles (e.g.
+            molecules, ions) in a small box centred on the point <m>\bx</m>. See also <xref
+              ref="rem-continuum" /> for a discussion of the continuum assumption. </p>
+        </statement>
+      </definition>
 
       <p> It will be useful to introduce the concept of steady flow.</p>
-        <definition xml:id="def-steady-flow">
-          <statement>
-            <p> A velocity field <m>\bu</m> is defined as steady if it can be written <m>\bu=\bu(\bx)</m>.
-            </p>
-          </statement>
-        </definition>
-      
-        <p>Note that steady flow does not mean that the fluid particles are not moving.
-        It simply means that at a fixed point in space, the Eulerian velocity does not change in time.
-        The Lagrangian velocity of a fluid particle will generally change in time, even in a steady flow.
+      <definition xml:id="def-steady-flow">
+        <statement>
+          <p> A velocity field <m>\bu</m> is defined as steady if it can be written <m>\bu=\bu(\bx)</m>
+            . </p>
+        </statement>
+      </definition>
+
+      <p>Note that steady flow does not mean that the fluid particles are not moving.
+        It simply means that at a fixed point in space, the Eulerian velocity does not change in
+        time.
+        The Lagrangian velocity of a fluid particle will generally change in time, even in a steady
+        flow.
       </p>
-      <p>
-        A simple example of the conversion between the Eulerian and Lagrangian reference frames is in
-        <xref ref="ex-eulerian-lagrangian"/>.
-      </p>
+      <p> A simple example of the conversion between the Eulerian and Lagrangian reference frames is
+        in <xref ref="ex-eulerian-lagrangian" />. </p>
 
     </introduction>
 
@@ -155,36 +164,38 @@
         label <m>\bX</m>, we obtain the current position of the particle associated with this label, <m>\bx(\bX,
         t)</m>, then obtain its property value. This we can write as the following: <me>
           F(\bX, t) \equiv f(\bx(\bX, t), t).
-        </me> Now, fixing <m>\bX</m> and changing <m>t</m> corresponds
-        to tracking the scalar property at a material point in the flow, or, equivalently, how <m>f</m> changes
-        as we move with the particle along the deforming fluid. </p>
+        </me> Now, fixing <m>\bX</m> and
+        changing <m>t</m> corresponds to tracking the scalar property at a material point in the
+        flow, or, equivalently, how <m>f</m> changes as we move with the particle along the
+        deforming fluid. </p>
 
       <p> There are thus two ways of considering time derivatives.</p>
 
-        <definition xml:id="def-eulerlag">
-          <statement>
-            <p> We use the normal partial derivative notation to refer to an <em>Eulerian time
-        derivative</em>, considered at a fixed point in space: <me>
-                \pd{}{t} \equiv \pd{}{t} \biggr\rvert_{\bx} = \text{rate of change with $\bx$ held
-        constant}.
-              </me>
-            </p>
-            <p> On the other hand, the <em>Lagrangian time derivative</em> is defined at a fixed
-              material point in the fluid. <me>
-                \DD{}{t} \equiv \pd{}{t} \biggr\rvert_{\bX} = \text{rate of change with $\bX$ held
-        constant}.
-              </me>
-        We often refer to the Lagrangian time derivative as the <em>convective derivative</em> or
-        the <em>material derivative</em>. </p>
-          </statement>
-        </definition>
+      <definition xml:id="def-eulerlag">
+        <statement>
+          <p> We use the normal partial derivative notation to refer to an <em>Eulerian time
+            derivative</em>, considered at a fixed point in space: <me>
+              \pd{}{t} \equiv \pd{}{t} \biggr\rvert_{\bx} = \text{rate of change with $\bx$ held
+            constant}.
+            </me>
+          </p>
+          <p> On the other hand, the <em>Lagrangian time derivative</em> is defined at a fixed
+            material point in the fluid. <me>
+              \DD{}{t} \equiv \pd{}{t} \biggr\rvert_{\bX} = \text{rate of change with $\bX$ held
+            constant}.
+            </me>
+            We often refer to the Lagrangian time derivative as the <em>convective derivative</em>
+            or the <em>material derivative</em>. </p>
+        </statement>
+      </definition>
 
       <remark>
         <p>
           The reason why the above derivatives are introduced is because, for the purpose of much of
           fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However,
           for the purpose of deriving many governing equations, it turns out to be much easier to
-          work with Lagrangian variables. This is because physical forces act on physical particles, or
+          work with Lagrangian variables. This is because physical forces act on physical particles,
+          or
           material elements, of the fluid.
         </p>
       </remark>
@@ -192,328 +203,309 @@
       <p> The natural question is how the two derivatives relate to one another. This is given by
         the following theorem.</p>
 
-        <theorem xml:id="thm-material-derivative">
-          <title>The material/convective derivative</title>
-          <statement>
-            <p> The <em>material or convective derivative</em> can be defined in terms of Eulerian derivative in the
-        following way: 
-        <men xml:id="eqn-DDt">
-                \DD{}{t} = \pd{}{t} + (\bu \cdot \nabla).
-              </men>
-            </p>
-          </statement>
-            <proof>
-              <p> This is a result of the chain rule. For a scalar function <m>f = f(\bx, t)</m>, we
-        have the fact that <md>
-                  <mrow>\DD{f}{t} &amp;= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f </mrow>
-                  <mrow>&amp;= \pd{f}{t} + \bu \cdot \nabla f. </mrow>
-                </md>
-              </p>
-            </proof>
-        </theorem>
+      <theorem xml:id="thm-material-derivative">
+        <title>The material/convective derivative</title>
+        <statement>
+          <p> The <em>material or convective derivative</em> can be defined in terms of Eulerian
+            derivative in the following way: <men xml:id="eqn-DDt">
+              \DD{}{t} = \pd{}{t} + (\bu \cdot \nabla).
+            </men>
+          </p>
+        </statement>
+        <proof>
+          <p> This is a result of the chain rule. For a scalar function <m>f = f(\bx, t)</m>, we
+            have the fact that <md>
+              <mrow>\DD{f}{t} &amp;= \DD{t}{t} \pd{f}{t} + \DD{x}{t}\cdot \nabla f </mrow>
+              <mrow>&amp;= \pd{f}{t} + \bu \cdot \nabla f. </mrow>
+            </md>
+          </p>
+        </proof>
+      </theorem>
 
-      <p>
-      The proof to <xref ref="thm-material-derivative"/> seems to use magic vector operations! In <xref ref="ex-material-derivative"/>, we ask you to check this more carefully by expanding the vector operations explicitly.
-      </p>
+      <p> The proof to <xref ref="thm-material-derivative" /> seems to use magic vector operations!
+        In <xref ref="ex-material-derivative" />, we ask you to check this more carefully by
+        expanding the vector operations explicitly. </p>
 
       <p> We can now apply the above result to the question of how to calculate the acceleration
         within the fluid (more specifically, we are enquiring about the acceleration of a volume or
         particle within the fluid). The acceleration is given by the convective or material
         derivative of the velocity: <men xml:id="eqn-accel">
           \ba \equiv \DD{\bu}{t} = \pd{\bu}{t} + (\bu \cdot \nabla) \bu.
-        </men>
-      You will practice using this formula in <xref ref="ex-eulerian-lagrangian2"/> of the problem set.
-      </p>
+        </men> You
+        will practice using this formula in <xref ref="ex-eulerian-lagrangian2" /> of the problem
+        set. </p>
 
       <remark xml:id="remark-vector-gradient">
         <title>Vector gradient</title>
-        <p>
-          In the formula for the acceleration in <xref ref="eqn-accel"/>, the quantity 
-          <me>
+        <p> In the formula for the acceleration in <xref ref="eqn-accel" />, the quantity <me>
             \nabla \bu
-          </me>
-         appears. This is a tensor (matrix). One mustn't be too intimidated as it is just a convenient notation.</p>
-         
-         <p>It is worth considering what this must be by considering each individual element of the acceleration. The acceleration is calculated simply by taking the velocity,
-         <me>
-          \bu = (u, v, w) = (u_1, u_2, u_3). 
-         </me>
-         and working out the material derivative for each individual component. So we have
-         <men xml:id="eqn-material-deriv-ui">
-          \DD{u_i}{t} = \pd{u_i}{t} + \bu \cdot \nabla u_i.
-         </men>
-         So the above gives each of the three components of <m>\DD{\bu}{t}</m>. 
+          </me> appears. This is a tensor (matrix). One mustn't be
+          too intimidated as it is just a convenient notation.</p>
+
+        <p>It is worth considering what this must be by considering each individual element of the
+          acceleration. The acceleration is calculated simply by taking the velocity, <me>
+            \bu = (u, v, w) = (u_1, u_2, u_3).
+          </me> and working out the
+          material derivative for each individual component. So we have <men
+            xml:id="eqn-material-deriv-ui">
+            \DD{u_i}{t} = \pd{u_i}{t} + \bu \cdot \nabla u_i.
+          </men> So the
+          above gives each of the three components of <m>\DD{\bu}{t}</m>. </p>
+
+        <p> You may prefer to see the above written in terms of the notation for <m>\bu = (u, v, w)</m>,
+          so it is <md>
+            <mrow>\DD{u}{t} \amp= u_t + (u u_x + v u_y + w u_z)</mrow>
+            <mrow>\DD{v}{t} \amp= v_t + (u v_x + v v_y + w v_z)</mrow>
+            <mrow>\DD{w}{t} \amp= w_t + (u w_x + v w_y + w w_z)</mrow>
+          </md>
         </p>
 
-        <p>
-          You may prefer to see the above written in terms of the notation for <m>\bu = (u, v, w)</m>, so it is
-        <md>
-          <mrow>\DD{u}{t} \amp= u_t + (u u_x + v u_y + w u_z)</mrow>
-          <mrow>\DD{v}{t} \amp= v_t + (u v_x + v v_y + w v_z)</mrow>
-          <mrow>\DD{w}{t} \amp= w_t + (u w_x + v w_y + w w_z)</mrow>
-        </md>          
-        </p>
-
-        <p>
-          You can also re-arrange the above in something closer to "matrix" form. So 
-          <me>
-            \DD{\bu}{t} = \pd{}{t}(u, v, w) + (u, v, w) \cdot \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix},
+        <p> You can also re-arrange the above in something closer to "matrix" form. So <me>
+          \DD{\bu}{t} = \pd{}{t}(u, v, w) + (u, v, w) \cdot \begin{pmatrix} \nabla u \\ \nabla v \\
+          \nabla w\end{pmatrix},
           </me>
-          and where the last quantity corresponds to 
-          <men xml:id="eqn-grad-bu">
-            \nabla \bu \equiv \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix} = 
-            \begin{pmatrix}
+          and where the last quantity corresponds to <men xml:id="eqn-grad-bu">
+            \nabla \bu \equiv \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix} =
+          \begin{pmatrix}
             u_x &amp; u_y &amp; u_z \\
             v_x &amp; v_y &amp; v_z \\
-            w_x &amp; w_y &amp; w_z 
+            w_x &amp; w_y &amp; w_z
             \end{pmatrix}.
           </men>
-          And hence the vector gradient can be defined as a matrix, where each row of the matrix is the gradient of the elements of the vector.
-        </p>
+          And hence the vector gradient can be defined as a matrix, where each row of the matrix is
+          the gradient of the elements of the vector. </p>
 
-        <p>
-          The author's opinionated note it is that it is easier simply to remember that the material derivative is applied via <xref ref="eqn-material-deriv-ui"/> then it is to try and untangle the multiplication of matrix via <xref ref="eqn-grad-bu"/>.
-        </p>
+        <p> The author's opinionated note it is that it is easier simply to remember that the
+          material derivative is applied via <xref ref="eqn-material-deriv-ui" /> then it is to try
+          and untangle the multiplication of matrix via <xref ref="eqn-grad-bu" />. </p>
 
       </remark>
     </subsection>
   </section>
 
   <section xml:id="sec-flowexamples">
-    <title>Examples and flow visualisation</title>
+    <title>Flow visualisation, fluxes, and forces</title>
 
     <introduction>
-    <p>There are different ways to visualise the dynamics of a fluid. Given the velocity, <m>\bu(\bx,
-      t)</m>, we can plot a vector field at each point in space, and at a fixed moment in time.
-      Little arrows are used to indicate the direction and the length of the arrow can be chosen to
-      represent the magnitude. Joining these up at a fixed moment in time into smooth curves gives the
-      <em>streamlines</em> of the flow. This is often the easiest type of visualisation to perform
-      mathematically, but the hardest experimentally.</p>
+      <p>There are different ways to visualise the dynamics of a fluid. Given the velocity, <m>\bu(\bx,
+        t)</m>, we can plot a vector field at each point in space, and at a fixed moment in time.
+        Little arrows are used to indicate the direction and the length of the arrow can be chosen
+        to represent the magnitude. Joining these up at a fixed moment in time into smooth curves
+        gives the <em>streamlines</em> of the flow. This is often the easiest type of visualisation
+        to perform mathematically, but the hardest experimentally.</p>
 
-    <p>Another representation of the flow is using <em>particle paths</em> or <em>pathlines</em>.
-      Given a point and time, the particle path is the trajectory that would result if a particle
-      were dropped into the flow at that chosen point and time. It is thus found by solving an
-      equation where at every point on the trajectory, the particle's velocity is the specified
-      velocity of the fluid.</p>
+      <p>Another representation of the flow is using <em>particle paths</em> or <em>pathlines</em>.
+        Given a point and time, the particle path is the trajectory that would result if a particle
+        were dropped into the flow at that chosen point and time. It is thus found by solving an
+        equation where at every point on the trajectory, the particle's velocity is the specified
+        velocity of the fluid.</p>
 
-    <p>A third representation is a <em>streakline</em>. If dye were continuously released into a
-      fluid from a fixed chosen point, the streakline at a given time is the line that would be
-      made by the dye. It is thus found by finding the current position of those particles whose
-      pathline has visited the chosen point at any past time. This is often the easiest type
-      of visualisation to perform experimentally, but the hardest to perform
-      mathematically.</p>
+      <p>A third representation is a <em>streakline</em>. If dye were continuously released into a
+        fluid from a fixed chosen point, the streakline at a given time is the line that would be
+        made by the dye. It is thus found by finding the current position of those particles whose
+        pathline has visited the chosen point at any past time. This is often the easiest type of
+        visualisation to perform experimentally, but the hardest to perform mathematically.</p>
 
-      <p>Note that in a steady flow, the streamlines, pathlines and streaklines all coincide. However,
-        in an unsteady flow, they are all different. In <xref ref="ex-video-flow-visualisation"/> you will study a video showing this concept.
-        </p>
-      </introduction>
+      <p>Note that in a steady flow, the streamlines, pathlines and streaklines all coincide.
+        However, in an unsteady flow, they are all different. In <xref
+          ref="ex-video-flow-visualisation" /> you will study a video showing this concept. </p>
+    </introduction>
 
-      <subsection>
-        <title>Definitions of streamlines, pathlines, streaklines</title>
-        
-        
-        
+    <subsection>
+      <title>Definitions of streamlines, pathlines, streaklines</title>
 
-    <p>
-      In the definition below, we define these concepts more concretely.
-    </p>
+
+      <p>
+        In the definition below, we define these concepts more concretely.
+      </p>
 
       <definition xml:id="def-streamline">
         <title>Particle streamlines</title>
         <statement>
-          
+
           <p>Consider a fixed time, <m>t = t_1</m>.</p>
 
           <p>Select an initial point, <m>\bx_1</m> at this time.</p>
 
-          <p>The <em>streamline</em>, <m>\bx = \bx(s)</m> through the above point is given by solving the parametric equation <me>
+          <p>The <em>streamline</em>, <m>\bx = \bx(s)</m> through the above point is given by
+            solving the parametric equation <me>
               \dd{\bx}{s} = \bu(\bx(s), t_1), \quad \text{with $\bx(s = 0) = \bx_1$,}
-            </me> 
-            where <m>s</m> is a parameter along the streamline. Choosing a variety of different initial points, <m>\bx_1</m>, and solving
-            the above equation gives a family of streamlines at time <m>t_1</m>.
-          </p>
+            </me>
+            where <m>s</m> is a parameter along the streamline. Choosing a variety of different
+            initial points, <m>\bx_1</m>, and solving the above equation gives a family of
+            streamlines at time <m>t_1</m>. </p>
         </statement>
-        </definition>
+      </definition>
 
       <p>Basically, given a velocity field, we freeze time.
-        The streamlines are those curves that are traced out by the velocity field in the "snapshot".</p>
+        The streamlines are those curves that are traced out by the velocity field in the
+        "snapshot".</p>
 
-          <definition xml:id="def-particle-path">
+      <definition xml:id="def-particle-path">
         <title>Pathline or particle path</title>
         <statement>
           <p>Consider now a particle that begins at the location <m>\bx_2</m> at time <m>t = 0</m>.</p>
 
-          <p>We consider the <em>partical path</em> or <em>pathline</em> of the particle, given by the curve <m>\bx = \bx(t)</m> and found by solving the equation
-            <me>
-            \dd{\bx}{t} = \bu(\bx(t), t), \quad \text{with $\bx(0) = \bx_2$.}
+          <p>We consider the <em>partical path</em> or <em>pathline</em> of the particle, given by
+            the curve <m>\bx = \bx(t)</m> and found by solving the equation <me>
+              \dd{\bx}{t} = \bu(\bx(t), t), \quad \text{with $\bx(0) = \bx_2$.}
             </me>
             Choosing a variety of initial points, <m>\bx_2</m>, yields a family of pathlines.</p>
         </statement>
       </definition>
 
-    <p>The pathline or particle path from an initial point is what we would physically expect if we were to dye the point with a colour and follow the dye colour as time increases.</p>
+      <p>The pathline or particle path from an initial point is what we would physically expect if
+        we were to dye the point with a colour and follow the dye colour as time increases.</p>
 
-          <definition xml:id="def-streakline">
+      <definition xml:id="def-streakline">
         <title>Streakline</title>
         <statement>
           <p>Consider now fixing a location <m>\bx_3</m>.</p>
-            <p>The <em>streakline</em> for a point <m>\bx_3</m> is given by solving the equation <me>
-              \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(t_3) = \bx_3$},
+          <p>The <em>streakline</em> for a point <m>\bx_3</m> is given by solving the equation <me>
+            \dd{\bx}{t} = \bu(\bx(t), t), \qquad \textrm{with $\bx(t_3) = \bx_3$},
             </me>
             for a variety of values of <m>t_3</m>. This gives the current position of all particles
             that have passed through the point <m>\bx_3</m> at any time <m>t_3</m> in the past. </p>
 
         </statement>
       </definition>
-          
-    <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>,
-            then the three above definitions coincide. </p>
 
-        <p>You will practice the theory of these concepts in <xref ref="ex-particle-paths-streamlines"/>
-          and do a worked example in <xref ref="ex-streamlines-pathlines-streaklines"/> of the problem set.
-        </p>
-      </subsection>
+      <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>, then
+        the three above definitions coincide. </p>
+
+      <p>You will practice the theory of these concepts in <xref ref="ex-particle-paths-streamlines" />
+        and do a worked example in <xref ref="ex-streamlines-pathlines-streaklines" /> of the
+        problem set. </p>
+    </subsection>
 
     <subsection xml:id="subsec-examples-streamlines">
       <title>Examples of streamlines, pathlines, and streaklines</title>
 
-    <p>
-      Let us practice these concepts.
-    </p>
-      
-    <example>
-      <title>Stagnation point flow</title>
-      
-    <statement>
-      <p> Consider a fluid described by the two-dimensional velocity field 
-        <me>
-          \bu(\bx, t) = (x, -y, 0).
-        </me>
-        Derive and plot the streamlines of the flow. Discuss what occurs with particle paths and streaklines.</p>
-    </statement>      
-
-    <solution>
-      <p> There are many online applications, such as <url
-          href="https://www.desmos.com/calculator/yhubcn7dij"
-          visual="https://www.desmos.com/calculator/yhubcn7dij">this one</url> that will allow you
-        plot a two-dimensional direction field. It is also good to do it yourself by hand. 
+      <p>
+        Let us practice these concepts.
       </p>
 
-      <figure>
-        <caption>An example of a direction field</caption>
-        <image
-          source="directionfieldexample.png" width="90%">
-          <shortdescription>direction field</shortdescription>
-        </image>
-      </figure>
+      <example>
+        <title>Stagnation point flow</title>
 
-      <p>The streamlines follow from <xref ref="def-streamline"/>. We seek to solve the equations
-        <md>
-          <mrow>\dd{x}{s} &amp;= x, </mrow>
-          <mrow>\dd{y}{s} &amp;= -y, </mrow>
-          <mrow>\dd{z}{s} &amp;= 0. </mrow>
-        </md> 
-      Solving thus gives <m>x = A \e^s, y = B\e^{-s}, z = C,</m> for constants <m>A, B, C</m>. </p>
+        <statement>
+          <p> Consider a fluid described by the two-dimensional velocity field <me>
+              \bu(\bx, t) = (x, -y, 0).
+            </me> Derive and plot the
+            streamlines of the flow. Discuss what occurs with particle paths and streaklines.</p>
+        </statement>
 
-      <p> You can put initial conditions to determine the constant and plot the trajectories for different values of <m>s</m>.</p>
-      
-      <p>However, in this case, it is easier to remove the time-like variable, <m>s</m>, entirely. Notice that 
-        <me>
-        xy = AB = \textrm{constant}.
-        </me> 
-      Therefore, the trajectories lie along hyperbolae. </p>
+        <solution>
+          <p> There are many online applications, such as <url
+              href="https://www.desmos.com/calculator/yhubcn7dij"
+              visual="https://www.desmos.com/calculator/yhubcn7dij">this one</url> that will allow
+            you plot a two-dimensional direction field. It is also good to do it yourself by hand. </p>
 
-      <p> Notice that in this case, the velocity field is time-independent, and therefore the
-        particle paths coincide with the streamlines and streaklines. </p>
+          <figure>
+            <caption>An example of a direction field</caption>
+            <image
+              source="directionfieldexample.png" width="90%">
+              <shortdescription>direction field</shortdescription>
+            </image>
+          </figure>
 
+          <p>The streamlines follow from <xref ref="def-streamline" />. We seek to solve the
+            equations <md>
+              <mrow>\dd{x}{s} &amp;= x, </mrow>
+              <mrow>\dd{y}{s} &amp;= -y, </mrow>
+              <mrow>\dd{z}{s} &amp;= 0. </mrow>
+            </md> Solving thus gives <m>x = A \e^s, y
+            = B\e^{-s}, z = C,</m> for constants <m>A, B, C</m>. </p>
 
-    <p>
-      For instance, the particle path through a particle at <m>\bx_2 = (1, 1, 0)</m> is given by (replacing <m>s</m> with <m>t</m>):
-      <me>
-        \bx(t) = (\e^t, \, \e^{-t}, \, 0).
-      </me>
-     Similarly, the <em>streakline</em> through the point <m>(1, 1, 0)</m> is precisely the set of points above.
-    </p>
-  </solution>
-    </example>
+          <p> You can put initial conditions to determine the constant and plot the trajectories for
+            different values of <m>s</m>.</p>
 
-    <example>
-      <title>Straight streamlines and circular pathlines</title>
+          <p>However, in this case, it is easier to remove the time-like variable, <m>s</m>,
+            entirely. Notice that <me>
+              xy = AB = \textrm{constant}.
+            </me> Therefore, the
+            trajectories lie along hyperbolae. </p>
 
-      <statement>
-        <p> Consider the unsteady flow given by <me>\bu(\bx, t) = (\cos t, \sin t, 0)</me>. Plot the
-          streamlines of the flow on the plane <m>z = 0</m>, and also the particle trajectories. What occurs with the streaklines?</p>
-      </statement>
-  
-   <answer>
-    <p>
-      In this case, the velocity field is changing in time. Consider firstly the concept of the streamline in <xref ref="def-streamline"/>.
-    </p>
-
-    <p>
-      We solve the governing equations for the streamlines <m>\bx = \bx(s)</m>, 
-      <me>
-        \dd{x}{s} = \cos t, \quad \dd{y}{s} = \sin t, \quad \dd{z}{s} = 0,
-      </me>
-      for fixed <m>t</m>. 
-    </p>
-
-    <p>
-      This gives 
-      <me>
-        x(s) = A + s \cos t, \quad y(s) = B + \sin t, \quad z(s) = C,
-      </me>
-    for constants <m>A, B, C</m>. Therefore the streamline are given by straight lines in the <m>(x, y)</m> plane, if <m>z = C</m> is fixed.
-    </p>
-
-    <p>
-      Consider instead the definition of particle paths via <xref ref="def-particle-path"/>. We seek to solve
-      <me>
-        \dd{x}{t} = \cos t, \quad \dd{y}{t} = \sin t, \quad \dd{z}{t} = 0,
-      </me>
-      yielding 
-      <me>
-       x(t) = A + \sin t, \quad y(t) = B - \cos t, \quad z(t) = C, 
-      </me>
-      for constants <m>A, B, C</m>. Therefore, we see that the particle paths are closed circles (in the <m>xy</m>-plane) of unit radius encircling the point <m>(A, B, 0)</m>.
-    </p>
-
-    <p>
-      The fact that the streamlines are straight lines while the particle paths are circular can be visualised in <xref ref="fig-streamlines-example-02"/>
-    </p>
-
-      <figure xml:id="fig-streamlines-example-02">
-        <caption>Streamlines and particle paths</caption>
-        <image source="streamlines_example02.png" width="50%">
-        <!-- <image source="streamlines_example02.gif"> -->
-          <shortdescription>Animation of streamlines</shortdescription>
-        </image>
-      </figure>
+          <p> Notice that in this case, the velocity field is time-independent, and therefore the
+            particle paths coincide with the streamlines and streaklines. </p>
 
 
-    <p>
-      In this case, considering the streakline via <xref ref="def-streakline"/>, we conclude that the streakline coincides with the particle path. Can you reason why this must be the case in this situation? What is necessary in order for this not to be true? 
-    </p>
-   </answer>
-    </example>
+          <p> For instance, the particle path through a particle at <m>\bx_2 = (1, 1, 0)</m> is
+            given by (replacing <m>s</m> with <m>t</m>): <me>
+              \bx(t) = (\e^t, \, \e^{-t}, \, 0).
+            </me> Similarly, the <em>
+            streakline</em> through the point <m>(1, 1, 0)</m> is precisely the set of points above. </p>
+        </solution>
+      </example>
 
-<example>
-  <title>An oscillating hose/plate</title>
+      <example>
+        <title>Straight streamlines and circular pathlines</title>
 
-  <statement>
-  <p>
-    Water flows out of an oscillating sprinkler head, held along the edge <m>y = 0</m>, such that the velocity field produced is given by 
-    <me>
-      \bu = [u_0 \sin[\omega(t - y/{v_0})], v_0],
-    </me>
-    where <m>u_0</m> and <m>v_0</m> are constants. 
-  </p>
+        <statement>
+          <p> Consider the unsteady flow given by <me>\bu(\bx, t) = (\cos t, \sin t, 0)</me>. Plot
+            the streamlines of the flow on the plane <m>z = 0</m>, and also the particle
+            trajectories. What occurs with the streaklines?</p>
+        </statement>
 
-  <p>
-    Determine the streamline that passes through the origin at <m>t = 0</m> and <m>t = \pi/(2\omega)</m>. 
-  </p>
+        <answer>
+          <p> In this case, the velocity field is changing in time. Consider firstly the concept of
+            the streamline in <xref ref="def-streamline" />. </p>
 
-  <!-- <answer>
+          <p> We solve the governing equations for the streamlines <m>\bx = \bx(s)</m>, <me>
+            \dd{x}{s} = \cos t, \quad \dd{y}{s} = \sin t, \quad \dd{z}{s} = 0,
+            </me>
+            for fixed <m>t</m>. </p>
+
+          <p> This gives <me>
+              x(s) = A + s \cos t, \quad y(s) = B + \sin t, \quad z(s) = C,
+            </me>
+            for constants <m>A, B, C</m>. Therefore the streamline are given by straight lines in
+            the <m>(x,
+              y)</m> plane, if <m>z = C</m> is fixed. </p>
+
+          <p> Consider instead the definition of particle paths via <xref ref="def-particle-path" />.
+            We seek to solve <me>
+              \dd{x}{t} = \cos t, \quad \dd{y}{t} = \sin t, \quad \dd{z}{t} = 0,
+            </me>
+            yielding <me>
+              x(t) = A + \sin t, \quad y(t) = B - \cos t, \quad z(t) = C,
+            </me>
+            for constants <m>A, B, C</m>. Therefore, we see that the particle paths are closed
+            circles (in the <m>xy</m>-plane) of unit radius encircling the point <m>(A, B, 0)</m>. </p>
+
+          <p> The fact that the streamlines are straight lines while the particle paths are circular
+            can be visualised in <xref ref="fig-streamlines-example-02" />
+          </p>
+
+          <figure xml:id="fig-streamlines-example-02">
+            <caption>Streamlines and particle paths</caption>
+            <image source="streamlines_example02.png" width="50%">
+              <!-- <image source="streamlines_example02.gif"> -->
+              <shortdescription>Animation of streamlines</shortdescription>
+            </image>
+          </figure>
+
+
+          <p> In this case, considering the streakline via <xref ref="def-streakline" />, we
+            conclude that the streakline coincides with the particle path. Can you reason why this
+            must be the case in this situation? What is necessary in order for this not to be true? </p>
+        </answer>
+      </example>
+
+      <example>
+        <title>An oscillating hose/plate</title>
+
+        <statement>
+          <p> Water flows out of an oscillating sprinkler head, held along the edge <m>y = 0</m>,
+            such that the velocity field produced is given by <me>
+              \bu = [u_0 \sin[\omega(t - y/{v_0})], v_0],
+            </me> where <m>
+            u_0</m> and <m>v_0</m> are constants. </p>
+
+          <p> Determine the streamline that passes through the origin at <m>t = 0</m> and <m>t =
+            \pi/(2\omega)</m>. </p>
+
+          <!-- <answer>
     <p>
       We solve 
       <md>
@@ -523,37 +515,68 @@
     </p>
   </answer> -->
 
-  <p>
-    Determine the pathline of the particle that was at the origin at <m>t = 0</m>; at <m>t = \pi/2</m>. 
-  </p>
+          <p> Determine the pathline of the particle that was at the origin at <m>t = 0</m>; at <m>t
+            = \pi/2</m>. </p>
 
-  <p>
-    Qualitatively describe the shape of the streakline that passes through the origin? 
-  </p>
-  </statement>
+          <p>
+            Qualitatively describe the shape of the streakline that passes through the origin?
+          </p>
+        </statement>
 
-  <answer>
-      <figure xml:id="fig-hose01">
-        <caption>Isolated pathlines show that particles move along straight paths.</caption>
-        <image source="hose01.png" width="80%">
-        <!-- <image source="hose01.gif" width="100%"> -->
-          <shortdescription>gif</shortdescription>
-        </image>
-      </figure>
-
-
-      <figure xml:id="fig-hose02">
-        <caption>However, viewed in terms of the streakline, the visible pattern is oscillatory.</caption>
-        <image source="hose02.png" width="80%">
-        <!-- <image source="hose02.gif" width="100%"> -->
-          <shortdescription>gif</shortdescription>
-        </image>
-      </figure>
-  </answer>
-</example>
+        <answer>
+          <figure xml:id="fig-hose01">
+            <caption>Isolated pathlines show that particles move along straight paths.</caption>
+            <image source="hose01.png" width="80%">
+              <!-- <image source="hose01.gif" width="100%"> -->
+              <shortdescription>gif</shortdescription>
+            </image>
+          </figure>
 
 
-  </subsection>
+          <figure xml:id="fig-hose02">
+            <caption>However, viewed in terms of the streakline, the visible pattern is oscillatory.</caption>
+            <image source="hose02.png" width="80%">
+              <!-- <image source="hose02.gif" width="100%"> -->
+              <shortdescription>gif</shortdescription>
+            </image>
+          </figure>
+        </answer>
+      </example>
+    </subsection>
+
+    <subsection xml:id="subsec-fluxes-and-forces">
+      <title>Fluxes and forces</title>
+
+      <p>
+        Before we go on, we remind the reader of two important quantities that will be used in the
+        following chapters. These are typicaly introduced in the prior modules on vector calculus.
+      </p>
+
+      <p> The first is the notion of <em>flux through a surface</em><idx>
+          <h>flux through a surface</h>
+        </idx>. Given a surface <m>S</m> and a velocity field <m>
+        \bu</m>, the flux through the surface is the amount of flow through the surface per unit
+        time. It is given by the integral <men xml:id="eqn-flux">
+          \text{flux through $S$} = \iint_S \bu \cdot \bn \, \de{S},
+        </men> and <m>
+        \bn</m> is the outer unit normal. </p>
+
+      <p> In 2D, the flux due to a 2D velocity field can also be written as <men
+          xml:id="eqn-2d-flux">
+          \text{flux through $C$} = \int_C \bu \cdot \bn \, \de{s}.
+        </men> In the
+        two above formulae, refer to your previous vector calculus notes for the procedures to
+        calculate the area element <m>\de{S}</m> or the line element <m>\de{s}</m>. </p>
+
+      <p> Finally, we may like to also calculate the total force on a surface or on a contour. If <m>
+        \bF</m> is the pointwise force applied at every point, the total force is given by <men
+          xml:id="eqn-total-force">
+          \textrm{Total force} = \iint_S \bF \, \de{S}.
+        </men> The above remains a
+        vector quantity. </p>
+
+
+    </subsection>
   </section>
 
 
@@ -561,603 +584,528 @@
        WORKSHEET 
     ============================================================ -->
 
-<exercises xml:id="ws-kinematics">
+  <exercises xml:id="ws-kinematics">
 
-  <introduction>
-  <p>The kinematics chapter covered the basic essentials about the measurement
-    and computation of fluid velocities and acceleration.
-    We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
-    Examples of streamlines and velocity fields were examined.</p>
-<!-- <p>
+    <introduction>
+      <p>The kinematics chapter covered the basic essentials about the measurement
+        and computation of fluid velocities and acceleration.
+        We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
+        Examples of streamlines and velocity fields were examined.</p>
+      <!-- <p>
   <warning>
   <p>We look to complete worksheets in the week prior to the content being delivered.
     Once this is done, this disclaimer message will be removed.</p>
 </warning> -->
-<!-- </p> -->
+      <!-- </p> -->
 
-</introduction>
-
-<exercise xml:id="ex-video-flow-visualisation">
-  <title>Flow visualisation</title>
-
-  <introduction>
-  <p>
-   <url href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization"> Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF archives</url>.</p>
-  </introduction>
-
-   <task>
-    <statement>
-      <p>
-        Name a few ways in which a fluid flow can be visualised (i.e. how does one produce, in an experiment, such a visualisation?)
-      </p>
-    </statement>
-   </task>
-
-   <task>
-    <statement>
-      <p>
-        Define, in words, what <em>pathline</em>, <em>streakline</em>, <em>timeline</em>, and <em>streamline</em> means. At 6:30, the author comments that "there is no way to make a streamline visible". Discuss this point.  
-      </p>
-    </statement>
-   </task>
-
-   <task>
-    <statement>
-      <p>
-        Give the example, shown in the video, where the pathline, streakline, and streamlines all coincide. Draw pictures to illustrate the concept. 
-      </p>
-    </statement>
-   </task>
-
-   <task>
-    <statement>
-      <p>
-        Give an example, shown in the video, where the pathline, streakline, and streamlines do not coincide. Draw pictures to illustrate the concept. 
-      </p>
-    </statement>
-   </task>
-
-   <task>
-    <statement>
-      <p>
-        In the video, an intuitive explanation is given for what it means for the velocity to be <em>incompressible</em>. What is this explanation? (near 8:25)
-      </p>
-    </statement>
-   </task>
-</exercise>
-
-<exercise xml:id="ex-material-derivative">
-  <title>Derivation of the material derivative</title>
- 
-  <statement><p>
-  Prove the Eulerian representation of the material derivative, as presented in <xref ref="thm-material-derivative"/> by manually expanding the components of the function. That is, consider a scalar function <m>f(\bx, t)</m>. Let the spatial coordinate follow <m>\bx = \bx(\bX,t)</m> and hence is defined by a specified material label <m>\bX</m>. Then derive the identity for
-  <me>
-    \DD{f}{t} = \pd{f}{t} \biggr\rvert_{\bX},
-  </me>
-  according to <xref ref="def-eulerlag"/>.
-  </p>
-  </statement>
-
-  <solution>
-    <p>
-      This is the chain rule. Denote the three components of <m>\bx = (x_1, x_2, x_3)</m>. Then we differentiate through both outer arguments of <m>f</m>:
-      <md>
-        <mrow>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} &amp;= \pd{f}{t}\biggr\rvert_{\bx} + \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} </mrow>
-      </md>
-    </p>
-
-    <p>
-      The factor,
-      <me>
-        \pd{x_i}{t}\biggr\rvert_{\bX} = \dd{x_i}{t} \equiv u_i,
-      </me>
-      corresponds to the velocity component in each direction. Then 
-      <me>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} = \pd{f}{t} + \bu \cdot \nabla f,
-      </me>
-      as desired.
-    </p>
-  </solution>
-</exercise>
-
-<exercise xml:id="ex-eulerian-lagrangian">
-<title>Eulerian and Lagrangian descriptions</title>
-<introduction>
-      <p>
-        A velocity field is described in Eulerian terms in Cartesian coordinates by <m>\mathbf{u}=(-y,x)</m>.
-      </p>
     </introduction>
 
-    <task>
-            <statement>
-            <p>
-        What is the Lagrangian position of the particle that starts at the point <m>(x_0,y_0)</m>?
-        Describe its path.
-        What is its velocity?
-            </p>
-          </statement>
+    <exercise xml:id="ex-video-flow-visualisation">
+      <title>Flow visualisation</title>
 
-          <solution>
-              <p>
-          A particle moves with the velocity of the fluid. Then it must satisfy the equations
-          <me>
-            \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
-            \quad\Rightarrow\quad
-            \dd{^2x}{t^2} = -\dd{y}{t} = -x(t).
-          </me>
-          Trying solutions of the form <m>x(t)=\e^{\lambda t}</m> gives <m>\lambda=\pm i</m>,
-          so the general solution is
-          <me>
-            x(t) = Ae^{it}+Be^{-it},
-          </me>
-          or, equivalently,
-          <me>
-            x(t) = C\cos t + D\sin t,
-          </me>
-          where <m>C</m> and <m>D</m> are constants, and
-          <me>
-            y(t) =-\dd{x}{t}= C\sin t - D\cos t.
-          </me>
-          Setting <m>x(0)=x_0</m> and <m>y(0)=y_0</m> gives <m>C=x_0</m> and <m>D=-y_0</m>, so
-          <me>
-            \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
-          </me>
-          This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around the origin.
-          The velocity is
-          <me>
-            (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
-          </me>
-              </p>
-            </solution>
-          </task>
-          
-
-          <task>
-            <statement>
-            <p>
-        Express the position and velocity in polar coordinates. What do you notice?
-            </p>
-          </statement>
-          <solution>
-          <p>The calculation works out more simply in polar coordinates; the velocity field is
-          <me>
-            \bu = r\be_\theta,
-          </me>
-          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eqn-appendix-polar-er-etheta"/>. Then the equation for particle paths is
-          <me>
-            \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
-          </me>
-          Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>,
-          where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
-        </p>
-      </solution>
-          </task>
-</exercise>
-
-<exercise xml:id="ex-eulerian-lagrangian2">
-<title>Eulerian and Lagrangian descriptions</title>
-<introduction>
-      <p>
-        A fluid flows through the nozzle shown from <m>x=0</m> to <m>x=L</m> with one-dimensional velocity
-        <me>
-          u=U\left(1+\frac{x}{L}\right)
-        </me>
-        in the <m>x</m>-direction, where <m>U</m> and <m>L</m> are constants.
-        Note that, in reality the flow would be two- or three-dimensional,
-        but we ignore this here for simplicity.
-      </p>
-      
-      <figure xml:id="fig-nozzle">
-        <caption>Sketch of nozzle.</caption>
-        <image source="ch-chapter02-nozzle.png" width="60%">
-        </image>
-      </figure>
-    </introduction>
+      <introduction>
+        <p>
+          <url href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization">
+          Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF
+          archives</url>.</p>
+      </introduction>
 
       <task>
         <statement>
-      <p>
-              What is the particle acceleration?
-            </p>
-          </statement>
-            <solution>
-              <p>
-                <md>
-                  <mrow> \ba=&amp;\DD{\bu}{t} </mrow>
-                  <mrow> =&amp; \pd{\bu}{t} + (\bu \cdot \nabla) \bu</mrow>
-                  <mrow> =&amp;0+\left(u\pd{u}{x}+v\pd{u}{y}+w\pd{u}{z}\right)\be_x
+          <p>
+            Name a few ways in which a fluid flow can be visualised (i.e. how does one produce, in
+            an experiment, such a visualisation?)
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p> Define, in words, what <em>pathline</em>, <em>streakline</em>, <em>timeline</em>, and <em>
+            streamline</em> means. At 6:30, the author comments that "there is no way to make a
+            streamline visible". Discuss this point. </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Give the example, shown in the video, where the pathline, streakline, and streamlines
+            all coincide. Draw pictures to illustrate the concept.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Give an example, shown in the video, where the pathline, streakline, and streamlines do
+            not coincide. Draw pictures to illustrate the concept.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p> In the video, an intuitive explanation is given for what it means for the velocity to
+            be <em>incompressible</em>. What is this explanation? (near 8:25) </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-material-derivative">
+      <title>Derivation of the material derivative</title>
+
+      <statement>
+        <p> Prove the Eulerian representation of the material derivative, as presented in <xref
+            ref="thm-material-derivative" /> by manually expanding the components of the function.
+          That is, consider a scalar function <m>f(\bx, t)</m>. Let the spatial coordinate follow <m>\bx
+          = \bx(\bX,t)</m> and hence is defined by a specified material label <m>\bX</m>. Then
+          derive the identity for <me>
+            \DD{f}{t} = \pd{f}{t} \biggr\rvert_{\bX},
+          </me> according to <xref
+            ref="def-eulerlag" />. </p>
+      </statement>
+
+      <solution>
+        <p> This is the chain rule. Denote the three components of <m>\bx = (x_1, x_2, x_3)</m>.
+          Then we differentiate through both outer arguments of <m>f</m>: <md>
+            <mrow>\pd{f(\bx(\bX, t), t)}{t}\biggr\rvert_{\bX} &amp;= \pd{f}{t}\biggr\rvert_{\bx} +
+          \sum_{i=1}^3 \pd{x_i(\bX, t)}{t}\biggr\rvert_{\bX} \pd{f}{x_i} </mrow>
+          </md>
+        </p>
+
+        <p> The factor, <me>
+            \pd{x_i}{t}\biggr\rvert_{\bX} = \dd{x_i}{t} \equiv u_i,
+          </me>
+          corresponds to the velocity component in each direction. Then <me>\pd{f(\bx(\bX, t),
+          t)}{t}\biggr\rvert_{\bX} = \pd{f}{t} + \bu \cdot \nabla f,
+          </me>
+          as desired. </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-eulerian-lagrangian">
+      <title>Eulerian and Lagrangian descriptions</title>
+      <introduction>
+        <p> A velocity field is described in Eulerian terms in Cartesian coordinates by <m>
+          \mathbf{u}=(-y,x)</m>. </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p> What is the Lagrangian position of the particle that starts at the point <m>(x_0,y_0)</m>?
+            Describe its path. What is its velocity? </p>
+        </statement>
+
+        <solution>
+          <p> A particle moves with the velocity of the fluid. Then it must satisfy the equations <me>
+            \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
+              \quad\Rightarrow\quad
+              \dd{^2x}{t^2} = -\dd{y}{t} = -x(t).
+            </me>
+            Trying solutions of the form <m>x(t)=\e^{\lambda t}</m> gives <m>\lambda=\pm i</m>, so
+            the general solution is <me>
+              x(t) = Ae^{it}+Be^{-it},
+            </me> or, equivalently, <me>
+              x(t) = C\cos t + D\sin t,
+            </me> where <m>C</m> and <m>D</m>
+            are constants, and <me>
+              y(t) =-\dd{x}{t}= C\sin t - D\cos t.
+            </me> Setting <m>
+            x(0)=x_0</m> and <m>y(0)=y_0</m> gives <m>C=x_0</m> and <m>D=-y_0</m>, so <me>
+              \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
+            </me>
+            This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around
+            the origin. The velocity is <me>
+              (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
+            </me>
+          </p>
+        </solution>
+      </task>
+
+
+      <task>
+        <statement>
+          <p>
+            Express the position and velocity in polar coordinates. What do you notice?
+          </p>
+        </statement>
+        <solution>
+          <p>The calculation works out more simply in polar coordinates; the velocity field is <me>
+            \bu = r\be_\theta,
+            </me> where <m>\be_{\theta}</m> is the
+            angular unit vector given in <xref ref="eqn-appendix-polar-er-etheta" />. Then the
+            equation for particle paths is <me>
+              \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
+            </me>
+            Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>, where <m>
+            \theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>. </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-eulerian-lagrangian2">
+      <title>Eulerian and Lagrangian descriptions</title>
+      <introduction>
+        <p> A fluid flows through the nozzle shown from <m>x=0</m> to <m>x=L</m> with
+          one-dimensional velocity <me>
+            u=U\left(1+\frac{x}{L}\right)
+          </me> in the <m>x</m>-direction,
+          where <m>
+            U</m> and <m>L</m> are constants. Note that, in reality the flow would be two- or
+          three-dimensional, but we ignore this here for simplicity. </p>
+
+        <figure xml:id="fig-nozzle">
+          <caption>Sketch of nozzle.</caption>
+          <image source="ch-chapter02-nozzle.png" width="60%">
+          </image>
+        </figure>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            What is the particle acceleration?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <md>
+              <mrow> \ba=&amp;\DD{\bu}{t} </mrow>
+              <mrow> =&amp; \pd{\bu}{t} + (\bu \cdot \nabla) \bu</mrow>
+              <mrow> =&amp;0+\left(u\pd{u}{x}+v\pd{u}{y}+w\pd{u}{z}\right)\be_x
                 +\left(u\pd{v}{x}+v\pd{v}{y}+w\pd{v}{z}\right)\be_y
                 +\left(u\pd{w}{x}+v\pd{w}{y}+w\pd{w}{z}\right)\be_z</mrow>
-                  <mrow> =&amp; u\pd{u}{x}\be_x</mrow>
-                  <mrow> = &amp; U\left(1+\frac{x}{L}\right)\frac{U}{L}\be_x</mrow>
-                  <mrow> = &amp; \frac{U^2}{L}\left(1+\frac{x}{L}\right)\be_x</mrow>
-                </md>
-              </p>
-            </solution>
-          </task>
+              <mrow> =&amp; u\pd{u}{x}\be_x</mrow>
+              <mrow> = &amp; U\left(1+\frac{x}{L}\right)\frac{U}{L}\be_x</mrow>
+              <mrow> = &amp; \frac{U^2}{L}\left(1+\frac{x}{L}\right)\be_x</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
 
-          <task>
-            <statement><p>
-              If a particle starts at <m>x=0</m> at time <m>t=0</m>, what is its position at time <m>t</m>?
-            </p>
-          </statement>
+      <task>
+        <statement>
+          <p> If a particle starts at <m>x=0</m> at time <m>t=0</m>, what is its position at time <m>
+            t</m>? </p>
+        </statement>
 
-            <solution>
-              <p>
-                We have
-                <me>
-                  \dd{x}{t}=u(x)=U\left(1+\frac{x}{L}\right).
-                </me>
-                Solving by separation of variables gives,
-                <md>
-                  <mrow>&amp;\int_0^x\frac{dx}{1+x/L}=\int_0^t U\,dt</mrow>
-                  <mrow>\Rightarrow\quad&amp; L\ln\left(1+\frac{x}{L}\right)=Ut</mrow>
-                  <mrow>\Rightarrow\quad&amp; x(t)=L\left(\e^{Ut/L}-1\right).</mrow>
-                </md>
-              </p>
-            </solution>
-          </task>
+        <solution>
+          <p> We have <me>
+              \dd{x}{t}=u(x)=U\left(1+\frac{x}{L}\right).
+            </me> Solving by
+            separation of variables gives, <md>
+              <mrow>&amp;\int_0^x\frac{dx}{1+x/L}=\int_0^t U\,dt</mrow>
+              <mrow>\Rightarrow\quad&amp; L\ln\left(1+\frac{x}{L}\right)=Ut</mrow>
+              <mrow>\Rightarrow\quad&amp; x(t)=L\left(\e^{Ut/L}-1\right).</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
 
-          <task>
-            <statement>
-              <p>
-                What is its Lagrangian velocity as a function of time?
-              </p>
-            </statement>
-            
-            <solution>
-              <p>
-                The velocity is
-                <md>
-                  <mrow>\dd{x}{t}=&amp;\dd{}{t}\left(L\left(\e^{Ut/L}-1\right)\right)</mrow>
-                  <mrow>=&amp; L\frac{U}{L}\e^{Ut/L}</mrow>
-                  <mrow>=&amp; U\e^{Ut/L}.</mrow>
-                </md>
-              </p>
-            </solution>
-          </task>
+      <task>
+        <statement>
+          <p>
+            What is its Lagrangian velocity as a function of time?
+          </p>
+        </statement>
 
-            <task>
-              <statement>
-                <p>
-                  What is its Lagrangian acceleration as a function of time?
-                </p>
-              </statement>
-              
-              <solution>
-                <p>
-                The acceleration is
-                <md>
-                  <mrow>\dd{^2x}{t^2}=&amp;\dd{}{t}\left(U\e^{Ut/L}\right)</mrow>
-                  <mrow>=&amp; \frac{U^2}{L}\e^{Ut/L}.</mrow>
-                </md>
-              </p>
-            </solution>
-          </task>
+        <solution>
+          <p> The velocity is <md>
+              <mrow>\dd{x}{t}=&amp;\dd{}{t}\left(L\left(\e^{Ut/L}-1\right)\right)</mrow>
+              <mrow>=&amp; L\frac{U}{L}\e^{Ut/L}</mrow>
+              <mrow>=&amp; U\e^{Ut/L}.</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
 
-            <task>
-              <statement>
-            <p>
-              Write the Lagrangian velocity and acceleration as a function of <m>x</m>.
-              Compare with the corresponding Eulerian velocity and particle acceleration.
-              What do you notice?
-            </p>
-          </statement>
-            
-            <solution>
-              <p>
-                The velocity is
-                <me>
-                  U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
-                </me>
-                as expected. This is the same as the Eulerian velocity at the particle position.
-                The acceleration is
-                <md>
-                  <mrow>\frac{U^2}{L}\e^{Ut/L}=&amp;\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
-                </md>
-                which is the same as the particle acceleration, as expected from the defintion.
-              </p>
-            </solution>
-          </task>
+      <task>
+        <statement>
+          <p>
+            What is its Lagrangian acceleration as a function of time?
+          </p>
+        </statement>
 
-          <task>
-            <statement><p>
-              How long does it take for a particle to travel from <m>x=0</m> to <m>x=L</m>?
-            </p>
-            </statement>
-            <solution>
-              <p>
-                The particle reaches <m>x=L</m> when
-                <md>
-                  <mrow>&amp; L\left(\e^{Ut/L}-1\right)=L</mrow>
-                  <mrow>\Rightarrow\quad&amp; \e^{Ut/L}=2</mrow>
-                  <mrow>\Rightarrow\quad&amp; t=\frac{L}{U}\ln(2).</mrow>
-                </md>
-              </p>
-            </solution>
-          </task>
-</exercise>
+        <solution>
+          <p> The acceleration is <md>
+              <mrow>\dd{^2x}{t^2}=&amp;\dd{}{t}\left(U\e^{Ut/L}\right)</mrow>
+              <mrow>=&amp; \frac{U^2}{L}\e^{Ut/L}.</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
 
-<exercise xml:id="ex-particle-paths-streamlines">
-<title>Particle paths and streamlines</title>
-<task>
-<statement>
-      <p>
-        Define the particle paths and streamlines for a velocity field
-    <m>\bu(\bx,t)</m>. When do these coincide?
-      </p>
-    </statement>
+      <task>
+        <statement>
+          <p> Write the Lagrangian velocity and acceleration as a function of <m>x</m>. Compare with
+            the corresponding Eulerian velocity and particle acceleration. What do you notice? </p>
+        </statement>
+
+        <solution>
+          <p> The velocity is <me>
+              U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
+            </me> as expected.
+            This is the same as the Eulerian velocity at the particle position. The acceleration is <md>
+              <mrow>\frac{U^2}{L}\e^{Ut/L}=&amp;\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
+            </md>
+            which is the same as the particle acceleration, as expected from the defintion. </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> How long does it take for a particle to travel from <m>x=0</m> to <m>x=L</m>? </p>
+        </statement>
+        <solution>
+          <p> The particle reaches <m>x=L</m> when <md>
+              <mrow>&amp; L\left(\e^{Ut/L}-1\right)=L</mrow>
+              <mrow>\Rightarrow\quad&amp; \e^{Ut/L}=2</mrow>
+              <mrow>\Rightarrow\quad&amp; t=\frac{L}{U}\ln(2).</mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-particle-paths-streamlines">
+      <title>Particle paths and streamlines</title>
+      <task>
+        <statement>
+          <p> Define the particle paths and streamlines for a velocity field <m>\bu(\bx,t)</m>. When
+            do these coincide? </p>
+        </statement>
 
 
-          <answer>
-        <p>
-          Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE
-          <me>
-            \dd{\bx}{t} = \bu(\bx,t).
-          </me>
-          Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy
-          <me>
-            \dd{\bx}{s} = \bu(\bx,t),
-          </me>
-          where <m>s</m> is a parameter along the streamline. The two coincide if the flow is steady, i.e. <m>\bu(\bx,t)=\bu(\bx)</m>.
-        </p>
-      </answer>
-</task>
+        <answer>
+          <p> Particle paths are the trajectories of individual fluid particles, which are found by
+            solving the ODE <me>
+              \dd{\bx}{t} = \bu(\bx,t).
+            </me> Streamlines are curves that
+            are instantaneously tangent to the velocity field, and therefore satisfy <me>
+              \dd{\bx}{s} = \bu(\bx,t),
+            </me> where <m>s</m> is a parameter
+            along the streamline. The two coincide if the flow is steady, i.e. <m>
+            \bu(\bx,t)=\bu(\bx)</m>. </p>
+        </answer>
+      </task>
 
-<task>
-  <statement>
-  <p>
-    Show that a quantity <m>f(\bx,t)</m> is preserved following the flow if
-  <me>
-    \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
-  </me>
-</p>
-  </statement>
+      <task>
+        <statement>
+          <p> Show that a quantity <m>f(\bx,t)</m> is preserved following the flow if <me>
+            \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
+            </me>
+          </p>
+        </statement>
 
         <answer>
           <figure xml:id="lagrange-problem">
             <caption>Pathline, showing the particle positions at times <m>t</m> and <m>t+\de t</m>.</caption>
-            <image source="ch-chapter02-lagrange-problem2.jpg" width="80%"/>
+            <image source="ch-chapter02-lagrange-problem2.jpg" width="80%" />
           </figure>
-          
+
           <p>
-    <xref ref="lagrange-problem"/> shows the points <m>\bx(t)</m> and
-          <m>\bx(t+dt)=\bx(t)+\de\bx</m>, and the equation for pathlines gives
-          <m>\de\bx=\bu(\bx,t)\de t</m>.
-    We follow the value of <m>f</m> following a particle:
-    <md>
-      <mrow> \dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de t)-f(\bx,t)\right)</mrow>
-      <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
-    <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
-    <mrow>&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},</mrow>
-    </md>
-    (''<m>\dots</m>'' denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>.
-  </p>
-  </answer>
-</task>
+            <xref ref="lagrange-problem" /> shows the points <m>\bx(t)</m> and <m>
+            \bx(t+dt)=\bx(t)+\de\bx</m>, and the equation for pathlines gives <m>\de\bx=\bu(\bx,t)\de
+            t</m>. We follow the value of <m>f</m> following a particle: <md>
+              <mrow> \dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de
+            t)-f(\bx,t)\right)</mrow>
+              <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla
+            f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
+              <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla
+            f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
+              <mrow>&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},</mrow>
+            </md> (''<m>\dots</m>''
+            denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>. </p>
+        </answer>
+      </task>
 
-<task>
-  <statement>
-  <p>
-    Show also that <m>f</m> is constant along streamlines if
-  <me>
-    \bu\cdot\nabla f=0.
-  </me>
-   </p>
-  </statement>
+      <task>
+        <statement>
+          <p> Show also that <m>f</m> is constant along streamlines if <me>
+              \bu\cdot\nabla f=0.
+            </me>
+          </p>
+        </statement>
 
-
-       <answer>
-  <p>
-    Now suppose that in <xref ref="lagrange-problem"/>, we have shown instead the situation of a streamline.</p>
-    
-    <p>In this case,
-    the points <m>\bx(s)</m> and <m>\bx(s+ds)=\bx(s)+\de\bx</m> are shown, and the equation for streamlines gives
-          <m>\de\bx=\bu(\bx,t)\de s</m>.
-    We follow the value of <m>f</m> along the streamline:
-    <md>
-      <mrow>\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
-      <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla f(\bx,t)-f(\bx,t)\right)</mrow>
-    <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla f(\bx,t)\right)</mrow>
-    <mrow>&amp;=\bu\cdot\nabla f.</mrow>
-    </md></p>
-   
-   <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\nabla f=0</m>.
-  </p>
-  </answer>
-
-</task>
-
-
-  
-
-
-
-
-
-
-
-</exercise>
-
-<exercise xml:id="ex-streamlines-pathlines-streaklines">
-<title>Streamlines, pathlines and streaklines</title>
-
-
-  <introduction>
-    <p>
-      The velocity of a two-dimensional fluid flow in Cartesian coordinates is
-     <m>u = 1</m>, <m>v = t e^{-4x}</m>. Calculate and sketch the following:
-  </p>
-</introduction>
-
-
-
-
- <task>     
-  <statement>
-    <p>
-      the streamlines at a fixed time <m>t &gt; 0</m>,
-    </p>
-  </statement>
 
         <answer>
-          <p>
-            The streamlines are given by
-            <me>
+          <p> Now suppose that in <xref ref="lagrange-problem" />, we have shown instead the
+            situation of a streamline.</p>
+
+          <p>In this case, the points <m>\bx(s)</m> and <m>\bx(s+ds)=\bx(s)+\de\bx</m> are shown,
+            and the equation for streamlines gives <m>\de\bx=\bu(\bx,t)\de s</m>. We follow the
+            value of <m>f</m> along the streamline: <md>
+              <mrow>\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de
+            s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
+              <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla
+            f(\bx,t)-f(\bx,t)\right)</mrow>
+              <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla
+            f(\bx,t)\right)</mrow>
+              <mrow>&amp;=\bu\cdot\nabla f.</mrow>
+            </md></p>
+
+          <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\nabla f=0</m>. </p>
+        </answer>
+
+      </task>
+
+
+    </exercise>
+
+    <exercise xml:id="ex-streamlines-pathlines-streaklines">
+      <title>Streamlines, pathlines and streaklines</title>
+
+
+      <introduction>
+        <p> The velocity of a two-dimensional fluid flow in Cartesian coordinates is <m>u = 1</m>, <m>v
+          = t e^{-4x}</m>. Calculate and sketch the following: </p>
+      </introduction>
+
+
+      <task>
+        <statement>
+          <p> the streamlines at a fixed time <m>t &gt; 0</m>, </p>
+        </statement>
+
+        <answer>
+          <p> The streamlines are given by <me>
               \pd{y}{x}=te^{-4x}\quad\Rightarrow\quad
               y=y_0-\frac{t}{4} e^{-4x},
             </me>
             for any constant <m>y_0</m>. Different values of <m>y_0</m> give different streamlines.
-            See <xref ref="flowvisualisationproblem"/> for a sketch.
-          </p>
+            See <xref ref="flowvisualisationproblem" /> for a sketch. </p>
 
-            <figure xml:id="flowvisualisationproblem">
-              <caption>Sketch of streamlines, pathline and streaklines.</caption>
-              <image source="ch-chapter02-flowvisualisationproblem.png" width="100%"/>
-            </figure>
+          <figure xml:id="flowvisualisationproblem">
+            <caption>Sketch of streamlines, pathline and streaklines.</caption>
+            <image source="ch-chapter02-flowvisualisationproblem.png" width="100%" />
+          </figure>
         </answer>
       </task>
 
-<task>
-  <statement>
-    <p>
-      the pathline of the particle starting from <m>(0,0)</m>,
-    </p>
-  </statement>
+      <task>
+        <statement>
+          <p> the pathline of the particle starting from <m>(0,0)</m>, </p>
+        </statement>
 
 
-  <answer>
-    <p>
-          The pathlines for a particle starting from <m>(x_0,y_0)</m> are given by
-          <md>
-            <mrow>&amp;\dd{x}{t}=1,\quad
-              \dd{y}{t}=te^{-4x}</mrow>
-            <mrow>\Rightarrow\quad&amp;
-              x = x_0 + t,\quad
-            y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.</mrow>
-          </md>
-          Eliminating <m>t</m>:
-          <me>
-            y = y_0 + \frac{1}{16} e^{-4x_0}
-            - \frac{1+4x-4x_0}{16} e^{-4x}.
-          </me>
-          This is a general pathline. For the particular particle that starts from <m>(0,0)</m>:
-          <me>
+        <answer>
+          <p> The pathlines for a particle starting from <m>(x_0,y_0)</m> are given by <md>
+              <mrow>&amp;\dd{x}{t}=1,\quad
+                \dd{y}{t}=te^{-4x}</mrow>
+              <mrow>\Rightarrow\quad&amp;
+                x = x_0 + t,\quad
+                y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.</mrow>
+            </md>
+            Eliminating <m>t</m>: <me>
+              y = y_0 + \frac{1}{16} e^{-4x_0}
+              - \frac{1+4x-4x_0}{16} e^{-4x}.
+            </me>
+            This is a general pathline. For the particular particle that starts from <m>(0,0)</m>: <me>
             y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
-          </me>
-          See <xref ref="flowvisualisationproblem"/> for a sketch. 
-        </p>
-      </answer>
-    </task>
+            </me> See <xref
+              ref="flowvisualisationproblem" /> for a sketch. </p>
+        </answer>
+      </task>
 
 
-    <task>
-      <statement>
-        <p>
-          and the streaklines passing through <m>(0,0)</m>.
-        </p>
-      </statement>
-      <answer>
-        <p>
-          Suppose the particle that started at <m>(x_0,y_0)</m> hits the special point
-          <m>(0,0)</m> at time <m>t_1</m>. From the pathline equation:
-          <me>
-            0 = x_0 + t_1, \quad
-            0 = y_0 + \tfrac{1}{16} e^{-4x_0}
-            - \tfrac{1+4t_1}{16} e^{-4(x_0+t_1)}.
-          </me>
-          Solving for <m>x_0</m> and <m>y_0</m>:
-          <me>
-            x_0 = -t_1,\quad
-            y_0 = -\tfrac{1}{16}\left(e^{4t_1} - 1 - 4t_1\right).
-          </me>
-          At time <m>t</m> the particle is at:
-          <me>
-            x = t - t_1,\quad
-            y = \tfrac{1}{16}\left((1+4t_1) - (1+4t)e^{-4(t-t_1)}\right).
-          </me>
-          Eliminating <m>t_1</m> gives the streakline at time <m>t</m>:
-          <me>
-            y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
-          </me>
-          See <xref ref="flowvisualisationproblem"/> for a sketch.
-          Note that the streamlines, pathlines and streaklines are all very different.
-        </p>
-      </answer>
-    </task>
+      <task>
+        <statement>
+          <p> and the streaklines passing through <m>(0,0)</m>. </p>
+        </statement>
+        <answer>
+          <p> Suppose the particle that started at <m>(x_0,y_0)</m> hits the special point <m>(0,0)</m>
+            at time <m>t_1</m>. From the pathline equation: <me>
+              0 = x_0 + t_1, \quad
+              0 = y_0 + \tfrac{1}{16} e^{-4x_0}
+              - \tfrac{1+4t_1}{16} e^{-4(x_0+t_1)}.
+            </me>
+            Solving for <m>x_0</m> and <m>y_0</m>: <me>
+              x_0 = -t_1,\quad
+              y_0 = -\tfrac{1}{16}\left(e^{4t_1} - 1 - 4t_1\right).
+            </me>
+            At time <m>t</m> the particle is at: <me>
+              x = t - t_1,\quad
+              y = \tfrac{1}{16}\left((1+4t_1) - (1+4t)e^{-4(t-t_1)}\right).
+            </me>
+            Eliminating <m>t_1</m> gives the streakline at time <m>t</m>: <me>
+              y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
+            </me>
+            See <xref
+              ref="flowvisualisationproblem" /> for a sketch. Note that the streamlines, pathlines
+            and streaklines are all very different. </p>
+        </answer>
+      </task>
 
-<task>
-  <statement>
-        <p>For a line/curve in the <m>(x,y)</m>, its timeline at time <m>t</m> is the
-        locus of the material elements at time <m>t</m> that started on the line/curve
-        at <m>t=0</m>. In experiments this can be visualised using a streak of dye
-        placed initally along the line/curve. Tracking this over time gives the timelines.</p>
+      <task>
+        <statement>
+          <p>For a line/curve in the <m>(x,y)</m>, its timeline at time <m>t</m> is the locus of the
+            material elements at time <m>t</m> that started on the line/curve at <m>t=0</m>. In
+            experiments this can be visualised using a streak of dye placed initally along the
+            line/curve. Tracking this over time gives the timelines.</p>
 
-        <p>Calculate and sketch the timelines of the line (i) <m>y=0</m>, (ii) <m>x=0</m>.</p>
-  </statement>
-      <answer>
-        <p>
-          From the pathline equation, a particle starting from
-          <m>(x_0,0)</m> reaches
-        <me>
-          x = x_0 + t,\quad
-          y = \tfrac{1}{16} e^{-4x_0}
+          <p>Calculate and sketch the timelines of the line (i) <m>y=0</m>, (ii) <m>x=0</m>.</p>
+        </statement>
+        <answer>
+          <p> From the pathline equation, a particle starting from <m>(x_0,0)</m> reaches <me>
+              x = x_0 + t,\quad
+              y = \tfrac{1}{16} e^{-4x_0}
               - \tfrac{1+4t}{16} e^{-4(x_0+t)}
-        </me>
-          at time <m>t</m>. Eliminating <m>x_0</m> gives the timeline:
-        <me>
-          y = \tfrac{1}{16}\left(e^{4t} - 1 - 4t\right)e^{-4x}.
-        </me>
-        See <xref ref="flowvisualisationproblem"/> for a sketch. 
-      </p>
-        <p>
-          From the pathline equation, a particle starting from
-          <m>(0,y_0)</m> reaches
-        <me>
-          x = t,\quad
-          y = y_0 + \tfrac{1}{16}
+            </me>
+            at time <m>t</m>. Eliminating <m>x_0</m> gives the timeline: <me>
+              y = \tfrac{1}{16}\left(e^{4t} - 1 - 4t\right)e^{-4x}.
+            </me>
+            See <xref
+              ref="flowvisualisationproblem" /> for a sketch. </p>
+          <p> From the pathline equation, a particle starting from <m>(0,y_0)</m> reaches <me>
+              x = t,\quad
+              y = y_0 + \tfrac{1}{16}
               - \tfrac{1+4t}{16} e^{-4t}
-        </me>
-          at time <m>t</m>. Since <m>y_0</m> can take any value, the timeline is just the line
-          <m>x = t</m>.
-        See <xref ref="flowvisualisationproblem"/> for a sketch. 
-        </p>
-      </answer>
-</task>
-</exercise>
+            </me>
+            at time <m>t</m>. Since <m>y_0</m> can take any value, the timeline is just the line <m>x
+            = t</m>. See <xref ref="flowvisualisationproblem" /> for a sketch. </p>
+        </answer>
+      </task>
+    </exercise>
 
 
-<exercise xml:id="ex-video-radioactive">
-  <title>An experiment for the material derivative</title>
+    <exercise xml:id="ex-video-radioactive">
+      <title>An experiment for the material derivative</title>
 
-  <introduction>
-    <p>
-   <url href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics"> Watch around 12:00 to around 19:00 of the video "Eulerian and Lagrangian Descriptions of Fluid Mechanics" from the NCFMF archives</url>.
-    </p>
-  </introduction>
+      <introduction>
+        <p>
+          <url
+            href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics">
+          Watch around 12:00 to around 19:00 of the video "Eulerian and Lagrangian Descriptions of
+          Fluid Mechanics" from the NCFMF archives</url>. </p>
+      </introduction>
 
-  <task>
-    <statement>
-      <p>In the video, the authors describe an experiment that one can setup to measure decay of a substance, say <m>C(x, t)</m> along a 1D segment in a river.</p>
+      <task>
+        <statement>
+          <p>In the video, the authors describe an experiment that one can setup to measure decay of
+            a substance, say <m>C(x, t)</m> along a 1D segment in a river.</p>
 
-      <p>
-        In the first situation, it is assumed that <m>C</m> is distributed uniformly in the river, but is a naturally decaying substance with some uniform rate of change, <m>\dd{C}{t}</m>. Explain what is the (material) change in <m>C</m> that would be measured via two sensors, one upstream ane one downstream.
-      </p>
-    </statement>
-  </task>
+          <p> In the first situation, it is assumed that <m>C</m> is distributed uniformly in the
+            river, but is a naturally decaying substance with some uniform rate of change, <m>
+            \dd{C}{t}</m>. Explain what is the (material) change in <m>C</m> that would be measured
+            via two sensors, one upstream ane one downstream. </p>
+        </statement>
+      </task>
 
-  <task>
-    <statement>
-      <p>Next, the authors imagine a situation where <m>C</m> is not uniformly distributed. They give a visual and analytical explanation of the material derivative,
-      <me>
-        \DD{C}{t} = \pd{C}{t} + u \pd{C}{x},
-      </me>
-      where <m>u</m> is the horizontal velocity within the infinitessimal 1D section. Write your own explanation of the above.
-      </p>
-    </statement>
-  </task>
-</exercise>
+      <task>
+        <statement>
+          <p>Next, the authors imagine a situation where <m>C</m> is not uniformly distributed. They
+            give a visual and analytical explanation of the material derivative, <me>
+              \DD{C}{t} = \pd{C}{t} + u \pd{C}{x},
+            </me> where <m>u</m> is
+            the horizontal velocity within the infinitessimal 1D section. Write your own explanation
+            of the above. </p>
+        </statement>
+      </task>
+    </exercise>
 
 
-</exercises>
+  </exercises>
 
 </chapter>
