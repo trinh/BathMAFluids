@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -103,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.13';
+eBookConfig.runestone_version = '7.9.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -133,7 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter02-kinematics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter02-kinematics.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-flowexamples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter02-kinematics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter02-kinematics.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-flowexamples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -143,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
 \newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
 \newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
-\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}
 \newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
 \newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
 \newcommand{\bx}{\boldsymbol{x}}
@@ -165,6 +164,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\br}{\boldsymbol{r}}
 \newcommand{\bzero}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
 \DeclareGraphicsRule{.gif}{png}{.png}{}
@@ -211,10 +211,11 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
@@ -363,12 +364,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-eulerlagrang"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Eulerian and Lagrangian coordinates</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian coordinates</span>
 </h2>
-<section class="introduction" id="sec-eulerlagrang-2"><div class="para" id="sec-eulerlagrang-2-1">There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, <span class="process-math">\(\bx = (x, y, z)\text{.}\)</span> At this point, we then attempt to measure a fluid quantity such as the density, <span class="process-math">\(\rho(\bx, t)\text{,}\)</span> or temperature, <span class="process-math">\(T(\bx, t)\text{.}\)</span> This is essentially the <em class="emphasis">Eulerian frame</em>. One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec-eulerlagrang-2"><div class="para" id="sec-eulerlagrang-2-1">There are essentially two natural ways to think of motion in a fluid. We can imagine positioning ourselves at a fixed point in space, <span class="process-math">\(\bx = (x, y, z)\text{.}\)</span> At this point, we then attempt to measure a fluid quantity such as the density, <span class="process-math">\(\rho(\bx, t)\text{,}\)</span> or temperature, <span class="process-math">\(T(\bx, t)\text{.}\)</span> This is essentially the <em class="emphasis">Eulerian frame</em>. One can imagine, for example, fixing sensor station into the ocean bottom, and obtaining measurements of the water temperature.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="sec-eulerlagrang-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter01-kinematics-euler-vs-lagrange.png" class="contained" alt="(a) The Eulerian interpretation; (b) the Lagrangian interpretation."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span>(a) The Eulerian interpretation; (b) the Lagrangian interpretation.<div class="autopermalink" data-description="Figure 2.1.1"><a href="#sec-eulerlagrang-2-2" title="Copy heading and permalink for Figure 2.1.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec-eulerlagrang-2-3">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>(a) The Eulerian interpretation; (b) the Lagrangian interpretation.<div class="autopermalink" data-description="Figure 2.1.1"><a href="#sec-eulerlagrang-2-2" title="Copy heading and permalink for Figure 2.1.1" aria-label="Copy heading and permalink for Figure 2.1.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec-eulerlagrang-2-3">
 <div class="para">Alternatively, we can imagine tracking of a single fixed particle (or a fluid element) within the flow. The particle begins at some position. Let us define a label to describe the particle’s initial position. For example, if the particle’s position is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -382,31 +383,31 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">We then ask for the corresponding measurement of the fluid quantity that corresponds to the label <span class="process-math">\(\bX\text{.}\)</span> For example, this is equivalent to tagging a free-floating buoy in the ocean with the label <span class="process-math">\(\bX\text{,}\)</span> then measuring the temperature of the water as the buoy drifts in the ocean. This Lagrangian temperature could be written <span class="process-math">\(\mathcal{T}(\bX, t),\)</span> where <span class="process-math">\(\bX\)</span> is simply a fixed quantity for the particular buoy.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-eulerlagrang-2-4">We are now in a position to define the Eulerian velocity field of a fluid.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-eulerlagrang-2-4">We are now in a position to define the Eulerian velocity field of a fluid.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-velocity"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def-velocity-1-1">The Eulerian velocity <span class="process-math">\(\bu(\bx,t)\)</span> is the velocity of the fluid at the point with spatial coordinates <span class="process-math">\(\bx\)</span> at time <span class="process-math">\(t\text{.}\)</span> Note that, in physical terms this velocity is the average velocity at the time <span class="process-math">\(t\)</span> of the fluid particles (e.g. molecules, ions) in a small box centred on the point <span class="process-math">\(\bx\text{.}\)</span> See also <a href="ch-chapter03-equations.html#rem-continuum" class="xref" data-knowl="./knowl/xref/rem-continuum.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.0.3: Continuum assumption">Remark 3.0.3</a> for a discussion of the continuum assumption.<div class="autopermalink" data-description="Paragraph"><a href="#def-velocity-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-velocity-1-1">The Eulerian velocity <span class="process-math">\(\bu(\bx,t)\)</span> is the velocity of the fluid at the point with spatial coordinates <span class="process-math">\(\bx\)</span> at time <span class="process-math">\(t\text{.}\)</span> Note that, in physical terms this velocity is the average velocity at the time <span class="process-math">\(t\)</span> of the fluid particles (e.g. molecules, ions) in a small box centred on the point <span class="process-math">\(\bx\text{.}\)</span> See also <a href="ch-chapter03-equations.html#rem-continuum" class="xref" data-knowl="./knowl/xref/rem-continuum.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.0.3: Continuum assumption">Remark 3.0.3</a> for a discussion of the continuum assumption.<div class="autopermalink" data-description="Paragraph"><a href="#def-velocity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.1.2"><a href="#def-velocity" title="Copy heading and permalink for Definition 2.1.2">🔗</a></div></article><div class="para" id="sec-eulerlagrang-2-6">It will be useful to introduce the concept of steady flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.1.2"><a href="#def-velocity" title="Copy heading and permalink for Definition 2.1.2" aria-label="Copy heading and permalink for Definition 2.1.2">🔗</a></div></article><div class="para" id="sec-eulerlagrang-2-6">It will be useful to introduce the concept of steady flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-steady-flow"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def-steady-flow-1-1">A velocity field <span class="process-math">\(\bu\)</span> is defined as steady if it can be written <span class="process-math">\(\bu=\bu(\bx)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-steady-flow-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-steady-flow-1-1">A velocity field <span class="process-math">\(\bu\)</span> is defined as steady if it can be written <span class="process-math">\(\bu=\bu(\bx)\)</span> .<div class="autopermalink" data-description="Paragraph"><a href="#def-steady-flow-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.1.3"><a href="#def-steady-flow" title="Copy heading and permalink for Definition 2.1.3">🔗</a></div></article><div class="para" id="sec-eulerlagrang-2-8">Note that steady flow does not mean that the fluid particles are not moving. It simply means that at a fixed point in space, the Eulerian velocity does not change in time. The Lagrangian velocity of a fluid particle will generally change in time, even in a steady flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.1.3"><a href="#def-steady-flow" title="Copy heading and permalink for Definition 2.1.3" aria-label="Copy heading and permalink for Definition 2.1.3">🔗</a></div></article><div class="para" id="sec-eulerlagrang-2-8">Note that steady flow does not mean that the fluid particles are not moving. It simply means that at a fixed point in space, the Eulerian velocity does not change in time. The Lagrangian velocity of a fluid particle will generally change in time, even in a steady flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-eulerlagrang-2-9">A simple example of the conversion between the Eulerian and Lagrangian reference frames is in <a href="ws-kinematics.html#ex-eulerian-lagrangian" class="xref" data-knowl="./knowl/xref/ex-eulerian-lagrangian.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.3.3: Eulerian and Lagrangian descriptions">Exercise 2.3.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-eulerlagrang-2-9">A simple example of the conversion between the Eulerian and Lagrangian reference frames is in <a href="ws-kinematics.html#ex-eulerian-lagrangian" class="xref" data-knowl="./knowl/xref/ex-eulerian-lagrangian.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.3.3: Eulerian and Lagrangian descriptions">Exercise 2.3.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-eulerlagrang-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="subsection" id="subsec-laglabel"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">The convective derivative</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The convective derivative</span>
 </h3>
-<div class="para" id="subsec-laglabel-2">Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laglabel-2">Let us now be more specific. We wish to consider how different quantities in our flow changes with time, but the matter is made complicated by the two above perspectives (fixed or following the flow).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-laglabel-3">Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, <span class="process-math">\(\bx\text{,}\)</span> and time, <span class="process-math">\(t\text{,}\)</span> and denote it by <span class="process-math">\(f(\bx, t)\text{.}\)</span> This is the <em class="emphasis">Eulerian description</em> of the property since it is defined by specifying a fixed position in space. Fixing <span class="process-math">\(\bx\)</span> and then measuring <span class="process-math">\(f\)</span> is akin to standing in the fluid at a fixed location and measuring the property value in time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laglabel-3">Again, let us consider a scalar property of the fluid (for example, its density, temperature, velocity component, pressure, etc.), and let us suppose that this quantity is a function of both position, <span class="process-math">\(\bx\text{,}\)</span> and time, <span class="process-math">\(t\text{,}\)</span> and denote it by <span class="process-math">\(f(\bx, t)\text{.}\)</span> This is the <em class="emphasis">Eulerian description</em> of the property since it is defined by specifying a fixed position in space. Fixing <span class="process-math">\(\bx\)</span> and then measuring <span class="process-math">\(f\)</span> is akin to standing in the fluid at a fixed location and measuring the property value in time.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-laglabel-4">
 <div class="para">We can alternatively write the property by its Lagrangian description. That is, given a label <span class="process-math">\(\bX\text{,}\)</span> we obtain the current position of the particle associated with this label, <span class="process-math">\(\bx(\bX,
@@ -417,12 +418,12 @@ F(\bX, t) \equiv f(\bx(\bX, t), t).
 \end{equation*}
 </div>
 <div class="para">Now, fixing <span class="process-math">\(\bX\)</span> and changing <span class="process-math">\(t\)</span> corresponds to tracking the scalar property at a material point in the flow, or, equivalently, how <span class="process-math">\(f\)</span> changes as we move with the particle along the deforming fluid.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-laglabel-5">There are thus two ways of considering time derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laglabel-5">There are thus two ways of considering time derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-eulerlag"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="def-eulerlag-1-1">
 <div class="para">We use the normal partial derivative notation to refer to an <em class="emphasis">Eulerian time derivative</em>, considered at a fixed point in space:</div>
@@ -432,7 +433,7 @@ F(\bX, t) \equiv f(\bx(\bX, t), t).
 constant}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-eulerlag-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-eulerlag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="def-eulerlag-1-2">
 <div class="para">On the other hand, the <em class="emphasis">Lagrangian time derivative</em> is defined at a fixed material point in the fluid.</div>
 <div class="displaymath process-math">
@@ -442,17 +443,17 @@ constant}.
 \end{equation*}
 </div>
 <div class="para">We often refer to the Lagrangian time derivative as the <em class="emphasis">convective derivative</em> or the <em class="emphasis">material derivative</em>.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#def-eulerlag-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-eulerlag-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 2.1.4"><a href="#def-eulerlag" title="Copy heading and permalink for Definition 2.1.4">🔗</a></div></article><article class="remark remark-like" id="subsec-laglabel-7"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+<div class="autopermalink" data-description="Definition 2.1.4"><a href="#def-eulerlag" title="Copy heading and permalink for Definition 2.1.4" aria-label="Copy heading and permalink for Definition 2.1.4">🔗</a></div></article><article class="remark remark-like" id="subsec-laglabel-7"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="subsec-laglabel-7-1">The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables. This is because physical forces act on physical particles, or material elements, of the fluid.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-7-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-laglabel-7-1">The reason why the above derivatives are introduced is because, for the purpose of much of fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However, for the purpose of deriving many governing equations, it turns out to be much easier to work with Lagrangian variables. This is because physical forces act on physical particles, or material elements, of the fluid.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.1.5"><a href="#subsec-laglabel-7" title="Copy heading and permalink for Remark 2.1.5">🔗</a></div></article><div class="para" id="subsec-laglabel-8">The natural question is how the two derivatives relate to one another. This is given by the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Remark 2.1.5"><a href="#subsec-laglabel-7" title="Copy heading and permalink for Remark 2.1.5" aria-label="Copy heading and permalink for Remark 2.1.5">🔗</a></div></article><div class="para" id="subsec-laglabel-8">The natural question is how the two derivatives relate to one another. This is given by the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-material-derivative"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">The material/convective derivative.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The material/convective derivative.</span>
 </h4>
 <div class="para logical" id="thm-material-derivative-2-1">
 <div class="para">The <em class="emphasis">material or convective derivative</em> can be defined in terms of Eulerian derivative in the following way:</div>
@@ -461,9 +462,9 @@ constant}.
 \DD{}{t} = \pd{}{t} + (\bu \cdot \nabla).\tag{2.1.1}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-material-derivative-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-material-derivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 2.1.6: The material/convective derivative"><a href="#thm-material-derivative" title="Copy heading and permalink for Theorem 2.1.6: The material/convective derivative">🔗</a></div></article><details id="thm-material-derivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-material-derivative-3-1">
+<div class="autopermalink" data-description="Theorem 2.1.6: The material/convective derivative"><a href="#thm-material-derivative" title="Copy heading and permalink for Theorem 2.1.6: The material/convective derivative" aria-label="Copy heading and permalink for Theorem 2.1.6: The material/convective derivative">🔗</a></div></article><details id="thm-material-derivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-material-derivative-3-1">
 <div class="para">This is a result of the chain rule. For a scalar function <span class="process-math">\(f = f(\bx, t)\text{,}\)</span> we have the fact that</div>
 <div class="displaymath process-math" id="thm-material-derivative-3-1-2">
 \begin{align*}
@@ -471,9 +472,9 @@ constant}.
 &amp;= \pd{f}{t} + \bu \cdot \nabla f. 
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-material-derivative-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-material-derivative-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 2.1.6.1"><a href="#thm-material-derivative-3" title="Copy heading and permalink for Proof 2.1.6.1">🔗</a></div></article></details><div class="para" id="subsec-laglabel-10">The proof to <a href="sec-eulerlagrang.html#thm-material-derivative" class="xref" data-knowl="./knowl/xref/thm-material-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.6: The material/convective derivative">Theorem 2.1.6</a> seems to use magic vector operations! In <a href="ws-kinematics.html#ex-material-derivative" class="xref" data-knowl="./knowl/xref/ex-material-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.3.2: Derivation of the material derivative">Exercise 2.3.2</a>, we ask you to check this more carefully by expanding the vector operations explicitly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-10" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 2.1.6.1"><a href="#thm-material-derivative-3" title="Copy heading and permalink for Proof 2.1.6.1" aria-label="Copy heading and permalink for Proof 2.1.6.1">🔗</a></div></article></details><div class="para" id="subsec-laglabel-10">The proof to <a href="sec-eulerlagrang.html#thm-material-derivative" class="xref" data-knowl="./knowl/xref/thm-material-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.1.6: The material/convective derivative">Theorem 2.1.6</a> seems to use magic vector operations! In <a href="ws-kinematics.html#ex-material-derivative" class="xref" data-knowl="./knowl/xref/ex-material-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.3.2: Derivation of the material derivative">Exercise 2.3.2</a>, we ask you to check this more carefully by expanding the vector operations explicitly.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-laglabel-11">
 <div class="para">We can now apply the above result to the question of how to calculate the acceleration within the fluid (more specifically, we are enquiring about the acceleration of a volume or particle within the fluid). The acceleration is given by the convective or material derivative of the velocity:</div>
@@ -483,10 +484,10 @@ constant}.
 \end{equation}
 </div>
 <div class="para">You will practice using this formula in <a href="ws-kinematics.html#ex-eulerian-lagrangian2" class="xref" data-knowl="./knowl/xref/ex-eulerian-lagrangian2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.3.4: Eulerian and Lagrangian descriptions">Exercise 2.3.4</a> of the problem set.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-laglabel-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="remark remark-like" id="remark-vector-gradient"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Vector gradient.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector gradient.</span>
 </h4>
 <div class="para logical" id="remark-vector-gradient-2">
 <div class="para">In the formula for the acceleration in <a href="sec-eulerlagrang.html#eqn-accel" class="xref" data-knowl="./knowl/xref/eqn-accel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1.2">(2.1.2)</a>, the quantity</div>
@@ -496,13 +497,13 @@ constant}.
 \end{equation*}
 </div>
 <div class="para">appears. This is a tensor (matrix). One mustn’t be too intimidated as it is just a convenient notation.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="remark-vector-gradient-3">
 <div class="para">It is worth considering what this must be by considering each individual element of the acceleration. The acceleration is calculated simply by taking the velocity,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\bu = (u, v, w) = (u_1, u_2, u_3). 
+\bu = (u, v, w) = (u_1, u_2, u_3).
 \end{equation*}
 </div>
 <div class="para">and working out the material derivative for each individual component. So we have</div>
@@ -513,7 +514,7 @@ constant}.
 </div>
 <div class="para">So the above gives each of the three components of <span class="process-math">\(\DD{\bu}{t}\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="remark-vector-gradient-4">
 <div class="para">You may prefer to see the above written in terms of the notation for <span class="process-math">\(\bu = (u, v, w)\text{,}\)</span> so it is</div>
@@ -524,32 +525,33 @@ constant}.
 \DD{w}{t} \amp= w_t + (u w_x + v w_y + w w_z)
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="remark-vector-gradient-5">
 <div class="para">You can also re-arrange the above in something closer to "matrix" form. So</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\DD{\bu}{t} = \pd{}{t}(u, v, w) + (u, v, w) \cdot \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix},
+\DD{\bu}{t} = \pd{}{t}(u, v, w) + (u, v, w) \cdot \begin{pmatrix} \nabla u \\ \nabla v \\
+\nabla w\end{pmatrix},
 \end{equation*}
 </div>
 <div class="para">and where the last quantity corresponds to</div>
 <div class="displaymath process-math" id="eqn-grad-bu">
 \begin{equation}
-\nabla \bu \equiv \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix} = 
+\nabla \bu \equiv \begin{pmatrix} \nabla u \\ \nabla v \\ \nabla w\end{pmatrix} =
 \begin{pmatrix}
 u_x &amp; u_y &amp; u_z \\
 v_x &amp; v_y &amp; v_z \\
-w_x &amp; w_y &amp; w_z 
+w_x &amp; w_y &amp; w_z
 \end{pmatrix}.\tag{2.1.4}
 \end{equation}
 </div>
 <div class="para">And hence the vector gradient can be defined as a matrix, where each row of the matrix is the gradient of the elements of the vector.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-5" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="remark-vector-gradient-6">The author’s opinionated note it is that it is easier simply to remember that the material derivative is applied via <a href="sec-eulerlagrang.html#eqn-material-deriv-ui" class="xref" data-knowl="./knowl/xref/eqn-material-deriv-ui.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1.3">(2.1.3)</a> then it is to try and untangle the multiplication of matrix via <a href="sec-eulerlagrang.html#eqn-grad-bu" class="xref" data-knowl="./knowl/xref/eqn-grad-bu.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1.4">(2.1.4)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="remark-vector-gradient-6">The author’s opinionated note it is that it is easier simply to remember that the material derivative is applied via <a href="sec-eulerlagrang.html#eqn-material-deriv-ui" class="xref" data-knowl="./knowl/xref/eqn-material-deriv-ui.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1.3">(2.1.3)</a> then it is to try and untangle the multiplication of matrix via <a href="sec-eulerlagrang.html#eqn-grad-bu" class="xref" data-knowl="./knowl/xref/eqn-grad-bu.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.1.4">(2.1.4)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#remark-vector-gradient-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 2.1.7: Vector gradient"><a href="#remark-vector-gradient" title="Copy heading and permalink for Remark 2.1.7: Vector gradient">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.1.1: The convective derivative"><a href="#subsec-laglabel" title="Copy heading and permalink for Subsection 2.1.1: The convective derivative">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: Eulerian and Lagrangian coordinates"><a href="#sec-eulerlagrang" title="Copy heading and permalink for Section 2.1: Eulerian and Lagrangian coordinates">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Remark 2.1.7: Vector gradient"><a href="#remark-vector-gradient" title="Copy heading and permalink for Remark 2.1.7: Vector gradient" aria-label="Copy heading and permalink for Remark 2.1.7: Vector gradient">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.1.1: The convective derivative"><a href="#subsec-laglabel" title="Copy heading and permalink for Subsection 2.1.1: The convective derivative" aria-label="Copy heading and permalink for Subsection 2.1.1: The convective derivative">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: Eulerian and Lagrangian coordinates"><a href="#sec-eulerlagrang" title="Copy heading and permalink for Section 2.1: Eulerian and Lagrangian coordinates" aria-label="Copy heading and permalink for Section 2.1: Eulerian and Lagrangian coordinates">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-chapter02-kinematics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-flowexamples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

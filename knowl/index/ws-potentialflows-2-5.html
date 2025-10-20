@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Doublet.</span>
+</h4>
+<div class="introduction"><div class="para">A line source of strength <span class="process-math">\(Q\)</span> is at <span class="process-math">\(z = a\)</span> and a line sink of the same strength is at <span class="process-math">\(z = -a\)</span> where <span class="process-math">\(a &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Write down the complex potential, <span class="process-math">\(f(z)\text{.}\)</span> Find <span class="process-math">\(f'(z)\text{.}\)</span> Locate any stagnation points and derive an equation for the streamlines of the flow. Finally, use a plotter, such as the one at <a class="external" href="https://potentialflow.com/" target="_blank">the potential flow simulator</a> to sketch the streamlines.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The complex potential is the sum of a line source and line sink:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} [\log(z - a) - \log(z + a)].
+\end{equation*}
+</div>
+<div class="para">Therefore the complex velocity is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
+\end{equation*}
+</div>
+<div class="para">Stagnation points are where <span class="process-math">\(f'(z) = 0\text{.}\)</span> There are no stagnation points. The streamfunction is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Im f = \frac{Q}{2\pi}(\theta_1 - \theta_2), 
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\theta_1\)</span> and <span class="process-math">\(\theta_2\)</span> are angles measured relative to the positions about <span class="process-math">\(\pm a\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta_{1,2} = \tan^{-1} \left( \frac{y}{x \mp a} \right).
+\end{equation*}
+</div>
+<div class="para">The streamlines are given where <span class="process-math">\(\psi\)</span> is constant. The streamlines are shown below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/potential_almostdoublet.png" class="contained" alt="Almost doublet"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines for a sink and source<div class="autopermalink" data-description="Figure 4.6.1"><a href="#ws-potentialflows-2-5-3-2-2" title="Copy heading and permalink for Figure 4.6.1" aria-label="Copy heading and permalink for Figure 4.6.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Answer 4.6.3.a.1"><a href="#ws-potentialflows-2-5-3-2" title="Copy heading and permalink for Answer 4.6.3.a.1" aria-label="Copy heading and permalink for Answer 4.6.3.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.3.a"><a href="#ws-potentialflows-2-5-3" title="Copy heading and permalink for Task 4.6.3.a" aria-label="Copy heading and permalink for Task 4.6.3.a">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(a \to 0\)</span> and <span class="process-math">\(Q \to \infty\)</span> while keeping the product <span class="process-math">\(aQ\)</span> fixed. This gives the flow due to a <em class="emphasis">doublet</em>. Show that its complex potential is <span class="process-math">\(\mu/z\)</span> where <span class="process-math">\(\mu\)</span> is expressed in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(Q\text{.}\)</span> It will be useful for you to use the fact that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log(1 + \alpha) = \alpha + O(\alpha^2)
+\end{equation*}
+</div>
+<div class="para">considered as an appropriate approximation when <span class="process-math">\(\alpha\)</span> is small. Show that the streamlines are circles through the origin with centres on the <span class="process-math">\(y\)</span>-axis.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Expanding the logarithms for small <span class="process-math">\(a\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log z - \log z + \log(1 - a/z) - \log(1 + a/z) \sim -\frac{2a}{z}.
+\end{equation*}
+</div>
+<div class="para">Thus in the limit <span class="process-math">\(a \to 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) \sim -\frac{Qa}{\pi} \frac{1}{z}.
+\end{equation*}
+</div>
+<div class="para">Therefore, we let both <span class="process-math">\(a \to 0\)</span> and <span class="process-math">\(Q \to \infty\)</span> in a fashion such that <span class="process-math">\(m = aQ\)</span> is fixed. We then have the potential</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \frac{\mu}{z}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\mu = -Qa/\pi.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.3.b.1"><a href="#ws-potentialflows-2-5-4-2" title="Copy heading and permalink for Solution 4.6.3.b.1" aria-label="Copy heading and permalink for Solution 4.6.3.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.3.b"><a href="#ws-potentialflows-2-5-4" title="Copy heading and permalink for Task 4.6.3.b" aria-label="Copy heading and permalink for Task 4.6.3.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 4.6.3: Doublet"><a href="#ws-potentialflows-2-5" title="Copy heading and permalink for Exercise 4.6.3: Doublet" aria-label="Copy heading and permalink for Exercise 4.6.3: Doublet">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-potentialflows.html#ws-potentialflows-2-5">in-context</a></span>
+</body>
+</html>

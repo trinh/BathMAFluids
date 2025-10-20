@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -103,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.13';
+eBookConfig.runestone_version = '7.9.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.9f7f6b353cd8c357.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.629fdbd852876870.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.cc8d78735f870736.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -133,7 +132,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-conformal-mapping.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter04-potentialflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter05-waves.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-conformal-mapping.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter04-potentialflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter05-waves.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -143,7 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
 \newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
 \newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
-\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}  
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}
 \newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
 \newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
 \newcommand{\bx}{\boldsymbol{x}}
@@ -165,6 +164,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bi}{\boldsymbol{i}}
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\br}{\boldsymbol{r}}
 \newcommand{\bzero}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
 \DeclareGraphicsRule{.gif}{png}{.png}{}
@@ -211,10 +211,11 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples and flow visualisation</span></a></div>
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
@@ -363,60 +364,185 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="ws-potentialflows"><h2 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">4.6</span><span class="space"> </span><span class="title">Exercises</span>
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h2>
-<section class="introduction" id="ws-potentialflows-1"><article class="warning remark-like" id="ws-potentialflows-1-1"><h3 class="heading">
-<span class="type">Warning</span><span class="space"> </span><span class="codenumber">4.6.1</span><span class="period">.</span>
-</h3>
-<div class="para" id="ws-potentialflows-1-1-1">We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-1-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Warning 4.6.1"><a href="#ws-potentialflows-1-1" title="Copy heading and permalink for Warning 4.6.1">🔗</a></div></article></section><article class="exercise exercise-like" id="ws-potentialflows-2"><h3 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Potential flow simulator.</span>
-</h3>
-<div class="para" id="ws-potentialflows-2-2">There is an excellent <a class="external" href="https://potentialflow.com/" target="_blank">website at www.potentialflows.com</a><details class="ptx-footnote" aria-live="polite" id="ws-potentialflows-2-2-2"><summary class="ptx-footnote__number" title="Footnote 4.6.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="ws-potentialflows-2-2-2"><code class="code-inline tex2jax_ignore">potentialflow.com/</code></div></details> that allows you to plug in different flow elements (sources/sinks, vortices, etc.) into a potential flow and observe the streamlines and potential-flow lines. In your exercises, use this to help you visualise the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Exercise 4.6.1: Potential flow simulator"><a href="#ws-potentialflows-2" title="Copy heading and permalink for Exercise 4.6.1: Potential flow simulator">🔗</a></div></article><article class="exercise exercise-like" id="ps-streamfunction-flux-compute"><h3 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Computation of the flux.</span>
-</h3>
-<div class="para" id="ps-streamfunction-flux-compute-2-1">A check point to make sure that students know how to compute fluxes.<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Exercise 4.6.2: Computation of the flux"><a href="#ps-streamfunction-flux-compute" title="Copy heading and permalink for Exercise 4.6.2: Computation of the flux">🔗</a></div></article><article class="exercise exercise-like" id="ps-image-planar01"><h3 class="heading">
-<span class="codenumber">3<span class="period">.</span></span><span class="space"> </span><span class="title">Single source in a semi-infinite flow.</span>
-</h3>
-<div class="para" id="ps-image-planar01-2-1">Verify that a single source of strength <span class="process-math">\(Q\)</span> placed at the point <span class="process-math">\(z = d &gt; 0\)</span> is insufficient to describe flow bounded in the semi-infinite region, <span class="process-math">\(x &gt; 0\text{,}\)</span> with a planar boundary at <span class="process-math">\(x = 0\text{.}\)</span> What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar01-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Exercise 4.6.3: Single source in a semi-infinite flow"><a href="#ps-image-planar01" title="Copy heading and permalink for Exercise 4.6.3: Single source in a semi-infinite flow">🔗</a></div></article><article class="exercise exercise-like" id="ps-image-planar02"><h3 class="heading">
-<span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">A source in a semi-infinite flow.</span>
-</h3>
-<div class="para" id="ps-image-planar02-2-1">Consider the situation of two point sources of identical strength, <span class="process-math">\(Q\text{,}\)</span> placed at <span class="process-math">\(z = \pm d\text{,}\)</span> with <span class="process-math">\(d \gt 0\text{.}\)</span> Develop equations for the complex potential, <span class="process-math">\(f(z) = \phi + \im \psi\text{,}\)</span> and complex velocity, <span class="process-math">\(u - \im v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar02-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ps-image-planar02-2-2">Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form.<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar02-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Exercise 4.6.4: A source in a semi-infinite flow"><a href="#ps-image-planar02" title="Copy heading and permalink for Exercise 4.6.4: A source in a semi-infinite flow">🔗</a></div></article><article class="exercise exercise-like" id="ps-image-planar03"><h3 class="heading">
-<span class="codenumber">5<span class="period">.</span></span><span class="space"> </span><span class="title">Two vortices and a dividing boundary.</span>
-</h3>
-<div class="para" id="ps-image-planar03-2-1">Consider the situation of two point vorticies of identical strength, but opposite direction, placed at <span class="process-math">\(z = \pm d\text{,}\)</span> with <span class="process-math">\(d \gt 0\text{.}\)</span> Develop equations for the complex potential, <span class="process-math">\(f(z) = \phi + \im \psi\text{,}\)</span> and complex velocity, <span class="process-math">\(u - \im v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar03-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ps-image-planar03-2-2">
-<div class="para">Demonstrate that the streamlines are given by</div>
-<div class="displaymath process-math">
+<section class="introduction" id="ws-potentialflows-1"><div class="para" id="ws-potentialflows-1-1">There is an excellent <a class="external" href="https://potentialflow.com/" target="_blank">website at www.potentialflows.com</a> that allows you to plug in different flow elements (sources/sinks, vortices, etc.) into a potential flow and observe the streamlines and potential-flow lines. In your exercises, use this to help you visualise the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="exercisegroup" id="ws-potentialflows-2">
+<h3 class="heading"><span class="title">Potential flows, part 1.</span></h3>
+<div class="introduction" id="ws-potentialflows-2-2"><div class="para" id="ws-potentialflows-2-2-1">These exercises cover approximately around sections 4.1 (the velocity potential) to 4.3 (the complex potential).<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ps-streamfunction-flux-compute"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic calculations.</span>
+</h4>
+<div class="introduction" id="ps-streamfunction-flux-compute-2">
+<div class="para logical" id="ps-streamfunction-flux-compute-2-1">
+<div class="para">The following question relates to two-dimensional potential flow.  Remember that the fluid flux through a surface given by contour <span class="process-math">\(C\)</span> is given by <a href="sec-flowexamples.html#eqn-2d-flux" class="xref" data-knowl="./knowl/xref/eqn-2d-flux.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.2">(2.2.2)</a>, or</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-2d-flux.html">
 \begin{equation*}
-\psi = \frac{\Gamma}{2\pi}\log \left( \frac{r_2}{r_1}\right).
+\int_C \bu \cdot \bn \, \de{s}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar03-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">You will get some practice on calculating this quantity below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 4.6.5: Two vortices and a dividing boundary"><a href="#ps-image-planar03" title="Copy heading and permalink for Exercise 4.6.5: Two vortices and a dividing boundary">🔗</a></div></article><article class="exercise exercise-like" id="ps-conformal-check-exp-sin"><h3 class="heading"><span class="codenumber">6<span class="period">.</span></span></h3>
-<div class="para" id="ps-conformal-check-exp-sin-1">Check.<div class="autopermalink" data-description="Paragraph"><a href="#ps-conformal-check-exp-sin-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ps-streamfunction-flux-compute-2-2">
+<div class="para">We can also calculate the total force on the surface specified by <span class="process-math">\(C\)</span> by using the integral in <a href="sec-flowexamples.html#eqn-total-force" class="xref" data-knowl="./knowl/xref/eqn-total-force.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a>. Since the force in potential flow is given by <a href="subsec-euler-momentum.html#thm-inviscid-force" class="xref" data-knowl="./knowl/xref/thm-inviscid-force.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.2: Forces in inviscid fluids">Theorem 3.3.2</a>, then the total force is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-total-force.html ./knowl/xref/thm-inviscid-force.html">
+\begin{equation*}
+\text{total force} = \int_C (-p\bn) \, \de{s}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Exercise 4.6.6"><a href="#ps-conformal-check-exp-sin" title="Copy heading and permalink for Exercise 4.6.6">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-8"><h3 class="heading">
-<span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Doublet.</span>
-</h3>
-<div class="introduction" id="ws-potentialflows-8-2"><div class="para" id="ws-potentialflows-8-2-1">A line source of strength <span class="process-math">\(Q\)</span> is at <span class="process-math">\(z = a\)</span> and a line sink of the same strength is at <span class="process-math">\(z = -a\)</span> where <span class="process-math">\(a &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-8-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">where <span class="process-math">\(p\)</span> is the pressure force given by Bernoulli’s equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-total-force.html ./knowl/xref/thm-inviscid-force.html">
+\begin{equation*}
+p = p_0 - \frac{\rho}{2} |\bu|^2,
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(p_0\)</span> is a reference value and we ignore gravity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-2-3">
+<div class="para">For each of the following elementary flows, state or calculate:</div>
+<ul class="disc" id="ps-streamfunction-flux-compute-2-3-1">
+<li id="ps-streamfunction-flux-compute-2-3-1-1">
+<div class="para" id="ps-streamfunction-flux-compute-2-3-1-1-1">the complex potential, <span class="process-math">\(f(z)\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ps-streamfunction-flux-compute-2-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ps-streamfunction-flux-compute-2-3-1-2">
+<div class="para" id="ps-streamfunction-flux-compute-2-3-1-2-1">the velocity vector, written in vector form <span class="process-math">\(\bu = [u, v]\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ps-streamfunction-flux-compute-2-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ps-streamfunction-flux-compute-2-3-1-3">
+<div class="para" id="ps-streamfunction-flux-compute-2-3-1-3-1">the flux and fluid force on a surface consisting of a circle of unit radius;<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ps-streamfunction-flux-compute-2-3-1-3-2">
+<em class="emphasis">Hint:</em> the unit normal for the circle is <span class="process-math">\(\bn = [\cos\theta, \sin\theta]\text{;}\)</span> when converting to polar coordinates remember that <span class="process-math">\(\de{s} = r\de{\theta}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ps-streamfunction-flux-compute-2-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ps-streamfunction-flux-compute-2-3-1-4">
+<div class="para" id="ps-streamfunction-flux-compute-2-3-1-4-1">the flux and fluid force on a surface consisting of a plate given by the line <span class="process-math">\(y = -x + 1\)</span> with <span class="process-math">\(x &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ps-streamfunction-flux-compute-2-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ps-streamfunction-flux-compute-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ps-streamfunction-flux-compute-3-1-1">Uniform flow of velocity <span class="process-math">\(U\)</span> oriented at an angle of <span class="process-math">\(\pi/4\)</span> to the horizontal.<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ps-streamfunction-flux-compute-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-1">
+<div class="para">(i) complex potential given in the notes is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = U\e^{-\im\alpha}z = U\e^{-\im \pi/4}z\text{;}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-2">
+<div class="para">(ii) complex velocity is given by <span class="process-math">\(f'(z) = u - \im v = U\e^{-\im \pi/4}\text{.}\)</span> Writing out the velocity components in vector form, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bu = U \Bigl[ \cos(\pi/4), \, \sin(\pi/4) \Bigr] = U \frac{\sqrt{2}}{2} \Bigl[1, 1\Bigr].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-3">
+<div class="para">(iii) We expect the flux past a circle will be zero (since the flow will enter one side and exit the other). The flux is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{r = 1} \bu \cdot \bn \, \de{s} = U\frac{\sqrt{2}}{2} \int_0^{2\pi} [1, 1] \cdot [\cos\theta, \sin\theta] \de{\theta} = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-4">
+<div class="para">The force is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bF_{\text{total}} = \left(\frac{\rho}{2} U^2 - p_0\right) \int_0^{2\pi} [\cos\theta, \sin\theta] \, \de{\theta} = [0, 0]. 
+\end{equation*}
+</div>
+<div class="para">The total force again is zero since the force on the two hemispheres will cancel themselves out.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-5">
+<div class="para">(iv) The normal of the plate is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bn = \frac{[1, 1]}{\sqrt{2}}
+\end{equation*}
+</div>
+<div class="para">(here we assume this normal is pointing ’out’). We can parameterise the plate using a vector equation for the position vector:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\br(t) = [t, -t + 1], \quad 0 \leq t \leq 1,
+\end{equation*}
+</div>
+<div class="para">since the equation of the line is <span class="process-math">\(y = -x + 1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\br'(t)| = |[1, -1]| = \sqrt{2}. 
+\end{equation*}
+</div>
+<div class="para">So the surface conversion is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\de{s} = |\br'(t)| \, \de{t} = \sqrt{2} \de{t}.
+\end{equation*}
+</div>
+<div class="para">The flux is then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U\frac{\sqrt{2}}{2} \int_{t = 0}^1 \frac{[1, 1]}{\sqrt{2}} \cdot [1, 1] \sqrt{2} \de{t} = \sqrt{2}U.
+\end{equation*}
+</div>
+<div class="para">The above makes perfect sense. The fluid is entirely normal to the plate, and the plate has length <span class="process-math">\(\sqrt{2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-streamfunction-flux-compute-3-2-6">
+<div class="para">For the force, remember that the pressure is constant, since the speed is constant. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bF_{\text{total}}= \left(\frac{\rho}{2}U^2 - p_0\right) \int_0^1 \frac{[1, 1]}{\sqrt{2}} \cdot \, \sqrt{2} \, \de{t} =\left(\frac{\rho}{2}U^2 - p_0\right) [1, 1].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-3-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.1.a.1"><a href="#ps-streamfunction-flux-compute-3-2" title="Copy heading and permalink for Solution 4.6.1.a.1" aria-label="Copy heading and permalink for Solution 4.6.1.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.1.a"><a href="#ps-streamfunction-flux-compute-3" title="Copy heading and permalink for Task 4.6.1.a" aria-label="Copy heading and permalink for Task 4.6.1.a">🔗</a></div></article><article class="task exercise-like" id="ps-streamfunction-flux-compute-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ps-streamfunction-flux-compute-4-1-1">A line source of strength <span class="process-math">\(Q\)</span> located at the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.6.1.b"><a href="#ps-streamfunction-flux-compute-4" title="Copy heading and permalink for Task 4.6.1.b" aria-label="Copy heading and permalink for Task 4.6.1.b">🔗</a></div></article><article class="task exercise-like" id="ps-streamfunction-flux-compute-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ps-streamfunction-flux-compute-5-1-1">Stagnation point flow with a stagnation point at the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.6.1.c"><a href="#ps-streamfunction-flux-compute-5" title="Copy heading and permalink for Task 4.6.1.c" aria-label="Copy heading and permalink for Task 4.6.1.c">🔗</a></div></article><article class="task exercise-like" id="ps-streamfunction-flux-compute-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ps-streamfunction-flux-compute-6-1-1">A line vortex flow of strength <span class="process-math">\(\Gamma\)</span> placed at the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ps-streamfunction-flux-compute-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.6.1.d"><a href="#ps-streamfunction-flux-compute-6" title="Copy heading and permalink for Task 4.6.1.d" aria-label="Copy heading and permalink for Task 4.6.1.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 4.6.1: Basic calculations"><a href="#ps-streamfunction-flux-compute" title="Copy heading and permalink for Exercise 4.6.1: Basic calculations" aria-label="Copy heading and permalink for Exercise 4.6.1: Basic calculations">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-2-4"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluation of the flux.</span>
+</h4>
+<div class="para" id="ws-potentialflows-2-4-2-1">Return to the previous question and, instead of directly calculating the flux via a line integral, use <a href="ch-chapter04-potentialflows-4.html#thm-flux-streamlines" class="xref" data-knowl="./knowl/xref/thm-flux-streamlines.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.3: Flux between streamlines">Theorem 4.2.3</a> to calculate the flux for the two geometries (unit circle and straight plate) for each of the flows given.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.2: Evaluation of the flux"><a href="#ws-potentialflows-2-4" title="Copy heading and permalink for Exercise 4.6.2: Evaluation of the flux" aria-label="Copy heading and permalink for Exercise 4.6.2: Evaluation of the flux">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-2-5"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Doublet.</span>
+</h4>
+<div class="introduction" id="ws-potentialflows-2-5-2"><div class="para" id="ws-potentialflows-2-5-2-1">A line source of strength <span class="process-math">\(Q\)</span> is at <span class="process-math">\(z = a\)</span> and a line sink of the same strength is at <span class="process-math">\(z = -a\)</span> where <span class="process-math">\(a &gt; 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<article class="task exercise-like" id="ws-potentialflows-8-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="ws-potentialflows-8-3-1-1">Write down the complex potential, <span class="process-math">\(f(z)\text{.}\)</span> Find <span class="process-math">\(f'(z)\text{.}\)</span> Locate any stagnation points and derive an equation for the streamlines of the flow. Finally, use a plotter, such as the one at <a class="external" href="https://potentialflow.com/" target="_blank">the potential flow simulator</a><details class="ptx-footnote" aria-live="polite" id="ws-potentialflows-8-3-1-1-4"><summary class="ptx-footnote__number" title="Footnote 4.6.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="ws-potentialflows-8-3-1-1-4"><code class="code-inline tex2jax_ignore">potentialflow.com/</code></div></details> to sketch the streamlines.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-8-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="ws-potentialflows-2-5-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ws-potentialflows-2-5-3-1-1">Write down the complex potential, <span class="process-math">\(f(z)\text{.}\)</span> Find <span class="process-math">\(f'(z)\text{.}\)</span> Locate any stagnation points and derive an equation for the streamlines of the flow. Finally, use a plotter, such as the one at <a class="external" href="https://potentialflow.com/" target="_blank">the potential flow simulator</a> to sketch the streamlines.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ws-potentialflows-8-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para logical" id="ws-potentialflows-8-3-2-1">
+<div class="solutions"><details id="ws-potentialflows-2-5-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="ws-potentialflows-2-5-3-2-1">
 <div class="para">The complex potential is the sum of a line source and line sink:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -442,13 +568,13 @@ f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
 \end{equation*}
 </div>
 <div class="para">The streamlines are given where <span class="process-math">\(\psi\)</span> is constant. The streamlines are shown below.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-8-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="ws-potentialflows-8-3-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/potential_almostdoublet.png" class="contained" alt="Almost doublet"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6.2<span class="period">.</span></span><span class="space"> </span>Streamlines for a sink and source<div class="autopermalink" data-description="Figure 4.6.2"><a href="#ws-potentialflows-8-3-2-2" title="Copy heading and permalink for Figure 4.6.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Answer 4.6.7.a.1"><a href="#ws-potentialflows-8-3-2" title="Copy heading and permalink for Answer 4.6.7.a.1">🔗</a></div>
+<figure class="figure figure-like" id="ws-potentialflows-2-5-3-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/potential_almostdoublet.png" class="contained" alt="Almost doublet"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines for a sink and source<div class="autopermalink" data-description="Figure 4.6.1"><a href="#ws-potentialflows-2-5-3-2-2" title="Copy heading and permalink for Figure 4.6.1" aria-label="Copy heading and permalink for Figure 4.6.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Answer 4.6.3.a.1"><a href="#ws-potentialflows-2-5-3-2" title="Copy heading and permalink for Answer 4.6.3.a.1" aria-label="Copy heading and permalink for Answer 4.6.3.a.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 4.6.7.a"><a href="#ws-potentialflows-8-3" title="Copy heading and permalink for Task 4.6.7.a">🔗</a></div></article><article class="task exercise-like" id="ws-potentialflows-8-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="ws-potentialflows-8-4-1-1">
+<div class="autopermalink" data-description="Task 4.6.3.a"><a href="#ws-potentialflows-2-5-3" title="Copy heading and permalink for Task 4.6.3.a" aria-label="Copy heading and permalink for Task 4.6.3.a">🔗</a></div></article><article class="task exercise-like" id="ws-potentialflows-2-5-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="ws-potentialflows-2-5-4-1-1">
 <div class="para">Let <span class="process-math">\(a \to 0\)</span> and <span class="process-math">\(Q \to \infty\)</span> while keeping the product <span class="process-math">\(aQ\)</span> fixed. This gives the flow due to a <em class="emphasis">doublet</em>. Show that its complex potential is <span class="process-math">\(\mu/z\)</span> where <span class="process-math">\(\mu\)</span> is expressed in terms of <span class="process-math">\(a\)</span> and <span class="process-math">\(Q\text{.}\)</span> It will be useful for you to use the fact that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -456,10 +582,10 @@ f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
 \end{equation*}
 </div>
 <div class="para">considered as an appropriate approximation when <span class="process-math">\(\alpha\)</span> is small. Show that the streamlines are circles through the origin with centres on the <span class="process-math">\(y\)</span>-axis.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-8-4-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ws-potentialflows-8-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="ws-potentialflows-8-4-2-1">
+<div class="solutions"><details id="ws-potentialflows-2-5-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-potentialflows-2-5-4-2-1">
 <div class="para">Expanding the logarithms for small <span class="process-math">\(a\)</span> gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -480,11 +606,123 @@ f(z) = \frac{\mu}{z}
 </div>
 <div class="para">where <span class="process-math">\(\mu = -Qa/\pi.\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-8-4-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-2-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 4.6.7.b.1"><a href="#ws-potentialflows-8-4-2" title="Copy heading and permalink for Solution 4.6.7.b.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 4.6.3.b.1"><a href="#ws-potentialflows-2-5-4-2" title="Copy heading and permalink for Solution 4.6.3.b.1" aria-label="Copy heading and permalink for Solution 4.6.3.b.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 4.6.7.b"><a href="#ws-potentialflows-8-4" title="Copy heading and permalink for Task 4.6.7.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 4.6.7: Doublet"><a href="#ws-potentialflows-8" title="Copy heading and permalink for Exercise 4.6.7: Doublet">🔗</a></div></article><div class="autopermalink" data-description="Exercises 4.6"><a href="#ws-potentialflows" title="Copy heading and permalink for Exercises 4.6">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 4.6.3.b"><a href="#ws-potentialflows-2-5-4" title="Copy heading and permalink for Task 4.6.3.b" aria-label="Copy heading and permalink for Task 4.6.3.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 4.6.3: Doublet"><a href="#ws-potentialflows-2-5" title="Copy heading and permalink for Exercise 4.6.3: Doublet" aria-label="Copy heading and permalink for Exercise 4.6.3: Doublet">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 4.6.1–3: Potential flows, part 1"><a href="#ws-potentialflows-2" title="Copy heading and permalink for Exercise Group 4.6.1–3: Potential flows, part 1" aria-label="Copy heading and permalink for Exercise Group 4.6.1–3: Potential flows, part 1">🔗</a></div>
+</div>
+<div class="exercisegroup" id="ws-potentialflows-3">
+<h3 class="heading"><span class="title">Potential flows, part 2.</span></h3>
+<div class="introduction" id="ws-potentialflows-3-2"><div class="para" id="ws-potentialflows-3-2-1">These exercises will cover the second part of Chapter 4, from sec. 4.4 (the method of images).<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="ps-image-planar01"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Single source in a semi-infinite flow.</span>
+</h4>
+<div class="para" id="ps-image-planar01-2-1">Verify that a single source of strength <span class="process-math">\(Q\)</span> placed at the point <span class="process-math">\(z = d &gt; 0\)</span> is insufficient to describe flow bounded in the semi-infinite region, <span class="process-math">\(x &gt; 0\text{,}\)</span> with a planar boundary at <span class="process-math">\(x = 0\text{.}\)</span> What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.4: Single source in a semi-infinite flow"><a href="#ps-image-planar01" title="Copy heading and permalink for Exercise 4.6.4: Single source in a semi-infinite flow" aria-label="Copy heading and permalink for Exercise 4.6.4: Single source in a semi-infinite flow">🔗</a></div></article><article class="exercise exercise-like" id="ps-image-planar02"><h4 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A source in a semi-infinite flow.</span>
+</h4>
+<div class="para" id="ps-image-planar02-2-1">Consider the situation of two point sources of identical strength, <span class="process-math">\(Q\text{,}\)</span> placed at <span class="process-math">\(z = \pm d\text{,}\)</span> with <span class="process-math">\(d \gt 0\text{.}\)</span> Develop equations for the complex potential, <span class="process-math">\(f(z) = \phi + \im \psi\text{,}\)</span> and complex velocity, <span class="process-math">\(u - \im v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ps-image-planar02-2-2">Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form.<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar02-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.5: A source in a semi-infinite flow"><a href="#ps-image-planar02" title="Copy heading and permalink for Exercise 4.6.5: A source in a semi-infinite flow" aria-label="Copy heading and permalink for Exercise 4.6.5: A source in a semi-infinite flow">🔗</a></div></article><article class="exercise exercise-like" id="ps-image-planar03"><h4 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Two vortices and a dividing boundary.</span>
+</h4>
+<div class="para" id="ps-image-planar03-2-1">Consider the situation of two point vorticies of identical strength, but opposite direction, placed at <span class="process-math">\(z = \pm d\text{,}\)</span> with <span class="process-math">\(d \gt 0\text{.}\)</span> Develop equations for the complex potential, <span class="process-math">\(f(z) = \phi + \im \psi\text{,}\)</span> and complex velocity, <span class="process-math">\(u - \im v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ps-image-planar03-2-2">
+<div class="para">Demonstrate that the streamlines are given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi = \frac{\Gamma}{2\pi}\log \left( \frac{r_2}{r_1}\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-image-planar03-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.6: Two vortices and a dividing boundary"><a href="#ps-image-planar03" title="Copy heading and permalink for Exercise 4.6.6: Two vortices and a dividing boundary" aria-label="Copy heading and permalink for Exercise 4.6.6: Two vortices and a dividing boundary">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-3-6"><h4 class="heading">
+<span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A line source in a flow; stagnation points.</span>
+</h4>
+<div class="para" id="ws-potentialflows-3-6-2-1">Incompressible inviscid fluid occupies the region <span class="process-math">\(y &gt; 0\text{,}\)</span> and there is a rigid plane wall at <span class="process-math">\(y = 0\text{.}\)</span> There is a uniform flow, speed <span class="process-math">\(U\text{,}\)</span> in the positive <span class="process-math">\(x\)</span>-direction, and a line source of strength <span class="process-math">\(Q\)</span> at <span class="process-math">\((0, a)\text{,}\)</span> where <span class="process-math">\(a &gt; 0\text{.}\)</span> Find the complex potential <span class="process-math">\(f(z)\)</span> and calculate <span class="process-math">\(f'(z)\text{.}\)</span> Let <span class="process-math">\(\beta = Q/(2\pi aU)\text{.}\)</span> Show that if <span class="process-math">\(\beta &gt; 1\)</span> there are two stagnation points, both on the wall, while if <span class="process-math">\(\beta &lt; 1\)</span> there is only one, in the fluid, a distance <span class="process-math">\(a\)</span> from the origin. Try to sketch the streamlines in either case<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-potentialflows-3-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-potentialflows-3-6-3-1">
+<div class="para">The potential is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = Uz + \frac{Q}{2\pi} [\log(z - a\im) + \log(z + a\im)] = Uz + \frac{Q}{2\pi} \log(z^2 + a^2).
+\end{equation*}
+</div>
+<div class="para">The complex velocity is then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(z) = U + \frac{Qz}{\pi(z^2 + a^2)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ws-potentialflows-3-6-3-2">
+<div class="para">A stagnation point requires <span class="process-math">\(f'(z) = 0\)</span> and so we solve the resultant quadratic to obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(\beta = Q/(2\pi a U)\text{,}\)</span> there are two real roots if <span class="process-math">\(\beta &gt; 1\text{.}\)</span> Hence this is the case of two stagnation points along the axis. If <span class="process-math">\(\beta &lt; 1\text{,}\)</span> then there two complex conjugate points, and hence only one stagnation point in the flow field.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-6-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ws-potentialflows-3-6-3-3"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/potential_stag_2_inflow.png" class="contained" alt="image"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 0.94\)</span><div class="autopermalink" data-description="Figure 4.6.2"><a href="#ws-potentialflows-3-6-3-3" title="Copy heading and permalink for Figure 4.6.2" aria-label="Copy heading and permalink for Figure 4.6.2">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="ws-potentialflows-3-6-3-4"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/potential_stag_2_onbound.png" class="contained" alt="image"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 1.3\)</span><div class="autopermalink" data-description="Figure 4.6.3"><a href="#ws-potentialflows-3-6-3-4" title="Copy heading and permalink for Figure 4.6.3" aria-label="Copy heading and permalink for Figure 4.6.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 4.6.7.1"><a href="#ws-potentialflows-3-6-3" title="Copy heading and permalink for Solution 4.6.7.1" aria-label="Copy heading and permalink for Solution 4.6.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4.6.7: A line source in a flow; stagnation points"><a href="#ws-potentialflows-3-6" title="Copy heading and permalink for Exercise 4.6.7: A line source in a flow; stagnation points" aria-label="Copy heading and permalink for Exercise 4.6.7: A line source in a flow; stagnation points">🔗</a></div></article><article class="exercise exercise-like" id="ps-conformal-check-exp-sin"><h4 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The exponential and sinusoidal conformal maps.</span>
+</h4>
+<div class="para" id="ps-conformal-check-exp-sin-2">Check where each of the labeled points in the associated diagrams for the exponential map <a href="sec-conformal-mapping.html#eqn-conformal-exp-map" class="xref" data-knowl="./knowl/xref/eqn-conformal-exp-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.4">(4.5.4)</a> and <a href="sec-conformal-mapping.html#eqn-conformal-sin-map" class="xref" data-knowl="./knowl/xref/eqn-conformal-sin-map.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.5">(4.5.5)</a> are sent, from the <span class="process-math">\(z\)</span>-plane to the <span class="process-math">\(\zeta\)</span>-plane. In each of these cases, verify that an interior (within the fluid domain) is sent to the upper half-plane.<div class="autopermalink" data-description="Paragraph"><a href="#ps-conformal-check-exp-sin-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ps-conformal-check-exp-sin-3">Construct the complex potential that corresponds to a single line source placed within the fluid in each of these cases (an infinite strip of height <span class="process-math">\(h\)</span> and a semi-infinite strip).<div class="autopermalink" data-description="Paragraph"><a href="#ps-conformal-check-exp-sin-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.8: The exponential and sinusoidal conformal maps"><a href="#ps-conformal-check-exp-sin" title="Copy heading and permalink for Exercise 4.6.8: The exponential and sinusoidal conformal maps" aria-label="Copy heading and permalink for Exercise 4.6.8: The exponential and sinusoidal conformal maps">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-3-8"><h4 class="heading">
+<span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elementary conformal maps.</span>
+</h4>
+<div class="para" id="ws-potentialflows-3-8-2-1">Define the term <em class="emphasis">conformal map</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ws-potentialflows-3-8-2-2">Write down the conformal maps from the wedge <span class="process-math">\(0 &lt; \textrm{arg}(z) &lt; \alpha\text{,}\)</span> from the strip <span class="process-math">\(-a &lt; y &lt; a\)</span> and from the semi-infinite strip <span class="process-math">\(0 &lt; y &lt; a\text{,}\)</span> <span class="process-math">\(x &gt; 0\)</span> into the upper half-plane. Find all the points at which the map is not conformal.<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.9: Elementary conformal maps"><a href="#ws-potentialflows-3-8" title="Copy heading and permalink for Exercise 4.6.9: Elementary conformal maps" aria-label="Copy heading and permalink for Exercise 4.6.9: Elementary conformal maps">🔗</a></div></article><article class="exercise exercise-like" id="ws-potentialflows-3-9"><h4 class="heading">
+<span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow past a flat plate.</span>
+</h4>
+<div class="para logical" id="ws-potentialflows-3-9-2-1">
+<div class="para">Show that the circle <span class="process-math">\(|\zeta| = a\)</span> is mapped tro a line segment</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S = \{ z: \Im z = 0, -2a \leq \Re z \leq 2a\}
+\end{equation*}
+</div>
+<div class="para">along the real <span class="process-math">\(z\)</span>-axis by the Joukowski transformation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = \zeta + \frac{a^2}{\zeta}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ws-potentialflows-3-9-2-2">
+<div class="para">Deduce that the extttterior of the line segment is mapped to the exterior of the circle <span class="process-math">\(|\zeta| = a\)</span> by the transformation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta = \frac{1}{2}\left( z + \sqrt{z^2 - 4a^2}\right).
+\end{equation*}
+</div>
+<div class="para">Carefully define the function <span class="process-math">\(\sqrt{z^2 - 4a^2}\)</span> and determine where the mapping above is conformal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-potentialflows-3-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.6.10: Flow past a flat plate"><a href="#ws-potentialflows-3-9" title="Copy heading and permalink for Exercise 4.6.10: Flow past a flat plate" aria-label="Copy heading and permalink for Exercise 4.6.10: Flow past a flat plate">🔗</a></div></article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 4.6.4–10: Potential flows, part 2"><a href="#ws-potentialflows-3" title="Copy heading and permalink for Exercise Group 4.6.4–10: Potential flows, part 2" aria-label="Copy heading and permalink for Exercise Group 4.6.4–10: Potential flows, part 2">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises 4.6"><a href="#ws-potentialflows" title="Copy heading and permalink for Exercises 4.6" aria-label="Copy heading and permalink for Exercises 4.6">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-conformal-mapping.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter05-waves.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
