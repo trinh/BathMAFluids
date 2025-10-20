@@ -701,29 +701,35 @@
         <solution>
           <p> A particle moves with the velocity of the fluid. Then it must satisfy the equations <me>
             \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
-              \quad\Rightarrow\quad
-              \dd{^2x}{t^2} = -\dd{y}{t} = -x(t).
-            </me>
-            Trying solutions of the form <m>x(t)=\e^{\lambda t}</m> gives <m>\lambda=\pm i</m>, so
-            the general solution is <me>
-              x(t) = Ae^{it}+Be^{-it},
-            </me> or, equivalently, <me>
-              x(t) = C\cos t + D\sin t,
-            </me> where <m>C</m> and <m>D</m>
-            are constants, and <me>
-              y(t) =-\dd{x}{t}= C\sin t - D\cos t.
-            </me> Setting <m>
-            x(0)=x_0</m> and <m>y(0)=y_0</m> gives <m>C=x_0</m> and <m>D=-y_0</m>, so <me>
-              \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
-            </me>
-            This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around
-            the origin. The velocity is <me>
-              (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
-            </me>
-          </p>
-        </solution>
-      </task>
-
+            \quad\Rightarrow\quad
+            \dd{^2x}{t^2} = -\dd{y}{t} = -x(t).
+          </me>
+          Trying solutions of the form <m>x(t)=\e^{\lambda t}</m> gives <m>\lambda=\pm i</m>,
+          so the general solution is
+          <me>
+            x(t) = Ae^{it}+Be^{-it},
+          </me>
+          or, equivalently,
+          <me>
+            x(t) = C\cos t + D\sin t,
+          </me>
+          where <m>C</m> and <m>D</m> are constants, and
+          <me>
+            y(t) =-\dd{x}{t}= C\sin t - D\cos t.
+          </me>
+          Setting <m>x(0)=x_0</m> and <m>y(0)=y_0</m> gives <m>C=x_0</m> and <m>D=-y_0</m>, so
+          <me>
+            \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
+          </me>
+          This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around the origin.
+          The velocity is
+          <me>
+            \bu(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
+          </me>
+              </p>
+            </solution>
+          </task>
+          
 
       <task>
         <statement>
@@ -731,19 +737,50 @@
             Express the position and velocity in polar coordinates. What do you notice?
           </p>
         </statement>
+        <hint>
+          <p>
+            Note that
+            <me>
+              \hat{\boldsymbol{r}}=
+              \left(\begin{matrix}
+                \cos\theta\\\sin\theta
+              \end{matrix}\right)
+              =\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j},
+              \quad
+              \hat{\boldsymbol{\theta}}=
+              \left(\begin{matrix}
+                -\sin\theta\\\cos\theta
+              \end{matrix}\right)
+              =-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
+            </me>
+            see also <xref ref="eq-polarcartunitvectors"/>
+          </p>
+        </hint>
         <solution>
           <p>The calculation works out more simply in polar coordinates; the velocity field is <me>
             \bu = r\be_\theta,
-            </me> where <m>\be_{\theta}</m> is the
-            angular unit vector given in <xref ref="eqn-appendix-polar-er-etheta" />. Then the
-            equation for particle paths is <me>
-              \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
-            </me>
-            Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>, where <m>
-            \theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>. </p>
-        </solution>
-      </task>
-    </exercise>
+          </me>
+          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eq-polarcartunitvectors"/>. Then the equation for particle paths is
+          <me>
+            \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
+          </me>
+          Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>,
+          where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>.
+          The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
+        </p>
+        <p>
+          Note that the expression for the velocity in polar coordinates is simpler than
+          that in Cartesian coordinates, being in one coordinate direction only.
+          Performing this conversion makes it easier to find pathlines and streamlines.
+        </p>
+        <p>
+          This flow is an example of <em>rigid-body</em> rotation,
+          that is the fluid is moving with a velocity field that would be attainable
+          for a rigid body, and there is no <em>relative</em> motion of the fluid particles.
+        </p>
+      </solution>
+          </task>
+</exercise>
 
     <exercise xml:id="ex-eulerian-lagrangian2">
       <title>Eulerian and Lagrangian descriptions</title>
@@ -893,12 +930,27 @@
 
       <task>
         <statement>
-          <p> Show that a quantity <m>f(\bx,t)</m> is preserved following the flow if <me>
+          <p>
+            By drawing a sketch of a pathline and considering the points
+            <m>\bx</m> where the particle is at time <m>t</m> and
+            <m>\bx+\de\bx</m> at time <m>t+\de t</m>,
+            show that a quantity <m>f(\bx,t)</m> is preserved following the flow if
+            <me>
             \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
             </me>
           </p>
         </statement>
-
+        <hint>
+          <p>
+            We can write <m>\de\bx=\bu(\bx,t)\de t+\dots</m>, where "<m>\dots</m>"
+            indicates smaller corrections. We need to find
+            <me>
+              \DD{f}{t}=\lim_{\de t\rightarrow0}\frac{f(\bx+\de\bx,t+\de t)-f(\bx,t)}{\de t}.
+            </me>
+            Now write <m>f(\bx+\de\bx,t+\de t)</m> as a Taylor series about <m>f(\bx,t)</m>
+            and use this to simplify the above expression.
+          </p>
+        </hint>
         <answer>
           <figure xml:id="lagrange-problem">
             <caption>Pathline, showing the particle positions at times <m>t</m> and <m>t+\de t</m>.</caption>
@@ -923,13 +975,23 @@
 
       <task>
         <statement>
-          <p> Show also that <m>f</m> is constant along streamlines if <me>
+          <p> In a similar way, show that <m>f</m> is constant along streamlines if
+            <me>
               \bu\cdot\nabla f=0.
             </me>
           </p>
         </statement>
-
-
+        <hint>
+          <p>
+            In this case we can consider the points <m>\bx</m> and <m>\bx+\de\bx</m>
+            on the streamline, where <m>\de\bx=\bu(\bx,t)\de s+\dots</m>, where "<m>\dots</m>"
+            indicates smaller corrections. We need to find
+            <me>
+              \dd{f}{s}=\lim_{\de s\rightarrow0}\frac{f(\bx+\de\bx,t)-f(\bx,t)}{\de t}.
+            </me>
+            Now write <m>f(\bx+\de\bx,t)</m> as a Taylor series about <m>f(\bx,t)</m>.
+          </p>
+        </hint>
         <answer>
           <p> Now suppose that in <xref ref="lagrange-problem" />, we have shown instead the
             situation of a streamline.</p>
@@ -986,7 +1048,8 @@
 
       <task>
         <statement>
-          <p> the pathline of the particle starting from <m>(0,0)</m>, </p>
+          <p> the pathline of the particle starting from <m>(x_0,y_0)</m>.
+            Hence find and sketch the pathline of the particle that starts from <m>(0,0)</m>, </p>
         </statement>
 
 
@@ -1014,6 +1077,15 @@
         <statement>
           <p> and the streaklines passing through <m>(0,0)</m>. </p>
         </statement>
+        <hint>
+          <p>
+            The expression for a general pathline starting from <m>(x_0,y_0)</m> is given by
+              <me>
+                x = x_0 + t,\quad
+                y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+              </me>
+          </p>
+        </hint>
         <answer>
           <p> Suppose the particle that started at <m>(x_0,y_0)</m> hits the special point <m>(0,0)</m>
             at time <m>t_1</m>. From the pathline equation: <me>

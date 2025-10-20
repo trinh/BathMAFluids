@@ -355,7 +355,16 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vector-calculus-planepolar.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Identities for plane polar coordinates</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-converting-between-coordinates.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Converting between different coordinate systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar" class="internal"><span class="codenumber">A.1.1</span> <span class="title">Converting between Cartesian coordinates and cylindrical polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-plane-polar" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Converting between Cartesian coordinates and plane polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-spherical-polar" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Converting between Cartesian coordinates and spherical polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-general-conversion" class="internal"><span class="codenumber">A.1.4</span> <span class="title">General conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-differential-operators" class="internal"><span class="codenumber">A.1.5</span> <span class="title">Differential operators</span></a></div></li>
+</ul>
+</li></ul>
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
@@ -478,7 +487,7 @@ y(t) =-\dd{x}{t}= C\sin t - D\cos t.
 <div class="para">This is a circular path of radius <span class="process-math">\(\sqrt{x_0^2+y_0^2}\)</span> going anticlockwise around the origin. The velocity is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-(x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
+\bu(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -488,26 +497,55 @@ y(t) =-\dd{x}{t}= C\sin t - D\cos t.
 <div class="autopermalink" data-description="Task 2.3.3.a"><a href="#ex-eulerian-lagrangian-3" title="Copy heading and permalink for Task 2.3.3.a" aria-label="Copy heading and permalink for Task 2.3.3.a">🔗</a></div></article><article class="task exercise-like" id="ex-eulerian-lagrangian-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="ex-eulerian-lagrangian-4-1-1">Express the position and velocity in polar coordinates. What do you notice?<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-eulerian-lagrangian-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-eulerian-lagrangian-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para logical" id="ex-eulerian-lagrangian-4-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-polarcartunitvectors.html">
+\begin{equation*}
+\hat{\boldsymbol{r}}=
+\left(\begin{matrix}
+\cos\theta\\\sin\theta
+\end{matrix}\right)
+=\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j},
+\quad
+\hat{\boldsymbol{\theta}}=
+\left(\begin{matrix}
+-\sin\theta\\\cos\theta
+\end{matrix}\right)
+=-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
+\end{equation*}
+</div>
+<div class="para">see also <a href="sec-converting-between-coordinates.html#eq-polarcartunitvectors" class="xref" data-knowl="./knowl/xref/eq-polarcartunitvectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation A.1.5">(A.1.5)</a>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.3.b.1"><a href="#ex-eulerian-lagrangian-4-2" title="Copy heading and permalink for Hint 2.3.3.b.1" aria-label="Copy heading and permalink for Hint 2.3.3.b.1">🔗</a></div>
+</div></details><details id="ex-eulerian-lagrangian-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-eulerian-lagrangian-4-3-1">
 <div class="para">The calculation works out more simply in polar coordinates; the velocity field is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-appendix-polar-er-etheta.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-polarcartunitvectors.html">
 \begin{equation*}
 \bu = r\be_\theta,
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(\be_{\theta}\)</span> is the angular unit vector given in <a href="sec-vector-calculus-planepolar.html#eqn-appendix-polar-er-etheta" class="xref" data-knowl="./knowl/xref/eqn-appendix-polar-er-etheta.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation A.1.2">(A.1.2)</a>. Then the equation for particle paths is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-appendix-polar-er-etheta.html">
+<div class="para">where <span class="process-math">\(\be_{\theta}\)</span> is the angular unit vector given in <a href="sec-converting-between-coordinates.html#eq-polarcartunitvectors" class="xref" data-knowl="./knowl/xref/eq-polarcartunitvectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation A.1.5">(A.1.5)</a>. Then the equation for particle paths is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-polarcartunitvectors.html">
 \begin{equation*}
 \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
 \end{equation*}
 </div>
 <div class="para">Thus <span class="process-math">\(r(t)=r_0=\sqrt{x_0^2+y_0^2}\)</span> and <span class="process-math">\(\theta(t)=\theta_0+t\text{,}\)</span> where <span class="process-math">\(\theta_0=\tan^{-1}(y_0/x_0)\text{.}\)</span> The velocity is <span class="process-math">\(\bu(t)=r_0\be_{\theta}(t)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 2.3.3.b.1"><a href="#ex-eulerian-lagrangian-4-2" title="Copy heading and permalink for Solution 2.3.3.b.1" aria-label="Copy heading and permalink for Solution 2.3.3.b.1">🔗</a></div>
-</div></details></div>
+<div class="para" id="ex-eulerian-lagrangian-4-3-2">Note that the expression for the velocity in polar coordinates is simpler than that in Cartesian coordinates, being in one coordinate direction only. Performing this conversion makes it easier to find pathlines and streamlines.<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-eulerian-lagrangian-4-3-3">This flow is an example of <em class="emphasis">rigid-body</em> rotation, that is the fluid is moving with a velocity field that would be attainable for a rigid body, and there is no <em class="emphasis">relative</em> motion of the fluid particles.<div class="autopermalink" data-description="Paragraph"><a href="#ex-eulerian-lagrangian-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.3.3.b.1"><a href="#ex-eulerian-lagrangian-4-3" title="Copy heading and permalink for Solution 2.3.3.b.1" aria-label="Copy heading and permalink for Solution 2.3.3.b.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Task 2.3.3.b"><a href="#ex-eulerian-lagrangian-4" title="Copy heading and permalink for Task 2.3.3.b" aria-label="Copy heading and permalink for Task 2.3.3.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 2.3.3: Eulerian and Lagrangian descriptions"><a href="#ex-eulerian-lagrangian" title="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions">🔗</a></div></article><article class="exercise exercise-like" id="ex-eulerian-lagrangian2"><h3 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
 </h3>
@@ -669,7 +707,7 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div></details></div>
 <div class="autopermalink" data-description="Task 2.3.5.a"><a href="#ex-particle-paths-streamlines-2" title="Copy heading and permalink for Task 2.3.5.a" aria-label="Copy heading and permalink for Task 2.3.5.a">🔗</a></div></article><article class="task exercise-like" id="ex-particle-paths-streamlines-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="ex-particle-paths-streamlines-3-1-1">
-<div class="para">Show that a quantity <span class="process-math">\(f(\bx,t)\)</span> is preserved following the flow if</div>
+<div class="para">By drawing a sketch of a pathline and considering the points <span class="process-math">\(\bx\)</span> where the particle is at time <span class="process-math">\(t\)</span> and <span class="process-math">\(\bx+\de\bx\)</span> at time <span class="process-math">\(t+\de t\text{,}\)</span> show that a quantity <span class="process-math">\(f(\bx,t)\)</span> is preserved following the flow if</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
@@ -677,13 +715,26 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-particle-paths-streamlines-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="ex-particle-paths-streamlines-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="ex-particle-paths-streamlines-3-2-1">
+<div class="para">We can write <span class="process-math">\(\de\bx=\bu(\bx,t)\de t+\dots\text{,}\)</span> where "<span class="process-math">\(\dots\)</span>" indicates smaller corrections. We need to find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{f}{t}=\lim_{\de t\rightarrow0}\frac{f(\bx+\de\bx,t+\de t)-f(\bx,t)}{\de t}.
+\end{equation*}
+</div>
+<div class="para">Now write <span class="process-math">\(f(\bx+\de\bx,t+\de t)\)</span> as a Taylor series about <span class="process-math">\(f(\bx,t)\)</span> and use this to simplify the above expression.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.5.b.1"><a href="#ex-particle-paths-streamlines-3-2" title="Copy heading and permalink for Hint 2.3.5.b.1" aria-label="Copy heading and permalink for Hint 2.3.5.b.1">🔗</a></div>
+</div></details><details id="ex-particle-paths-streamlines-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <figure class="figure figure-like" id="lagrange-problem"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter02-lagrange-problem2.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pathline, showing the particle positions at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span><div class="autopermalink" data-description="Figure 2.3.2"><a href="#lagrange-problem" title="Copy heading and permalink for Figure 2.3.2" aria-label="Copy heading and permalink for Figure 2.3.2">🔗</a></div></figcaption></figure><div class="para logical" id="ex-particle-paths-streamlines-3-2-2">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pathline, showing the particle positions at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span><div class="autopermalink" data-description="Figure 2.3.2"><a href="#lagrange-problem" title="Copy heading and permalink for Figure 2.3.2" aria-label="Copy heading and permalink for Figure 2.3.2">🔗</a></div></figcaption></figure><div class="para logical" id="ex-particle-paths-streamlines-3-3-2">
 <div class="para">
 <a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.2">Figure 2.3.2</a> shows the points <span class="process-math">\(\bx(t)\)</span> and <span class="process-math">\(\bx(t+dt)=\bx(t)+\de\bx\text{,}\)</span> and the equation for pathlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de
 t\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> following a particle:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lagrange-problem.html" id="ex-particle-paths-streamlines-3-2-2-6">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lagrange-problem.html" id="ex-particle-paths-streamlines-3-3-2-6">
 \begin{align*}
 \dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de
 t)-f(\bx,t)\right)\\
@@ -696,13 +747,14 @@ f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)\\
 </div>
 <div class="para">(’’<span class="process-math">\(\dots\)</span>’’ denotes higher order terms). Thus the value is preserved if <span class="process-math">\(\DD{f}{t}=0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.5.b.1"><a href="#ex-particle-paths-streamlines-3-2" title="Copy heading and permalink for Answer 2.3.5.b.1" aria-label="Copy heading and permalink for Answer 2.3.5.b.1">🔗</a></div>
-</div></details></div>
+<div class="autopermalink" data-description="Answer 2.3.5.b.1"><a href="#ex-particle-paths-streamlines-3-3" title="Copy heading and permalink for Answer 2.3.5.b.1" aria-label="Copy heading and permalink for Answer 2.3.5.b.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Task 2.3.5.b"><a href="#ex-particle-paths-streamlines-3" title="Copy heading and permalink for Task 2.3.5.b" aria-label="Copy heading and permalink for Task 2.3.5.b">🔗</a></div></article><article class="task exercise-like" id="ex-particle-paths-streamlines-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para logical" id="ex-particle-paths-streamlines-4-1-1">
-<div class="para">Show also that <span class="process-math">\(f\)</span> is constant along streamlines if</div>
+<div class="para">In a similar way, show that <span class="process-math">\(f\)</span> is constant along streamlines if</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \bu\cdot\nabla f=0.
@@ -710,12 +762,26 @@ f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-particle-paths-streamlines-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="ex-particle-paths-streamlines-4-2-1">Now suppose that in <a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.2">Figure 2.3.2</a>, we have shown instead the situation of a streamline.<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="ex-particle-paths-streamlines-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="ex-particle-paths-streamlines-4-2-1">
+<div class="para">In this case we can consider the points <span class="process-math">\(\bx\)</span> and <span class="process-math">\(\bx+\de\bx\)</span> on the streamline, where <span class="process-math">\(\de\bx=\bu(\bx,t)\de s+\dots\text{,}\)</span> where "<span class="process-math">\(\dots\)</span>" indicates smaller corrections. We need to find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{f}{s}=\lim_{\de s\rightarrow0}\frac{f(\bx+\de\bx,t)-f(\bx,t)}{\de t}.
+\end{equation*}
 </div>
-<div class="para logical" id="ex-particle-paths-streamlines-4-2-2">
+<div class="para">Now write <span class="process-math">\(f(\bx+\de\bx,t)\)</span> as a Taylor series about <span class="process-math">\(f(\bx,t)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.5.c.1"><a href="#ex-particle-paths-streamlines-4-2" title="Copy heading and permalink for Hint 2.3.5.c.1" aria-label="Copy heading and permalink for Hint 2.3.5.c.1">🔗</a></div>
+</div></details><details id="ex-particle-paths-streamlines-4-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-particle-paths-streamlines-4-3-1">Now suppose that in <a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.2">Figure 2.3.2</a>, we have shown instead the situation of a streamline.<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-particle-paths-streamlines-4-3-2">
 <div class="para">In this case, the points <span class="process-math">\(\bx(s)\)</span> and <span class="process-math">\(\bx(s+ds)=\bx(s)+\de\bx\)</span> are shown, and the equation for streamlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de s\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> along the streamline:</div>
-<div class="displaymath process-math" id="ex-particle-paths-streamlines-4-2-2-5">
+<div class="displaymath process-math" id="ex-particle-paths-streamlines-4-3-2-5">
 \begin{align*}
 \dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de
 s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)\\
@@ -726,12 +792,13 @@ f(\bx,t)\right)\\
 &amp;=\bu\cdot\nabla f.
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-particle-paths-streamlines-4-2-3">Thus the value of <span class="process-math">\(f\)</span> is preserved if <span class="process-math">\(\bu\cdot\nabla f=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-particle-paths-streamlines-4-3-3">Thus the value of <span class="process-math">\(f\)</span> is preserved if <span class="process-math">\(\bu\cdot\nabla f=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-particle-paths-streamlines-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.5.c.1"><a href="#ex-particle-paths-streamlines-4-2" title="Copy heading and permalink for Answer 2.3.5.c.1" aria-label="Copy heading and permalink for Answer 2.3.5.c.1">🔗</a></div>
-</div></details></div>
+<div class="autopermalink" data-description="Answer 2.3.5.c.1"><a href="#ex-particle-paths-streamlines-4-3" title="Copy heading and permalink for Answer 2.3.5.c.1" aria-label="Copy heading and permalink for Answer 2.3.5.c.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Task 2.3.5.c"><a href="#ex-particle-paths-streamlines-4" title="Copy heading and permalink for Task 2.3.5.c" aria-label="Copy heading and permalink for Task 2.3.5.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 2.3.5: Particle paths and streamlines"><a href="#ex-particle-paths-streamlines" title="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines" aria-label="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines">🔗</a></div></article><article class="exercise exercise-like" id="ex-streamlines-pathlines-streaklines"><h3 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Streamlines, pathlines and streaklines.</span>
 </h3>
@@ -757,7 +824,7 @@ y=y_0-\frac{t}{4} e^{-4x},
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of streamlines, pathline and streaklines.<div class="autopermalink" data-description="Figure 2.3.3"><a href="#flowvisualisationproblem" title="Copy heading and permalink for Figure 2.3.3" aria-label="Copy heading and permalink for Figure 2.3.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Answer 2.3.6.a.1"><a href="#ex-streamlines-pathlines-streaklines-3-2" title="Copy heading and permalink for Answer 2.3.6.a.1" aria-label="Copy heading and permalink for Answer 2.3.6.a.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Task 2.3.6.a"><a href="#ex-streamlines-pathlines-streaklines-3" title="Copy heading and permalink for Task 2.3.6.a" aria-label="Copy heading and permalink for Task 2.3.6.a">🔗</a></div></article><article class="task exercise-like" id="ex-streamlines-pathlines-streaklines-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="ex-streamlines-pathlines-streaklines-4-1-1">the pathline of the particle starting from <span class="process-math">\((0,0)\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-streamlines-pathlines-streaklines-4-1-1">the pathline of the particle starting from <span class="process-math">\((x_0,y_0)\text{.}\)</span> Hence find and sketch the pathline of the particle that starts from <span class="process-math">\((0,0)\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="ex-streamlines-pathlines-streaklines-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para logical" id="ex-streamlines-pathlines-streaklines-4-2-1">
@@ -794,8 +861,21 @@ y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
 <div class="autopermalink" data-description="Task 2.3.6.b"><a href="#ex-streamlines-pathlines-streaklines-4" title="Copy heading and permalink for Task 2.3.6.b" aria-label="Copy heading and permalink for Task 2.3.6.b">🔗</a></div></article><article class="task exercise-like" id="ex-streamlines-pathlines-streaklines-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="ex-streamlines-pathlines-streaklines-5-1-1">and the streaklines passing through <span class="process-math">\((0,0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-streamlines-pathlines-streaklines-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="ex-streamlines-pathlines-streaklines-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para logical" id="ex-streamlines-pathlines-streaklines-5-2-1">
+<div class="para">The expression for a general pathline starting from <span class="process-math">\((x_0,y_0)\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = x_0 + t,\quad
+y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.6.c.1"><a href="#ex-streamlines-pathlines-streaklines-5-2" title="Copy heading and permalink for Hint 2.3.6.c.1" aria-label="Copy heading and permalink for Hint 2.3.6.c.1">🔗</a></div>
+</div></details><details id="ex-streamlines-pathlines-streaklines-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="ex-streamlines-pathlines-streaklines-5-3-1">
 <div class="para">Suppose the particle that started at <span class="process-math">\((x_0,y_0)\)</span> hits the special point <span class="process-math">\((0,0)\)</span> at time <span class="process-math">\(t_1\text{.}\)</span> From the pathline equation:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
 \begin{equation*}
@@ -827,10 +907,11 @@ y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
 \end{equation*}
 </div>
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch. Note that the streamlines, pathlines and streaklines are all very different.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 2.3.6.c.1"><a href="#ex-streamlines-pathlines-streaklines-5-2" title="Copy heading and permalink for Answer 2.3.6.c.1" aria-label="Copy heading and permalink for Answer 2.3.6.c.1">🔗</a></div>
-</div></details></div>
+<div class="autopermalink" data-description="Answer 2.3.6.c.1"><a href="#ex-streamlines-pathlines-streaklines-5-3" title="Copy heading and permalink for Answer 2.3.6.c.1" aria-label="Copy heading and permalink for Answer 2.3.6.c.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Task 2.3.6.c"><a href="#ex-streamlines-pathlines-streaklines-5" title="Copy heading and permalink for Task 2.3.6.c" aria-label="Copy heading and permalink for Task 2.3.6.c">🔗</a></div></article><article class="task exercise-like" id="ex-streamlines-pathlines-streaklines-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="ex-streamlines-pathlines-streaklines-6-1-1">For a line/curve in the <span class="process-math">\((x,y)\text{,}\)</span> its timeline at time <span class="process-math">\(t\)</span> is the locus of the material elements at time <span class="process-math">\(t\)</span> that started on the line/curve at <span class="process-math">\(t=0\text{.}\)</span> In experiments this can be visualised using a streak of dye placed initally along the line/curve. Tracking this over time gives the timelines.<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-streamlines-pathlines-streaklines-6-1-2">Calculate and sketch the timelines of the line (i) <span class="process-math">\(y=0\text{,}\)</span> (ii) <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

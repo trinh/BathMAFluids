@@ -2103,6 +2103,139 @@
       </task>
     </exercise>
 
+    <exercise xml:id="ps-stress-plate">
+      <title>Stress on a plate</title>
+      <introduction>
+        <p>
+          A rigid plate of length <m>L</m> is fixed along the line <m>y=kx</m> and has width
+          <m>W</m> in the <m>z</m>-direction.
+          An incompressible fluid of density <m>\rho</m> and viscosity <m>\mu</m> flows steadily
+          in the shaded region <m>y>kx</m>, shown in <xref ref="plate-sketch"/>.
+        </p>
+        <figure xml:id="plate-sketch">
+          <caption>Sketch of plate.</caption>
+          <image source="ch-chapter07-plate.jpg" width="50%" />
+        </figure>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Given that the flow field is
+            <me>
+              u=\alpha y+Ax+B,\quad v=-Ay+Dx+C,
+            </me>
+            what are <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>
+            in terms of <m>\alpha</m> and <m>k</m>?
+            Simplify the velocity components <m>u</m> and <m>v</m>.
+            (Note that the fact that the coefficients on the terms
+            <m>Ax</m> in <m>u</m> and <m>-Ay</m> in <m>v</m> are equal and opposite
+            is required to ensure incompressibility of the fluid <ndash/>).
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We apply no-slip boundary conditions at the plate.
+            Thus if <m>y=kx</m> then we must have <m>u=0</m> and <m>v=0</m>. Hence
+            <me>
+              0=\alpha kx+Ax+B,\quad 0=-Akx+Dx+C,
+            </me>
+            for all <m>x</m>, which implies that <m>\alpha k+A=0</m>, <m>B=0</m>,
+            <m>-Ak+D=0</m> and <m>C=0</m>. Solving, we obtain
+            <me>
+              A=-\alpha k,\quad
+              B=0,\quad
+              D=-\alpha k^2,\quad
+              C=0.  
+            </me>
+            Hence
+            <me>
+              u=\alpha\l(y-kx\r),\quad v=\alpha k\l(y-kx\r).
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the drag force on the plate.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            The drag force can be found by changing coordinates from
+            <m>(x,y)</m> to <m>(\xi,\eta)</m>,
+            which are Cartesian coordinates where the <m>\xi</m>-axis runs along the plate
+            and the <m>\eta</m>-axis goes from the plate perpendicularly into the fluid.
+            You may use the fact that
+            <me>
+              \boldsymbol{i}=\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}},\qquad
+              \boldsymbol{j}=\sin\theta\hat{\boldsymbol{\xi}}+\cos\theta\hat{\boldsymbol{\eta}},
+            </me>
+            where <m>{\bf i}</m>, <m>{\bf j}</m> are unit vectors in the <m>x</m>-
+            and <m>y</m>-directions and <m>\hat{\boldsymbol{\xi}}</m>, <m>\hat{\boldsymbol{\eta}}</m>
+            are unit vectors in the <m>\xi</m>- and <m>\eta</m>-directions and <m>\theta</m>
+            is the angle between the plate and the <m>x</m>-axis.
+            You may use the fact that <m>\cos\theta=1/(\sqrt{1+k^2})</m>,
+            <m>\sin\theta=k/(\sqrt{1+k^2})</m> and
+            <me>
+              x=\frac{\xi}{\sqrt{1+k^2}}-\frac{k\eta}{\sqrt{1+k^2}},\quad
+              y=\frac{k\xi}{\sqrt{1+k^2}}+\frac{\eta}{\sqrt{1+k^2}}.
+            </me>
+          </p>
+        </hint>
+        <solution>
+          <p>
+            We perform the coordinate transform illustrated in <xref ref="plate-coordinates"/>
+            from the <m>(x,y)</m>-plane to the <m>(\xi,\eta)</m>-plane:
+          </p>
+          <figure xml:id="plate-coordinates">
+            <caption>Sketch of plate.</caption>
+            <image source="ch-chapter07-plate-coordinates.jpg" width="50%" />
+          </figure>
+          <p>
+            We use
+            <md>
+              <mrow>
+                \bu=&amp;u\boldsymbol{i}+v\boldsymbol{j}
+              </mrow>
+              <mrow>
+                =&amp;u\left(\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}}\right)
+                +v\left(\sin\theta\hat{\boldsymbol{\xi}}+\cos\theta\hat{\boldsymbol{\eta}}\right)
+              </mrow>
+              <mrow>
+                =&amp;\left(u\cos\theta+v\sin\theta\right)\hat{\boldsymbol{\xi}}
+                +\left(-u\sin\theta+v\cos\theta\right)\hat{\boldsymbol{\eta}}
+              </mrow>
+              <mrow>
+                =&amp;\frac{\alpha(y-kx)+\alpha k^2(y-kx)}{\sqrt{1+k^2}}\hat{\boldsymbol{\xi}}
+                +\frac{-\alpha k(y-kx)+\alpha k(y-kx)}{\sqrt{1+k^2}}\hat{\boldsymbol{\eta}}
+              </mrow>
+              <mrow>
+                =&amp;\alpha\sqrt{1+k^2}(y-kx)\hat{\boldsymbol{\xi}}
+              </mrow>
+              <mrow>
+                =&amp;\alpha\sqrt{1+k^2}\sqrt{1+k^2}\eta\hat{\boldsymbol{\xi}}
+              </mrow>
+              <mrow>
+                =&amp;\alpha(1+k^2)\eta\hat{\boldsymbol{\xi}}
+              </mrow>
+            </md>
+            and so the velocity components are <m>u_\xi=\alpha(1+k^2)\eta</m> and <m>u_\eta=0</m>.
+          </p>
+          <p>
+            Thus the shear stress is given by
+            <me>
+              \mu\pd{u_\xi}{\eta}=\mu\alpha(1+k^2),
+            </me>
+            and hence the drag force equals
+            <me>
+              \mu\alpha(1+k^2)LW.
+            </me>
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
     <exercise xml:id="ps-stress-pressure">
       <title>Stress on a surface due to the pressure</title>
       <introduction>
