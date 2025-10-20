@@ -39,7 +39,7 @@
           </figure>
           <figure xml:id="cylindrical-coords-planeview">
             <caption>Planar view of cylindrical polar coordinates (or plane polar coordinates).</caption>
-            <image source="ch-backmatter-cylindrical-planeview.jpg" width="60%" />
+            <image source="ch-backmatter-cylindrical-planeview.png" width="60%" />
           </figure>
         </sidebyside>
         <p>
@@ -198,7 +198,7 @@
         <title>Converting between Cartesian coordinates and spherical polar coordinates</title>
         <figure xml:id="spherical-coords">
           <caption>Spherical polar coordinates.</caption>
-          <image source="ch-backmatter-spherical.png" width="25%" />
+          <image source="ch-backmatter-spherical.png" width="50%" />
         </figure>
         <p>
           We write a position vector in Cartesians as <xref ref="eq-rcart"/>
