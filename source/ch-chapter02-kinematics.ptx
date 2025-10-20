@@ -650,9 +650,9 @@
             \bx(t) = (x_0\cos t - y_0\sin t, x_0\sin t + y_0\cos t).
           </me>
           This is a circular path of radius <m>\sqrt{x_0^2+y_0^2}</m> going anticlockwise around the origin.
-          The velocity is
+          The Lagrangian velocity is
           <me>
-            (x,y)(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
+            \bu(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
           </me>
               </p>
             </solution>
@@ -670,12 +670,14 @@
           <me>
             \bu = r\be_\theta,
           </me>
-          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eqn-appendix-polar-er-etheta"/>. Then the equation for particle paths is
+          where <m>\be_{\theta}</m> is the angular unit
+          vector given in <xref ref="eqn-appendix-polar-er-etheta"/>. Then the equation for particle paths is
           <me>
-            \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
+            \dd{r}{t} = 0,\quad\dd{(r\theta)}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
           </me>
           Thus <m>r(t)=r_0=\sqrt{x_0^2+y_0^2}</m> and <m>\theta(t)=\theta_0+t</m>,
-          where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>. The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
+          where <m>\theta_0=\tan^{-1}(y_0/x_0)</m>.
+          The velocity is <m>\bu(t)=r_0\be_{\theta}(t)</m>.
         </p>
       </solution>
           </task>
