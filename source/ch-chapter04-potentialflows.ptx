@@ -337,10 +337,11 @@
       <title>Flux between streamlines</title>
       <statement>
         <p>
-        Consider streamlines <m>\psi = \psi_1</m> and <m>\psi = \psi_2</m>. The <em>flux</em> (net flow of fluid) between the two streamlines is given by
+        Consider two streamlines <m>\psi = \psi_1</m> and <m>\psi = \psi_2</m>. We assume that the streamlines pass through the points A and B respectively. Consider a contour <m>C</m> connecting A and B. The <em>flux</em> (net flow of fluid) through <m>C</m> and hence between the streamlines is
         <me>
-          \textrm{flux} = \psi_1 - \psi_2.
+          |\textrm{flux}| = |\psi_2 - \psi_1|
         </me>
+        We have not specified the sign of the flux as it is subject to the considered direction through <m>C</m>.
         </p>
       </statement>
 
@@ -350,23 +351,33 @@
             <me>
               \int_C \bu \cdot \bn \, \de{s},
             </me>
-            where <m>C</m> is any smooth path joining the two streamlines with unit normal <m>\bn</m>, as shown in FIGURE. 
+            where <m>C</m> is any smooth path joining the two streamlines with unit normal <m>\bn</m>, as shown in <xref ref="fig-streamfunction"/>.
           </p>
 
           <p>
-            Note that given the curve, the unit normal is written as <m>[-\de{y}, \de{x}]/\de s</m>, so <m>\bn \de{s} = [\de{y}, -\de{x}]</m>. Then the flux is re-written as the following: 
+            Note that given the curve, and in consideration of a small arclength element <m>\de{s}</m>, the tangent and normal are given by 
+            <me>
+              \bt = \frac{[\de{x}, \de{y}]}{\sqrt{\de{x}^2 + \de{y}^2}} = \frac{[\de{x}, \de{y}]}{\de{s}}, \qquad 
+              \bn = \frac{[-\de{y}, \de{x}]}{\de{s}}.
+            </me>
+            Therefore we can write <m>\bn \de{s} = [\de{y}, -\de{x}]</m>. Then the flux is re-written as the following: 
             <md>
               <mrow>\textrm{flux} \amp= \int_C \left[\pd{\psi}{y}, -\pd{\psi}{x}\right] \cdot [\de{y}, \de{x}], </mrow>
               <mrow>\amp= \int_C \left(\pd{\psi}{x} \, \de{x} + \pd{\psi}{y} \right), </mrow>
               <mrow>\amp= \bigl[ \psi \bigr]_C, </mrow>
-              <mrow>\amp= \psi_2 - \psi_1. </mrow>
+              <mrow>\amp= \psi(B) - \psi(A), </mrow>
+              <mrow>\amp= \psi_2 - \psi_1, </mrow>
             </md>
           In the third line above, <m>[\psi]_C</m> is the change of <m>\psi</m> across the contour.  
-          Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. 
+          Note that there is somewhat an arbitrary choice of direction for the contour <m>C</m>, as related to the selection of the normal direction <m>\bn</m>, and the positivity or negativity of the flux. To be safe, we have taken the absolute value in the problem.
         </p>
         </proof>
 
     </theorem>
+
+    <p>
+      An example of the use of the above theorem is given in <xref ref="ps-potential-fluxcalc"/>
+    </p>
       
     
     <p>
@@ -1421,7 +1432,7 @@
   </exercise>
 
   
-  <exercise>
+  <exercise xml:id="ps-potential-fluxcalc">
     <title>Evaluation of the flux</title>
 
     <statement>
