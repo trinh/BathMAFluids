@@ -1263,14 +1263,42 @@
   </subsection>
 
 
-  <!-- <subsection>
-    <title>The Joukowski map</title>
+  <subsection>
+    <title>Flow past an aerofoil</title>
    
     <p>
-      Hello world.
+    We shall study the following mapping. 
     </p>
+
+    <definition xml:id="def-joukowski">
+      <statement>
+        <p>
+         The <em>Joukowski transformation</em> is the map 
+         <men xml:id="eqn-joukowski">
+          z = G(\zeta) = \zeta + \frac{a^2}{\zeta}
+         </men>
+         where <m>a > 0</m> is a parameter. The mapping is conformal at all points except <m>\zeta = 0</m> (pole) and <m>\zeta = \pm a</m> where <m>G'(\zeta) = 0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Consider a circle in the <m>\zeta</m>-plane. Let <m>\zeta = r\e^{\im\theta}</m>. Then in the <m>z</m>-plane, this is mapped to 
+      <me>
+        z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta} = \left(:input}\right) = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
+      </me>
+      Provided that <m>r > a</m>, this the equation of an ellipse with principle radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. Notice that furthermore, if <m>r \to a</m>, the ellipse tends to the line segment, with <m>z = 2a\cos\theta</m> on the axis. When <m>\theta = 0</m>, <m>z = 2a</m> and if <m>\theta = \pi</m> then <m>z = -2a</m>. 
+    </p>
+
+    <p>
+      If on the other hand, <m>r &lt; a</m>, then we can verify that ellipse are still mapped to, but now with principal radii <m>r + a^2/r</m> and <m>a^2/r - r</m>. We can verify that the interior of the disc of size <m>a</m> correspond to ellipses, but now on the exterior of the line segment along the <m>x</m>-axis. 
+    </p>
+
+    <!-- <p>
+      We can invert <xref ref="eqn-joukowski"/> and this gives 
+    </p> -->
     
-  </subsection> -->
+  </subsection>
 
 
 </section>
