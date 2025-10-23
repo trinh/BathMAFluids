@@ -1261,11 +1261,77 @@
     </example>
     
   </subsection>
+</section>
 
-
-  <subsection>
+  <section>
     <title>Flow past an aerofoil</title>
-   
+
+    <subsection xml:id="subsec-circle-maps">
+      <title>Circle maps</title>
+
+      <p>
+        Previously we used the method of images to construct flows past polygonal and straight boundaries. 
+      </p>
+
+      <theorem xml:id="thm-circle-theorem">
+        <title>Milne-Thomson's Circle Theorem</title>
+        <statement>
+          <p>
+          Let <m>f(z)</m> be a given velocity potential such that any singularities in <m>f</m> occur in <m>|z| > a</m>. Then we can construct the following potential: 
+          <men xml:id="eqn-milne-circle-map">
+            w(z) = f(z) + \overline{f(a^2/\overline{z})},
+          </men>
+          and this potential has the following properties: (i) it has the asme singularities as <m>f</m> in the region <m>|z| > a</m>; and (ii) the circle <m>|z| = a</m> is a streamline. 
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            (i) if <m>|z| &gt; a</m>, then <m>|a^2/\overline{z}| &lt; a</m>. Therefore the argument of the second term of <m>w</m> is within the circle of radius <m>|a|</m> and by assumption <m>f</m> is not singular there. 
+          </p>
+
+          <p>
+            (ii) On the circle itself, <m>z = a\e^{\im\theta}</m>. 
+            Then <m>a^2/\overline{z} = a\e^{\im\theta} = z</m>. Therefore, we have 
+            <me>
+            w(z) = f(z) + \overline{f(z)} = 2 \Re[f(z)].
+            </me>
+            Therefore the complex potential is entirely real. It follows that <m>\Im w = 0</m> on <m>|z| = a</m>, establishing that the circle is streamline.
+          </p> 
+        </proof>
+      </theorem>
+
+     <p>
+      The above theorem then allows us to easily construct certain flows past circular cylinders. Here is an example.
+     </p>
+
+     <example>
+      <title>Uniform flow past a circular cylinder</title>
+
+      <p>
+        We begin with the complex potential given by <m>f(z) = Uz</m>, which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary <m>|z| = a</m>. Clearly, <m>f</m> satisfies the requirements of the Circle Theorem since it is non-singular for all <m>z</m>. Thus, we can construct
+        <men xml:id="eqn-potential-uniform-past-circle">
+          w(z) = Uz + \overline{\frac{Ua^2}{\overline{z}}} = Uz + \frac{Ua^2}{z}.
+        </men>
+      </p>
+
+        <figure xml:id="fig-conformal-circle-flow">
+      <caption>Uniform flow past a circle</caption>
+      <image source="conformal_circle_flow.png" width="70%">
+        <shortdescription>Circle flow</shortdescription>
+      </image>
+    </figure>
+     </example>
+
+
+      
+      
+    </subsection>
+
+  
+<subsection xml:id="subsec-">
+  <title>The Joukowski map</title>
+  
     <p>
     We shall study the following mapping. 
     </p>
@@ -1277,7 +1343,7 @@
          <men xml:id="eqn-joukowski">
           z = G(\zeta) = \zeta + \frac{a^2}{\zeta}
          </men>
-         where <m>a > 0</m> is a parameter. The mapping is conformal at all points except <m>\zeta = 0</m> (pole) and <m>\zeta = \pm a</m> where <m>G'(\zeta) = 0</m>.
+         where <m>a &gt; 0</m> is a parameter. The mapping is conformal at all points except <m>\zeta = 0</m> (pole) and <m>\zeta = \pm a</m> where <m>G'(\zeta) = 0</m>.
         </p>
       </statement>
     </definition>
@@ -1285,23 +1351,103 @@
     <p>
       Consider a circle in the <m>\zeta</m>-plane. Let <m>\zeta = r\e^{\im\theta}</m>. Then in the <m>z</m>-plane, this is mapped to 
       <me>
-        z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta} = \left(:input}\right) = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
+        z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta}  = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
       </me>
-      Provided that <m>r > a</m>, this the equation of an ellipse with principle radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. Notice that furthermore, if <m>r \to a</m>, the ellipse tends to the line segment, with <m>z = 2a\cos\theta</m> on the axis. When <m>\theta = 0</m>, <m>z = 2a</m> and if <m>\theta = \pi</m> then <m>z = -2a</m>. 
+      Provided that <m>r &gt; a</m>, this the equation of an ellipse with principle radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. The orientation of circles is preserved, with an anticlockwise rotation in <m>\zeta</m> corresponding to anticlockwise in <m>z</m>. The exterior of the circle <m>|\zeta| = r</m> is mapped to the exterior of the ellipse in <m>z</m>.</p>
+      
+      <p>In addition note that if <m>r \to a</m>, the ellipses tends to the line segment
+      <me>
+      S = \{ z = 2a\cos\theta \, | 0 \leq \theta \leq \pi\},
+      </me>
+      which then ranges from <m>z = 2a</m> for <m>\theta = 0</m> to <m>z = -2a</m> for <m>\theta = \pi</m>. As <m>\theta</m> further ranges in <m>[\pi, 2\pi)</m>, this traverses the horizontal plate again. One can interpret it as traversing the top or the bottom side of the plate (a view strengthened from considering the limiting images). This is shown in <xref ref="fig-conformal-joukowski01"/>.
+    </p>
+
+    <figure xml:id="fig-conformal-joukowski01">
+      <caption>The Joukowski transformation in <xref ref="eqn-joukowski"/> sends circles with radius <m>r \geq 1</m> to ellipses in the <m>z-</m>plane. In the limit <m>r \to a^+</m>, this approaches a horizontal plate of length <m>4a</m>.</caption>
+      <image source="conformal_joukowski01.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      If on the other hand, <m>r &lt; a</m>, then we can verify that the mapping still produces ellipses, but now with principal radii <m>r + a^2/r</m> and <m>a^2/r - r</m>. The orientation is now reversed, with anticlockwise orientation in <m>\zeta</m> mapped to clockwise orientation. Therefore, it is the case that the interior of the discs with <m>|\zeta| = r</m> are mapped to the exterior of ellipses in <m>z</m>. Again, in the limit that <m>r \to a^-</m> the images approach a flat plate of length <m>4a</m> on the axis. 
+    </p>
+
+        <figure xml:id="fig-conformal-joukowski02">
+      <caption>The Joukowski transformation in <xref ref="eqn-joukowski"/> sends circles with radius <m>r \leq 1</m> to ellipses in the <m>z-</m>plane. As <m>r \to \infty</m>, these tend to infinitely large circles. The values here are <m>r = 0.5, 0.6, 0.7, 0.8, 0.9, 1.</m></caption>
+      <image source="conformal_joukowski02.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+
+
+    <p>
+      We can invert <xref ref="eqn-joukowski"/>, and this gives
+      <men xml:id="eqn-joukowski-inverted">
+        \zeta = \frac{1}{2} \left(z \pm \sqrt{z^2 - 4a^2}\right) = 
+        \frac{1}{2} \left(z \pm \sqrt{z-2a}\sqrt{z + 2a}\right).
+      </men>
+    As noted in <xref ref="sec-intro-multifunctions"/>, we must take care to define the proper branch cut structure for the two branch points at <m>z = \pm 2a</m>. 
     </p>
 
     <p>
-      If on the other hand, <m>r &lt; a</m>, then we can verify that ellipse are still mapped to, but now with principal radii <m>r + a^2/r</m> and <m>a^2/r - r</m>. We can verify that the interior of the disc of size <m>a</m> correspond to ellipses, but now on the exterior of the line segment along the <m>x</m>-axis. 
+      As noted in the exercises of <xref ref="ws-intro"/>, if we let 
+      <me>
+        z + 2a = r_1 \e^{\im \theta_1} \quad \text{and} \quad
+        z - 2a = r_2 \e^{\im \theta_2}, 
+      </me>
+      and take <m>\theta_1, \theta_2 \in [0, 2\pi)</m>, this corresponds to a single branch cut between <m>z = -2a</m> and <m>z = 2a</m>. This branch cut choice is the most convenient since then it directly coincides with the central axis of the ellipse. 
     </p>
 
-    <!-- <p>
-      We can invert <xref ref="eqn-joukowski"/> and this gives 
-    </p> -->
+    <p>
+      Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have 
+      <mdn>
+        <mrow>\zeta = g_+(z) \amp= \frac{1}{2}\left(z + \sqrt{z^2 - 4a}\right), </mrow>
+        <mrow>\zeta = g_-(z) \amp= \frac{1}{2}\left(z - \sqrt{z^2 - 4a}\right). </mrow>
+      </mdn>
+    </p>
+
+    <p>
+      Let us return to the perspective of images from the <m>\zeta</m>-plane to the <m>z</m>-plane. We can now consider the images of circles in the <m>\zeta</m>-plane that have either been horizontally shifted and/or vertically shifted. The two critical points (points where the map is not conformal) mentioned above correspond to either <m>\zeta = \pm a</m> or <m>z = \pm 2a</m>. 
+    </p>
+
+    <p>
+      Firstly in <xref ref="fig-conformal-joukowski03"/>, we see that horizontal shifts of the circle will corresponding to shifting and deforming the ellipse such that, as a critical point is approached, this forms a point of non-conformality in the image (a cusp).
+    </p>
+
+        <figure xml:id="fig-conformal-joukowski03">
+      <caption>We now consider shifting the circle with <m>|\zeta| = 2</m> to the left, so that the circumferance passes through the critical point at <m>\zeta = a = 1</m>. This produces an image that resembles an aerofoil with a sharp trailing edge.</caption>
+      <image source="conformal_joukowski03.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      Top-bottom asymmetry can also be introduced by considering vertical shifts of the preimages. 
+    </p>
+
+           <figure xml:id="fig-conformal-joukowski04">
+      <caption>Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.</caption>
+      <image source="conformal_joukowski04.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure> 
+</subsection>   
+
+    <subsection xml:id="subsec-aerofoil-flow-plate-plate">
+      <title>Flow past a flat plate</title>
+
+      <p>
+        Notes to appear here following Thursday 23 Oct lecture.
+      </p>
+
+
+      
+    </subsection>
+
     
-  </subsection>
-
-
-</section>
+  </section>
 
 
 
