@@ -1338,7 +1338,7 @@
       The next example will be studied during the problem class.
      </p>
 
-      <example>
+      <example xml:id="example-uniform-past-circle-with-vortex">
         <title>Problem class example</title>
         
         <introduction>
@@ -1989,7 +1989,7 @@ from the origin. Try to sketch the streamlines in either case
        
         <statement>
           <p>
-            Show that the circle <m>|\zeta| = a</m> is mapped tro a line segment 
+            Show that the circle <m>|\zeta| = a</m> is mapped to a line segment 
             <me>
               S = \{ z: \Im z = 0, -2a \leq \Re z \leq 2a\}
             </me>
@@ -2000,15 +2000,30 @@ from the origin. Try to sketch the streamlines in either case
           </p>
 
           <p>
-            Deduce that the extttterior of the line segment is mapped to the exterior of the circle <m>|\zeta| = a</m> by the transformation 
+            Deduce that the exterior of the line segment is mapped to the exterior of the circle <m>|\zeta| = a</m> by the transformation 
             <me>
               \zeta = \frac{1}{2}\left( z + \sqrt{z^2 - 4a^2}\right).
             </me>
             Carefully define the function <m>\sqrt{z^2 - 4a^2}</m> and determine where the mapping above is conformal.
           </p>
+
+          <p>
+            Constuct a flow, by providing the complex potential <m>\phi + \im \psi</m> that consists of the following elements: (i) uniform flow oriented an angle <m>\alpha</m> to the horizontal at infinity; (ii) a line source of strength <m>Q</m> placed in the flow; and (iii) a horizontal flat plate of length <m>2a</m> on the axis, <m>-2a &lt; z &lt; 2a.</m> 
+          </p>
+
+          <p>
+            Sketch what you believe will be the streamlines of such a flow.
+          </p>
         </statement>
         
         
+      </exercise>
+
+      <exercise>
+        <title>The Magnus effect and flow past a circular cylinder</title>
+        <p>
+          During the problem class, we will study <xref ref="example-uniform-past-circle-with-vortex"/> corresponding to verifying different properties of uniform flow past a circular cylinder, ending with studying the <em>Magnus effect</em> due to adding an initial line vortex of strength <m>\Gamma</m> into the flow. Please review the derivations and make your own notes on the example so that you are confident with the problem and its conclusions. 
+        </p>
       </exercise>
 
       
