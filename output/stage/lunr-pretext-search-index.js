@@ -1222,7 +1222,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.6",
   "title": "Flow past an aerofoil",
-  "body": " Flow past an aerofoil   Circle maps  Previously we used the method of images to construct flows past polygonal and straight boundaries.   Milne-Thomson's Circle Theorem   Let be a given velocity potential such that any singularities in occur in . Then we can construct the following potential: and this potential has the following properties: (i) it has the asme singularities as in the region ; and (ii) the circle is a streamline.    (i) if , then . Therefore the argument of the second term of is within the circle of radius and by assumption is not singular there.  (ii) On the circle itself, . Then . Therefore, we have Therefore the complex potential is entirely real. It follows that on , establishing that the circle is streamline.    The above theorem then allows us to easily construct certain flows past circular cylinders. Here is an example.   Uniform flow past a circular cylinder  We begin with the complex potential given by , which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary . Clearly, satisfies the requirements of the Circle Theorem since it is non-singular for all . Thus, we can construct    Uniform flow past a circle   Circle flow       The Joukowski map  We shall study the following mapping.    The Joukowski transformation is the map where is a parameter. The mapping is conformal at all points except (pole) and where .    Consider a circle in the -plane. Let . Then in the -plane, this is mapped to Provided that , this the equation of an ellipse with principle radii and . The orientation of circles is preserved, with an anticlockwise rotation in corresponding to anticlockwise in . The exterior of the circle is mapped to the exterior of the ellipse in .  In addition note that if , the ellipses tends to the line segment which then ranges from for to for . As further ranges in , this traverses the horizontal plate again. One can interpret it as traversing the top or the bottom side of the plate (a view strengthened from considering the limiting images). This is shown in .   The Joukowski transformation in sends circles with radius to ellipses in the plane. In the limit , this approaches a horizontal plate of length .   Joukowski map    If on the other hand, , then we can verify that the mapping still produces ellipses, but now with principal radii and . The orientation is now reversed, with anticlockwise orientation in mapped to clockwise orientation. Therefore, it is the case that the interior of the discs with are mapped to the exterior of ellipses in . Again, in the limit that the images approach a flat plate of length on the axis.   The Joukowski transformation in sends circles with radius to ellipses in the plane. As , these tend to infinitely large circles. The values here are   Joukowski map    We can invert , and this gives As noted in , we must take care to define the proper branch cut structure for the two branch points at .  As noted in the exercises of , if we let and take , this corresponds to a single branch cut between and . This branch cut choice is the most convenient since then it directly coincides with the central axis of the ellipse.  Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have   Let us return to the perspective of images from the -plane to the -plane. We can now consider the images of circles in the -plane that have either been horizontally shifted and\/or vertically shifted. The two critical points (points where the map is not conformal) mentioned above correspond to either or .  Firstly in , we see that horizontal shifts of the circle will corresponding to shifting and deforming the ellipse such that, as a critical point is approached, this forms a point of non-conformality in the image (a cusp).   We now consider shifting the circle with to the left, so that the circumferance passes through the critical point at . This produces an image that resembles an aerofoil with a sharp trailing edge.   Joukowski map    Top-bottom asymmetry can also be introduced by considering vertical shifts of the preimages.   Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.   Joukowski map      Flow past a flat plate  Notes to appear here following Thursday 23 Oct lecture.   "
+  "body": " Flow past an aerofoil   Circle maps  Previously we used the method of images to construct flows past polygonal and straight boundaries.   Milne-Thomson's Circle Theorem   Let be a given velocity potential such that any singularities in occur in . Then we can construct the following potential: and this potential has the following properties: (i) it has the asme singularities as in the region ; and (ii) the circle is a streamline.    (i) if , then . Therefore the argument of the second term of is within the circle of radius and by assumption is not singular there.  (ii) On the circle itself, . Then . Therefore, we have Therefore the complex potential is entirely real. It follows that on , establishing that the circle is streamline.    The above theorem then allows us to easily construct certain flows past circular cylinders. Here is an example.   Uniform flow past a circular cylinder  We begin with the complex potential given by , which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary . Clearly, satisfies the requirements of the Circle Theorem since it is non-singular for all . Thus, we can construct the following result    Potential flow of consisting of uniform horizontal flow of speed at infinity, past a circular cylinder of radius (placed at the origin) is given by the complex potential     The streamlines of the flow, found by taking the imaginary part of the above, are shown in .   Uniform flow past a circle   Circle flow     The next example will be studied during the problem class.   Problem class example   Previously, it was demonstrated, via that uniform horizontal flow past a circle (circular cylinder) of radius can be found via the complex potential function corresponding to uniform horizontal flow at infinity of speed .     Confirm, by use of the streamfunction , that the circle boundary is a streamline of the flow.      Derive the complex velocity, and use it to show that on the surface of the cylinder, the velocity is given by where .  It is helpful for you to remember that       Conclude that on the surface of the cylinder, the maximum velocity is . Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?      Show that on the surface of the cylinder, the pressure force is given by where is a constant value.      It is possible to add a line vortex to the interior of the circular cylinder, centred at by writing in addition to , an additional term: Verify again that the above modification does not change the streamline properties of .  Does the above flow satisfy the condition that the flow is of uniform speed far upstream?      By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by   Conclude that a point on the cylinder that satisfies the equation is a stagnation point of the flow.      (Not examinable) Use a computational tool to investigate the streamlines of the flow for .  The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known Magnus effect , which is used by athletes to cause a ball's trajectory to move from a straight path.      Flow past a circular cylinder with interior line vortex of different strengths.   Flow past a circular cylinder with vortex          The Joukowski map  We shall study the following mapping.    The Joukowski transformation is the map where is a parameter. The mapping is conformal at all points except (pole) and where .    Consider a circle in the -plane. Let . Then in the -plane, this is mapped to Provided that , this the equation of an ellipse with principle radii and . The orientation of circles is preserved, with an anticlockwise rotation in corresponding to anticlockwise in . The exterior of the circle is mapped to the exterior of the ellipse in .  In addition note that if , the ellipses tends to the line segment which then ranges from for to for . As further ranges in , this traverses the horizontal plate again. One can interpret it as traversing the top or the bottom side of the plate (a view strengthened from considering the limiting images). This is shown in .   The Joukowski transformation in sends circles with radius to ellipses in the plane. In the limit , this approaches a horizontal plate of length .   Joukowski map    If on the other hand, , then we can verify that the mapping still produces ellipses, but now with principal radii and . The orientation is now reversed, with anticlockwise orientation in mapped to clockwise orientation. Therefore, it is the case that the interior of the discs with are mapped to the exterior of ellipses in . Again, in the limit that the images approach a flat plate of length on the axis.   The Joukowski transformation in sends circles with radius to ellipses in the plane. As , these tend to infinitely large circles. The values here are   Joukowski map    We can invert , and this gives As noted in , we must take care to define the proper branch cut structure for the two branch points at .  As noted in the exercises of , if we let and take , this corresponds to a single branch cut between and . This branch cut choice is the most convenient since then it directly coincides with the central axis of the ellipse.  Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have   Let us return to the perspective of images from the -plane to the -plane. We can now consider the images of circles in the -plane that have either been horizontally shifted and\/or vertically shifted. The two critical points (points where the map is not conformal) mentioned above correspond to either or .  Firstly in , we see that horizontal shifts of the circle will corresponding to shifting and deforming the ellipse such that, as a critical point is approached, this forms a point of non-conformality in the image (a cusp).   We now consider shifting the circle with to the left, so that the circumferance passes through the critical point at . This produces an image that resembles an aerofoil with a sharp trailing edge.   Joukowski map    Top-bottom asymmetry can also be introduced by considering vertical shifts of the preimages.   Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.   Joukowski map      Flow past a flat plate  Notes to appear here following Thursday 23 Oct lecture.   "
 },
 {
   "id": "thm-circle-theorem",
@@ -1240,14 +1240,23 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.6.2",
   "title": "Uniform flow past a circular cylinder.",
-  "body": " Uniform flow past a circular cylinder  We begin with the complex potential given by , which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary . Clearly, satisfies the requirements of the Circle Theorem since it is non-singular for all . Thus, we can construct    Uniform flow past a circle   Circle flow    "
+  "body": " Uniform flow past a circular cylinder  We begin with the complex potential given by , which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary . Clearly, satisfies the requirements of the Circle Theorem since it is non-singular for all . Thus, we can construct the following result    Potential flow of consisting of uniform horizontal flow of speed at infinity, past a circular cylinder of radius (placed at the origin) is given by the complex potential     The streamlines of the flow, found by taking the imaginary part of the above, are shown in .   Uniform flow past a circle   Circle flow    "
+},
+{
+  "id": "subsec-circle-maps-7",
+  "level": "2",
+  "url": "ch-chapter04-potentialflows-8.html#subsec-circle-maps-7",
+  "type": "Example",
+  "number": "4.6.5",
+  "title": "Problem class example.",
+  "body": " Problem class example   Previously, it was demonstrated, via that uniform horizontal flow past a circle (circular cylinder) of radius can be found via the complex potential function corresponding to uniform horizontal flow at infinity of speed .     Confirm, by use of the streamfunction , that the circle boundary is a streamline of the flow.      Derive the complex velocity, and use it to show that on the surface of the cylinder, the velocity is given by where .  It is helpful for you to remember that       Conclude that on the surface of the cylinder, the maximum velocity is . Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?      Show that on the surface of the cylinder, the pressure force is given by where is a constant value.      It is possible to add a line vortex to the interior of the circular cylinder, centred at by writing in addition to , an additional term: Verify again that the above modification does not change the streamline properties of .  Does the above flow satisfy the condition that the flow is of uniform speed far upstream?      By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by   Conclude that a point on the cylinder that satisfies the equation is a stagnation point of the flow.      (Not examinable) Use a computational tool to investigate the streamlines of the flow for .  The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known Magnus effect , which is used by athletes to cause a ball's trajectory to move from a straight path.      Flow past a circular cylinder with interior line vortex of different strengths.   Flow past a circular cylinder with vortex       "
 },
 {
   "id": "def-joukowski",
   "level": "2",
   "url": "ch-chapter04-potentialflows-8.html#def-joukowski",
   "type": "Definition",
-  "number": "4.6.4",
+  "number": "4.6.7",
   "title": "",
   "body": "  The Joukowski transformation is the map where is a parameter. The mapping is conformal at all points except (pole) and where .   "
 },
@@ -1256,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-chapter04-potentialflows-8.html#fig-conformal-joukowski01",
   "type": "Figure",
-  "number": "4.6.5",
+  "number": "4.6.8",
   "title": "",
   "body": " The Joukowski transformation in sends circles with radius to ellipses in the plane. In the limit , this approaches a horizontal plate of length .   Joukowski map   "
 },
@@ -1265,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-chapter04-potentialflows-8.html#fig-conformal-joukowski02",
   "type": "Figure",
-  "number": "4.6.6",
+  "number": "4.6.9",
   "title": "",
   "body": " The Joukowski transformation in sends circles with radius to ellipses in the plane. As , these tend to infinitely large circles. The values here are   Joukowski map   "
 },
@@ -1274,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-chapter04-potentialflows-8.html#fig-conformal-joukowski03",
   "type": "Figure",
-  "number": "4.6.7",
+  "number": "4.6.10",
   "title": "",
   "body": " We now consider shifting the circle with to the left, so that the circumferance passes through the critical point at . This produces an image that resembles an aerofoil with a sharp trailing edge.   Joukowski map   "
 },
@@ -1283,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ch-chapter04-potentialflows-8.html#fig-conformal-joukowski04",
   "type": "Figure",
-  "number": "4.6.8",
+  "number": "4.6.11",
   "title": "",
   "body": " Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.   Joukowski map   "
 },
@@ -1387,13 +1396,49 @@ var ptx_lunr_docs = [
   "body": " Flow past a flat plate   Show that the circle is mapped tro a line segment along the real -axis by the Joukowski transformation   Deduce that the extttterior of the line segment is mapped to the exterior of the circle by the transformation Carefully define the function and determine where the mapping above is conformal.   "
 },
 {
-  "id": "ch-chapter05-waves",
+  "id": "sec-waterwaves-equations",
   "level": "1",
-  "url": "ch-chapter05-waves.html",
-  "type": "Chapter",
-  "number": "5",
-  "title": "Water waves",
-  "body": " Water waves   In this chapter, you will study the theory of linear and nonlinear water waves. Linear water waves can be obtained by series expansions of the relevant free-surface equations. Nonlinear water waves requires the use of computational methods.   "
+  "url": "sec-waterwaves-equations.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Governing equations of water waves",
+  "body": " Governing equations of water waves  We shall consider the case of waves on the free surface of a two-dimensional potential fluid (hence inviscid, incompressible, and irrotational). The free surface bounds the water from above, and is assumed to be given by   Since the fluid satisfies the assumptions of potential flow, there exists a velocity potential where   What makes water-wave problems unique (and challenging) is that not only do we need to solve for the potential (and hence velocities) within the fluid, as given by Laplace's equation above, but that we must do so in an a priori unknown domain, where the free-surface location must also be solved in parallel. Key considerations, then, must relate to the precise boundary conditions to impose.   Boundary conditions  If we consider waves on a fluid of infinite (or deep) depth, then far below the free surface, we expect that the velocity tends to zero. Hence a suitable boundary condition is   On the other hand, for the case of fluid bounded below by a flat bed, say at , we have    "
+},
+{
+  "id": "exercises-water-waves",
+  "level": "1",
+  "url": "exercises-water-waves.html",
+  "type": "Exercises",
+  "number": "5.2",
+  "title": "Exercises",
+  "body": "  Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.     Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.    Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation    "
+},
+{
+  "id": "exercises-water-waves-1",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-1",
+  "type": "Exercise",
+  "number": "5.2.1",
+  "title": "Derivation of the kinematic condition.",
+  "body": " Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.   "
+},
+{
+  "id": "exercises-water-waves-2",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-2",
+  "type": "Exercise",
+  "number": "5.2.2",
+  "title": "Stokes waves.",
+  "body": " Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.  "
+},
+{
+  "id": "exercises-water-waves-3",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-3",
+  "type": "Exercise",
+  "number": "5.2.3",
+  "title": "Fluids of different densities.",
+  "body": " Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation   "
 },
 {
   "id": "sec-helmholtz",
