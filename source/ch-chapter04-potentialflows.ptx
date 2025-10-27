@@ -1309,12 +1309,23 @@
       <title>Uniform flow past a circular cylinder</title>
 
       <p>
-        We begin with the complex potential given by <m>f(z) = Uz</m>, which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary <m>|z| = a</m>. Clearly, <m>f</m> satisfies the requirements of the Circle Theorem since it is non-singular for all <m>z</m>. Thus, we can construct
-        <men xml:id="eqn-potential-uniform-past-circle">
-          w(z) = Uz + \overline{\frac{Ua^2}{\overline{z}}} = Uz + \frac{Ua^2}{z}.
-        </men>
-      </p>
+        We begin with the complex potential given by <m>f(z) = Uz</m>, which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary <m>|z| = a</m>. Clearly, <m>f</m> satisfies the requirements of the Circle Theorem since it is non-singular for all <m>z</m>. Thus, we can construct the following result</p>
 
+        <theorem xml:id="thm-flow-past-a-circular-cylinder">
+          <statement>
+            <p>
+              Potential flow of consisting of uniform horizontal flow of speed <m>U</m> at infinity, past a circular cylinder of radius <m>a</m> (placed at the origin) is given by the complex potential
+        <men xml:id="eqn-potential-uniform-past-circle">
+          w(z) = \phi + \im \psi = Uz + \overline{\frac{Ua^2}{\overline{z}}} = Uz + \frac{Ua^2}{z}.
+        </men>
+            </p>
+          </statement>
+        </theorem>
+
+        <p>
+          The streamlines of the flow, found by taking the imaginary part of the above, are shown in <xref ref="fig-conformal-circle-flow"/>.
+        </p>
+        
         <figure xml:id="fig-conformal-circle-flow">
       <caption>Uniform flow past a circle</caption>
       <image source="conformal_circle_flow.png" width="70%">
@@ -1323,9 +1334,132 @@
     </figure>
      </example>
 
+     <p>
+      The next example will be studied during the problem class.
+     </p>
 
-      
-      
+      <example>
+        <title>Problem class example</title>
+        
+        <introduction>
+        <p>
+          Previously, it was demonstrated, via <xref ref="eqn-potential-uniform-past-circle"/> that uniform horizontal flow past a circle (circular cylinder) of radius <m>a</m> can be found via the complex potential function
+          <men xml:id="eqn-flow-over-circle-problem">
+            w(z) = Uz + \frac{Ua^2}{z},  
+          </men>
+          corresponding to uniform horizontal flow at infinity of speed <m>U</m>.
+        </p>
+        </introduction>
+
+          <task>
+            <statement>
+              <p>
+                Confirm, by use of the streamfunction <m>\psi</m>, that the circle boundary is a streamline of the flow. 
+              </p>
+            </statement>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                Derive the complex velocity, <m>u - \im v</m> and use it to show that on the surface of the cylinder, the velocity is given by 
+                <me>
+                  u - \im v = 2U \e^{\im (\pi/2 - \theta)} \sin\theta,
+                </me>
+                where <m>z = a\e^{\im\theta}</m>.                
+              </p>
+
+              <p>
+                It is helpful for you to remember that 
+                <men xml:id="eqn-complex-sine">
+                  \sin\theta = \frac{\e^{\im\theta} - \e^{-\im\theta}}{2\im}.
+                </men>                
+              </p> 
+            </statement>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+               Conclude that on the surface of the cylinder, the maximum velocity is <m>|\bu| = 2U</m>. Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?  
+              </p>
+            </statement>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                Show that on the surface of the cylinder, the pressure force is given by 
+                <me>
+                  p = p_\infty + \frac{1}{2} \rho U^2(1 - 4\sin^2\theta),
+                </me>
+                where <m>p_\infty</m> is a constant value.
+              </p>
+            </statement>
+          </task>
+
+        <task>
+          <statement>
+            <p>
+              It is possible to add a line vortex to the interior of the circular cylinder, centred at <m>z = 0</m> by writing in addition to <xref ref="eqn-flow-over-circle-problem"/>, an additional term: 
+              <me>
+                w(z) = U \left(z + \frac{a^2}{z}\right) - \frac{\im\Gamma}{2\pi} \log z.
+              </me>
+              Verify again that the above modification does not change the streamline properties of <m>|z| = a</m>. 
+            </p>
+
+            <p>
+              Does the above flow satisfy the condition that the flow is of uniform speed <m>U</m> far upstream? 
+            </p>
+          </statement>
+        </task> 
+        
+        <task>
+          <statement>
+            <p>
+              By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by 
+              <me>
+                u - \im v = \im \e^{-\im\theta}\left(2U \sin\theta  - \frac{\Gamma}{2\pi a}\right). 
+              </me>
+            </p>
+
+            <p>
+              Conclude that a point on the cylinder that satisfies the equation 
+              <me>
+                \sin\theta = \frac{\Gamma}{4\pi a U},
+              </me>
+              is a stagnation point of the flow.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              (Not examinable) Use a computational tool to investigate the streamlines of the flow for <m>\Gamma = 0, 2\pi aU, 4\pi a U, and 6\pi a U</m>. 
+            </p>
+
+            <p>
+              The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of <m>\Gamma</m> will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known <em>Magnus effect</em>, which is used by athletes to cause a ball's trajectory to move from a straight path. 
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              <figure xml:id="fig-circle-with-vortex">
+                <caption>Flow past a circular cylinder with interior line vortex of different strengths.</caption>
+                <image source="conformal_circle_with_vortex.png" width="100%">
+                  <shortdescription>Flow past a circular cylinder with vortex</shortdescription>
+                </image>
+              </figure>
+            </p>
+          </solution>
+        </task>
+
+        
+      </example>
+
+
     </subsection>
 
   
@@ -1441,6 +1575,7 @@
       <p>
         Notes to appear here following Thursday 23 Oct lecture.
       </p>
+
 
 
       
