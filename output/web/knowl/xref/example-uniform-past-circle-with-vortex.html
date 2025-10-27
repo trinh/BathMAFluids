@@ -34,7 +34,28 @@ w(z) = Uz + \frac{Ua^2}{z},  \tag{4.6.3}
 </div></div>
 <article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para">Confirm, by use of the streamfunction <span class="process-math">\(\psi\text{,}\)</span> that the circle boundary is a streamline of the flow.<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">It will be useful to remind yourself that</div>
+<div class="displaymath process-math">
+\begin{equation}
+\cos\theta = \frac{\e^{\im\theta} + \e^{-\im\theta}}{2}. \tag{4.6.4}
+\end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We set <span class="process-math">\(z = a\e^{\im\theta}\)</span> into the streamfunction. This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi + \im \psi = U \left( \e^{\im \theta} + \e^{-\im\theta}\right) = 2U\cos\theta.
+\end{equation*}
+</div>
+<div class="para">Therefore <span class="process-math">\(\psi = \Im w = 0\)</span> on the surface of the cylinder.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.a.1"><a href="#example-uniform-past-circle-with-vortex-3-2" title="Copy heading and permalink for Solution 4.6.5.a.1" aria-label="Copy heading and permalink for Solution 4.6.5.a.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.a"><a href="#example-uniform-past-circle-with-vortex-3" title="Copy heading and permalink for Task 4.6.5.a" aria-label="Copy heading and permalink for Task 4.6.5.a">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para logical">
 <div class="para">Derive the complex velocity, <span class="process-math">\(u - \im v\)</span> and use it to show that on the surface of the cylinder, the velocity is given by</div>
@@ -50,14 +71,37 @@ u - \im v = 2U \e^{\im (\pi/2 - \theta)} \sin\theta,
 <div class="para">It is helpful for you to remember that</div>
 <div class="displaymath process-math">
 \begin{equation}
-\sin\theta = \frac{\e^{\im\theta} - \e^{-\im\theta}}{2\im}.\tag{4.6.4}
+\sin\theta = \frac{\e^{\im\theta} - \e^{-\im\theta}}{2\im}.\tag{4.6.5}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We need to take the derivative to obtain the complex velocity. So we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right).
+\end{equation*}
+</div>
+<div class="para">So again, substitution of <span class="process-math">\(z = a\e^{\im\theta}\)</span> and simplifying gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = U \e^{-\im \theta}\left( \e^{\im\theta} - \e^{-\im\theta}\right) = 2U \e^{\im(\pi/2 - \theta)} \sin\theta.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.b.1"><a href="#example-uniform-past-circle-with-vortex-4-2" title="Copy heading and permalink for Solution 4.6.5.b.1" aria-label="Copy heading and permalink for Solution 4.6.5.b.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.b"><a href="#example-uniform-past-circle-with-vortex-4" title="Copy heading and permalink for Task 4.6.5.b" aria-label="Copy heading and permalink for Task 4.6.5.b">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para">Conclude that on the surface of the cylinder, the maximum velocity is <span class="process-math">\(|\bu| = 2U\text{.}\)</span> Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">From the above, we clearly see that the magnitude is <span class="process-math">\(|u - \im v| = 2U\sin\theta\)</span> so the maximum speed on the cylinder is <span class="process-math">\(2U\text{.}\)</span> This value is obtained at the top and bottom with <span class="process-math">\(\theta = \pm \pi/2\text{.}\)</span> The stagnation point is found where the speed is zero, and this is at the fore and aft points, <span class="process-math">\(\theta = \pi, 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.c.1"><a href="#example-uniform-past-circle-with-vortex-5-2" title="Copy heading and permalink for Solution 4.6.5.c.1" aria-label="Copy heading and permalink for Solution 4.6.5.c.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.c"><a href="#example-uniform-past-circle-with-vortex-5" title="Copy heading and permalink for Task 4.6.5.c" aria-label="Copy heading and permalink for Task 4.6.5.c">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para logical">
 <div class="para">Show that on the surface of the cylinder, the pressure force is given by</div>
@@ -69,6 +113,25 @@ p = p_\infty + \frac{1}{2} \rho U^2(1 - 4\sin^2\theta),
 <div class="para">where <span class="process-math">\(p_\infty\)</span> is a constant value.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We know from Bernoulli’s equation, without gravity, that we have (<a href="sec-bernoulli.html#thm-bernoulli-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">Theorem 3.5.8</a>):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html">
+\begin{equation*}
+\left(p + \frac{\rho}{2} |\bu|^2\right)_{\text{cylinder}} = \left(p_\infty + \frac{\rho}{2} U^2\right)_{\text{infinity}}
+\end{equation*}
+</div>
+<div class="para">where we have set the constant on the RHS of the formula to be <span class="process-math">\(p_\infty/\rho\text{,}\)</span> setting a reference pressure. We now only need to substitute the speed on the cylinder, <span class="process-math">\(|\bu| = U(4\sin^2\theta)\text{,}\)</span> giving</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html">
+\begin{equation*}
+p = p_\infty + \frac{\rho}{2}U^2(1 - 4\sin^2\theta)
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.d.1"><a href="#example-uniform-past-circle-with-vortex-6-2" title="Copy heading and permalink for Solution 4.6.5.d.1" aria-label="Copy heading and permalink for Solution 4.6.5.d.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.d"><a href="#example-uniform-past-circle-with-vortex-6" title="Copy heading and permalink for Task 4.6.5.d" aria-label="Copy heading and permalink for Task 4.6.5.d">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para logical">
 <div class="para">It is possible to add a line vortex to the interior of the circular cylinder, centred at <span class="process-math">\(z = 0\)</span> by writing in addition to <a href="ch-chapter04-potentialflows-8.html#eqn-flow-over-circle-problem" class="xref" data-knowl="./knowl/xref/eqn-flow-over-circle-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.3">(4.6.3)</a>, an additional term:</div>
@@ -82,6 +145,30 @@ w(z) = U \left(z + \frac{a^2}{z}\right) - \frac{\im\Gamma}{2\pi} \log z.
 <div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para">Does the above flow satisfy the condition that the flow is of uniform speed <span class="process-math">\(U\)</span> far upstream?<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The addition of the line vortex does not change the streamline patterns on the cylinder since it is a linear addition. Indeed, on the surface, we have from the addition:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\im \Gamma}{2\pi} (\log a + \im \pi \theta) = -\frac{\Gamma}{2\pi} (-\pi \theta + \im \log a).
+\end{equation*}
+</div>
+<div class="para">Therefore the imaginary part is still a constant, and hence the boundary of the cylinder is still a streamline of the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To verify that the upstream flow is not altered, we can take a derivative to obtain the complex velocity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right) - \frac{\im}{2\pi z}.
+\end{equation*}
+</div>
+<div class="para">So in the limit <span class="process-math">\(|z| \to \infty\text{,}\)</span> we see indeed that the velocity is horizontal with speed <span class="process-math">\(U\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.e.1"><a href="#example-uniform-past-circle-with-vortex-7-2" title="Copy heading and permalink for Solution 4.6.5.e.1" aria-label="Copy heading and permalink for Solution 4.6.5.e.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.e"><a href="#example-uniform-past-circle-with-vortex-7" title="Copy heading and permalink for Task 4.6.5.e" aria-label="Copy heading and permalink for Task 4.6.5.e">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(f)</span></h5>
 <div class="para logical">
 <div class="para">By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by</div>
@@ -101,14 +188,47 @@ u - \im v = \im \e^{-\im\theta}\left(2U \sin\theta  - \frac{\Gamma}{2\pi a}\righ
 <div class="para">is a stagnation point of the flow.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We had previously simplified the left terms in brackets:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = 2U \im \e^{-\im\theta}\sin\theta - \frac{\Gamma\im}{2\pi a} \e^{-\im\theta} = \im \e^{-\im\theta}
+\left(2U \sin\theta - \frac{\Gamma}{2\pi a}\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">A stagnation point requires that <span class="process-math">\(|u - \im v| = 0\text{,}\)</span> so setting the terms in brackets to zero implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta = \frac{\Gamma}{4\pi a U},
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.f.1"><a href="#example-uniform-past-circle-with-vortex-8-2" title="Copy heading and permalink for Solution 4.6.5.f.1" aria-label="Copy heading and permalink for Solution 4.6.5.f.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 4.6.5.f"><a href="#example-uniform-past-circle-with-vortex-8" title="Copy heading and permalink for Task 4.6.5.f" aria-label="Copy heading and permalink for Task 4.6.5.f">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(g)</span></h5>
 <div class="para">(Not examinable) Use a computational tool to investigate the streamlines of the flow for <span class="process-math">\(\Gamma = 0, 2\pi aU, 4\pi a U, and 6\pi a U\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para">The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of <span class="process-math">\(\Gamma\)</span> will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known <em class="emphasis">Magnus effect</em>, which is used by athletes to cause a ball’s trajectory to move from a straight path.<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The point of the previous exercise is to note that when <span class="process-math">\(\Gamma \neq 0\text{,}\)</span> this shifts the location of the stagnation point. For example, if <span class="process-math">\(\Gamma = 4\pi a U\text{,}\)</span> then the stagnation points are found at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta = 1 \Longrightarrow \theta = \pi/2,
+\end{equation*}
+</div>
+<div class="para">i.e. the top of the cylinder.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para">
 <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/conformal_circle_with_vortex.png" class="contained" alt="Flow past a circular cylinder with vortex"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow past a circular cylinder with interior line vortex of different strengths.<div class="autopermalink" data-description="Figure 4.6.6"><a href="#fig-circle-with-vortex" title="Copy heading and permalink for Figure 4.6.6" aria-label="Copy heading and permalink for Figure 4.6.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow past a circular cylinder with interior line vortex of different strengths.<div class="autopermalink" data-description="Figure 4.6.6"><a href="#fig-circle-with-vortex" title="Copy heading and permalink for Figure 4.6.6" aria-label="Copy heading and permalink for Figure 4.6.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 4.6.5.g.1"><a href="#example-uniform-past-circle-with-vortex-9-2" title="Copy heading and permalink for Solution 4.6.5.g.1" aria-label="Copy heading and permalink for Solution 4.6.5.g.1">🔗</a></div>
 </div></details></div>

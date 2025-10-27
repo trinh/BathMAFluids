@@ -1356,7 +1356,25 @@
               <p>
                 Confirm, by use of the streamfunction <m>\psi</m>, that the circle boundary is a streamline of the flow. 
               </p>
+
+              <p>
+                It will be useful to remind yourself that 
+                <men xml:id="eqn-complex-cosine">
+                 \cos\theta = \frac{\e^{\im\theta} + \e^{-\im\theta}}{2}. 
+                </men>
+              </p>
             </statement>
+
+
+            <solution>
+              <p>
+                We set <m>z = a\e^{\im\theta}</m> into the streamfunction. This gives 
+                <me>
+                  \phi + \im \psi = U \left( \e^{\im \theta} + \e^{-\im\theta}\right) = 2U\cos\theta.
+                </me>
+               Therefore <m>\psi = \Im w = 0</m> on the surface of the cylinder.
+              </p>
+            </solution>
           </task>
 
           <task>
@@ -1376,6 +1394,19 @@
                 </men>                
               </p> 
             </statement>
+
+            <solution>
+              <p>
+                We need to take the derivative to obtain the complex velocity. So we have 
+                <me>
+                  w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right).
+                </me>
+                So again, substitution of <m>z = a\e^{\im\theta}</m> and simplifying gives 
+                <me>
+                  u - \im v = U \e^{-\im \theta}\left( \e^{\im\theta} - \e^{-\im\theta}\right) = 2U \e^{\im(\pi/2 - \theta)} \sin\theta.
+                </me>
+              </p>
+            </solution>
           </task>
 
           <task>
@@ -1384,7 +1415,14 @@
                Conclude that on the surface of the cylinder, the maximum velocity is <m>|\bu| = 2U</m>. Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?  
               </p>
             </statement>
+
+            <solution>
+              <p>
+                From the above, we clearly see that the magnitude is <m>|u - \im v| = 2U\sin\theta</m> so the maximum speed on the cylinder is <m>2U</m>. This value is obtained at the top and bottom with <m>\theta = \pm \pi/2</m>. The stagnation point is found where the speed is zero, and this is at the fore and aft points, <m>\theta = \pi, 0</m>.
+              </p>
+            </solution>
           </task>
+
 
           <task>
             <statement>
@@ -1396,7 +1434,22 @@
                 where <m>p_\infty</m> is a constant value.
               </p>
             </statement>
+
+          <solution>
+            <p>
+              We know from Bernoulli's equation, without gravity, that we have (<xref ref="thm-bernoulli-potential"/>): 
+              <me>
+                \left(p + \frac{\rho}{2} |\bu|^2\right)_{\text{cylinder}} = \left(p_\infty + \frac{\rho}{2} U^2\right)_{\text{infinity}}
+              </me>
+              where we have set the constant on the RHS of the formula to be <m>p_\infty/\rho</m>, setting a reference pressure. We now only need to substitute the speed on the cylinder, <m>|\bu| = U(4\sin^2\theta)</m>, giving
+              <me>
+                p = p_\infty + \frac{\rho}{2}U^2(1 - 4\sin^2\theta)
+              </me>
+              as desired.
+            </p>
+          </solution>
           </task>
+
 
         <task>
           <statement>
@@ -1412,7 +1465,26 @@
               Does the above flow satisfy the condition that the flow is of uniform speed <m>U</m> far upstream? 
             </p>
           </statement>
+
+          <solution>
+            <p>
+              The addition of the line vortex does not change the streamline patterns on the cylinder since it is a linear addition. Indeed, on the surface, we have from the addition: 
+              <me>
+                -\frac{\im \Gamma}{2\pi} (\log a + \im \pi \theta) = -\frac{\Gamma}{2\pi} (-\pi \theta + \im \log a).
+              </me>
+             Therefore the imaginary part is still a constant, and hence the boundary of the cylinder is still a streamline of the flow.  
+            </p>
+
+            <p>
+              To verify that the upstream flow is not altered, we can take a derivative to obtain the complex velocity: 
+                              <me>
+                  w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right) - \frac{\im}{2\pi z}.
+                </me>
+                So in the limit <m>|z| \to \infty</m>, we see indeed that the velocity is horizontal with speed <m>U</m>.
+            </p>
+          </solution>
         </task> 
+
         
         <task>
           <statement>
@@ -1431,6 +1503,24 @@
               is a stagnation point of the flow.
             </p>
           </statement>
+
+          <solution>
+            <p>
+                            We had previously simplified the left terms in brackets: 
+              <me>
+                u - \im v = 2U \im \e^{-\im\theta}\sin\theta - \frac{\Gamma\im}{2\pi a} \e^{-\im\theta} = \im \e^{-\im\theta}
+                \left(2U \sin\theta - \frac{\Gamma}{2\pi a}\right).
+              </me>
+            </p>
+
+            <p>
+              A stagnation point requires that <m>|u - \im v| = 0</m>, so setting the terms in brackets to zero implies 
+              <me>
+                \sin\theta = \frac{\Gamma}{4\pi a U},
+              </me>
+              as desired. 
+            </p>
+          </solution>
         </task>
 
         <task>
@@ -1445,6 +1535,14 @@
           </statement>
 
           <solution>
+
+            <p>
+              The point of the previous exercise is to note that when <m>\Gamma \neq 0</m>, this shifts the location of the stagnation point. For example, if <m>\Gamma = 4\pi a U</m>, then the stagnation points are found at
+              <me>
+                \sin\theta = 1 \Longrightarrow \theta = \pi/2,
+              </me>
+              i.e. the top of the cylinder.
+            </p>
             <p>
               <figure xml:id="fig-circle-with-vortex">
                 <caption>Flow past a circular cylinder with interior line vortex of different strengths.</caption>
