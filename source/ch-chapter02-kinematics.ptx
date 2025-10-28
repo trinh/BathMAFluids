@@ -753,14 +753,16 @@
               \end{matrix}\right)
               =-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
             </me>
-            see also <xref ref="eq-polarcartunitvectors"/>
+            see also <xref ref="eq-polarcartunitvectors-r"/>,
+            <xref ref="eq-polarcartunitvectors-theta"/> and
+            <xref ref="eq-polarcartunitvectors-z"/>.
           </p>
         </hint>
         <solution>
           <p>The calculation works out more simply in polar coordinates; the velocity field is <me>
             \bu = r\be_\theta,
           </me>
-          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eq-polarcartunitvectors"/>. Then the equation for particle paths is
+          where <m>\be_{\theta}</m> is the angular unit vector given in <xref ref="eq-polarcartunitvectors-theta"/>. Then the equation for particle paths is
           <me>
             \dd{r}{t} = 0,\quad\dd{r\theta}{t}= r\quad\Rightarrow\quad \dd{\theta}{t}=1.
           </me>
