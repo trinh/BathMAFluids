@@ -910,10 +910,11 @@
           <p> Start from the momentum equation <xref ref="eqn-consvmoment" />, <me>
               \pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
             </me>
-            and use the vector identity <xref ref="eqn-ugradu" /> gives <me>
+            and use the vector identity <xref ref="eqn-ugradu" /> gives 
+            <men xml:id="eqn-bernoulli-unsteady-chap3">
               \pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p +
             \frac{1}{2} |\bu|^2 + \chi\right).
-            </me>
+            </men>
           </p>
 
           <p> Next, the flow is steady, and therefore we can zero the first term. This leaves <me>

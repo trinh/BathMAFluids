@@ -4,7 +4,268 @@
   <title>Water waves</title>
 
   <introduction>
-    <p>In this chapter, you will study the theory of linear and nonlinear water waves. Linear water waves can be obtained by series expansions of the relevant free-surface equations. Nonlinear water waves requires the use of computational methods.</p>
+    <p>In the mid-nineteenth century, George Gabriel Stokes made significant contributions to the
+      study of water waves, establishing much of the theoretical foundation that underpins modern
+      fluid mechanics. His analysis of periodic, finite-amplitude waves on the surface of an
+      incompressible fluid led to what are now known as <em>Stokes waves</em>, which describe how
+      real waves deviate from purely sinusoidal motion as their amplitude increases. Stokes’ work
+      marked a shift from qualitative observation to quantitative description, providing a
+      systematic framework for understanding the balance of gravity, inertia, and nonlinearity in
+      wave motion.</p>
+
+    <p>Our main task in this chapter is to introduce the fundamental principles governing water
+      waves and the mathematical models that describe their behavior across different regimes.</p>
+
+  <note>
+    <p>
+      As part of our lecture, we will study the related <url href="https://techtv.mit.edu/collections/ifluids/videos/32616-waves-in-fluids">video on the NCFMF database</url> on Waves in Fluids. The particular section of relevance is at the start, concerning the particle trajectories in waves of deep water. 
+    </p>
+  </note>
+
   </introduction>
+
+
+
+  <section xml:id="sec-waterwaves-equations">
+    <title>Governing equations of water waves</title>
+
+    <p> We shall consider the case of waves on the free surface of a two-dimensional potential fluid
+      (hence inviscid, incompressible, and irrotational). The free surface bounds the water from above, and is assumed to be given by 
+      <me> 
+        y = \eta(x, t) \qquad -\infty &lt; x &lt; \infty.
+      </me>
+    </p>
+
+    <p>
+      Since the fluid satisfies the assumptions of potential flow, there exists a velocity potential <m>\bu = \nabla \phi</m> where
+      <me>
+      \nabla^2 \phi = \pd{^2 \phi}{x^2} + \pd{^2\phi}{y^2} = 0 \qquad \text{in the fluid}.   
+      </me>
+    </p>
+
+    <p>
+      What makes water-wave problems unique (and challenging) is that not only do we need to solve for the potential (and hence velocities) within the fluid, as given by Laplace's equation above, but that we must do so in an <em>a priori</em> unknown domain, where the free-surface location <m>y = \eta(x, t)</m> must also be solved in parallel. Key considerations, then, must relate to the precise boundary conditions to impose.
+    </p>
+
+    <subsection xml:id="subsec-waterwaves-boundaryconditions">
+      <title>Boundary conditions</title>
+
+      <subsubsection xml:id="subsubsec-waterwaves-otherBC">
+        <title>Bottom boundary conditions</title>
+      <p>
+        If we consider waves on a fluid of infinite (or deep) depth, then far below the free surface, we expect that the velocity tends to zero. Hence a suitable boundary condition is
+        <men xml:id="eqn-waterwaves-farfield-infinite">
+          \bu = \nabla \phi \to 0 \quad \text{as $y \to -\infty$}.
+        </men>
+      </p>
+
+      <p>
+        On the other hand, for the case of fluid bounded below by a flat bed, say at <m>y = -H</m>, we have
+        <men xml:id="eqn-waterwaves-bottom">
+          \bu \cdot \bn = 0 \Longrightarrow \pd{\phi}{y} = 0 \qquad \text{on $y = -H$}. 
+        </men>
+      </p>
+      </subsubsection>
+
+      <subsubsection xml:id="subsubsec-waterwaves-dynamicBC">
+        <title>Dynamic boundary conditions</title>
+        
+
+      <p>
+        There are now two boundary conditions to consider at the free surface. The <em>dynamic boundary condition</em> corresponds to the requirement of satisfying a force balance at the free surface. At the free surface, the pressure within the liquid must be equal to the pressure within the air. This leads to the dynamic boundary condition that 
+        <men xml:id="eqn-waterwaves-pressure">
+          p = p_{\text{atm}} \qquad \text{at $y = \eta(x, t)$},
+        </men> tv
+        where <m>p_{\text{atm}}</m> is the atmospheric pressure above the fluid (assumed to be constant). 
+      </p>
+
+      <p>
+        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving <xref ref="eqn-bernoulli-unsteady-chap3"/>:
+      </p>
+
+      <theorem xml:id="thm-bernoulli-unsteady-potential">
+        <title>Bernoulli's equation for unsteady potential flow</title>
+        <statement>
+          <p>
+           Bernoulli's equation for unsteady potential flow states that 
+           <men xml:id="eqn-bernoulli-unsteady-potential">
+            \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
+           </men>
+          for an arbitrary function <m>F(t)</m>, and where <m>\bg = -\nabla\chi</m> is the conservative body force. 
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Returning to <xref ref="eqn-bernoulli-unsteady-chap3"/>, we re-write in terms of the potential function and set the vorticity <m>\omega = \nabla \times \bu = 0</m>, giving 
+            <me>
+              \pd{}{t}(\nabla \phi) = - \nabla \left(\frac{1}{\rho}\nabla p +
+            \frac{1}{2} |\nabla \phi|^2 + \chi\right).
+            </me>
+            We can interchange the order of differentiation on the left 
+            <me>
+            \nabla\left(  \pd{\phi}{t}+\frac{1}{\rho}\nabla p +
+            \frac{1}{2} |\nabla \phi|^2 + \chi\right) = 0.
+            </me> 
+            We now integrate each of the spatial components and this yields the desired result.
+          </p>
+        </proof>
+      </theorem>
+
+      <p>
+        Below, we will set the body force indeed to be gravity. Thus if we write 
+        <me>
+          \chi = gy \Longrightarrow \bg = -\nabla \chi = \Bigl[0, -g\Bigr],
+        </me>
+        and gravity is then directed in the negative <m>y</m>-direction. 
+      </p>
+
+      <p>
+        We now evaluate Bernoulli's equation <xref ref="eqn-bernoulli-unsteady-potential"/> on the free surface, <m>y = \eta</m>. This gives 
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p_{\text{atm}}}{\rho} + g\eta = F(t), \qquad \text{on $y = \eta$}.
+        </me>
+        It is convenient to set the arbirary function <m>F(t) = \frac{p_{\text{atm}}}{\rho}</m>, yielding the final result:
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + g\eta = 0, \qquad \text{on $y = \eta$},
+        </me>
+        which is a re-phrasing of the necessary dynamic boundary condition on the free surface. 
+      </p>
+      </subsubsection>
+
+      <subsubsection xml:id="subsubsec-waterwaves-kinematicBC">
+        <title>Kinematic boundary conditions</title>
+
+        <p>
+          In the case of fluids near solid surfaces, we require a <em>no-penetration</em> condition, which enforces that the fluid velocity is zero in a direction normal to the surface, <m>\bu \cdot \bn = 0</m>. For the case of a free boundary, such as the one at <m>y = \eta(x, t)</m>, there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid fluid elements on the free surface must remain on the free surface. 
+        </p>
+
+        <p>
+          Thus, if <m>y = \eta</m> for some fluid particle at time <m>t</m>, then <m>y = \eta</m> for the same particle for all time. Thus we need
+          <me>
+            \DD{(y - \eta)}{t} = 0, \qquad \text{on $y = \eta$}.
+          </me>
+        </p>
+
+        <p>
+          Expansion and use of the material derivative then implies the <em>kinematic boundary condition</em>
+          <men xml:id="eqn-waterwaves-kinematicBC">
+            v = \pd{\eta}{t} + u \pd{\eta}{x}, \qquad \text{at $y = \eta$}.
+          </men>
+        </p>
+      </subsubsection>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-waterwaves-stokeswaves">
+    <title>Stokes waves</title>
+
+    <p>
+      To be covered Week 5. 
+    </p>
+    
+  </section>
+
+  <section xml:id="sec-waterwaves-generalisations">
+    <title>Generalisations of water waves</title>
+
+    <p>
+      To be covered Week 5-6.
+    </p>
+    
+  </section>
+
+  <section xml:id="sec-waterwaves-instability">
+    <title>Instability in waves</title>
+
+    <p>
+      To be covered Week 6.
+    </p>
+  </section>
+
+  <!-- <section xml:id="sec-waterwaves">
+    <title>Group velocity </title>
+    
+  </section> -->
+
+  <exercises xml:id="exercises-water-waves">
+   
+    <exercise>
+      <title>Derivation of the kinematic condition</title>
+      <statement>
+        <p>
+          In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by 
+          <me>
+        \br(s, t) = (x, \eta(x, t)).
+      </me>
+    </p>
+
+    <p>
+      Introduce the curve <m>F(x, y, t) = y - \eta(x, t)</m>. For any particle on the surface, it must be the case that <m>F(x, y, t) \equiv 0</m>. By applying the material derivative show that the condition that 
+            <me>
+              \DD{F}{t} = 0,
+            </me>
+            for particles on the free surface is equivalent to the kinematic condition 
+            <me>
+              v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
+            </me>
+          </p>
+        </statement>
+
+          <solution>
+            <p> 
+              By the definition of the material derivative, we have that
+              <me>
+                \DD{(y - \eta)}{t} = \pd{(y - \eta)}{t} + (u, v) \cdot \nabla(y - \eta) = -\pd{\eta}{t} + (u, v) \cdot (-\eta_x, 1).
+              </me>
+             Equating the above to zero for the case of <m>y = \eta(x, t)</m> yields the desired result.
+            </p>
+          </solution>
+    </exercise>
+
+    <exercise>
+      <title>Stokes waves</title>
+      <p>
+        Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the two governing equations are given by:
+        <md>
+          <mrow>\pd{\phi}{y} \amp= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x}, </mrow>
+          <mrow>\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta \amp= 0. </mrow>
+        </md>
+      </p>
+     
+      <p>
+        Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be 
+        <md>
+          <mrow>\pd{\phi}{y} \amp= \pd{\eta}{t}, </mrow>
+          <mrow>\pd{\phi}{t} + g\eta \amp= 0, </mrow>
+        </md>
+        and now applied on <m>y = 0</m>.
+      </p>
+
+      <p>
+        Show that travelling harmonic waves, with <m>\eta = AA\cos(kx - \omega t)</m> and <m>\phi = f(y)\sin(kx - \omega t)</m>, are possible and derive the associated dispersion relation, 
+        <me>
+          \omega^2 = gk \tanh(kh). 
+        </me>
+        Find and sketch the particle paths. 
+      </p>
+    </exercise>
+
+
+    <exercise>
+      <title>Fluids of different densities</title>
+      <p>
+        Inviscid incompressible fluid of density <m>\rho_2</m> lies in the region <m>y &gt; 0</m> above a fluid with greater density <m>\rho_1</m> for <m>y &lt; 0</m>. Assume there there is a small-amplitude disturbance the two fluids with the surface given by <m>y = \eta(x, t)</m>. Assuming <m>\eta</m> and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at <m>y = 0</m>. 
+      </p>
+
+      <p>
+        If <m>\eta(x, t) = A\cos(kx - \omega t)</m> with <m>k > 0</m>, derive the dispersion relation
+        <me>
+          \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gh.
+        </me>
+      </p>
+    </exercise>
+    
+  </exercises>
 
 </chapter>

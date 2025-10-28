@@ -4,37 +4,59 @@
   <title>Introduction</title>
 
   <introduction>
-    <!-- <p>During the first week, we will first introduce the general topic (and feel!) of the fluid dynamics course; review some basic knowledge in vector calculus; review some basic knowledge of complex variables.</p> -->
+    <!-- <p>During the first week, we will first introduce the general topic (and feel!) of the
+    fluid dynamics course; review some basic knowledge in vector calculus; review some basic
+    knowledge of complex variables.</p> -->
 
-  <blockquote>
+    <blockquote>
+      <p>
+        Now I think hydrodynamics is to be the root of all physical science, and is at present
+        second to none in the beauty of its mathematics.
+      </p>
+      <attribution>William Thompson (Lord Kelvin), Dec. 1857.</attribution>
+    </blockquote>
+
     <p>
-      Now I think hydrodynamics is to be the root of all physical science, and is at present second to none in the beauty of its mathematics.
+      As evidenced by the quotation above, during the great Victorian era, Lord Kelvin had predicted
+      that the field of hydronamics (predominantly, the study of liquids) would reign over all the
+      physical sciences. Today that is not quite true, in the sense that hydrodynamics is only one
+      of many sub-branches of the wider study of fluid motion. However, Kelvin's prediction is
+      certainly true in spirit: there are very few branches in the physical sciences, from biology
+      and chemistry, to engineering and physics, where the study of fluid mechanics does not possess
+      strong historical and scientific connections. The principles, language, and techniques of
+      fluid mechanics begin from the fundamental laws of conservation; in their form, one can argue
+      that all of nature can be derived---this grandiose point is, to some extent, what Kelvin had
+      meant when he referred to being the "root of all physical science".</p>
+
+    <p>Moreover, countless areas of mathematics, from the 19th century and onwards, have been
+      developed as a direct consequence of the need to investigate the beautiful nature of fluid
+      motion. These include everything from the theory of ordinary and partial differential
+      equations, calculus, complex analysis, mathematical methods and approximation theory, geometry
+      and topology, analysis, numerical methods and numerical analysis, industrial and applied
+      mathematics, and so forth and so on.
     </p>
-    <attribution>William Thompson (Lord Kelvin), Dec. 1857.</attribution>
-  </blockquote>
 
- <p>
-  As evidenced by the quotation above, during the great Victorian era, Lord Kelvin had predicted that the field of hydronamics (predominantly, the study of liquids) would reign over all the physical sciences. Today that is not quite true, in the sense that hydrodynamics is only one of many sub-branches of the wider study of fluid motion. However, Kelvin's prediction is certainly true in spirit: there are very few branches in the physical sciences, from biology and chemistry, to engineering and physics, where the study of fluid mechanics does not possess strong historical and scientific connections. The principles, language, and techniques of fluid mechanics begin from the fundamental laws of conservation; in their form, one can argue that all of nature can be derived---this grandiose point is, to some extent, what Kelvin had meant when he referred to being the "root of all physical science".</p>
-  
-  <p>Moreover, countless areas of mathematics, from the 19th century and onwards, have been developed as a direct consequence of the need to investigate the beautiful nature of fluid motion. These include everything from the theory of ordinary and partial differential equations, calculus, complex analysis, mathematical methods and approximation theory, geometry and topology, analysis, numerical methods and numerical analysis, industrial and applied mathematics, and so forth and so on.
- </p>
+    <remark>
+      <title>Fluid mechanics vs. fluid dynamics</title>
+      <p>
+        Why is this course called fluid dynamics and yet fluid mechanics? What is the difference?
+      </p>
 
- <remark>
-  <title>Fluid mechanics vs. fluid dynamics</title>
- <p>
-  Why is this course called fluid dynamics and yet fluid mechanics? What is the difference? 
- </p> 
+      <p>
+        In general, fluid mechanics includes both "statics" (fluids at rest) and "dynamics" (things
+        in motion). This is a distinction that, in the authors' opinions, mathematicians rarely use
+        (we probably refer to "fluid mechanics" more commonly so as to avoid being specific); these
+        distinctions are perhaps more important in engineering. For example, the study of the shape
+        of a soap film or bubble between a wire hoop is a question of statics; but the behaviour of
+        the soap or bubble if it moves or pops is a question of dynamics!
+      </p>
 
- <p>
-  In general, fluid mechanics includes both "statics" (fluids at rest) and "dynamics" (things in motion). This is a distinction that, in the authors' opinions, mathematicians rarely use (we probably refer to "fluid mechanics" more commonly so as to avoid being specific); these distinctions are perhaps more important in engineering. For example, the study of the shape of a soap film or bubble between a wire hoop is a question of statics; but the behaviour of the soap or bubble if it moves or pops is a question of dynamics!
- </p>
+      <p>
+        A tree diagram of different subfields and their applications might be made as follows.
+      </p>
 
- <p>
-  A tree diagram of different subfields and their applications might be made as follows.
- </p>
- 
 
-<pre>
+      <pre>
 Fluid Mechanics
  ├── Fluid Statics
  │     ├── Hydrostatics → Pressure in tanks and dams
@@ -61,108 +83,149 @@ Fluid Mechanics
              └── Gas–Solid Flow → Fluidized bed reactors
 </pre>
 
-<p>
-  It is not uncommon for some scientists and mathematicians to devote their entire careers to an entire subbranch of fluid mechanics. Some university departments will focus solely on certain subbranches as well! Hence fluid mechanics is for many, a lifelong pursuit!
+      <p>
+        It is not uncommon for some scientists and mathematicians to devote their entire careers to
+        an entire subbranch of fluid mechanics. Some university departments will focus solely on
+        certain subbranches as well! Hence fluid mechanics is for many, a lifelong pursuit!
 </p>
 
- </remark>
+    </remark>
 
- <p>
-  What is the course about? 
- </p>
-  
- <p>
-  Our first task, starting in <xref ref="ch-chapter02-kinematics"/> and <xref ref="ch-chapter03-equations"/> is to derive the so-called Euler equation, given by 
-  <me>
-    \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho\bg.
-  </me>
-  Euler's equation relates the velocity of a fluid, <m>\bu</m>, with its density <m>\rho</m>, pressure <m>p</m>, and associated forces, <m>\bg</m>. It is an expression of the conservation of momentum of fluid, and is completed with an accompanying equation for conservation of mass. Together, the two equations are solved with the specification of additional boundary conditions to describe many liquids, from the water in your bathtub, to the water in the ocean as a ship travels through the surface. 
- </p>
+    <p>
+      What is the course about?
+    </p>
 
- <p>
-  Slowly, we will begin to appreciate the use of conservation laws, and the mathematics necessary, to derive the above equations (compressing some hundred years of scientific work into only a handful of lectures!). We will also appreciate that, despite their compact form, the above equations are certainly not easy to solve!
- </p>
+    <p> Our first task, starting in <xref ref="ch-chapter02-kinematics" /> and <xref
+        ref="ch-chapter03-equations" /> is to derive the so-called Euler equation, given by <me>
+      \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho\bg.
+      </me>
+      Euler's equation relates the velocity of a fluid, <m>\bu</m>, with its density <m>\rho</m>,
+      pressure <m>p</m>, and associated forces, <m>\bg</m>. It is an expression of the conservation
+      of momentum of fluid, and is completed with an accompanying equation for conservation of mass.
+      Together, the two equations are solved with the specification of additional boundary
+      conditions to describe many liquids, from the water in your bathtub, to the water in the ocean
+      as a ship travels through the surface. </p>
 
- <figure>
-  <caption>Flow around an airfoil is an example of potential flow theory. From Van Dyke, An Album of Fluid Motion.</caption>
-  <image source="airfoil.png" width="100%">
-    <shortdescription>Airfoil</shortdescription>
-  </image>
- </figure>
+    <p>
+      Slowly, we will begin to appreciate the use of conservation laws, and the mathematics
+      necessary, to derive the above equations (compressing some hundred years of scientific work
+      into only a handful of lectures!). We will also appreciate that, despite their compact form,
+      the above equations are certainly not easy to solve!
+    </p>
 
- <p>
-  Our next task, starting in <xref ref="ch-chapter04-potentialflows"/> is to study a particular simplification of the Euler equation that yields the flow of an <em>ideal</em> or <em>potential</em> fluid. Under such constraints, instead of solving the above difficult equations, we solve a much simpler equation: 
-  <me>
-    \nabla^2 \phi = 0,
-  </me>
-  for a so-called <em>velocity potential</em>, <m>\phi</m>, related to the velocity by <m>\bu = \nabla \phi</m>. Potential flow theory would have occupied some of the greatest minds of our time, from Euler, Lagrange, Bernoulli, d'Alembert, and Laplace of the 18th century; to the great Victorian scientists of the 19th century: Kelvin, Green, Stokes, Helmholtz; then towards the modern 20th century workers such as Prandtl, Lighthill, Milne-Thompson, and so forth. It is the simplest framework for studying the motion of a liquid, such as water, but enjoys incredibly deep connections with the beautiful theory of complex variables. We will study some of these connections, leading to learning about things such as conformal mapping theory. 
- </p>
+    <figure>
+      <caption>Flow around an airfoil is an example of potential flow theory. From Van Dyke, An
+        Album of Fluid Motion.</caption>
+      <image source="airfoil.png" width="100%">
+        <shortdescription>Airfoil</shortdescription>
+      </image>
+    </figure>
 
- <figure>
-  <caption>In 1887, Kelvin famously predicted that the waves trailing a ship produce a wedge of approximately <m>2 \times 19.5^\circ</m>. This theory belongs to the analysis of linear water waves (though it is unlikely we will have time to reproduce Kelvin's approximation!) From Van Dyke, An Album of Fluid Motion.</caption>
-  <image source="kelvinwave.png" width="70%">
-    <shortdescription>Ship waves</shortdescription>
-  </image>
- </figure>
+    <p> Our next task, starting in <xref ref="ch-chapter04-potentialflows" /> is to study a
+      particular simplification of the Euler equation that yields the flow of an <em>ideal</em> or <em>
+      potential</em> fluid. Under such constraints, instead of solving the above difficult
+      equations, we solve a much simpler equation: <me>
+        \nabla^2 \phi = 0,
+      </me> for a so-called <em>velocity potential</em>, <m>\phi</m>,
+      related to the velocity by <m>\bu = \nabla \phi</m>. Potential flow theory would have occupied
+      some of the greatest minds of our time, from Euler, Lagrange, Bernoulli, d'Alembert, and
+      Laplace of the 18th century; to the great Victorian scientists of the 19th century: Kelvin,
+      Green, Stokes, Helmholtz; then towards the modern 20th century workers such as Prandtl,
+      Lighthill, Milne-Thompson, and so forth. It is the simplest framework for studying the motion
+      of a liquid, such as water, but enjoys incredibly deep connections with the beautiful theory
+      of complex variables. We will study some of these connections, leading to learning about
+      things such as conformal mapping theory. </p>
 
- <p>
-  Water waves is probably the application that was at the forefront of Lord Kelvin's thoughts when he discussed the state of hydrodynamics in the quotation that begins in <xref ref="ch-chapter05-waves"/>. The study of the surface motion of water introduces a seemingly minor complexity that is responsible for great heartache: the fluid is now bounded by an unknown free surface, which much now be solved as part of the problem! The theory of water waves was at the heart of many minds in the 19th century, given its importance in all applications naval and oceanic. The study of water waves begins with so-called linear wave theory, and moves towards numerical solutions of the full Euler equations. 
- </p>
+    <figure>
+      <caption>In 1887, Kelvin famously predicted that the waves trailing a ship produce a wedge of
+        approximately <m>2 \times 19.5^\circ</m>. This theory belongs to the analysis of linear
+        water waves (though it is unlikely we will have time to reproduce Kelvin's approximation!)
+        From Van Dyke, An Album of Fluid Motion.</caption>
+      <image source="kelvinwave.png" width="70%">
+        <shortdescription>Ship waves</shortdescription>
+      </image>
+    </figure>
 
-  <figure>
-  <caption>Water ejected from a nozzle forms a vortex sheet that rolls up into two vortex rings. From Van Dyke (1982) "An Album of Fluid Motion" <xref ref="ref-album"/>.</caption>
-  <image source="vortexring.png" width="70%">
-    <shortdescription>Vortex ring</shortdescription>
-  </image>
- </figure>
+    <p> Water waves is probably the application that was at the forefront of Lord Kelvin's thoughts
+      when he discussed the state of hydrodynamics in the quotation that begins in <xref
+        ref="ch-chapter05-waves" />. The study of the surface motion of water introduces a seemingly
+      minor complexity that is responsible for great heartache: the fluid is now bounded by an
+      unknown free surface, which much now be solved as part of the problem! The theory of water
+      waves was at the heart of many minds in the 19th century, given its importance in all
+      applications naval and oceanic. The study of water waves begins with so-called linear wave
+      theory, and moves towards numerical solutions of the full Euler equations. </p>
 
- <p>
-  In the above applications, our attention will be focused on so-called irrotational flows: flows that either do not contain or do not introduce new rotational characteristics. Of course, real life fluids are rarely so well-behaved and indeed, the study of vortices is an important domain in its own right, leading to models for tornados, flight, and many other fluid phenomena. The principle character of <xref ref="ch-chapter06-vorticity"/> is the vorticity, <m>\omega = \nabla \times \bu</m>. What is vorticity, how does one measure it, and what is its role in governing fluid motion: these are the topics of this chapter.
- </p>
+    <figure>
+      <caption>Water ejected from a nozzle forms a vortex sheet that rolls up into two vortex rings.
+        From Van Dyke (1982) "An Album of Fluid Motion" <xref ref="ref-album" />.</caption>
+      <image source="vortexring.png" width="70%">
+        <shortdescription>Vortex ring</shortdescription>
+      </image>
+    </figure>
 
-   <figure>
-  <caption>As illustrated in <xref ref="fig-rayleigh"/>, in 1883 Rayleigh performed a famous experiment of stability of flow in a tube, showing the emergence of an instability as the speed of the flow is increased. This leads to turbulence, which is predicted, in principle, from the Navier-Stokes equations of viscous flows. (From Van Dyke, An Album of Fluid Motion.</caption>
-  <image source="turbulence.png" width="70%">
-    <shortdescription>Turbulence</shortdescription>
-  </image>
- </figure>
+    <p> In the above applications, our attention will be focused on so-called irrotational flows:
+      flows that either do not contain or do not introduce new rotational characteristics. Of
+      course, real life fluids are rarely so well-behaved and indeed, the study of vortices is an
+      important domain in its own right, leading to models for tornados, flight, and many other
+      fluid phenomena. The principle character of <xref ref="ch-chapter06-vorticity" /> is the
+      vorticity, <m>\omega = \nabla \times \bu</m>. What is vorticity, how does one measure it, and
+      what is its role in governing fluid motion: these are the topics of this chapter. </p>
+
+    <figure>
+      <caption>As illustrated in <xref ref="fig-rayleigh" />, in 1883 Rayleigh performed a famous
+        experiment of stability of flow in a tube, showing the emergence of an instability as the
+        speed of the flow is increased. This leads to turbulence, which is predicted, in principle,
+        from the Navier-Stokes equations of viscous flows. (From Van Dyke, An Album of Fluid Motion.</caption>
+      <image source="turbulence.png" width="70%">
+        <shortdescription>Turbulence</shortdescription>
+      </image>
+    </figure>
 
 
- <p>
-  Finally, the last part of this course will open up to the important discpline of viscous flows in <xref ref="ch-viscousflows"/>. For this, the Euler equations are no longer sufficient, and we must include a dissipative component,
-  <me>
-    \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho \bg + \mu \nabla^2 \bu,
-  </me>
-  with <m>\mu</m> being the <em>viscosity</em> of the fluid. The above equation, together with an equation for conservation of mass, forms the so-called <em>Navier-Stokes equations</em>. All fluids are viscous to some extent, though some moreso than others. You will learn about the connections between viscous flow theory and inviscid theory, and some of the simple viscous flows that are foundational in this subbranch. 
- </p>
+    <p> Finally, the last part of this course will open up to the important discpline of viscous
+      flows in <xref ref="ch-viscousflows" />. For this, the Euler equations are no longer
+      sufficient, and we must include a dissipative component, <me>
+        \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho \bg + \mu \nabla^2
+      \bu,
+      </me>
+      with <m>\mu</m> being the <em>viscosity</em> of the fluid. The above equation, together with
+      an equation for conservation of mass, forms the so-called <em>Navier-Stokes equations</em>.
+      All fluids are viscous to some extent, though some moreso than others. You will learn about
+      the connections between viscous flow theory and inviscid theory, and some of the simple
+      viscous flows that are foundational in this subbranch. </p>
 
   </introduction>
 
   <section xml:id="sec-preliminary-vector-calculus">
     <title>A reminder of vector calculus</title>
 
-      <figure xml:id="fig-intro-green">
-        <caption>George Green's monumental work on electricity and magnetism, making use of many new concepts in vector calculus, 1828.</caption>
-        <image source="GreenEssay.png" width="50%">
-          <shortdescription>Cover</shortdescription>
-        </image>
-      </figure>
+    <figure xml:id="fig-intro-green">
+      <caption>George Green's monumental work on electricity and magnetism, making use of many new
+        concepts in vector calculus, 1828.</caption>
+      <image source="GreenEssay.png" width="50%">
+        <shortdescription>Cover</shortdescription>
+      </image>
+    </figure>
 
 
-    <p>
-      During the first week, we will provide a very brief review of some of the necessities that you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes has been updated for easy reference <url href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="notes">on Moodle</url>.
-    </p>
+    <p> During the first week, we will provide a very brief review of some of the necessities that
+      you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector
+      Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes
+      has been updated for easy reference <url
+        href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="notes">on Moodle</url>. </p>
 
-    <p>
-      We will assume that you are familiar enough with how to interpret many of the vector calculus identities found in Sec. 10 of the University of Bath book of tables, which can be access on Moodle or <url href="https://people.bath.ac.uk/ensdasr/ME10304.bho/UniBathFormulaeAndStatisticalTables.pdf" visual="tables">via this link</url>.
-    </p>
+    <p> We will assume that you are familiar enough with how to interpret many of the vector
+      calculus identities found in Sec. 10 of the University of Bath book of tables, which can be
+      access on Moodle or <url
+        href="https://people.bath.ac.uk/ensdasr/ME10304.bho/UniBathFormulaeAndStatisticalTables.pdf"
+        visual="tables">via this link</url>. </p>
 
-    <p>
-      In general, over the next few weeks, you will want to be familiar with recalling/looking up concepts like: 
-      <ul>
+    <p> In general, over the next few weeks, you will want to be familiar with recalling/looking up
+      concepts like: <ul>
         <li>
           <p>
-            The use of identities like div curl = 0 and curl grad = 0. Some of these are found on p.24 of the above tables.
+            The use of identities like div curl = 0 and curl grad = 0. Some of these are found on
+      p.24 of the above tables.
           </p>
         </li>
         <li>
@@ -182,269 +245,274 @@ Fluid Mechanics
         </li>
       </ul>
     </p>
-    </section>
-  
+  </section>
+
   <section xml:id="sec-preliminary-complex-variables">
     <title>A reminder of complex variables</title>
-<introduction>
-  <p>
-    In <xref ref="ch-chapter04-potentialflows"/>, we will leverage the power of complex variables to study certain problems in fluids (flow of a potential flow). One concept that you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>.
-  </p>
+    <introduction>
+      <p> In <xref ref="ch-chapter04-potentialflows" />, we will leverage the power of complex
+        variables to study certain problems in fluids (flow of a potential flow). One concept that
+        you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>. </p>
 
-        
+
       <figure xml:id="fig-intro-needham">
-        <caption>An image from Tristan Needham's "Visual Complex Analysis" <xref ref="ref-needham"/> showing how complex mappings transform shapes from one region to another.</caption>
+        <caption>An image from Tristan Needham's "Visual Complex Analysis" <xref ref="ref-needham" />
+          showing how complex mappings transform shapes from one region to another.</caption>
         <image source="intro_needham.png" width="80%">
           <shortdescription>Cover</shortdescription>
         </image>
       </figure>
-</introduction>
+    </introduction>
 
 
-  <subsection>
-    <title>Basic complex representations</title>
-    
-    
-    <p>
-      Generally, we write the Cartesian and polar form of a complex number as,
-      <me>
-        z = x + \im y = r\e^{\im\theta},
-      </me>
-      for magnitude <m>r > 0</m> and angle <m>\theta</m>. Below, we will consistently refer to <m>z\in\mathbb{C}</m>. The decomposition of the complex exponential is given by Euler's identity: 
-      <men xml:id="eq-complex-euler">
-      \e^{\im\theta} = \cos \theta + \im \sin\theta.
-      </men>
-  </p>
+    <subsection>
+      <title>Basic complex representations</title>
 
-  <p>
-    The usual trigonometric functions can be extended to the complex plane by considering their definition in terms of complex exponentials and Euler's identity. For example, we have
-    <men xml:id="eq-complex-cossin">
-      \cos z = \frac{\e^{\im z} + \e^{-\im z}}{2} \quad \text{and} \quad \sin z = \frac{\e^{\im z} - \e^{-\im z}}{2\im}.
-    </men>
-  </p>
 
-  <p>
-    Another important function we shall consider is the complex logarithm, defined as 
-    <men xml:id="eqn-intro-complex-log">
-     \log z \equiv \log r + \im \theta,
-    </men>
-    where <m>z = r\e^{\im\theta}</m>. That this definition is sensible is verified by checking that the logarithm is the inverse of the exponential. That is, 
-    <me>
-      \e^{\log z} = \e^{\log r + \im\theta} = \e^{\log r} \e^{\im\theta} = z.
-    </me>
-  </p>
+      <p> Generally, we write the Cartesian and polar form of a complex number as, <me>
+          z = x + \im y = r\e^{\im\theta},
+        </me> for magnitude <m>r > 0</m> and angle <m>
+        \theta</m>. Below, we will consistently refer to <m>z\in\mathbb{C}</m>. The decomposition of
+        the complex exponential is given by Euler's identity: <men xml:id="eq-complex-euler">
+        \e^{\im\theta} = \cos \theta + \im \sin\theta.
+        </men>
+      </p>
 
-  <p>
-    However, the definition <xref ref="eqn-intro-complex-log"/> is troubling because it is not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z = 1</m>. We dig deeper into this issue.
-  </p>
-</subsection>
+      <p> The usual trigonometric functions can be extended to the complex plane by considering
+        their definition in terms of complex exponentials and Euler's identity. For example, we have <men
+          xml:id="eq-complex-cossin">
+          \cos z = \frac{\e^{\im z} + \e^{-\im z}}{2} \quad \text{and} \quad \sin z = \frac{\e^{\im
+        z} - \e^{-\im z}}{2\im}.
+        </men>
+      </p>
 
-<subsection>
- <title>Complex functions</title>
+      <p> Another important function we shall consider is the complex logarithm, defined as <men
+          xml:id="eqn-intro-complex-log">
+          \log z \equiv \log r + \im \theta,
+        </men> where <m>z = r\e^{\im\theta}</m>. That
+        this definition is sensible is verified by checking that the logarithm is the inverse of the
+        exponential. That is, <me>
+          \e^{\log z} = \e^{\log r + \im\theta} = \e^{\log r} \e^{\im\theta} = z.
+        </me>
+      </p>
 
-  <p>
-    A complex function maps points on the complex plane to points on the complex plane. For instance, the square function, 
-    <me>
-      f(z) = z^2 = r^2 \e^{2\im \theta},
-    </me>
-   can be better understood by its effect on points on the unit circle, <m>|z| = 1</m>.
-  </p>
+      <p> However, the definition <xref ref="eqn-intro-complex-log" /> is troubling because it is
+        not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im
+        \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z
+        = 1</m>. We dig deeper into this issue. </p>
+    </subsection>
 
-  <p>
-    Consider a particle that orbits around the unit circle in the <m>z-</m>plane at unit speed. If the particle rotates by half a revolution, with <m>\theta = \pi</m>, then in the image plane, the image particle has rotated by a full revolution, with <m>f(z) = (\e^{\im \pi})^2</m> in this same unit time. This is illustrated by the image in <xref ref="fig-intro-z2map"/>.
-  </p>
+    <subsection>
+      <title>Complex functions</title>
 
-    <figure xml:id="fig-intro-z2map">
-      <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
-      <image source="intro_z2map.png" width="100%">
-        <shortdescription>z2 map</shortdescription>
-      </image>
-    </figure>
+      <p> A complex function maps points on the complex plane to points on the complex plane. For
+        instance, the square function, <me>
+          f(z) = z^2 = r^2 \e^{2\im \theta},
+        </me> can be better understood by its effect
+        on points on the unit circle, <m>|z| = 1</m>. </p>
 
-  <p>
-    Now we continue rotating around the unit circle in the <m>z-</m>plane, performing an additional <m>\pi</m> rotation. Within the image plane, the particle has now completed another full rotation around the unit circle. This is shown in <xref ref="fig-intro-z2map_02"/>.
-  </p>
+      <p> Consider a particle that orbits around the unit circle in the <m>z-</m>plane at unit
+        speed. If the particle rotates by half a revolution, with <m>\theta = \pi</m>, then in the
+        image plane, the image particle has rotated by a full revolution, with <m>f(z) = (\e^{\im
+        \pi})^2</m> in this same unit time. This is illustrated by the image in <xref
+          ref="fig-intro-z2map" />. </p>
 
-    <figure xml:id="fig-intro-z2map_02">
-      <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image plane.</caption>
-      <image source="intro_z2map_02.jpg" width="100%">
-        <shortdescription>z2 map</shortdescription>
-      </image>
-    </figure>
+      <figure xml:id="fig-intro-z2map">
+        <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image
+          plane.</caption>
+        <image source="intro_z2map.png" width="100%">
+          <shortdescription>z2 map</shortdescription>
+        </image>
+      </figure>
 
-</subsection>
+      <p> Now we continue rotating around the unit circle in the <m>z-</m>plane, performing an
+        additional <m>\pi</m> rotation. Within the image plane, the particle has now completed
+        another full rotation around the unit circle. This is shown in <xref
+          ref="fig-intro-z2map_02" />. </p>
 
-  <subsection>
-    <title>Multifunctions, branch cuts, and Riemann sheets</title>
+      <figure xml:id="fig-intro-z2map_02">
+        <caption>A revolution of <m>\pi</m> in the pre-image produces a full rotation in the image
+          plane.</caption>
+        <image source="intro_z2map_02.jpg" width="100%">
+          <shortdescription>z2 map</shortdescription>
+        </image>
+      </figure>
 
-    <p>
-      Now consider the inverse function of the above, given by the square root function, 
-      <me>
+    </subsection>
+
+    <subsection xml:id="sec-intro-multifunctions">
+      <title>Multifunctions, branch cuts, and Riemann sheets</title>
+
+      <p> Now consider the inverse function of the above, given by the square root function, <me>
         f(z) = z^{1/2}.
-      </me>
-    </p>
+        </me>
+      </p>
 
-    <p>
-      Visually, we can simply consider the same figures as before, but now with the mapping proceeding from the right subfigure to the left subfigure. Observe that there is now an ambiguity, because for each point in the original <m>z-</m>plane, there are two possible images to assign for <m>z^{1/2}</m>, corresponding to either the top semicircle of the left figure, or the bottom semicircle. 
-    </p>
+      <p> Visually, we can simply consider the same figures as before, but now with the mapping
+        proceeding from the right subfigure to the left subfigure. Observe that there is now an
+        ambiguity, because for each point in the original <m>z-</m>plane, there are two possible
+        images to assign for <m>z^{1/2}</m>, corresponding to either the top semicircle of the left
+        figure, or the bottom semicircle. </p>
 
-    <p>
-      That is, it is unclear of whether we should define: 
-      <me>
-        f(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
-      </me>
-      or 
-      <me>
-        f(z) = z^{1/2} = -r^{1/2} \e^{\im\theta/2}.
-      </me>
-    </p>
+      <p> That is, it is unclear of whether we should define: <me>
+          f(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
+        </me> or <me>
+          f(z) = z^{1/2} = -r^{1/2} \e^{\im\theta/2}.
+        </me>
+      </p>
 
-    <p>
-    Moreover there is a problem, for if we allow a "motion" of the <m>z</m> values such that <m>z</m> rotates more than a complete revolution around the origin, then <m>f(z)</m> is no longer well-defined and takes on multiple possible values. 
-    </p>
+      <p> Moreover there is a problem, for if we allow a "motion" of the <m>z</m> values such that <m>
+        z</m> rotates more than a complete revolution around the origin, then <m>f(z)</m> is no
+        longer well-defined and takes on multiple possible values. </p>
 
-    <p>
-      This leads to the following restriction. We define a <em>branch cut</em> of the <m>z-</m>plane, and restrict the possible argument values. For example, we may choose 
-      <me>
-        0 \leq \theta &lt; 2\pi,
-      </me>
-      hence imposing that the branch cut is along the positive real axis. This is illustrated in <xref ref="fig-intro-branchcut"/> where the branch cut is shown as a wavy line.
-    </p>
+      <p> This leads to the following restriction. We define a <em>branch cut</em> of the <m>z-</m>plane,
+        and restrict the possible argument values. For example, we may choose <me>
+          0 \leq \theta &lt; 2\pi,
+        </me> hence imposing that the branch cut is along
+        the positive real axis. This is illustrated in <xref ref="fig-intro-branchcut" /> where the
+        branch cut is shown as a wavy line. </p>
 
-    <figure xml:id="fig-intro-branchcut">
-      <caption>Branch cut</caption>
-      <image source="intro_branchcut.jpg" width="80%">
-        <shortdescription>branch cut</shortdescription>
-      </image>
-    </figure>
+      <figure xml:id="fig-intro-branchcut">
+        <caption>Branch cut</caption>
+        <image source="intro_branchcut.jpg" width="80%">
+          <shortdescription>branch cut</shortdescription>
+        </image>
+      </figure>
 
-    <p>
-      Alternatively, we could have equally chosen 
-      <me>
-        -\pi \leq \theta &lt; \pi,
-      </me>
-      hence taken the branch cut along the negative real axis. 
-    </p>
+      <p> Alternatively, we could have equally chosen <me>
+          -\pi \leq \theta &lt; \pi,
+        </me> hence taken the branch cut along the
+        negative real axis. </p>
 
-    <p>
-      Once the branch cut has been selected, the previous multi-function is restricted to one of the two possible definitions above. This leads to the definition as follows.</p>
+      <p>
+        Once the branch cut has been selected, the previous multi-function is restricted to one of
+        the two possible definitions above. This leads to the definition as follows.</p>
 
       <definition>
         <title>Branches of the square root function</title>
         <statement>
-          <p>
-            The positive branch of the square root, with branch cut taken along the positive real axis, is defined by
-            <me>
+          <p> The positive branch of the square root, with branch cut taken along the positive real
+            axis, is defined by <me>
               f(z) = f_1(z) = z^{1/2} = r^{1/2} \e^{\im\theta/2},
-            </me>
-           for <m>r > 0 </m> and <m>0 \leq \theta &lt; 2\pi</m>. Other branch cut choices can be taken in an analogous manner (curve that extends from <m>z= 0</m> to <m>z = \infty</m>).</p>
+            </me> for <m>r
+            > 0 </m> and <m>0 \leq \theta &lt; 2\pi</m>. Other branch cut choices can be taken in an
+            analogous manner (curve that extends from <m>z= 0</m> to <m>z = \infty</m>).</p>
 
-           <p> Then the above <m>f</m> with <m>z</m> restricted as given is a well-defined single-valued function. 
-          </p>
+          <p> Then the above <m>f</m> with <m>z</m> restricted as given is a well-defined
+            single-valued function. </p>
 
-          <p>
-            There is an analogous negative branch defined as 
-            <me>
+          <p> There is an analogous negative branch defined as <me>
               f(z) = f_2(z) = z^{1/2} = -r^{1/2} \e^{\im\theta/2},
             </me>
           </p>
 
-          <p>
-            Therefore, <m>f_1</m> and <m>f_2</m> make up the two "layers" of the square root function.</p>
-              
-            <p> We often refer to each individual "layer" as a <em>Riemann sheet</em><idx><h>Riemann sheet</h></idx>. The critical point <m>z = 0</m> is referred to as a <em>branch point</em><idx><h>branch point</h></idx>.
-          </p>
+          <p> Therefore, <m>f_1</m> and <m>f_2</m> make up the two "layers" of the square root
+            function.</p>
 
-          <p>
-            The collection of Riemann sheets is referred to as a <em>Riemann surface</em><idx><h>Riemann surface</h></idx>.
-          </p>
+          <p> We often refer to each individual "layer" as a <em>Riemann sheet</em><idx>
+              <h>Riemann sheet</h>
+            </idx>. The critical point <m>z = 0</m> is referred to
+            as a <em>branch point</em><idx>
+              <h>branch point</h>
+            </idx>. </p>
+
+          <p> The collection of Riemann sheets is referred to as a <em>Riemann surface</em><idx>
+              <h>Riemann surface</h>
+            </idx>. </p>
         </statement>
       </definition>
 
-    <p>
-      In <xref ref="ex-Riemannsurface"/>, you will plot the Riemann surface that corresponds to <m>f(z) = z^{1/2}</m>. The result might look like this version created using Python graphing tool: 
+      <p> In <xref ref="ex-Riemannsurface" />, you will plot the Riemann surface that corresponds to <m>f(z)
+        = z^{1/2}</m>. The result might look like this version created using Python graphing tool: <figure
+          xml:id="fig-intro-sqrt-surface">
+          <caption>Riemann surface for the square root function. This shows the real part of the
+        square root, which consists of both a positive branch and a negative branch. In the above
+        case, we have placed the branch cut along the negative real axis. </caption>
+          <image source="intro_sqrt_01.png">
+            <shortdescription>Sqrt</shortdescription>
+          </image>
+        </figure>
+      </p>
 
-      <figure xml:id="fig-intro-sqrt-surface">
-        <caption>Riemann surface for the square root function. This shows the real part of the square root, which consists of both a positive branch and a negative branch. In the above case, we have placed the branch cut along the negative real axis. </caption>
-        <image source="intro_sqrt_01.png">
-          <shortdescription>Sqrt</shortdescription>
-        </image>
-      </figure>
-    </p>
+      <p> A similar argument would indicate that the function <men xml:id="eq-intro-twobranch">
+          f(z) = (z + 1)^{1/2} (z - 1)^{1/2},
+        </men> requires two branch cuts in
+        general, each cut originating from the two branch points at <m>z = \pm 1.</m> You will study
+        this function in more detail in <xref ref="ex-branch1" />. </p>
 
-    <p>
-      A similar argument would indicate that the function 
-      <men xml:id="eq-intro-twobranch">
-        f(z) = (z + 1)^{1/2} (z - 1)^{1/2},
-      </men>
-      requires two branch cuts in general, each cut originating from the two branch points at <m>z = \pm 1.</m> You will study this function in more detail in <xref ref="ex-branch1"/>.
-    </p>
+      <p> Also in <xref ref="ex-log" />, you will study the branch structure of the complex
+        logarithm in <xref ref="eqn-intro-complex-log" />. </p>
+    </subsection>
 
-    <p>
-      Also in <xref ref="ex-log"/>, you will study the branch structure of the complex logarithm in <xref ref="eqn-intro-complex-log"/>.
-    </p>
-  </subsection>
+    <subsection>
+      <title>Other functions and visualisations</title>
 
-  <subsection>
-    <title>Other functions and visualisations</title>
-
-    <!-- <p>
+      <!-- <p>
       (Non-examinable)
     </p> -->
 
-    <p>
-    The theory of complex analysis is rich in different kinds of visualisations. Another way to visualise a complex function is by considering its effect on a gridded pattern in the original <m>z</m>-plane, and then to imagine the function as warping this pattern. With this interpretation, it will be seen clearly that the operation of <m>f(z) = z^2</m> essentially rotates and expands the <m>(x, y)</m> plane. This is seen in the following video.</p>
+      <p> The theory of complex analysis is rich in different kinds of visualisations. Another way
+        to visualise a complex function is by considering its effect on a gridded pattern in the
+        original <m>z</m>-plane, and then to imagine the function as warping this pattern. With this
+        interpretation, it will be seen clearly that the operation of <m>f(z) = z^2</m> essentially
+        rotates and expands the <m>(x, y)</m> plane. This is seen in the following video.</p>
 
-        <video youtube="0z1fIsUNhO4">
-        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the visualisation of complex functions.</caption> </video>
+      <video youtube="0z1fIsUNhO4">
+        <caption>A famous video by Douglas Arnold and Jonathan Rogness in 2007 illustrating the
+          visualisation of complex functions.</caption>
+      </video>
 
-    <p>
-      However, you will also encounter some of these more complex mappings, notably the inversion map, <m>f(z) = 1/z</m> in <xref ref="ch-chapter04-potentialflows"/>.
-    </p>
+      <p> However, you will also encounter some of these more complex mappings, notably the
+        inversion map, <m>f(z) = 1/z</m> in <xref ref="ch-chapter04-potentialflows" />. </p>
 
-    <p>
-      The theory in the video (visualisation on the Riemann sphere) is not necessary for this course; it is presented here just out of interest (and because the video is beautiful!).
-    </p>
+      <p>
+        The theory in the video (visualisation on the Riemann sphere) is not necessary for this
+        course; it is presented here just out of interest (and because the video is beautiful!).
+      </p>
 
-    <remark>
-      <p>It is sensible to ask: <em>what does this have to do with fluid mechanics?</em>. In <xref ref="ch-chapter04-potentialflows"/>, we will see that the use of complex functions can map a region of fluid to another. </p>
-    </remark>
-    
-  </subsection>
+      <remark>
+        <p>It is sensible to ask: <em>what does this have to do with fluid mechanics?</em>. In <xref
+            ref="ch-chapter04-potentialflows" />, we will see that the use of complex functions can
+          map a region of fluid to another. </p>
+      </remark>
 
-  <subsection>
-    <title>Differentiation of complex functions</title>
+    </subsection>
 
-    <p>
-      In this chapter, we will only cover the basic necessities of visualising and studying complex functions. In <xref ref="ch-chapter04-potentialflows"/>, we will need additional theory on the differentiation of complex functions. 
-    </p>
-    
-  </subsection>
+    <subsection>
+      <title>Differentiation of complex functions</title>
+
+      <p> In this chapter, we will only cover the basic necessities of visualising and studying
+        complex functions. In <xref ref="ch-chapter04-potentialflows" />, we will need additional
+        theory on the differentiation of complex functions. </p>
+
+    </subsection>
 
     <subsection>
       <title>Summary</title>
-      
-    <p>
-Certain complex functions are only well-defined with appropriate branch cuts chosen. However, once such restrictions are made (and an individual Riemann sheet chosen), the complex function is well defined. The branch cut will correspond to locations where the function is nonsmooth (in its real and/or imaginary components).
-    </p>
-    
-  </subsection>
- 
+
+      <p>
+        Certain complex functions are only well-defined with appropriate branch cuts chosen.
+        However, once such restrictions are made (and an individual Riemann sheet chosen), the
+        complex function is well defined. The branch cut will correspond to locations where the
+        function is nonsmooth (in its real and/or imaginary components).
+      </p>
+
+    </subsection>
+
   </section>
 
   <exercises xml:id="ws-intro">
     <!-- <exercisegroup> -->
     <!-- <title>Complex analysis</title> -->
-    <introduction> 
-    <p>
-      The main function of this chapter was to briefly review complex functions and also
-      review/introduce you to the notion of branch cuts.
-      Complex functions will be used in the potential theory of
-      <xref ref="ch-chapter04-potentialflows"/> and wave theory of <xref ref="ch-chapter05-waves"/>.
-    </p>
-    <!-- <p>
+    <introduction>
+      <p> The main function of this chapter was to briefly review complex functions and also
+        review/introduce you to the notion of branch cuts. Complex functions will be used in the
+        potential theory of <xref ref="ch-chapter04-potentialflows" /> and wave theory of <xref
+          ref="ch-chapter05-waves" />. </p>
+      <!-- <p>
     <warning>
-      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is
+      done, this disclaimer message will be removed.</p>
     </warning>
     </p> -->
     </introduction>
@@ -453,46 +521,44 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
       <title>Plotting a Riemann surface</title>
 
       <introduction>
-      <p>Select the branch cut of <m>f(z) = z^{1/2}</m> that runs along the positive real axis. 
-      </p>
-    </introduction>
+        <p>Select the branch cut of <m>f(z) = z^{1/2}</m> that runs along the positive real axis. </p>
+      </introduction>
 
-    <task>
-      <statement>
-        <p>
-            Consider a contour that starts from <m>z = 1</m>, then encircles the origin (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m> at the end of the contour as compared to the start? 
-        </p>
-      </statement>
+      <task>
+        <statement>
+          <p> Consider a contour that starts from <m>z = 1</m>, then encircles the origin
+            (anticlockwise) and returns to <m>z = 1</m>. What is the jump in the value of <m>f(z)</m>
+            at the end of the contour as compared to the start? </p>
+        </statement>
 
-      <hint>
-        <p>
-          Let <m>z = \e^{\im \theta}</m> and consider <m>\theta</m> ranging from the initial value to a final value.
-        </p>
-      </hint>
+        <hint>
+          <p> Let <m>z = \e^{\im \theta}</m> and consider <m>\theta</m> ranging from the initial
+            value to a final value. </p>
+        </hint>
 
-      <solution>
-        <p>
-          Let <m>z = \e^{\im \theta}</m>. For <m>\theta = 0</m>, <m>f(z) = r^{1/2}</m> if we choose the positive branch of the square root (by convention). At the other side of the branch cut, <m>\theta = 2\pi</m> and <m>f(z) = r^{1/2} \e^{\pi \im} = -r^{1/2}</m>. Therefore there is a jump in value of <m>-2r^{1/2}</m>. 
-        </p>
-      </solution>
-    </task>
+        <solution>
+          <p> Let <m>z = \e^{\im \theta}</m>. For <m>\theta = 0</m>, <m>f(z) = r^{1/2}</m> if we
+            choose the positive branch of the square root (by convention). At the other side of the
+            branch cut, <m>\theta = 2\pi</m> and <m>f(z) = r^{1/2} \e^{\pi \im} = -r^{1/2}</m>.
+            Therefore there is a jump in value of <m>-2r^{1/2}</m>. </p>
+        </solution>
+      </task>
 
-    <task>
-      <statement>
-        <p>
-            By hand, plot the Riemann surface as visualised in <m>(x, y, \Im f(x + \im y))</m>-space, where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a computational tool, if desired. 
-        </p>
-      </statement>
+      <task>
+        <statement>
+          <p> By hand, plot the Riemann surface as visualised in <m>(x, y, \Im f(x + \im y))</m>-space,
+            where <m>\Im f(z) = r^{1/2} \sin(\theta/2)</m>. You may also confirm your sketch with a
+            computational tool, if desired. </p>
+        </statement>
 
-      <hint>
-        <p>
-          It is useful to first consider the plot of <m>\sin(\theta/2)</m>, and then separately, what happens for the magnitude variation that depends on <m>r^{1/2}</m>.
-        </p>
-      </hint>
+        <hint>
+          <p> It is useful to first consider the plot of <m>\sin(\theta/2)</m>, and then separately,
+            what happens for the magnitude variation that depends on <m>r^{1/2}</m>. </p>
+        </hint>
 
-      <solution>
-        <p>
-          A sketch of the imaginary part of the square root function is shown below. The two key features to capture is the dependence on <m>\theta</m> and the dependence on <m>r</m>.</p>
+        <solution>
+          <p> A sketch of the imaginary part of the square root function is shown below. The two key
+            features to capture is the dependence on <m>\theta</m> and the dependence on <m>r</m>.</p>
 
           <figure>
             <caption>Sketch of the imaginary part of the square root function</caption>
@@ -500,214 +566,221 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
               <shortdescription>Square root</shortdescription>
             </image>
           </figure>
-      </solution>
-    </task>
+        </solution>
+      </task>
     </exercise>
 
 
     <exercise xml:id="ex-branch1">
       <title>A function with two branch points</title>
-      <introduction><p>
-        Consider the function <xref ref="eq-intro-twobranch"/>:
-        <me>
-        f(z) = (z + 1)^{1/2} (z - 1)^{1/2}.
-        </me>
-      </p>
+      <introduction>
+        <p> Consider the function <xref ref="eq-intro-twobranch" />: <me>
+            f(z) = (z + 1)^{1/2} (z - 1)^{1/2}.
+          </me>
+        </p>
       </introduction>
 
-        <task>
-          <statement>
-            <p>
-              Choose the branch cut from <m>z = 1</m> in the positive real direction. Choose the branch cut from <m>z = -1</m> in the negative real direction. Write either <m>z = r_1 \e^{\im\theta_1}</m> or <m>z = r_2 \e^{\im\theta_2}</m> for <m>\theta_1</m> and <m>\theta_2</m> defined as relative angles from the two branch points.</p>
-              
-              <p>Show that: (i) when <m>z = 1</m> is encircled by a complete revolution, the function jumps in value by a factor of <m>\e^{\im \pi}</m>; (ii) that there is a similar jump in value when <m>z = -1</m> is encircled. Finally what happens if (iii) <m>z = 0</m> is encircled?
-            </p>
+      <task>
+        <statement>
+          <p> Choose the branch cut from <m>z = 1</m> in the positive real direction. Choose the
+            branch cut from <m>z = -1</m> in the negative real direction. Write either <m>z = r_1
+            \e^{\im\theta_1}</m> or <m>z = r_2 \e^{\im\theta_2}</m> for <m>\theta_1</m> and <m>
+            \theta_2</m> defined as relative angles from the two branch points.</p>
 
-            <p>
-              Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
-            </p>
-          </statement>
+          <p>Show that: (i) when <m>z = 1</m> is encircled by a complete revolution, the function
+            jumps in value by a factor of <m>\e^{\im \pi}</m>; (ii) that there is a similar jump in
+            value when <m>z = -1</m> is encircled. Finally what happens if (iii) <m>z = 0</m> is
+            encircled? </p>
 
-          <solution>
-            <p>
-              (i) We have that 
-              <me>
-                f(z) = (r_1 r_2)^{1/2} \e^{\im \theta_1/2} \e^{\im \theta_2/2}.
-              </me>
-              Let <m>\theta_1 \in [0, 2\pi)</m> be the angle about the point <m>z = 1</m>. Similarly let <m>\theta_2 \in [-\pi, \pi)</m> be the angle about the point <m>z = -1</m>. </p>
-              
-              <p>Considering firstly a revolution around <m>z = 1</m> (that does not also enclose <m>z = -1</m>). Let the initial point be denoted "A", with <m>\theta_1 = 0, \theta_2 = 0</m>. And the final point be "B", with <m>\theta_1 = 2\pi</m> and <m>\theta_2 = 0</m>.</p>
-              
-              <p>Then
-              <me>
-                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{2\pi\im/2} - (r_1 r_2)^{1/2} \e^0 = -2(r_1 r_2)^{1/2}.
-              </me>
-              so indeed there is a jump in the function about the branch cut along <m>z &gt; 1</m>.
-            </p>
+          <p> Draw a picture of the final <m>z</m>-plane, showing the branch cuts. </p>
+        </statement>
 
-            <p>
-              (ii) We would similarly verify that for a contour around the branch point <m>z = -1</m> there is a jump. Let the initial point be denoted "A" with <m>\theta_1 = \pi, \theta_2 = -\pi</m>. And the final point be "B" with <m>\theta_1 = \pi, \theta_2 = \pi</m>. Then 
-              <me>
-                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(\pi + \pi)\im/2} - (r_1 r_2)^{1/2} \e^{(\pi - \pi)\im/2} = -2(r_1 r_2)^{1/2}.
-              </me>
-              so indeed there is also a jump about the branch cut that runs <m>z &lt; -1</m>.
-            </p>
+        <solution>
+          <p> (i) We have that <me>
+              f(z) = (r_1 r_2)^{1/2} \e^{\im \theta_1/2} \e^{\im \theta_2/2}.
+            </me>
+            Let <m>\theta_1 \in [0, 2\pi)</m> be the angle about the point <m>z = 1</m>. Similarly
+            let <m>\theta_2 \in [-\pi, \pi)</m> be the angle about the point <m>z = -1</m>. </p>
 
-            <p>
-              (iii) For the centre point, there are two cases to consider. The first case is if only <m>z = 0</m> is encircled and none of the other branch points. This was the situation originally envisioned in the question. For example, consider the circle of radius 1/2, i.e. <m>z = (1/2) \e^{\im \theta}</m> with <m>\theta \in [0, 2\pi)</m>. You can verify that for this circle the start and end points agree. 
-            </p>
+          <p>Considering firstly a revolution around <m>z = 1</m> (that does not also enclose <m>z =
+            -1</m>). Let the initial point be denoted "A", with <m>\theta_1 = 0, \theta_2 = 0</m>.
+            And the final point be "B", with <m>\theta_1 = 2\pi</m> and <m>\theta_2 = 0</m>.</p>
 
-            <p>
-              If along with <m>z = 0</m>, one of the branch points is encircled, then there would be a discontinuity. If both branch points are encircled, there is no discontinuity.
-            </p>
+          <p>Then <me>
+              f(B) - f(A) = (r_1 r_2)^{1/2} \e^{2\pi\im/2} - (r_1 r_2)^{1/2} \e^0 = -2(r_1
+            r_2)^{1/2}.
+            </me>
+            so indeed there is a jump in the function about the branch cut along <m>z &gt; 1</m>. </p>
 
-            <figure>
-              <caption>Branch cut configuration for the double square root. The original choice of branches is shown on top. Through the analysis, we see that a circle (i) around <m>z = 1</m> does not produce a discontinuity. Hence only the second picture of the cut arrangement is needed.</caption>
-              <image source="intro_doublesqrt_branch01.jpg" width="70%">
-                <shortdescription>Double square root</shortdescription>
-              </image>
-            </figure>
-          </solution>
-        </task>
+          <p> (ii) We would similarly verify that for a contour around the branch point <m>z = -1</m>
+            there is a jump. Let the initial point be denoted "A" with <m>\theta_1 = \pi, \theta_2 =
+            -\pi</m>. And the final point be "B" with <m>\theta_1 = \pi, \theta_2 = \pi</m>. Then <me>
+            f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(\pi + \pi)\im/2} - (r_1 r_2)^{1/2} \e^{(\pi -
+            \pi)\im/2} = -2(r_1 r_2)^{1/2}.
+            </me>
+            so indeed there is also a jump about the branch cut that runs <m>z &lt; -1</m>. </p>
 
-        <task>
-          <statement>
-            <p>
-              Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction and the branch cut from <m>z = 1</m> tends in the positive real direction as well. Repeat the experiment above, considering (i)-(iii). Conclude that there is no jump in value along the region <m>z &gt; 1</m> and hence the branch cuts required only extends between <m>z = \pm 1</m>.
-            </p>
+          <p> (iii) For the centre point, there are two cases to consider. The first case is if only <m>z
+            = 0</m> is encircled and none of the other branch points. This was the situation
+            originally envisioned in the question. For example, consider the circle of radius 1/2,
+            i.e. <m>z = (1/2) \e^{\im \theta}</m> with <m>\theta \in [0, 2\pi)</m>. You can verify
+            that for this circle the start and end points agree. </p>
 
-            <p>
-              Draw a picture of the final <m>z</m>-plane, showing the branch cuts.
-            </p>
+          <p> If along with <m>z = 0</m>, one of the branch points is encircled, then there would be
+            a discontinuity. If both branch points are encircled, there is no discontinuity. </p>
 
-            
-          </statement>
+          <figure>
+            <caption>Branch cut configuration for the double square root. The original choice of
+              branches is shown on top. Through the analysis, we see that a circle (i) around <m>z =
+              1</m> does not produce a discontinuity. Hence only the second picture of the cut
+              arrangement is needed.</caption>
+            <image source="intro_doublesqrt_branch01.jpg" width="70%">
+              <shortdescription>Double square root</shortdescription>
+            </image>
+          </figure>
+        </solution>
+      </task>
 
-          <solution>
-            <p>
-              For this situation, we would define the ranges of <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_2 \in [0, 2\pi)</m>. One main difference is the analysis around the point <m>z = 1</m>. Consider the similar loop to the above with, 
-              <me>
-                f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(2\pi + 2\pi)\im/2} - (r_1 r_2)^{1/2} \e^{(0 + 0)\im/2} = 0,
-              </me>
-              so in this case, notice that there is no jump due to the fact the total variation of angle is <m>2 \pi + 2\pi</m>.
-            </p>
+      <task>
+        <statement>
+          <p> Consider now a branch cut from <m>z = -1</m> that tends in the positive real direction
+            and the branch cut from <m>z = 1</m> tends in the positive real direction as well.
+            Repeat the experiment above, considering (i)-(iii). Conclude that there is no jump in
+            value along the region <m>z &gt; 1</m> and hence the branch cuts required only extends
+            between <m>z = \pm 1</m>. </p>
 
-            <p>
-              In essence, because both branch cuts are running in the positive real direction, when we orbit across <m>z > 1</m>, we jump through both branches, hence returning to the original. There is no required branch cut for <m>z > 1</m>.
-            </p>
-
-            <p>
-              The analysis of parts (ii) and (iii) are identical, with the exception of the angle range. However, the final result, of whether there exists a jump is the same. 
-            </p>
-
-            <p>
-              In the end, the final branch cut picture is shown in the figure below.
-            </p>
+          <p> Draw a picture of the final <m>z</m>-plane, showing the branch cuts. </p>
 
 
-            <figure>
-              <caption>Branch cut configuration for the double square root</caption>
-              <image source="intro_doublesqrt_branch02.jpg" width="70%">
-                <shortdescription>Double square root</shortdescription>
-              </image>
-            </figure>
-          </solution>
-        </task>
+        </statement>
 
-        <task>
-            <statement>
-              <p>
-              (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y, \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot this using any tool. 
-            </p>
-          </statement>
-           
-          <solution>
-            <p>
-              This is certainly not an easy function to imagine! There are two features you may want to keep in mind. First, in examining the imaginary part of the function, if <m>z &gt; 1</m> on the real axis, then the imaginary part is zero. Second, if <m>z &lt; -1</m> on the real axis, then again the function is zero. Finally, for the case of the branch selection in part (b), the there is a cut along <m>[-1, 1]</m>. A generated plot is shown below for the imaginary part.
-            </p>
-            
-            <figure>
-              <caption>The imaginary part of <m>f(z) = (z-1)^{1/2}(z +1)^{1/2}</m></caption>
-              <image source="intro_doublesqrt_surf.png" width="70%">
-                <shortdescription>surface plot</shortdescription>
-              </image>
-            </figure>
-          </solution>
-        </task>
+        <solution>
+          <p> For this situation, we would define the ranges of <m>\theta_1 \in [0, 2\pi)</m> and <m>\theta_2
+            \in [0, 2\pi)</m>. One main difference is the analysis around the point <m>z = 1</m>.
+            Consider the similar loop to the above with, <me>
+              f(B) - f(A) = (r_1 r_2)^{1/2} \e^{(2\pi + 2\pi)\im/2} - (r_1 r_2)^{1/2} \e^{(0 +
+            0)\im/2} = 0,
+            </me>
+            so in this case, notice that there is no jump due to the fact the total variation of
+            angle is <m>2 \pi + 2\pi</m>. </p>
+
+          <p> In essence, because both branch cuts are running in the positive real direction, when
+            we orbit across <m>z > 1</m>, we jump through both branches, hence returning to the
+            original. There is no required branch cut for <m>z > 1</m>. </p>
+
+          <p>
+            The analysis of parts (ii) and (iii) are identical, with the exception of the angle
+            range. However, the final result, of whether there exists a jump is the same.
+          </p>
+
+          <p>
+            In the end, the final branch cut picture is shown in the figure below.
+          </p>
+
+
+          <figure>
+            <caption>Branch cut configuration for the double square root</caption>
+            <image source="intro_doublesqrt_branch02.jpg" width="70%">
+              <shortdescription>Double square root</shortdescription>
+            </image>
+          </figure>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> (Challenging). If you consider a plot of <m>(x, y, \Re f(x + \im y))</m> or <m>(x, y,
+            \Im f(x + \im y))</m>, what will the Riemann surface look like? You can attempt to plot
+            this using any tool. </p>
+        </statement>
+
+        <solution>
+          <p> This is certainly not an easy function to imagine! There are two features you may want
+            to keep in mind. First, in examining the imaginary part of the function, if <m>z &gt; 1</m>
+            on the real axis, then the imaginary part is zero. Second, if <m>z &lt; -1</m> on the
+            real axis, then again the function is zero. Finally, for the case of the branch
+            selection in part (b), the there is a cut along <m>[-1, 1]</m>. A generated plot is
+            shown below for the imaginary part. </p>
+
+          <figure>
+            <caption>The imaginary part of <m>f(z) = (z-1)^{1/2}(z +1)^{1/2}</m></caption>
+            <image source="intro_doublesqrt_surf.png" width="70%">
+              <shortdescription>surface plot</shortdescription>
+            </image>
+          </figure>
+        </solution>
+      </task>
 
     </exercise>
 
 
     <exercise xml:id="ex-log">
       <title>Branch cuts of the complex logarithm</title>
-     
+
       <introduction>
-      <p>
-        Consider the complex logarithm as defined in <xref ref="eqn-intro-complex-log"/>.</p>
-        </introduction>
+        <p> Consider the complex logarithm as defined in <xref ref="eqn-intro-complex-log" />.</p>
+      </introduction>
 
-        <task>
-          <statement>
-            <p>
-              Explain why there must be a branch cut imposed, originating from the branch point at <m>z = 0</m>.
-            </p>
-          </statement>
-            
-            <solution>
-              <p>
-                The logarithm will have a jump in the imaginary part every rotation of <m>2\pi</m> in the argument.
-              </p>
-            </solution>
-          </task>
+      <task>
+        <statement>
+          <p> Explain why there must be a branch cut imposed, originating from the branch point at <m>z
+            = 0</m>. </p>
+        </statement>
 
-        <task>
-          <statement>
-            <p>
-              Take the branch cut along the positive real axis. Do your best to draw the Riemann surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in the space <m>(x, y, \Im f(x + \im y))</m>.
-            </p>
-          </statement>
-            
-            <solution>
-              <figure>
-                <caption>The imaginary part of <m>f(z) = \log z</m>. </caption>
-                <image source="intro_log_surf.jpg" width="100%">
-                  <shortdescription>surface plot</shortdescription>
-                </image>
-              </figure>
-            </solution>
-          
-          
-          </task>
+        <solution>
+          <p> The logarithm will have a jump in the imaginary part every rotation of <m>2\pi</m> in
+            the argument. </p>
+        </solution>
+      </task>
 
-          <task>
-            <statement>
-              <p>
-              Again, you may find it useful to confirm your work above by plotting the function using a computational tool. 
-              </p>
-            </statement>
+      <task>
+        <statement>
+          <p> Take the branch cut along the positive real axis. Do your best to draw the Riemann
+            surface (consisting of the distinct Riemann sheets) of the logarithm, as visualised in
+            the space <m>(x, y, \Im f(x + \im y))</m>. </p>
+        </statement>
 
-            <solution>
-              <p>
-                There is a picture of the complex logarithm on <url href="https://en.wikipedia.org/wiki/Complex_logarithm">Wikipedia</url>.
-              </p>
-            </solution>
-          </task>
+        <solution>
+          <figure>
+            <caption>The imaginary part of <m>f(z) = \log z</m>. </caption>
+            <image source="intro_log_surf.jpg" width="100%">
+              <shortdescription>surface plot</shortdescription>
+            </image>
+          </figure>
+        </solution>
+
+
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Again, you may find it useful to confirm your work above by plotting the function using
+            a computational tool.
+          </p>
+        </statement>
+
+        <solution>
+          <p> There is a picture of the complex logarithm on <url
+              href="https://en.wikipedia.org/wiki/Complex_logarithm">Wikipedia</url>. </p>
+        </solution>
+      </task>
     </exercise>
 
     <!-- </exercisegroup> -->
   </exercises>
 
 
+</chapter>
 
- </chapter>
 
-
-    <!-- <exercisegroup xml:id="vector-calculus">
+<!-- <exercisegroup xml:id="vector-calculus">
     <title>Vector Calculus</title>
     <introduction>
     <p>
     <warning>
-      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.</p>
+      <p>We look to complete worksheets in the week prior to the content being delivered. Once this is
+done, this disclaimer message will be removed.</p>
     </warning>
     </p>
     </introduction>
@@ -718,7 +791,8 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
     <p>
     Prove the following vector identities:
     <ol>
-      <li> <me>\bnabla \cdot \left(\phi\mathbf{A}\right) = \phi (\bnabla \cdot \mathbf{A}) + \mathbf{A} \cdot (\bnabla \phi),</me>
+      <li> <me>\bnabla \cdot \left(\phi\mathbf{A}\right) = \phi (\bnabla \cdot \mathbf{A}) + \mathbf{A}
+\cdot (\bnabla \phi),</me>
         <answer>
           <p>Using the Einstein summation convention,
           <align>
@@ -730,19 +804,24 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
         </p>
         </answer>
       </li>
-      <li> <me>\bnabla \times (\phi \mathbf{A}) = \phi \left(\bnabla \times \mathbf{A}\right) + \left(\bnabla \phi\right) \times \mathbf{A}</me>
+      <li> <me>\bnabla \times (\phi \mathbf{A}) = \phi \left(\bnabla \times \mathbf{A}\right) +
+\left(\bnabla \phi\right) \times \mathbf{A}</me>
         <answer>
           <p>We have,
           <align>
-            <md><mrow>\nabla \times (\phi \mathbf{A}) \amp = \epsilon_{ijk}\pd{}{x_j}\left(\phi A_k\right)</mrow>
-              <mrow>\amp = \left(\epsilon_{ijk}\pd{A_k}{x_j}\right)\phi+\epsilon_{ijk}\left(\pd{\phi}{x_j}\right)A_k</mrow>
-              <mrow>\amp = \left(\bnabla\times\mathbf{A}\right)\phi+\left(\bnabla\phi\right)\times\mathbf{A}.</mrow></md>
+            <md><mrow>\nabla \times (\phi \mathbf{A}) \amp = \epsilon_{ijk}\pd{}{x_j}\left(\phi
+A_k\right)</mrow>
+              <mrow>\amp =
+\left(\epsilon_{ijk}\pd{A_k}{x_j}\right)\phi+\epsilon_{ijk}\left(\pd{\phi}{x_j}\right)A_k</mrow>
+              <mrow>\amp =
+\left(\bnabla\times\mathbf{A}\right)\phi+\left(\bnabla\phi\right)\times\mathbf{A}.</mrow></md>
           </align>
         </p>
         </answer>
       </li>
       <li> <me>\bnabla \cdot \left(\mathbf{A} \times \mathbf{B}\right)
-        = \mathbf{B} \cdot \left(\bnabla \times \mathbf{A}\right) - \mathbf{A} \cdot \left(\bnabla \times \mathbf{B}\right)</me>
+        = \mathbf{B} \cdot \left(\bnabla \times \mathbf{A}\right) - \mathbf{A} \cdot \left(\bnabla \times
+\mathbf{B}\right)</me>
         <answer>
           <p>We have,
           <align>
@@ -751,14 +830,17 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
               <mrow>\amp = \epsilon_{ijk}\pd{A_j}{x_i}B_k+\epsilon_{ijk}A_j\pd{B_k}{x_i}</mrow>
               <mrow>\amp = B_k\epsilon_{kij}\pd{A_j}{x_i}+A_j\epsilon_{jki}\pd{B_k}{x_i}</mrow>
               <mrow>\amp = B_i\epsilon_{ijk}\pd{A_k}{x_j}+A_i\epsilon_{ikj}\pd{B_k}{x_j}</mrow>
-              <mrow>\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-A_i\epsilon_{ijk}\pd{B_k}{x_j}</mrow>
-              <mrow>\amp = \mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-\mathbf{A}\cdot\left(\bnabla\times\mathbf{B}\right).</mrow>
+              <mrow>\amp =
+\mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-A_i\epsilon_{ijk}\pd{B_k}{x_j}</mrow>
+              <mrow>\amp =
+\mathbf{B}\cdot\left(\bnabla\times\mathbf{A}\right)-\mathbf{A}\cdot\left(\bnabla\times\mathbf{B}\right).</mrow>
             </md>
           </align>
         </p>
         </answer>
       </li>
-      <li>The following identity will be useful for proving the vorticity equation in <xref ref="ch-chapter03-equations"/> of this course:
+      <li>The following identity will be useful for proving the vorticity equation in <xref
+ref="ch-chapter03-equations"/> of this course:
         <me>\bnabla\times\left(\bu\cdot\bnabla\bu\right)
           =\bu\cdot\bnabla\left(\bnabla\times\bu\right)
           +\left(\bnabla\cdot\bu\right)\left(\bnabla\times\bu\right)
@@ -790,7 +872,7 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
             equals
             <md>
               <mrow>\amp\pd{u_l}{x_l}\epsilon_{1jk}\pd{u_k}{x_j}-\epsilon_{ljk}\pd{u_k}{x_j}\pd{u_1}{x_l}</mrow>
-              <mrow>=\amp\left(\pd{u_1}{x_1}+\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)</mrow>
+<mrow>=\amp\left(\pd{u_1}{x_1}+\pd{u_2}{x_2}+\pd{u_3}{x_3}\right)\left(\pd{u_3}{x_2}-\pd{u_2}{x_3}\right)</mrow>
                 <mrow>\amp
                 -\pd{u_3}{x_2}\pd{u_1}{x_1}+\pd{u_2}{x_3}\pd{u_1}{x_1}
                 -\pd{u_1}{x_3}\pd{u_1}{x_2}+\pd{u_3}{x_1}\pd{u_1}{x_2}
@@ -828,19 +910,23 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
     <title>Divergence theorem</title>
     <statement>
     <p>
-      State the divergence theorem. Use it to show that, for a vector-valued function <m>\mathbf{B}(\mathbf{x})</m>,
-      <me>\int_V \bnabla \times \mathbf{B} \, dV = \int_{\partial V} \hat{\mathbf{n}} \times \mathbf{B} \, dS,</me>
+      State the divergence theorem. Use it to show that, for a vector-valued function
+<m>\mathbf{B}(\mathbf{x})</m>,
+      <me>\int_V \bnabla \times \mathbf{B} \, dV = \int_{\partial V} \hat{\mathbf{n}} \times \mathbf{B}
+\, dS,</me>
       where <m>\hat{\mathbf{n}}</m> is the outward-pointing unit normal to the surface <m>\partial V</m>.
     </p>
     <answer>
     <p>
       The divergence theorem states that, for a vector field <m>\mathbf{A}(\mathbf{x})</m>,
-      <me>\int_V \bnabla \cdot \mathbf{A} \, dV = \int_{\partial V} \hat{\mathbf{n}} \cdot \mathbf{A} \, dS.</me>
+      <me>\int_V \bnabla \cdot \mathbf{A} \, dV = \int_{\partial V} \hat{\mathbf{n}} \cdot \mathbf{A} \,
+dS.</me>
     </p>
     <p>
       To prove the required result, we use the Levi-Civita symbol <m>\epsilon_{ijk}</m>
       to write the <m>i</m>th component of the left-hand side as
-      <md><mrow>\int_V (\bnabla \times \mathbf{B})_i \, dV \amp = \int_V \epsilon_{ijk}\pd{B_k}{x_j} \, dV</mrow>
+      <md><mrow>\int_V (\bnabla \times \mathbf{B})_i \, dV \amp = \int_V \epsilon_{ijk}\pd{B_k}{x_j} \,
+dV</mrow>
         <mrow>\amp = \epsilon_{ijk}\int_V \pd{B_k}{x_j} \, dV</mrow>
       </md>
       Setting <m>\mathbf{A}=B_k\mathbf{e}_j</m>:
@@ -889,7 +975,8 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
     <p>
       The two edges of the triangle that start from the vertex
       <m>(3,0,0)</m> are given by the vectors
-      <m>\mathbf{a}=(-3,0,2)</m> and <m>\mathbf{b}=(-3,6,0)</m>. The cross product of these two vectors is
+      <m>\mathbf{a}=(-3,0,2)</m> and <m>\mathbf{b}=(-3,6,0)</m>. The cross product of these two vectors
+is
       <me>(-3,0,2)\times(-3,6,0)=(-12,-6,-18).</me>
       This vector is orthogonal to <m>S</m> and its magnitude equals the area of the
       parallelogram with these vectors as two of its edges.
@@ -930,9 +1017,9 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           For spherical polars, we have <m>x=r\sin\theta\cos\phi</m>, <m>y=r\sin\theta\sin\phi</m>
           and <m>z=r\cos\theta</m>.
           We may also write
-          <me>\hat{\mathbf{r}}=\sin\theta\cos\phi\,\hat{\mathbf{x}}+\sin\theta\sin\phi\,\hat{\mathbf{y}}+\cos\theta\,\hat{\mathbf{z}}</me>
+<me>\hat{\mathbf{r}}=\sin\theta\cos\phi\,\hat{\mathbf{x}}+\sin\theta\sin\phi\,\hat{\mathbf{y}}+\cos\theta\,\hat{\mathbf{z}}</me>
           and
-          <me>\hat{\boldsymbol{\theta}}=\cos\theta\cos\phi\,\hat{\mathbf{x}}+\cos\theta\sin\phi\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{z}}.</me>
+<me>\hat{\boldsymbol{\theta}}=\cos\theta\cos\phi\,\hat{\mathbf{x}}+\cos\theta\sin\phi\,\hat{\mathbf{y}}-\sin\theta\,\hat{\mathbf{z}}.</me>
           Hence,
           <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + 0\,\hat{\mathbf{z}}</mrow>
             <mrow>\amp = r\sin\theta\cos\phi\,\hat{\mathbf{x}} + r\sin\theta\sin\phi\,\hat{\mathbf{y}}</mrow>
@@ -942,10 +1029,14 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           <me>\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}
             =\cos\phi\,\hat{\mathbf{x}}+\sin\phi\,\hat{\mathbf{y}}</me>
           and hence
-          <md><mrow>\mathbf{A} \amp = r\sin\theta\left(\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}\right).</mrow></md>
-          We note that in both cylindrical and spherical polars, the vector field has no component in the azimuthal direction.
-          This is because the original vector field is axisymmetric about the <m>z</m>-axis. Furthermore, in cylindrical polars,
-          the vector field is purely radial, whereas in spherical polars it has both radial and polar components.
+          <md><mrow>\mathbf{A} \amp =
+r\sin\theta\left(\sin\theta\hat{\mathbf{r}}+\cos\theta\hat{\mathbf{\theta}}\right).</mrow></md>
+          We note that in both cylindrical and spherical polars, the vector field has no component in the
+azimuthal direction.
+          This is because the original vector field is axisymmetric about the <m>z</m>-axis. Furthermore, in
+cylindrical polars,
+          the vector field is purely radial, whereas in spherical polars it has both radial and polar
+components.
           </p>
         </answer>
         </li>
@@ -988,7 +1079,7 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
             </md>
             For spherical polar coordinates, and using the answer to the first part of this question,
             <md><mrow>\mathbf{A} \amp = x\,\hat{\mathbf{x}} + y\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
-              <mrow>\amp=r\sin\theta\cos\phi\hat{\mathbf{x}}+r\sin\theta\sin\phi\hat{\mathbf{y}}+r\cos\theta\hat{\mathbf{z}}</mrow>
+<mrow>\amp=r\sin\theta\cos\phi\hat{\mathbf{x}}+r\sin\theta\sin\phi\hat{\mathbf{y}}+r\cos\theta\hat{\mathbf{z}}</mrow>
               <mrow>\amp=r\hat{\mathbf{r}}.</mrow>
             </md>
             The velocity field is purely radial in spherical polars,
@@ -1016,14 +1107,16 @@ Certain complex functions are only well-defined with appropriate branch cuts cho
           </p>
           <p>
             In spherical polars, the unit vectors are related by
-            <me>\hat{\mathbf{x}}=\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\mathbf{\theta}}-\sin\phi\,\hat{\mathbf{\phi}},</me>
-            <me>\hat{\mathbf{y}}=\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\mathbf{\theta}}+\cos\phi\,\hat{\mathbf{\phi}},</me>
+<me>\hat{\mathbf{x}}=\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\mathbf{\theta}}-\sin\phi\,\hat{\mathbf{\phi}},</me>
+<me>\hat{\mathbf{y}}=\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\mathbf{\theta}}+\cos\phi\,\hat{\mathbf{\phi}},</me>
             <me>\hat{\mathbf{z}}=\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\mathbf{\theta}}.</me>
             Hence,
             <md><mrow>\mathbf{A} \amp = y\,\hat{\mathbf{x}} + 2x\,\hat{\mathbf{y}} + z\,\hat{\mathbf{z}}</mrow>
-              <mrow>\amp = r\sin\theta\sin\phi(\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\boldsymbol{\theta}}
+              <mrow>\amp =
+r\sin\theta\sin\phi(\sin\theta\cos\phi\,\hat{\mathbf{r}}+\cos\theta\cos\phi\,\hat{\boldsymbol{\theta}}
                 - \sin\phi\,\hat{\boldsymbol{\phi}})
-                + 2r\sin\theta\cos\phi(\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\boldsymbol{\theta}}
+                +
+2r\sin\theta\cos\phi(\sin\theta\sin\phi\,\hat{\mathbf{r}}+\cos\theta\sin\phi\,\hat{\boldsymbol{\theta}}
                 + \cos\phi\,\hat{\boldsymbol{\phi}})
                 + r\cos\theta(\cos\theta\,\hat{\mathbf{r}}-\sin\theta\,\hat{\boldsymbol{\theta}})</mrow>
               <mrow>\amp = r\left(3\sin^2\theta\sin\phi\cos\phi+\cos^2\theta\right)\,\hat{\mathbf{r}}
