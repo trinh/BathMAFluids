@@ -15,7 +15,16 @@
 
     <p>Our main task in this chapter is to introduce the fundamental principles governing water
       waves and the mathematical models that describe their behavior across different regimes.</p>
+
+  <note>
+    <p>
+      As part of our lecture, we will study the related <url href="https://techtv.mit.edu/collections/ifluids/videos/32616-waves-in-fluids">video on the NCFMF database</url> on Waves in Fluids. The particular section of relevance is at the start, concerning the particle trajectories in waves of deep water. 
+    </p>
+  </note>
+
   </introduction>
+
+
 
   <section xml:id="sec-waterwaves-equations">
     <title>Governing equations of water waves</title>
@@ -41,6 +50,8 @@
     <subsection xml:id="subsec-waterwaves-boundaryconditions">
       <title>Boundary conditions</title>
 
+      <subsubsection xml:id="subsubsec-waterwaves-otherBC">
+        <title>Bottom boundary conditions</title>
       <p>
         If we consider waves on a fluid of infinite (or deep) depth, then far below the free surface, we expect that the velocity tends to zero. Hence a suitable boundary condition is
         <men xml:id="eqn-waterwaves-farfield-infinite">
@@ -53,13 +64,129 @@
         <men xml:id="eqn-waterwaves-bottom">
           \bu \cdot \bn = 0 \Longrightarrow \pd{\phi}{y} = 0 \qquad \text{on $y = -H$}. 
         </men>
-        
       </p>
-      
+      </subsubsection>
+
+      <subsubsection xml:id="subsubsec-waterwaves-dynamicBC">
+        <title>Dynamic boundary conditions</title>
+        
+
+      <p>
+        There are now two boundary conditions to consider at the free surface. The <em>dynamic boundary condition</em> corresponds to the requirement of satisfying a force balance at the free surface. At the free surface, the pressure within the liquid must be equal to the pressure within the air. This leads to the dynamic boundary condition that 
+        <men xml:id="eqn-waterwaves-pressure">
+          p = p_{\text{atm}} \qquad \text{at $y = \eta(x, t)$},
+        </men> tv
+        where <m>p_{\text{atm}}</m> is the atmospheric pressure above the fluid (assumed to be constant). 
+      </p>
+
+      <p>
+        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving <xref ref="eqn-bernoulli-unsteady-chap3"/>:
+      </p>
+
+      <theorem xml:id="thm-bernoulli-unsteady-potential">
+        <title>Bernoulli's equation for unsteady potential flow</title>
+        <statement>
+          <p>
+           Bernoulli's equation for unsteady potential flow states that 
+           <men xml:id="eqn-bernoulli-unsteady-potential">
+            \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
+           </men>
+          for an arbitrary function <m>F(t)</m>, and where <m>\bg = -\nabla\chi</m> is the conservative body force. 
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Returning to <xref ref="eqn-bernoulli-unsteady-chap3"/>, we re-write in terms of the potential function and set the vorticity <m>\omega = \nabla \times \bu = 0</m>, giving 
+            <me>
+              \pd{}{t}(\nabla \phi) = - \nabla \left(\frac{1}{\rho}\nabla p +
+            \frac{1}{2} |\nabla \phi|^2 + \chi\right).
+            </me>
+            We can interchange the order of differentiation on the left 
+            <me>
+            \nabla\left(  \pd{\phi}{t}+\frac{1}{\rho}\nabla p +
+            \frac{1}{2} |\nabla \phi|^2 + \chi\right) = 0.
+            </me> 
+            We now integrate each of the spatial components and this yields the desired result.
+          </p>
+        </proof>
+      </theorem>
+
+      <p>
+        Below, we will set the body force indeed to be gravity. Thus if we write 
+        <me>
+          \chi = gy \Longrightarrow \bg = -\nabla \chi = \Bigl[0, -g\Bigr],
+        </me>
+        and gravity is then directed in the negative <m>y</m>-direction. 
+      </p>
+
+      <p>
+        We now evaluate Bernoulli's equation <xref ref="eqn-bernoulli-unsteady-potential"/> on the free surface, <m>y = \eta</m>. This gives 
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p_{\text{atm}}}{\rho} + g\eta = F(t), \qquad \text{on $y = \eta$}.
+        </me>
+        It is convenient to set the arbirary function <m>F(t) = \frac{p_{\text{atm}}}{\rho}</m>, yielding the final result:
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + g\eta = 0, \qquad \text{on $y = \eta$},
+        </me>
+        which is a re-phrasing of the necessary dynamic boundary condition on the free surface. 
+      </p>
+      </subsubsection>
+
+      <subsubsection xml:id="subsubsec-waterwaves-kinematicBC">
+        <title>Kinematic boundary conditions</title>
+
+        <p>
+          In the case of fluids near solid surfaces, we require a <em>no-penetration</em> condition, which enforces that the fluid velocity is zero in a direction normal to the surface, <m>\bu \cdot \bn = 0</m>. For the case of a free boundary, such as the one at <m>y = \eta(x, t)</m>, there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid fluid elements on the free surface must remain on the free surface. 
+        </p>
+
+        <p>
+          Thus, if <m>y = \eta</m> for some fluid particle at time <m>t</m>, then <m>y = \eta</m> for the same particle for all time. Thus we need
+          <me>
+            \DD{(y - \eta)}{t} = 0, \qquad \text{on $y = \eta$}.
+          </me>
+        </p>
+
+        <p>
+          Expansion and use of the material derivative then implies the <em>kinematic boundary condition</em>
+          <men xml:id="eqn-waterwaves-kinematicBC">
+            v = \pd{\eta}{t} + u \pd{\eta}{x}, \qquad \text{at $y = \eta$}.
+          </men>
+        </p>
+      </subsubsection>
     </subsection>
-
-
   </section>
+
+  <section xml:id="sec-waterwaves-stokeswaves">
+    <title>Stokes waves</title>
+
+    <p>
+      To be covered Week 5. 
+    </p>
+    
+  </section>
+
+  <section xml:id="sec-waterwaves-generalisations">
+    <title>Generalisations of water waves</title>
+
+    <p>
+      To be covered Week 5-6.
+    </p>
+    
+  </section>
+
+  <section xml:id="sec-waterwaves-instability">
+    <title>Instability in waves</title>
+
+    <p>
+      To be covered Week 6.
+    </p>
+  </section>
+
+  <!-- <section xml:id="sec-waterwaves">
+    <title>Group velocity </title>
+    
+  </section> -->
 
   <exercises xml:id="exercises-water-waves">
    
