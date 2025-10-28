@@ -596,11 +596,18 @@
         </statement>
 
         <proof>
-          <p> The result follows by a corollary of the diverence theorem. The divergence theorem is <me>
-            \iiint_V \nabla \cdot \bF \, \de{V} = \iint_{\partial V} \bF \cdot \bn \, \de{S}.
+          <p>
+            The result follows from applying the diverence theorem. The divergence theorem states that,
+            for a function <m>\bF</m> defined on a volume <m>V</m>:
+            <me>
+              \iiint_V \nabla \cdot \bF \, \de{V} = \iint_{\partial V} \bF \cdot \bn \, \de{S}.
             </me>
-            Let <m>\bF = p \boldsymbol{c}</m> where <m>\boldsymbol{c} = [1, 1, 1]</m> and apply to
-            the above. </p>
+            Let <m>\bF = p \boldsymbol{e}_i</m>, which gives
+            <me>
+              \iiint_V \dd{p}{x_i}\, \de{V} = \iint_{\partial V} p n_i \, \de{S},
+            </me>
+            for <m>i=1,2,3</m>. Multiplying by <m>\boldsymbol{e}_i</m> and adding gives the result.
+          </p>
         </proof>
       </theorem>
 
