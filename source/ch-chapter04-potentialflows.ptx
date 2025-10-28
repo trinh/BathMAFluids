@@ -1261,19 +1261,426 @@
     </example>
     
   </subsection>
-
-
-  <!-- <subsection>
-    <title>The Joukowski map</title>
-   
-    <p>
-      Hello world.
-    </p>
-    
-  </subsection> -->
-
-
 </section>
+
+  <section>
+    <title>Flow past an aerofoil</title>
+
+    <subsection xml:id="subsec-circle-maps">
+      <title>Circle maps</title>
+
+      <p>
+        Previously we used the method of images to construct flows past polygonal and straight boundaries. 
+      </p>
+
+      <theorem xml:id="thm-circle-theorem">
+        <title>Milne-Thomson's Circle Theorem</title>
+        <statement>
+          <p>
+          Let <m>f(z)</m> be a given velocity potential such that any singularities in <m>f</m> occur in <m>|z| > a</m>. Then we can construct the following potential: 
+          <men xml:id="eqn-milne-circle-map">
+            w(z) = f(z) + \overline{f(a^2/\overline{z})},
+          </men>
+          and this potential has the following properties: (i) it has the asme singularities as <m>f</m> in the region <m>|z| > a</m>; and (ii) the circle <m>|z| = a</m> is a streamline. 
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            (i) if <m>|z| &gt; a</m>, then <m>|a^2/\overline{z}| &lt; a</m>. Therefore the argument of the second term of <m>w</m> is within the circle of radius <m>|a|</m> and by assumption <m>f</m> is not singular there. 
+          </p>
+
+          <p>
+            (ii) On the circle itself, <m>z = a\e^{\im\theta}</m>. 
+            Then <m>a^2/\overline{z} = a\e^{\im\theta} = z</m>. Therefore, we have 
+            <me>
+            w(z) = f(z) + \overline{f(z)} = 2 \Re[f(z)].
+            </me>
+            Therefore the complex potential is entirely real. It follows that <m>\Im w = 0</m> on <m>|z| = a</m>, establishing that the circle is streamline.
+          </p> 
+        </proof>
+      </theorem>
+
+     <p>
+      The above theorem then allows us to easily construct certain flows past circular cylinders. Here is an example.
+     </p>
+
+     <example>
+      <title>Uniform flow past a circular cylinder</title>
+
+      <p>
+        We begin with the complex potential given by <m>f(z) = Uz</m>, which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary <m>|z| = a</m>. Clearly, <m>f</m> satisfies the requirements of the Circle Theorem since it is non-singular for all <m>z</m>. Thus, we can construct the following result</p>
+
+        <theorem xml:id="thm-flow-past-a-circular-cylinder">
+          <statement>
+            <p>
+              Potential flow of consisting of uniform horizontal flow of speed <m>U</m> at infinity, past a circular cylinder of radius <m>a</m> (placed at the origin) is given by the complex potential
+        <men xml:id="eqn-potential-uniform-past-circle">
+          w(z) = \phi + \im \psi = Uz + \overline{\frac{Ua^2}{\overline{z}}} = Uz + \frac{Ua^2}{z}.
+        </men>
+            </p>
+          </statement>
+        </theorem>
+
+        <p>
+          The streamlines of the flow, found by taking the imaginary part of the above, are shown in <xref ref="fig-conformal-circle-flow"/>.
+        </p>
+        
+        <figure xml:id="fig-conformal-circle-flow">
+      <caption>Uniform flow past a circle</caption>
+      <image source="conformal_circle_flow.png" width="70%">
+        <shortdescription>Circle flow</shortdescription>
+      </image>
+    </figure>
+     </example>
+
+     <p>
+      The next example will be studied during the problem class.
+     </p>
+
+      <example xml:id="example-uniform-past-circle-with-vortex">
+        <title>Problem class example</title>
+        
+        <introduction>
+        <p>
+          Previously, it was demonstrated, via <xref ref="eqn-potential-uniform-past-circle"/> that uniform horizontal flow past a circle (circular cylinder) of radius <m>a</m> can be found via the complex potential function
+          <men xml:id="eqn-flow-over-circle-problem">
+            w(z) = Uz + \frac{Ua^2}{z},  
+          </men>
+          corresponding to uniform horizontal flow at infinity of speed <m>U</m>.
+        </p>
+        </introduction>
+
+          <task>
+            <statement>
+              <p>
+                Confirm, by use of the streamfunction <m>\psi</m>, that the circle boundary is a streamline of the flow. 
+              </p>
+
+              <p>
+                It will be useful to remind yourself that 
+                <men xml:id="eqn-complex-cosine">
+                 \cos\theta = \frac{\e^{\im\theta} + \e^{-\im\theta}}{2}. 
+                </men>
+              </p>
+            </statement>
+
+
+            <solution>
+              <p>
+                We set <m>z = a\e^{\im\theta}</m> into the streamfunction. This gives 
+                <me>
+                  \phi + \im \psi = U \left( \e^{\im \theta} + \e^{-\im\theta}\right) = 2U\cos\theta.
+                </me>
+               Therefore <m>\psi = \Im w = 0</m> on the surface of the cylinder.
+              </p>
+            </solution>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                Derive the complex velocity, <m>u - \im v</m> and use it to show that on the surface of the cylinder, the velocity is given by 
+                <me>
+                  u - \im v = 2U \e^{\im (\pi/2 - \theta)} \sin\theta,
+                </me>
+                where <m>z = a\e^{\im\theta}</m>.                
+              </p>
+
+              <p>
+                It is helpful for you to remember that 
+                <men xml:id="eqn-complex-sine">
+                  \sin\theta = \frac{\e^{\im\theta} - \e^{-\im\theta}}{2\im}.
+                </men>                
+              </p> 
+            </statement>
+
+            <solution>
+              <p>
+                We need to take the derivative to obtain the complex velocity. So we have 
+                <me>
+                  w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right).
+                </me>
+                So again, substitution of <m>z = a\e^{\im\theta}</m> and simplifying gives 
+                <me>
+                  u - \im v = U \e^{-\im \theta}\left( \e^{\im\theta} - \e^{-\im\theta}\right) = 2U \e^{\im(\pi/2 - \theta)} \sin\theta.
+                </me>
+              </p>
+            </solution>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+               Conclude that on the surface of the cylinder, the maximum velocity is <m>|\bu| = 2U</m>. Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?  
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                From the above, we clearly see that the magnitude is <m>|u - \im v| = 2U\sin\theta</m> so the maximum speed on the cylinder is <m>2U</m>. This value is obtained at the top and bottom with <m>\theta = \pm \pi/2</m>. The stagnation point is found where the speed is zero, and this is at the fore and aft points, <m>\theta = \pi, 0</m>.
+              </p>
+            </solution>
+          </task>
+
+
+          <task>
+            <statement>
+              <p>
+                Show that on the surface of the cylinder, the pressure force is given by 
+                <me>
+                  p = p_\infty + \frac{1}{2} \rho U^2(1 - 4\sin^2\theta),
+                </me>
+                where <m>p_\infty</m> is a constant value.
+              </p>
+            </statement>
+
+          <solution>
+            <p>
+              We know from Bernoulli's equation, without gravity, that we have (<xref ref="thm-bernoulli-potential"/>): 
+              <me>
+                \left(p + \frac{\rho}{2} |\bu|^2\right)_{\text{cylinder}} = \left(p_\infty + \frac{\rho}{2} U^2\right)_{\text{infinity}}
+              </me>
+              where we have set the constant on the RHS of the formula to be <m>p_\infty/\rho</m>, setting a reference pressure. We now only need to substitute the speed on the cylinder, <m>|\bu| = U(4\sin^2\theta)</m>, giving
+              <me>
+                p = p_\infty + \frac{\rho}{2}U^2(1 - 4\sin^2\theta)
+              </me>
+              as desired.
+            </p>
+          </solution>
+          </task>
+
+
+        <task>
+          <statement>
+            <p>
+              It is possible to add a line vortex to the interior of the circular cylinder, centred at <m>z = 0</m> by writing in addition to <xref ref="eqn-flow-over-circle-problem"/>, an additional term: 
+              <me>
+                w(z) = U \left(z + \frac{a^2}{z}\right) - \frac{\im\Gamma}{2\pi} \log z.
+              </me>
+              Verify again that the above modification does not change the streamline properties of <m>|z| = a</m>. 
+            </p>
+
+            <p>
+              Does the above flow satisfy the condition that the flow is of uniform speed <m>U</m> far upstream? 
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              The addition of the line vortex does not change the streamline patterns on the cylinder since it is a linear addition. Indeed, on the surface, we have from the addition: 
+              <me>
+                -\frac{\im \Gamma}{2\pi} (\log a + \im \pi \theta) = -\frac{\Gamma}{2\pi} (-\pi \theta + \im \log a).
+              </me>
+             Therefore the imaginary part is still a constant, and hence the boundary of the cylinder is still a streamline of the flow.  
+            </p>
+
+            <p>
+              To verify that the upstream flow is not altered, we can take a derivative to obtain the complex velocity: 
+                              <me>
+                  w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right) - \frac{\im}{2\pi z}.
+                </me>
+                So in the limit <m>|z| \to \infty</m>, we see indeed that the velocity is horizontal with speed <m>U</m>.
+            </p>
+          </solution>
+        </task> 
+
+        
+        <task>
+          <statement>
+            <p>
+              By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by 
+              <me>
+                u - \im v = \im \e^{-\im\theta}\left(2U \sin\theta  - \frac{\Gamma}{2\pi a}\right). 
+              </me>
+            </p>
+
+            <p>
+              Conclude that a point on the cylinder that satisfies the equation 
+              <me>
+                \sin\theta = \frac{\Gamma}{4\pi a U},
+              </me>
+              is a stagnation point of the flow.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+                            We had previously simplified the left terms in brackets: 
+              <me>
+                u - \im v = 2U \im \e^{-\im\theta}\sin\theta - \frac{\Gamma\im}{2\pi a} \e^{-\im\theta} = \im \e^{-\im\theta}
+                \left(2U \sin\theta - \frac{\Gamma}{2\pi a}\right).
+              </me>
+            </p>
+
+            <p>
+              A stagnation point requires that <m>|u - \im v| = 0</m>, so setting the terms in brackets to zero implies 
+              <me>
+                \sin\theta = \frac{\Gamma}{4\pi a U},
+              </me>
+              as desired. 
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              (Not examinable) Use a computational tool to investigate the streamlines of the flow for <m>\Gamma = 0, 2\pi aU, 4\pi a U, and 6\pi a U</m>. 
+            </p>
+
+            <p>
+              The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of <m>\Gamma</m> will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known <em>Magnus effect</em>, which is used by athletes to cause a ball's trajectory to move from a straight path. 
+            </p>
+          </statement>
+
+          <solution>
+
+            <p>
+              The point of the previous exercise is to note that when <m>\Gamma \neq 0</m>, this shifts the location of the stagnation point. For example, if <m>\Gamma = 4\pi a U</m>, then the stagnation points are found at
+              <me>
+                \sin\theta = 1 \Longrightarrow \theta = \pi/2,
+              </me>
+              i.e. the top of the cylinder.
+            </p>
+            <p>
+              <figure xml:id="fig-circle-with-vortex">
+                <caption>Flow past a circular cylinder with interior line vortex of different strengths.</caption>
+                <image source="conformal_circle_with_vortex.png" width="100%">
+                  <shortdescription>Flow past a circular cylinder with vortex</shortdescription>
+                </image>
+              </figure>
+            </p>
+          </solution>
+        </task>
+
+        
+      </example>
+
+
+    </subsection>
+
+  
+<subsection xml:id="subsec-">
+  <title>The Joukowski map</title>
+  
+    <p>
+    We shall study the following mapping. 
+    </p>
+
+    <definition xml:id="def-joukowski">
+      <statement>
+        <p>
+         The <em>Joukowski transformation</em> is the map 
+         <men xml:id="eqn-joukowski">
+          z = G(\zeta) = \zeta + \frac{a^2}{\zeta}
+         </men>
+         where <m>a &gt; 0</m> is a parameter. The mapping is conformal at all points except <m>\zeta = 0</m> (pole) and <m>\zeta = \pm a</m> where <m>G'(\zeta) = 0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Consider a circle in the <m>\zeta</m>-plane. Let <m>\zeta = r\e^{\im\theta}</m>. Then in the <m>z</m>-plane, this is mapped to 
+      <me>
+        z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta}  = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
+      </me>
+      Provided that <m>r &gt; a</m>, this the equation of an ellipse with principle radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. The orientation of circles is preserved, with an anticlockwise rotation in <m>\zeta</m> corresponding to anticlockwise in <m>z</m>. The exterior of the circle <m>|\zeta| = r</m> is mapped to the exterior of the ellipse in <m>z</m>.</p>
+      
+      <p>In addition note that if <m>r \to a</m>, the ellipses tends to the line segment
+      <me>
+      S = \{ z = 2a\cos\theta \, | 0 \leq \theta \leq \pi\},
+      </me>
+      which then ranges from <m>z = 2a</m> for <m>\theta = 0</m> to <m>z = -2a</m> for <m>\theta = \pi</m>. As <m>\theta</m> further ranges in <m>[\pi, 2\pi)</m>, this traverses the horizontal plate again. One can interpret it as traversing the top or the bottom side of the plate (a view strengthened from considering the limiting images). This is shown in <xref ref="fig-conformal-joukowski01"/>.
+    </p>
+
+    <figure xml:id="fig-conformal-joukowski01">
+      <caption>The Joukowski transformation in <xref ref="eqn-joukowski"/> sends circles with radius <m>r \geq 1</m> to ellipses in the <m>z-</m>plane. In the limit <m>r \to a^+</m>, this approaches a horizontal plate of length <m>4a</m>.</caption>
+      <image source="conformal_joukowski01.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      If on the other hand, <m>r &lt; a</m>, then we can verify that the mapping still produces ellipses, but now with principal radii <m>r + a^2/r</m> and <m>a^2/r - r</m>. The orientation is now reversed, with anticlockwise orientation in <m>\zeta</m> mapped to clockwise orientation. Therefore, it is the case that the interior of the discs with <m>|\zeta| = r</m> are mapped to the exterior of ellipses in <m>z</m>. Again, in the limit that <m>r \to a^-</m> the images approach a flat plate of length <m>4a</m> on the axis. 
+    </p>
+
+        <figure xml:id="fig-conformal-joukowski02">
+      <caption>The Joukowski transformation in <xref ref="eqn-joukowski"/> sends circles with radius <m>r \leq 1</m> to ellipses in the <m>z-</m>plane. As <m>r \to \infty</m>, these tend to infinitely large circles. The values here are <m>r = 0.5, 0.6, 0.7, 0.8, 0.9, 1.</m></caption>
+      <image source="conformal_joukowski02.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+
+
+    <p>
+      We can invert <xref ref="eqn-joukowski"/>, and this gives
+      <men xml:id="eqn-joukowski-inverted">
+        \zeta = \frac{1}{2} \left(z \pm \sqrt{z^2 - 4a^2}\right) = 
+        \frac{1}{2} \left(z \pm \sqrt{z-2a}\sqrt{z + 2a}\right).
+      </men>
+    As noted in <xref ref="sec-intro-multifunctions"/>, we must take care to define the proper branch cut structure for the two branch points at <m>z = \pm 2a</m>. 
+    </p>
+
+    <p>
+      As noted in the exercises of <xref ref="ws-intro"/>, if we let 
+      <me>
+        z + 2a = r_1 \e^{\im \theta_1} \quad \text{and} \quad
+        z - 2a = r_2 \e^{\im \theta_2}, 
+      </me>
+      and take <m>\theta_1, \theta_2 \in [0, 2\pi)</m>, this corresponds to a single branch cut between <m>z = -2a</m> and <m>z = 2a</m>. This branch cut choice is the most convenient since then it directly coincides with the central axis of the ellipse. 
+    </p>
+
+    <p>
+      Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have 
+      <mdn>
+        <mrow>\zeta = g_+(z) \amp= \frac{1}{2}\left(z + \sqrt{z^2 - 4a}\right), </mrow>
+        <mrow>\zeta = g_-(z) \amp= \frac{1}{2}\left(z - \sqrt{z^2 - 4a}\right). </mrow>
+      </mdn>
+    </p>
+
+    <p>
+      Let us return to the perspective of images from the <m>\zeta</m>-plane to the <m>z</m>-plane. We can now consider the images of circles in the <m>\zeta</m>-plane that have either been horizontally shifted and/or vertically shifted. The two critical points (points where the map is not conformal) mentioned above correspond to either <m>\zeta = \pm a</m> or <m>z = \pm 2a</m>. 
+    </p>
+
+    <p>
+      Firstly in <xref ref="fig-conformal-joukowski03"/>, we see that horizontal shifts of the circle will corresponding to shifting and deforming the ellipse such that, as a critical point is approached, this forms a point of non-conformality in the image (a cusp).
+    </p>
+
+        <figure xml:id="fig-conformal-joukowski03">
+      <caption>We now consider shifting the circle with <m>|\zeta| = 2</m> to the left, so that the circumferance passes through the critical point at <m>\zeta = a = 1</m>. This produces an image that resembles an aerofoil with a sharp trailing edge.</caption>
+      <image source="conformal_joukowski03.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure>
+
+    <p>
+      Top-bottom asymmetry can also be introduced by considering vertical shifts of the preimages. 
+    </p>
+
+           <figure xml:id="fig-conformal-joukowski04">
+      <caption>Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.</caption>
+      <image source="conformal_joukowski04.png" width="70%">
+        <shortdescription>Joukowski map</shortdescription>
+      </image>
+    </figure> 
+</subsection>   
+
+    <!-- <subsection xml:id="subsec-aerofoil-flow-plate-plate">
+      <title>Flow past a flat plate</title>
+
+      <p>
+        Notes to appear here following Thursday 23 Oct lecture.
+      </p>
+
+
+
+      
+    </subsection> -->
+
+    
+  </section>
 
 
 
@@ -1680,7 +2087,7 @@ from the origin. Try to sketch the streamlines in either case
        
         <statement>
           <p>
-            Show that the circle <m>|\zeta| = a</m> is mapped tro a line segment 
+            Show that the circle <m>|\zeta| = a</m> is mapped to a line segment 
             <me>
               S = \{ z: \Im z = 0, -2a \leq \Re z \leq 2a\}
             </me>
@@ -1691,15 +2098,30 @@ from the origin. Try to sketch the streamlines in either case
           </p>
 
           <p>
-            Deduce that the extttterior of the line segment is mapped to the exterior of the circle <m>|\zeta| = a</m> by the transformation 
+            Deduce that the exterior of the line segment is mapped to the exterior of the circle <m>|\zeta| = a</m> by the transformation 
             <me>
               \zeta = \frac{1}{2}\left( z + \sqrt{z^2 - 4a^2}\right).
             </me>
             Carefully define the function <m>\sqrt{z^2 - 4a^2}</m> and determine where the mapping above is conformal.
           </p>
+
+          <p>
+            Constuct a flow, by providing the complex potential <m>\phi + \im \psi</m> that consists of the following elements: (i) uniform flow oriented an angle <m>\alpha</m> to the horizontal at infinity; (ii) a line source of strength <m>Q</m> placed in the flow; and (iii) a horizontal flat plate of length <m>2a</m> on the axis, <m>-2a &lt; z &lt; 2a.</m> 
+          </p>
+
+          <p>
+            Sketch what you believe will be the streamlines of such a flow.
+          </p>
         </statement>
         
         
+      </exercise>
+
+      <exercise>
+        <title>The Magnus effect and flow past a circular cylinder</title>
+        <p>
+          During the problem class, we will study <xref ref="example-uniform-past-circle-with-vortex"/> corresponding to verifying different properties of uniform flow past a circular cylinder, ending with studying the <em>Magnus effect</em> due to adding an initial line vortex of strength <m>\Gamma</m> into the flow. Please review the derivations and make your own notes on the example so that you are confident with the problem and its conclusions. 
+        </p>
       </exercise>
 
       
