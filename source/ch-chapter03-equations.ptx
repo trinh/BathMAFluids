@@ -43,17 +43,73 @@
 
     <remark xml:id="rem-continuum">
       <title>Continuum assumption</title>
-      <p> The assumption that the fluid can be described by a smooth scalar density field, <m>\rho</m>,
+      <p>
+        The assumption that the fluid can be described by a smooth scalar density field, <m>\rho</m>,
         is a <em>continuum assumption.</em> This is indeed one of the core assumptions that
         underlies this course, but it is worth noting that this is only an assumption (albeit a
         widely accepted one, applicable to most real-life scenarios). On the other extreme of this
         view is the assumption that the fluid is composed of a discrete set of molecules, all
         bouncing around, and hence fluid dynamics might be posed as the study of the kinetic motion
-        of molecules! </p>
-      <p> In the continuum description, we are averaging properties (e.g. velocity) over groups of
-        individual fluid particles that are close to each other. Thus there is a minimum size of the
-        fluid body required for this approach to be valid (if we consider smaller sizes of fluid,
-        the motion of individual particles becomes important): <ul>
+        of molecules!
+      </p>
+        <p>
+          For example, consider the fluid density, <m>\rho</m>.
+          In the continuum approximation,
+          this needs to be a smooth mathematical function of position and time.
+          We define it at a point <m>\bx</m> by taking a small volume <m>\delta V</m>
+          about <m>\bx</m> and then define <m>\rho</m> as mass of the fluid particles
+          in <m>\delta V</m> divided by <m>\delta V</m>.
+          But how big should <m>\delta V</m> be?
+          It needs to be big enough that the effects of individual particles will be
+          smoothed out and small enough that the resulting function <m>\rho</m> captures
+          macroscopic density variations in the fluid
+          (which would be averaged out if <m>\delta V</m> is too large).
+        </p>
+        <p>
+          An illustration is shown in <xref ref="fig-density-continuum"/>, which
+          shows a sketch of how the function
+          <m>\rho</m> defined as particle mass in <m>\delta V</m> divided by <m>\delta V</m>
+          might vary as <m>\delta V</m> varies (note the <m>x</m>-axis of the graph is
+          on a logarithmic scale).
+          The ideal choice of the volume <m>\delta V</m> is
+          of the order of <m>10^{-9}</m> mm<m>^3</m>
+          for liquids such as water, but note that the value of the density is pretty stable
+          for a significant range around <m>10^{-9}</m> mm<m>^3</m>, and that this is necessary in order
+          that our definition of the density makes physical sense
+          (because the exact size of <m>\delta V</m> shouldn't affect the density).
+          For volumes much smaller than <m>10^{-9}</m> mm<m>^3</m>,
+          we can see the effects of individual molecules.
+          For volumes much larger,
+          we see macroscopic effects.
+          For liquids, a volume of <m>10^{-9}</m> mm<m>^3</m> contains about <m>3\times10^7</m>
+          particles.
+        </p>
+        <figure xml:id="fig-density-continuum">
+          <caption>Sketch illustrating how the fluid density at a point might behave,
+            where the fluid density is
+            defined as mass of fluid in volume <m>\delta V</m> divided by <m>\delta V</m>,
+            and this is plotted against the volume <m>\delta V</m>.
+            Note that the <m>x</m>-axis is on a logarithmic scale.
+            Picture from Fig 1.2 of <xref ref="ref-white-9"/>,
+            which you can view in the University Library's online collection</caption>
+          <image source="ch-chapter03-density-measurement2.jpg" width="40%">
+            <shortdescription>Density and the continuum approximation</shortdescription>
+          </image>
+        </figure>
+        <p>
+          As well as the definition of the density,
+          we need to do a similar procedure to define the velocity,
+          and potentially other variables (pressure, stress, temperature etc).
+          In this course, we will generally assume the procedure of choosing
+          <m>\delta V</m> and averaging has already been carried out.
+        </p>
+      <p>
+        This approach implies there is a minimum size of the
+        fluid body required for this approach to be valid
+        (if we consider smaller sizes of fluid,
+        the motion of individual particles becomes important).
+        Specifically, a region containing about <m>3\times10^7</m> molecules
+        must be small in comparison all lengthscales in the problem: <ul>
           <li> For gases at standard temperature and pressure (STP): the minimum volume is around <m>
         10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m>
         molecules).</li>
@@ -1112,7 +1168,8 @@
       </statement>
 
       <solution>
-        <p> Salt is not like a fluid because you can make it into a pile, whereas the surface of a
+        <p>
+          Salt is not like a fluid because you can make it into a pile, whereas the surface of a
           resting fluid is always horizontal. However, some aspects of salt flow are similar to the
           flow of a fluid. A typical salt particle is approximately a cube of side <m>0.5</m> mm,
           and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>. We need a size of
@@ -1121,7 +1178,8 @@
           grains (this was the number of gas or liquid molecules quoted in the notes), i.e. <m>
           3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately <m>10</m> cm.
           We need a hole that is many times this distance, perhaps a hole with a diameter of one
-          metre or so might be reasonable! </p>
+          metre or so might be reasonable! See also <xref ref="rem-continuum"/>.
+        </p>
       </solution>
     </exercise>
 
@@ -1212,7 +1270,9 @@
         </statement>
 
         <solution>
-          <p> Write the second and third terms on the RHS as <me>
+          <p>
+            Show that the Reynolds Transport Theorem in one dimension is equivalent to the Leibniz rule.
+            Write the second and third terms on the RHS as <me>
               \int_{a(t)}^{b(t)} \dd{}{x}(f(x, t) u(x, t)) \, \de{x}.
             </me>
           </p>
@@ -1534,13 +1594,18 @@ compared to the contributions due to the internal energy and the kinetic energy.
 
       <task>
         <statement>
-          <p> Draw the contours of the pressure at a fixed time <m>t</m>, and hence describe the
-            pressure field. </p>
+          <p>
+            What can you tell about the surfaces of constant pressure? Sketch this at a fixed time <m>t</m>,
+            and hence describe the pressure field.
+          </p>
         </statement>
 
         <solution>
-          <p> The pressure is constant on planes normal to the vector <m>(b, \; 3t^2, \; e^t + g)</m>,
-            as illustrated below: </p>
+          <p>
+            The pressure is constant on parallel planes normal to the vector
+            <m>(b, \; 3t^2, \; e^t + g)</m>,
+            as illustrated below:
+          </p>
           <figure xml:id="fig-pressure-contours">
             <caption>Contours of the pressure field at fixed <m>t</m>.</caption>
             <image source="ch-chapter03-pressure-contours.png" />
@@ -1567,32 +1632,55 @@ compared to the contributions due to the internal energy and the kinetic energy.
         <p> Assume the fluid moves as a rigid body and neglect friction and the mass of the piston.
           Using the Euler equations in <xref ref="def-euler" />, write down a differential equation
           governing the position, <m>X(t)</m>, of the piston at time <m>t</m>. You may neglect
-          gravity. </p>
+          gravity. You do not need to solve the equation
+          (it could be solved using Python or similar).</p>
       </statement>
 
       <solution>
-        <p> We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
+        <p>
+          We assume that the fluid pressure at the open end of the pipe is atmospheric pressure.
           Since the fluid moves as a rigid body, the velocity field has no spatial gradients, and
-          hence the Euler equation reduces to <me>
+          hence the Euler equation reduces to
+          <me>
             \rho\pd{\bu}{t}=-\nabla p,
-          </me> where the velocity is uniformly <m>\bu
-          =
-            (\dot{X}(t), 0)</m>.</p>
-
-        <p>Solving for <m>p</m> and using the fact that <m>p</m> is atmospheric pressure at <m>x = L</m>,
-          we have <me>
+          </me> where the velocity is uniformly <m>\bu=(\dot{X}(t),0)</m>.
+        </p>
+        <p>
+          Solving for <m>p</m> and using the fact that <m>p</m> is atmospheric pressure
+          at <m>x = L</m>, we have
+          <me>
             p(x,t) = \rho\dd{^2 X}{t^2}(L-x)+p_\text{atm}.
           </me>
         </p>
-
-        <p>At the piston side, the pressure is equal to <me>
-            \frac{F}{A} + p_\text{atm},
-          </me> (recall pressure is force per
-          unit area, therefore the piston force must be divided by <m>A</m>). Then <me>
-          \frac{F+Ap_{atm}}{A} = \rho\dd{^2X}{t^2}(L-X)+p_{atm}
+        <p>
+          At the piston <m>x=X</m>, note that atmospheric pressure applies in addition to
+          <m>F</m>, meaning that the force on the fluid is
+          <me>
+            F+Ap_\text{atm},
+          </me>
+          and hence the fluid pressure is
+          <me>
+            \frac{F}{A} + p_\text{atm}.
+          </me>
+          Then
+          <me>
+            \frac{F}{A} + p_\text{atm} = \rho\dd{^2X}{t^2}(L-X)+p_\text{atm}
             \quad\Rightarrow\quad
             \dd{^2X}{t^2} = \frac{F}{A\rho(L-X)}.
           </me>
+        </p>
+        <p>
+          Note that the atmospheric pressure cancels in this problem,
+          and this is common to problems of this type, because atmospheric pressure
+          acts uniformly on all surfaces exposed to the atmosphere and therefore does
+          not lead to a resultant force or affect the dynamics.
+          This motivates the introduction of a gauge pressure, <m>p_{\text{gauge}}</m>,
+          whereby a uniform and constant baseline pressure is chosen,
+          in this case <m>p_{\text{atm}}</m>, with the gauge pressure given by
+          <m>p_{\text{gauge}}=p-p_{\text{atm}}</m>.
+          Since the pressure only appears as a gradient in the governing equations,
+          using the gauge pressure does not affect the result.
+          Introducing a gauge pressure can make the algebra simpler.
         </p>
       </solution>
     </exercise>
@@ -1623,7 +1711,8 @@ compared to the contributions due to the internal energy and the kinetic energy.
             derivatives, taking the curl of both sides gives <me>
               \rho\left(\pd{\bomega}{t} + \nabla \times(\bu \cdot \nabla)\bu\right) = 0.
             </me>
-            We have <md>
+            We have
+            <md>
               <mrow>&amp; \nabla \times(\bu \cdot \nabla)\bu,</mrow>
               <mrow>=&amp;\begin{vmatrix}
                 \bi &amp; \bj &amp; \bk \\
@@ -1636,16 +1725,22 @@ compared to the contributions due to the internal energy and the kinetic energy.
             u-\pd{\bu}{x}\cdot\nabla w\right)</mrow>
               <mrow>&amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla
             v-\pd{\bu}{y}\cdot\nabla u\right),</mrow>
-              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu</mrow>
+              </md>
+              At this point, note that we can see <m>\bu\cdot\nabla\bomega</m>
+              appearing in the components, but it is not so easy to see how to make out
+              the terms of <m>\bomega\cdot\nabla\bu</m>. Since we know what we are aiming for,
+              we instead calculate
+              <md>
+                <mrow>&amp; \nabla \times(\bu \cdot \nabla)\bu
+                  -\left(\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu\right)</mrow>
+              <mrow>=&amp;\bomega\cdot\nabla\bu</mrow>
               <mrow>
             &amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)</mrow>
               <mrow>
             &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
               <mrow>
             &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu</mrow>
-              <mrow>
-            &amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
+              <mrow>=&amp;\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)</mrow>
               <mrow>
             &amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)</mrow>
               <mrow>
@@ -1656,9 +1751,10 @@ compared to the contributions due to the internal energy and the kinetic energy.
             &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)</mrow>
               <mrow>
             &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),</mrow>
-              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,</mrow>
-              <mrow>=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,</mrow>
-            </md> where
+              <mrow>=&amp;\bomega\nabla\cdot\bu,</mrow>
+              <mrow>=&amp;0,</mrow>
+            </md>
+            where
             the final equality follows from incompressibility. Hence, <me>
               \pd{\bomega}{t} + \bu\cdot\nabla\bomega - \bomega\cdot\nabla\bu = 0
             \quad\Rightarrow\quad
@@ -1726,11 +1822,14 @@ compared to the contributions due to the internal energy and the kinetic energy.
           <p>Explain why the curve <m>r = a(z)</m> is a streamline.</p>
         </statement>
         <solution>
-          <p> The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>, so that
-            no fluid leaves or enters the jar through its sides. Thus, <me>
-              \bu \cdot \bn = u_r - u_z \pd{a}{z} = 0.
-            </me> This is
-            precisely the condition for <m>r = a(z)</m> to be a streamline. </p>
+          <p>
+            The fluid velocity at the surface of the jar satisfies <m>\bu\cdot\bn=0</m>,
+            so that
+            no fluid leaves or enters the jar through its sides. This means that the flow
+            next to the boundary of the jar must be parallel to this boundary, meaning
+            that streamlines are parallel to the boundary. Equivalently,
+            the boundary <m>r = a(z)</m> is a streamline.
+          </p>
         </solution>
       </task>
 
