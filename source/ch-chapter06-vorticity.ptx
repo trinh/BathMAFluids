@@ -17,7 +17,7 @@
         <caption>A tornado (credit Greg Johnson, Unsplash).</caption>
         <image source="ch-chapter06-greg-johnson-5V3FUicslvo-unsplash.jpg" width="35%" />
       </figure>
-      <figure>
+      <figure xml:id="fig-wingtip-vortices">
         <caption>Wingtip vortices behind an aircraft (credit NASA Langley Research Center).</caption>
         <image source="ch-chapter06-NASA-Langley-Research-Center-il_wingtipvortexedit_lg.jpg" width="35%" />
       </figure>
@@ -37,44 +37,49 @@
       behind a swimming fish or a flying bird. Vortices are also important in engineering
       applications, for example in the design of aircraft wings and turbine blades.
     </p>
+  </introduction>
 
-    <p>
-      Recall the fluid vorticity <m>\bomega=\nabla\times\bu</m> that was introduced in
-      Definition <xref ref="def-vorticity"/>. Many people struggle to understand the
-      concept of vorticity when they first encounter it, so you should not worry if it
-      takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’
-      by Ascher Shapiro available at
-      <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>
-      gives a clear and comprehensive introduction to the phenomenon. To recap:
-      <ul>
-        <li>
-          <p>
-            Vorticity, <m>\bomega</m>, is a vector field and it is a function of space and time
-            (like the fluid velocity).
-          </p>
-        </li>
-        <li>
-          <p>
-            At each point in the fluid, <m>\bomega</m> points in the direction of the axis of the local fluid rotation.
-          </p>
-        </li>
-        <li>
-          <p>
-            The magnitude of <m>\bomega</m> is twice the local angular velocity.
-          </p>
-        </li>
-        <li>
-          <p>
-            In the special case of a two-dimensional flow
-            (that is <m>\bu(\bx,t)=(u(x,y,t),v(x,y,t),0)</m>), the vorticity is
-            unidirectional, pointing in the <m>z</m>-direction with
-            magnitude <me>\pd{v}{x}-\pd{u}{y}</me>.
-          </p>
-        </li>
-      </ul>
-    </p>
+  <section xml:id="sec-vorticity-circulation">
+    <title>Vorticity and circulation</title>
+    <introduction>
+      <p>
+        The fluid vorticity <m>\bomega=\nabla\times\bu</m> was introduced in
+        <xref ref="def-vorticity"/>. Many people struggle to understand the
+        concept of vorticity when they first encounter it, so you should not worry if it
+        takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’
+        by Ascher Shapiro available at
+        <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>
+        gives a clear and comprehensive introduction to the phenomenon. To recap:
+        <ul>
+          <li>
+            <p>
+              Vorticity, <m>\bomega</m>, is a vector field and it is a function of space and time
+              (like the fluid velocity).
+            </p>
+          </li>
+          <li>
+            <p>
+              At each point in the fluid, <m>\bomega</m> points in the direction of the axis of the local fluid rotation.
+            </p>
+          </li>
+          <li>
+            <p>
+              The magnitude of <m>\bomega</m> is twice the local angular velocity.
+            </p>
+          </li>
+          <li>
+            <p>
+              In the special case of a two-dimensional flow
+              (that is <m>\bu(\bx,t)=(u(x,y,t),v(x,y,t),0)</m>), the vorticity is
+              unidirectional, pointing in the <m>z</m>-direction with
+              magnitude <me>\pd{v}{x}-\pd{u}{y}</me>.
+            </p>
+          </li>
+        </ul>
+      </p>
 
-    <example xml:id="ex-vorticity-intro">
+      <!--
+      <example xml:id="ex-vorticity-intro">
       <title>Steady two-dimensional vortex flow</title>
       <statement>
         <p>
@@ -164,7 +169,6 @@
         </p>
       </solution>
 
-      <!--
       <task>
         <statement>
           <p>
@@ -248,13 +252,8 @@
               (magnitude twice the rotation rate, with axis in the direction of the axis of rotation).
             </p>
           </solution>
-        </task>-->
-    </example>
-  </introduction>
-
-  <section xml:id="sec-helmholtz">
-    <title>The Helmholtz principle</title>
-    <introduction>
+        </task>
+      </example>-->
       <p>
         As mentioned in <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
         vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>:
@@ -271,7 +270,7 @@
     <subsection xml:id="sec-circulation">
       <title>The circulation in a flow</title>
       <definition xml:id="def-circulation">
-        <title>Circulation</title>
+        <title>The circulation</title>
         <statement>
           <p>
             We define the circulation around a closed loop <m>C</m> in the flow as
@@ -293,7 +292,7 @@
       <proof>
         <title>Proof of Kelvin's circulation theorem</title>
         <p>
-          A proof of this theorem is given in Exercise <xref ref="ex-kelvin-circulation-theorem"/>.      
+          A proof of this theorem is given in <xref ref="ex-kelvin-circulation-theorem"/>.      
         </p>
       </proof>    
       <remark>
@@ -306,7 +305,7 @@
           Therefore the flow at any time is irrotational.
         </p>
       </remark>    
-      <remark>
+      <remark xml:id="rem-circulation-vorticity">
         <title>Relationship between circulation and vorticity</title>
         <p>
           Using Stokes' theorem
@@ -318,9 +317,19 @@
           Thus the circulation equals the flux of vorticity through the spanning surface.
         </p>
       </remark>
+      <remark>
+        <title>Independence of spanning surface</title>
+        <p>
+          Note that, for a given closed curve <m>C</m>,
+          in the argument given in <xref ref="rem-circulation-vorticity"/>
+          we could choose any surface <m>S</m> spanning <m>C</m>,
+          and thus the circulation equals the vorticity flux through any
+          spanning surface.
+        </p>
+      </remark>
     </subsection>
 
-    <subsection>
+    <subsection xml:id="sec-vortex-lines">
       <title>Vortex lines and the Helmholtz vortex theorems</title>
       <definition xml:id="def-vortex-lines">
         <title>Vortex lines</title>
@@ -355,10 +364,42 @@
           lines parallel to the <m>z</m>-axis.
         </p>
       </remark>
+      <definition xml:id="def-vortex-surface">
+        <title>Vortex surface</title>
+        <statement>
+          <p>
+            A vortex surface is a surface such that <m>\bomega</m> is tangent
+            to the surface at all points on the surface.
+          </p>
+        </statement>
+      </definition>
+      <remark>
+        <title>Notes on vortex surfaces</title>
+        <uL>
+          <li>
+            <p>
+              Vortex lines cannot pass through a vortex surface.
+            </p>
+          </li>
+          <li>
+            <p>
+              In particular, for any given vortex line, it is possible to
+              choose two different vortex surfaces such that the vortex line is the
+              intersection of the two vortex surfaces.
+            </p>
+          </li>
+        </ul>
+      </remark>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-helmholtz">
+    <title>The Helmholtz vortex theorems</title>
+    <introduction>
       <theorem xml:id="thm-helmholtz-vortex-theorems">
         <title>The Helmholtz vortex theorems</title>
         <p>
-          These state
+          These state:
           <ol>
             <li>
               <p>
@@ -395,22 +436,21 @@
         <title>Proof of the Helmholtz vortex theorems</title>
         <p>
           <em>Proof of the first vortex theorem.</em>
-          We define a vortex surface as a surface such that <m>\bomega</m> is tangent
-          to the surface at all points on the surface. Thus vortex lines lie within
-          vortex surfaces. In particular, for any given vortex line, it is possible to
-          choose two different vortex surfaces such that the vortex line is the
-          intersection of the two vortex surfaces.
+          For a given vortex line, choose two vortex surfaces containing the line
+          such that the vortex line is the intersection of the two vortex surfaces.
         </p>
         <p>
-          For one of the vortex surfaces, we choose a closed curve <m>C</m>
-          lying within the vortex surface. The circulation around <m>C</m>
+          Choose a closed curve <m>C</m>
+          lying within one the vortex surfaces.
+          The circulation around <m>C</m> is
           <me>
-            \Gamma=\oint_C\bu\cdot\de\bx=\iint_S\bomega\cdot\bn\,\de S.
+            \Gamma=\oint_C\bu\cdot\de\bx=\iint_S\bomega\cdot\bn\,\de S,
           </me>
           where the final equality is by Stokes' theorem. Since the curve is within the
           vortex surface, the vorticity is parallel to the surface, and hence
-          <m>\bomega\cdot\bn=0</m>. This means that <m>\Gamma=0</m>, and by
-          <xref ref="thm-kelvin-circulation-theorem"/> must remain at zero for all times.
+          <m>\bomega\cdot\bn=0</m>. Thus <m>\Gamma=0</m>, and by
+          <xref ref="thm-kelvin-circulation-theorem"/>, <m>\Gamma</m>
+          must remain at zero for all times.
         </p>
         <p>
           Thus at time <m>t</m>, the evolved surface has circulation zero for all closed
@@ -498,14 +538,23 @@
       </proof>
       <remark>
         <p>
-          Thus if a vortex line becomes stretched then <em>spin up</em> occurs.
-          If we consider a thin vortex tube surrounding the vortex line,
-          then, as the vortex line is stretched, the tube becomes thinner and longer.
-          However, <m>\Gamma=\int_S\bomega\cdot{\bn}\,dS</m> must remain constant,
+          The second theorem shows us that if a vortex tube becomes stretched
+          then by mass conservation, it must get thinner.
+          The flux of vorticity along the vortex tube is given by
+          <m>\Gamma=\int_S\bomega\cdot{\bn}\,dS</m>, and this must remain constant,
           and therefore, since the area of the cross-section <m>S</m> is decreasing,
-          <m>\bomega</m> must get bigger.
-          Conversely, if a vortex line shortens we get <em>spin down</em>
+          the magnitude of vorticiy  <m>\bomega</m> must increase in the tube.
+          This is <em>spin up</em>.
+          Conversely, if a vortex tube becomes shorter,
+          we get the opposite effect of <em>spin down</em>
           and <m>\bomega</m> gets smaller.          
+        </p>
+        <p>
+          A non-fluids example of the same principle can be seen when dancers perform
+          moves involving spins,
+          especially ice skaters,
+          the dance starts rotating with their arms or legs out, and
+          then they pull in to speed up the spin.
         </p>
       </remark>
       <example>
@@ -531,19 +580,157 @@
           (taken from <xref ref="ref-acheson"/>)
           show examples of spin up and spin down, respectively.
           Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched,
-          which could result in a tornado. Spin up happens in a cup of tea after it has been stirred.
+          and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred.
           Secondary flows in the cup tend to spread the column of rotating fluid horizontally,
           making the area of the cross-section of the vortex tube bigger,
           and hence the vorticity smaller, which is spin down.
         </p>
       </example>
     </subsection>
-  </section>
-  <section xml:id="sec-helmholtz-examples">
-    <title>Examples illustrating the use of the Helmholtz principle</title>
-    <p>
-      Here are some examples.
-    </p>
+    <subsection xml:id="helmholtz-principle">
+      <title>The Helmholtz principle</title>
+      <remark>
+        <title>Recap of line vortex</title>
+        <p>
+          The Helmholtz vertex theorems help us to understand the concept of a
+          line vortex in irrotational flow that was introduced in
+          <xref ref="example-streamfunction-linevortex"/>. Recall that this
+          is associated with the complex potential
+          <me>
+            f(z) = -\frac{\im \Gamma}{2\pi} \log z.
+          </me>
+          (see <xref ref="line-vortex-complex-potential"/>), and has corresponding velocity components
+          <me>
+            u = -\frac{\Gamma y}{2\pi(x^2+y^2)},\quad
+            v = \frac{\Gamma x}{2\pi(x^2+y^2)}.
+          </me>
+          The vorticity associated with this flow <m>\bomega=\bzero</m> at all
+          points except the signularity at the origin.
+          However, it was also notes in <xref ref="line-vortex-circulation"/>
+          that the circulation around any closed curve containing the
+          origin is <m>\Gamma</m>.
+        </p>
+        <p>
+          Thus, a line vortex of strength <m>\Gamma</m> is the limit of a
+          vortex tube of strength <m>\Gamma</m> as its thickness goes to zero.
+        </p>
+      </remark>
+      <remark>
+        <title>Real fluids</title>
+        <p>
+          We note that in any real fluid, the effects of viscosity would come into play
+          in the core of the vortex, disallowing the infinite concentration of vorticity
+          there. Despite this, we can use the concept of a vortex line to gain insight
+          into a number of real-world problems.
+        </p>
+      </remark>
+      <corollary xml:id="cor-vortex-movement">
+        <statement>
+          <p>
+            A useful corollary to the Helmholtz vortex theorems
+            <xref ref="thm-helmholtz-vortex-theorems"/> is capture by the following statement:
+            `A line vortex moves with the velocity field due to everything except itself.'
+          </p>
+        </statement>
+      </corollary>
+      <proof>
+        <p>
+          A flow with a line vortex has an infinite concentration of vortex lines
+          along the axis of the line vortex. By the first vortex theorem
+          <xref ref="thm-helmholtz-vortex-theorems"/>, these are frozen in the fluid,
+          and thus evolve with the background flow with the line vortex removed.
+        </p>
+      </proof>
+      <example>
+        <title>Example: Wing tip vortices</title>
+        <statement>
+          <p>
+            (From Exercise 5.8 in <xref ref="ref-acheson"/>).
+            An inviscid fluid occupies the region <m>x,y\geq0</m>, and is bounded by
+            rigid boundaries at <m>x=0</m> and at <m>y=0</m>. Its motion results wholly
+            from the presence of a line vortex of strength <m>\Gamma</m>.
+            Show that the path taken by the vortex is
+            <me>
+              \frac1{x^2}+\frac1{y^2}=\mathrm{constant}.
+            </me>
+          </p>
+          <p>
+            At take-off, an aircraft generates strong vortices shed from the tips of
+            its wings, see <xref ref="fig-wingtip-vortices"/>.
+            These are observed to move downwards and outwards under each other's influence.
+          </p>
+          <p>
+            At a busy airport, a delay is required between the take off of one aircraft and the next
+            in order for the wing tip vortices generated from the take off of the first
+            aircraft to move away and break up.
+            The time required for this to happen depends on the size and speed of the aircraft,
+            as well as the angle of attack of the wings, but it is typically 2 or 3 minutes.
+            This need for a delay is the main reason that a given airport runway can only
+            take so many aeroplanes
+            per day, limiting the flight volume of the airport.
+          </p>
+          <p>
+            You will have heard recent debate about the controversy surrounding
+            the building of a third
+            runway at London Heathrow, the busiest airport in the UK.
+            Although not explained by the media coverage, you now understand the
+            crucial role played by the fluid dynamics that underlies these arguments!
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Suppose the vortex is at the point
+            <me>
+              z_1=x_1+\im y_1.
+            </me>
+            We use three image vortices at <m>x_1-\im y_1</m> and at <m>-x_1+\im y_1</m>,
+            both of strength <m>-\Gamma</m>, and at <m>-x_1-\im y_1</m> of strength
+            <m>\Gamma</m>.
+          </p>
+          <p>
+            Recall that the complex potential of a line vortex at <m>z=c</m>
+            of strength <m>\Gamma</m> is <m>-\im\Gamma\log(z-c)/(2\pi)</m> and
+            its velocity is given by the derivative of this map:
+            <m>u-\im v=-\im\Gamma/(2\pi(z-c))</m>.
+          </p>
+          <p>
+            The velocty of the vortex is given by the sum of the velocities due to
+            the other three vortices:
+            <me>
+              \dd{x_1}{t}-\im\dd{y_1}{t}
+              =\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(x_1-\im y_1))}
+              +\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1+\im y_1))}
+              -\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1-\im y_1))}
+              =\frac{\im\Gamma}{4\pi}\left(\frac1{x_1}+\frac1{\im y_1}-\frac1{x_1+\im y_1}\right).
+            </me>
+            Hence
+            <md>
+              <mrow>
+                \dd{x_1}{t}
+                =\frac{\Gamma}{4\pi}\left(\frac1{y_1}-\frac{y_1}{x_1^2+y_1^2}\right)
+                =\frac{\Gamma x_1^2}{4\pi y_1(x_1^2+y_1^2)},
+              </mrow>
+              <mrow>
+                \dd{y_1}{t}
+                =\frac{\Gamma}{4\pi}\left(-\frac1{x_1}+\frac{x_1}{x_1^2+y_1^2}\right)
+                =-\frac{\Gamma y_1^2}{4\pi x_1(x_1^2+y_1^2)},
+              </mrow>
+            </md>
+            and therefore
+            <me>
+              \dd{y_1}{x_1}=-\frac{y_1^3}{x_1^3},
+            </me>
+            which can be solved by separation of variables to give
+            <me>
+              \int\frac1{y_1^3}\de y_1=-\int\frac1{x_1^3}\de x_1
+              \quad\Rightarrow\quad
+              -\frac1{2y_1^2}=\frac1{2x_1^2}+c,
+            </me>
+            where <m>c</m> is constant, and this can be rearranged into the required form.
+          </p>
+        </solution>
+      </example>
+    </subsection>
   </section>
 
   <exercises xml:id="ws-vorticity">
