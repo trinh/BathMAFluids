@@ -335,7 +335,7 @@
     </subsection>
 
     <subsection xml:id="sec-vortex-lines">
-      <title>Vortex lines</title>
+      <title>Vortex lines and surfaces</title>
       <definition xml:id="def-vortex-lines">
         <title>Vortex lines</title>
         <statement>
@@ -564,7 +564,7 @@
         </p>
       </remark>
       <example>
-        <title>Example of spin up and spin down</title>
+        <title>Everyday examples of spin up and spin down</title>
         <sidebyside>
           <figure xml:id="fig-spinup">
             <caption>Spin up of vorticity as thunderclouds move overhead.</caption>
@@ -592,6 +592,87 @@
           and hence the vorticity smaller, which is spin down.
         </p>
       </example>
+      <example>
+        <title>Plug hole vortex</title>
+        <p>
+          We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’
+          at
+          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>.
+        </p>
+        <p>
+          The presenter commented that the angular momentum of a fluid parcel
+          remains constant.
+          Using angular momentum equals velocity times distance from axis, this implies
+          the angular velocity is proportial to the inverse of the radial distance.
+          This is precisely the 
+        </p>
+        <p>
+          In it, we saw a reference to `Crocco's theorem', which can be derived from
+          the derivation of Bernoulli's equation <xref ref="eqn-bernoulli-vorticity"/>:
+          <me>
+            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+          </me>
+          where
+          <me>
+            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi,
+          </me>
+          with
+          <me>
+            \bg = -\nabla \chi.
+          </me>
+        </p>
+        <p>
+           Noting that this flow is steady and has zero vorticity away from the plughole,
+          we must have <m>\bnabla B=0</m>, that is <m>B</m> is constant everywhere.
+          On the surface, we have <m>p=p_{\mathrm{atm}}</m> and hence
+          <m>|\bu|^2/2 + gz</m> is constant, where <m>z</m> is vertical height. Using
+          <xref ref="eq-u-line-vortex"/>, the speed is <m>\Gamma/(2\pi r)</m>. Hence,
+          the quantity
+          <me>
+            \frac{\Gamma^2}{8\pi^2r^2}+gz
+          </me>
+          is constant, that is
+          <me>
+            z=z_0-\frac{\Gamma^2}{8\pi^2gr^2},
+          </me>
+          thus explaining the shape of the surface that was seen.
+        </p>
+      </example>
+      <example>
+        <title>Tornado</title>
+        <p>
+          As commented in the `Vorticity, Part 2’
+          at
+          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>,
+          the pressure in the middle of a tornado is very low.
+          This can also be understood from Bernoulli's equation
+          <xref ref="eqn-bernoulli-vorticity"/>:
+          <me>
+            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+          </me>
+          with
+          <me>
+            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi.
+          </me>
+          In the steady case, and outside the vortex core, there is no
+          vorticity and hence <m>B</m> is constant, meaning that,
+          as we approach the vortex core, the pressure decreases as the
+          fluid speed increases. Furthermore, in the vortex core where the vorticity
+          is non-zero, the quantity
+          <m>\bomega \times \bu</m> points towards the axis. Thus <m>B</m>
+          decreases as the axis is approached, further decreasing the pressure.
+        </p>
+        <p>
+          This pressure reduction leads to condensation in the core of the tornado,
+          and this is visible, allowing us to see the tornado, and, to some extent,
+          visualise the intense air flows associated with it.
+        </p>
+        <p>
+          As commented, in propellors of boats,
+          this pressure reduction in the core of a vortex can cause
+          the water to boil!
+        </p>
+      </example>
     </subsection>
     <subsection xml:id="helmholtz-principle">
       <title>The Helmholtz principle</title>
@@ -611,7 +692,7 @@
             v = \frac{\Gamma x}{2\pi(x^2+y^2)}.
           </me>
           The vorticity associated with this flow <m>\bomega=\bzero</m> at all
-          points except the signularity at the origin.
+          points except the singularity at the origin.
           However, it was also notes in <xref ref="eq-line-vortex-circulation"/>
           that the circulation around any closed curve containing the
           origin is <m>\Gamma</m>.
@@ -620,17 +701,16 @@
           Thus, a line vortex of strength <m>\Gamma</m> is the limit of a
           vortex tube of strength <m>\Gamma</m> as its thickness goes to zero.
         </p>
-      </remark>
-      <remark>
-        <title>Real fluids</title>
         <p>
           We note that in any real fluid, the effects of viscosity would come into play
-          in the core of the vortex, disallowing the infinite concentration of vorticity
-          there. Despite this, we can use the concept of a vortex line to gain insight
+          in the core of the line vortex, disallowing an infinite concentration of vorticity
+          there. Despite this, we can use the concept of a line vortex to gain insight
           into a number of real-world problems.
         </p>
       </remark>
+      The following corollary is a particularly useful application of the Helmholtz vortex theorems.
       <corollary xml:id="cor-vortex-movement">
+        <title>The Helmholtz principle</title>
         <statement>
           <p>
             A useful corollary to the Helmholtz vortex theorems
@@ -742,6 +822,69 @@
           </p>
         </solution>
       </example>
+      <example>
+        <title>Application to airports</title>
+        <p>
+          At a busy airport, a delay is required between the take off of one aircraft and the next
+          in order for the wing tip vortices generated from the take off of the first
+          aircraft to move away and break up.
+          The time required for this to happen depends on the size and speed of the aircraft,
+          as well as the angle of attack of the wings, but it is typically 2 or 3 minutes.
+          This need for a delay is the main reason that a given airport runway can only
+          take so many aeroplanes
+          per day, limiting the flight volume of the airport.
+        </p>
+        <p>
+          You will have heard recent debate about the controversy surrounding
+          the building of a third
+          runway at London Heathrow, the busiest airport in the UK.
+          Although not explained by the media coverage, you now understand the
+          crucial role played by the fluid dynamics that underlies these arguments!
+        </p>
+      </example>
+    </subsection>
+  </section>
+  <section xml:id="sec-axisymmetric-flow">
+    <title>Axisymmetric flow</title>
+    <subsection xml:id="subsec-stokes-streamfunction">
+      <title>The Stokes streamfunction</title>
+      <p>
+        This is
+      </p>
+    </subsection>
+    <subsection xml:id="subsec-irrot-sphere">
+      <title>Irrotational flow past a sphere</title>
+      <p>
+        This is
+      </p>
+      <example>
+        <title>Smoke rings</title>
+        <p>
+          In <xref ref="ex-axisymmetric-flow"/> you are asked to prove a formulation of the
+          vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>
+          in the special case of axisymmetric flow. Note that, in this case,
+          the vorticity points purely in the azimuthal direction.
+        </p>
+        <p>
+          A smoke ring is an example of an axisymmetric flow with vorticity, see 6:44-7:53 of
+          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">Vorticity Part 2</url>.
+          We may think of the flow as being everywhere irrotational, except in the smoke ring,
+          with the smoke ring itself representing a vortex tube.
+        </p>
+        <p>
+          As a ring gets wider, conservation of mass implies the vortex tube gets thinner
+          inversely proportional to the distance from the axis,
+          and the second Helmholtz vortex theorem implies the vorticity must increase
+          in proportion to distance from the axis so that
+          the circulation remains constant. In <xref ref="ex-axisymmetric-flow"/>
+          you will show that
+          <me>
+            \DD{}{t}\left(\frac{\omega}{r}\)=0,
+          </me>
+          which expresses the same result: the vorticity <m>\omega</m> increases in
+          proportion to distance from axis <m>r</m>.
+        </p>
+      </example>
     </subsection>
   </section>
 
@@ -804,6 +947,29 @@
           Since this holds for any closed curve, it follows that <m>\omega=\bnabla\times\bu=0</m> for all time.
         </p>
       </answer>
+    </exercise>
+
+    <exercise xml:id="ex-axisymmetric-flow">
+      <title>Axisymmetric flow</title>
+      <statement>
+        <p>
+          Consider an axisymmetric flow. Show that the vorticity
+          is given by
+          <me>
+            \bomega=\omega\be_{\theta},
+          </me>
+          and that the vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/> reduces to
+          <me>
+            \DD{}{t}\left(\frac{\omega}{r}\right)=0.
+          </me>
+          Thus the vorticity changes in proportion to distance from the axis of symmetry.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          To do.
+        </p>
+      </solution>
     </exercise>
   </exercises>
 </chapter>

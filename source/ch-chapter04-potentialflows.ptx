@@ -546,9 +546,9 @@
 
    <p>
     Recall that the radial and angular velocities are given by <xref ref="eqn-streamfunction-polar"/>. Therefore, we see that the velocity vector is given by 
-    <me>
+    <men xml:id="eq-u-line-vortex">
       \bu = -\pd{\psi}{r} \be_{\theta} = \frac{\Gamma}{2\pi r} \be_{\theta},
-    </me>
+    </men>
     and thus this flow corresponds to entirely circular trajectories orbiting the origin, and with angular velocity increasing as <m>r \to 0</m>.
    </p>
 

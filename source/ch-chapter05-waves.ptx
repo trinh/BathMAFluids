@@ -28,7 +28,7 @@
 
   <section xml:id="sec-waterwaves-equations">
     <title>Governing equations of water waves</title>
-
+<introduction>
     <p> We shall consider the case of waves on the free surface of a two-dimensional potential fluid
       (hence inviscid, incompressible, and irrotational). The free surface bounds the water from above, and is assumed to be given by 
       <me> 
@@ -46,7 +46,7 @@
     <p>
       What makes water-wave problems unique (and challenging) is that not only do we need to solve for the potential (and hence velocities) within the fluid, as given by Laplace's equation above, but that we must do so in an <em>a priori</em> unknown domain, where the free-surface location <m>y = \eta(x, t)</m> must also be solved in parallel. Key considerations, then, must relate to the precise boundary conditions to impose.
     </p>
-
+  </introduction>
     <subsection xml:id="subsec-waterwaves-boundaryconditions">
       <title>Boundary conditions</title>
 
