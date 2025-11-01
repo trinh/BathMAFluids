@@ -320,13 +320,20 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<div class="toc-title-box"><a href="sec-vorticity-circulation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vorticity and circulation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-circulation" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vorticity-circulation-2" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vorticity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-circulation" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vortex-lines" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Vortex lines</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Helmholtz vortex theorems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-2" class="internal"><span class="codenumber">6.2.1</span> <span class="title">The theorems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#helmholtz-principle" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Helmholtz principle</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
@@ -674,10 +681,10 @@ r = \left(\frac{Q}{2\pi U}\right) \frac{C - \theta}{\sin\theta}.
 </div>
 <div class="para logical" id="example-streamfunction-linevortex-8">
 <div class="para">Choosing <span class="process-math">\(C\)</span> to be the circle of radius <span class="process-math">\(r = a\text{,}\)</span> we have <span class="process-math">\(\de{\bx} = a \be_{\theta} \de{\theta}\text{.}\)</span> Then the circulation is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\oint_C \bu \cdot \de{\bx} = \int_0^{2\pi} \frac{\Gamma}{2\pi a} \be_{\theta} \cdot \be_{\theta} a \de\theta = \Gamma.
-\end{equation*}
+<div class="displaymath process-math" id="eq-line-vortex-circulation">
+\begin{equation}
+\oint_C \bu \cdot \de{\bx} = \int_0^{2\pi} \frac{\Gamma}{2\pi a} \be_{\theta} \cdot \be_{\theta} a \de\theta = \Gamma.\tag{4.2.9}
+\end{equation}
 </div>
 <div class="para">So indeed this gives us an intuitive understanding of <span class="process-math">\(\Gamma\text{.}\)</span> Notice that <span class="process-math">\(\Gamma \gt 0\)</span> corresponds to flow in the anticlockwise sense, and <span class="process-math">\(\Gamma \lt 0\)</span> corresponds to flow in the clockwise sense.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-streamfunction-linevortex-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

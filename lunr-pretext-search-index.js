@@ -1486,27 +1486,27 @@ var ptx_lunr_docs = [
   "body": " Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation   "
 },
 {
-  "id": "sec-helmholtz",
+  "id": "sec-vorticity-circulation",
   "level": "1",
-  "url": "sec-helmholtz.html",
+  "url": "sec-vorticity-circulation.html",
   "type": "Section",
   "number": "6.1",
-  "title": "The Helmholtz principle",
-  "body": " The Helmholtz principle   As mentioned in Chapter , the vorticity obeys the vorticity equation : In two-dimensional irrotational flow, the right-hand side is zero, so the vorticity of each fluid particle is constant in time. This is a special case of the more general result known as the Helmholtz principle , which states that in an inviscid fluid, the vorticity of each fluid particle is conserved.    The circulation in a flow   Circulation   We define the circulation around a closed loop in the flow as      Kelvin's circulation theorem  Assume that a fluid is inviscid and incompressible and that a conservative body force (e.g. gravity) acts on it. If a loop is fixed in the fluid (and thus moves around in the Lagrangian sense as the fluid moves) then the circulation around is constant in time.    Proof of Kelvin's circulation theorem  A proof of this theorem is given in Exercise .    Importance of Kelvin's circulation theorem  This theorem explains why the circulation is an important physical concept. In particular, if a flow is initally irrotational, then the circulation around any loop is zero at . The theorem then implies that the circulation around any loop is zero for all time. Therefore the flow at any time is irrotational.    Relationship between circulation and vorticity  Using Stokes' theorem where is any surface spanning the loop . Thus the circulation equals the flux of vorticity through the spanning surface.     Vortex lines and the Helmholtz vortex theorems   Vortex lines   Vortex lines are curves that point in the same direction as the vorticity vector. They satisfy the differential equation where is fixed. Just as the streamlines give a picture of the flow field, so the vortex lines give a picture of the vorticity field. Note that if the vorticity is zero at some point, the vortex lines are not defined there.     Analogy with streamlines  The vortex lines are to the vorticity of the fluid as the streamlines are to its velocity.    Vortex lines in a two-dimensional flow  In a two-dimensional flow, the vorticity is unidirectional, so the vortex lines are straight lines parallel to the vorticity vector. For example, for a flow in the -plane, the vorticity points in the -direction, and the vortex lines are straight lines parallel to the -axis.    The Helmholtz vortex theorems  These state   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.       Proof of the Helmholtz vortex theorems  We define a vortex surface as a surface such that is tangent to the surface at all points on the surface. Thus vortex lines lie within vortex surfaces. In particular, for any given vortex line, it is possible to choose two different vortex surfaces such that the vortex line is the intersection of the two vortex surfaces.  For one of the vortex surfaces, we choose a closed curve lying within the vortex surface. The circulation around  where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . This means that , and by must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.  To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.  To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By , remains independent of .    Thus if a vortex line becomes stretched then spin up occurs. If we consider a thin vortex tube surrounding the vortex line, then, as the vortex line is stretched, the tube becomes thinner and longer. However, must remain constant, and therefore, since the area of the cross-section is decreasing, must get bigger. Conversely, if a vortex line shortens we get spin down and gets smaller.    Example of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, which could result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.    "
+  "title": "Vorticity and circulation",
+  "body": " Vorticity and circulation   Vorticity  The fluid vorticity was introduced in . Many people struggle to understand the concept of vorticity when they first encounter it, so you should not worry if it takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’ by Ascher Shapiro available at this website gives a clear and comprehensive introduction to the phenomenon. To recap:   Vorticity, , is a vector field and it is a function of space and time (like the fluid velocity).    At each point in the fluid, points in the direction of the axis of the local fluid rotation.    The magnitude of is twice the local angular velocity.    In the special case of a two-dimensional flow (that is ), the vorticity is unidirectional, pointing in the -direction with magnitude .      As mentioned in , the vorticity obeys the vorticity equation : In two-dimensional irrotational flow, the right-hand side is zero, so the vorticity of each fluid particle is constant in time. This is a special case of the more general result known as the Helmholtz principle , which states that in an inviscid fluid, the vorticity of each fluid particle is conserved.    The circulation in a flow   The circulation   We define the circulation around a closed loop in the flow as      Kelvin's circulation theorem  Assume that a fluid is inviscid and incompressible and that a conservative body force (e.g. gravity) acts on it. If a loop is fixed in the fluid (and thus moves around in the Lagrangian sense as the fluid moves) then the circulation around is constant in time.    Proof of Kelvin's circulation theorem  A proof of this theorem is given in .    Importance of Kelvin's circulation theorem  This theorem explains why the circulation is an important physical concept. In particular, if a flow is initally irrotational, then the circulation around any loop is zero at . The theorem then implies that the circulation around any loop is zero for all time. Therefore the flow at any time is irrotational.    Relationship between circulation and vorticity  Using Stokes' theorem where is any surface spanning the loop . Thus the circulation equals the flux of vorticity through the spanning surface.    Independence of spanning surface  Note that, for a given closed curve , in the argument given in we could choose any surface spanning , and thus the circulation equals the vorticity flux through any spanning surface.     Vortex lines   Vortex lines   Vortex lines are curves that point in the same direction as the vorticity vector. They satisfy the differential equation where is fixed. Just as the streamlines give a picture of the flow field, so the vortex lines give a picture of the vorticity field. Note that if the vorticity is zero at some point, the vortex lines are not defined there.     Analogy with streamlines  The vortex lines are to the vorticity of the fluid as the streamlines are to its velocity.    Vortex lines in a two-dimensional flow  In a two-dimensional flow, the vorticity is unidirectional, so the vortex lines are straight lines parallel to the vorticity vector. For example, for a flow in the -plane, the vorticity points in the -direction, and the vortex lines are straight lines parallel to the -axis.    Vortex surface   A vortex surface is a surface such that is tangent to the surface at all points on the surface.     Notes on vortex surfaces    Vortex lines cannot pass through a vortex surface.    In particular, for any given vortex line, it is possible to choose two different vortex surfaces such that the vortex line is the intersection of the two vortex surfaces.      "
 },
 {
   "id": "def-circulation",
   "level": "2",
-  "url": "sec-helmholtz.html#def-circulation",
+  "url": "sec-vorticity-circulation.html#def-circulation",
   "type": "Definition",
   "number": "6.1.1",
-  "title": "Circulation.",
-  "body": " Circulation   We define the circulation around a closed loop in the flow as    "
+  "title": "The circulation.",
+  "body": " The circulation   We define the circulation around a closed loop in the flow as    "
 },
 {
   "id": "thm-kelvin-circulation-theorem",
   "level": "2",
-  "url": "sec-helmholtz.html#thm-kelvin-circulation-theorem",
+  "url": "sec-vorticity-circulation.html#thm-kelvin-circulation-theorem",
   "type": "Theorem",
   "number": "6.1.2",
   "title": "Kelvin’s circulation theorem.",
@@ -1515,101 +1515,191 @@ var ptx_lunr_docs = [
 {
   "id": "sec-circulation-4",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-circulation-4",
+  "url": "sec-vorticity-circulation.html#sec-circulation-4",
   "type": "Proof",
-  "number": "6.1.1.1",
+  "number": "6.1.2.1",
   "title": "Proof of Kelvin’s circulation theorem.",
-  "body": " Proof of Kelvin's circulation theorem  A proof of this theorem is given in Exercise .  "
+  "body": " Proof of Kelvin's circulation theorem  A proof of this theorem is given in .  "
 },
 {
   "id": "sec-circulation-5",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-circulation-5",
+  "url": "sec-vorticity-circulation.html#sec-circulation-5",
   "type": "Remark",
   "number": "6.1.3",
   "title": "Importance of Kelvin’s circulation theorem.",
   "body": " Importance of Kelvin's circulation theorem  This theorem explains why the circulation is an important physical concept. In particular, if a flow is initally irrotational, then the circulation around any loop is zero at . The theorem then implies that the circulation around any loop is zero for all time. Therefore the flow at any time is irrotational.  "
 },
 {
-  "id": "sec-circulation-6",
+  "id": "rem-circulation-vorticity",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-circulation-6",
+  "url": "sec-vorticity-circulation.html#rem-circulation-vorticity",
   "type": "Remark",
   "number": "6.1.4",
   "title": "Relationship between circulation and vorticity.",
   "body": " Relationship between circulation and vorticity  Using Stokes' theorem where is any surface spanning the loop . Thus the circulation equals the flux of vorticity through the spanning surface.  "
 },
 {
+  "id": "sec-circulation-7",
+  "level": "2",
+  "url": "sec-vorticity-circulation.html#sec-circulation-7",
+  "type": "Remark",
+  "number": "6.1.5",
+  "title": "Independence of spanning surface.",
+  "body": " Independence of spanning surface  Note that, for a given closed curve , in the argument given in we could choose any surface spanning , and thus the circulation equals the vorticity flux through any spanning surface.  "
+},
+{
   "id": "def-vortex-lines",
   "level": "2",
-  "url": "sec-helmholtz.html#def-vortex-lines",
+  "url": "sec-vorticity-circulation.html#def-vortex-lines",
   "type": "Definition",
-  "number": "6.1.5",
+  "number": "6.1.6",
   "title": "Vortex lines.",
   "body": " Vortex lines   Vortex lines are curves that point in the same direction as the vorticity vector. They satisfy the differential equation where is fixed. Just as the streamlines give a picture of the flow field, so the vortex lines give a picture of the vorticity field. Note that if the vorticity is zero at some point, the vortex lines are not defined there.   "
 },
 {
-  "id": "sec-helmholtz-4-3",
+  "id": "sec-vortex-lines-3",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-4-3",
+  "url": "sec-vorticity-circulation.html#sec-vortex-lines-3",
   "type": "Remark",
-  "number": "6.1.6",
+  "number": "6.1.7",
   "title": "Analogy with streamlines.",
   "body": " Analogy with streamlines  The vortex lines are to the vorticity of the fluid as the streamlines are to its velocity.  "
 },
 {
-  "id": "sec-helmholtz-4-4",
+  "id": "sec-vortex-lines-4",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-4-4",
+  "url": "sec-vorticity-circulation.html#sec-vortex-lines-4",
   "type": "Remark",
-  "number": "6.1.7",
+  "number": "6.1.8",
   "title": "Vortex lines in a two-dimensional flow.",
   "body": " Vortex lines in a two-dimensional flow  In a two-dimensional flow, the vorticity is unidirectional, so the vortex lines are straight lines parallel to the vorticity vector. For example, for a flow in the -plane, the vorticity points in the -direction, and the vortex lines are straight lines parallel to the -axis.  "
+},
+{
+  "id": "def-vortex-surface",
+  "level": "2",
+  "url": "sec-vorticity-circulation.html#def-vortex-surface",
+  "type": "Definition",
+  "number": "6.1.9",
+  "title": "Vortex surface.",
+  "body": " Vortex surface   A vortex surface is a surface such that is tangent to the surface at all points on the surface.   "
+},
+{
+  "id": "sec-vortex-lines-6",
+  "level": "2",
+  "url": "sec-vorticity-circulation.html#sec-vortex-lines-6",
+  "type": "Remark",
+  "number": "6.1.10",
+  "title": "Notes on vortex surfaces.",
+  "body": " Notes on vortex surfaces    Vortex lines cannot pass through a vortex surface.    In particular, for any given vortex line, it is possible to choose two different vortex surfaces such that the vortex line is the intersection of the two vortex surfaces.    "
+},
+{
+  "id": "sec-helmholtz",
+  "level": "1",
+  "url": "sec-helmholtz.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "The Helmholtz vortex theorems",
+  "body": " The Helmholtz vortex theorems   The theorems   The Helmholtz vortex theorems  These state:   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.       Proof of the Helmholtz vortex theorems   Proof of the first vortex theorem. For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.  Choose a closed curve lying within one the vortex surfaces. The circulation around is where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . Thus , and by Kelvin's circulation theorem , must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.   Proof of the second vortex theorem. Proof that is the same for all cross-sections. To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.   Proof of the second vortex theorem (continued). Proof that is independent of time. To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By Kelvin's circulation theorem , remains independent of .    The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by , and this must remain constant, and therefore, since the area of the cross-section is decreasing, the magnitude of vorticiy must increase in the tube. This is spin up . Conversely, if a vortex tube becomes shorter, we get the opposite effect of spin down and gets smaller.  A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.    Example of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.     The Helmholtz principle   Recap of line vortex  The Helmholtz vertex theorems help us to understand the concept of a line vortex in irrotational flow that was introduced in . Recall that this is associated with the complex potential (see ), and has corresponding velocity components The vorticity associated with this flow at all points except the signularity at the origin. However, it was also notes in that the circulation around any closed curve containing the origin is .  Thus, a line vortex of strength is the limit of a vortex tube of strength as its thickness goes to zero.    Real fluids  We note that in any real fluid, the effects of viscosity would come into play in the core of the vortex, disallowing the infinite concentration of vorticity there. Despite this, we can use the concept of a vortex line to gain insight into a number of real-world problems.     A useful corollary to the Helmholtz vortex theorems is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.'     A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem , these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.    Application of the Helmholtz principle  In an otherwise irrotational flow, we can use the Helmholtz principle to find the motion of a line vortex. In particular, we can make use of the following techniques:    the method of images     and conformal mapping     to find the flow evolution.    Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.     Application to airports  At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.  You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!    "
 },
 {
   "id": "thm-helmholtz-vortex-theorems",
   "level": "2",
   "url": "sec-helmholtz.html#thm-helmholtz-vortex-theorems",
   "type": "Theorem",
-  "number": "6.1.8",
+  "number": "6.2.1",
   "title": "The Helmholtz vortex theorems.",
-  "body": " The Helmholtz vortex theorems  These state   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.     "
+  "body": " The Helmholtz vortex theorems  These state:   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.     "
 },
 {
-  "id": "sec-helmholtz-4-6",
+  "id": "sec-helmholtz-2-3",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-4-6",
+  "url": "sec-helmholtz.html#sec-helmholtz-2-3",
   "type": "Proof",
-  "number": "6.1.2.1",
+  "number": "6.2.1.1",
   "title": "Proof of the Helmholtz vortex theorems.",
-  "body": " Proof of the Helmholtz vortex theorems  We define a vortex surface as a surface such that is tangent to the surface at all points on the surface. Thus vortex lines lie within vortex surfaces. In particular, for any given vortex line, it is possible to choose two different vortex surfaces such that the vortex line is the intersection of the two vortex surfaces.  For one of the vortex surfaces, we choose a closed curve lying within the vortex surface. The circulation around  where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . This means that , and by must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.  To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.  To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By , remains independent of .  "
+  "body": " Proof of the Helmholtz vortex theorems   Proof of the first vortex theorem. For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.  Choose a closed curve lying within one the vortex surfaces. The circulation around is where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . Thus , and by Kelvin's circulation theorem , must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.   Proof of the second vortex theorem. Proof that is the same for all cross-sections. To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.   Proof of the second vortex theorem (continued). Proof that is independent of time. To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By Kelvin's circulation theorem , remains independent of .  "
 },
 {
-  "id": "sec-helmholtz-4-7",
+  "id": "sec-helmholtz-2-4",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-4-7",
+  "url": "sec-helmholtz.html#sec-helmholtz-2-4",
   "type": "Remark",
-  "number": "6.1.10",
+  "number": "6.2.3",
   "title": "",
-  "body": " Thus if a vortex line becomes stretched then spin up occurs. If we consider a thin vortex tube surrounding the vortex line, then, as the vortex line is stretched, the tube becomes thinner and longer. However, must remain constant, and therefore, since the area of the cross-section is decreasing, must get bigger. Conversely, if a vortex line shortens we get spin down and gets smaller.  "
+  "body": " The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by , and this must remain constant, and therefore, since the area of the cross-section is decreasing, the magnitude of vorticiy must increase in the tube. This is spin up . Conversely, if a vortex tube becomes shorter, we get the opposite effect of spin down and gets smaller.  A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.  "
 },
 {
-  "id": "sec-helmholtz-4-8",
+  "id": "sec-helmholtz-2-5",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-4-8",
+  "url": "sec-helmholtz.html#sec-helmholtz-2-5",
   "type": "Example",
-  "number": "6.1.11",
+  "number": "6.2.4",
   "title": "Example of spin up and spin down.",
-  "body": " Example of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, which could result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.  "
+  "body": " Example of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.  "
 },
 {
-  "id": "sec-helmholtz-examples",
-  "level": "1",
-  "url": "sec-helmholtz-examples.html",
-  "type": "Section",
-  "number": "6.2",
-  "title": "Examples illustrating the use of the Helmholtz principle",
-  "body": " Examples illustrating the use of the Helmholtz principle  Here are some examples.  "
+  "id": "helmholtz-principle-2",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-2",
+  "type": "Remark",
+  "number": "6.2.7",
+  "title": "Recap of line vortex.",
+  "body": " Recap of line vortex  The Helmholtz vertex theorems help us to understand the concept of a line vortex in irrotational flow that was introduced in . Recall that this is associated with the complex potential (see ), and has corresponding velocity components The vorticity associated with this flow at all points except the signularity at the origin. However, it was also notes in that the circulation around any closed curve containing the origin is .  Thus, a line vortex of strength is the limit of a vortex tube of strength as its thickness goes to zero.  "
+},
+{
+  "id": "helmholtz-principle-3",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-3",
+  "type": "Remark",
+  "number": "6.2.8",
+  "title": "Real fluids.",
+  "body": " Real fluids  We note that in any real fluid, the effects of viscosity would come into play in the core of the vortex, disallowing the infinite concentration of vorticity there. Despite this, we can use the concept of a vortex line to gain insight into a number of real-world problems.  "
+},
+{
+  "id": "cor-vortex-movement",
+  "level": "2",
+  "url": "sec-helmholtz.html#cor-vortex-movement",
+  "type": "Corollary",
+  "number": "6.2.9",
+  "title": "",
+  "body": "  A useful corollary to the Helmholtz vortex theorems is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.'   "
+},
+{
+  "id": "helmholtz-principle-5",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-5",
+  "type": "Proof",
+  "number": "6.2.2.1",
+  "title": "",
+  "body": " A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem , these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.  "
+},
+{
+  "id": "helmholtz-principle-6",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-6",
+  "type": "Remark",
+  "number": "6.2.10",
+  "title": "Application of the Helmholtz principle.",
+  "body": " Application of the Helmholtz principle  In an otherwise irrotational flow, we can use the Helmholtz principle to find the motion of a line vortex. In particular, we can make use of the following techniques:    the method of images     and conformal mapping     to find the flow evolution.  "
+},
+{
+  "id": "helmholtz-principle-7",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-7",
+  "type": "Example",
+  "number": "6.2.11",
+  "title": "Example: Wing tip vortices.",
+  "body": " Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.   "
+},
+{
+  "id": "helmholtz-principle-8",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-8",
+  "type": "Remark",
+  "number": "6.2.12",
+  "title": "Application to airports.",
+  "body": " Application to airports  At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.  You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!  "
 },
 {
   "id": "ws-vorticity",
