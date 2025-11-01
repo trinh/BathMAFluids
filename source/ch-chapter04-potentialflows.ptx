@@ -562,9 +562,9 @@
 
    <p>
     Choosing <m>C</m> to be the circle of radius <m>r = a</m>, we have <m>\de{\bx} = a \be_{\theta} \de{\theta}</m>. Then the circulation is given by
-    <me>
+    <men xml:id="eq-line-vortex-circulation">
       \oint_C \bu \cdot \de{\bx} = \int_0^{2\pi} \frac{\Gamma}{2\pi a} \be_{\theta} \cdot \be_{\theta} a \de\theta = \Gamma.
-    </me>
+    </men>
     So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
    </p>
 
@@ -900,9 +900,9 @@
 
       <p>
         We can verify that the complex potential for a line vortex is given by
-       <me>
+       <men xml:id="eq-line-vortex-complex-potential">
         f(z) = -\frac{\im \Gamma}{2\pi} \log z.
-       </me>
+       </men>
        This can be compared to  <xref ref="example-streamfunction-linevortex"/>.
       </p>
 
