@@ -394,7 +394,101 @@
       <proof>
         <title>Proof of the Helmholtz vortex theorems</title>
         <p>
-          To do.          
+          We define a vortex surface as a surface such that <m>\bomega</m> is tangent
+          to the surface at all points on the surface. Thus vortex lines lie within
+          vortex surfaces. In particular, for any given vortex line, it is possible to
+          choose two different vortex surfaces such that the vortex line is the
+          intersection of the two vortex surfaces.
+        </p>
+        <p>
+          For one of the vortex surfaces, we choose a closed curve <m>C</m>
+          lying within the vortex surface. The circulation around <m>C</m>
+          <me>
+            \Gamma=\oint_C\bu\cdot\de\bx=\iint_S\bomega\cdot\bn\,\de S.
+          </me>
+          where the final equality is by Stokes' theorem. Since the curve is within the
+          vortex surface, the vorticity is parallel to the surface, and hence
+          <m>\bomega\cdot\bn=0</m>. This means that <m>\Gamma=0</m>, and by
+          <xref ref="thm-kelvin-circulation-theorem"/> must remain at zero for all times.
+        </p>
+        <p>
+          Thus at time <m>t</m>, the evolved surface has circulation zero for all closed
+          curves, and therefore by Stokes' theorem, the integral of <m>\bomega\cdot\bn</m>
+          over any sub-surface must be zero. Hence <m>\bomega\cdot\bn=0</m> at all points
+          on the surface, meaning that the vorticity is everywhere parallel to the evolved
+          surface. This means that the evolved surface must be a vortex surface.
+        </p>
+        <p>
+          Recall that any vortex line can be defined by the intersection of two vortex
+          surfaces. Let the two surfaces evolve and the evolution of the vortex line
+          remains as the intersection of the two evolved vortex surfaces. As proven
+          already, the vorticity is everywhere parallel to the two evolved vortex surfaces
+          and thus it is parallel to the evolved vortex line. This means that it remains
+          as a vortex line.
+        </p>
+        <p>
+          This completes the proof of the first vortex theorem:
+          vortex lines evolve with the fluid.
+          We sometimes say that the vortex lines are `frozen' in the fluid,
+          meaning that the evolve in the same way as a dye `frozen' into the fluid would.
+        </p>
+        <p>
+          To prove the second vortex theorem, choose two different cross-sections of the
+          vortex tube, <m>S_1</m> and <m>S_2</m> say, and consider the section <m>V</m>
+          of the vortex tube lying between <m>S_1</m> and <m>S_2</m>. We integrate over
+          the surface of <m>V</m>:
+          <me>
+            \iint_{\partial V}\bomega\cdot\bn\de S
+            =\iint_{S_2}\bomega\cdot\bn\de S
+            -\iint_{S_1}\bomega\cdot\bn\de S
+            +\iint_{\mathrm{outside}}\bomega\cdot\bn\de S,
+          </me>
+          where `outside' refers to the outer surface of the vortex tube between
+          <m>S_1</m> and <m>S_2</m>. Since vortex lines are paralled to this surface,
+          we have <m>\bomega\cdot\bn=0</m> there, and so
+          <me>
+            \iint_{\partial V}\bomega\cdot\bn\de S
+            =\iint_{S_2}\bomega\cdot\bn\de S
+            -\iint_{S_1}\bomega\cdot\bn\de S.
+          </me>
+        </p>
+        <p>
+          Now, by the divergence theorem,
+          <me>
+            \iint_{\partial V}\bomega\cdot\bn\de S
+            =\iiint_V\nabla\cdot\omega \de V,
+          </me>
+          but this equals zero, since <m>\nabla\cdot\omega=0</m>
+          (divergence of a curl is zero).
+        </p>
+        <p>
+          Putting this together,
+          <me>
+            \iint_{\partial V}\bomega\cdot\bn\de S
+            =\iint_{S_2}\bomega\cdot\bn\de S
+            -\iint_{S_1}\bomega\cdot\bn\de S
+            =0.
+          </me>
+          and this was true for any choice of <m>S_1</m> and <m>S_2</m>.
+          Hence, <m>\Gamma</m> is the
+          same for all cross-sections of a vortex tube.
+        </p>
+        <p>
+          To prove that <m>\Gamma</m> is independent of time, we note that, since the
+          vortex lines move with the fluid, the vortex tube also moves with the fluid,
+          being composed of vortex lines, and the same vortex lines lie on the surface
+          and are enclosed within the vortex tube for all time.
+        </p>
+        <p>
+          Moreover,
+          <me>
+            \Gamma=\iint\omega\cdot\bn\de S
+            =\oint\bu\cdot\de\bx
+          </me>
+          by Stokes' theorem, which is the circulation around the boundary of <m>S</m>.
+          As the tube evolves, the material surface <m>S</m> moves with the vortex tube.
+          By <xref ref="thm-kelvin-circulation-theorem"/>, <m>\Gamma</m> remains
+          independent of <m>t</m>.
         </p>
       </proof>
       <remark>
