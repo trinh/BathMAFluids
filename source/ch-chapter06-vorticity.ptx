@@ -41,7 +41,8 @@
 
   <section xml:id="sec-vorticity-circulation">
     <title>Vorticity and circulation</title>
-    <introduction>
+    <subsection>
+      <title>Vorticity</title>
       <p>
         The fluid vorticity <m>\bomega=\nabla\times\bu</m> was introduced in
         <xref ref="def-vorticity"/>. Many people struggle to understand the
@@ -265,7 +266,7 @@
         the <em>Helmholtz principle</em>, which states that in an inviscid fluid, the vorticity
         of each fluid particle is conserved.
       </p>
-    </introduction>
+    </subsection>
 
     <subsection xml:id="sec-circulation">
       <title>The circulation in a flow</title>
@@ -334,7 +335,7 @@
     </subsection>
 
     <subsection xml:id="sec-vortex-lines">
-      <title>Vortex lines and the Helmholtz vortex theorems</title>
+      <title>Vortex lines</title>
       <definition xml:id="def-vortex-lines">
         <title>Vortex lines</title>
         <statement>
@@ -379,7 +380,7 @@
       </definition>
       <remark>
         <title>Notes on vortex surfaces</title>
-        <uL>
+        <ul>
           <li>
             <p>
               Vortex lines cannot pass through a vortex surface.
@@ -399,7 +400,8 @@
 
   <section xml:id="sec-helmholtz">
     <title>The Helmholtz vortex theorems</title>
-    <introduction>
+    <subsection>
+      <title>The theorems</title>
       <theorem xml:id="thm-helmholtz-vortex-theorems">
         <title>The Helmholtz vortex theorems</title>
         <p>
@@ -452,7 +454,7 @@
           </me>
           where the final equality is by Stokes' theorem. Since the curve is within the
           vortex surface, the vorticity is parallel to the surface, and hence
-          <m>\bomega\cdot\bn=0</m>. Thus <m>\Gamma=0</m>, and by
+          <m>\bomega\cdot\bn=0</m>. Thus <m>\Gamma=0</m>, and by Kelvin's circulation theorem
           <xref ref="thm-kelvin-circulation-theorem"/>, <m>\Gamma</m>
           must remain at zero for all times.
         </p>
@@ -536,7 +538,7 @@
           </me>
           by Stokes' theorem, which is the circulation around the boundary of <m>S</m>.
           As the tube evolves, the material surface <m>S</m> moves with the vortex tube.
-          By <xref ref="thm-kelvin-circulation-theorem"/>, <m>\Gamma</m> remains
+          By Kelvin's circulation theorem <xref ref="thm-kelvin-circulation-theorem"/>, <m>\Gamma</m> remains
           independent of <m>t</m>.
         </p>
       </proof>
@@ -603,14 +605,14 @@
           <me>
             f(z) = -\frac{\im \Gamma}{2\pi} \log z.
           </me>
-          (see <xref ref="line-vortex-complex-potential"/>), and has corresponding velocity components
+          (see <xref ref="eq-line-vortex-complex-potential"/>), and has corresponding velocity components
           <me>
             u = -\frac{\Gamma y}{2\pi(x^2+y^2)},\quad
             v = \frac{\Gamma x}{2\pi(x^2+y^2)}.
           </me>
           The vorticity associated with this flow <m>\bomega=\bzero</m> at all
           points except the signularity at the origin.
-          However, it was also notes in <xref ref="line-vortex-circulation"/>
+          However, it was also notes in <xref ref="eq-line-vortex-circulation"/>
           that the circulation around any closed curve containing the
           origin is <m>\Gamma</m>.
         </p>
@@ -686,23 +688,6 @@
             its wings, see <xref ref="fig-wingtip-vortices"/>.
             These are observed to move downwards and outwards under each other's influence.
           </p>
-          <p>
-            At a busy airport, a delay is required between the take off of one aircraft and the next
-            in order for the wing tip vortices generated from the take off of the first
-            aircraft to move away and break up.
-            The time required for this to happen depends on the size and speed of the aircraft,
-            as well as the angle of attack of the wings, but it is typically 2 or 3 minutes.
-            This need for a delay is the main reason that a given airport runway can only
-            take so many aeroplanes
-            per day, limiting the flight volume of the airport.
-          </p>
-          <p>
-            You will have heard recent debate about the controversy surrounding
-            the building of a third
-            runway at London Heathrow, the busiest airport in the UK.
-            Although not explained by the media coverage, you now understand the
-            crucial role played by the fluid dynamics that underlies these arguments!
-          </p>
         </statement>
         <solution>
           <p>
@@ -756,82 +741,6 @@
             where <m>c</m> is constant, and this can be rearranged into the required form.
           </p>
         </solution>
-      </example>
-      <example>
-        <title>Plug hole vortex</title>
-        <p>
-          We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’
-          at
-          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>.
-        </p>
-        <p>
-          The presenter commented that the angular momentum of a fluid parcel
-          remains constant.
-          Using angular momentum equals velocity times distance from axis, this implies
-          the angular velocity is proportial to the inverse of the radial distance.
-          This is precisely the 
-        </p>
-        <p>
-          In it, we saw a reference to `Crocco's theorem', which can be derived from
-          the derivation of Bernoulli's equation <xref ref="eqn-bernoulli-vorticity"/>:
-          <me>
-            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
-          </me>
-          where
-          <me>
-            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi,
-          </me>
-          with
-          <me>
-            \bg = -\nabla \chi.
-          </me>
-        </p>
-        <p>
-          Noting that this flow is steady and has zero vorticity away from the plughole,
-          we must have <m>\bnabla B=0</m>, that is <m>B</m> is constant everywhere.
-          On the surface, we have <m>p=p_{\mathrm{atm}}</m> and hence
-          <m>|\bu|^2/2 + gz</m> is constant, where <m>z</m> is vertical height. Using
-          <xref ref="eq-u-line-vortex"/>, the speed is <m>\Gamma/(2\pi r)</m>. Hence,
-          the quantity
-          <me>
-            \frac{\Gamma^2}{8\pi^2r^2}+gz
-          </me>
-          is constant, that is
-          <me>
-            z=z_0-\frac{\Gamma^2}{8\pi^2gr^2},
-          </me>
-          thus explaining the shape of the surface that was seen.
-        </p>
-      </example>
-      <example>
-        <title>Tornado</title>
-        <p>
-          As commented in the `Vorticity, Part 2’
-          at
-          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>,
-          the pressure in the middle of a tornado is very low.
-          This can also be understood from Bernoulli's equation
-          <xref ref="eqn-bernoulli-vorticity"/>:
-          <me>
-            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
-          </me>
-          with
-          <me>
-            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi.
-          </me>
-          In the steady case, and outside the vortex core, there is no
-          vorticity and hence <m>B</m> is constant, meaning that,
-          as we approach the vortex core, the pressure decreases as the
-          fluid speed increases. Furthermore, in the vortex core where the vorticity
-          is non-zero, the quantity
-          <m>\bomega \times \bu</m> points towards the axis. Thus <m>B</m>
-          decreases as the axis is approached, further decreasing the pressure.
-        </p>
-        <p>
-          As commented, in propellors of boats,
-          this pressure reduction in the core of a vortex can cause
-          the water to boil!
-        </p>
       </example>
     </subsection>
   </section>
