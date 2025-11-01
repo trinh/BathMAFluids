@@ -394,6 +394,7 @@
       <proof>
         <title>Proof of the Helmholtz vortex theorems</title>
         <p>
+          <em>Proof of the first vortex theorem.</em>
           We define a vortex surface as a surface such that <m>\bomega</m> is tangent
           to the surface at all points on the surface. Thus vortex lines lie within
           vortex surfaces. In particular, for any given vortex line, it is possible to
@@ -433,6 +434,8 @@
           meaning that the evolve in the same way as a dye `frozen' into the fluid would.
         </p>
         <p>
+          <em>Proof of the second vortex theorem.
+          Proof that <m>\Gamma</m> is the same for all cross-sections.</em>
           To prove the second vortex theorem, choose two different cross-sections of the
           vortex tube, <m>S_1</m> and <m>S_2</m> say, and consider the section <m>V</m>
           of the vortex tube lying between <m>S_1</m> and <m>S_2</m>. We integrate over
@@ -474,6 +477,8 @@
           same for all cross-sections of a vortex tube.
         </p>
         <p>
+          <em>Proof of the second vortex theorem (continued).
+          Proof that <m>\Gamma</m> is independent of time.</em>
           To prove that <m>\Gamma</m> is independent of time, we note that, since the
           vortex lines move with the fluid, the vortex tube also moves with the fluid,
           being composed of vortex lines, and the same vortex lines lie on the surface
