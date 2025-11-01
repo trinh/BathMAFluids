@@ -46,7 +46,7 @@
         The fluid vorticity <m>\bomega=\nabla\times\bu</m> was introduced in
         <xref ref="def-vorticity"/>. Many people struggle to understand the
         concept of vorticity when they first encounter it, so you should not worry if it
-        takes a while to sink in. The excellent (although dated) movie `Vorticity, Part 1’
+        takes a while to sink in. The excellent movie `Vorticity, Part 1’
         by Ascher Shapiro available at
         <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>
         gives a clear and comprehensive introduction to the phenomenon. To recap:
@@ -269,6 +269,10 @@
 
     <subsection xml:id="sec-circulation">
       <title>The circulation in a flow</title>
+      <p>
+        We introduce a definition that was briefly covered in the line vortex example
+        <xref ref="example-streamfunction-linevortex"/>.
+      </p>
       <definition xml:id="def-circulation">
         <title>The circulation</title>
         <statement>
@@ -752,6 +756,82 @@
             where <m>c</m> is constant, and this can be rearranged into the required form.
           </p>
         </solution>
+      </example>
+      <example>
+        <title>Plug hole vortex</title>
+        <p>
+          We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’
+          at
+          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>.
+        </p>
+        <p>
+          The presenter commented that the angular momentum of a fluid parcel
+          remains constant.
+          Using angular momentum equals velocity times distance from axis, this implies
+          the angular velocity is proportial to the inverse of the radial distance.
+          This is precisely the 
+        </p>
+        <p>
+          In it, we saw a reference to `Crocco's theorem', which can be derived from
+          the derivation of Bernoulli's equation <xref ref="eqn-bernoulli-vorticity"/>:
+          <me>
+            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+          </me>
+          where
+          <me>
+            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi,
+          </me>
+          with
+          <me>
+            \bg = -\nabla \chi.
+          </me>
+        </p>
+        <p>
+          Noting that this flow is steady and has zero vorticity away from the plughole,
+          we must have <m>\bnabla B=0</m>, that is <m>B</m> is constant everywhere.
+          On the surface, we have <m>p=p_{\mathrm{atm}}</m> and hence
+          <m>|\bu|^2/2 + gz</m> is constant, where <m>z</m> is vertical height. Using
+          <xref ref="eq-u-line-vortex"/>, the speed is <m>\Gamma/(2\pi r)</m>. Hence,
+          the quantity
+          <me>
+            \frac{\Gamma^2}{8\pi^2r^2}+gz
+          </me>
+          is constant, that is
+          <me>
+            z=z_0-\frac{\Gamma^2}{8\pi^2gr^2},
+          </me>
+          thus explaining the shape of the surface that was seen.
+        </p>
+      </example>
+      <example>
+        <title>Tornado</title>
+        <p>
+          As commented in the `Vorticity, Part 2’
+          at
+          <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>,
+          the pressure in the middle of a tornado is very low.
+          This can also be understood from Bernoulli's equation
+          <xref ref="eqn-bernoulli-vorticity"/>:
+          <me>
+            \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
+          </me>
+          with
+          <me>
+            B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi.
+          </me>
+          In the steady case, and outside the vortex core, there is no
+          vorticity and hence <m>B</m> is constant, meaning that,
+          as we approach the vortex core, the pressure decreases as the
+          fluid speed increases. Furthermore, in the vortex core where the vorticity
+          is non-zero, the quantity
+          <m>\bomega \times \bu</m> points towards the axis. Thus <m>B</m>
+          decreases as the axis is approached, further decreasing the pressure.
+        </p>
+        <p>
+          As commented, in propellors of boats,
+          this pressure reduction in the core of a vortex can cause
+          the water to boil!
+        </p>
       </example>
     </subsection>
   </section>
