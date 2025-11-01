@@ -641,6 +641,29 @@
           and thus evolve with the background flow with the line vortex removed.
         </p>
       </proof>
+      <remark>
+        <title>Application of the Helmholtz principle</title>
+        <p>
+          In an otherwise irrotational flow, we can use the Helmholtz principle to
+          find the motion of a line vortex. In particular, we can make use of the
+          following techniques:
+        </p>
+        <ul>
+          <li>
+            <p>
+              the method of images <xref ref="sec-method-of-images"/>
+            </p>
+          </li>
+          <li>
+            <p>
+              and conformal mapping <xref ref="sec-conformal-mapping"/>
+            </p>
+          </li>
+        </ul>
+        <p>
+          to find the flow evolution.
+        </p>
+      </remark>
       <example>
         <title>Example: Wing tip vortices</title>
         <statement>
