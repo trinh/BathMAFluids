@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="remark remark-like"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuum assumption.</span>
+</h2>
+<div class="para">The assumption that the fluid can be described by a smooth scalar density field, <span class="process-math">\(\rho\text{,}\)</span> is a <em class="emphasis">continuum assumption.</em> This is indeed one of the core assumptions that underlies this course, but it is worth noting that this is only an assumption (albeit a widely accepted one, applicable to most real-life scenarios). On the other extreme of this view is the assumption that the fluid is composed of a discrete set of molecules, all bouncing around, and hence fluid dynamics might be posed as the study of the kinetic motion of molecules!<div class="autopermalink" data-description="Paragraph"><a href="#rem-continuum-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">For example, consider the fluid density, <span class="process-math">\(\rho\text{.}\)</span> In the continuum approximation, this needs to be a smooth mathematical function of position and time. We define it at a point <span class="process-math">\(\bx\)</span> by taking a small volume <span class="process-math">\(\delta V\)</span> about <span class="process-math">\(\bx\)</span> and then define <span class="process-math">\(\rho\)</span> as mass of the fluid particles in <span class="process-math">\(\delta V\)</span> divided by <span class="process-math">\(\delta V\text{.}\)</span> But how big should <span class="process-math">\(\delta V\)</span> be? It needs to be big enough that the effects of individual particles will be smoothed out and small enough that the resulting function <span class="process-math">\(\rho\)</span> captures macroscopic density variations in the fluid (which would be averaged out if <span class="process-math">\(\delta V\)</span> is too large).<div class="autopermalink" data-description="Paragraph"><a href="#rem-continuum-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">An illustration is shown in <a href="ch-chapter03-equations.html#fig-density-continuum" class="xref" data-knowl="./knowl/xref/fig-density-continuum.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.0.4">Figure 3.0.4</a>, which shows a sketch of how the function <span class="process-math">\(\rho\)</span> defined as particle mass in <span class="process-math">\(\delta V\)</span> divided by <span class="process-math">\(\delta V\)</span> might vary as <span class="process-math">\(\delta V\)</span> varies (note the <span class="process-math">\(x\)</span>-axis of the graph is on a logarithmic scale). The ideal choice of the volume <span class="process-math">\(\delta V\)</span> is of the order of <span class="process-math">\(10^{-9}\)</span> mm<span class="process-math">\(^3\)</span> for liquids such as water, but note that the value of the density is pretty stable for a significant range around <span class="process-math">\(10^{-9}\)</span> mm<span class="process-math">\(^3\text{,}\)</span> and that this is necessary in order that our definition of the density makes physical sense (because the exact size of <span class="process-math">\(\delta V\)</span> shouldn’t affect the density). For volumes much smaller than <span class="process-math">\(10^{-9}\)</span> mm<span class="process-math">\(^3\text{,}\)</span> we can see the effects of individual molecules. For volumes much larger, we see macroscopic effects. For liquids, a volume of <span class="process-math">\(10^{-9}\)</span> mm<span class="process-math">\(^3\)</span> contains about <span class="process-math">\(3\times10^7\)</span> particles.<div class="autopermalink" data-description="Paragraph"><a href="#rem-continuum-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/ch-chapter03-density-measurement2.jpg" class="contained" alt="Density and the continuum approximation"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.0.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch illustrating how the fluid density at a point might behave, where the fluid density is defined as mass of fluid in volume <span class="process-math">\(\delta V\)</span> divided by <span class="process-math">\(\delta V\text{,}\)</span> and this is plotted against the volume <span class="process-math">\(\delta V\text{.}\)</span> Note that the <span class="process-math">\(x\)</span>-axis is on a logarithmic scale. Picture from Fig 1.2 of <a href="refs-references.html#ref-white-9" class="xref" data-knowl="./knowl/xref/ref-white-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 8">[8]</a>, which you can view in the University Library’s online collection<div class="autopermalink" data-description="Figure 3.0.4"><a href="#fig-density-continuum" title="Copy heading and permalink for Figure 3.0.4" aria-label="Copy heading and permalink for Figure 3.0.4">🔗</a></div></figcaption></figure><div class="para">As well as the definition of the density, we need to do a similar procedure to define the velocity, and potentially other variables (pressure, stress, temperature etc). In this course, we will generally assume the procedure of choosing <span class="process-math">\(\delta V\)</span> and averaging has already been carried out.<div class="autopermalink" data-description="Paragraph"><a href="#rem-continuum-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">This approach implies there is a minimum size of the fluid body required for this approach to be valid (if we consider smaller sizes of fluid, the motion of individual particles becomes important). Specifically, a region containing about <span class="process-math">\(3\times10^7\)</span> molecules must be small in comparison all lengthscales in the problem:</div>
+<ul class="disc" id="rem-continuum-7-2">
+<li>
+<div class="para">For gases at standard temperature and pressure (STP): the minimum volume is around <span class="process-math">\(10^{-18}\)</span> m<span class="process-math">\(^3=1\)</span> <span class="process-math">\(\mu\)</span>m<span class="process-math">\(^3\)</span> (this contains around <span class="process-math">\(3\times10^7\)</span> molecules).</div>
+<div class="autopermalink" data-description="Item"><a href="#rem-continuum-7-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">For liquids: the minimum volume of fluid is smaller as the particles are closer together. For water, the minimum volume is around <span class="process-math">\(10^{-21}\)</span> m<span class="process-math">\(^3\)</span> (this contains around <span class="process-math">\(3\times10^7\)</span> molecules).</div>
+<div class="autopermalink" data-description="Item"><a href="#rem-continuum-7-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">For complex fluids: the minimum volume needed to invoke the continuum approximation is often larger, e.g. blood contains red blood cells, which significantly affect its mechanics (the mechanics of blood plasma approximates that of water) and the volume of a single red blood cell is around <span class="process-math">\(10^{-16}\)</span> m<span class="process-math">\(^3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#rem-continuum-7-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-continuum-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.0.3: Continuum assumption"><a href="#rem-continuum" title="Copy heading and permalink for Remark 3.0.3: Continuum assumption" aria-label="Copy heading and permalink for Remark 3.0.3: Continuum assumption">🔗</a></div></article><span class="incontext"><a class="internal" href="ch-chapter03-equations.html#rem-continuum">in-context</a></span>
+</body>
+</html>

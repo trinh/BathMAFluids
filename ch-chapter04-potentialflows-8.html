@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Flow past an aerofoil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
+<meta property="book:title" content="Mathematics of fluid dynamics">
+<meta property="book:author" content=" ">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.15';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.65bdf16e03e918ea.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.29d986501a531379.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<p class="byline"> </p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-conformal-mapping.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter04-potentialflows.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ws-potentialflows.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
+\renewcommand*{\Im}{\operatorname{Im}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} 
+\newcommand{\dd}[2]{\frac{\de#1}{\de#2}}
+\newcommand{\DD}[2]{\frac{\mathrm{D}#1}{\mathrm{D}#2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pD}[2]{\dfrac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2\!#1}{\partial#2^2}}
+\newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
+\newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\be}{\boldsymbol{e}}
+\newcommand{\bX}{\boldsymbol{X}}
+\newcommand{\bn}{\boldsymbol{n}}
+\newcommand{\bt}{\boldsymbol{t}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\renewcommand{\bf}{\boldsymbol{f}}
+\newcommand{\bg}{\boldsymbol{g}}
+\newcommand{\bF}{\boldsymbol{F}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bI}{\boldsymbol{I}}
+\newcommand{\bi}{\boldsymbol{i}}
+\newcommand{\bj}{\boldsymbol{j}}
+\newcommand{\bk}{\boldsymbol{k}}
+\newcommand{\br}{\boldsymbol{r}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bnabla}{\boldsymbol{\nabla}}
+\DeclareGraphicsRule{.gif}{png}{.png}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Moodle and other references</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-intro-multifunctions" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-kinematics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Flow past an aerofoil</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-circle-maps" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Circle maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-" class="internal"><span class="codenumber">4.6.2</span> <span class="title">The Joukowski map</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-potentialflows.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-waterwaves-equations.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Governing equations of water waves</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsec-waterwaves-boundaryconditions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Boundary conditions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-otherBC" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Bottom boundary conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-dynamicBC" class="internal"><span class="codenumber">5.1.1.2</span> <span class="title">Dynamic boundary conditions</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-kinematicBC" class="internal"><span class="codenumber">5.1.1.3</span> <span class="title">Kinematic boundary conditions</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Stokes waves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-waterwaves-generalisations.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Generalisations of water waves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-waterwaves-instability.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Instability in waves</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-water-waves.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.1</span> <span class="title">The Helmholtz principle</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-circulation" class="internal"><span class="codenumber">6.1.1</span> <span class="title">The circulation in a flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Vortex lines and the Helmholtz vortex theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-helmholtz-examples.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Examples illustrating the use of the Helmholtz principle</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-vorticity.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-converting-between-coordinates.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Converting between different coordinate systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar" class="internal"><span class="codenumber">A.1.1</span> <span class="title">Converting between Cartesian coordinates and cylindrical polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-plane-polar" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Converting between Cartesian coordinates and plane polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-spherical-polar" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Converting between Cartesian coordinates and spherical polar coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-general-conversion" class="internal"><span class="codenumber">A.1.4</span> <span class="title">General conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-differential-operators" class="internal"><span class="codenumber">A.1.5</span> <span class="title">Differential operators</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="ch-chapter04-potentialflows-8"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow past an aerofoil</span>
+</h2>
+<section class="subsection" id="subsec-circle-maps"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Circle maps</span>
+</h3>
+<div class="para" id="subsec-circle-maps-2">Previously we used the method of images to construct flows past polygonal and straight boundaries.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-circle-maps-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-circle-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Milne-Thomson’s Circle Theorem.</span>
+</h4>
+<div class="para logical" id="thm-circle-theorem-2-1">
+<div class="para">Let <span class="process-math">\(f(z)\)</span> be a given velocity potential such that any singularities in <span class="process-math">\(f\)</span> occur in <span class="process-math">\(|z| &gt; a\text{.}\)</span> Then we can construct the following potential:</div>
+<div class="displaymath process-math" id="eqn-milne-circle-map">
+\begin{equation}
+w(z) = f(z) + \overline{f(a^2/\overline{z})},\tag{4.6.1}
+\end{equation}
+</div>
+<div class="para">and this potential has the following properties: (i) it has the asme singularities as <span class="process-math">\(f\)</span> in the region <span class="process-math">\(|z| &gt; a\text{;}\)</span> and (ii) the circle <span class="process-math">\(|z| = a\)</span> is a streamline.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-circle-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.6.1: Milne-Thomson’s Circle Theorem"><a href="#thm-circle-theorem" title="Copy heading and permalink for Theorem 4.6.1: Milne-Thomson’s Circle Theorem" aria-label="Copy heading and permalink for Theorem 4.6.1: Milne-Thomson’s Circle Theorem">🔗</a></div></article><details id="thm-circle-theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-circle-theorem-3-1">(i) if <span class="process-math">\(|z| &gt; a\text{,}\)</span> then <span class="process-math">\(|a^2/\overline{z}| &lt; a\text{.}\)</span> Therefore the argument of the second term of <span class="process-math">\(w\)</span> is within the circle of radius <span class="process-math">\(|a|\)</span> and by assumption <span class="process-math">\(f\)</span> is not singular there.<div class="autopermalink" data-description="Paragraph"><a href="#thm-circle-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-circle-theorem-3-2">
+<div class="para">(ii) On the circle itself, <span class="process-math">\(z = a\e^{\im\theta}\text{.}\)</span> Then <span class="process-math">\(a^2/\overline{z} = a\e^{\im\theta} = z\text{.}\)</span> Therefore, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w(z) = f(z) + \overline{f(z)} = 2 \Re[f(z)].
+\end{equation*}
+</div>
+<div class="para">Therefore the complex potential is entirely real. It follows that <span class="process-math">\(\Im w = 0\)</span> on <span class="process-math">\(|z| = a\text{,}\)</span> establishing that the circle is streamline.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-circle-theorem-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.6.1.1"><a href="#thm-circle-theorem-3" title="Copy heading and permalink for Proof 4.6.1.1" aria-label="Copy heading and permalink for Proof 4.6.1.1">🔗</a></div></article></details><div class="para" id="subsec-circle-maps-4">The above theorem then allows us to easily construct certain flows past circular cylinders. Here is an example.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-circle-maps-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-circle-maps-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform flow past a circular cylinder.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-circle-maps-5-2">We begin with the complex potential given by <span class="process-math">\(f(z) = Uz\text{,}\)</span> which corresponds to horizontal uniform flow. We then consider inserting a circular cylinder with boundary <span class="process-math">\(|z| = a\text{.}\)</span> Clearly, <span class="process-math">\(f\)</span> satisfies the requirements of the Circle Theorem since it is non-singular for all <span class="process-math">\(z\text{.}\)</span> Thus, we can construct the following result<div class="autopermalink" data-description="Paragraph"><a href="#subsec-circle-maps-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-flow-past-a-circular-cylinder"><h5 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para logical" id="thm-flow-past-a-circular-cylinder-1-1">
+<div class="para">Potential flow of consisting of uniform horizontal flow of speed <span class="process-math">\(U\)</span> at infinity, past a circular cylinder of radius <span class="process-math">\(a\)</span> (placed at the origin) is given by the complex potential</div>
+<div class="displaymath process-math" id="eqn-potential-uniform-past-circle">
+\begin{equation}
+w(z) = \phi + \im \psi = Uz + \overline{\frac{Ua^2}{\overline{z}}} = Uz + \frac{Ua^2}{z}.\tag{4.6.2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-flow-past-a-circular-cylinder-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.6.3"><a href="#thm-flow-past-a-circular-cylinder" title="Copy heading and permalink for Theorem 4.6.3" aria-label="Copy heading and permalink for Theorem 4.6.3">🔗</a></div></article><div class="para" id="subsec-circle-maps-5-4">The streamlines of the flow, found by taking the imaginary part of the above, are shown in <a href="ch-chapter04-potentialflows-8.html#fig-conformal-circle-flow" class="xref" data-knowl="./knowl/xref/fig-conformal-circle-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.6.4">Figure 4.6.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-circle-maps-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conformal-circle-flow"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/conformal_circle_flow.png" class="contained" alt="Circle flow"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Uniform flow past a circle<div class="autopermalink" data-description="Figure 4.6.4"><a href="#fig-conformal-circle-flow" title="Copy heading and permalink for Figure 4.6.4" aria-label="Copy heading and permalink for Figure 4.6.4">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 4.6.2: Uniform flow past a circular cylinder"><a href="#subsec-circle-maps-5" title="Copy heading and permalink for Example 4.6.2: Uniform flow past a circular cylinder" aria-label="Copy heading and permalink for Example 4.6.2: Uniform flow past a circular cylinder">🔗</a></div></article></details><div class="para" id="subsec-circle-maps-6">The next example will be studied during the problem class.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-circle-maps-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-uniform-past-circle-with-vortex" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problem class example.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="introduction" id="example-uniform-past-circle-with-vortex-2"><div class="para logical" id="example-uniform-past-circle-with-vortex-2-1">
+<div class="para">Previously, it was demonstrated, via <a href="ch-chapter04-potentialflows-8.html#eqn-potential-uniform-past-circle" class="xref" data-knowl="./knowl/xref/eqn-potential-uniform-past-circle.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.2">(4.6.2)</a> that uniform horizontal flow past a circle (circular cylinder) of radius <span class="process-math">\(a\)</span> can be found via the complex potential function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-potential-uniform-past-circle.html" id="eqn-flow-over-circle-problem">
+\begin{equation}
+w(z) = Uz + \frac{Ua^2}{z},  \tag{4.6.3}
+\end{equation}
+</div>
+<div class="para">corresponding to uniform horizontal flow at infinity of speed <span class="process-math">\(U\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-uniform-past-circle-with-vortex-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="example-uniform-past-circle-with-vortex-3-1-1">Confirm, by use of the streamfunction <span class="process-math">\(\psi\text{,}\)</span> that the circle boundary is a streamline of the flow.<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="example-uniform-past-circle-with-vortex-3-1-2">
+<div class="para">It will be useful to remind yourself that</div>
+<div class="displaymath process-math" id="eqn-complex-cosine">
+\begin{equation}
+\cos\theta = \frac{\e^{\im\theta} + \e^{-\im\theta}}{2}. \tag{4.6.4}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-3-2-1">
+<div class="para">We set <span class="process-math">\(z = a\e^{\im\theta}\)</span> into the streamfunction. This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi + \im \psi = U \left( \e^{\im \theta} + \e^{-\im\theta}\right) = 2U\cos\theta.
+\end{equation*}
+</div>
+<div class="para">Therefore <span class="process-math">\(\psi = \Im w = 0\)</span> on the surface of the cylinder.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.a.1"><a href="#example-uniform-past-circle-with-vortex-3-2" title="Copy heading and permalink for Solution 4.6.5.a.1" aria-label="Copy heading and permalink for Solution 4.6.5.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.a"><a href="#example-uniform-past-circle-with-vortex-3" title="Copy heading and permalink for Task 4.6.5.a" aria-label="Copy heading and permalink for Task 4.6.5.a">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-4-1-1">
+<div class="para">Derive the complex velocity, <span class="process-math">\(u - \im v\)</span> and use it to show that on the surface of the cylinder, the velocity is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = 2U \e^{\im (\pi/2 - \theta)} \sin\theta,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(z = a\e^{\im\theta}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="example-uniform-past-circle-with-vortex-4-1-2">
+<div class="para">It is helpful for you to remember that</div>
+<div class="displaymath process-math" id="eqn-complex-sine">
+\begin{equation}
+\sin\theta = \frac{\e^{\im\theta} - \e^{-\im\theta}}{2\im}.\tag{4.6.5}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-4-2-1">
+<div class="para">We need to take the derivative to obtain the complex velocity. So we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right).
+\end{equation*}
+</div>
+<div class="para">So again, substitution of <span class="process-math">\(z = a\e^{\im\theta}\)</span> and simplifying gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = U \e^{-\im \theta}\left( \e^{\im\theta} - \e^{-\im\theta}\right) = 2U \e^{\im(\pi/2 - \theta)} \sin\theta.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.b.1"><a href="#example-uniform-past-circle-with-vortex-4-2" title="Copy heading and permalink for Solution 4.6.5.b.1" aria-label="Copy heading and permalink for Solution 4.6.5.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.b"><a href="#example-uniform-past-circle-with-vortex-4" title="Copy heading and permalink for Task 4.6.5.b" aria-label="Copy heading and permalink for Task 4.6.5.b">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="example-uniform-past-circle-with-vortex-5-1-1">Conclude that on the surface of the cylinder, the maximum velocity is <span class="process-math">\(|\bu| = 2U\text{.}\)</span> Where does this maximum velocity occur? Where do stagnation points in the flow (where the velocity is zero) occur?<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-uniform-past-circle-with-vortex-5-2-1">From the above, we clearly see that the magnitude is <span class="process-math">\(|u - \im v| = 2U\sin\theta\)</span> so the maximum speed on the cylinder is <span class="process-math">\(2U\text{.}\)</span> This value is obtained at the top and bottom with <span class="process-math">\(\theta = \pm \pi/2\text{.}\)</span> The stagnation point is found where the speed is zero, and this is at the fore and aft points, <span class="process-math">\(\theta = \pi, 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.c.1"><a href="#example-uniform-past-circle-with-vortex-5-2" title="Copy heading and permalink for Solution 4.6.5.c.1" aria-label="Copy heading and permalink for Solution 4.6.5.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.c"><a href="#example-uniform-past-circle-with-vortex-5" title="Copy heading and permalink for Task 4.6.5.c" aria-label="Copy heading and permalink for Task 4.6.5.c">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-6-1-1">
+<div class="para">Show that on the surface of the cylinder, the pressure force is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p = p_\infty + \frac{1}{2} \rho U^2(1 - 4\sin^2\theta),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p_\infty\)</span> is a constant value.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-6-2-1">
+<div class="para">We know from Bernoulli’s equation, without gravity, that we have (<a href="sec-bernoulli.html#thm-bernoulli-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">Theorem 3.5.8</a>):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html">
+\begin{equation*}
+\left(p + \frac{\rho}{2} |\bu|^2\right)_{\text{cylinder}} = \left(p_\infty + \frac{\rho}{2} U^2\right)_{\text{infinity}}
+\end{equation*}
+</div>
+<div class="para">where we have set the constant on the RHS of the formula to be <span class="process-math">\(p_\infty/\rho\text{,}\)</span> setting a reference pressure. We now only need to substitute the speed on the cylinder, <span class="process-math">\(|\bu| = U(4\sin^2\theta)\text{,}\)</span> giving</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html">
+\begin{equation*}
+p = p_\infty + \frac{\rho}{2}U^2(1 - 4\sin^2\theta)
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.d.1"><a href="#example-uniform-past-circle-with-vortex-6-2" title="Copy heading and permalink for Solution 4.6.5.d.1" aria-label="Copy heading and permalink for Solution 4.6.5.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.d"><a href="#example-uniform-past-circle-with-vortex-6" title="Copy heading and permalink for Task 4.6.5.d" aria-label="Copy heading and permalink for Task 4.6.5.d">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-7-1-1">
+<div class="para">It is possible to add a line vortex to the interior of the circular cylinder, centred at <span class="process-math">\(z = 0\)</span> by writing in addition to <a href="ch-chapter04-potentialflows-8.html#eqn-flow-over-circle-problem" class="xref" data-knowl="./knowl/xref/eqn-flow-over-circle-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.3">(4.6.3)</a>, an additional term:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-flow-over-circle-problem.html">
+\begin{equation*}
+w(z) = U \left(z + \frac{a^2}{z}\right) - \frac{\im\Gamma}{2\pi} \log z.
+\end{equation*}
+</div>
+<div class="para">Verify again that the above modification does not change the streamline properties of <span class="process-math">\(|z| = a\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="example-uniform-past-circle-with-vortex-7-1-2">Does the above flow satisfy the condition that the flow is of uniform speed <span class="process-math">\(U\)</span> far upstream?<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-7-2-1">
+<div class="para">The addition of the line vortex does not change the streamline patterns on the cylinder since it is a linear addition. Indeed, on the surface, we have from the addition:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\im \Gamma}{2\pi} (\log a + \im \pi \theta) = -\frac{\Gamma}{2\pi} (-\pi \theta + \im \log a).
+\end{equation*}
+</div>
+<div class="para">Therefore the imaginary part is still a constant, and hence the boundary of the cylinder is still a streamline of the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-7-2-2">
+<div class="para">To verify that the upstream flow is not altered, we can take a derivative to obtain the complex velocity:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w'(z) = u - \im v = U\left(1 - \frac{a^2}{z^2}\right) - \frac{\im}{2\pi z}.
+\end{equation*}
+</div>
+<div class="para">So in the limit <span class="process-math">\(|z| \to \infty\text{,}\)</span> we see indeed that the velocity is horizontal with speed <span class="process-math">\(U\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.e.1"><a href="#example-uniform-past-circle-with-vortex-7-2" title="Copy heading and permalink for Solution 4.6.5.e.1" aria-label="Copy heading and permalink for Solution 4.6.5.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.e"><a href="#example-uniform-past-circle-with-vortex-7" title="Copy heading and permalink for Task 4.6.5.e" aria-label="Copy heading and permalink for Task 4.6.5.e">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-8"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-8-1-1">
+<div class="para">By studying the velocity of the flow with the rotation element, verify that the complex velocity on the surface is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = \im \e^{-\im\theta}\left(2U \sin\theta  - \frac{\Gamma}{2\pi a}\right). 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="example-uniform-past-circle-with-vortex-8-1-2">
+<div class="para">Conclude that a point on the cylinder that satisfies the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta = \frac{\Gamma}{4\pi a U},
+\end{equation*}
+</div>
+<div class="para">is a stagnation point of the flow.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-8-2-1">
+<div class="para">We had previously simplified the left terms in brackets:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u - \im v = 2U \im \e^{-\im\theta}\sin\theta - \frac{\Gamma\im}{2\pi a} \e^{-\im\theta} = \im \e^{-\im\theta}
+\left(2U \sin\theta - \frac{\Gamma}{2\pi a}\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-uniform-past-circle-with-vortex-8-2-2">
+<div class="para">A stagnation point requires that <span class="process-math">\(|u - \im v| = 0\text{,}\)</span> so setting the terms in brackets to zero implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta = \frac{\Gamma}{4\pi a U},
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.f.1"><a href="#example-uniform-past-circle-with-vortex-8-2" title="Copy heading and permalink for Solution 4.6.5.f.1" aria-label="Copy heading and permalink for Solution 4.6.5.f.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.f"><a href="#example-uniform-past-circle-with-vortex-8" title="Copy heading and permalink for Task 4.6.5.f" aria-label="Copy heading and permalink for Task 4.6.5.f">🔗</a></div></article><article class="task exercise-like" id="example-uniform-past-circle-with-vortex-9"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="example-uniform-past-circle-with-vortex-9-1-1">(Not examinable) Use a computational tool to investigate the streamlines of the flow for <span class="process-math">\(\Gamma = 0, 2\pi aU, 4\pi a U, and 6\pi a U\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="example-uniform-past-circle-with-vortex-9-1-2">The fact that the stagnation point shifts, moving on the topside or bottomside of the circular cylinder, dependent on the value of <span class="process-math">\(\Gamma\)</span> will result in an asymmetry in the pressure, causing net force on one side of the cylinder. This is related to the well-known <em class="emphasis">Magnus effect</em>, which is used by athletes to cause a ball’s trajectory to move from a straight path.<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-uniform-past-circle-with-vortex-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-uniform-past-circle-with-vortex-9-2-1">
+<div class="para">The point of the previous exercise is to note that when <span class="process-math">\(\Gamma \neq 0\text{,}\)</span> this shifts the location of the stagnation point. For example, if <span class="process-math">\(\Gamma = 4\pi a U\text{,}\)</span> then the stagnation points are found at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin\theta = 1 \Longrightarrow \theta = \pi/2,
+\end{equation*}
+</div>
+<div class="para">i.e. the top of the cylinder.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-uniform-past-circle-with-vortex-9-2-2">
+<figure class="figure figure-like" id="fig-circle-with-vortex"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/conformal_circle_with_vortex.png" class="contained" alt="Flow past a circular cylinder with vortex"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow past a circular cylinder with interior line vortex of different strengths.<div class="autopermalink" data-description="Figure 4.6.6"><a href="#fig-circle-with-vortex" title="Copy heading and permalink for Figure 4.6.6" aria-label="Copy heading and permalink for Figure 4.6.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#example-uniform-past-circle-with-vortex-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.6.5.g.1"><a href="#example-uniform-past-circle-with-vortex-9-2" title="Copy heading and permalink for Solution 4.6.5.g.1" aria-label="Copy heading and permalink for Solution 4.6.5.g.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 4.6.5.g"><a href="#example-uniform-past-circle-with-vortex-9" title="Copy heading and permalink for Task 4.6.5.g" aria-label="Copy heading and permalink for Task 4.6.5.g">🔗</a></div></article><div class="autopermalink" data-description="Example 4.6.5: Problem class example"><a href="#example-uniform-past-circle-with-vortex" title="Copy heading and permalink for Example 4.6.5: Problem class example" aria-label="Copy heading and permalink for Example 4.6.5: Problem class example">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 4.6.1: Circle maps"><a href="#subsec-circle-maps" title="Copy heading and permalink for Subsection 4.6.1: Circle maps" aria-label="Copy heading and permalink for Subsection 4.6.1: Circle maps">🔗</a></div></section><section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Joukowski map</span>
+</h3>
+<div class="para" id="subsec--2">We shall study the following mapping.<div class="autopermalink" data-description="Paragraph"><a href="#subsec--2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-joukowski"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def-joukowski-1-1">
+<div class="para">The <em class="emphasis">Joukowski transformation</em> is the map</div>
+<div class="displaymath process-math" id="eqn-joukowski">
+\begin{equation}
+z = G(\zeta) = \zeta + \frac{a^2}{\zeta}\tag{4.6.6}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(a &gt; 0\)</span> is a parameter. The mapping is conformal at all points except <span class="process-math">\(\zeta = 0\)</span> (pole) and <span class="process-math">\(\zeta = \pm a\)</span> where <span class="process-math">\(G'(\zeta) = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-joukowski-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.6.7"><a href="#def-joukowski" title="Copy heading and permalink for Definition 4.6.7" aria-label="Copy heading and permalink for Definition 4.6.7">🔗</a></div></article><div class="para logical" id="subsec--4">
+<div class="para">Consider a circle in the <span class="process-math">\(\zeta\)</span>-plane. Let <span class="process-math">\(\zeta = r\e^{\im\theta}\text{.}\)</span> Then in the <span class="process-math">\(z\)</span>-plane, this is mapped to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta}  = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
+\end{equation*}
+</div>
+<div class="para">Provided that <span class="process-math">\(r &gt; a\text{,}\)</span> this the equation of an ellipse with principle radii <span class="process-math">\(r + a^2/r\)</span> and <span class="process-math">\(r - a^2/r\text{.}\)</span> The orientation of circles is preserved, with an anticlockwise rotation in <span class="process-math">\(\zeta\)</span> corresponding to anticlockwise in <span class="process-math">\(z\text{.}\)</span> The exterior of the circle <span class="process-math">\(|\zeta| = r\)</span> is mapped to the exterior of the ellipse in <span class="process-math">\(z\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec--4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec--5">
+<div class="para">In addition note that if <span class="process-math">\(r \to a\text{,}\)</span> the ellipses tends to the line segment</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-conformal-joukowski01.html">
+\begin{equation*}
+S = \{ z = 2a\cos\theta \, | 0 \leq \theta \leq \pi\},
+\end{equation*}
+</div>
+<div class="para">which then ranges from <span class="process-math">\(z = 2a\)</span> for <span class="process-math">\(\theta = 0\)</span> to <span class="process-math">\(z = -2a\)</span> for <span class="process-math">\(\theta = \pi\text{.}\)</span> As <span class="process-math">\(\theta\)</span> further ranges in <span class="process-math">\([\pi, 2\pi)\text{,}\)</span> this traverses the horizontal plate again. One can interpret it as traversing the top or the bottom side of the plate (a view strengthened from considering the limiting images). This is shown in <a href="ch-chapter04-potentialflows-8.html#fig-conformal-joukowski01" class="xref" data-knowl="./knowl/xref/fig-conformal-joukowski01.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.6.8">Figure 4.6.8</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec--5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conformal-joukowski01"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/conformal_joukowski01.png" class="contained" alt="Joukowski map"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Joukowski transformation in <a href="ch-chapter04-potentialflows-8.html#eqn-joukowski" class="xref" data-knowl="./knowl/xref/eqn-joukowski.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.6">(4.6.6)</a> sends circles with radius <span class="process-math">\(r \geq 1\)</span> to ellipses in the <span class="process-math">\(z-\)</span>plane. In the limit <span class="process-math">\(r \to a^+\text{,}\)</span> this approaches a horizontal plate of length <span class="process-math">\(4a\text{.}\)</span><div class="autopermalink" data-description="Figure 4.6.8"><a href="#fig-conformal-joukowski01" title="Copy heading and permalink for Figure 4.6.8" aria-label="Copy heading and permalink for Figure 4.6.8">🔗</a></div></figcaption></figure><div class="para" id="subsec--7">If on the other hand, <span class="process-math">\(r &lt; a\text{,}\)</span> then we can verify that the mapping still produces ellipses, but now with principal radii <span class="process-math">\(r + a^2/r\)</span> and <span class="process-math">\(a^2/r - r\text{.}\)</span> The orientation is now reversed, with anticlockwise orientation in <span class="process-math">\(\zeta\)</span> mapped to clockwise orientation. Therefore, it is the case that the interior of the discs with <span class="process-math">\(|\zeta| = r\)</span> are mapped to the exterior of ellipses in <span class="process-math">\(z\text{.}\)</span> Again, in the limit that <span class="process-math">\(r \to a^-\)</span> the images approach a flat plate of length <span class="process-math">\(4a\)</span> on the axis.<div class="autopermalink" data-description="Paragraph"><a href="#subsec--7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conformal-joukowski02"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/conformal_joukowski02.png" class="contained" alt="Joukowski map"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Joukowski transformation in <a href="ch-chapter04-potentialflows-8.html#eqn-joukowski" class="xref" data-knowl="./knowl/xref/eqn-joukowski.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.6">(4.6.6)</a> sends circles with radius <span class="process-math">\(r \leq 1\)</span> to ellipses in the <span class="process-math">\(z-\)</span>plane. As <span class="process-math">\(r \to \infty\text{,}\)</span> these tend to infinitely large circles. The values here are <span class="process-math">\(r = 0.5, 0.6, 0.7, 0.8, 0.9, 1.\)</span><div class="autopermalink" data-description="Figure 4.6.9"><a href="#fig-conformal-joukowski02" title="Copy heading and permalink for Figure 4.6.9" aria-label="Copy heading and permalink for Figure 4.6.9">🔗</a></div></figcaption></figure><div class="para logical" id="subsec--9">
+<div class="para">We can invert <a href="ch-chapter04-potentialflows-8.html#eqn-joukowski" class="xref" data-knowl="./knowl/xref/eqn-joukowski.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.6.6">(4.6.6)</a>, and this gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-joukowski.html ./knowl/xref/sec-intro-multifunctions.html" id="eqn-joukowski-inverted">
+\begin{equation}
+\zeta = \frac{1}{2} \left(z \pm \sqrt{z^2 - 4a^2}\right) = 
+\frac{1}{2} \left(z \pm \sqrt{z-2a}\sqrt{z + 2a}\right).\tag{4.6.7}
+\end{equation}
+</div>
+<div class="para">As noted in <a href="sec-preliminary-complex-variables.html#sec-intro-multifunctions" class="internal" title="Subsection 1.2.3: Multifunctions, branch cuts, and Riemann sheets">Subsection 1.2.3</a>, we must take care to define the proper branch cut structure for the two branch points at <span class="process-math">\(z = \pm 2a\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec--9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec--10">
+<div class="para">As noted in the exercises of <a href="ws-intro.html" class="internal" title="Exercises 1.3">Exercises 1.3</a>, if we let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ws-intro.html">
+\begin{equation*}
+z + 2a = r_1 \e^{\im \theta_1} \quad \text{and} \quad
+z - 2a = r_2 \e^{\im \theta_2}, 
+\end{equation*}
+</div>
+<div class="para">and take <span class="process-math">\(\theta_1, \theta_2 \in [0, 2\pi)\text{,}\)</span> this corresponds to a single branch cut between <span class="process-math">\(z = -2a\)</span> and <span class="process-math">\(z = 2a\text{.}\)</span> This branch cut choice is the most convenient since then it directly coincides with the central axis of the ellipse.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec--10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec--11">
+<div class="para">Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have</div>
+<div class="displaymath process-math" id="subsec--11-1">
+\begin{align}
+\zeta = g_+(z) \amp= \frac{1}{2}\left(z + \sqrt{z^2 - 4a}\right), \tag{4.6.8}\\
+\zeta = g_-(z) \amp= \frac{1}{2}\left(z - \sqrt{z^2 - 4a}\right). \tag{4.6.9}
+\end{align}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec--11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec--12">Let us return to the perspective of images from the <span class="process-math">\(\zeta\)</span>-plane to the <span class="process-math">\(z\)</span>-plane. We can now consider the images of circles in the <span class="process-math">\(\zeta\)</span>-plane that have either been horizontally shifted and/or vertically shifted. The two critical points (points where the map is not conformal) mentioned above correspond to either <span class="process-math">\(\zeta = \pm a\)</span> or <span class="process-math">\(z = \pm 2a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec--12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec--13">Firstly in <a href="ch-chapter04-potentialflows-8.html#fig-conformal-joukowski03" class="xref" data-knowl="./knowl/xref/fig-conformal-joukowski03.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.6.10">Figure 4.6.10</a>, we see that horizontal shifts of the circle will corresponding to shifting and deforming the ellipse such that, as a critical point is approached, this forms a point of non-conformality in the image (a cusp).<div class="autopermalink" data-description="Paragraph"><a href="#subsec--13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conformal-joukowski03"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/conformal_joukowski03.png" class="contained" alt="Joukowski map"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>We now consider shifting the circle with <span class="process-math">\(|\zeta| = 2\)</span> to the left, so that the circumferance passes through the critical point at <span class="process-math">\(\zeta = a = 1\text{.}\)</span> This produces an image that resembles an aerofoil with a sharp trailing edge.<div class="autopermalink" data-description="Figure 4.6.10"><a href="#fig-conformal-joukowski03" title="Copy heading and permalink for Figure 4.6.10" aria-label="Copy heading and permalink for Figure 4.6.10">🔗</a></div></figcaption></figure><div class="para" id="subsec--15">Top-bottom asymmetry can also be introduced by considering vertical shifts of the preimages.<div class="autopermalink" data-description="Paragraph"><a href="#subsec--15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conformal-joukowski04"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/conformal_joukowski04.png" class="contained" alt="Joukowski map"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Vertical shifts correspond to changing the top-bottom symmetry of the aerofoil. In this case, notice that if the circle in the left plane passes through a critical point, this produces a self-intersecting shape.<div class="autopermalink" data-description="Figure 4.6.11"><a href="#fig-conformal-joukowski04" title="Copy heading and permalink for Figure 4.6.11" aria-label="Copy heading and permalink for Figure 4.6.11">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 4.6.2: The Joukowski map"><a href="#subsec-" title="Copy heading and permalink for Subsection 4.6.2: The Joukowski map" aria-label="Copy heading and permalink for Subsection 4.6.2: The Joukowski map">🔗</a></div></section><div class="autopermalink" data-description="Section 4.6: Flow past an aerofoil"><a href="#ch-chapter04-potentialflows-8" title="Copy heading and permalink for Section 4.6: Flow past an aerofoil" aria-label="Copy heading and permalink for Section 4.6: Flow past an aerofoil">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-conformal-mapping.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ws-potentialflows.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Streamlines, pathlines and streaklines.</span>
+</h3>
+<div class="introduction"><div class="para">The velocity of a two-dimensional fluid flow in Cartesian coordinates is <span class="process-math">\(u = 1\text{,}\)</span> <span class="process-math">\(v
+= t e^{-4x}\text{.}\)</span> Calculate and sketch the following:<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">the streamlines at a fixed time <span class="process-math">\(t &gt; 0\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The streamlines are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+\pd{y}{x}=te^{-4x}\quad\Rightarrow\quad
+y=y_0-\frac{t}{4} e^{-4x},
+\end{equation*}
+</div>
+<div class="para">for any constant <span class="process-math">\(y_0\text{.}\)</span> Different values of <span class="process-math">\(y_0\)</span> give different streamlines. See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter02-flowvisualisationproblem.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of streamlines, pathline and streaklines.<div class="autopermalink" data-description="Figure 2.3.3"><a href="#flowvisualisationproblem" title="Copy heading and permalink for Figure 2.3.3" aria-label="Copy heading and permalink for Figure 2.3.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Answer 2.3.6.a.1"><a href="#ex-streamlines-pathlines-streaklines-3-2" title="Copy heading and permalink for Answer 2.3.6.a.1" aria-label="Copy heading and permalink for Answer 2.3.6.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.6.a"><a href="#ex-streamlines-pathlines-streaklines-3" title="Copy heading and permalink for Task 2.3.6.a" aria-label="Copy heading and permalink for Task 2.3.6.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">the pathline of the particle starting from <span class="process-math">\((x_0,y_0)\text{.}\)</span> Hence find and sketch the pathline of the particle that starts from <span class="process-math">\((0,0)\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">The pathlines for a particle starting from <span class="process-math">\((x_0,y_0)\)</span> are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{align*}
+&amp;\dd{x}{t}=1,\quad
+\dd{y}{t}=te^{-4x}\\
+\Rightarrow\quad&amp;
+x = x_0 + t,\quad
+y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+\end{align*}
+</div>
+<div class="para">Eliminating <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = y_0 + \frac{1}{16} e^{-4x_0}
+- \frac{1+4x-4x_0}{16} e^{-4x}.
+\end{equation*}
+</div>
+<div class="para">This is a general pathline. For the particular particle that starts from <span class="process-math">\((0,0)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.6.b.1"><a href="#ex-streamlines-pathlines-streaklines-4-2" title="Copy heading and permalink for Answer 2.3.6.b.1" aria-label="Copy heading and permalink for Answer 2.3.6.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.6.b"><a href="#ex-streamlines-pathlines-streaklines-4" title="Copy heading and permalink for Task 2.3.6.b" aria-label="Copy heading and permalink for Task 2.3.6.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">and the streaklines passing through <span class="process-math">\((0,0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical">
+<div class="para">The expression for a general pathline starting from <span class="process-math">\((x_0,y_0)\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = x_0 + t,\quad
+y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.3.6.c.1"><a href="#ex-streamlines-pathlines-streaklines-5-2" title="Copy heading and permalink for Hint 2.3.6.c.1" aria-label="Copy heading and permalink for Hint 2.3.6.c.1">🔗</a></div>
+</div></details><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">Suppose the particle that started at <span class="process-math">\((x_0,y_0)\)</span> hits the special point <span class="process-math">\((0,0)\)</span> at time <span class="process-math">\(t_1\text{.}\)</span> From the pathline equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+0 = x_0 + t_1, \quad
+0 = y_0 + \tfrac{1}{16} e^{-4x_0}
+- \tfrac{1+4t_1}{16} e^{-4(x_0+t_1)}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(x_0\)</span> and <span class="process-math">\(y_0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x_0 = -t_1,\quad
+y_0 = -\tfrac{1}{16}\left(e^{4t_1} - 1 - 4t_1\right).
+\end{equation*}
+</div>
+<div class="para">At time <span class="process-math">\(t\)</span> the particle is at:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = t - t_1,\quad
+y = \tfrac{1}{16}\left((1+4t_1) - (1+4t)e^{-4(t-t_1)}\right).
+\end{equation*}
+</div>
+<div class="para">Eliminating <span class="process-math">\(t_1\)</span> gives the streakline at time <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch. Note that the streamlines, pathlines and streaklines are all very different.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.6.c.1"><a href="#ex-streamlines-pathlines-streaklines-5-3" title="Copy heading and permalink for Answer 2.3.6.c.1" aria-label="Copy heading and permalink for Answer 2.3.6.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Task 2.3.6.c"><a href="#ex-streamlines-pathlines-streaklines-5" title="Copy heading and permalink for Task 2.3.6.c" aria-label="Copy heading and permalink for Task 2.3.6.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">For a line/curve in the <span class="process-math">\((x,y)\text{,}\)</span> its timeline at time <span class="process-math">\(t\)</span> is the locus of the material elements at time <span class="process-math">\(t\)</span> that started on the line/curve at <span class="process-math">\(t=0\text{.}\)</span> In experiments this can be visualised using a streak of dye placed initally along the line/curve. Tracking this over time gives the timelines.<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">Calculate and sketch the timelines of the line (i) <span class="process-math">\(y=0\text{,}\)</span> (ii) <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="para">From the pathline equation, a particle starting from <span class="process-math">\((x_0,0)\)</span> reaches</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = x_0 + t,\quad
+y = \tfrac{1}{16} e^{-4x_0}
+- \tfrac{1+4t}{16} e^{-4(x_0+t)}
+\end{equation*}
+</div>
+<div class="para">at time <span class="process-math">\(t\text{.}\)</span> Eliminating <span class="process-math">\(x_0\)</span> gives the timeline:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left(e^{4t} - 1 - 4t\right)e^{-4x}.
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">From the pathline equation, a particle starting from <span class="process-math">\((0,y_0)\)</span> reaches</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = t,\quad
+y = y_0 + \tfrac{1}{16}
+- \tfrac{1+4t}{16} e^{-4t}
+\end{equation*}
+</div>
+<div class="para">at time <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(y_0\)</span> can take any value, the timeline is just the line <span class="process-math">\(x
+= t\text{.}\)</span> See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3.3">Figure 2.3.3</a> for a sketch.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-streamlines-pathlines-streaklines-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.3.6.d.1"><a href="#ex-streamlines-pathlines-streaklines-6-2" title="Copy heading and permalink for Answer 2.3.6.d.1" aria-label="Copy heading and permalink for Answer 2.3.6.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.3.6.d"><a href="#ex-streamlines-pathlines-streaklines-6" title="Copy heading and permalink for Task 2.3.6.d" aria-label="Copy heading and permalink for Task 2.3.6.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 2.3.6: Streamlines, pathlines and streaklines"><a href="#ex-streamlines-pathlines-streaklines" title="Copy heading and permalink for Exercise 2.3.6: Streamlines, pathlines and streaklines" aria-label="Copy heading and permalink for Exercise 2.3.6: Streamlines, pathlines and streaklines">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-kinematics.html#ex-streamlines-pathlines-streaklines">in-context</a></span>
+</body>
+</html>
