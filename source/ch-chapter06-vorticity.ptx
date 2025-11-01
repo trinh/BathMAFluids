@@ -256,7 +256,7 @@
     <title>The Helmholtz principle</title>
     <introduction>
       <p>
-        As mentioned in Chapter <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
+        As mentioned in <xref ref="ch-chapter03-equations"/>, the vorticity obeys the
         vorticity equation <xref ref="eqn-vorticity-equation-lagrange"/>:
         <me>
           \DD{\bomega}{t} = (\bomega \cdot \nabla)\bu.
