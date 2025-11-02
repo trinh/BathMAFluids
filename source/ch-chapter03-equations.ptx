@@ -1072,6 +1072,24 @@
           </p>
         </statement>
       </definition>
+      <theorem xml:id="theorem-irrotational-potential">
+        <title>Equivalence of irrotational and potential flow</title>
+        <p>
+          If a flow with velocity vector <m>/bu(/bx,t)</m> is irrotational,
+          there exists a function <m>\phi(\bx,t)</m> such that
+          <me>
+            \bu = \nabla\phi.
+          </me>
+          The function <m>\phi</m> is called the potential.
+        </p>
+      </theorem>
+      <proof>
+        <p>
+          Any function <m>\bf(\bx,t)</m> whose curl is everywhere zero <m>\nabla\times\bf=0</m>
+          can be written as a gradient of a scalar function. In the case of irrotational flow,
+          the velocity field is such a function.
+        </p>
+      </proof>
 
       <p>
         For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's

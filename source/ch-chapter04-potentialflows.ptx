@@ -178,7 +178,10 @@
    <idx><h>line source</h></idx> 
 
    <p>
-   We aim to derive the potential and velocity for a <em>line source</em>, imagined as the flow consisting of a point source or point sink that ejects/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve <m>\nabla^2 \phi = 0</m> in plane polar coordinates. This is given by
+   We aim to derive the potential and velocity for a <em>line source</em>, imagined as the flow consisting
+   of a point source or point sink that ejects/drains fluid from a point in space.
+   Since it would be expected for the potential to be axisymmetric,
+   we attempt to solve <m>\nabla^2 \phi = 0</m> in plane polar coordinates. This is given by
    <me>
     \nabla^2 \phi = \frac{1}{r} \pd{}{r}\left(r \pd{\phi}{r}\right) + \frac{1}{r^2} \pd{^2 \phi}{\theta^2} = 0.
    </me>
@@ -264,7 +267,7 @@
   </subsection>
 </section>
 
-  <section>
+  <section xml:id="sec-streamfunction">
    <title>The streamfunction</title>
 <introduction>
    <p>
@@ -526,7 +529,8 @@
    <idx><h>line vortex</h></idx>
 
    <p>
-    The fundamental solution for the streamfunction, in plane polar coordinates, is the axisymmetric solution, 
+    The fundamental solution for the streamfunction, in plane polar coordinates,
+    is the axisymmetric solution, 
     <men xml:id="eqn-streamfunction-linevortex">
       \psi = -\frac{\Gamma}{2\pi}\log r,
     </men>

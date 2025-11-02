@@ -1909,6 +1909,13 @@
     </subsection>
   </section>
 
+  <section xml:id="sec-low-Reynolds-number-sphere">
+    <title>Low-Reynolds-number flow past a sphere</title>
+    <p>
+      We consider
+    </p>
+  </section>
+
 <!--<section xml:id="sec-streamfunction">
   <title>Streamfunction formulation for two-dimensional flow</title>
   In two dimensions, see the equations in <xref ref="remark-navierstokes-components"/>
