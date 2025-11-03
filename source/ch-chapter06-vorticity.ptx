@@ -1351,6 +1351,113 @@
         </p>
       </answer>
     </exercise>
+    
+    <exercise xml:id="ex-circulation-vortex-tube">
+      <title>The circulation around a vortex tube</title>
+      <statement>
+        <p>
+          (Based on Exercise 5.5 in <xref ref="ref-acheson"/>).
+          Define a vortex tube.
+          Prove that the quantity
+          <me>
+            \Gamma = \int_S\bomega\cdot\bn\,\de S,
+          </me>
+          where <m>S</m> is any surface spanning the tube,
+          is the same for all such surfaces.
+          Relate this quantity to a circulation of the flow.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
+          define a `cylindrical' volume <m>V</m>,
+          whose ends are the the two surfaces <m>S_1</m> and <m>S_2</m>
+          and whose sides are the sides of the vortex tube,
+          and let <m>\Gamma_i = \int_S_i\bomega\cdot\bn_i\,\de S</m>,
+          for <m>i=1,2</m>.
+        </p>
+        <p>
+          Consider <m>\int_{\partial V}\bomega\cdot\bn\,\de S</m>.
+          This is equal to <m>\Gamma_1</m> minus <m>\Gamma_2</m>
+          plus the integral of <m>\bomega\cdot\bn</m> over the sides of the
+          cylinder.
+          On the sides of the cylinder, we have <m>\bomega\cdot\bn=0</m>.
+          Hence, <m>\Gamma_1=\Gamma_2</m> for any two such surfaces.
+        </p>
+        <p>
+          Stokes theorem implies that
+          <me>
+            \Gamma = \oint_C\bomega\times\de\bx,
+          </me>
+          where <m>C</m> is the curve around the edge of <m>S</m>,
+          which is the circulation.
+        </p>
+        <p>
+          Since the circulation is constant in time,
+          this implies the flux of vorticity through any vortex tube is
+          uniform and independent of time.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-axisymmetric-flow">
+      <title>Axisymmetric flow</title>
+      <statement>
+        <p>
+          (Based on Exercise 5.6 in <xref ref="ref-acheson"/>).
+          Show that if <m>\mathbf{a}(\bx,t)</m> is any suitably smooth vector field and
+          <me>
+            \mathcal{C}(t)=\int_{C(t)}\mathbf{a}\cdot\de\bx,
+          </me>
+          where <m>C(t)</m> is a circuit consisting of the same fluid particles
+          as time proceeds, then
+          <me>
+            \dd{\mathcal{C}}{t}=\int_{C(t)}
+            \left(\pd{\mathbf{a}}{t}
+            +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx.
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <figure xml:id="line-integral-evolution-fig">
+            <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
+              The inset shows the relationship between the two curves.</caption>
+            <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
+          </figure>
+          We write
+          <me>
+              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+              \left(\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+              -\int_{C(t)}\mathbf{a}(\bx,t)\cdot\de\bx\right)
+          </me>
+          and note that
+          <md>
+            <mrow>
+              &amp;\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}\mathbf{a}\left(\bx+\bu(x,t)\de t+\dots,t+\de t\right)\cdot
+              \left(\bx+\de\bx+\bu(\bx+\de\bx,t)\de t-bx-\bu(\bx,t)\de t\right)
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}\left(\mathbf{a}(\bx,t)+\pd{\mathbf{a}}{t}(\bx,t)\de t
+              +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t+\dots\right)\cdot
+              \left(\de\bx+\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t\right)
+            </mrow>
+          </md>
+          Hence
+          <me>
+              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+              \int_{C(t)}\left(
+                \mathbf{a}(\bx,t)\cdot\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t
+                +\pd{\mathbf{a}}{t}(\bx,t)\de t\cdot\de\bx
+                +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t\cdot\de\bx
+                +\dots\right)
+          </me>
+        </p>
+      </solution>
+    </exercise>
 
     <exercise xml:id="ex-axisymmetric-flow">
       <title>Axisymmetric flow</title>
