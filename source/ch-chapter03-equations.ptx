@@ -485,7 +485,10 @@
             case where the desired function of integration, <m>f</m>, is proportional to the
             density, i.e. <m>f = \rho h</m> for any continuously differentiable <m>h</m>. Indeed
             consider a moving volume <m>V(t)</m>, and a density <m>\rho</m> that satisfies the
-            continuity equation <xref ref="eqn-consvmass1" /> or <xref ref="eqn-consvmass2" />. Then <men
+            continuity equation <xref ref="eqn-consvmass1" /> or <xref ref="eqn-consvmass2" />.</p>
+            
+            <p>Then
+               <men
               xml:id="eqn-cor-convmass">
               \dd{}{t} \iiint_{V(t)} \rho h \, \de{V} = \iiint_{V(t)} \rho \DD{h}{t} \, \de{V}.
             </men>
@@ -584,8 +587,12 @@
         <statement>
           <p> In the case of <em>inviscid fluids</em>, we assume that the surface pressure exerted
             on (interior) volume elements is accounted solely by a pressure, <m>p</m>, which acts in
-            the inward normal direction at each point, with <m>F_n \bn = -p \bn</m>. Consequently,
-            the surface force, given by <xref ref="eqn-momentum-force" />, is <men
+            the inward normal direction at each point, with <me>F_n \bn = -p \bn.
+            </me></p>
+            
+            <p>Consequently,
+            the surface force, given by <xref ref="eqn-momentum-force" />, is 
+            <men
               xml:id="eqn-eqn-momentum-pressure">
               \iint_{\partial V} (-p) \bn \, \de{S} = \iiint_V (-\nabla p) \, \de{V}.
             </men>
@@ -596,11 +603,33 @@
         </statement>
 
         <proof>
-          <p> The result follows by a corollary of the diverence theorem. The divergence theorem is <me>
-            \iiint_V \nabla \cdot \bF \, \de{V} = \iint_{\partial V} \bF \cdot \bn \, \de{S}.
+          <p> The result follows by applying the divergence theorem to each component of, 
+          <me>
+            F_i = -p \be_i, \qquad i = 1, 2, 3.
+          </me></p>
+
+          <p>
+          Applying it once, we have 
+            <me>
+            \iiint_V \nabla \cdot F_i \, \de{V} = \iint_{\partial V} (-p)\be_i \cdot \bn \, \de{S}.
             </me>
-            Let <m>\bF = p \boldsymbol{c}</m> where <m>\boldsymbol{c} = [1, 1, 1]</m> and apply to
-            the above. </p>
+          </p>
+
+          <p>
+            Note that the LHS is:
+            <me>
+              \iiint_V (- \nabla p)_i \, \de{V}
+            </me>
+            the ith element of <m>-\nabla p</m>.
+          </p>
+
+          <p>
+            Now add up the above for the three elements of <m>i = 1, 2, 3</m>, and use the shorthand notation for the divergence of a vector field: 
+            <me>
+              \nabla \cdot \bF = \sum_{i=1}^3 (\nabla \cdot F_i)\be_i = (-\nabla p)
+            </me>
+            hence establishing the theorem.
+          </p>
         </proof>
       </theorem>
 

@@ -1759,7 +1759,7 @@
 
         <li>
           <p>
-           the flux and fluid force on a surface consisting of a plate given by the line <m>y = -x + 1</m> with <m>x > 0</m>.  
+           the flux and fluid force on a surface consisting of a plate given by the line <m>y = -x + 1</m> with <m>0 \leq x \leq 1</m>.  
           </p>
         </li>
       </ul>

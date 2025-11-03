@@ -155,6 +155,88 @@
         </p>
       </subsubsection>
     </subsection>
+
+    <section xml:id="sec-waterwaves-linearisation">
+      <title>Linearisation of the water-wave equations</title>
+
+      <p>
+        We have successfully derived the full water-wave equations for a potential fluid. They are as follows.
+      </p>
+
+      <theorem xml:id="thm-waterwaves-equations">
+        <statement>
+          <p>
+           The governing equations for a potential flow modelling deep water waves is: 
+           <mdn>
+            <mrow> \nabla^2 \phi = 0 &amp; \text{in the flow domain}</mrow>
+           </mdn> 
+          </p>
+        </statement>
+      </theorem>
+      
+      
+    </section>
+  </section>
+
+  <section xml:id="sec-wave-parameters">
+    <title>Wave parameters</title>
+
+    <p>
+      A general travelling wave is written as 
+      <men xml:id="eqn-travelling-wave">
+        \eta = a\sin\left[ kx - \omega t \right].
+      </men>
+      An additional phase, e.g. in <m>\sin(kx - \omega t - \beta)</m> can be included but this can be removed through a shift in space or time. What do the quantities <m>k</m> and <m>\omega</m> represent?
+    </p>
+
+    <p>
+     We can factor out the <m>k</m> and obtain 
+     <me>
+      \eta = a\sin \left[k\left( x - \frac{\omega}{k}t\right)\right].
+     </me>
+     The quantity <m>k</m> is called the <em>wavenumber</em>. If we define it instead to be 
+     <men xml:id="eqn-wavenumber">
+      k \equiv \frac{2\pi}{\lambda},
+     </men>
+      then we see that shifting <m>x</m> by <m>\pm \lambda</m> does not change the wave. The quantity <m>\lambda</m> is called the <em>wavelength</em>.
+    </p>
+
+    <p>
+      Let us now turn to the quantity <m>\omega/k</m>. If we introduce
+      <men xml:id="eqn-wavespeed">
+        c \equiv \frac{\omega}{k},
+      </men>
+      then <m>c</m> is called the <em>phase speed</em>. It corresponds to the speed at which the "phase" of the wave (the crests and troughs) propagate.
+    </p>
+
+    <p>
+      At a fixed location in space, what is the time that it takes for the condition at this point to repeat itself? It is the time required for the wave to travel one wavelength, <m>\lambda</m>. Hence this is defined as <em>the period</em> of the wave:
+      <men xml:id="eqn-wave-period">
+        T \equiv \frac{\lambda}{c}.
+      </men>
+    </p>
+
+    <p>
+      These concepts can be generalised to wave in a three-dimensional fluid, where we would write instead
+      <men xml:id="eqn-wave-3d">
+        \eta = a\sin(kx + ly + mz - \omega t) = a \sin(\boldsymbol{K} \cdot \bx - \omega t).
+    </men></p>
+
+    <p>
+    In this case, <m>\boldsymbol{K} = (k, l, m)</m> is the <em>wavenumber vector</em> and has magnitude <m>K = \sqrt{k^2 + l^2 + m^2}</m>. The wavelength is then 
+    <men xml:id="eqn-wave-3d-wavelength">
+      \lambda = \frac{2\pi}{K}.
+    </men>
+    </p>
+
+    <p>
+      The phase velocity is given by 
+      <men xml:id="eqn-3d-phase">
+        \boldsymbol{c} = \frac{\omega}{K} \frac{\boldsymbol{K}}{K}.
+      </men>
+      
+    </p>
+    
   </section>
 
   <section xml:id="sec-waterwaves-stokeswaves">
