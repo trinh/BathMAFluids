@@ -335,6 +335,40 @@
       </p>
     </exercise>
 
+    <exercise>
+      <title>Linar waves in a current</title>
+      
+      <p>
+        We now consider linear waves in a channel of depth <m>h</m>, as in the previous question. This time, however, assume that there is a uniform flow of speed <m>U</m> at infinity. Therefore, this time, we shall consider the velocity as expressed as 
+        <me>
+          u = U + \pd{\partial \phi}{x}, \qquad v = \pd{\partial \phi}{y},
+        </me>
+        and again linearise the necessary equations. 
+      </p>
+
+      <p>Linearise the associate free-surface equations, and show that this time, they produce
+        <me>
+          \pd{\phi}{y} = \pd{\eta}{t} + U \pd{\eta}{x}, \qquad \text{on $y = 0$},
+        </me>
+        and
+        <me>
+          \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad \text{on $y = 0$}.
+        </me>
+      </p>
+
+      <p>
+        Show finally that the the dispersion relation predicts possible waves of speeds
+        <me>
+          c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
+        </me>
+      </p>
+
+      <p>
+        The regime where the flow speed is less than <m>\sqrt{gh}</m> is known as subcritical. The regime where flow is greather than <m>\sqrt{gh}</m> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?
+      </p>
+      
+    </exercise>
+
 
     <exercise>
       <title>Fluids of different densities</title>
