@@ -63,20 +63,26 @@ w-\pd{\bu}{z}\cdot\nabla v\right)\\
 &amp;+\bj\left(\bu\cdot\nabla\left(\pd{u}{z}-\pd{w}{x}\right)+\pd{\bu}{z}\cdot\nabla
 u-\pd{\bu}{x}\cdot\nabla w\right)\\
 &amp;+\bk\left(\bu\cdot\nabla\left(\pd{v}{x}-\pd{u}{y}\right)+\pd{\bu}{x}\cdot\nabla
-v-\pd{\bu}{y}\cdot\nabla u\right),\\
-=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\cdot\nabla\bu\\
+v-\pd{\bu}{y}\cdot\nabla u\right),
+\end{align*}
+</div>
+<div class="para">At this point, note that we can see <span class="process-math">\(\bu\cdot\nabla\bomega\)</span> appearing in the components, but it is not so easy to see how to make out the terms of <span class="process-math">\(\bomega\cdot\nabla\bu\text{.}\)</span> Since we know what we are aiming for, we instead calculate</div>
+<div class="displaymath process-math">
+\begin{align*}
+&amp; \nabla \times(\bu \cdot \nabla)\bu
+-\left(\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu\right)\\
+=&amp;\bomega\cdot\nabla\bu\\
 &amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)\\
 &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)\\
 &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),\\
-=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu\\
-&amp;+\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)\\
+=&amp;\bi\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{u}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{u}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{u}{z}\right)\\
 &amp;+\bj\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{v}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{v}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{v}{z}\right)\\
 &amp;+\bk\left(\left(\pd{w}{y}-\pd{v}{z}\right)\pd{w}{x}+\left(\pd{u}{z}-\pd{w}{x}\right)\pd{w}{y}+\left(\pd{v}{x}-\pd{u}{y}\right)\pd{w}{z}\right)\\
 &amp;+\bi\left(\pd{u}{y}\pd{w}{x}+\pd{v}{y}\pd{w}{y}+\pd{w}{y}\pd{w}{z}-\pd{u}{z}\pd{v}{x}-\pd{v}{z}\pd{v}{y}-\pd{w}{z}\pd{v}{z}\right)\\
 &amp;+\bj\left(\pd{u}{z}\pd{u}{x}+\pd{v}{z}\pd{u}{y}+\pd{w}{z}\pd{u}{z}-\pd{u}{x}\pd{w}{x}-\pd{v}{x}\pd{w}{y}-\pd{w}{x}\pd{w}{z}\right)\\
 &amp;+\bk\left(\pd{u}{x}\pd{v}{x}+\pd{v}{x}\pd{v}{y}+\pd{w}{x}\pd{v}{z}-\pd{u}{y}\pd{u}{x}-\pd{v}{y}\pd{u}{y}-\pd{w}{y}\pd{u}{z}\right),\\
-=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu+\bomega\nabla\cdot\bu,\\
-=&amp;\bu\cdot\nabla\bomega-\bomega\cdot\nabla\bu,
+=&amp;\bomega\nabla\cdot\bu,\\
+=&amp;0,
 \end{align*}
 </div>
 <div class="para">where the final equality follows from incompressibility. Hence,</div>

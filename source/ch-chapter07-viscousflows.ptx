@@ -1909,6 +1909,13 @@
     </subsection>
   </section>
 
+  <section xml:id="sec-low-Reynolds-number-sphere">
+    <title>Low-Reynolds-number flow past a sphere</title>
+    <p>
+      We consider
+    </p>
+  </section>
+
 <!--<section xml:id="sec-streamfunction">
   <title>Streamfunction formulation for two-dimensional flow</title>
   In two dimensions, see the equations in <xref ref="remark-navierstokes-components"/>
@@ -2120,7 +2127,7 @@
       <task>
         <statement>
           <p>
-            Given that the flow field is
+            Given that the velocity field is
             <me>
               u=\alpha y+Ax+B,\quad v=-Ay+Dx+C,
             </me>
@@ -2129,7 +2136,7 @@
             Simplify the velocity components <m>u</m> and <m>v</m>.
             (Note that the fact that the coefficients on the terms
             <m>Ax</m> in <m>u</m> and <m>-Ay</m> in <m>v</m> are equal and opposite
-            is required to ensure incompressibility of the fluid <ndash/>).
+            is required to ensure incompressibility of the fluid).
           </p>
         </statement>
         <solution>
@@ -2149,7 +2156,7 @@
             </me>
             Hence
             <me>
-              u=\alpha\l(y-kx\r),\quad v=\alpha k\l(y-kx\r).
+              u=\alpha\left(y-kx\right),\quad v=\alpha k\left(y-kx\right).
             </me>
           </p>
         </solution>
@@ -2171,9 +2178,9 @@
               \boldsymbol{i}=\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}},\qquad
               \boldsymbol{j}=\sin\theta\hat{\boldsymbol{\xi}}+\cos\theta\hat{\boldsymbol{\eta}},
             </me>
-            where <m>{\bf i}</m>, <m>{\bf j}</m> are unit vectors in the <m>x</m>-
-            and <m>y</m>-directions and <m>\hat{\boldsymbol{\xi}}</m>, <m>\hat{\boldsymbol{\eta}}</m>
-            are unit vectors in the <m>\xi</m>- and <m>\eta</m>-directions and <m>\theta</m>
+            where <m>\boldsymbol{i}</m>, <m>\boldsymbol{j}</m> are unit vectors in the <m>x</m>-
+            and <m>y</m>-directions, respectively, and <m>\hat{\boldsymbol{\xi}}</m>, <m>\hat{\boldsymbol{\eta}}</m>
+            are unit vectors in the <m>\xi</m>- and <m>\eta</m>-directions, respectively, and <m>\theta</m>
             is the angle between the plate and the <m>x</m>-axis.
             You may use the fact that <m>\cos\theta=1/(\sqrt{1+k^2})</m>,
             <m>\sin\theta=k/(\sqrt{1+k^2})</m> and

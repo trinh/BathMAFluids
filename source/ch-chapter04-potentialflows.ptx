@@ -178,7 +178,10 @@
    <idx><h>line source</h></idx> 
 
    <p>
-   We aim to derive the potential and velocity for a <em>line source</em>, imagined as the flow consisting of a point source or point sink that ejects/drains fluid from a point in space. Since it would be expected for the potential to be axisymmetric, we attempt to solve <m>\nabla^2 \phi = 0</m> in plane polar coordinates. This is given by
+   We aim to derive the potential and velocity for a <em>line source</em>, imagined as the flow consisting
+   of a point source or point sink that ejects/drains fluid from a point in space.
+   Since it would be expected for the potential to be axisymmetric,
+   we attempt to solve <m>\nabla^2 \phi = 0</m> in plane polar coordinates. This is given by
    <me>
     \nabla^2 \phi = \frac{1}{r} \pd{}{r}\left(r \pd{\phi}{r}\right) + \frac{1}{r^2} \pd{^2 \phi}{\theta^2} = 0.
    </me>
@@ -264,7 +267,7 @@
   </subsection>
 </section>
 
-  <section>
+  <section xml:id="sec-streamfunction">
    <title>The streamfunction</title>
 <introduction>
    <p>
@@ -526,7 +529,8 @@
    <idx><h>line vortex</h></idx>
 
    <p>
-    The fundamental solution for the streamfunction, in plane polar coordinates, is the axisymmetric solution, 
+    The fundamental solution for the streamfunction, in plane polar coordinates,
+    is the axisymmetric solution, 
     <men xml:id="eqn-streamfunction-linevortex">
       \psi = -\frac{\Gamma}{2\pi}\log r,
     </men>
@@ -546,9 +550,9 @@
 
    <p>
     Recall that the radial and angular velocities are given by <xref ref="eqn-streamfunction-polar"/>. Therefore, we see that the velocity vector is given by 
-    <me>
+    <men xml:id="eq-u-line-vortex">
       \bu = -\pd{\psi}{r} \be_{\theta} = \frac{\Gamma}{2\pi r} \be_{\theta},
-    </me>
+    </men>
     and thus this flow corresponds to entirely circular trajectories orbiting the origin, and with angular velocity increasing as <m>r \to 0</m>.
    </p>
 
@@ -562,9 +566,9 @@
 
    <p>
     Choosing <m>C</m> to be the circle of radius <m>r = a</m>, we have <m>\de{\bx} = a \be_{\theta} \de{\theta}</m>. Then the circulation is given by
-    <me>
+    <men xml:id="eq-line-vortex-circulation">
       \oint_C \bu \cdot \de{\bx} = \int_0^{2\pi} \frac{\Gamma}{2\pi a} \be_{\theta} \cdot \be_{\theta} a \de\theta = \Gamma.
-    </me>
+    </men>
     So indeed this gives us an intuitive understanding of <m>\Gamma</m>. Notice that <m>\Gamma \gt 0</m> corresponds to flow in the anticlockwise sense, and <m>\Gamma \lt 0</m> corresponds to flow in the clockwise sense.
    </p>
 
@@ -900,9 +904,9 @@
 
       <p>
         We can verify that the complex potential for a line vortex is given by
-       <me>
+       <men xml:id="eq-line-vortex-complex-potential">
         f(z) = -\frac{\im \Gamma}{2\pi} \log z.
-       </me>
+       </men>
        This can be compared to  <xref ref="example-streamfunction-linevortex"/>.
       </p>
 

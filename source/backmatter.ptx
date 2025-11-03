@@ -45,7 +45,7 @@
         <p>
           We write a position vector in Cartesians as
           <men xml:id="eq-rcart">
-            \boldsymbol{r}=x{\bf i}+y{\bf j}+z{\bf k},
+            \boldsymbol{r}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k},
           </men>
           and as
           <men xml:id="eq-rpol">
@@ -64,21 +64,25 @@
           Note that <xref ref="eq-cartpol"/> can be derived by rearranging
           <xref ref="eq-polcart"/>, and vice versa.
           You also need to know the following definitions of the unit vectors:
-          <men xml:id="eq-polarcartunitvectors">
-            \hat{\boldsymbol{r}}=
-            \left(\begin{matrix}
-              \cos\theta\\\sin\theta\\0
-            \end{matrix}\right)
-            =\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j},
-            \quad
-            \hat{\boldsymbol{\theta}}=
-            \left(\begin{matrix}
-              -\sin\theta\\\cos\theta\\0
-            \end{matrix}\right)
-            =-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
-            \quad
-            \hat{\boldsymbol{z}}=\hat{\boldsymbol{k}},
-          </men>
+          <mdn>
+            <mrow xml:id="eq-polarcartunitvectors-r">
+              \hat{\boldsymbol{r}}=
+              \left(\begin{matrix}
+                \cos\theta\\\sin\theta\\0
+              \end{matrix}\right)
+              =\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j},
+            </mrow>
+            <mrow xml:id="eq-polarcartunitvectors-theta">
+              \hat{\boldsymbol{\theta}}=
+              \left(\begin{matrix}
+                -\sin\theta\\\cos\theta\\0
+              \end{matrix}\right)
+              =-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
+            </mrow>
+            <mrow xml:id="eq-polarcartunitvectors-z">
+              \hat{\boldsymbol{z}}=\hat{\boldsymbol{k}},
+            </mrow>
+          </mdn>
           and it might help to know that
           <m>\hat{\boldsymbol{\theta}}=\de\hat{\boldsymbol{r}}/\de\theta</m>,
           which can be used to remember <m>\boldsymbol{\theta}</m> if you struggle.
@@ -91,7 +95,9 @@
             \boldsymbol{k}=\hat{\boldsymbol{z}},
           </men>
           which can if necessary be derived by rearranging the formulae
-          <xref ref="eq-polarcartunitvectors"/>.
+          <xref ref="eq-polarcartunitvectors-r"/>,
+          <xref ref="eq-polarcartunitvectors-theta"/> and
+          <xref ref="eq-polarcartunitvectors-z"/>.
           As you might expect,
           these equations are all consistent with one another,
           so if you substitute <xref ref="eq-cartpolarunitvectors"/> into <xref ref="eq-rcart"/>
@@ -138,7 +144,9 @@
                 <ul>
                   <li>
                     <p>
-                      Substitute the expressions <xref ref="eq-polarcartunitvectors"/>
+                      Substitute the expressions <xref ref="eq-polarcartunitvectors-r"/>,
+                      <xref ref="eq-polarcartunitvectors-theta"/> and
+                      <xref ref="eq-polarcartunitvectors-z"/>
                       into <xref ref="eq-upolar"/>, and then use
                       <xref ref="eq-cartpol"/> to get everything in terms of
                       the Cartesian coordinates <m>x</m> and <m>y</m>.
@@ -152,21 +160,36 @@
                       Alternatively, take the dot product of <xref ref="eq-ucart"/>
                       with <m>\hat{\boldsymbol{r}}</m>, <m>\hat{\boldsymbol{\theta}}</m>
                       and <m>\hat{\boldsymbol{z}}</m>, respectively,
-                      and simplify the resulting expressions using <xref ref="eq-polarcartunitvectors"/>,
+                      and simplify the resulting expressions using
+                      <xref ref="eq-polarcartunitvectors-r"/>,
+                      <xref ref="eq-polarcartunitvectors-theta"/> and
+                      <xref ref="eq-polarcartunitvectors-z"/>,
                       which gives
-                      <men xml:id="eq-cartcyl">
-                        u_r=u\cos\theta+v\sin\theta,\quad
-                        u_\theta=-u\sin\theta+v\cos\theta,\quad
-                        u_z=w.
-                      </men>
+                      <mdn>
+                        <mrow xml:id="eq-cartcyl-r">
+                          u_r=u\cos\theta+v\sin\theta,
+                        </mrow>
+                        <mrow xml:id="eq-cartcyl-theta">
+                          u_\theta=-u\sin\theta+v\cos\theta,\quad
+                        </mrow>
+                        <mrow xml:id="eq-cartcyl-z">
+                          u_z=w.
+                        </mrow>
+                      </mdn>
                       Similarly, taking the dot product of <xref ref="eq-upolar"/> with
                       <m>\boldsymbol{i}</m>, <m>\boldsymbol{j}</m> and <m>\boldsymbol{k}</m>,
                       respectively, and simplifying leads to
-                      <men xml:id="eq-cylcart">
-                        u=u_r\cos\theta-u_\theta\sin\theta,\quad
-                        v=u_r\sin\theta+u_\theta\cos\theta,\quad
-                        w=u_z.
-                      </men>
+                      <mdn>
+                        <mrow xml:id="eq-cylcart-r">
+                          u=u_r\cos\theta-u_\theta\sin\theta,\quad
+                        </mrow>
+                        <mrow xml:id="eq-cylcart-theta">
+                          v=u_r\sin\theta+u_\theta\cos\theta,\quad
+                        </mrow>
+                        <mrow xml:id="eq-cylcart-z">
+                          w=u_z.
+                        </mrow>
+                      </mdn>
                     </p>
                   </li>
                 </ul>
@@ -177,8 +200,11 @@
         <p>
           <em>What you need to know:</em>
           You need to remember the formulae <xref ref="eq-polcart"/> and <xref ref="eq-cartpol"/>,
-          but you would be given <xref ref="eq-polarcartunitvectors"/> or
-          <xref ref="eq-cartpolarunitvectors"/> in an exam question,
+          but you would be given
+          <xref ref="eq-polarcartunitvectors-r"/>,
+          <xref ref="eq-polarcartunitvectors-theta"/> and
+          <xref ref="eq-polarcartunitvectors-z"/>
+          or <xref ref="eq-cartpolarunitvectors"/> in an exam question,
           but you need to be able to use them to do the conversion yourself.
         </p>        
       </subsection>
@@ -188,7 +214,8 @@
           Two-dimensional plane polars <m>(r,\theta)</m> work like the first two coordinates
           of cylindrical polars.
           Thus converting between plane polars and Cartesian coordinates works the same
-          as for cylindrical coordinates and Cartesians, except there is no third dimension.
+          as for cylindrical coordinates and Cartesians
+          <xref ref="subsec-Cartesian-to-cylindrical-polar"/>, except there is no third dimension.
         </p>
         <p>
           See for example <xref ref="ex-eulerian-lagrangian"/> Part (b).
@@ -213,11 +240,17 @@
             x=r\sin\theta\cos\phi,\qquad y=r\sin\theta\sin\phi,\qquad z=r\cos\theta,
           </men>
           and these formulae for conversion back:
-          <men xml:id="eq-cartsph">
-            r=\sqrt{x^2+y^2+z^2},\qquad
-            \theta=\arctan\left(\frac{\sqrt{x^2+y^2}}{z}\right),\qquad
-            \phi=\arctan\left(\frac{y}{x}\right).
-          </men>
+          <mdn>
+            <mrow xml:id="eq-cartsph-r">
+              r=\sqrt{x^2+y^2+z^2},
+            </mrow>
+            <mrow xml:id="eq-cartsph-theta">
+              \theta=\arctan\left(\frac{\sqrt{x^2+y^2}}{z}\right),\qquad
+            </mrow>
+            <mrow xml:id="eq-cartsph-z">
+              \phi=\arctan\left(\frac{y}{x}\right).
+            </mrow>
+          </mdn>
           The unit vectors in spherical polars are given by
           <mdn>
             <mrow xml:id="eq-sphpolarcartunitvectors-r">
@@ -225,12 +258,12 @@
               =\sin\theta\cos\phi\,\boldsymbol{i}+\sin\theta\sin\phi\,\boldsymbol{j}+\cos\theta\,\boldsymbol{k},
             </mrow>
             <mrow xml:id="eq-sphpolarcartunitvectors-theta">
-              \hat{\btheta}=&amp;\pd{\hat{\boldsymbol{r}}}{\theta}
+              \hat{\boldsymbol{\theta}}=&amp;\pd{\hat{\boldsymbol{r}}}{\theta}
               =\left(\begin{matrix}\cos\theta\cos\phi\\\cos\theta\sin\phi\\-\sin\theta\end{matrix}\right)
               =\cos\theta\cos\phi\,\boldsymbol{i}+\cos\theta\sin\phi\,\boldsymbol{j}-\sin\theta\,\boldsymbol{k},
             </mrow>
             <mrow xml:id="eq-sphpolarcartunitvectors-z">
-              \hat{\bphi}=&amp;\left.\pd{\hat{\bf r}}{\phi}\right/\left|\pd{\hat{\bf r}}{\phi}\right|=\left(\begin{array}{c}-\sin\phi\\\cos\phi\\0\end{array}\right)=-\sin\phi\,{\bf i}+\cos\phi\,{\bf j},
+              \hat{\boldsymbol{\phi}}=&amp;\left.\pd{\hat{\bf r}}{\phi}\right/\left|\pd{\hat{\bf r}}{\phi}\right|=\left(\begin{array}{c}-\sin\phi\\\cos\phi\\0\end{array}\right)=-\sin\phi\,{\bf i}+\cos\phi\,{\bf j},
             </mrow>
           </mdn>
           and rearranging these leads to
@@ -252,7 +285,9 @@
                 As with Cartesians to cylindrical polars,
                 to convert a scalar quantity from Cartesians to spherical polars
                 you substitute <xref ref="eq-sphcart"/> into the expression and
-                to convert the other way use <xref ref="eq-cartsph"/>.
+                to convert the other way use
+                <xref ref="eq-cartsph-r"/>, <xref ref="eq-cartsph-theta"/>
+                and <xref ref="eq-cartsph-z"/>.
               </p>
             </li>
             <li>
@@ -275,7 +310,8 @@
                     <p>
                       Substitute the expressions <xref ref="eq-sphpolarcartunitvectors-r"/>,
                       <xref ref="eq-sphpolarcartunitvectors-theta"/> and <xref ref="eq-sphpolarcartunitvectors-z"/>
-                      into <xref ref="eq-usph"/> and use <xref ref="eq-cartsph"/>
+                      into <xref ref="eq-usph"/> and use
+                      <xref ref="eq-cartsph-r"/>, <xref ref="eq-cartsph-theta"/> and <xref ref="eq-cartsph-z"/>
                       to get everything in terms of the Cartesian coordinates <m>(x,y,z)</m>.
                       To convert from Cartesians to sphericals, substitute <xref ref="eq-cartsphpolarunitvectors-i"/>,
                       <xref ref="eq-cartsphpolarunitvectors-j"/> and  <xref ref="eq-cartsphpolarunitvectors-k"/>
@@ -336,7 +372,9 @@
           <em>What you need to know:</em>
           You might have to do some limited converting of expressions between
           spherical and Cartesian coordinate systems, but we would give you all
-          the formulae <xref ref="eq-cartsph"/>, <xref ref="eq-sphcart"/>
+          the formulae <xref ref="eq-cartsph-r"/>, 
+          <xref ref="eq-cartsph-theta"/> and <xref ref="eq-cartsph-z"/>,
+          and <xref ref="eq-sphcart"/>,
           and the equations for conversion of the unit vectors,
           as they are difficult to remember. 
           <me>
@@ -429,7 +467,8 @@
     
     <biblio xml:id="ref-ncfmf"><p>Shapiro, A. (Ed.) (1961). National Committee for Fluid Mechanics Films. Available at https://web.mit.edu/hml/ncfmf.html.</p></biblio>
     
-    <biblio xml:id="ref-white-9"><p>White, F. M. and Xue H. (2021). Fluid mechanics (ninth edition). McGraw--Hill, New York.</p></biblio>
+    <biblio xml:id="ref-white-9"><p>White, F. M. and Xue H. (2021). Fluid mechanics (ninth edition). McGraw--Hill, New York.
+      Note that this book is available online in the University of Bath's collection, so you should easily be able to view it.</p></biblio>
     
     <biblio xml:id="ref-white-5"><p>White, F. M. (2003). Fluid mechanics (fifth edition). McGraw--Hill, New York.</p></biblio>
     
