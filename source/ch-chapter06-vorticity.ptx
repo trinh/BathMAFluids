@@ -708,7 +708,7 @@
           into a number of real-world problems.
         </p>
       </remark>
-      The following corollary is a particularly useful application of the Helmholtz vortex theorems.
+      The following corollary is a useful application of the Helmholtz vortex theorems.
       <corollary xml:id="cor-vortex-movement">
         <title>The Helmholtz principle</title>
         <statement>
@@ -730,26 +730,110 @@
       <remark>
         <title>Application of the Helmholtz principle</title>
         <p>
-          In an otherwise irrotational flow, we can use the Helmholtz principle to
-          find the motion of a line vortex. In particular, we can make use of the
-          following techniques:
+          In the case of a two-dimensional flow containing a line vortex that is everywhere irrotational
+          (apart from in the line vortex core), we can use the Helmholtz principle to
+          find the motion of the line vortex. In particular, to find the evolution of the flow
+          we can make use of the
+          following techniques that were covered in <xref ref="ch-chapter04-potentialflows"/>:
         </p>
         <ul>
           <li>
             <p>
-              the method of images <xref ref="sec-method-of-images"/>
+              the method of images <xref ref="sec-method-of-images"/>, and
             </p>
           </li>
           <li>
             <p>
-              and conformal mapping <xref ref="sec-conformal-mapping"/>
+              conformal mapping <xref ref="sec-conformal-mapping"/>.
+            </p>
+          </li>
+        </ul>
+      </remark>
+      <example>
+        <title>Vortex pair</title>
+        <p>
+          We assume two-dimensional flow, and consider the evolution of two line vortices
+          of equal and opposite strengths initially a distance <m>2d</m> apart at locations
+          <m>(x,y)=(\pm d,0</m> with the vortex at <m>(d,0)</m> having strength <m>\Gamma</m>
+          and that at <m>(-d,0)</m> having strength <m>-\Gamma</m>.
+        </p>
+        <p>
+          The vortex at <m>(d,0)</m> will move under the influence of that at <m>(-d,0)</m>
+          with speed <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction. Similarly, the vortex
+          <m>(-d,0)</m> will also move
+          with speed <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction.
+          Since their separation remains constant, the two vortices will continue to move at
+          a constant speed <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction.
+        </p>
+        <p>
+          In the frame of reference moving with the vortices, there is a uniform flow
+          <m>\Gamma/(4\pi d)</m> in the <m>+y</m>-direction and the flow due to
+          each of the vortices.
+          The complex potential is the sum of the complex potentials due to these three elements:
+          <me>
+            f=-\frac{\im \Gamma z}{4\pi d}
+            -\frac{\im \Gamma}{2\pi}\log\left(z-d\right)
+            +\frac{\im \Gamma}{2\pi}\log\left(z+d\right).
+          </me>
+          The streamfunction is the imaginary part of this:
+          <md>
+            <mrow>
+              \psi=&amp;-\frac{\Gamma x}{4\pi d}
+              -\frac{\Gamma}{2\pi}\log\left|z-d\right|
+              +\frac{\Gamma}{2\pi}\log\left|z+d\right|
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\Gamma}{4\pi}\left(\frac{x}{d}+2\log\left|\frac{z-d}{z+d}\right|\right)
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\Gamma}{4\pi}\left(\frac{x}{d}+\log\left(\frac{(x-d)^2+y^2}{(x+d)^2+y^2}\right)\right).
+            </mrow>
+          </md>
+        </p>
+        <p>
+          To help with plotting the streamfunction, we note that:
+        </p>
+        <ul>
+          <li>
+            <p>
+              The derivative of the complex potential is
+              <me>
+                f'=-\frac{\im\Gamma}{4\pi}\left(\frac1d+\frac{2}{z-d}-\frac{2}{z+d}\right),
+              </me>
+              which equals zero at the points <m>z=\pm\sqrt{3}\im d</m>,
+              so these are stagnation points of the flow.
+            </p>
+          </li>
+          <li>
+            <p>
+              We have <m>\psi=0</m> on the line <m>x=0</m>, so this is a streamline.
+            </p>
+          </li>
+          <li>
+            <p>
+              Far from the vortices (in any direction), the streamfunction is approximately
+              <m>\psi\sim-\Gamma x/(4\pi d)</m>, so the streamlines are approximately vertical lines.
+            </p>
+          </li>
+          <li>
+            <p>
+              As we approach the vortex at <m>z=d</m>, <m>\psi</m> tends to <m>-\infty</m> and 
+              as we approach the vortex at <m>z=-d</m>, <m>\psi</m> tends to <m>+\infty</m>.
             </p>
           </li>
         </ul>
         <p>
-          to find the flow evolution.
+          These points imply that there is a curve on which <m>\psi=0</m> in the right-half plane.
+          This curve joins the two stagnation points and goes around the vortex.
+          Similarly, there is a curve on which <m>\psi=0</m> in the left-half plane, and
+          these two curves are reflections of one another.
         </p>
-      </remark>
+        <p>
+          If we dye the fluid within these two curves, we would create a blob of fluid surrounding the
+          vortices. An observer would see this blob of fluid travelling at the speed
+          <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction without changing shape.
+        </p>
+      </example>
       <example>
         <title>Example: Wing tip vortices</title>
         <statement>
@@ -846,16 +930,172 @@
   </section>
   <section xml:id="sec-axisymmetric-flow">
     <title>Axisymmetric flow</title>
-    <subsection xml:id="subsec-stokes-streamfunction">
-      <title>The Stokes streamfunction</title>
+    <introduction>
       <p>
-        This is
+        In the special case in which the flow possesses axisymmetry,
+        you might not be surprised to learn that the equations simplify considerably.
+        In fact, axisymmetry can be viewed as a reduction of the dimension
+        of the problem and axisymmetric flows share some features in common with
+        two-dimensional flows.
       </p>
+      <definition>
+        <title>Axisymmetric flow</title>
+        <statement>
+          <p>
+            Given an axis of symmetry, an axisymmetric flow must possess:
+          </p>
+          <ul>
+            <li>
+              <p>
+                rotational symmetry about the axis, meaning the flow is unaffected by a
+                rotation through any angle about the axis, and
+              </p>
+            </li>
+            <li>
+              <p>
+                reflectional symmetry in any plane containing the axis.
+              </p>
+            </li>
+          </ul>
+        </statement>
+      </definition>
+      <remark>
+        <p>
+          Note that rotationally symmetric flows are not in general axisymmetric.
+          Working in cylindrical polar coordinates <m>(r,\theta.z)</m>
+          centred on the axis of symmetry,
+          any flow that is independent of <m>\theta</m> is rotationally symmetric.
+          In order to have the stronger property of being axisymmetric,
+          the flow must also satisfy <m>u_{\theta}=0</m>.
+        </p>
+        <p>
+          A flow <m>\bu=f(r,z,t)\be_{\theta}</m> is rotationally symmetric but not axisymmetric,
+          for example a line vortex <xref ref="example-streamfunction-linevortex"/>.
+        </p>
+      </remark>
+    </introduction>
+    <subsection xml:id="subsec-stokes-streamfunction">
+      <title>The Stokes streamfunction for axisymmetric flow</title>
+      <definition xml:id="def-stokes-streamfunction">
+        <title>The Stokes streamfunction</title>
+        <statement>
+          <p>
+            In cylindrical polar coordinates, <m>(r,\theta.z)</m>,
+            we define the Stokes streamfunction <m>\Psi(r,z,t)</m> by
+            <men xml:id="eq-stokes-streamfunction-cylindrical">
+              \bu = \nabla \times \left(\frac{\Psi}{r}\be_{\theta}\right),
+            </men>
+            and in spherical polar coordinates, <m>(r,\theta.\phi)</m>,
+            we define <m>\Psi(r,\theta,t)</m> by
+            <men xml:id="eq-stokes-streamfunction-spherical">
+              \bu = \nabla \times \left(\frac{\Psi}{r\sin\theta}\be_{\phi}\right).
+            </men>
+          </p>
+        </statement>
+      </definition>
+      <remark>
+        <p>
+          Note that you would be given the formula for gradient, divergence and curl in
+          cylindrical or spherical polar coordinates.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          The definitions <xref ref="eq-stokes-streamfunction-cylindrical"/>
+          in cylindrical polar coordinates and <xref ref="eq-stokes-streamfunction-cylindrical"/>
+          in spherical polar coordinates are equivalent since <m>\be_{\theta}/r</m> in
+          cylindrical polar coordinates and <m>\be_{\phi}/(r\sin\theta)</m> in
+          spherical polar coordinates are equal to each other.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          Recall the streamfunction for two-dimensional flow that was introduced in
+          <xref ref="sec-streamfunction"/>:
+          <me>
+            \bu = \nabla \times (\psi \bk).
+          </me>
+        </p>        
+      </remark>
+      <remark>
+        <p>
+          In cylindrical polar coordinates,
+          if we had written <m>\bu=\nabla\times\psi'\be_{\theta}</m>
+          instead of <xref ref="eq-stokes-streamfunction-cylindrical"/>,
+          we would find that <m>\psi'</m> is inversely proportional to <m>r</m>
+          on streamlines (instead of being constant).
+          This is why it is defined with the factor <m>1/r</m> before taking the curl.
+          Similar considerations apply in spherical polar coordinates.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          The velocity components corresponding to the definitions
+          <xref ref="def-stokes-streamfunction"/> are
+          in cylindrical polar coordinates
+          <men xml:id="streamfunction-velocity-cylindricals">
+            u_r=-\frac1r\pd{\Psi}{z},\quad
+            u_z=\frac1r\pd{\Psi}{r},
+          </men>
+          and in cylindrical polar coordinates
+          <men xml:id="streamfunction-velocity-sphericals">
+            u_r=\frac1{r^2\sin\theta}\pd{\Psi}{\theta},\quad
+            u_{\theta}=-\frac1{r\sin\theta}\pd{\Psi}{r}.
+          </men>
+        </p>
+      </remark>
+      <theorem xml:id="thm-Stokes-streamfunction-streamlines">
+        <title>The Stokes streamfunction is constant along streamlines</title>
+        <statement>
+          <p>
+            The Stokes streamfunction, as defined by <xref ref="eq-stokes-streamfunction-cylindrical"/>
+            or <xref ref="eq-stokes-streamfunction-cylindrical"/>, is constant along streamlines.
+          </p>
+        </statement>
+      </theorem>
+      <proof>
+        <p>
+          Since the definitions in cylindrical and spherical coordinates are equivalent, it suffices
+          to prove the theorem in spherical coordinates. In this case,
+          <me>
+            \bu\cdot\nabla\Psi
+            =u_r\pd{\Psi}{r}+\frac{u_{\theta}}r\pd{\Psi}{\theta}
+          </me>
+          and, substituting the velocity components <xref ref="streamfunction-velocity-sphericals"/>,
+          this equals zero. Hence <m>\Psi</m> is constant along streamlines.
+        </p>
+      </proof>
     </subsection>
-    <subsection xml:id="subsec-irrot-sphere">
-      <title>Irrotational flow past a sphere</title>
+    <subsection xml:id="subsec-streamfunction-vorticity">
+      <title>Relationship to vorticity</title>
       <p>
-        This is
+        In cylindrical polar coordinates, the vorticity is given by
+        <men>
+          \bomega=\omega\be_{\theta}
+        </men>
+        where
+        <men xml:id="eq-axisym-vorticity-cylindricals">
+          \omega=-\frac1r\left(r\pd{}{r}\left(\frac1r\pd{\Psi}{r}\right)+\pd{^2\Psi}{z^2}\right).
+        </men>
+        In spherical polar coordinates, the vorticity is
+        <men>
+          \bomega=\omega\be_{\phi}
+        </men>
+        where
+        <men xml:id="eq-axisym-vorticity-sphericals">
+          \omega=-\frac1{r\sin\theta}\left(\pd{^2\Psi}{r^2}+\frac{\sin\theta}{r^2}\pd{}{\theta}\left(\frac1{\sin\theta}\pd{\Psi}{\theta}\right)\right).
+        </men>
+        Note that the two expressions for <m>\omega</m> are equivalent, since <m>\be_{\theta}</m>
+        in cylindricals equals <m>\be_{\theta}</m> in spherical polar coordinates.      </p>
+      <p>
+        In cylindrical polar coordinates, the vorticity equation for axisymmetric flow is
+        <men xml:id="eq-vorticity-cylindricals">
+          \DD{}{t}\left(\frac{\omega}{r}\right)=0,
+        </men>
+        and in sphericals it is
+        <men xml:id="eq-vorticity-sphericals">
+          \DD{}{t}\left(\frac{\omega}{r\sin\theta}\right)=0.
+        </men>
       </p>
       <example>
         <title>Smoke rings</title>
@@ -877,14 +1117,177 @@
           and the second Helmholtz vortex theorem implies the vorticity must increase
           in proportion to distance from the axis so that
           the circulation remains constant. In <xref ref="ex-axisymmetric-flow"/>
-          you will show that
+          you will show that, in cylindrical polar coordinates,
           <me>
-            \DD{}{t}\left(\frac{\omega}{r}\)=0,
+            \DD{}{t}\left(\frac{\omega}{r}\right)=0,
           </me>
           which expresses the same result: the vorticity <m>\omega</m> increases in
           proportion to distance from axis <m>r</m>.
         </p>
+        <p>
+          Note also that, as commented in the movie, the smoke ring
+          self-propates. This is another application of the Helmholtz principle, as follows.
+          If we consider a part of the ring, it is subject to the velocity field arising
+          from all the other parts of the ring. All these parts contribute to a forward
+          motion, and this is true for all parts of the ring.
+        </p>
       </example>
+    </subsection>
+    <subsection xml:id="subsec-irrot-sphere">
+      <title>Irrotational flow past a sphere</title>
+      <p>
+        We consider a sphere of radius <m>a</m> travelling at a constant speed <m>U</m> through
+        a large reservoir of fluid and find the velocity field. We assume the sphere has been
+        travelling for long enough that the flow in a frame of reference moving with the sphere is steady.
+      </p>
+      <p>
+        <em>Proof that the flow is irrotational:</em>
+        We work in spherical polar coordinates in the frame of reference moving with the sphere and solve 
+        <xref ref="eq-vorticity-sphericals"/> to find the Stokes streamfunction.
+        Steady flow implies the simplification
+        <me>
+          \bu\cdot\nabla\left(\frac{\omega}{r\sin\theta}\right)=0,
+        </me>
+        which means that <m>\omega/(r\sin\theta)</m> is constant along streamlines.
+        As long as there are no closed streamlines, meaning that all streamlines
+        originate at infinity where <m>\omega</m> is zero, then <m>\omega</m>
+        must be zero everywhere and the flow is irrotational.
+      </p>
+      <p>
+        Setting the vorticity to zero and using the expression
+        <xref ref="eq-axisym-vorticity-sphericals"/>, we have to solve
+        <men xml:id="eq-sphere-irrotational-eq1">
+          \pd{^2\Psi}{r^2}
+          +\frac{\sin\theta}{r^2}\pd{}{\theta}\left(\frac1{\sin\theta}\pd{\Psi}{\theta}\right)=0
+        </men>
+      </p>
+      <p>
+        As <m>r\rightarrow\infty</m>, we require
+        <me>
+          u_r\sim-U\cos\theta,\quad
+          u_{\theta}\sim U\sin\theta.
+        </me>
+        Using the expressions given in <xref ref="streamfunction-velocity-sphericals"/>,
+        these conditions are equivalent to
+        <men xml:id="eq-sphere-irrotational-eq2">
+          \Psi\sim-\frac12Ur^2\sin^2\theta
+        </men>
+        as <m>r\rightarrow\infty</m>.
+      </p>
+      <p>
+        This suggests trying
+        <me>
+          \Psi=f(r)\sin^2\theta.
+        </me>
+        We substitute this into <xref ref="eq-sphere-irrotational-eq1"/>,
+        and find that it is a solution provided that
+        <me>
+          f''-\frac{2f}{r^2}=0,
+        </me>
+        which means that
+        <me>
+          f=Ar^2+\frac{B}{r},
+        </me>
+        where <m>A</m> and <m>B</m> are constants of integration.
+      </p>
+      <p>
+        We need to satisfy the condition at infinity <xref ref="eq-sphere-irrotational-eq2"/>
+        which gives <m>f\sim Ur^2/2</m> as <m>r\rightarrow\infty</m>,
+        and no penetration at the surface of the sphere, which,
+        using <xref ref="streamfunction-velocity-sphericals"/>,
+        is equivalent to <m>f=0</m> at <m>r=a</m>.
+      </p>
+      <p>
+        These boundary conditions can be satified by the choice <m>A=U/2</m>, <m>B=-Ua^2/2</m>,
+        and we have
+        <me>
+          \Psi=-\frac12U\left(r^2-\frac{a^3}{r}\right)\sin^2\theta.
+        </me>
+        This can be used to sketch the streamlines.
+      </p>
+      <p>
+        If required, we can use <xref ref="streamfunction-velocity-sphericals"/>
+        to find the velocity components
+        <me>
+          u_r=-U\left(1-\frac{a^3}{r^3}\right)\cos\theta,\quad
+          u_{\theta}=U\left(1+\frac{a^3}{2r^3}\right)\sin\theta.
+        </me>
+      </p>
+      <remark>
+        <title>Alternative method to find the flow using the velocity potential</title>
+        <p>
+          Note that we could also use the velocity potential
+          <xref ref="theorem-irrotational-potential"/>
+          to solve this problem. In this case we assume the flow is irrotational to start with.
+        </p>
+        <p>
+          Again we work in spherical polar coordinates moving at speed <m>U</m>
+          with the sphere with the axis pointing in the direction of travel and assume
+          the flow is axisymmetric.
+          Writing <m>/bu=\nabla\phi</m>, where <m>\phi</m> is the potential,
+          the flow is governed by the Laplace equation:
+          <me>
+            \frac1{r^2}\pd{}{r}\left(r^2\pd{\phi}{r}\right)
+            +\frac1{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{\phi}{\theta}\right)=0.
+          </me>
+          We solve this equation subject to boundary conditions of no penetration at <m>r=a</m>
+          and assume that, far from the sphere, the flow is <m>-U</m> along the axis:
+        </p>
+        <ul>
+          <li>
+            <p>
+              No penetration at the sphere's surface implies that <m>{\bf u}\cdot{\bf n}=0</m> there.
+              So <m>u_r=\pd{\phi}{r}=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              That the flow tends to <m>-U</m> implies that <m>u_r\rightarrow-U\cos\theta</m>
+              and <m>u_\theta\rightarrow U\sin\theta</m> as <m>r\rightarrow\infty</m>.
+              That is, <m>\pd{\phi}{r}\rightarrow-U\cos\theta</m> and
+              <m>\pd{\phi}{\theta}\rightarrow rU\sin\theta</m>.
+            </p>
+          </li>
+        </ul>
+        <p>
+          The boundary conditions as <m>r\rightarrow\infty</m> suggest trying
+          <m>\phi=f(r)\cos\theta</m>, and, with this assumption, Equation~\eqref{eq:laplacephisimp} becomes
+          <me>
+            \pd{^2f}{r^2}+\frac2r\pd{f}{r}-\frac{2f}{r^2}=0.
+          </me>
+          Trying <m>f=r^\alpha</m> yields <m>\alpha=1</m> or~<m>-2</m>. Thus
+          <me>
+            \phi=\left(Ar+\frac{B}{r^2}\right)\cos\theta,
+          </me>
+          and the boundary conditions at <m>r=a</m> imply <m>A-2B/a^3=0</m>,
+          and those as <m>r\rightarrow\infty</m> imply <m>A=-U</m>. Thus <m>A=-U</m> and <m>B=-Ua^3/2</m>,
+          <me>
+            \phi=-Ur\left(1+\frac{a^3}{2r^3}\right)\cos\theta,
+          </me>
+          and
+          <me>
+            u_r=\pd{\phi}{r}=-U\left(1-\frac{a^3}{r^3}\right)\cos\theta,\quad
+            u_\theta=\frac1r\pd{\phi}{\theta}=U\left(1+\frac{a^3}{2r^3}\right)\sin\theta.
+          </me>
+          This solution has the correct form as <m>r\rightarrow\infty</m>, and
+          at the surface of the sphere. It also agrees with the velocity field calculated
+          using the streamfunction method.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          At the spherical surface <m>r=a</m>, we have the velocity
+          <m>u_\theta=(3U/2)\sin\theta</m>.
+          In practical terms, the large pressure gradients created by this flow
+          would lead to <em>boundary layer separation</em>, and a large wake behind the sphere.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          In <xref ref="sec-low-Reynolds-number-sphere"/> we will calculate the flow past a sphere in a
+          low-Reynolds-number flow.
+        </p>
+      </remark>
     </subsection>
   </section>
 
@@ -948,13 +1351,120 @@
         </p>
       </answer>
     </exercise>
+    
+    <exercise xml:id="ex-circulation-vortex-tube">
+      <title>The circulation around a vortex tube</title>
+      <statement>
+        <p>
+          (Based on Exercise 5.5 in <xref ref="ref-acheson"/>).
+          Define a vortex tube.
+          Prove that the quantity
+          <me>
+            \Gamma = \int_S\bomega\cdot\bn\,\de S,
+          </me>
+          where <m>S</m> is any surface spanning the tube,
+          is the same for all such surfaces.
+          Relate this quantity to a circulation of the flow.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
+          define a `cylindrical' volume <m>V</m>,
+          whose ends are the the two surfaces <m>S_1</m> and <m>S_2</m>
+          and whose sides are the sides of the vortex tube,
+          and let <m>\Gamma_i = \int_S_i\bomega\cdot\bn_i\,\de S</m>,
+          for <m>i=1,2</m>.
+        </p>
+        <p>
+          Consider <m>\int_{\partial V}\bomega\cdot\bn\,\de S</m>.
+          This is equal to <m>\Gamma_1</m> minus <m>\Gamma_2</m>
+          plus the integral of <m>\bomega\cdot\bn</m> over the sides of the
+          cylinder.
+          On the sides of the cylinder, we have <m>\bomega\cdot\bn=0</m>.
+          Hence, <m>\Gamma_1=\Gamma_2</m> for any two such surfaces.
+        </p>
+        <p>
+          Stokes theorem implies that
+          <me>
+            \Gamma = \oint_C\bomega\times\de\bx,
+          </me>
+          where <m>C</m> is the curve around the edge of <m>S</m>,
+          which is the circulation.
+        </p>
+        <p>
+          Since the circulation is constant in time,
+          this implies the flux of vorticity through any vortex tube is
+          uniform and independent of time.
+        </p>
+      </solution>
+    </exercise>
 
     <exercise xml:id="ex-axisymmetric-flow">
       <title>Axisymmetric flow</title>
       <statement>
         <p>
-          Consider an axisymmetric flow. Show that the vorticity
-          is given by
+          (Based on Exercise 5.6 in <xref ref="ref-acheson"/>).
+          Show that if <m>\mathbf{a}(\bx,t)</m> is any suitably smooth vector field and
+          <me>
+            \mathcal{C}(t)=\int_{C(t)}\mathbf{a}\cdot\de\bx,
+          </me>
+          where <m>C(t)</m> is a circuit consisting of the same fluid particles
+          as time proceeds, then
+          <me>
+            \dd{\mathcal{C}}{t}=\int_{C(t)}
+            \left(\pd{\mathbf{a}}{t}
+            +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx.
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <figure xml:id="line-integral-evolution-fig">
+            <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
+              The inset shows the relationship between the two curves.</caption>
+            <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
+          </figure>
+          We write
+          <me>
+              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+              \left(\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+              -\int_{C(t)}\mathbf{a}(\bx,t)\cdot\de\bx\right)
+          </me>
+          and note that
+          <md>
+            <mrow>
+              &amp;\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}\mathbf{a}\left(\bx+\bu(x,t)\de t+\dots,t+\de t\right)\cdot
+              \left(\bx+\de\bx+\bu(\bx+\de\bx,t)\de t-bx-\bu(\bx,t)\de t\right)
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}\left(\mathbf{a}(\bx,t)+\pd{\mathbf{a}}{t}(\bx,t)\de t
+              +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t+\dots\right)\cdot
+              \left(\de\bx+\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t\right)
+            </mrow>
+          </md>
+          Hence
+          <me>
+              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+              \int_{C(t)}\left(
+                \mathbf{a}(\bx,t)\cdot\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t
+                +\pd{\mathbf{a}}{t}(\bx,t)\de t\cdot\de\bx
+                +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t\cdot\de\bx
+                +\dots\right)
+          </me>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-axisymmetric-flow">
+      <title>Axisymmetric flow</title>
+      <statement>
+        <p>
+          Consider an axisymmetric flow. Working in cylindrical polar coordinates <m>(r,\theta,z)</m>,
+          show that the vorticity is given by
           <me>
             \bomega=\omega\be_{\theta},
           </me>
@@ -963,6 +1473,13 @@
             \DD{}{t}\left(\frac{\omega}{r}\right)=0.
           </me>
           Thus the vorticity changes in proportion to distance from the axis of symmetry.
+        </p>
+        <p>
+          Note that in spherical polar coordinates <m>(r,\theta,\phi)</m> this is equivalent to
+          <me>
+            \bomega=\omega\be_{\phi},\quad
+            \DD{}{t}\left(\frac{\omega}{r\sin\theta}\right)=0.
+          </me>
         </p>
       </statement>
       <solution>
