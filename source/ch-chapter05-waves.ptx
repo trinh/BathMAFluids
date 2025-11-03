@@ -243,7 +243,7 @@
     <title>Stokes waves</title>
 
     <p>
-      To be covered Week 5. 
+      The material on Stokes waves will be transcribed from Lecture 5-02 and 5-03 visualiser notes found <url href="https://moodle.bath.ac.uk/mod/folder/view.php?id=1499818">here</url>.
     </p>
     
   </section>
@@ -306,13 +306,16 @@
     </exercise>
 
     <exercise>
-      <title>Stokes waves</title>
+      <title>Stokes waves in finite depth</title>
       <p>
-        Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the two governing equations are given by:
-        <md>
-          <mrow>\pd{\phi}{y} \amp= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x}, </mrow>
-          <mrow>\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta \amp= 0. </mrow>
-        </md>
+        Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the kinematic equation is given by 
+        <me>
+          \pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},
+        </me>
+        while the dynamic (Bernouilli) equation is
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0.
+        </me>
       </p>
      
       <p>
@@ -325,11 +328,10 @@
       </p>
 
       <p>
-        Show that travelling harmonic waves, with <m>\eta = AA\cos(kx - \omega t)</m> and <m>\phi = f(y)\sin(kx - \omega t)</m>, are possible and derive the associated dispersion relation, 
+        Show that travelling harmonic waves, with <m>\eta = A\cos(kx - \omega t)</m> and <m>\phi = f(y)\sin(kx - \omega t)</m>, are possible and derive the associated dispersion relation, 
         <me>
           \omega^2 = gk \tanh(kh). 
         </me>
-        Find and sketch the particle paths. 
       </p>
     </exercise>
 
@@ -346,6 +348,66 @@
           \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gh.
         </me>
       </p>
+    </exercise>
+
+    <exercise>
+      <title>The dispersion relation (simple)</title>
+      <introduction>
+      <p>
+        The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities. 
+      </p>
+
+      <p>
+        Consider two sinusoidal waves with nearly the same wavenumber and frequency: 
+        <me>
+          \eta(x, t) = \sin(k_1 x - \omega_1 t) + \sin(k_2 x - \omega_2 t). 
+        </me>
+      </p>
+    </introduction>
+        
+        <task>
+          <statement>
+            <p>
+            Use the trig angle identity 
+            <me>
+              \sin A + \sin B = 2\sin\left( \frac{A + B}{2}\right) \cos\left(\frac{A - B}{2}\right),
+            </me>
+            to put the wave <m>\eta</m> into the form of a product of sinusoidal waves. 
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+            Consider now 
+            <me>
+              k_{1,2} = k \pm \Delta k \quad \text{and} \quad
+              \omega_{1,2} = \omega + \Delta \omega,
+            </me>            
+            i.e. each wavenumber and frequency are centred about either <m>k</m> or <m>\omega</m>, respectively.
+            </p>
+
+            <p>
+              In the limit that <m>\Delta k, \Delta \omega \ll 1</m> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope. 
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+            show that the envelope developed in the last part exhibits maxima as 
+            <me>
+              x(t) = \frac{\Delta \omega}{\Delta k} t,
+            </me>
+            and therefore in the limit <m>\Delta k, \Delta \omega \to 0</m>, the velocicty of such maxima (called the group velocity) is given by 
+            <me>
+              v_g = \dd{\omega}{k}.
+            </me>
+            </p>
+          </statement>
+        </task>
     </exercise>
     
   </exercises>
