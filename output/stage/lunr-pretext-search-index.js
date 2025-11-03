@@ -1465,7 +1465,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Stokes waves",
-  "body": " Stokes waves  To be covered Week 5.  "
+  "body": " Stokes waves  The material on Stokes waves will be transcribed from Lecture 5-02 and 5-03 visualiser notes found here .  "
 },
 {
   "id": "sec-waterwaves-generalisations",
@@ -1492,7 +1492,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.6",
   "title": "Exercises",
-  "body": "  Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.     Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.    Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation    "
+  "body": "  Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.     Stokes waves in finite depth  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the kinematic equation is given by while the dynamic (Bernouilli) equation is   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation,     Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation     The dispersion relation (simple)   The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.  Consider two sinusoidal waves with nearly the same wavenumber and frequency:      Use the trig angle identity to put the wave into the form of a product of sinusoidal waves.      Consider now i.e. each wavenumber and frequency are centred about either or , respectively.  In the limit that (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.      show that the envelope developed in the last part exhibits maxima as and therefore in the limit , the velocicty of such maxima (called the group velocity) is given by      "
 },
 {
   "id": "exercises-water-waves-1",
@@ -1509,8 +1509,8 @@ var ptx_lunr_docs = [
   "url": "exercises-water-waves.html#exercises-water-waves-2",
   "type": "Exercise",
   "number": "5.6.2",
-  "title": "Stokes waves.",
-  "body": " Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.  "
+  "title": "Stokes waves in finite depth.",
+  "body": " Stokes waves in finite depth  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the kinematic equation is given by while the dynamic (Bernouilli) equation is   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation,   "
 },
 {
   "id": "exercises-water-waves-3",
@@ -1520,6 +1520,15 @@ var ptx_lunr_docs = [
   "number": "5.6.3",
   "title": "Fluids of different densities.",
   "body": " Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation   "
+},
+{
+  "id": "exercises-water-waves-4",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-4",
+  "type": "Exercise",
+  "number": "5.6.4",
+  "title": "The dispersion relation (simple).",
+  "body": " The dispersion relation (simple)   The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.  Consider two sinusoidal waves with nearly the same wavenumber and frequency:      Use the trig angle identity to put the wave into the form of a product of sinusoidal waves.      Consider now i.e. each wavenumber and frequency are centred about either or , respectively.  In the limit that (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.      show that the envelope developed in the last part exhibits maxima as and therefore in the limit , the velocicty of such maxima (called the group velocity) is given by     "
 },
 {
   "id": "sec-vorticity-circulation",
