@@ -333,6 +333,14 @@
           \omega^2 = gk \tanh(kh). 
         </me>
       </p>
+
+      <p>
+        In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions: 
+        <me>
+          \cosh z = \frac{\e^{z} + \e^{-z}}{2} \quad \text{and} \quad \sinh z = \frac{\e^{z} - \e^{-z}}{2},
+        </me>
+        and note that the cosh function is even at <m>z = 0</m> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <m>f(y)</m> and is a common trick when solving boundary-value problems with exponentials. 
+      </p>
     </exercise>
 
     <exercise>
