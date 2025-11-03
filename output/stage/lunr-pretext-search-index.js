@@ -457,7 +457,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Conservation of mass",
-  "body": " Conservation of mass   Our task from this section is to prove the following equation for the conservation of mass of a fluid:   Continuity equation   The differential form of the law of conservation of mass, otherwise known as the continuity equation is where is the density of the fluid and is the velocity of the fluid.  The above form is equivalent, by the definition of the convective derivative, to     In fact, as it turns out, the proof of this result is trivial if we use the Reynolds' Transport Theorem and Lagrangian formulation following .   We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .   Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the \"Bump lemma\".   Bump lemma   Let be a sufficiently smooth function defined on . Suppose it is the case that for all . Then in .    In , you will prove the above lemma.    Derivation of mass conservation using Eulerian methods  The derivation we have just shown for , using the Lagrangian viewpoint and the Reynolds' Transport Theorem is misleadingly simple, and it can be instructive to see how the result is proved purely from the perspective of Eulerian coordinates.  For this, let us consider to be a fixed and closed subregion of the overall fluid, that does not change with time. An illustration of this is shown in .   Picture of the fluid volume, , shown in blue, with a small surface element, , and the outwards flux.   Fluid    We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.   Integral form of the law of conservation of mass   Given a fixed volume element and boundary , the integral form of the law of mass conservation is     The rate of change of mass in is and note the derivative passes through the integral since the volume, , does not change with time.  Let the boundary of be given by , and let denote the outward unit normal defined along the boundary . At each point on the boundary, the volume flow rate (known as the flux ) across the boundary is given by and therefore the mass flow rate is .  We now sum the total mass flow across the entire boundary. This is given by the surface integral The flux out of the boundary is also sketched in .  Mass conservation is now applied. Therefore, the rate of change of pass in the volume is equal to the rate at which mass enters the boundary in the inwards direction.    We now want to transform the integral form in into the form of a partial differential equation. To do this, apply the Divergence theorem to the right hand-side of the above integral, converting the surface integral to a volume integral. Moving all quantities to the left hand side now yields Since the above integral equation holds for all possible , it must be equivalent to the integrand equated to zero ( ). This yields our final result leading to .    Corollary of the Transport Theorem    There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . Indeed consider a moving volume , and a density that satisfies the continuity equation or . Then     This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity: where . Finally use the continuity equation on .     "
+  "body": " Conservation of mass   Our task from this section is to prove the following equation for the conservation of mass of a fluid:   Continuity equation   The differential form of the law of conservation of mass, otherwise known as the continuity equation is where is the density of the fluid and is the velocity of the fluid.  The above form is equivalent, by the definition of the convective derivative, to     In fact, as it turns out, the proof of this result is trivial if we use the Reynolds' Transport Theorem and Lagrangian formulation following .   We consider the time differentiation of the mass integral, for an arbitrary material volume in the fluid.  By , we can use the Reynolds' Transport Theorem to pass the time derivative through the integral. This gives: which is satisfied for any volume where the fluid is defined. Since the result is true for any such possible volume, then the integrand of the right hand-side, itself, must be zero. This gives immediately .  The proof of follows immediately from application of the definition of the convective derivative .   Within the above proof, we use an idea used throughout this chapter, which is that if an integral of a quantity (the integrand) is zero for all possible domains of integration, then the integrand, itself, is zero. This is sometimes referred to as the \"Bump lemma\".   Bump lemma   Let be a sufficiently smooth function defined on . Suppose it is the case that for all . Then in .    In , you will prove the above lemma.    Derivation of mass conservation using Eulerian methods  The derivation we have just shown for , using the Lagrangian viewpoint and the Reynolds' Transport Theorem is misleadingly simple, and it can be instructive to see how the result is proved purely from the perspective of Eulerian coordinates.  For this, let us consider to be a fixed and closed subregion of the overall fluid, that does not change with time. An illustration of this is shown in .   Picture of the fluid volume, , shown in blue, with a small surface element, , and the outwards flux.   Fluid    We want to prove the following result, which essentially equates the change in mass, due to density changes, to the flow of mass in or out of the volume.   Integral form of the law of conservation of mass   Given a fixed volume element and boundary , the integral form of the law of mass conservation is     The rate of change of mass in is and note the derivative passes through the integral since the volume, , does not change with time.  Let the boundary of be given by , and let denote the outward unit normal defined along the boundary . At each point on the boundary, the volume flow rate (known as the flux ) across the boundary is given by and therefore the mass flow rate is .  We now sum the total mass flow across the entire boundary. This is given by the surface integral The flux out of the boundary is also sketched in .  Mass conservation is now applied. Therefore, the rate of change of pass in the volume is equal to the rate at which mass enters the boundary in the inwards direction.    We now want to transform the integral form in into the form of a partial differential equation. To do this, apply the Divergence theorem to the right hand-side of the above integral, converting the surface integral to a volume integral. Moving all quantities to the left hand side now yields Since the above integral equation holds for all possible , it must be equivalent to the integrand equated to zero ( ). This yields our final result leading to .    Corollary of the Transport Theorem    There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . Indeed consider a moving volume , and a density that satisfies the continuity equation or .  Then     This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity: where . Finally use the continuity equation on .     "
 },
 {
   "id": "thm-mass",
@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Corollary",
   "number": "3.2.5",
   "title": "",
-  "body": "  There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . Indeed consider a moving volume , and a density that satisfies the continuity equation or . Then     This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity: where . Finally use the continuity equation on .   "
+  "body": "  There is a useful corollary to the transport theorem in in the case where the desired function of integration, , is proportional to the density, i.e. for any continuously differentiable . Indeed consider a moving volume , and a density that satisfies the continuity equation or .  Then     This proof just follows from expansion. Pass the derivative through the integral and use the Reynolds' transport theorem formula. Then expand the quantity: where . Finally use the continuity equation on .   "
 },
 {
   "id": "subsec-euler-momentum",
@@ -520,7 +520,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "Momentum balance",
-  "body": " Momentum balance   With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum. This is Newton's second law the rate of change of momentum of a body is equal to the sum of all forces acting on the body.  Our task from this section is to prove the following equation for the conservation of mass of a fluid:   Momentum equation   The differential form of the law of conservation of momentum, is where is the density of the fluid, is the velocity of the fluid, is the pressure, and is the acceleration due to a body force (typically gravity).    Note that above, we have used the notation for the gradient of a vector. This is explained in .    Proof of the momentum equation for an inviscid fluid  Consider again a material volume of the fluid. Then the rate of change of net momentum of this volume is equal to It is helpful to remember that the mass of a volume element is and the acceleration is , so the above is similar to mass times acceleration. However, we work with the more general form above to allow for changes in the density throughout the fluid, and also for variable fluid elements, .  We must equate the above to the sum of all surface and body forces applied to the fluid element.  An example of a body force is the force of gravity. For a small volume element of mass , the force of gravity is equal to . Therefore, the total external force due to gravity on the volume is equal to There may be other external body forces. For example, if your fluid is electrically conductive (like a plasma), there may be electromagnetic forces that must be considered. In any case, can be considered as the analogous body force.  The final type of forces we should consider are surface forces , which are applied to the boundary of the fluid element, denoted . Let us assume that at each point on the boundary, there is a per-surface area surface force, , that decomposes into component normal to the boundary, , and a component tangential to the boundary, . So the surface forces, summed over the boundary, will be In the above, the interpretation is that the force on a small patch of surface area is equal to the per-area force, say , multiplied by the area, then directed into the normal direction, .  At this point, we make a key assumption that is applied in the particular case of inviscid fluids .   Forces in inviscid fluids   In the case of inviscid fluids , we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, , which acts in the inward normal direction at each point, with . Consequently, the surface force, given by , is   In particular, for the case of inviscid fluids, we ignore tangential internal forces.    The result follows from applying the diverence theorem. The divergence theorem states that, for a function defined on a volume : Let , which gives for . Multiplying by and adding gives the result.    Finally, it follows by summation of the forces above that Newton's law states that We can now use the corollary to the transport theorem , with the assignment of and this allows us to the conclude that Again, the above holds for all material volumes and therefore it must follow that the integrand is zero. We conclude thus with the following result as stated in :   In , you will practice the derivation of the mass and momentum equations.   "
+  "body": " Momentum balance   With mass conservation now handled, we turn our eyes towards a law that governs the conservation of momentum. This is Newton's second law the rate of change of momentum of a body is equal to the sum of all forces acting on the body.  Our task from this section is to prove the following equation for the conservation of mass of a fluid:   Momentum equation   The differential form of the law of conservation of momentum, is where is the density of the fluid, is the velocity of the fluid, is the pressure, and is the acceleration due to a body force (typically gravity).    Note that above, we have used the notation for the gradient of a vector. This is explained in .    Proof of the momentum equation for an inviscid fluid  Consider again a material volume of the fluid. Then the rate of change of net momentum of this volume is equal to It is helpful to remember that the mass of a volume element is and the acceleration is , so the above is similar to mass times acceleration. However, we work with the more general form above to allow for changes in the density throughout the fluid, and also for variable fluid elements, .  We must equate the above to the sum of all surface and body forces applied to the fluid element.  An example of a body force is the force of gravity. For a small volume element of mass , the force of gravity is equal to . Therefore, the total external force due to gravity on the volume is equal to There may be other external body forces. For example, if your fluid is electrically conductive (like a plasma), there may be electromagnetic forces that must be considered. In any case, can be considered as the analogous body force.  The final type of forces we should consider are surface forces , which are applied to the boundary of the fluid element, denoted . Let us assume that at each point on the boundary, there is a per-surface area surface force, , that decomposes into component normal to the boundary, , and a component tangential to the boundary, . So the surface forces, summed over the boundary, will be In the above, the interpretation is that the force on a small patch of surface area is equal to the per-area force, say , multiplied by the area, then directed into the normal direction, .  At this point, we make a key assumption that is applied in the particular case of inviscid fluids .   Forces in inviscid fluids   In the case of inviscid fluids , we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, , which acts in the inward normal direction at each point, with  Consequently, the surface force, given by , is   In particular, for the case of inviscid fluids, we ignore tangential internal forces.    The result follows by applying the divergence theorem to each component of,  Applying it once, we have   Note that the LHS is: the ith element of .  Now add up the above for the three elements of , and use the shorthand notation for the divergence of a vector field: hence establishing the theorem.    Finally, it follows by summation of the forces above that Newton's law states that We can now use the corollary to the transport theorem , with the assignment of and this allows us to the conclude that Again, the above holds for all material volumes and therefore it must follow that the integrand is zero. We conclude thus with the following result as stated in :   In , you will practice the derivation of the mass and momentum equations.   "
 },
 {
   "id": "thm-momentum",
@@ -538,7 +538,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "3.3.2",
   "title": "Forces in inviscid fluids.",
-  "body": " Forces in inviscid fluids   In the case of inviscid fluids , we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, , which acts in the inward normal direction at each point, with . Consequently, the surface force, given by , is   In particular, for the case of inviscid fluids, we ignore tangential internal forces.    The result follows from applying the diverence theorem. The divergence theorem states that, for a function defined on a volume : Let , which gives for . Multiplying by and adding gives the result.   "
+  "body": " Forces in inviscid fluids   In the case of inviscid fluids , we assume that the surface pressure exerted on (interior) volume elements is accounted solely by a pressure, , which acts in the inward normal direction at each point, with  Consequently, the surface force, given by , is   In particular, for the case of inviscid fluids, we ignore tangential internal forces.    The result follows by applying the divergence theorem to each component of,  Applying it once, we have   Note that the LHS is: the ith element of .  Now add up the above for the three elements of , and use the shorthand notation for the divergence of a vector field: hence establishing the theorem.   "
 },
 {
   "id": "sec-incompressible",
@@ -619,7 +619,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Bernoulli’s equation",
-  "body": " Bernoulli's equation   There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation and yields the famous Bernoulli equation(s) .  We will first need a vector identity.    Note the following identity:     The proof follows from direct expansion of both sides.    It will also be useful for us to introduce the notion of vorticity.   Vorticity of a vector field   The vorticity , , of a vector field is defined by The vorticity is a measure of the local rotation of the flow.    Let us recall the definition of a conservative force .   Conservative forces   A force is a conservative force if and only if there exists a potential , such that in a simply connected region where the quantities are defined.    Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.   Bernoulli's equation for steady flow   Bernoulli's equation (theorem) for steady flow states that where we have assumed that the body force is conservative , i.e. it can be written as for a potential function, .    Start from the momentum equation , and use the vector identity gives   Next, the flow is steady, and therefore we can zero the first term. This leaves We now take the dot product of both sides of the equation with . We use the fact that, since it is a triple scalar product with two repeated entries. It therefore results in the fact that Notice that this is the steady component that comes from the material derivative, . So we conclude that is constant along streamlines of the flow.  It is useful to note that if we use the definition of vorticity in , and the definition of in , we have from the above that a form that will be useful, shortly.     For the typical gravity force directed in the direction, we can write . So in this case, the (gravitational) potential is .   The proof of introduced a useful form of the momentum equation using the vorticity function, resulting in . This leads to the so-called vorticity equation form of the momentum equation.   The vorticity equation for incompressible flow   The momentum equation for incompressible flow, reposed in terms of the vorticity is: or, equivalently, and is known as the vorticity equation .    In the proof, it is useful to use the vector identity for the curl of a cross product:    Crucially, we recall the result that \"curl grad equals zero\" for a vector field. So from , we take the curl of both sides to obtain Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity . For the second term, we get with the first zero resulting in the fact that \"div curl equals zero\", while the second results from incompressibility.  Thus we have, which is the main result.   You will prove this result from first principles in .    Potential flow  We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in and in particular, the reduction of the mass conservation equation to .  We attempt to reduce further by assuming that the fluid is irrotational . This lends to the following definition.   Irrotational flows   A flow is said to be irrotational if the vorticity is identically zero:     For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation.   Bernoulli's equation for steady irrotational flow   For an incompressible and irrotational flow, Bernoulli's theorem states that where is the body force.    The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.    You will practice an application of Bernoulli's equation in .   Airflow into or out of a room  During the lecture, just for fun, we will play this video by Matthias Wandel about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult.    Pascal's bursting barrel  For fun during the lecture, we will play this video demonstration done at Princeton demonstrating the power of hydrostatic pressure.    Urination across species  During the lecture, we will play this video describing the work by Yang et al. on \"Duration of urination does not change with body size\" . The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.    "
+  "body": " Bernoulli's equation   There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation and yields the famous Bernoulli equation(s) .  We will first need a vector identity.    Note the following identity:     The proof follows from direct expansion of both sides.    It will also be useful for us to introduce the notion of vorticity.   Vorticity of a vector field   The vorticity , , of a vector field is defined by The vorticity is a measure of the local rotation of the flow.    Let us recall the definition of a conservative force .   Conservative forces   A force is a conservative force if and only if there exists a potential , such that in a simply connected region where the quantities are defined.    Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.   Bernoulli's equation for steady flow   Bernoulli's equation (theorem) for steady flow states that where we have assumed that the body force is conservative , i.e. it can be written as for a potential function, .    Start from the momentum equation , and use the vector identity gives   Next, the flow is steady, and therefore we can zero the first term. This leaves We now take the dot product of both sides of the equation with . We use the fact that, since it is a triple scalar product with two repeated entries. It therefore results in the fact that Notice that this is the steady component that comes from the material derivative, . So we conclude that is constant along streamlines of the flow.  It is useful to note that if we use the definition of vorticity in , and the definition of in , we have from the above that a form that will be useful, shortly.     For the typical gravity force directed in the direction, we can write . So in this case, the (gravitational) potential is .   The proof of introduced a useful form of the momentum equation using the vorticity function, resulting in . This leads to the so-called vorticity equation form of the momentum equation.   The vorticity equation for incompressible flow   The momentum equation for incompressible flow, reposed in terms of the vorticity is: or, equivalently, and is known as the vorticity equation .    In the proof, it is useful to use the vector identity for the curl of a cross product:    Crucially, we recall the result that \"curl grad equals zero\" for a vector field. So from , we take the curl of both sides to obtain Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity . For the second term, we get with the first zero resulting in the fact that \"div curl equals zero\", while the second results from incompressibility.  Thus we have, which is the main result.   You will prove this result from first principles in .    Potential flow  We are interested in the simplest scenarios that will result in reducing the governing equations. Previosly, we introduced the notion of incompressible flows, which results in the Euler equations in and in particular, the reduction of the mass conservation equation to .  We attempt to reduce further by assuming that the fluid is irrotational . This lends to the following definition.   Irrotational flows   A flow is said to be irrotational if the vorticity is identically zero:      Equivalence of irrotational and potential flow  If a flow with velocity vector is irrotational, there exists a function such that The function is called the potential.    Any function whose curl is everywhere zero can be written as a gradient of a scalar function. In the case of irrotational flow, the velocity field is such a function.   For an irrotational and incompressible flow, there is a more powerful version of Bernoulli's equation.   Bernoulli's equation for steady irrotational flow   For an incompressible and irrotational flow, Bernoulli's theorem states that where is the body force.    The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.    You will practice an application of Bernoulli's equation in .   Airflow into or out of a room  During the lecture, just for fun, we will play this video by Matthias Wandel about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult.    Pascal's bursting barrel  For fun during the lecture, we will play this video demonstration done at Princeton demonstrating the power of hydrostatic pressure.    Urination across species  During the lecture, we will play this video describing the work by Yang et al. on \"Duration of urination does not change with body size\" . The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.    "
 },
 {
   "id": "ident-ugradu",
@@ -694,38 +694,56 @@ var ptx_lunr_docs = [
   "body": " Irrotational flows   A flow is said to be irrotational if the vorticity is identically zero:    "
 },
 {
+  "id": "theorem-irrotational-potential",
+  "level": "2",
+  "url": "sec-bernoulli.html#theorem-irrotational-potential",
+  "type": "Theorem",
+  "number": "3.5.8",
+  "title": "Equivalence of irrotational and potential flow.",
+  "body": " Equivalence of irrotational and potential flow  If a flow with velocity vector is irrotational, there exists a function such that The function is called the potential.  "
+},
+{
+  "id": "subsec-potential-6",
+  "level": "2",
+  "url": "sec-bernoulli.html#subsec-potential-6",
+  "type": "Proof",
+  "number": "3.5.1.1",
+  "title": "",
+  "body": " Any function whose curl is everywhere zero can be written as a gradient of a scalar function. In the case of irrotational flow, the velocity field is such a function.  "
+},
+{
   "id": "thm-bernoulli-potential",
   "level": "2",
   "url": "sec-bernoulli.html#thm-bernoulli-potential",
   "type": "Theorem",
-  "number": "3.5.8",
+  "number": "3.5.9",
   "title": "Bernoulli’s equation for steady irrotational flow.",
   "body": " Bernoulli's equation for steady irrotational flow   For an incompressible and irrotational flow, Bernoulli's theorem states that where is the body force.    The proof of this relies on returning to the proof of the unsteady Bernoulli's equation in . In the proof, we arrived at the result in that For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that , and therefore we have But the only way that all spatial derivatives is zero is if the function is constant.   "
-},
-{
-  "id": "subsec-potential-8",
-  "level": "2",
-  "url": "sec-bernoulli.html#subsec-potential-8",
-  "type": "Example",
-  "number": "3.5.9",
-  "title": "Airflow into or out of a room.",
-  "body": " Airflow into or out of a room  During the lecture, just for fun, we will play this video by Matthias Wandel about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult.  "
-},
-{
-  "id": "subsec-potential-9",
-  "level": "2",
-  "url": "sec-bernoulli.html#subsec-potential-9",
-  "type": "Example",
-  "number": "3.5.10",
-  "title": "Pascal’s bursting barrel.",
-  "body": " Pascal's bursting barrel  For fun during the lecture, we will play this video demonstration done at Princeton demonstrating the power of hydrostatic pressure.  "
 },
 {
   "id": "subsec-potential-10",
   "level": "2",
   "url": "sec-bernoulli.html#subsec-potential-10",
   "type": "Example",
+  "number": "3.5.10",
+  "title": "Airflow into or out of a room.",
+  "body": " Airflow into or out of a room  During the lecture, just for fun, we will play this video by Matthias Wandel about airflow out of a room. This is somewhat related to Bernoulli's equation (the connection between pressure and velocity), though the situation is considerably more difficult.  "
+},
+{
+  "id": "subsec-potential-11",
+  "level": "2",
+  "url": "sec-bernoulli.html#subsec-potential-11",
+  "type": "Example",
   "number": "3.5.11",
+  "title": "Pascal’s bursting barrel.",
+  "body": " Pascal's bursting barrel  For fun during the lecture, we will play this video demonstration done at Princeton demonstrating the power of hydrostatic pressure.  "
+},
+{
+  "id": "subsec-potential-12",
+  "level": "2",
+  "url": "sec-bernoulli.html#subsec-potential-12",
+  "type": "Example",
+  "number": "3.5.12",
   "title": "Urination across species.",
   "body": " Urination across species  During the lecture, we will play this video describing the work by Yang et al. on \"Duration of urination does not change with body size\" . The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli's equation is used.  "
 },
@@ -865,9 +883,9 @@ var ptx_lunr_docs = [
   "body": " Line source in a uniform flow  For instance, we may combine a uniform flow in the -direction with a line source: We can then obtain the velocity field as   The streamlines (or velocity field) is shown below.   Streamlines (or velocity field) of a line source in a uniform flow with and .    Where do you think the stagnation point lies in this flow?  "
 },
 {
-  "id": "ch-chapter04-potentialflows-4",
+  "id": "sec-streamfunction",
   "level": "1",
-  "url": "ch-chapter04-potentialflows-4.html",
+  "url": "sec-streamfunction.html",
   "type": "Section",
   "number": "4.2",
   "title": "The streamfunction",
@@ -876,7 +894,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-streamfunction",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#thm-streamfunction",
+  "url": "sec-streamfunction.html#thm-streamfunction",
   "type": "Theorem",
   "number": "4.2.1",
   "title": "The streamfunction is constant along streamlines.",
@@ -885,7 +903,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-streamfunction",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#fig-streamfunction",
+  "url": "sec-streamfunction.html#fig-streamfunction",
   "type": "Figure",
   "number": "4.2.2",
   "title": "",
@@ -894,16 +912,16 @@ var ptx_lunr_docs = [
 {
   "id": "thm-flux-streamlines",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#thm-flux-streamlines",
+  "url": "sec-streamfunction.html#thm-flux-streamlines",
   "type": "Theorem",
   "number": "4.2.3",
   "title": "Flux between streamlines.",
   "body": " Flux between streamlines   Consider two streamlines and . We assume that the streamlines pass through the points A and B respectively. Consider a contour connecting A and B. The flux (net flow of fluid) through and hence between the streamlines is We have not specified the sign of the flux as it is subject to the considered direction through .    By definition, the flux is given by the integral where is any smooth path joining the two streamlines with unit normal , as shown in .  Note that given the curve, and in consideration of a small arclength element , the tangent and normal are given by Therefore we can write . Then the flux is re-written as the following: In the third line above, is the change of across the contour. Note that there is somewhat an arbitrary choice of direction for the contour , as related to the selection of the normal direction , and the positivity or negativity of the flux. To be safe, we have taken the absolute value in the problem.   "
 },
 {
-  "id": "ch-chapter04-potentialflows-4-2-9",
+  "id": "sec-streamfunction-2-9",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-2-9",
+  "url": "sec-streamfunction.html#sec-streamfunction-2-9",
   "type": "Example",
   "number": "4.2.4",
   "title": "",
@@ -912,25 +930,25 @@ var ptx_lunr_docs = [
 {
   "id": "thm-streamfunction-laplace",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#thm-streamfunction-laplace",
+  "url": "sec-streamfunction.html#thm-streamfunction-laplace",
   "type": "Theorem",
   "number": "4.2.5",
   "title": "Streamfunction satisfies Laplace’s equation.",
   "body": " Streamfunction satisfies Laplace's equation   Like the velocity potential, the streamfunction satisfies Laplace's equation:     Substitute the relationship into .   "
 },
 {
-  "id": "ch-chapter04-potentialflows-4-3-3",
+  "id": "sec-streamfunction-3-3",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3-3",
+  "url": "sec-streamfunction.html#sec-streamfunction-3-3",
   "type": "Example",
   "number": "4.2.6",
   "title": "Uniform flow.",
   "body": " Uniform flow  uniform flow, streamfunction  From , we can directly integrate and to get up to an arbitrary constant. Therefore, lines of constant correspond to which indeed yields the image seen in .  "
 },
 {
-  "id": "ch-chapter04-potentialflows-4-3-4",
+  "id": "sec-streamfunction-3-4",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3-4",
+  "url": "sec-streamfunction.html#sec-streamfunction-3-4",
   "type": "Example",
   "number": "4.2.7",
   "title": "Stagnation point flow.",
@@ -939,16 +957,16 @@ var ptx_lunr_docs = [
 {
   "id": "example-streamfunction-linesource",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#example-streamfunction-linesource",
+  "url": "sec-streamfunction.html#example-streamfunction-linesource",
   "type": "Example",
   "number": "4.2.8",
   "title": "Line source.",
   "body": " Line source  line source, streamfunction  For the situation of the line source in , we want to work with polar coordinates. From the previous work, we have for this situation the potential . It then follows from the polar version of the gradient in , that the velocity is entirely radial and We use the formulae in and integrate yielding Then indeed note that the lines of constant are given by the radial lines of constant , matching the illustration in .  "
 },
 {
-  "id": "ch-chapter04-potentialflows-4-3-7",
+  "id": "sec-streamfunction-3-7",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#ch-chapter04-potentialflows-4-3-7",
+  "url": "sec-streamfunction.html#sec-streamfunction-3-7",
   "type": "Example",
   "number": "4.2.9",
   "title": "Line source in a uniform flow.",
@@ -957,7 +975,7 @@ var ptx_lunr_docs = [
 {
   "id": "example-streamfunction-linevortex",
   "level": "2",
-  "url": "ch-chapter04-potentialflows-4.html#example-streamfunction-linevortex",
+  "url": "sec-streamfunction.html#example-streamfunction-linevortex",
   "type": "Example",
   "number": "4.2.10",
   "title": "Line vortex.",
@@ -1411,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Governing equations of water waves",
-  "body": " Governing equations of water waves   We shall consider the case of waves on the free surface of a two-dimensional potential fluid (hence inviscid, incompressible, and irrotational). The free surface bounds the water from above, and is assumed to be given by   Since the fluid satisfies the assumptions of potential flow, there exists a velocity potential where   What makes water-wave problems unique (and challenging) is that not only do we need to solve for the potential (and hence velocities) within the fluid, as given by Laplace's equation above, but that we must do so in an a priori unknown domain, where the free-surface location must also be solved in parallel. Key considerations, then, must relate to the precise boundary conditions to impose.    Boundary conditions   Bottom boundary conditions  If we consider waves on a fluid of infinite (or deep) depth, then far below the free surface, we expect that the velocity tends to zero. Hence a suitable boundary condition is   On the other hand, for the case of fluid bounded below by a flat bed, say at , we have     Dynamic boundary conditions  There are now two boundary conditions to consider at the free surface. The dynamic boundary condition corresponds to the requirement of satisfying a force balance at the free surface. At the free surface, the pressure within the liquid must be equal to the pressure within the air. This leads to the dynamic boundary condition that tv where is the atmospheric pressure above the fluid (assumed to be constant).  Typically, we need the above pressure condition expressed in terms of , and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving :   Bernoulli's equation for unsteady potential flow   Bernoulli's equation for unsteady potential flow states that for an arbitrary function , and where is the conservative body force.    Returning to , we re-write in terms of the potential function and set the vorticity , giving We can interchange the order of differentiation on the left We now integrate each of the spatial components and this yields the desired result.    Below, we will set the body force indeed to be gravity. Thus if we write and gravity is then directed in the negative -direction.  We now evaluate Bernoulli's equation on the free surface, . This gives It is convenient to set the arbirary function , yielding the final result: which is a re-phrasing of the necessary dynamic boundary condition on the free surface.    Kinematic boundary conditions  In the case of fluids near solid surfaces, we require a no-penetration condition, which enforces that the fluid velocity is zero in a direction normal to the surface, . For the case of a free boundary, such as the one at , there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid fluid elements on the free surface must remain on the free surface.  Thus, if for some fluid particle at time , then for the same particle for all time. Thus we need   Expansion and use of the material derivative then implies the kinematic boundary condition      "
+  "body": " Governing equations of water waves   We shall consider the case of waves on the free surface of a two-dimensional potential fluid (hence inviscid, incompressible, and irrotational). The free surface bounds the water from above, and is assumed to be given by   Since the fluid satisfies the assumptions of potential flow, there exists a velocity potential where   What makes water-wave problems unique (and challenging) is that not only do we need to solve for the potential (and hence velocities) within the fluid, as given by Laplace's equation above, but that we must do so in an a priori unknown domain, where the free-surface location must also be solved in parallel. Key considerations, then, must relate to the precise boundary conditions to impose.    Boundary conditions   Bottom boundary conditions  If we consider waves on a fluid of infinite (or deep) depth, then far below the free surface, we expect that the velocity tends to zero. Hence a suitable boundary condition is   On the other hand, for the case of fluid bounded below by a flat bed, say at , we have     Dynamic boundary conditions  There are now two boundary conditions to consider at the free surface. The dynamic boundary condition corresponds to the requirement of satisfying a force balance at the free surface. At the free surface, the pressure within the liquid must be equal to the pressure within the air. This leads to the dynamic boundary condition that tv where is the atmospheric pressure above the fluid (assumed to be constant).  Typically, we need the above pressure condition expressed in terms of , and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving :   Bernoulli's equation for unsteady potential flow   Bernoulli's equation for unsteady potential flow states that for an arbitrary function , and where is the conservative body force.    Returning to , we re-write in terms of the potential function and set the vorticity , giving We can interchange the order of differentiation on the left We now integrate each of the spatial components and this yields the desired result.    Below, we will set the body force indeed to be gravity. Thus if we write and gravity is then directed in the negative -direction.  We now evaluate Bernoulli's equation on the free surface, . This gives It is convenient to set the arbirary function , yielding the final result: which is a re-phrasing of the necessary dynamic boundary condition on the free surface.    Kinematic boundary conditions  In the case of fluids near solid surfaces, we require a no-penetration condition, which enforces that the fluid velocity is zero in a direction normal to the surface, . For the case of a free boundary, such as the one at , there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid fluid elements on the free surface must remain on the free surface.  Thus, if for some fluid particle at time , then for the same particle for all time. Thus we need   Expansion and use of the material derivative then implies the kinematic boundary condition       Linearisation of the water-wave equations  We have successfully derived the full water-wave equations for a potential fluid. They are as follows.    The governing equations for a potential flow modelling deep water waves is:      "
 },
 {
   "id": "thm-bernoulli-unsteady-potential",
@@ -1423,20 +1441,38 @@ var ptx_lunr_docs = [
   "body": " Bernoulli's equation for unsteady potential flow   Bernoulli's equation for unsteady potential flow states that for an arbitrary function , and where is the conservative body force.    Returning to , we re-write in terms of the potential function and set the vorticity , giving We can interchange the order of differentiation on the left We now integrate each of the spatial components and this yields the desired result.   "
 },
 {
+  "id": "thm-waterwaves-equations",
+  "level": "2",
+  "url": "sec-waterwaves-equations.html#thm-waterwaves-equations",
+  "type": "Theorem",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  The governing equations for a potential flow modelling deep water waves is:    "
+},
+{
+  "id": "sec-wave-parameters",
+  "level": "1",
+  "url": "sec-wave-parameters.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Wave parameters",
+  "body": " Wave parameters  A general travelling wave is written as An additional phase, e.g. in can be included but this can be removed through a shift in space or time. What do the quantities and represent?  We can factor out the and obtain The quantity is called the wavenumber . If we define it instead to be then we see that shifting by does not change the wave. The quantity is called the wavelength .  Let us now turn to the quantity . If we introduce then is called the phase speed . It corresponds to the speed at which the \"phase\" of the wave (the crests and troughs) propagate.  At a fixed location in space, what is the time that it takes for the condition at this point to repeat itself? It is the time required for the wave to travel one wavelength, . Hence this is defined as the period of the wave:   These concepts can be generalised to wave in a three-dimensional fluid, where we would write instead  In this case, is the wavenumber vector and has magnitude . The wavelength is then   The phase velocity is given by   "
+},
+{
   "id": "sec-waterwaves-stokeswaves",
   "level": "1",
   "url": "sec-waterwaves-stokeswaves.html",
   "type": "Section",
-  "number": "5.2",
+  "number": "5.3",
   "title": "Stokes waves",
-  "body": " Stokes waves  To be covered Week 5.  "
+  "body": " Stokes waves  The material on Stokes waves will be transcribed from Lecture 5-02 and 5-03 visualiser notes found here .  "
 },
 {
   "id": "sec-waterwaves-generalisations",
   "level": "1",
   "url": "sec-waterwaves-generalisations.html",
   "type": "Section",
-  "number": "5.3",
+  "number": "5.4",
   "title": "Generalisations of water waves",
   "body": " Generalisations of water waves  To be covered Week 5-6.  "
 },
@@ -1445,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-waterwaves-instability.html",
   "type": "Section",
-  "number": "5.4",
+  "number": "5.5",
   "title": "Instability in waves",
   "body": " Instability in waves  To be covered Week 6.  "
 },
@@ -1454,16 +1490,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-water-waves.html",
   "type": "Exercises",
-  "number": "5.5",
+  "number": "5.6",
   "title": "Exercises",
-  "body": "  Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.     Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.    Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation    "
+  "body": "  Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.     Stokes waves in finite depth  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the kinematic equation is given by while the dynamic (Bernouilli) equation is   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation,   In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions: and note that the cosh function is even at (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of and is a common trick when solving boundary-value problems with exponentials.    Linar waves in a current  We now consider linear waves in a channel of depth , as in the previous question. This time, however, assume that there is a uniform flow of speed at infinity. Therefore, this time, we shall consider the velocity as expressed as and again linearise the necessary equations.  Linearise the associate free-surface equations, and show that this time, they produce and   Show finally that the the dispersion relation predicts possible waves of speeds   The regime where the flow speed is less than is known as subcritical. The regime where flow is greather than is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?    Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation     The dispersion relation (simple)   The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.  Consider two sinusoidal waves with nearly the same wavenumber and frequency:      Use the trig angle identity to put the wave into the form of a product of sinusoidal waves.      Consider now i.e. each wavenumber and frequency are centred about either or , respectively.  In the limit that (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.      show that the envelope developed in the last part exhibits maxima as and therefore in the limit , the velocicty of such maxima (called the group velocity) is given by      "
 },
 {
   "id": "exercises-water-waves-1",
   "level": "2",
   "url": "exercises-water-waves.html#exercises-water-waves-1",
   "type": "Exercise",
-  "number": "5.5.1",
+  "number": "5.6.1",
   "title": "Derivation of the kinematic condition.",
   "body": " Derivation of the kinematic condition   In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by   Introduce the curve . For any particle on the surface, it must be the case that . By applying the material derivative show that the condition that for particles on the free surface is equivalent to the kinematic condition     By the definition of the material derivative, we have that Equating the above to zero for the case of yields the desired result.   "
 },
@@ -1472,18 +1508,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-water-waves.html#exercises-water-waves-2",
   "type": "Exercise",
-  "number": "5.5.2",
-  "title": "Stokes waves.",
-  "body": " Stokes waves  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the two governing equations are given by:   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation, Find and sketch the particle paths.  "
+  "number": "5.6.2",
+  "title": "Stokes waves in finite depth.",
+  "body": " Stokes waves in finite depth  Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential , with satisfying . Let the free surface be at and assume the water is confined above a flat channel of depth . Show that on the free surface, , the kinematic equation is given by while the dynamic (Bernouilli) equation is   Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be and now applied on .  Show that travelling harmonic waves, with and , are possible and derive the associated dispersion relation,   In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions: and note that the cosh function is even at (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of and is a common trick when solving boundary-value problems with exponentials.  "
 },
 {
   "id": "exercises-water-waves-3",
   "level": "2",
   "url": "exercises-water-waves.html#exercises-water-waves-3",
   "type": "Exercise",
-  "number": "5.5.3",
+  "number": "5.6.3",
+  "title": "Linar waves in a current.",
+  "body": " Linar waves in a current  We now consider linear waves in a channel of depth , as in the previous question. This time, however, assume that there is a uniform flow of speed at infinity. Therefore, this time, we shall consider the velocity as expressed as and again linearise the necessary equations.  Linearise the associate free-surface equations, and show that this time, they produce and   Show finally that the the dispersion relation predicts possible waves of speeds   The regime where the flow speed is less than is known as subcritical. The regime where flow is greather than is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?  "
+},
+{
+  "id": "exercises-water-waves-4",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-4",
+  "type": "Exercise",
+  "number": "5.6.4",
   "title": "Fluids of different densities.",
   "body": " Fluids of different densities  Inviscid incompressible fluid of density lies in the region above a fluid with greater density for . Assume there there is a small-amplitude disturbance the two fluids with the surface given by . Assuming and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at .  If with , derive the dispersion relation   "
+},
+{
+  "id": "exercises-water-waves-5",
+  "level": "2",
+  "url": "exercises-water-waves.html#exercises-water-waves-5",
+  "type": "Exercise",
+  "number": "5.6.5",
+  "title": "The dispersion relation (simple).",
+  "body": " The dispersion relation (simple)   The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.  Consider two sinusoidal waves with nearly the same wavenumber and frequency:      Use the trig angle identity to put the wave into the form of a product of sinusoidal waves.      Consider now i.e. each wavenumber and frequency are centred about either or , respectively.  In the limit that (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.      show that the envelope developed in the last part exhibits maxima as and therefore in the limit , the velocicty of such maxima (called the group velocity) is given by     "
 },
 {
   "id": "sec-vorticity-circulation",
@@ -1600,7 +1654,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.2",
   "title": "The Helmholtz vortex theorems",
-  "body": " The Helmholtz vortex theorems   The theorems   The Helmholtz vortex theorems  These state:   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.       Proof of the Helmholtz vortex theorems   Proof of the first vortex theorem. For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.  Choose a closed curve lying within one the vortex surfaces. The circulation around is where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . Thus , and by Kelvin's circulation theorem , must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.   Proof of the second vortex theorem. Proof that is the same for all cross-sections. To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.   Proof of the second vortex theorem (continued). Proof that is independent of time. To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By Kelvin's circulation theorem , remains independent of .    The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by , and this must remain constant, and therefore, since the area of the cross-section is decreasing, the magnitude of vorticiy must increase in the tube. This is spin up . Conversely, if a vortex tube becomes shorter, we get the opposite effect of spin down and gets smaller.  A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.    Everyday examples of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.    Plug hole vortex  We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’ at this website .  The presenter commented that the angular momentum of a fluid parcel remains constant. Using angular momentum equals velocity times distance from axis, this implies the angular velocity is proportial to the inverse of the radial distance. This is precisely the  In it, we saw a reference to `Crocco's theorem', which can be derived from the derivation of Bernoulli's equation : where with   Noting that this flow is steady and has zero vorticity away from the plughole, we must have , that is is constant everywhere. On the surface, we have and hence is constant, where is vertical height. Using , the speed is . Hence, the quantity is constant, that is thus explaining the shape of the surface that was seen.    Tornado  As commented in the `Vorticity, Part 2’ at this website , the pressure in the middle of a tornado is very low. This can also be understood from Bernoulli's equation : with In the steady case, and outside the vortex core, there is no vorticity and hence is constant, meaning that, as we approach the vortex core, the pressure decreases as the fluid speed increases. Furthermore, in the vortex core where the vorticity is non-zero, the quantity points towards the axis. Thus decreases as the axis is approached, further decreasing the pressure.  This pressure reduction leads to condensation in the core of the tornado, and this is visible, allowing us to see the tornado, and, to some extent, visualise the intense air flows associated with it.  As commented, in propellors of boats, this pressure reduction in the core of a vortex can cause the water to boil!     The Helmholtz principle   Recap of line vortex  The Helmholtz vertex theorems help us to understand the concept of a line vortex in irrotational flow that was introduced in . Recall that this is associated with the complex potential (see ), and has corresponding velocity components The vorticity associated with this flow at all points except the singularity at the origin. However, it was also notes in that the circulation around any closed curve containing the origin is .  Thus, a line vortex of strength is the limit of a vortex tube of strength as its thickness goes to zero.  We note that in any real fluid, the effects of viscosity would come into play in the core of the line vortex, disallowing an infinite concentration of vorticity there. Despite this, we can use the concept of a line vortex to gain insight into a number of real-world problems.  The following corollary is a particularly useful application of the Helmholtz vortex theorems.  The Helmholtz principle   A useful corollary to the Helmholtz vortex theorems is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.'     A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem , these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.    Application of the Helmholtz principle  In an otherwise irrotational flow, we can use the Helmholtz principle to find the motion of a line vortex. In particular, we can make use of the following techniques:    the method of images     and conformal mapping     to find the flow evolution.    Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.     Application to airports  At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.  You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!    "
+  "body": " The Helmholtz vortex theorems   The theorems   The Helmholtz vortex theorems  These state:   Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in (taken from ), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.     Sketch of a vortex tube.   Vortex tube    The circulation of the tube is around any closed curve that goes once anticlockwise around the vortex tube, or equivalently , where is any cross-section of the vortex tube, see . The circulation is independent of the choice of curve or cross-section at all times.       Proof of the Helmholtz vortex theorems   Proof of the first vortex theorem. For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.  Choose a closed curve lying within one the vortex surfaces. The circulation around is where the final equality is by Stokes' theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence . Thus , and by Kelvin's circulation theorem , must remain at zero for all times.  Thus at time , the evolved surface has circulation zero for all closed curves, and therefore by Stokes' theorem, the integral of over any sub-surface must be zero. Hence at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.  Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.  This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen' in the fluid, meaning that the evolve in the same way as a dye `frozen' into the fluid would.   Proof of the second vortex theorem. Proof that is the same for all cross-sections. To prove the second vortex theorem, choose two different cross-sections of the vortex tube, and say, and consider the section of the vortex tube lying between and . We integrate over the surface of : where `outside' refers to the outer surface of the vortex tube between and . Since vortex lines are paralled to this surface, we have there, and so   Now, by the divergence theorem, but this equals zero, since (divergence of a curl is zero).  Putting this together, and this was true for any choice of and . Hence, is the same for all cross-sections of a vortex tube.   Proof of the second vortex theorem (continued). Proof that is independent of time. To prove that is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.  Moreover, by Stokes' theorem, which is the circulation around the boundary of . As the tube evolves, the material surface moves with the vortex tube. By Kelvin's circulation theorem , remains independent of .    The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by , and this must remain constant, and therefore, since the area of the cross-section is decreasing, the magnitude of vorticiy must increase in the tube. This is spin up . Conversely, if a vortex tube becomes shorter, we get the opposite effect of spin down and gets smaller.  A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.    Everyday examples of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.    Plug hole vortex  We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’ at this website .  The presenter commented that the angular momentum of a fluid parcel remains constant. Using angular momentum equals velocity times distance from axis, this implies the angular velocity is proportial to the inverse of the radial distance. This is precisely the  In it, we saw a reference to `Crocco's theorem', which can be derived from the derivation of Bernoulli's equation : where with   Noting that this flow is steady and has zero vorticity away from the plughole, we must have , that is is constant everywhere. On the surface, we have and hence is constant, where is vertical height. Using , the speed is . Hence, the quantity is constant, that is thus explaining the shape of the surface that was seen.    Tornado  As commented in the `Vorticity, Part 2’ at this website , the pressure in the middle of a tornado is very low. This can also be understood from Bernoulli's equation : with In the steady case, and outside the vortex core, there is no vorticity and hence is constant, meaning that, as we approach the vortex core, the pressure decreases as the fluid speed increases. Furthermore, in the vortex core where the vorticity is non-zero, the quantity points towards the axis. Thus decreases as the axis is approached, further decreasing the pressure.  This pressure reduction leads to condensation in the core of the tornado, and this is visible, allowing us to see the tornado, and, to some extent, visualise the intense air flows associated with it.  As commented, in propellors of boats, this pressure reduction in the core of a vortex can cause the water to boil!     The Helmholtz principle   Recap of line vortex  The Helmholtz vertex theorems help us to understand the concept of a line vortex in irrotational flow that was introduced in . Recall that this is associated with the complex potential (see ), and has corresponding velocity components The vorticity associated with this flow at all points except the singularity at the origin. However, it was also notes in that the circulation around any closed curve containing the origin is .  Thus, a line vortex of strength is the limit of a vortex tube of strength as its thickness goes to zero.  We note that in any real fluid, the effects of viscosity would come into play in the core of the line vortex, disallowing an infinite concentration of vorticity there. Despite this, we can use the concept of a line vortex to gain insight into a number of real-world problems.  The following corollary is a useful application of the Helmholtz vortex theorems.  The Helmholtz principle   A useful corollary to the Helmholtz vortex theorems is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.'     A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem , these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.    Application of the Helmholtz principle  In the case of a two-dimensional flow containing a line vortex that is everywhere irrotational (apart from in the line vortex core), we can use the Helmholtz principle to find the motion of the line vortex. In particular, to find the evolution of the flow we can make use of the following techniques that were covered in :    the method of images , and    conformal mapping .      Vortex pair  We assume two-dimensional flow, and consider the evolution of two line vortices of equal and opposite strengths initially a distance apart at locations with the vortex at having strength and that at having strength .  The vortex at will move under the influence of that at with speed in the -direction. Similarly, the vortex will also move with speed in the -direction. Since their separation remains constant, the two vortices will continue to move at a constant speed in the -direction.  In the frame of reference moving with the vortices, there is a uniform flow in the -direction and the flow due to each of the vortices. The complex potential is the sum of the complex potentials due to these three elements: The streamfunction is the imaginary part of this:   To help with plotting the streamfunction, we note that:    The derivative of the complex potential is which equals zero at the points , so these are stagnation points of the flow.    We have on the line , so this is a streamline.    Far from the vortices (in any direction), the streamfunction is approximately , so the streamlines are approximately vertical lines.    As we approach the vortex at , tends to and as we approach the vortex at , tends to .    These points imply that there is a curve on which in the right-half plane. This curve joins the two stagnation points and goes around the vortex. Similarly, there is a curve on which in the left-half plane, and these two curves are reflections of one another.  If we dye the fluid within these two curves, we would create a blob of fluid surrounding the vortices. An observer would see this blob of fluid travelling at the speed in the -direction without changing shape.    Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.     Application to airports  At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.  You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!    "
 },
 {
   "id": "thm-helmholtz-vortex-theorems",
@@ -1690,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "6.2.11",
   "title": "Application of the Helmholtz principle.",
-  "body": " Application of the Helmholtz principle  In an otherwise irrotational flow, we can use the Helmholtz principle to find the motion of a line vortex. In particular, we can make use of the following techniques:    the method of images     and conformal mapping     to find the flow evolution.  "
+  "body": " Application of the Helmholtz principle  In the case of a two-dimensional flow containing a line vortex that is everywhere irrotational (apart from in the line vortex core), we can use the Helmholtz principle to find the motion of the line vortex. In particular, to find the evolution of the flow we can make use of the following techniques that were covered in :    the method of images , and    conformal mapping .    "
 },
 {
   "id": "helmholtz-principle-6",
@@ -1698,8 +1752,8 @@ var ptx_lunr_docs = [
   "url": "sec-helmholtz.html#helmholtz-principle-6",
   "type": "Example",
   "number": "6.2.12",
-  "title": "Example: Wing tip vortices.",
-  "body": " Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.   "
+  "title": "Vortex pair.",
+  "body": " Vortex pair  We assume two-dimensional flow, and consider the evolution of two line vortices of equal and opposite strengths initially a distance apart at locations with the vortex at having strength and that at having strength .  The vortex at will move under the influence of that at with speed in the -direction. Similarly, the vortex will also move with speed in the -direction. Since their separation remains constant, the two vortices will continue to move at a constant speed in the -direction.  In the frame of reference moving with the vortices, there is a uniform flow in the -direction and the flow due to each of the vortices. The complex potential is the sum of the complex potentials due to these three elements: The streamfunction is the imaginary part of this:   To help with plotting the streamfunction, we note that:    The derivative of the complex potential is which equals zero at the points , so these are stagnation points of the flow.    We have on the line , so this is a streamline.    Far from the vortices (in any direction), the streamfunction is approximately , so the streamlines are approximately vertical lines.    As we approach the vortex at , tends to and as we approach the vortex at , tends to .    These points imply that there is a curve on which in the right-half plane. This curve joins the two stagnation points and goes around the vortex. Similarly, there is a curve on which in the left-half plane, and these two curves are reflections of one another.  If we dye the fluid within these two curves, we would create a blob of fluid surrounding the vortices. An observer would see this blob of fluid travelling at the speed in the -direction without changing shape.  "
 },
 {
   "id": "helmholtz-principle-7",
@@ -1707,6 +1761,15 @@ var ptx_lunr_docs = [
   "url": "sec-helmholtz.html#helmholtz-principle-7",
   "type": "Example",
   "number": "6.2.13",
+  "title": "Example: Wing tip vortices.",
+  "body": " Example: Wing tip vortices   (From Exercise 5.8 in ). An inviscid fluid occupies the region , and is bounded by rigid boundaries at and at . Its motion results wholly from the presence of a line vortex of strength . Show that the path taken by the vortex is   At take-off, an aircraft generates strong vortices shed from the tips of its wings, see . These are observed to move downwards and outwards under each other's influence.    Suppose the vortex is at the point We use three image vortices at and at , both of strength , and at of strength .  Recall that the complex potential of a line vortex at of strength is and its velocity is given by the derivative of this map: .  The velocty of the vortex is given by the sum of the velocities due to the other three vortices: Hence and therefore which can be solved by separation of variables to give where is constant, and this can be rearranged into the required form.   "
+},
+{
+  "id": "helmholtz-principle-8",
+  "level": "2",
+  "url": "sec-helmholtz.html#helmholtz-principle-8",
+  "type": "Example",
+  "number": "6.2.14",
   "title": "Application to airports.",
   "body": " Application to airports  At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.  You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!  "
 },
@@ -1717,16 +1780,133 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Axisymmetric flow",
-  "body": " Axisymmetric flow   The Stokes streamfunction  This is    Irrotational flow past a sphere  This is   Smoke rings  In you are asked to prove a formulation of the vorticity equation in the special case of axisymmetric flow. Note that, in this case, the vorticity points purely in the azimuthal direction.  A smoke ring is an example of an axisymmetric flow with vorticity, see 6:44-7:53 of Vorticity Part 2 . We may think of the flow as being everywhere irrotational, except in the smoke ring, with the smoke ring itself representing a vortex tube.  As a ring gets wider, conservation of mass implies the vortex tube gets thinner inversely proportional to the distance from the axis, and the second Helmholtz vortex theorem implies the vorticity must increase in proportion to distance from the axis so that the circulation remains constant. In you will show that which expresses the same result: the vorticity increases in proportion to distance from axis .    "
+  "body": " Axisymmetric flow   In the special case in which the flow possesses axisymmetry, you might not be surprised to learn that the equations simplify considerably. In fact, axisymmetry can be viewed as a reduction of the dimension of the problem and axisymmetric flows share some features in common with two-dimensional flows.   Axisymmetric flow   Given an axis of symmetry, an axisymmetric flow must possess:    rotational symmetry about the axis, meaning the flow is unaffected by a rotation through any angle about the axis, and    reflectional symmetry in any plane containing the axis.       Note that rotationally symmetric flows are not in general axisymmetric. Working in cylindrical polar coordinates centred on the axis of symmetry, any flow that is independent of is rotationally symmetric. In order to have the stronger property of being axisymmetric, the flow must also satisfy .  A flow is rotationally symmetric but not axisymmetric, for example a line vortex .     The Stokes streamfunction for axisymmetric flow   The Stokes streamfunction   In cylindrical polar coordinates, , we define the Stokes streamfunction by and in spherical polar coordinates, , we define by      Note that you would be given the formula for gradient, divergence and curl in cylindrical or spherical polar coordinates.    The definitions in cylindrical polar coordinates and in spherical polar coordinates are equivalent since in cylindrical polar coordinates and in spherical polar coordinates are equal to each other.    Recall the streamfunction for two-dimensional flow that was introduced in :     In cylindrical polar coordinates, if we had written instead of , we would find that is inversely proportional to on streamlines (instead of being constant). This is why it is defined with the factor before taking the curl. Similar considerations apply in spherical polar coordinates.    The velocity components corresponding to the definitions are in cylindrical polar coordinates and in cylindrical polar coordinates     The Stokes streamfunction is constant along streamlines   The Stokes streamfunction, as defined by or , is constant along streamlines.     Since the definitions in cylindrical and spherical coordinates are equivalent, it suffices to prove the theorem in spherical coordinates. In this case, and, substituting the velocity components , this equals zero. Hence is constant along streamlines.     Relationship to vorticity  In cylindrical polar coordinates, the vorticity is given by where In spherical polar coordinates, the vorticity is where Note that the two expressions for are equivalent, since in cylindricals equals in spherical polar coordinates.  In cylindrical polar coordinates, the vorticity equation for axisymmetric flow is and in sphericals it is    Smoke rings  In you are asked to prove a formulation of the vorticity equation in the special case of axisymmetric flow. Note that, in this case, the vorticity points purely in the azimuthal direction.  A smoke ring is an example of an axisymmetric flow with vorticity, see 6:44-7:53 of Vorticity Part 2 . We may think of the flow as being everywhere irrotational, except in the smoke ring, with the smoke ring itself representing a vortex tube.  As a ring gets wider, conservation of mass implies the vortex tube gets thinner inversely proportional to the distance from the axis, and the second Helmholtz vortex theorem implies the vorticity must increase in proportion to distance from the axis so that the circulation remains constant. In you will show that, in cylindrical polar coordinates, which expresses the same result: the vorticity increases in proportion to distance from axis .  Note also that, as commented in the movie, the smoke ring self-propates. This is another application of the Helmholtz principle, as follows. If we consider a part of the ring, it is subject to the velocity field arising from all the other parts of the ring. All these parts contribute to a forward motion, and this is true for all parts of the ring.     Irrotational flow past a sphere  We consider a sphere of radius travelling at a constant speed through a large reservoir of fluid and find the velocity field. We assume the sphere has been travelling for long enough that the flow in a frame of reference moving with the sphere is steady.   Proof that the flow is irrotational: We work in spherical polar coordinates in the frame of reference moving with the sphere and solve to find the Stokes streamfunction. Steady flow implies the simplification which means that is constant along streamlines. As long as there are no closed streamlines, meaning that all streamlines originate at infinity where is zero, then must be zero everywhere and the flow is irrotational.  Setting the vorticity to zero and using the expression , we have to solve   As , we require Using the expressions given in , these conditions are equivalent to as .  This suggests trying We substitute this into , and find that it is a solution provided that which means that where and are constants of integration.  We need to satisfy the condition at infinity which gives as , and no penetration at the surface of the sphere, which, using , is equivalent to at .  These boundary conditions can be satified by the choice , , and we have This can be used to sketch the streamlines.  If required, we can use to find the velocity components    Alternative method to find the flow using the velocity potential  Note that we could also use the velocity potential to solve this problem. In this case we assume the flow is irrotational to start with.  Again we work in spherical polar coordinates moving at speed with the sphere with the axis pointing in the direction of travel and assume the flow is axisymmetric. Writing , where is the potential, the flow is governed by the Laplace equation: We solve this equation subject to boundary conditions of no penetration at and assume that, far from the sphere, the flow is along the axis:    No penetration at the sphere's surface implies that there. So .    That the flow tends to implies that and as . That is, and .    The boundary conditions as suggest trying , and, with this assumption, Equation~\\eqref{eq:laplacephisimp} becomes Trying yields or~ . Thus and the boundary conditions at imply , and those as imply . Thus and , and This solution has the correct form as , and at the surface of the sphere. It also agrees with the velocity field calculated using the streamfunction method.    At the spherical surface , we have the velocity . In practical terms, the large pressure gradients created by this flow would lead to boundary layer separation , and a large wake behind the sphere.    In we will calculate the flow past a sphere in a low-Reynolds-number flow.    "
 },
 {
-  "id": "subsec-irrot-sphere-3",
+  "id": "sec-axisymmetric-flow-2-2",
   "level": "2",
-  "url": "sec-axisymmetric-flow.html#subsec-irrot-sphere-3",
-  "type": "Example",
+  "url": "sec-axisymmetric-flow.html#sec-axisymmetric-flow-2-2",
+  "type": "Definition",
   "number": "6.3.1",
+  "title": "Axisymmetric flow.",
+  "body": " Axisymmetric flow   Given an axis of symmetry, an axisymmetric flow must possess:    rotational symmetry about the axis, meaning the flow is unaffected by a rotation through any angle about the axis, and    reflectional symmetry in any plane containing the axis.     "
+},
+{
+  "id": "sec-axisymmetric-flow-2-3",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#sec-axisymmetric-flow-2-3",
+  "type": "Remark",
+  "number": "6.3.2",
+  "title": "",
+  "body": " Note that rotationally symmetric flows are not in general axisymmetric. Working in cylindrical polar coordinates centred on the axis of symmetry, any flow that is independent of is rotationally symmetric. In order to have the stronger property of being axisymmetric, the flow must also satisfy .  A flow is rotationally symmetric but not axisymmetric, for example a line vortex .  "
+},
+{
+  "id": "def-stokes-streamfunction",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#def-stokes-streamfunction",
+  "type": "Definition",
+  "number": "6.3.3",
+  "title": "The Stokes streamfunction.",
+  "body": " The Stokes streamfunction   In cylindrical polar coordinates, , we define the Stokes streamfunction by and in spherical polar coordinates, , we define by    "
+},
+{
+  "id": "subsec-stokes-streamfunction-3",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-3",
+  "type": "Remark",
+  "number": "6.3.4",
+  "title": "",
+  "body": " Note that you would be given the formula for gradient, divergence and curl in cylindrical or spherical polar coordinates.  "
+},
+{
+  "id": "subsec-stokes-streamfunction-4",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-4",
+  "type": "Remark",
+  "number": "6.3.5",
+  "title": "",
+  "body": " The definitions in cylindrical polar coordinates and in spherical polar coordinates are equivalent since in cylindrical polar coordinates and in spherical polar coordinates are equal to each other.  "
+},
+{
+  "id": "subsec-stokes-streamfunction-5",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-5",
+  "type": "Remark",
+  "number": "6.3.6",
+  "title": "",
+  "body": " Recall the streamfunction for two-dimensional flow that was introduced in :   "
+},
+{
+  "id": "subsec-stokes-streamfunction-6",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-6",
+  "type": "Remark",
+  "number": "6.3.7",
+  "title": "",
+  "body": " In cylindrical polar coordinates, if we had written instead of , we would find that is inversely proportional to on streamlines (instead of being constant). This is why it is defined with the factor before taking the curl. Similar considerations apply in spherical polar coordinates.  "
+},
+{
+  "id": "subsec-stokes-streamfunction-7",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-7",
+  "type": "Remark",
+  "number": "6.3.8",
+  "title": "",
+  "body": " The velocity components corresponding to the definitions are in cylindrical polar coordinates and in cylindrical polar coordinates   "
+},
+{
+  "id": "thm-Stokes-streamfunction-streamlines",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#thm-Stokes-streamfunction-streamlines",
+  "type": "Theorem",
+  "number": "6.3.9",
+  "title": "The Stokes streamfunction is constant along streamlines.",
+  "body": " The Stokes streamfunction is constant along streamlines   The Stokes streamfunction, as defined by or , is constant along streamlines.   "
+},
+{
+  "id": "subsec-stokes-streamfunction-9",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-stokes-streamfunction-9",
+  "type": "Proof",
+  "number": "6.3.1.1",
+  "title": "",
+  "body": " Since the definitions in cylindrical and spherical coordinates are equivalent, it suffices to prove the theorem in spherical coordinates. In this case, and, substituting the velocity components , this equals zero. Hence is constant along streamlines.  "
+},
+{
+  "id": "subsec-streamfunction-vorticity-4",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-streamfunction-vorticity-4",
+  "type": "Example",
+  "number": "6.3.10",
   "title": "Smoke rings.",
-  "body": " Smoke rings  In you are asked to prove a formulation of the vorticity equation in the special case of axisymmetric flow. Note that, in this case, the vorticity points purely in the azimuthal direction.  A smoke ring is an example of an axisymmetric flow with vorticity, see 6:44-7:53 of Vorticity Part 2 . We may think of the flow as being everywhere irrotational, except in the smoke ring, with the smoke ring itself representing a vortex tube.  As a ring gets wider, conservation of mass implies the vortex tube gets thinner inversely proportional to the distance from the axis, and the second Helmholtz vortex theorem implies the vorticity must increase in proportion to distance from the axis so that the circulation remains constant. In you will show that which expresses the same result: the vorticity increases in proportion to distance from axis .  "
+  "body": " Smoke rings  In you are asked to prove a formulation of the vorticity equation in the special case of axisymmetric flow. Note that, in this case, the vorticity points purely in the azimuthal direction.  A smoke ring is an example of an axisymmetric flow with vorticity, see 6:44-7:53 of Vorticity Part 2 . We may think of the flow as being everywhere irrotational, except in the smoke ring, with the smoke ring itself representing a vortex tube.  As a ring gets wider, conservation of mass implies the vortex tube gets thinner inversely proportional to the distance from the axis, and the second Helmholtz vortex theorem implies the vorticity must increase in proportion to distance from the axis so that the circulation remains constant. In you will show that, in cylindrical polar coordinates, which expresses the same result: the vorticity increases in proportion to distance from axis .  Note also that, as commented in the movie, the smoke ring self-propates. This is another application of the Helmholtz principle, as follows. If we consider a part of the ring, it is subject to the velocity field arising from all the other parts of the ring. All these parts contribute to a forward motion, and this is true for all parts of the ring.  "
+},
+{
+  "id": "subsec-irrot-sphere-10",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-irrot-sphere-10",
+  "type": "Remark",
+  "number": "6.3.11",
+  "title": "Alternative method to find the flow using the velocity potential.",
+  "body": " Alternative method to find the flow using the velocity potential  Note that we could also use the velocity potential to solve this problem. In this case we assume the flow is irrotational to start with.  Again we work in spherical polar coordinates moving at speed with the sphere with the axis pointing in the direction of travel and assume the flow is axisymmetric. Writing , where is the potential, the flow is governed by the Laplace equation: We solve this equation subject to boundary conditions of no penetration at and assume that, far from the sphere, the flow is along the axis:    No penetration at the sphere's surface implies that there. So .    That the flow tends to implies that and as . That is, and .    The boundary conditions as suggest trying , and, with this assumption, Equation~\\eqref{eq:laplacephisimp} becomes Trying yields or~ . Thus and the boundary conditions at imply , and those as imply . Thus and , and This solution has the correct form as , and at the surface of the sphere. It also agrees with the velocity field calculated using the streamfunction method.  "
+},
+{
+  "id": "subsec-irrot-sphere-11",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-irrot-sphere-11",
+  "type": "Remark",
+  "number": "6.3.12",
+  "title": "",
+  "body": " At the spherical surface , we have the velocity . In practical terms, the large pressure gradients created by this flow would lead to boundary layer separation , and a large wake behind the sphere.  "
+},
+{
+  "id": "subsec-irrot-sphere-12",
+  "level": "2",
+  "url": "sec-axisymmetric-flow.html#subsec-irrot-sphere-12",
+  "type": "Remark",
+  "number": "6.3.13",
+  "title": "",
+  "body": " In we will calculate the flow past a sphere in a low-Reynolds-number flow.  "
 },
 {
   "id": "ws-vorticity",
@@ -1735,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "6.4",
   "title": "Exercises",
-  "body": "   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Curve at times and . The inset shows the relationship between the two curves.    Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.     Axisymmetric flow   Consider an axisymmetric flow. Show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.    To do.    "
+  "body": "   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Curve at times and . The inset shows the relationship between the two curves.    Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.     Axisymmetric flow   Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     To do.    "
 },
 {
   "id": "ws-vorticity-1-1",
@@ -1762,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "6.4.2",
   "title": "Axisymmetric flow.",
-  "body": " Axisymmetric flow   Consider an axisymmetric flow. Show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.    To do.   "
+  "body": " Axisymmetric flow   Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     To do.   "
 },
 {
   "id": "definitions",
@@ -2332,11 +2512,20 @@ var ptx_lunr_docs = [
   "body": " It is quite possible for a flow not to satisfy the Navier Stokes equations. For example, the similar looking flow does satisfy the continuity equation, but has The Navier Stokes equations would give Trying to solve this from the first equation would give and substituting this solution into the second equation gives This is a contradiction as is supposed to be a function of and only, but here the right-hand side depends on , meaning that has to depend on . Alternatively we could show that the curl of is non-zero, which also implies a contradiction.  If the flow were given at a particular point in time by , what do you think would happen next?  "
 },
 {
+  "id": "sec-low-Reynolds-number-sphere",
+  "level": "1",
+  "url": "sec-low-Reynolds-number-sphere.html",
+  "type": "Section",
+  "number": "7.6",
+  "title": "Low-Reynolds-number flow past a sphere",
+  "body": " Low-Reynolds-number flow past a sphere  We consider  "
+},
+{
   "id": "ws-viscousflows",
   "level": "1",
   "url": "ws-viscousflows.html",
   "type": "Exercises",
-  "number": "7.6",
+  "number": "7.7",
   "title": "Exercises",
   "body": "   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).     Check the dimensions of the Stokes drag. Is the dimension what you expect?    The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.      A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?    Gravity and fluid drag      Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .    Newton's second law gives       Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?    We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .      Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamic viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .    Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by       Comment on the experimental set up needed to measure the terminal velocity.    The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .      Stress on a plate   A rigid plate of length is fixed along the line and has width in the -direction. An incompressible fluid of density and viscosity flows steadily in the shaded region , shown in .   Sketch of plate.       Given that the velocity field is what are , , , in terms of and ? Simplify the velocity components and . (Note that the fact that the coefficients on the terms in and in are equal and opposite is required to ensure incompressibility of the fluid).    We apply no-slip boundary conditions at the plate. Thus if then we must have and . Hence for all , which implies that , , and . Solving, we obtain Hence       Find the drag force on the plate.    The drag force can be found by changing coordinates from to , which are Cartesian coordinates where the -axis runs along the plate and the -axis goes from the plate perpendicularly into the fluid. You may use the fact that where , are unit vectors in the - and -directions, respectively, and , are unit vectors in the - and -directions, respectively, and is the angle between the plate and the -axis. You may use the fact that , and     We perform the coordinate transform illustrated in from the -plane to the -plane:   Sketch of plate.    We use and so the velocity components are and .  Thus the shear stress is given by and hence the drag force equals       Stress on a surface due to the pressure   In this problem, you will calculate the resultant force on the cube shown in due to the pressure in the surrounding fluid acting on the fluid within the cube. We will consider two different methods of calculating this force.  Note that, in this question, as with the derivation of the Navier Stokes equations , you may use some sleight of hand, so as to avoid carefully integrating the force over the surface. However, as in that case, fortunately the errors cancel and the result is correct.     Assuming that the pressure is uniform over the surface and over the surface , calculate the force on the fluid in the cube due to the pressure of the surrounding fluid on these two faces and show that it is approximately where is the volume of the cube.    The force on is pressure times area acting into the cube, which is , while the force on equals . Hence the contribution to the force from these two faces is       Similarly, calculate the force on the fluid in the cube due to the pressure of the surrounding fluid on the faces and , and on the faces and . Hence show that the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by     The force on is and that on is . This gives a contribution Similarly, the force on is and that on is . This gives a contribution Hence the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by       Check that you get the same result using the stress tensor of an inviscid fluid .    The unit normal to the face is , and hence the stress at a point in this face is Hence the force on this face equals . Similarly, the unit normal to the face is , and hence the stress at a point in this face is Hence the force on this face equals . Thus the contribution to the force from these two faces is The contributions from the other faces can be calculated similarly, and the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by       Derivation of the Cauchy equation   In this problem, you will derive the Cauchy equation for the conservation of linear momentum in a more general fluid (the Navier Stokes equation only applies to Newtonian fluids). We will consider a small cube of fluid as shown in , and apply the Reynolds Transport Theorem .     In this task you will    Here is the solution.      Expressing the Navier Stokes equation in other coordinates   In this problem, you will express the Navier Stokes equation in terms of cylindrical and spherical polar coordinates.     Expressing the Navier Stokes equation in other coordinates   Streamfunction and in axisymmetric flows.    "
 },
@@ -2345,7 +2534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ws-viscousflows-1-1",
   "type": "Warning",
-  "number": "7.6.1",
+  "number": "7.7.1",
   "title": "",
   "body": " We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.  "
 },
@@ -2354,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-falling-ball-viscometer",
   "type": "Exercise",
-  "number": "7.6.1",
+  "number": "7.7.1",
   "title": "Falling ball viscometer.",
   "body": " Falling ball viscometer   For slowly moving spheres, the resistive force is given by Stokes drag, and equals , where is the diameter of the sphere, is the dynamic viscosity of the fluid, and is the speed of the sphere (this is a famous result).     Check the dimensions of the Stokes drag. Is the dimension what you expect?    The dimensions of the terms are as follows: meaning that Thus the expression for the Stokes drag has the dimensions of force, as expected.      A steel ballbearing of mass , diameter falls slowly through a viscous fluid of dynamic viscosity . In this question you can neglect the buoyancy force. What are the other two forces acting on the ballbearing?    Gravity and fluid drag      Write down a differential equation for the time-evolution of the velocity of the ballbearing, assuming that the acceleration due to gravity is .    Newton's second law gives       Given that the ballbearing is released from rest, solve the differential equation to show that where and are constant parameters that you should define. What is the physical significance of and ?    We have for which the integrating factor is , and where is a constant of integration. Hence The initial condition is at , and, substituting this into the above equation, , giving . Hence We substitute and . With these substitutions we get The physical significance of these choices is that is the terminal velocity of the sphere and is the timescale over which the velocity of the sphere approaches the terminal velocity. Every units of time, the velocity of the sphere becomes closer to the terminal velocity by a factor .      Sketch the velocity as a function of time.     Sketch of velocity as a function of time.        If the ballbearing has diameter 2 mm and is falling through glycerol at 20 C, what is its terminal velocity in mm\/s and what is the timescale taken to reach the terminal velocity? You may assume that the dynamic viscosity of glycerol at 20 C is 1.2 Pa s and the density of steel is 8,000 kg\/m .    Using the fact that the volume of a sphere is , where is the diameter, we have , where kg\/m . Thus The timescale is given by       Comment on the experimental set up needed to measure the terminal velocity.    The ball would attain its terminal velocity very quickly (in much less than a second), and since is on order of centimetres per second, a container of about 10 cm deep would be suitable for measurement. In fact this idea is commonly used to measure the viscosity of fluids (since the viscosity can be calculated from the terminal velocity); this is called a falling ball viscometer .    "
 },
@@ -2363,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-stress-plate",
   "type": "Exercise",
-  "number": "7.6.2",
+  "number": "7.7.2",
   "title": "Stress on a plate.",
   "body": " Stress on a plate   A rigid plate of length is fixed along the line and has width in the -direction. An incompressible fluid of density and viscosity flows steadily in the shaded region , shown in .   Sketch of plate.       Given that the velocity field is what are , , , in terms of and ? Simplify the velocity components and . (Note that the fact that the coefficients on the terms in and in are equal and opposite is required to ensure incompressibility of the fluid).    We apply no-slip boundary conditions at the plate. Thus if then we must have and . Hence for all , which implies that , , and . Solving, we obtain Hence       Find the drag force on the plate.    The drag force can be found by changing coordinates from to , which are Cartesian coordinates where the -axis runs along the plate and the -axis goes from the plate perpendicularly into the fluid. You may use the fact that where , are unit vectors in the - and -directions, respectively, and , are unit vectors in the - and -directions, respectively, and is the angle between the plate and the -axis. You may use the fact that , and     We perform the coordinate transform illustrated in from the -plane to the -plane:   Sketch of plate.    We use and so the velocity components are and .  Thus the shear stress is given by and hence the drag force equals     "
 },
@@ -2372,7 +2561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-stress-pressure",
   "type": "Exercise",
-  "number": "7.6.3",
+  "number": "7.7.3",
   "title": "Stress on a surface due to the pressure.",
   "body": " Stress on a surface due to the pressure   In this problem, you will calculate the resultant force on the cube shown in due to the pressure in the surrounding fluid acting on the fluid within the cube. We will consider two different methods of calculating this force.  Note that, in this question, as with the derivation of the Navier Stokes equations , you may use some sleight of hand, so as to avoid carefully integrating the force over the surface. However, as in that case, fortunately the errors cancel and the result is correct.     Assuming that the pressure is uniform over the surface and over the surface , calculate the force on the fluid in the cube due to the pressure of the surrounding fluid on these two faces and show that it is approximately where is the volume of the cube.    The force on is pressure times area acting into the cube, which is , while the force on equals . Hence the contribution to the force from these two faces is       Similarly, calculate the force on the fluid in the cube due to the pressure of the surrounding fluid on the faces and , and on the faces and . Hence show that the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by     The force on is and that on is . This gives a contribution Similarly, the force on is and that on is . This gives a contribution Hence the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by       Check that you get the same result using the stress tensor of an inviscid fluid .    The unit normal to the face is , and hence the stress at a point in this face is Hence the force on this face equals . Similarly, the unit normal to the face is , and hence the stress at a point in this face is Hence the force on this face equals . Thus the contribution to the force from these two faces is The contributions from the other faces can be calculated similarly, and the total force on the fluid in the cube due to the pressure of the surrounding fluid is given by     "
 },
@@ -2381,7 +2570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-Cauchy-equation",
   "type": "Exercise",
-  "number": "7.6.4",
+  "number": "7.7.4",
   "title": "Derivation of the Cauchy equation.",
   "body": " Derivation of the Cauchy equation   In this problem, you will derive the Cauchy equation for the conservation of linear momentum in a more general fluid (the Navier Stokes equation only applies to Newtonian fluids). We will consider a small cube of fluid as shown in , and apply the Reynolds Transport Theorem .     In this task you will    Here is the solution.    "
 },
@@ -2390,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-polar-coordinates",
   "type": "Exercise",
-  "number": "7.6.5",
+  "number": "7.7.5",
   "title": "Expressing the Navier–Stokes equation in other coordinates.",
   "body": " Expressing the Navier Stokes equation in other coordinates   In this problem, you will express the Navier Stokes equation in terms of cylindrical and spherical polar coordinates.   "
 },
@@ -2399,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-viscousflows.html#ps-streamfunction",
   "type": "Exercise",
-  "number": "7.6.6",
+  "number": "7.7.6",
   "title": "Expressing the Navier–Stokes equation in other coordinates.",
   "body": " Expressing the Navier Stokes equation in other coordinates   Streamfunction and in axisymmetric flows.   "
 },

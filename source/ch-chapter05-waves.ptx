@@ -155,13 +155,95 @@
         </p>
       </subsubsection>
     </subsection>
+
+    <section xml:id="sec-waterwaves-linearisation">
+      <title>Linearisation of the water-wave equations</title>
+
+      <p>
+        We have successfully derived the full water-wave equations for a potential fluid. They are as follows.
+      </p>
+
+      <theorem xml:id="thm-waterwaves-equations">
+        <statement>
+          <p>
+           The governing equations for a potential flow modelling deep water waves is: 
+           <mdn>
+            <mrow> \nabla^2 \phi = 0 &amp; \text{in the flow domain}</mrow>
+           </mdn> 
+          </p>
+        </statement>
+      </theorem>
+      
+      
+    </section>
+  </section>
+
+  <section xml:id="sec-wave-parameters">
+    <title>Wave parameters</title>
+
+    <p>
+      A general travelling wave is written as 
+      <men xml:id="eqn-travelling-wave">
+        \eta = a\sin\left[ kx - \omega t \right].
+      </men>
+      An additional phase, e.g. in <m>\sin(kx - \omega t - \beta)</m> can be included but this can be removed through a shift in space or time. What do the quantities <m>k</m> and <m>\omega</m> represent?
+    </p>
+
+    <p>
+     We can factor out the <m>k</m> and obtain 
+     <me>
+      \eta = a\sin \left[k\left( x - \frac{\omega}{k}t\right)\right].
+     </me>
+     The quantity <m>k</m> is called the <em>wavenumber</em>. If we define it instead to be 
+     <men xml:id="eqn-wavenumber">
+      k \equiv \frac{2\pi}{\lambda},
+     </men>
+      then we see that shifting <m>x</m> by <m>\pm \lambda</m> does not change the wave. The quantity <m>\lambda</m> is called the <em>wavelength</em>.
+    </p>
+
+    <p>
+      Let us now turn to the quantity <m>\omega/k</m>. If we introduce
+      <men xml:id="eqn-wavespeed">
+        c \equiv \frac{\omega}{k},
+      </men>
+      then <m>c</m> is called the <em>phase speed</em>. It corresponds to the speed at which the "phase" of the wave (the crests and troughs) propagate.
+    </p>
+
+    <p>
+      At a fixed location in space, what is the time that it takes for the condition at this point to repeat itself? It is the time required for the wave to travel one wavelength, <m>\lambda</m>. Hence this is defined as <em>the period</em> of the wave:
+      <men xml:id="eqn-wave-period">
+        T \equiv \frac{\lambda}{c}.
+      </men>
+    </p>
+
+    <p>
+      These concepts can be generalised to wave in a three-dimensional fluid, where we would write instead
+      <men xml:id="eqn-wave-3d">
+        \eta = a\sin(kx + ly + mz - \omega t) = a \sin(\boldsymbol{K} \cdot \bx - \omega t).
+    </men></p>
+
+    <p>
+    In this case, <m>\boldsymbol{K} = (k, l, m)</m> is the <em>wavenumber vector</em> and has magnitude <m>K = \sqrt{k^2 + l^2 + m^2}</m>. The wavelength is then 
+    <men xml:id="eqn-wave-3d-wavelength">
+      \lambda = \frac{2\pi}{K}.
+    </men>
+    </p>
+
+    <p>
+      The phase velocity is given by 
+      <men xml:id="eqn-3d-phase">
+        \boldsymbol{c} = \frac{\omega}{K} \frac{\boldsymbol{K}}{K}.
+      </men>
+      
+    </p>
+    
   </section>
 
   <section xml:id="sec-waterwaves-stokeswaves">
     <title>Stokes waves</title>
 
     <p>
-      To be covered Week 5. 
+      The material on Stokes waves will be transcribed from Lecture 5-02 and 5-03 visualiser notes found <url href="https://moodle.bath.ac.uk/mod/folder/view.php?id=1499818">here</url>.
     </p>
     
   </section>
@@ -224,13 +306,16 @@
     </exercise>
 
     <exercise>
-      <title>Stokes waves</title>
+      <title>Stokes waves in finite depth</title>
       <p>
-        Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the two governing equations are given by:
-        <md>
-          <mrow>\pd{\phi}{y} \amp= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x}, </mrow>
-          <mrow>\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta \amp= 0. </mrow>
-        </md>
+        Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the kinematic equation is given by 
+        <me>
+          \pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},
+        </me>
+        while the dynamic (Bernouilli) equation is
+        <me>
+        \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0.
+        </me>
       </p>
      
       <p>
@@ -243,12 +328,53 @@
       </p>
 
       <p>
-        Show that travelling harmonic waves, with <m>\eta = AA\cos(kx - \omega t)</m> and <m>\phi = f(y)\sin(kx - \omega t)</m>, are possible and derive the associated dispersion relation, 
+        Show that travelling harmonic waves, with <m>\eta = A\cos(kx - \omega t)</m> and <m>\phi = f(y)\sin(kx - \omega t)</m>, are possible and derive the associated dispersion relation, 
         <me>
           \omega^2 = gk \tanh(kh). 
         </me>
-        Find and sketch the particle paths. 
       </p>
+
+      <p>
+        In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions: 
+        <me>
+          \cosh z = \frac{\e^{z} + \e^{-z}}{2} \quad \text{and} \quad \sinh z = \frac{\e^{z} - \e^{-z}}{2},
+        </me>
+        and note that the cosh function is even at <m>z = 0</m> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <m>f(y)</m> and is a common trick when solving boundary-value problems with exponentials. 
+      </p>
+    </exercise>
+
+    <exercise>
+      <title>Linar waves in a current</title>
+      
+      <p>
+        We now consider linear waves in a channel of depth <m>h</m>, as in the previous question. This time, however, assume that there is a uniform flow of speed <m>U</m> at infinity. Therefore, this time, we shall consider the velocity as expressed as 
+        <me>
+          u = U + \pd{\partial \phi}{x}, \qquad v = \pd{\partial \phi}{y},
+        </me>
+        and again linearise the necessary equations. 
+      </p>
+
+      <p>Linearise the associate free-surface equations, and show that this time, they produce
+        <me>
+          \pd{\phi}{y} = \pd{\eta}{t} + U \pd{\eta}{x}, \qquad \text{on $y = 0$},
+        </me>
+        and
+        <me>
+          \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad \text{on $y = 0$}.
+        </me>
+      </p>
+
+      <p>
+        Show finally that the the dispersion relation predicts possible waves of speeds
+        <me>
+          c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
+        </me>
+      </p>
+
+      <p>
+        The regime where the flow speed is less than <m>\sqrt{gh}</m> is known as subcritical. The regime where flow is greather than <m>\sqrt{gh}</m> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?
+      </p>
+      
     </exercise>
 
 
@@ -264,6 +390,66 @@
           \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gh.
         </me>
       </p>
+    </exercise>
+
+    <exercise>
+      <title>The dispersion relation (simple)</title>
+      <introduction>
+      <p>
+        The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities. 
+      </p>
+
+      <p>
+        Consider two sinusoidal waves with nearly the same wavenumber and frequency: 
+        <me>
+          \eta(x, t) = \sin(k_1 x - \omega_1 t) + \sin(k_2 x - \omega_2 t). 
+        </me>
+      </p>
+    </introduction>
+        
+        <task>
+          <statement>
+            <p>
+            Use the trig angle identity 
+            <me>
+              \sin A + \sin B = 2\sin\left( \frac{A + B}{2}\right) \cos\left(\frac{A - B}{2}\right),
+            </me>
+            to put the wave <m>\eta</m> into the form of a product of sinusoidal waves. 
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+            Consider now 
+            <me>
+              k_{1,2} = k \pm \Delta k \quad \text{and} \quad
+              \omega_{1,2} = \omega + \Delta \omega,
+            </me>            
+            i.e. each wavenumber and frequency are centred about either <m>k</m> or <m>\omega</m>, respectively.
+            </p>
+
+            <p>
+              In the limit that <m>\Delta k, \Delta \omega \ll 1</m> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope. 
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+            show that the envelope developed in the last part exhibits maxima as 
+            <me>
+              x(t) = \frac{\Delta \omega}{\Delta k} t,
+            </me>
+            and therefore in the limit <m>\Delta k, \Delta \omega \to 0</m>, the velocicty of such maxima (called the group velocity) is given by 
+            <me>
+              v_g = \dd{\omega}{k}.
+            </me>
+            </p>
+          </statement>
+        </task>
     </exercise>
     
   </exercises>
