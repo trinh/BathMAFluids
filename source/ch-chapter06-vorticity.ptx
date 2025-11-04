@@ -1373,7 +1373,7 @@
           define a `cylindrical' volume <m>V</m>,
           whose ends are the the two surfaces <m>S_1</m> and <m>S_2</m>
           and whose sides are the sides of the vortex tube,
-          and let <m>\Gamma_i = \int_S_i\bomega\cdot\bn_i\,\de S</m>,
+          and let <m>\Gamma_i = \int_{S_i}\bomega\cdot\bn_i\,\de S</m>,
           for <m>i=1,2</m>.
         </p>
         <p>
@@ -1400,8 +1400,8 @@
       </solution>
     </exercise>
 
-    <exercise xml:id="ex-axisymmetric-flow">
-      <title>Axisymmetric flow</title>
+    <exercise xml:id="ex-line-integral-evolution">
+      <title>Evolution of a line integral</title>
       <statement>
         <p>
           (Based on Exercise 5.6 in <xref ref="ref-acheson"/>).
@@ -1420,6 +1420,9 @@
       </statement>
       <solution>
         <p>
+          We present two methods of solution.
+        </p>
+        <p><em>First method:</em>
           <figure xml:id="line-integral-evolution-fig">
             <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
               The inset shows the relationship between the two curves.</caption>
@@ -1438,23 +1441,133 @@
             </mrow>
             <mrow>
               =&amp;\int_{C(t)}\mathbf{a}\left(\bx+\bu(x,t)\de t+\dots,t+\de t\right)\cdot
-              \left(\bx+\de\bx+\bu(\bx+\de\bx,t)\de t-bx-\bu(\bx,t)\de t\right)
+              \left(\bx+\de\bx+\bu(\bx+\de\bx,t)\de t-\bx-\bu(\bx,t)\de t\right)
             </mrow>
             <mrow>
               =&amp;\int_{C(t)}\left(\mathbf{a}(\bx,t)+\pd{\mathbf{a}}{t}(\bx,t)\de t
-              +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t+\dots\right)\cdot
+              +\bu(x,t)\cdot\nabla\mathbf{a}(\bx,t)\de t+\dots\right)\cdot
               \left(\de\bx+\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t\right)
             </mrow>
           </md>
           Hence
-          <me>
-              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+          <md>
+            <mrow>
+              \dd{\mathcal{C}}{t}=&amp;\lim_{\de t\rightarrow0}\frac1{\de t}
               \int_{C(t)}\left(
-                \mathbf{a}(\bx,t)\cdot\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t
+                \mathbf{a}(\bx,t)\cdot\left(\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\right)\de t
                 +\pd{\mathbf{a}}{t}(\bx,t)\de t\cdot\de\bx
-                +\left(\nabla\mathbf{a}(\bx,t)\right)\cdot\bu(x,t)\de t\cdot\de\bx
+                +\left(\bu(\bx,t)\cdot\nabla\right)\mathbf{a}(\bx,t)\de t\cdot\de\bx
                 +\dots\right)
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}\left(
+                \mathbf{a}\cdot\left(\left(\de\bx\cdot\nabla\right)\bu\right)
+                +\pd{\mathbf{a}}{t}\cdot\de\bx
+                +\left(\left(\bu\cdot\nabla\right)\mathbf{a}\right)\cdot\de\bx\right)
+            </mrow>
+          </md>
+          Now we use the identity
+          <me>
+            \left(\mathbf{p}\times\mathbf{q}\right)\times\mathbf{r}
+            =\left(\mathbf{p}\cdot\mathbf{r}\right)\mathbf{q}
+            -\left(\mathbf{q}\cdot\mathbf{r}\right)\mathbf{p}
           </me>
+          to expand
+          <me>
+            \left(\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+            =\left(\left(\bu\cdot\nabla\right)\mathbf{a}\right)\cdot\de\bx
+            -\bu\cdot\left(\left(\de\bx\cdot\nabla\right)\mathbf{a}\right).
+          </me>
+          Hence
+          <md>
+            <mrow>
+              \dd{\mathcal{C}}{t}
+              -\int_{C(t)}\left(\pd{\mathbf{a}}{t}
+              +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+              =&amp;
+              \int_{C(t)}
+              \mathbf{a}\cdot\left(\left(\de\bx\cdot\nabla\right)\bu\right)
+              +\bu\cdot\left(\left(\de\bx\cdot\nabla\right)\mathbf{a}\right)
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}
+              \mathbf{a}\cdot\de\bu
+              +\bu\cdot\de\mathbf{a}
+            </mrow>
+            <mrow>
+              =&amp;\int_{C(t)}
+              \de\left(\mathbf{a}\cdot\bu\right)
+            </mrow>
+            <mrow>
+              =&amp;0,
+            </mrow>
+          </md>
+          whence the result.
+        </p>
+        <p>
+          <em>Second method:</em>
+          Parametrise <m>C(t)</m> as <m>\bx(s,t)</m> for <m>0&lt;s&lt;1</m>.
+          Then
+          <me>
+            \mathcal{C}(t)=\int_0^1\mathbf{a}\cdot\pd{\bx}{s}\de s
+          </me>
+          Then
+          <md>
+            <mrow>
+              \dd{\mathcal{C}}{t}
+              =&amp;\int_0^1\pd{\mathbf{a}(\bx(s,t),t)}{t}\cdot\pd{\bx}{s}+\mathbf{a}\cdot\pd{\bu}{s}\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1\left(\pd{\mathbf{a}}{t}+\bu\cdot\nabla\mathbf{a}\right)\cdot\pd{\bx}{s}+\mathbf{a}\cdot\pd{\bu}{s}\de s.
+            </mrow>
+          </md>
+          We can rewrite the expression we are aiming for:
+          <me>
+            \int_{C(t)}\left(\pd{\mathbf{a}}{t}
+            +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+            =\int_0^1\left(\pd{\mathbf{a}}{t}
+            +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\pd{\bx}{s}\de s.
+          </me>
+          We use the identity
+          <me>
+            \left(\mathbf{p}\times\mathbf{q}\right)\times\mathbf{r}
+            =\left(\mathbf{p}\cdot\mathbf{r}\right)\mathbf{q}
+            -\left(\mathbf{q}\cdot\mathbf{r}\right)\mathbf{p},
+          </me>
+          and
+          <me>
+            \int_{C(t)}\left(\pd{\mathbf{a}}{t}
+            +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+            =\int_0^1\left(\pd{\mathbf{a}}{t}\cdot\pd{\bx}{s}
+            +\left(\bu\cdot\nabla\mathbf{a}\right)\cdot\pd{\bx}{s}
+            -\left(\pd{\bx}{s}\cdot\nabla\mathbf{a}\right)\cdot\bu\right)\de s.
+          </me>
+        </p>
+        <p>
+          Hence,
+          <md>
+            <mrow>
+              \dd{\mathcal{C}}{t}
+              -\int_{C(t)}\left(\pd{\mathbf{a}}{t}
+              +\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+              =&amp;
+              \int_0^1\left(\mathbf{a}\cdot\pd{\bu}{s}
+              +\left(\pd{\bx}{s}\cdot\nabla\mathbf{a}\right)\cdot\bu\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;
+              \int_0^1\left(\mathbf{a}\cdot\pd{\bu}{s}
+              +\pd{\mathbf{a}}{s}\cdot\bu\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;
+              \int_0^1\pd{}{s}\left(\mathbf{a}\cdot\bu\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;0,
+            </mrow>
+          </md>
+          whence the result.
         </p>
       </solution>
     </exercise>

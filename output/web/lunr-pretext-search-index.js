@@ -1915,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "6.4",
   "title": "Exercises",
-  "body": "   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Curve at times and . The inset shows the relationship between the two curves.    Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.     Axisymmetric flow   Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     To do.    "
+  "body": "   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Curve at times and . The inset shows the relationship between the two curves.    Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.     The circulation around a vortex tube   (Based on Exercise 5.5 in ). Define a vortex tube. Prove that the quantity where is any surface spanning the tube, is the same for all such surfaces. Relate this quantity to a circulation of the flow.    Given two different such surfaces and , define a `cylindrical' volume , whose ends are the the two surfaces and and whose sides are the sides of the vortex tube, and let , for .  Consider . This is equal to minus plus the integral of over the sides of the cylinder. On the sides of the cylinder, we have . Hence, for any two such surfaces.  Stokes theorem implies that where is the curve around the edge of , which is the circulation.  Since the circulation is constant in time, this implies the flux of vorticity through any vortex tube is uniform and independent of time.     Evolution of a line integral   (Based on Exercise 5.6 in ). Show that if is any suitably smooth vector field and where is a circuit consisting of the same fluid particles as time proceeds, then     We present two methods of solution.  First method:   Curve at times and . The inset shows the relationship between the two curves.   We write and note that Hence Now we use the identity to expand Hence    Second method: Parametrise as for . Then Then We can rewrite the expression we are aiming for: We use the identity and   Hence, whence the result.     Axisymmetric flow   Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     To do.    "
 },
 {
   "id": "ws-vorticity-1-1",
@@ -1936,11 +1936,29 @@ var ptx_lunr_docs = [
   "body": " Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Curve at times and . The inset shows the relationship between the two curves.    Assuming a conservative body force per unit volume, the Euler equation reads  Hence The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus is independent of . If the flow is initially irrotational, then at for any closed curve , and hence for all time. Since this holds for any closed curve, it follows that for all time.   "
 },
 {
+  "id": "ex-circulation-vortex-tube",
+  "level": "2",
+  "url": "ws-vorticity.html#ex-circulation-vortex-tube",
+  "type": "Exercise",
+  "number": "6.4.2",
+  "title": "The circulation around a vortex tube.",
+  "body": " The circulation around a vortex tube   (Based on Exercise 5.5 in ). Define a vortex tube. Prove that the quantity where is any surface spanning the tube, is the same for all such surfaces. Relate this quantity to a circulation of the flow.    Given two different such surfaces and , define a `cylindrical' volume , whose ends are the the two surfaces and and whose sides are the sides of the vortex tube, and let , for .  Consider . This is equal to minus plus the integral of over the sides of the cylinder. On the sides of the cylinder, we have . Hence, for any two such surfaces.  Stokes theorem implies that where is the curve around the edge of , which is the circulation.  Since the circulation is constant in time, this implies the flux of vorticity through any vortex tube is uniform and independent of time.   "
+},
+{
+  "id": "ex-line-integral-evolution",
+  "level": "2",
+  "url": "ws-vorticity.html#ex-line-integral-evolution",
+  "type": "Exercise",
+  "number": "6.4.3",
+  "title": "Evolution of a line integral.",
+  "body": " Evolution of a line integral   (Based on Exercise 5.6 in ). Show that if is any suitably smooth vector field and where is a circuit consisting of the same fluid particles as time proceeds, then     We present two methods of solution.  First method:   Curve at times and . The inset shows the relationship between the two curves.   We write and note that Hence Now we use the identity to expand Hence    Second method: Parametrise as for . Then Then We can rewrite the expression we are aiming for: We use the identity and   Hence, whence the result.   "
+},
+{
   "id": "ex-axisymmetric-flow",
   "level": "2",
   "url": "ws-vorticity.html#ex-axisymmetric-flow",
   "type": "Exercise",
-  "number": "6.4.2",
+  "number": "6.4.4",
   "title": "Axisymmetric flow.",
   "body": " Axisymmetric flow   Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     To do.   "
 },
