@@ -22,14 +22,14 @@
 <span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Axisymmetric flow.</span>
 </h3>
 <div class="para logical">
-<div class="para">Consider an axisymmetric flow. Working in cylindrical polar coordinates <span class="process-math">\((r,\theta,z)\text{,}\)</span> show that the vorticity is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-vorticity-equation-lagrange.html">
+<div class="para">(Based on Exercise 5.7 in <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>). In this question, please make use of the vector calculus formulae given in cylindrical polar coordinates, available at <a class="external" href="https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates" target="_blank">this website</a>. Consider an axisymmetric flow. Working in cylindrical polar coordinates <span class="process-math">\((r,\theta,z)\text{,}\)</span> show that the vorticity is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ref-acheson.html ./knowl/xref/eqn-vorticity-equation-lagrange.html">
 \begin{equation*}
 \bomega=\omega\be_{\theta},
 \end{equation*}
 </div>
 <div class="para">and that the vorticity equation <a href="sec-bernoulli.html#eqn-vorticity-equation-lagrange" class="xref" data-knowl="./knowl/xref/eqn-vorticity-equation-lagrange.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.8">(3.5.8)</a> reduces to</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-vorticity-equation-lagrange.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ref-acheson.html ./knowl/xref/eqn-vorticity-equation-lagrange.html">
 \begin{equation*}
 \DD{}{t}\left(\frac{\omega}{r}\right)=0.
 \end{equation*}
@@ -46,10 +46,37 @@
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-axisymmetric-flow-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para">To do.<div class="autopermalink" data-description="Paragraph"><a href="#ex-axisymmetric-flow-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para">Axisymmetry implies that <span class="process-math">\(\bu\)</span> has no  <span class="process-math">\(\theta\)</span>-component, that is <span class="process-math">\(\bu\cdot\be_{\theta}=0\text{,}\)</span> and that <span class="process-math">\(\partial\bu/\partial\theta=0\text{.}\)</span> Hence, <span class="process-math">\(\bu=(u_r(r,z,t),0,u_z(r,z,t))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-axisymmetric-flow-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.4.4.1"><a href="#ex-axisymmetric-flow-3" title="Copy heading and permalink for Solution 6.4.4.1" aria-label="Copy heading and permalink for Solution 6.4.4.1">🔗</a></div>
+<div class="para logical">
+<div class="para">Then, using the formula for curl in cylindrical polar coordinates,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bomega=\nabla\times\bu
+=\left(\pd{u_r}{z}-\pd{u_z}{r}\right)\be_{\theta}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-axisymmetric-flow-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{align*}
+&amp;\DD{\bomega}{t}-\bomega\cdot\nabla\bu=0\\
+\Rightarrow\quad&amp;\DD{\omega}{t}\be_{\theta}+\omega\DD{\be_{\theta}}{t}
+-\omega\be_{\theta}\cdot\nabla\bu=0.
+\end{align*}
+</div>
+<div class="para">Show that <span class="process-math">\(\mathrm{D}\be_{\theta}/\mathrm{D}t=0\)</span> and use</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\bu}{\theta}=u_r\be_{\theta}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-axisymmetric-flow-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.4.4.1"><a href="#ex-axisymmetric-flow-3" title="Copy heading and permalink for Hint 6.4.4.1" aria-label="Copy heading and permalink for Hint 6.4.4.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Exercise 6.4.4: Axisymmetric flow"><a href="#ex-axisymmetric-flow" title="Copy heading and permalink for Exercise 6.4.4: Axisymmetric flow" aria-label="Copy heading and permalink for Exercise 6.4.4: Axisymmetric flow">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-vorticity.html#ex-axisymmetric-flow">in-context</a></span>
 </body>
