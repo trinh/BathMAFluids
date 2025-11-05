@@ -344,12 +344,12 @@
     </exercise>
 
     <exercise>
-      <title>Linar waves in a current</title>
+      <title>Linear waves in a current</title>
       
       <p>
         We now consider linear waves in a channel of depth <m>h</m>, as in the previous question. This time, however, assume that there is a uniform flow of speed <m>U</m> at infinity. Therefore, this time, we shall consider the velocity as expressed as 
         <me>
-          u = U + \pd{\partial \phi}{x}, \qquad v = \pd{\partial \phi}{y},
+          u = U + \pd{\phi}{x}, \qquad v = \pd{\phi}{y},
         </me>
         and again linearise the necessary equations. 
       </p>
