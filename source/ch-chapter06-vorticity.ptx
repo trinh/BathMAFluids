@@ -1300,6 +1300,7 @@
         </p>
       </warning>
     </introduction>
+
     <exercise xml:id="ex-kelvin-circulation-theorem">
       <title>Kelvin’s Circulation Theorem</title>
       <statement>
@@ -1318,18 +1319,54 @@
           <m>\phi</m> such that <m>\mathbf{u} = \nabla \phi</m>.
         </p>
       </statement>
-      <answer>
+      <hint>
+        <p>
+          <em>Method one:</em> Consider the following diagram.
+        </p>
         <figure xml:id="kelvin-circulation-theorem-fig">
           <caption>Curve <m>\Gamma</m> at times <m>t</m> and <m>t+\de t</m>.
             The inset shows the relationship between the two curves.</caption>
           <image source="ch-chapter03-kelvin-circulation.png" width="80%"/>
         </figure>
         <p>
+          By definition,
+          <men xml:id="eq-ex-kelvin-dGammadt">
+            \dd{\Gamma}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\oint_{C(t+\de t)}\bu\cdot\de\bx-\oint_{C(t)}\bu\cdot\de\bx\right).
+          </men>
+          We therefore need to write <m>\bu</m> and <m>\de\bx</m> at time <m>t+\de t</m>
+          on the curve <m>C(t+\de t)</m> to values at time <m>t</m> on the curve <m>C(t)</m>:
+          <me>
+            \left.\bu\cdot\de\bx\right|_{t+\de t}=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right).
+          </me>
+        </p>
+        <p>
+          <em>Method two:</em> We can parametrise <m>C(t)</m> via <m>\bx(s,t)</m>
+          for <m>0&lt;x&lt;1</m>
+          and rewrite the integral as an integral over the parameter <m>s</m>:
+          <me>
+            \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s
+          </me>
+          Then start from <xref ref="eq-ex-kelvin-dGammadt"/> and simplify.
+        </p>
+      </hint>
+      <!--<solution>
+        <p>
+          We present two methods.
+        </p>
+        <p>
+          <em>Method one:</em>
+        </p>
+        <p>
           Assuming a conservative body force <m>-\bnabla\chi</m> per unit volume,
           the Euler equation reads
           <me>
-            \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right),
+            \DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right).
           </me>
+          We have
+          <me>
+            \dd{\Gamma}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.
+          </me>
+          We calculate
           <md>
             <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}\amp=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
             <mrow>\amp=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
@@ -1349,7 +1386,45 @@
           for any closed curve <m>C(0)</m>, and hence <m>\Gamma=0</m> for all time.
           Since this holds for any closed curve, it follows that <m>\omega=\bnabla\times\bu=0</m> for all time.
         </p>
-      </answer>
+        <p>
+          <em>Method two:</em>
+          This can also be proven by parametrising <m>C(t)</m> via <m>\bx(s,t)</m> for <m>0&lt;x&lt;1</m>
+          and rewriting the integral as an integral over the parameter <m>s</m>:
+          <me>
+            \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s.
+          </me>
+          Then
+          <md>
+            <mrow>
+              \dd{\Gamma}{t}=
+              &amp;\int_0^1
+              \left.\pd{}{t}\left(\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\right)\right|_s\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1
+              \left(\left(\pd{\bu}{t}+\pd{\bx}{t}\cdot\nabla\bu\right)\cdot\pd{\bx}{s}
+              +\bu\cdot\pd{^2\bx}{s\partial t}\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1
+              \left(\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)\cdot\pd{\bx}{s}
+              +\bu\cdot\pd{\bu}{s}\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1\left(\DD{\bu}{t}\cdot\pd{\bx}{s}+\frac12\pd{|\bu|^2}{s}\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1\left(-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\pd{\bx}{s}+\frac12\pd{|\bu|^2}{s}\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;\int_0^1\left(-\pd{}{s}\left(\frac{p}{\rho}-\chi\right)+\frac12\pd{|\bu|^2}{s}\right)\de s
+            </mrow>
+            <mrow>
+              =&amp;0.
+            </mrow>
+          </md>
+        </p>
+      </solution>-->
     </exercise>
     
     <exercise xml:id="ex-circulation-vortex-tube">
@@ -1367,7 +1442,17 @@
           Relate this quantity to a circulation of the flow.
         </p>
       </statement>
-      <solution>
+      <hint>
+        <p>
+          Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
+          define a `cylindrical' volume <m>V</m>,
+          whose ends are the the two surfaces <m>S_1</m> and <m>S_2</m>
+          and whose sides are the sides of the vortex tube,
+          and let <m>\Gamma_i = \int_{S_i}\bomega\cdot\bn_i\,\de S</m>,
+          for <m>i=1,2</m>.          
+        </p>
+      </hint>
+      <!--<solution>
         <p>
           Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
           define a `cylindrical' volume <m>V</m>,
@@ -1397,7 +1482,7 @@
           this implies the flux of vorticity through any vortex tube is
           uniform and independent of time.
         </p>
-      </solution>
+      </solution>-->
     </exercise>
 
     <exercise xml:id="ex-line-integral-evolution">
@@ -1418,16 +1503,49 @@
           </me>
         </p>
       </statement>
-      <solution>
+      <hint>
+        <p>
+          Similar to <xref ref="ex-kelvin-circulation-theorem"/>,
+          there are two methods of solution possible.
+        </p>
+        <p>
+          <em>First method:</em>
+        </p>
+        <figure xml:id="line-integral-evolution-fig">
+          <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
+            The inset shows the relationship between the two curves.</caption>
+          <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
+        </figure>
+        <p>
+          We write
+          <me>
+              \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+              \left(\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+              -\int_{C(t)}\mathbf{a}(\bx,t)\cdot\de\bx\right).
+          </me>
+        </p>
+        <p>
+          <em>Second method:</em>
+          Parametrise <m>C(t)</m> as <m>\bx(s,t)</m> for <m>0&lt;s&lt;1</m>.
+          Then
+          <me>
+            \mathcal{C}(t)=\int_0^1\mathbf{a}\cdot\pd{\bx}{s}\de s.
+          </me>
+        </p>
+      </hint>
+      <!--<solution>
         <p>
           We present two methods of solution.
         </p>
-        <p><em>First method:</em>
-          <figure xml:id="line-integral-evolution-fig">
-            <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
-              The inset shows the relationship between the two curves.</caption>
-            <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
-          </figure>
+        <p>
+          <em>First method:</em>
+        </p>
+        <figure xml:id="line-integral-evolution-fig">
+          <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
+            The inset shows the relationship between the two curves.</caption>
+          <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
+        </figure>
+        <p>
           We write
           <me>
               \dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
@@ -1569,13 +1687,18 @@
           </md>
           whence the result.
         </p>
-      </solution>
+      </solution>-->
     </exercise>
 
     <exercise xml:id="ex-axisymmetric-flow">
       <title>Axisymmetric flow</title>
       <statement>
         <p>
+          (Based on Exercise 5.7 in <xref ref="ref-acheson"/>).
+          In this question, please make use of the vector calculus formulae given
+          in cylindrical polar coordinates, available at
+          <url href="https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates" visual="National Committee for Fluid Mechanics Films">this website</url>.
+       
           Consider an axisymmetric flow. Working in cylindrical polar coordinates <m>(r,\theta,z)</m>,
           show that the vorticity is given by
           <me>
@@ -1595,11 +1718,204 @@
           </me>
         </p>
       </statement>
-      <solution>
+      <hint>
         <p>
-          To do.
+          Axisymmetry implies that <m>\bu</m> has no  <m>\theta</m>-component,
+          that is <m>\bu\cdot\be_{\theta}=0</m>, and that <m>\partial\bu/\partial\theta=0</m>.
+          Hence, <m>\bu=(u_r(r,z,t),0,u_z(r,z,t))</m>.
         </p>
-      </solution>
+        <p>
+          Then, using the formula for curl in cylindrical polar coordinates,
+          <me>
+            \bomega=\nabla\times\bu
+            =\left(\pd{u_r}{z}-\pd{u_z}{r}\right)\be_{\theta}.
+          </me>
+        </p>
+        <p>
+          We have
+          <md>
+            <mrow>
+              &amp;\DD{\bomega}{t}-\bomega\cdot\nabla\bu=0
+            </mrow>
+            <mrow>
+              \Rightarrow\quad&amp;\DD{\omega}{t}\be_{\theta}+\omega\DD{\be_{\theta}}{t}
+              -\omega\be_{\theta}\cdot\nabla\bu=0.
+            </mrow>
+          </md>
+          Show that <m>\mathrm{D}\be_{\theta}/\mathrm{D}t=0</m> and use
+          <me>
+            \pd{\bu}{\theta}=u_r\be_{\theta}.
+          </me>
+        </p>
+      </hint>
+      <!--<solution>
+        <p>
+          Axisymmetry implies that <m>\bu</m> has no  <m>\theta</m>-component,
+          that is <m>\bu\cdot\be_{\theta}=0</m>, and that <m>\partial\bu/\partial\theta=0</m>.
+          Hence, <m>\bu=(u_r(r,z,t),0,u_z(r,z,t))</m>.
+        </p>
+        <p>
+          Then, using the formula for curl in cylindrical polar coordinates,
+          <me>
+            \bomega=\nabla\times\bu
+            =\left(\pd{u_r}{z}-\pd{u_z}{r}\right)\be_{\theta}
+            =\omega\be_{\theta},
+          </me>
+          where <m>\omega=\partial u_r/\partial z-\partial u_z/\partial r</m>.
+        </p>
+        <p>
+          We have
+          <md>
+            <mrow>
+              &amp;\DD{\bomega}{t}-\bomega\cdot\nabla\bu=0
+            </mrow>
+            <mrow>
+              \Rightarrow\quad&amp;\DD{\omega}{t}\be_{\theta}+\omega\DD{\be_{\theta}}{t}
+              -\omega\be_{\theta}\cdot\nabla\bu=0.
+            </mrow>
+          </md>
+          We note that <m>\partial\be_{\theta}/\partial t=0</m> and <m>(\bu\cdot\nabla)</m>
+          has gradients with respect to <m>r</m> and <m>z</m> (and not with respect to <m>\theta</m>),
+          meaning that <m>(\bu\cdot\nabla)\be_{\theta}=0</m>.
+          Also, since <m>\partial\be_r/\partial\theta=\be_\theta</m>,
+          <me>
+            \be_{\theta}\cdot\nabla\bu=\frac1r\pd{}{\theta}\left(u_r(r,z,t)\be_r+u_z(r,z,t)\be_z\right)=\frac{u_r}{r}\be_{\theta}.
+          </me>
+          Hence, the only non-zero component of the vorticity equation is the <m>\theta</m>-component,
+          and this reads:
+          <me>
+            \DD{\omega}{t}-\omega\frac{u_r}{r}=0.
+          </me>
+        </p>
+        <p>
+          Now,
+          <me>
+            \DD{}{t}\left(\frac{\omega}{r}\right)=\frac1r\DD{\omega}{t}-\frac{\omega}{r^2}\DD{r}{t},
+          </me>
+          and
+          <me>
+            \DD{r}{t}=u_r\pd{r}{r}=u_r
+          </me>
+          and hence
+          <me>
+            \DD{}{t}\left(\frac{\omega}{r}\right)=\frac1r\DD{\omega}{t}-\frac{\omega u_r}{r^2}.
+          </me>
+        </p>
+        <p>
+          Dividing the vorticity equation by <m>r</m>:
+          <me>
+            \frac1r\DD{\omega}{t}-\frac1r\omega\frac{u_r}{r}=0
+            \quad\Rightarrow\quad
+            \DD{}{t}\left(\frac{\omega}{r}\right)=0,
+          </me>
+          as required.
+        </p>
+      </solution>-->
+    </exercise>
+
+    <exercise xml:id="ex-two-vortices">
+      <title>Two vortices</title>
+      <statement>
+        <p>
+          Two vortices, of strengths <m>\Gamma_1</m> and <m>\Gamma_2</m>,
+          are at the points <m>z = z_1</m> and <m>z = z_2</m>,
+          respectively, in the complex plane.
+          Write down the equations of motion for the position vectors
+          <m>z_1(t)</m> and <m>z_2(t)</m> if the vortices are free to move.
+          Assuming that <m>\Gamma_1+\Gamma_2\neq0</m>, show
+          that <m>\de Z/\de t = \de a/\de t = 0</m>, where
+          <me>
+            Z=\frac{\Gamma_1z_1+\Gamma_2z_2}{\Gamma_1+\Gamma_2}
+          </me>
+          is the centroid of the two vortices,
+          and <m>a = |z_1− z_2|</m> is the distance between them.
+        </p>
+        <p>
+          Deduce that each vortex moves in a circle centred on <m>Z</m>,
+          with angular velocity
+          <me>
+            \Omega=\frac{\Gamma_1+\Gamma_2}{2\pi a^2}.
+          </me>
+          What happens in the exceptional case where <m>\Gamma_1+\Gamma_2=0</m>?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-obstacle">
+      <title>Obstacle</title>
+      <statement>
+        <p>
+          Fluid occupies the region <m>x^2+y^2>a^2</m> outside a circular obstacle
+          of radius <m>a</m>. By using
+          the Circle Theorem, find the resulting complex potential
+          when a vortex of strength
+          <m>\Gamma</m> is placed at <m>(x, y) = (b, 0)</m>,
+          where <m>b > a</m> (assuming there to be no circulation about
+          the obstacle).
+        </p>
+        <p>
+          Explain why the vortex will move in a circle of radius <m>b</m>
+          with angular velocity of magnitude
+          <me>
+            \Omega=\frac{\Gamma a^2}{2\pi b^2(b^2-a^2)}.
+          </me>
+        </p>
+      </statement>      
+    </exercise>
+
+    <exercise xml:id="ex-quadrant">
+      <title>Flow in a quadrant</title>
+      <p>
+        Fluid occupies the quadrant <m>x > 0</m>, <m>y > 0</m> bounded by
+        two rigid boundaries along the
+        <m>x</m>- and <m>y</m>-axes.
+        Find the complex potential for the flow caused by
+        a vortex at a point <m>z=c=a+\im b</m> in the fluid.
+        If the vortex is free to move,
+        show that it follows a path on which
+        <me>
+          \frac1{x^2}+\frac1{y^2}=\text{constant}.
+        </me>
+      </p>
+    </exercise>
+
+    <exercise xml:id="ex-channel">
+      <title>Channel flow</title>
+      <statement>
+        <p>
+          [Harder] Fluid occupies the semi-infinite channel
+          <m>\{z : \Re z > 0,−a &lt; \Im z &lt; a\}</m>.
+          Show that the flow induced by a line vortex of strength
+          <m>\Gamma>0</m> at the point <m>z = d \in\mathbb{R}^+</m>
+          has complex potential
+          <me>
+            w(z)=\frac{\im\Gamma}{2\pi}\left\{
+              -\log\left[\sinh\left(\frac{\pi z}{2a}\right)
+              -\sinh\left(\frac{\pi d}{2a}\right)\right]
+              +\log\left[\sinh\left(\frac{\pi z}{2a}\right)
+              +\sinh\left(\frac{\pi d}{2a}\right)\right]
+              \right\}.
+          </me>
+          Show that the velocity components satisfy
+          <me>
+            u-\im v=\frac{\im\Gamma}{4a}\left\{
+              \cosech\left(\frac{\pi(z+d)}{2a}\right)
+              -\cosech\left(\frac{\pi(z-d)}{2a}\right)
+              \right\}.
+          </me>
+        </p>
+        <p>
+          Deduce that, if the vortex is free to move,
+          it will instantaneously travel downwards
+          with speed <m>(\Gamma/4a)\cosech(\pi d/a)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Use the identity <m>\sinh^2(x)− \sinh^2(y)
+            \equiv \sinh(x + y) \sinh(x− y)</m>.
+        </p>
+      </hint>
     </exercise>
   </exercises>
 </chapter>
