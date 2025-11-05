@@ -1292,14 +1292,14 @@
   </section>
 
   <exercises xml:id="ws-vorticity">
-    <introduction>
+    <!--<introduction>
       <warning>
         <p>
           We look to complete worksheets in the week prior to the content being delivered.
           Once this is done, this disclaimer message will be removed.
         </p>
       </warning>
-    </introduction>
+    </introduction>-->
 
     <exercise xml:id="ex-kelvin-circulation-theorem">
       <title>Kelvin’s Circulation Theorem</title>
