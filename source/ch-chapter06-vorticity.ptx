@@ -386,20 +386,24 @@
       </definition>
       <remark>
         <title>Notes on vortex surfaces</title>
-        <ul>
-          <li>
-            <p>
-              Vortex lines cannot pass through a vortex surface.
-            </p>
-          </li>
-          <li>
-            <p>
-              In particular, for any given vortex line, it is possible to
-              choose two different vortex surfaces such that the vortex line is the
-              intersection of the two vortex surfaces.
-            </p>
-          </li>
-        </ul>
+        <p>
+          A couple of important points about vortex surfaces:
+          <ul>
+            <li>
+              <p>
+                Vortex lines cannot pass through a vortex surface.
+              </p>
+            </li>
+            <li>
+              <p>
+                In particular, for any given vortex line, it is possible to
+                choose two different vortex surfaces such that the vortex line is the
+                intersection of the two vortex surfaces.
+                This will be important in the next section.
+              </p>
+            </li>
+          </ul>
+        </p>
       </remark>
     </subsection>
   </section>
@@ -733,7 +737,9 @@
           into a number of real-world problems.
         </p>
       </remark>
-      The following corollary is a useful application of the Helmholtz vortex theorems.
+      <p>
+        The following corollary is a useful application of the Helmholtz vortex theorems.        
+      </p>
       <corollary xml:id="cor-vortex-movement">
         <title>The Helmholtz principle</title>
         <statement>
@@ -760,19 +766,19 @@
           find the motion of the line vortex. In particular, to find the evolution of the flow
           we can make use of the
           following techniques that were covered in <xref ref="ch-chapter04-potentialflows"/>:
+          <ul>
+            <li>
+              <p>
+                the method of images <xref ref="sec-method-of-images"/>, and
+              </p>
+            </li>
+            <li>
+              <p>
+                conformal mapping <xref ref="sec-conformal-mapping"/>.
+              </p>
+            </li>
+          </ul>
         </p>
-        <ul>
-          <li>
-            <p>
-              the method of images <xref ref="sec-method-of-images"/>, and
-            </p>
-          </li>
-          <li>
-            <p>
-              conformal mapping <xref ref="sec-conformal-mapping"/>.
-            </p>
-          </li>
-        </ul>
       </remark>
       <example>
         <title>Vortex pair</title>
@@ -817,36 +823,36 @@
         </p>
         <p>
           To help with plotting the streamfunction, we note that:
+          <ul>
+            <li>
+              <p>
+                The derivative of the complex potential is
+                <me>
+                  f'=-\frac{\im\Gamma}{4\pi}\left(\frac1d+\frac{2}{z-d}-\frac{2}{z+d}\right),
+                </me>
+                which equals zero at the points <m>z=\pm\sqrt{3}\im d</m>,
+                so these are stagnation points of the flow.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have <m>\psi=0</m> on the line <m>x=0</m>, so this is a streamline.
+              </p>
+            </li>
+            <li>
+              <p>
+                Far from the vortices (in any direction), the streamfunction is approximately
+                <m>\psi\sim-\Gamma x/(4\pi d)</m>, so the streamlines are approximately vertical lines.
+              </p>
+            </li>
+            <li>
+              <p>
+                As we approach the vortex at <m>z=d</m>, <m>\psi</m> tends to <m>-\infty</m> and 
+                as we approach the vortex at <m>z=-d</m>, <m>\psi</m> tends to <m>+\infty</m>.
+              </p>
+            </li>
+          </ul>
         </p>
-        <ul>
-          <li>
-            <p>
-              The derivative of the complex potential is
-              <me>
-                f'=-\frac{\im\Gamma}{4\pi}\left(\frac1d+\frac{2}{z-d}-\frac{2}{z+d}\right),
-              </me>
-              which equals zero at the points <m>z=\pm\sqrt{3}\im d</m>,
-              so these are stagnation points of the flow.
-            </p>
-          </li>
-          <li>
-            <p>
-              We have <m>\psi=0</m> on the line <m>x=0</m>, so this is a streamline.
-            </p>
-          </li>
-          <li>
-            <p>
-              Far from the vortices (in any direction), the streamfunction is approximately
-              <m>\psi\sim-\Gamma x/(4\pi d)</m>, so the streamlines are approximately vertical lines.
-            </p>
-          </li>
-          <li>
-            <p>
-              As we approach the vortex at <m>z=d</m>, <m>\psi</m> tends to <m>-\infty</m> and 
-              as we approach the vortex at <m>z=-d</m>, <m>\psi</m> tends to <m>+\infty</m>.
-            </p>
-          </li>
-        </ul>
         <p>
           These points imply that there is a curve on which <m>\psi=0</m> in the right-half plane.
           This curve joins the two stagnation points and goes around the vortex.
@@ -968,20 +974,20 @@
         <statement>
           <p>
             Given an axis of symmetry, an axisymmetric flow must possess:
+            <ul>
+              <li>
+                <p>
+                  rotational symmetry about the axis, meaning the flow is unaffected by a
+                  rotation through any angle about the axis, and
+                </p>
+              </li>
+              <li>
+                <p>
+                  reflectional symmetry in any plane containing the axis.
+                </p>
+              </li>
+            </ul>
           </p>
-          <ul>
-            <li>
-              <p>
-                rotational symmetry about the axis, meaning the flow is unaffected by a
-                rotation through any angle about the axis, and
-              </p>
-            </li>
-            <li>
-              <p>
-                reflectional symmetry in any plane containing the axis.
-              </p>
-            </li>
-          </ul>
         </statement>
       </definition>
       <remark>
@@ -1257,23 +1263,23 @@
           </me>
           We solve this equation subject to boundary conditions of no penetration at <m>r=a</m>
           and assume that, far from the sphere, the flow is <m>-U</m> along the axis:
+          <ul>
+            <li>
+              <p>
+                No penetration at the sphere's surface implies that <m>{\bf u}\cdot{\bf n}=0</m> there.
+                So <m>u_r=\pd{\phi}{r}=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                That the flow tends to <m>-U</m> implies that <m>u_r\rightarrow-U\cos\theta</m>
+                and <m>u_\theta\rightarrow U\sin\theta</m> as <m>r\rightarrow\infty</m>.
+                That is, <m>\pd{\phi}{r}\rightarrow-U\cos\theta</m> and
+                <m>\pd{\phi}{\theta}\rightarrow rU\sin\theta</m>.
+              </p>
+            </li>
+          </ul>
         </p>
-        <ul>
-          <li>
-            <p>
-              No penetration at the sphere's surface implies that <m>{\bf u}\cdot{\bf n}=0</m> there.
-              So <m>u_r=\pd{\phi}{r}=0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              That the flow tends to <m>-U</m> implies that <m>u_r\rightarrow-U\cos\theta</m>
-              and <m>u_\theta\rightarrow U\sin\theta</m> as <m>r\rightarrow\infty</m>.
-              That is, <m>\pd{\phi}{r}\rightarrow-U\cos\theta</m> and
-              <m>\pd{\phi}{\theta}\rightarrow rU\sin\theta</m>.
-            </p>
-          </li>
-        </ul>
         <p>
           The boundary conditions as <m>r\rightarrow\infty</m> suggest trying
           <m>\phi=f(r)\cos\theta</m>, and, with this assumption, Equation~\eqref{eq:laplacephisimp} becomes
