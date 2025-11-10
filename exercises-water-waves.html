@@ -707,26 +707,39 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 <div class="autopermalink" data-description="Task 5.5.3.c"><a href="#ex-waterwaves-current-5" title="Copy heading and permalink for Task 5.5.3.c" aria-label="Copy heading and permalink for Task 5.5.3.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 5.5.3: Linear waves in a current"><a href="#ex-waterwaves-current" title="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current" aria-label="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-density"><h3 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluids of different densities.</span>
 </h3>
-<div class="para logical" id="ex-waterwaves-density-2">
-<div class="para">Inviscid incompressible fluid of density <span class="process-math">\(\rho_2\)</span> lies in the region <span class="process-math">\(y &gt; 0\)</span> above a fluid with greater density <span class="process-math">\(\rho_1\)</span> for <span class="process-math">\(y &lt; 0\text{.}\)</span> Assume there there is a small-amplitude disturbance the two fluids with the surface given by <span class="process-math">\(y = \eta(x, t)\text{.}\)</span> Assuming <span class="process-math">\(\eta\)</span> and the fluid velocities are small, show that the linearised boundary conditions on the approximated boundary at <span class="process-math">\(y = 0\)</span> are given by</div>
-<div class="displaymath process-math" id="ex-waterwaves-density-2-8">
+<div class="para logical" id="ex-waterwaves-density-2-1">
+<div class="para">Inviscid incompressible fluid of density <span class="process-math">\(\rho_2\)</span> lies in the region <span class="process-math">\(y &gt; 0\)</span> above a fluid with greater density <span class="process-math">\(\rho_1\)</span> for <span class="process-math">\(y &lt; 0\text{.}\)</span> Assume there there is a small-amplitude disturbance the two fluids with the surface given by <span class="process-math">\(y = \eta(x, t)\text{.}\)</span> Assuming <span class="process-math">\(\eta\)</span> and the fluid velocities are small, assume that the linearised boundary conditions on the approximated boundary at <span class="process-math">\(y = 0\)</span> are given by</div>
+<div class="displaymath process-math" id="ex-waterwaves-density-2-1-8">
 \begin{align*}
 \pd{\eta}{t} = \pd{\phi_1}{y} = \pd{\phi_2}{y} \amp \qquad \text{at $y = 0$}, \\
 \rho_1\left( \pd{\phi_1}{t}+ g\eta\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) \amp \qquad \text{at $y = 0$}. 
 \end{align*}
 </div>
 <div class="para">(Notice that these are three conditions; two kinematic conditions for the two fluids, and a dynamic (Bernoulli) condition).</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-waterwaves-density-3">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-waterwaves-density-2-2">
 <div class="para">If <span class="process-math">\(\eta(x, t) = A\cos(kx - \omega t)\)</span> with <span class="process-math">\(k &gt; 0\text{,}\)</span> derive the dispersion relation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-waterwaves-density-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-waterwaves-density-3-1">
+<div class="para">The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <span class="process-math">\(\\DD{(y - \eta}{t} = 0,\)</span> for both fluids. This gives,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
+\end{equation*}
+</div>
+<div class="para">after linearising, and as imposed on <span class="process-math">\(i = 1, 2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.4.1"><a href="#ex-waterwaves-density-3" title="Copy heading and permalink for Solution 5.5.4.1" aria-label="Copy heading and permalink for Solution 5.5.4.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Exercise 5.5.4: Fluids of different densities"><a href="#ex-waterwaves-density" title="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities" aria-label="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-surfacetension"><h3 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluids with surface tension.</span>
 </h3>
