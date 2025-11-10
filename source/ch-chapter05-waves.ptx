@@ -434,7 +434,7 @@
           \omega^2 = gk,
         </me>
         or alternatively if we take the positive root, 
-        <men xml:id="eqn-dispersion">
+        <men xml:id="eqn-dispersion-deep">
           \omega = \sqrt{gk}.
         </men>
       </p>
@@ -458,20 +458,58 @@
         <p>
           Linear water waves in finite depth: part of <xref ref="ex-waterwaves-finite"/> and done in Problem Class Week 6.
         </p>
+
+        <p>
+          In lectures and the exercise, you will confirm that the dispersion relation in finite depth is modified to: 
+          <me>
+            \omega = \omega_\text{finite} = \sqrt{gk \tanh(kh)}.
+          </me>
+          In the limit <m>h \to \infty</m>, since <m>\tanh(kh) \to 1</m>, this approaches the deep-water dispersion relation of 
+          <me>
+            \omega_\text{deep} = \sqrt{gk},
+          </me>
+          as shown in <xref ref="eqn-dispersion-deep"/>.
+        </p>
       </li>
       <li>
         <p>
           Linear water waves in a current: part of <xref ref="ex-waterwaves-current"/> and done in Week 6 Thursday video. 
+        </p>
+
+        <p>
+          In these problems, you will modify the setup to include a horizontal current at infinity, with <m>\phi \sim Ux</m> as <m>x \to -\infty</m>. The main difference in this case is that there are additional terms to be included in the linear kinematic and dynamic conditions. As shown in the exercise, the dispersion relation is modified to 
+          <me>
+            \omega = \omega_\text{current} = Uk \mp \sqrt{gk \tanh(kh)}.
+          </me> 
+        </p>
+
+        <p>
+          There are now two distinct wavespeeds. In the version where there is zero current, <m>U = 0</m>, the wavespeeds reduce to a single one (i.e. a single <m>|c|</m>, with both left- and right-travelling waves; remember that we usually drop the <m>\pm</m>). 
         </p>
       </li>
      <li>
         <p>
           Linear water waves in two fluids of different densities: part of <xref ref="ex-waterwaves-density"/> and done in Week 7 Problem Class.
         </p>
+
+        <p>
+          The procedure is the same for this version, but the algebra is noticeably more involved. In this case, the dispersion relation is
+          <me>
+            \omega = \pm \sqrt{\left(\frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk}.
+          </me>
+        </p>
       </li>
      <li>
         <p>
-          Linear water waves with surface tension: part of lectures in Week 6 and done in Week 7 Problem Class.
+          Linear water waves with surface tension: part of <xref ref="ex-waterwaves-surfacetension"/> and done in Week 7 Problem Class.
+        </p>
+
+        <p>
+          For the case of deep water waves, this modifies the dispersion relation to 
+          <me>
+          \omega = \sqrt{gk + \frac{Tk^3}{\rho}}.
+          </me>
+          
         </p>
       </li>
     </ul>
@@ -751,15 +789,45 @@
     <exercise xml:id="ex-waterwaves-density">
       <title>Fluids of different densities</title>
       <p>
-        Inviscid incompressible fluid of density <m>\rho_2</m> lies in the region <m>y &gt; 0</m> above a fluid with greater density <m>\rho_1</m> for <m>y &lt; 0</m>. Assume there there is a small-amplitude disturbance the two fluids with the surface given by <m>y = \eta(x, t)</m>. Assuming <m>\eta</m> and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at <m>y = 0</m>. 
+        Inviscid incompressible fluid of density <m>\rho_2</m> lies in the region <m>y &gt; 0</m> above a fluid with greater density <m>\rho_1</m> for <m>y &lt; 0</m>. Assume there there is a small-amplitude disturbance the two fluids with the surface given by <m>y = \eta(x, t)</m>. Assuming <m>\eta</m> and the fluid velocities are small, show that the linearised boundary conditions on the approximated boundary at <m>y = 0</m> are given by 
+        <md>
+          <mrow>\pd{\eta}{t} = \pd{\phi_1}{y} = \pd{\phi_2}{y} \amp \qquad \text{at $y = 0$}, </mrow>
+          <mrow>\rho_1\left( \pd{\phi_1}{t}+ g\eta\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) \amp \qquad \text{at $y = 0$}. </mrow>
+        </md>
+        (Notice that these are three conditions; two kinematic conditions for the two fluids, and a dynamic (Bernoulli) condition).
       </p>
 
       <p>
         If <m>\eta(x, t) = A\cos(kx - \omega t)</m> with <m>k > 0</m>, derive the dispersion relation
         <me>
-          \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gh.
+          \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk.
         </me>
       </p>
+    </exercise>
+
+    <exercise xml:id="ex-waterwaves-surfacetension">
+      <title>Fluids with surface tension</title>
+
+        <p>
+          Suppose now that there is surface tension <m>T</m> between the two fluids of <xref ref="ex-waterwaves-density"/>. In lectures, it was shown that the linear dynamic boundary condition is given by 
+          <me>
+            \rho_1\left( \pd{\phi_1}{t} + g\eta\right) - \rho_2 \left( \pd{\phi_2}{t} + g\eta\right) = T \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$}.
+          </me>
+          consider the specific situation where the top fluid is air, with <m>\rho_2 = 0</m>. Then the dynamic condition is 
+          <me>
+          \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$},
+          </me>
+         and only need to consider the single potential <m>\phi_1 = \phi</m>.</p>
+
+
+        <p>The linear kinematic condition should be unchanged from the usual linear kinematic condition, <m>\pd{\eta}{t} = v = \pd{\phi}{y}</m> on <m>y = 0</m>.
+        </p>
+        
+        <p>For the case of deep water waves, show that the frequency <m>\omega</m> is now related to the wavenumber <m>k</m> by the equation 
+          <me>
+          \omega^2 = gk + \frac{Tk^3}{\rho}.
+          </me>
+        </p>
     </exercise>
 
     <exercise>
