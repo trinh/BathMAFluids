@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear waves in a current.</span>
+</h3>
+<div class="introduction"><div class="para">We now consider linear waves in a channel of depth <span class="process-math">\(h\text{,}\)</span> as in the previous question. This time, however, assume that there is a uniform flow of speed <span class="process-math">\(U\)</span> at infinity.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Begin by writing down the boundary conditions that you expect at <span class="process-math">\(y = -h\)</span> and also far upstream, with <span class="process-math">\(x \to -\infty.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">Therefore, this time, we shall consider the velocity as expressed as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u = U + \pd{\phi}{x}, \qquad v = \pd{\phi}{y},
+\end{equation*}
+</div>
+<div class="para">and again linearise the necessary equations.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">We begin with the governing equations as shown in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing" class="xref" data-knowl="./knowl/xref/thm-waterwaves-governing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.2: Water wave equations in potential flow">Theorem 5.1.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">On the channel bottom, we expect that the vertical velocity is zero, hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{y} = 0, \qquad y = -h,
+\end{equation*}
+</div>
+<div class="para">while at upstream infinity, we expect the the velocity to be uniform and of speed <span class="process-math">\(U\text{.}\)</span> Hence in terms of the potential,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi \sim Ux, \qquad x \to -\infty.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Indeed, this suggests that we should linearise about the uniform flow, with</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi = Ux + \hat{\phi},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\hat{\phi}\)</span> is the approximation, which we expect to be small (as is standard in linear problens, we often ignore the hat notation).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.3.a.1"><a href="#ex-waterwaves-current-3-2" title="Copy heading and permalink for Solution 5.5.3.a.1" aria-label="Copy heading and permalink for Solution 5.5.3.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 5.5.3.a"><a href="#ex-waterwaves-current-3" title="Copy heading and permalink for Task 5.5.3.a" aria-label="Copy heading and permalink for Task 5.5.3.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical">
+<div class="para">Linearise the associate free-surface equations, and show that this time, they produce</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{y} = \pd{\eta}{t} + U \pd{\eta}{x}, \qquad \text{on $y = 0$},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad \text{on $y = 0$}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">When considering the second of the two equations above (Bernoilli’s) return to the original Bernoulli equation:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
+\end{equation*}
+</div>
+<div class="para">and choose your constant <span class="process-math">\(F\)</span> more strategically.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The linearisation process for the kinematic condition remains largely the same, except we would produce:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\eta}{t} + \left[ U + \pd{\hat\phi}{x}\right] \pd{\eta}{x} = \pd{\hat{\phi}}{y}.
+\end{equation*}
+</div>
+<div class="para">Again quadratic terms are ignored, and we see that the requisite condition becomes (dropping the hat):</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\eta}{t} + U\pd{\eta}{x} = \pd{\phi}{y}, \qquad y = \eta(x, t).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The linearisation of Bernoulli’s equation is done similarly.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">When considering the Bernoulli equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
+\end{equation*}
+</div>
+<div class="para">it is prudent to take the choice of <span class="process-math">\(F(t)\)</span> so that the inertial term is removed. Specifically, if we take</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(t) = \frac{U^2}{2} + p_\text{atm}{\rho}, 
+\end{equation*}
+</div>
+<div class="para">this would remove the leading term from inertia.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The only difference with the usual linearisation process is the inertial term:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\nabla \phi|^2 = \left\lvert \left(U + \pd{\hat{\phi}}{x}\right)^2 + \left(\pd{\hat{\phi}}{y}\right)^2 \right\rvert = 2U \pd{\hat\phi}{x} + \ldots
+\end{equation*}
+</div>
+<div class="para">so now Bernoulli’s equation yields (dropping hats):</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = \eta(x, t). 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.3.b.1"><a href="#ex-waterwaves-current-4-2" title="Copy heading and permalink for Solution 5.5.3.b.1" aria-label="Copy heading and permalink for Solution 5.5.3.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 5.5.3.b"><a href="#ex-waterwaves-current-4" title="Copy heading and permalink for Task 5.5.3.b" aria-label="Copy heading and permalink for Task 5.5.3.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical">
+<div class="para">Show finally that the the dispersion relation predicts possible waves of speeds</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">The regime where the flow speed is less than <span class="process-math">\(\sqrt{gh}\)</span> is known as subcritical. The regime where flow is greater than <span class="process-math">\(\sqrt{gh}\)</span> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">At this point, the linear solution follows similar steps to the case of finite depth with zero current. We have <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y) \sin(kx - \omega t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Written in terms of <span class="process-math">\(f\text{,}\)</span> we must now solve the following system:</div>
+<div class="displaymath process-math">
+\begin{gather*}
+f'' + k^2 f = 0, \\
+f'(-h) = 0, \\
+f'(0) = (\omega - Uk)A, \\
+-(\omega - Uk) f(0) + gA = 0, 
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The first two equations yileld the typical solution for the case of finite depth:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(y) = B \cosh[k(y + h)].
+\end{equation*}
+</div>
+<div class="para">The last two conditions yield</div>
+<div class="displaymath process-math">
+\begin{equation}
+\begin{pmatrix}
+\omega - Uk &amp; -k \sinh (kH) \\
+g &amp; -(\omega - Uh)\cosh(kh)
+\end{pmatrix}
+\begin{pmatrix}
+A \\ B
+\end{pmatrix}
+= 0.\tag{5.5.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For there to be non-trivial solutions, we thus need</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\omega - Uk)^2 = gk \tanh(kh),
+\end{equation*}
+</div>
+<div class="para">and therefore there are two possible wave speeds, namely</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">In the deep water limit, if <span class="process-math">\(U &lt; \sqrt{g/k}\)</span> this yields subcritical solutions, and it is possible to have a wave pattern that is non-trivial upstream of the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.3.c.1"><a href="#ex-waterwaves-current-5-2" title="Copy heading and permalink for Solution 5.5.3.c.1" aria-label="Copy heading and permalink for Solution 5.5.3.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 5.5.3.c"><a href="#ex-waterwaves-current-5" title="Copy heading and permalink for Task 5.5.3.c" aria-label="Copy heading and permalink for Task 5.5.3.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 5.5.3: Linear waves in a current"><a href="#ex-waterwaves-current" title="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current" aria-label="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current">🔗</a></div></article><span class="incontext"><a class="internal" href="exercises-water-waves.html#ex-waterwaves-current">in-context</a></span>
+</body>
+</html>
