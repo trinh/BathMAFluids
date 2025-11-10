@@ -156,26 +156,52 @@
       </subsubsection>
     </subsection>
 
-    <section xml:id="sec-waterwaves-linearisation">
-      <title>Linearisation of the water-wave equations</title>
+    <subsection xml:id="subsec-summary-of-potential-flow">
+      <title>Summary of the governing equations</title>
 
       <p>
-        We have successfully derived the full water-wave equations for a potential fluid. They are as follows.
+        Let us summarise the governing water-wave equations in one section. 
       </p>
 
-      <theorem xml:id="thm-waterwaves-equations">
+      <theorem xml:id="thm-waterwaves-governing">
+        <title>Water wave equations in potential flow</title>
         <statement>
           <p>
-           The governing equations for a potential flow modelling deep water waves is: 
-           <mdn>
-            <mrow> \nabla^2 \phi = 0 &amp; \text{in the flow domain}</mrow>
-           </mdn> 
+           Consider two-dimensional free-surface flow of a potential (inviscid, incompressible, irrotational) fluid. The fluid satisfies Laplace's equation, 
+           <me>
+            \nabla^2 \phi = 0, \qquad \text{in the fluid domain}.
+           </me>
+          </p>
+
+          <p>
+            On the free surface, we have the kinematic boundary condition and dynamic boundary conditions:
+            <mdn>
+              <mrow xml:id="wwfull02">\pd{\eta}{t} + u \pd{\eta}{x} = v, \qquad &amp; y = \eta(x, t)</mrow>
+              <mrow xml:id="wwfull03">\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0, \qquad &amp; y = \eta(x, t).</mrow>
+            </mdn>
+          </p>
+
+          <p>
+            Finally there is typically a condition in the far field, either at infinity in the case of infinite depth, or a condition on a channel bottom in the case of finite depth. For example, in the case of infinite depth and an otherwise motionless fluid at infinity, we would require 
+           <me>
+            \nabla \phi \to 0, \qquad \text{as $y \to -\infty$}.
+           </me>
+          </p>
+
+          <p>
+            While for the case of a finite channel bottom at <m>y = -h</m>, we would require 
+            <me>
+              \pd{\phi}{y} = 0 \qquad \text{on $y = -h$}.
+            </me>
+            
           </p>
         </statement>
       </theorem>
       
       
-    </section>
+    </subsection>
+
+
   </section>
 
   <section xml:id="sec-wave-parameters">
@@ -242,9 +268,183 @@
   <section xml:id="sec-waterwaves-stokeswaves">
     <title>Stokes waves</title>
 
-    <p>
-      The material on Stokes waves will be transcribed from Lecture 5-02 and 5-03 visualiser notes found <url href="https://moodle.bath.ac.uk/mod/folder/view.php?id=1499818">here</url>.
-    </p>
+    <subsection xml:id="subsec-waterwaves-linearisation">
+      <title>Linearisation of the water-wave equations</title>
+
+
+      <p>
+        Our task in this section is to linearise the water-wave equations given in <xref ref="thm-waterwaves-governing"/>. The culprit to the difficulty in seeking solutions concerns two main issues. The first is the nonlinearity in Bernoulli's equation (i.e. the term <m>|\nabla\phi|^2</m>). The second is to do with the specification of the unknown free surface, <m>\eta(x, t)</m>, and the need to solve the extra equations on this unknown location. 
+      </p>
+
+      <p>
+        The idea of linearisation relies upon the consideration that if disturbances in the fluid are small, then the quadratic terms in the free-surface conditions can be neglected. One way to see this is to introduce a scaling on all the associated quantities. For example, we consider the free surface as written as 
+        <men xml:id="etasmall">
+          \eta(x, t) = \delta \overline{\eta}(x, t), 
+        </men>
+       where <m>\delta \ll 1</m> (<m>\delta</m> is a small number). The parameter <m>\delta</m> is simply a notational device to help remind us of the smallness of the free surface.  
+      </p>  
+
+      <p>
+        Now since we assume the motion in the fluid is also small, then we introduce a similar scaling on the potential function. We assume 
+        <men xml:id="phismall">
+          \phi(x, y, t) = \delta \overline{\phi}(x, y, t), 
+        </men>
+        within the fluid. As a consequence, all velocities are small and of order <m>\delta</m>. 
+      </p>
+        
+      <p>Now consider the evaluation of the vertical velocity on the surface. By Taylor's formula, we can expand: 
+        <me>
+          v = \pd{\phi(x, \eta, t) }{y}= \pd{\phi(x, 0, t)}{y} + \pd{^2\phi(x, 0, t)}{y^2} \eta + \text{higher-order terms}.
+        </me>
+     In fact, if we use our assumptions <xref ref="etasmall"/> and <xref ref="phismall"/>, we can see the size of the vertical velocity more explicitly: 
+        <me>
+          v = \delta \pd{\overline{\phi}(x, 0, t)}{y} + \delta^2 \pd{^2\overline{\phi}(x, 0, t)}{y^2} \overline{\eta} + O(\delta^3).
+        </me>
+      We will essentially ignore all terms of <m>\delta^2</m> or smaller. 
+      </p>
+
+      <p>
+        Let us consider now the kinematic condition <xref ref="wwfull02"/>. Since the term with the horizontal velocity <m>u \pd{\eta}{x} = O(\delta^2)</m>, then we see that the kinematic approximation now yields
+        <me>
+          \delta\pd{\overline{\eta}}{t} = \delta \pd{\overline{\phi}}{y} + O(\delta^2), \qquad \text{on $y = 0$}.
+        </me>
+        As we indicated, the use of <m>\delta</m> is only to aid with ordering. We see that if we return back to the original variable scalings, then the above indicates that the approximate kinematic condition to be considered is: 
+        <me>
+          \pd{\eta}{t} \sim \pd{\phi}{y} \qquad \text{on $y = 0$}.
+        </me>
+        It is typical, when dealing with linear water waves, to dispense with the notation indicating "approximate", i.e. <m>\sim</m> here, on the understanding that the solutions are satisfied only approximately. 
+      </p>
+
+      <remark>
+        <p>
+          The development of the linearised equation(s) seem quite lengthy, as presented above, but with understanding, you will see that they are quite simple. In essence, you have replaced the exact free-surface condition of 
+          <me>
+          \pd{\eta}{t} + u \pd{\eta}{x} = v, \qquad \text{on $y = \eta(x, t)$},
+          </me>
+         with  
+          <me>
+          \pd{\eta}{t} = v, \qquad \text{on $y = 0$},
+          </me>
+          on the assumption the flow is linearised about <m>\phi = 0</m> and <m>\eta = 0</m>.
+        </p>
+      </remark>
+
+      <p>
+        You will be able to practice this linearisation in the exercises. 
+      </p>
+
+      <p>
+        The linearisation of Bernoulli's equation in <xref ref="wwfull03"/> is done similarly, and the end result is that the term, 
+        <me>
+          |\nabla \phi|^2 = \left( \pd{\phi}{x}\right)^2  + \left( \pd{\phi}{y}\right)^2,
+        </me>
+        is assumed to be small compared to the other terms of the equation. Therefore, Bernoulli's equation is then approximated as 
+      <me>
+        \pd{\eta}{t} + u \pd{\eta}{x} = v \qquad \text{on $y = \eta$}.
+      </me>
+      </p>
+     
+
+      <theorem xml:id="thm-waterwaves-equations">
+        <title>Linear water wave equations</title>
+        <statement>
+          <p>
+           Consider two-dimensional potential flow (inviscid, incompressible, irrotational) of fluid. A model for linear water waves is as follows:
+           <mdn>
+            <mrow xml:id="ww01"> \nabla^2 \phi = 0 &amp; \qquad \text{$-\infty &lt; y &lt; \eta$}</mrow>
+            <mrow xml:id="ww02"> \pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta = 0 &amp; \qquad \text{on $y = \eta$}</mrow>
+            <mrow xml:id="ww03"> \pd{\eta}{t} + u \pd{\eta}{x} = v &amp; \qquad \text{on $y = \eta$}</mrow>
+           </mdn> 
+           where the free surface is located at <m>y = \eta(x, t)</m>.
+          </p>
+
+          <p>
+            In water of infinite depth, we require that 
+            <men xml:id="ww04-inf">
+          \nabla\phi \to (0, 0) \qquad \text{as $y \to -\infty$},
+            </men>
+            while for the case of finite depth, we have 
+            <men>
+          \pd{\phi}{y} = 0 \qquad \text{on $y = -h$}.
+            </men>
+          </p>
+        </statement>
+      </theorem>
+    </subsection>
+
+    <subsection xml:id="subsec-linear-waves-solution">
+      <title>Solving for linear waves in infinite depth</title>
+
+      <p>
+        We now seek to solve the linear water wave equations in <xref ref="thm-waterwaves-equations"/>.
+      </p>
+
+      <p>
+        We assume that the wave takes the form of a simple harmonic wave:
+        <men xml:id="eqn-linear-wave">
+         \eta(x, t) = A\cos(kx - \omega t). 
+        </men>
+        Examining the free-surface conditions in <xref ref="ww02"/> and <xref ref="ww03"/> suggests that the potential should take the form of a sinusoidal:
+        <men xml:id="eqn-linear-wave-phi">
+          \phi(x, y, t) = f(y) \sin(kx - \omega t),
+        </men>
+        which we shall verify is appropriate.
+      </p>
+
+      <p>
+        Firstly, substitution of <xref ref="eqn-linear-wave-phi"/> into Laplace's equation <xref ref="ww01"/> yields
+        <men xml:id="eqn-linear-wave-laplace-01">
+        f''(y) - k^2 f(y) = 0.
+        </men>
+      </p>
+
+      <p>
+        Turning now to the two free-surface conditions <xref ref="ww02"/> and <xref ref="ww03"/>, as well as the condition of infinite depth, we have the following necessary constraints: 
+        <mdn>
+          <mrow>f'(0) \amp= \omega A, </mrow>
+          <mrow> \omega f(0) \amp= gA, </mrow>
+          <mrow xml:id="ww04-02"> f(-\infty) \amp\to 0. </mrow>
+        </mdn>
+      </p>
+
+      <p>
+        The solution of <xref ref="eqn-linear-wave-laplace-01"/> yields
+        <me>
+          f(y) = B \e^{ky} + D \e^{-ky},
+        </me>
+       and so the infinite depth condition <xref ref="ww04-inf"/> yields <m>D \equiv 0</m>. We substitute now <m>f(y) = B \e^{ky}</m> into the two remaining conditions and simplify, yielding the matrix equation: 
+       <me>
+        \begin{pmatrix}
+        \omega \amp -k \\
+        g \amp -\omega
+        \end{pmatrix}
+        \begin{pmatrix}
+        A \\ B
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        0 \\ 0
+        \end{pmatrix}.
+       </me>
+      </p>
+
+      <p>
+        Therefore, in order for there to be nontrivial solutions, the determinant of the matrix must ber zero, and this yields
+        <me>
+          \omega^2 = gk,
+        </me>
+        or alternatively if we take the positive root, 
+        <men xml:id="eqn-dispersion-deep">
+          \omega = \sqrt{gk}.
+        </men>
+      </p>
+
+      <p>
+        The above expression is known as the <em>dispersion relation</em> for water waves in deep water. 
+      </p>
+    </subsection>
+
+
     
   </section>
 
@@ -252,18 +452,100 @@
     <title>Generalisations of water waves</title>
 
     <p>
-      To be covered Week 5-6.
+     During the lectures and exercises, you will cover some of the following variants. 
+     <ul>
+      <li>
+        <p>
+          Linear water waves in finite depth: part of <xref ref="ex-waterwaves-finite"/> and done in Problem Class Week 6.
+        </p>
+
+        <p>
+          In lectures and the exercise, you will confirm that the dispersion relation in finite depth is modified to: 
+          <me>
+            \omega = \omega_\text{finite} = \sqrt{gk \tanh(kh)}.
+          </me>
+          In the limit <m>h \to \infty</m>, since <m>\tanh(kh) \to 1</m>, this approaches the deep-water dispersion relation of 
+          <me>
+            \omega_\text{deep} = \sqrt{gk},
+          </me>
+          as shown in <xref ref="eqn-dispersion-deep"/>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Linear water waves in a current: part of <xref ref="ex-waterwaves-current"/> and done in Week 6 Thursday video. 
+        </p>
+
+        <p>
+          In these problems, you will modify the setup to include a horizontal current at infinity, with <m>\phi \sim Ux</m> as <m>x \to -\infty</m>. The main difference in this case is that there are additional terms to be included in the linear kinematic and dynamic conditions. As shown in the exercise, the dispersion relation is modified to 
+          <me>
+            \omega = \omega_\text{current} = Uk \mp \sqrt{gk \tanh(kh)}.
+          </me> 
+        </p>
+
+        <p>
+          There are now two distinct wavespeeds. In the version where there is zero current, <m>U = 0</m>, the wavespeeds reduce to a single one (i.e. a single <m>|c|</m>, with both left- and right-travelling waves; remember that we usually drop the <m>\pm</m>). 
+        </p>
+      </li>
+     <li>
+        <p>
+          Linear water waves in two fluids of different densities: part of <xref ref="ex-waterwaves-density"/> and done in Week 7 Problem Class.
+        </p>
+
+        <p>
+          Consider that the interface <m>y - \eta</m> separates two fluids of different densities, say <m>\rho_1</m>, lying in the lower portion, <m>y &lt; \eta</m>, and <m>\rho_2</m> in the upper portion, with <m>y &gt; \eta</m>. The main modification in the governing equations happens in Bernoulli's equation <xref ref="eqn-bernoulli-unsteady-potential"/>.</p>
+
+          <p>
+          In this case, the linear Bernoulli equation on the surface is 
+          <men xml:id="eqn-waterwaves-bernoulli-density">
+            \rho_1\left( \pd{\phi_1}{t} + g\eta\right) = \rho_2\left(\pd{\phi_2}{t} + g\eta\right), \qquad \text{on $y = 0$}.
+          </men>
+        </p>
+          
+          
+          <!-- For each individual fluid, we have 
+          <me>
+          \pd{\phi_i}{t} + \frac{1}{2}|\nabla\phi_i|^2 + \frac{p_i}{\rho_i} + g\eta = F_i(t).
+          </me>
+          We use the fact that the presssure on the surface must be the same in either fluids, so <m>p_1 = p_2</m>. Subtracting yields
+          <me>
+          \pd{(\phi_1 - \phi_2)}{t} + \frac{1}{2}\left(|\nabla\phi_1|^2 - |\nabla\phi_2|^2\right) + p \left( \frac{1}{\rho_1} - \frac{1}{\rho_2}\right) = F_1(t) - F_2(t).
+          </me>
+          We can select the functions on the RHS to eliminate the pressure term. Hence -->
+        <!-- </p> -->
+
+        <p>
+          The procedure is the same for this version, but the algebra is noticeably more involved. In this case, the dispersion relation is
+          <me>
+            \omega = \pm \sqrt{\left(\frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk}.
+          </me>
+        </p>
+      </li>
+     <li>
+        <p>
+          Linear water waves with surface tension: part of <xref ref="ex-waterwaves-surfacetension"/> and done in Week 7 Problem Class.
+        </p>
+
+        <p>
+          For the case of deep water waves, this modifies the dispersion relation to 
+          <me>
+          \omega = \sqrt{gk + \frac{Tk^3}{\rho}}.
+          </me>
+          
+        </p>
+      </li>
+    </ul>
     </p>
     
   </section>
 
-  <section xml:id="sec-waterwaves-instability">
+  <!-- <section xml:id="sec-waterwaves-instability">
     <title>Instability in waves</title>
 
     <p>
       To be covered Week 6.
     </p>
-  </section>
+  </section> -->
 
   <!-- <section xml:id="sec-waterwaves">
     <title>Group velocity </title>
@@ -305,7 +587,7 @@
           </solution>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="ex-waterwaves-finite">
       <title>Stokes waves in finite depth</title>
       <p>
         Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the kinematic equation is given by 
@@ -343,17 +625,59 @@
       </p>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="ex-waterwaves-current">
       <title>Linear waves in a current</title>
-      
+
+      <introduction>
       <p>
-        We now consider linear waves in a channel of depth <m>h</m>, as in the previous question. This time, however, assume that there is a uniform flow of speed <m>U</m> at infinity. Therefore, this time, we shall consider the velocity as expressed as 
+        We now consider linear waves in a channel of depth <m>h</m>, as in the previous question. This time, however, assume that there is a uniform flow of speed <m>U</m> at infinity.</p>
+
+
+
+    </introduction>
+
+      <task>
+        <statement>
+                    <p>
+          Begin by writing down the boundary conditions that you expect at <m>y = -h</m> and also far upstream, with <m>x \to -\infty.</m>
+        </p>
+        
+        <p>Therefore, this time, we shall consider the velocity as expressed as 
         <me>
           u = U + \pd{\phi}{x}, \qquad v = \pd{\phi}{y},
         </me>
         and again linearise the necessary equations. 
       </p>
+        </statement>
 
+              <solution>
+        <p>
+          We begin with the governing equations as shown in <xref ref="thm-waterwaves-governing"/>.
+        </p>
+
+        <p>
+          On the channel bottom, we expect that the vertical velocity is zero, hence 
+          <me>
+            \pd{\phi}{y} = 0, \qquad y = -h,
+          </me>
+          while at upstream infinity, we expect the the velocity to be uniform and of speed <m>U</m>. Hence in terms of the potential, 
+          <me>
+            \phi \sim Ux, \qquad x \to -\infty.
+          </me>
+        </p>
+
+        <p>
+          Indeed, this suggests that we should linearise about the uniform flow, with 
+          <me>
+            \phi = Ux + \hat{\phi},
+          </me>
+         where <m>\hat{\phi}</m> is the approximation, which we expect to be small (as is standard in linear problens, we often ignore the hat notation). 
+        </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
       <p>Linearise the associate free-surface equations, and show that this time, they produce
         <me>
           \pd{\phi}{y} = \pd{\eta}{t} + U \pd{\eta}{x}, \qquad \text{on $y = 0$},
@@ -365,6 +689,59 @@
       </p>
 
       <p>
+        When considering the second of the two equations above (Bernoilli's) return to the original Bernoulli equation: 
+        <me>
+          \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
+        </me>
+        and choose your constant <m>F</m> more strategically.
+      </p>
+        </statement>
+
+
+        <solution>
+
+
+                <p>
+          The linearisation process for the kinematic condition remains largely the same, except we would produce: 
+          <me>
+            \pd{\eta}{t} + \left[ U + \pd{\hat\phi}{x}\right] \pd{\eta}{x} = \pd{\hat{\phi}}{y}.
+          </me>
+         Again quadratic terms are ignored, and we see that the requisite condition becomes (dropping the hat):  
+          <me>
+            \pd{\eta}{t} + U\pd{\eta}{x} = \pd{\phi}{y}, \qquad y = \eta(x, t).
+          </me>
+        </p>
+
+        <p>
+          The linearisation of Bernoulli's equation is done similarly.</p>
+        
+          <p> When considering the Bernoulli equation, 
+          <me>
+          \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
+        </me>
+        it is prudent to take the choice of <m>F(t)</m> so that the inertial term is removed. Specifically, if we take 
+        <me>
+          F(t) = \frac{U^2}{2} + p_\text{atm}{\rho}, 
+        </me>
+        this would remove the leading term from inertia.
+      </p>
+ 
+         <p> 
+          The only difference with the usual linearisation process is the inertial term: 
+          <me>
+            |\nabla \phi|^2 = \left\lvert \left(U + \pd{\hat{\phi}}{x}\right)^2 + \left(\pd{\hat{\phi}}{y}\right)^2 \right\rvert = 2U \pd{\hat\phi}{x} + \ldots
+          </me>
+         so now Bernoulli's equation yields (dropping hats):
+         <me>
+          \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = \eta(x, t). 
+         </me>
+        </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+      <p>
         Show finally that the the dispersion relation predicts possible waves of speeds
         <me>
           c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
@@ -372,24 +749,120 @@
       </p>
 
       <p>
-        The regime where the flow speed is less than <m>\sqrt{gh}</m> is known as subcritical. The regime where flow is greather than <m>\sqrt{gh}</m> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?
+        The regime where the flow speed is less than <m>\sqrt{gh}</m> is known as subcritical. The regime where flow is greater than <m>\sqrt{gh}</m> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?
       </p>
-      
+        </statement>
+
+      <solution>
+        <p>
+          At this point, the linear solution follows similar steps to the case of finite depth with zero current. We have <m>\eta = A\cos(kx - \omega t)</m> and <m>\phi = f(y) \sin(kx - \omega t)</m>. 
+        </p>
+
+        <p>
+          Written in terms of <m>f</m>, we must now solve the following system: 
+          <md>
+            <mrow>f'' + k^2 f = 0, </mrow>
+            <mrow>f'(-h) = 0, </mrow>
+            <mrow>f'(0) = (\omega - Uk)A, </mrow>
+            <mrow>-(\omega - Uk) f(0) + gA = 0, </mrow>
+          </md>
+        </p>
+
+        <p>
+          The first two equations yileld the typical solution for the case of finite depth: 
+          <me>
+            f(y) = B \cosh[k(y + h)].
+          </me>
+         The last two conditions yield
+         <men>
+        \begin{pmatrix}
+        \omega - Uk &amp; -k \sinh (kH) \\
+        g &amp; -(\omega - Uh)\cosh(kh)
+        \end{pmatrix}
+        \begin{pmatrix}
+        A \\ B
+        \end{pmatrix}
+        = 0.
+         </men> 
+        </p>
+
+        <p>
+          For there to be non-trivial solutions, we thus need 
+          <me>
+            (\omega - Uk)^2 = gk \tanh(kh),
+          </me>
+          and therefore there are two possible wave speeds, namely
+          <me>
+            c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
+          </me>
+        </p>
+
+        <p>
+          In the deep water limit, if <m>U &lt; \sqrt{g/k}</m> this yields subcritical solutions, and it is possible to have a wave pattern that is non-trivial upstream of the flow. 
+        </p>
+        </solution> 
+      </task>
+
+
+
+      <!-- </solution> -->
     </exercise>
 
-
-    <exercise>
+    <exercise xml:id="ex-waterwaves-density">
       <title>Fluids of different densities</title>
+
+      <statement>
       <p>
-        Inviscid incompressible fluid of density <m>\rho_2</m> lies in the region <m>y &gt; 0</m> above a fluid with greater density <m>\rho_1</m> for <m>y &lt; 0</m>. Assume there there is a small-amplitude disturbance the two fluids with the surface given by <m>y = \eta(x, t)</m>. Assuming <m>\eta</m> and the fluid velocities are small, derive the three linearised boundary conditions on the approximated boundary at <m>y = 0</m>. 
+        Inviscid incompressible fluid of density <m>\rho_2</m> lies in the region <m>y &gt; 0</m> above a fluid with greater density <m>\rho_1</m> for <m>y &lt; 0</m>. Assume there there is a small-amplitude disturbance the two fluids with the surface given by <m>y = \eta(x, t)</m>. Assuming <m>\eta</m> and the fluid velocities are small, assume that the linearised boundary conditions on the approximated boundary at <m>y = 0</m> are given by 
+        <md>
+          <mrow>\pd{\eta}{t} = \pd{\phi_1}{y} = \pd{\phi_2}{y} \amp \qquad \text{at $y = 0$}, </mrow>
+          <mrow>\rho_1\left( \pd{\phi_1}{t}+ g\eta\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) \amp \qquad \text{at $y = 0$}. </mrow>
+        </md>
+        (Notice that these are three conditions; two kinematic conditions for the two fluids, and a dynamic (Bernoulli) condition).
       </p>
 
       <p>
         If <m>\eta(x, t) = A\cos(kx - \omega t)</m> with <m>k > 0</m>, derive the dispersion relation
         <me>
-          \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gh.
+          \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk.
         </me>
       </p>
+      </statement>
+
+      <solution>
+        <p>
+          The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <m>\\DD{(y - \eta}{t} = 0,</m> for both fluids. This gives, 
+          <me>
+            \eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
+          </me>
+          after linearising, and as imposed on <m>i = 1, 2</m>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-waterwaves-surfacetension">
+      <title>Fluids with surface tension</title>
+
+        <p>
+          Suppose now that there is surface tension <m>T</m> between the two fluids of <xref ref="ex-waterwaves-density"/>. In lectures, it was shown that the linear dynamic boundary condition is given by 
+          <me>
+            \rho_1\left( \pd{\phi_1}{t} + g\eta\right) - \rho_2 \left( \pd{\phi_2}{t} + g\eta\right) = T \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$}.
+          </me>
+          consider the specific situation where the top fluid is air, with <m>\rho_2 = 0</m>. Then the dynamic condition is 
+          <me>
+          \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$},
+          </me>
+         and only need to consider the single potential <m>\phi_1 = \phi</m>.</p>
+
+
+        <p>The linear kinematic condition should be unchanged from the usual linear kinematic condition, <m>\pd{\eta}{t} = v = \pd{\phi}{y}</m> on <m>y = 0</m>.
+        </p>
+        
+        <p>For the case of deep water waves, show that the frequency <m>\omega</m> is now related to the wavenumber <m>k</m> by the equation 
+          <me>
+          \omega^2 = gk + \frac{Tk^3}{\rho}.
+          </me>
+        </p>
     </exercise>
 
     <exercise>
