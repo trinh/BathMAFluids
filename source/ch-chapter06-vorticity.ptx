@@ -37,6 +37,12 @@
       behind a swimming fish or a flying bird. Vortices are also important in engineering
       applications, for example in the design of aircraft wings and turbine blades.
     </p>
+    <p>
+      See for example these short videos of the flow produced by
+      <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/dynamics/reynolds-number-inertia-and-viscosity/vortices/1712" visual="spoon in tea">drawing a spoon through a cup of tea</url>,
+      or
+      <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/1153" visual="wingtip vortices">a flying aircraft</url>.
+    </p>
   </introduction>
 
   <section xml:id="sec-vorticity-circulation">
@@ -400,6 +406,18 @@
 
   <section xml:id="sec-helmholtz">
     <title>The Helmholtz vortex theorems</title>
+    <introduction>
+      <p>
+        In this section, we cover some important theorems governing the motion of
+        vortices in a fluid flow.
+      </p>
+      <figure xml:id="fig-helmholtz">
+        <caption>Hermann von Helmholtz (1821-1894)</caption>
+        <image source="ch-chapter06-Hermann_von_Helmholtz.jpg" width="50%">
+          <shortdescription>Helmholtz</shortdescription>
+        </image>
+      </figure>
+    </introduction>
     <subsection>
       <title>The theorems</title>
       <theorem xml:id="thm-helmholtz-vortex-theorems">
@@ -590,6 +608,13 @@
           Secondary flows in the cup tend to spread the column of rotating fluid horizontally,
           making the area of the cross-section of the vortex tube bigger,
           and hence the vorticity smaller, which is spin down.
+        </p>
+        <p>
+          There is a nice video of a
+          <url href="https://www.instagram.com/reel/DLfUkDxuxmR/?hl=en" visual="tornado">tornado on Instagram</url>.
+          Due to the fast flow in the tornado, the pressure in the core is very low
+          (this is an application of Bernoulli's equation), and water condenses out of the air,
+          making the tornado visible.
         </p>
       </example>
       <example>
