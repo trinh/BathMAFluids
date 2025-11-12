@@ -925,6 +925,24 @@
 
   <section xml:id="subsec-newtonian-fluids">
     <title>Newtonian fluids</title>
+    <introduction>
+      <p>
+        In this section we define an important class of fluids called <em>Newtonian fluids</em>.
+        Many common fluids, including water and air, may be described as Newtonian.
+      </p>
+        <figure xml:id="fig-newton">
+          <caption>Isaac Newton (1642-1727), who gave his name to a class of fluids
+            that obey a linear constitutive relationship between stress and rate of strain.
+            Newton was also responsible for the laws of motion and universal gravitation,
+            and we make extensive use of these in fluid mechanics, particularly his
+            second law of motion,
+            which states that the rate of change of momentum of a body equals the net force acting on it.
+          </caption>
+          <image source="ch-chapter07-Portrait_of_Sir_Isaac_Newton.jpg" width="50%">
+            <shortdescription>Newton</shortdescription>
+          </image>
+        </figure>
+    </introduction>
     <definition xml:id="def-newtonian-fluid">
       <title>Incompressible Newtonian fluid</title>
       <statement>
