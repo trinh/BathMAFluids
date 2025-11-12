@@ -23,6 +23,72 @@
 </h4>
 <div class="para">Return to the previous question and, instead of directly calculating the flux via a line integral, use <a href="sec-streamfunction.html#thm-flux-streamlines" class="xref" data-knowl="./knowl/xref/thm-flux-streamlines.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.3: Flux between streamlines">Theorem 4.2.3</a> to calculate the flux for the two geometries (unit circle and straight plate) for each of the flows given.<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">This is a nice question to do because there is a simple recipe. For each of the complex potentials in the previous question, find the imaginary part to obtain the streamfunction. Then evaluate the difference in streamfunction values at the start and end values of the desired curve.<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For uniform flow, <span class="process-math">\(\psi(r, \theta) = Ur \sin(\theta - \alpha)|\text{.}\)</span> For the case of a circle, the flux is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 2\pi) - \psi(1, 0)| = 0.
+\end{equation*}
+</div>
+<div class="para">For the case of a plate,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 0) - \psi(1, \pi/2)| = U|\sin(-\pi/4) - \sin(\pi/4)| = \sqrt{2}U.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For source flow, <span class="process-math">\(\psi = (Q/2\pi) \theta\)</span> once you convert the logarithm into its real and complex parts. Then for the circle:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 2\pi) - \psi(1, 0)| = Q.
+\end{equation*}
+</div>
+<div class="para">For the case of the plate,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 0) - \psi(1, \pi/2)| = \frac{Q}{4}.
+\end{equation*}
+</div>
+<div class="para">(Actually calculating the above might convince you the route of calculating flux by integrals is possible!).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For the stagnation point, <span class="process-math">\(\psi = (r^2/2)\sin 2\theta\text{.}\)</span> For the circle,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 2\pi) - \psi(1, 0)| = 0.
+\end{equation*}
+</div>
+<div class="para">For the case of the plate,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 0) - \psi(1, \pi/2)| = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For the case of the line vortex, <span class="process-math">\(\psi = -\Gamma/(2\pi)\log r\text{,}\)</span> and for the circle,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|\psi(1, 2\pi) - \psi(1, 0)| = 0,
+\end{equation*}
+</div>
+<div class="para">while for the plate,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|psi(1, 0) - \psi(1, \pi/2)| = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-potential-fluxcalc-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.7.2.1"><a href="#ps-potential-fluxcalc-3" title="Copy heading and permalink for Solution 4.7.2.1" aria-label="Copy heading and permalink for Solution 4.7.2.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Exercise 4.7.2: Evaluation of the flux"><a href="#ps-potential-fluxcalc" title="Copy heading and permalink for Exercise 4.7.2: Evaluation of the flux" aria-label="Copy heading and permalink for Exercise 4.7.2: Evaluation of the flux">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-potentialflows.html#ps-potential-fluxcalc">in-context</a></span>
 </body>
 </html>
