@@ -1695,6 +1695,41 @@
  <p>
       There is an excellent <url href="https://potentialflow.com/">website at www.potentialflows.com</url> that allows you to plug in different flow elements (sources/sinks, vortices, etc.) into a potential flow and observe the streamlines and potential-flow lines. In your exercises, use this to help you visualise the flow.
     </p>
+
+  <remark>
+    <title>2025-26 note</title>
+    
+    <p>
+      After having administered this problem set, we realised how long it was! It was not our intention to make the exercises too long, but we had wanted to make sure you had plenty of examples of potential flows and conformal maps.</p>
+      
+      <p>To aid your studying, we would highlight the following exercises that might be prioritised:
+
+        <ol>
+          <li>
+            <p>
+              Q1. Basic calculations is useful to do a few to learn the ins and outs, though note it does become tedious. I would suggest on first attempt to ignore the request to calculate fluid forces. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Q2. This is nice to do. It teaches you that much of the "pain" of Q1 can be handled by the streamfunction theorem. 
+            </p>
+          </li>
+          <li>
+            <p>
+              Q4 and Q5 can be covered on the first pass. These are quick and get you practice on method of images.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Q9 and Q10 can be done on a first pass. Q10 was done almost entirely in lectures but students can use this to go through the ideas. 
+            </p>
+          </li>
+        </ol>
+      </p>
+
+  </remark>
   </introduction>
 
   <exercisegroup>
@@ -1841,6 +1876,20 @@
           A line source of strength <m>Q</m> located at the origin. 
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q1b.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+
+        <p>
+          The part about integrating the flux and forces for the little diagonal plate segment has some annoy integrals. You are not expected to obtain the final values of the integrals, but you will see in the next question that they can be predicted rather easily using a theorem about the streamfunctions. 
+        </p>
+
+        <image source="ex-potential-Q1b02.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </task>
 
     <task>
@@ -1849,6 +1898,20 @@
           Stagnation point flow with a stagnation point at the origin. 
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q1c01.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+
+        <p>
+          The integrals for the flux and force on the plate are less annoying than in the previous geometries, but again we have left the final force calculuation un-evaluated (out of laziness). 
+        </p>
+
+        <image source="ex-potential-Q1c02.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </task>
 
     <task>
@@ -1857,6 +1920,16 @@
           A line vortex flow of strength <m>\Gamma</m> placed at the origin. 
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q1d01.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+
+        <image source="ex-potential-Q1d02.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </task>
 
     <!-- <task>
@@ -1879,6 +1952,57 @@
         Return to the previous question and, instead of directly calculating the flux via a line integral, use <xref ref="thm-flux-streamlines"/> to calculate the flux for the two geometries (unit circle and straight plate) for each of the flows given. 
       </p>
     </statement>
+
+    <solution>
+      <p>
+        This is a nice question to do because there is a simple recipe. For each of the complex potentials in the previous question, find the imaginary part to obtain the streamfunction. Then evaluate the difference in streamfunction values at the start and end values of the desired curve. 
+      </p>
+
+      <p>
+        For uniform flow, <m>\psi(r, \theta) = Ur \sin(\theta - \alpha)|</m>. For the case of a circle, the flux is: 
+        <me>
+          |\psi(1, 2\pi) - \psi(1, 0)| = 0.
+        </me>
+        For the case of a plate, 
+        <me>
+          |\psi(1, 0) - \psi(1, \pi/2)| = U|\sin(-\pi/4) - \sin(\pi/4)| = \sqrt{2}U.
+        </me>
+      </p>
+
+      <p>
+        For source flow, <m>\psi = (Q/2\pi) \theta</m> once you convert the logarithm into its real and complex parts. Then for the circle:
+        <me>
+          |\psi(1, 2\pi) - \psi(1, 0)| = Q.
+        </me>
+        For the case of the plate,
+        <me>
+          |\psi(1, 0) - \psi(1, \pi/2)| = \frac{Q}{4}.
+        </me>
+        (Actually calculating the above might convince you the route of calculating flux by integrals is possible!).
+      </p>
+
+      <p>
+        For the stagnation point, <m>\psi = (r^2/2)\sin 2\theta</m>. For the circle, 
+        <me>
+          |\psi(1, 2\pi) - \psi(1, 0)| = 0.
+        </me>
+        For the case of the plate, 
+        <me>
+          |\psi(1, 0) - \psi(1, \pi/2)| = 0.
+        </me>
+      </p>
+
+      <p>
+        For the case of the line vortex, <m>\psi = -\Gamma/(2\pi)\log r</m>, and for the circle, 
+        <me>
+          |\psi(1, 2\pi) - \psi(1, 0)| = 0,
+        </me>
+        while for the plate,
+        <me>
+          |psi(1, 0) - \psi(1, \pi/2)| = 0.
+        </me>
+      </p>
+    </solution>
   </exercise> 
 
    <exercise>
@@ -1979,6 +2103,12 @@
        Verify that a single source of strength <m>Q</m> placed at the point <m>z = d > 0</m> is insufficient to describe flow bounded in the semi-infinite region, <m>x > 0</m>, with a planar boundary at <m>x = 0</m>. What is the horizontal and vertical velocities on the boundary? Find an equation for the streamlines and sketch the flow. 
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q4.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </exercise>
     
   <exercise xml:id="ps-image-planar02">
@@ -1992,6 +2122,12 @@
           Demonstrate that the streamlines are given by hyperbolae and develop the equation for their form. 
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q5.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </exercise>
   
   <exercise xml:id="ps-image-planar03">
@@ -2008,6 +2144,12 @@
           </me>
         </p>
       </statement>
+
+      <solution>
+        <image source="ex-potential-Q6.png">
+          <shortdescription>Solution</shortdescription>
+        </image>
+      </solution>
     </exercise>
 
 
@@ -2063,13 +2205,101 @@ from the origin. Try to sketch the streamlines in either case
 
     <exercise xml:id='ps-conformal-check-exp-sin'>
       <title>The exponential and sinusoidal conformal maps</title>
-     <p>
-     Check where each of the labeled points in the associated diagrams for the exponential map <xref ref="eqn-conformal-exp-map"/> and <xref ref="eqn-conformal-sin-map"/> are sent, from the <m>z</m>-plane to the <m>\zeta</m>-plane. In each of these cases, verify that an interior (within the fluid domain) is sent to the upper half-plane. 
-     </p> 
+      <statement>
+        <p>
+          Check where each of the labeled points in the associated diagrams for the exponential map <xref ref="eqn-conformal-exp-map"/> and <xref ref="eqn-conformal-sin-map"/> are sent, from the <m>z</m>-plane to the <m>\zeta</m>-plane. In each of these cases, verify that an interior (within the fluid domain) is sent to the upper half-plane. 
+        </p> 
+        
+        <p>
+          Construct the complex potential that corresponds to a single line source placed within the fluid in each of these cases (an infinite strip of height <m>h</m> and a semi-infinite strip). 
+        </p>
+      </statement>
 
-     <p>
-      Construct the complex potential that corresponds to a single line source placed within the fluid in each of these cases (an infinite strip of height <m>h</m> and a semi-infinite strip). 
-     </p>
+     <solution>
+      <p>
+      For the exponential map, <m>\zeta = \e^{\pi z/h}</m>, we want to check the outputs of points A, B, C, D listed on the figure. These are as follows.
+      </p>
+      <table>
+        <title>Exponential map</title>
+        <tabular>
+          <row>
+            <cell><m>z</m>-plane</cell>
+            <cell><m>\zeta</m>-plane</cell>
+          </row>
+          <row>
+            <cell><m>-\infty + \im h</m> </cell>
+            <cell><m>0^-</m></cell>
+          </row>
+          <row>
+            <cell><m>\infty + \im h</m> </cell>
+            <cell><m>-\infty</m></cell>
+          </row>
+          <row>
+            <cell><m>\infty</m> </cell>
+            <cell><m>+\infty</m></cell>
+          </row>
+          <row>
+            <cell><m>-\infty</m> </cell>
+            <cell><m>0^+</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        When thinking of the map, the most important step is to just verify that the line, <m>z = t + \im h</m>, is mapped to <m>\zeta = -\e^{\pi t/h}</m>, so the effect of shifting vertically by <m>\im h</m> is to negate the values as compared to evaluating on <m>z = t</m>. To verify the region the fluid is in, simply "walk" from ABCD in the <m>z</m>-plane, and remark on the orientation of the fluid relative to your journey (the fluid is on the right). The direction is preserved also in the <m>\zeta</m>-plane. 
+      </p>
+
+      <p>
+        The potential that corresponds to a single source is found by using method of images in the <m>\zeta</m> plane and mapping backwards. It is
+        <md>
+          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], </mrow>
+          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} + \overline{d})\right], </mrow>
+        </md>
+      </p>
+
+      <p>
+        For the trigonometric map, <m>\zeta = \sin(\pi z/2a)</m>, the work is similar. 
+      </p>
+
+      <table>
+        <title>Trigonometric map</title>
+        <tabular>
+          <row>
+            <cell><m>z</m>-plane</cell>
+            <cell><m>\zeta</m>-plane</cell>
+          </row>
+          <row>
+            <cell><m>-a + \im \infty</m> </cell>
+            <cell><m>-\infty</m></cell>
+          </row>
+          <row>
+            <cell><m>-a</m> </cell>
+            <cell><m>-1</m></cell>
+          </row>
+          <row>
+            <cell><m>0</m> </cell>
+            <cell><m>0</m></cell>
+          </row>
+          <row>
+            <cell><m>a</m> </cell>
+            <cell><m>1</m></cell>
+          </row>
+          <row>
+            <cell><m>a + \im \infty</m> </cell>
+            <cell><m>\infty</m></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        The potential that corresponds to a single source is found by using method of images in the <m>\zeta</m> plane and mapping backwards. It is
+        <md>
+          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], </mrow>
+          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) + \overline{d})\right], </mrow>
+        </md>
+      </p>
+
+     </solution>
     </exercise>
 
     <exercise>
@@ -2080,9 +2310,19 @@ from the origin. Try to sketch the streamlines in either case
         </p>
 
         <p>
-          Write down the conformal maps from the wedge <m>0 &lt; \textrm{arg}(z) &lt; \alpha</m>, from the strip <m>-a &lt; y &lt; a</m> and from the semi-infinite strip <m>0 &lt; y &lt; a</m>, <m>x &gt; 0</m> into the upper half-plane. Find all the points at which the map is not conformal. 
+          Write down the conformal maps from the wedge <m>0 &lt; \textrm{arg}(z) &lt; \alpha</m> into the upper half-plane. Find all the points at which the map is not conformal. 
         </p>
       </statement>
+
+      <solution>
+        <p>
+          A conformal map is a mapping <m>\zeta = g(z)</m> where <m>g</m> is analytic and its derivative is nonzero in some region of the complex plane. 
+        </p>
+
+        <p>
+          The map from the wedge to the upper half-plane is given in the notes near <xref ref="eqn-conformal-wedge-map"/>. It is <m>\zeta = z^{\pi/\alpha}</m>. The points where the mapping is not conformal are the critical points listed in the figure <xref ref="fig-conformal-wedge"/>. Point A at infinity is mapped directly to +infinity. The origin is mapped to the origin. And the point, B, found via <m>z = r\e^{\im\alpha}</m>, is sent to <m>\zeta = -r^{\pi/\alpha}</m> and then afterwards <m>r \to \infty</m>.
+        </p>
+      </solution>
       
     </exercise>
 
@@ -2117,15 +2357,48 @@ from the origin. Try to sketch the streamlines in either case
             Sketch what you believe will be the streamlines of such a flow.
           </p>
         </statement>
-        
+       
+        <solution>
+          <p>
+            This problem was covered in the Week 5, Lecture 2 set, so do have a look at the video recordings to remind yourself. But is essentially broken up as follows. First, verify that there is a map from the outside of the circle (in <m>\zeta</m>) to a flat plate (in <m>z</m>). 
+          </p>
+
+          <image source="ex-potential-Q10a.png">
+            <shortdescription>Solution</shortdescription>
+          </image>
+
+          <p>
+            Next, make sure the function <m>z = f(\zeta)</m> is well defined via specification of the branch structure.
+          </p>
+
+          <image source="ex-potential-Q10b.png">
+            <shortdescription>Solution</shortdescription>
+          </image>
+
+          <p>
+            Finally, construct a generic map of uniform flow plus a source, called <m>F(\zeta)</m>. Use the circle map theorem to obtain the corresponding flow past a circular cylinder with radius <m>a</m>. Finally use your connection to <m>z</m> to get the final solution. 
+          </p>
+
+          <image source="ex-potential-Q10c.png">
+            <shortdescription>Solution</shortdescription>
+          </image>
+        </solution>
         
       </exercise>
 
       <exercise>
         <title>The Magnus effect and flow past a circular cylinder</title>
+        <statement>
         <p>
           During the problem class, we will study <xref ref="example-uniform-past-circle-with-vortex"/> corresponding to verifying different properties of uniform flow past a circular cylinder, ending with studying the <em>Magnus effect</em> due to adding an initial line vortex of strength <m>\Gamma</m> into the flow. Please review the derivations and make your own notes on the example so that you are confident with the problem and its conclusions. 
         </p>
+        </statement>
+
+        <solution>
+          <p>
+            There is no solution needed since you are asked just to review what is already written in the notes in <xref ref="example-uniform-past-circle-with-vortex"/>.
+          </p>
+        </solution>
       </exercise>
 
       
