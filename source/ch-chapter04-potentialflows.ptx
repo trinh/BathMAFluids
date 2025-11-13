@@ -898,7 +898,7 @@
       </p>
     </example>
   
-    <example>
+    <example xml:id="example-complexpotential-linevortex">
       <title>Line vortex flow</title>
       <idx><h>line vortex, complex</h></idx>
 
