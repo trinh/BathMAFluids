@@ -56,7 +56,9 @@
         takes a while to sink in. The excellent movie `Vorticity, Part 1’
         by Ascher Shapiro available at
         <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">this website</url>
-        gives a clear and comprehensive introduction to the phenomenon. To recap:
+        gives a clear and comprehensive introduction to the phenomenon.
+        Also, <xref ref="ref-homsy"/> gives a
+        <url href= "https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/576" visual="Simple illustration of vorticity">simple illustration</url> of the vorticity. To recap:
         <ul>
           <li>
             <p>
@@ -427,7 +429,8 @@
       <theorem xml:id="thm-helmholtz-vortex-theorems">
         <title>The Helmholtz vortex theorems</title>
         <p>
-          These state:
+          For an inviscid, incompressible fluid under the influence of a conservative body force,
+          the theorems state:
           <ol>
             <li>
               <p>
@@ -1870,6 +1873,87 @@
           What happens in the exceptional case where <m>\Gamma_1+\Gamma_2=0</m>?
         </p>
       </statement>
+      <hint>
+        <p>
+          The complex potential for the two vortices is
+          <me>
+            w(z)=\frac{\im\Gamma_1}{2\pi}\log(z-z_1)+\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
+          </me>
+          Hence, the velocity field is given by
+          <me>
+            u-\im v=\frac{\im\Gamma_1}{2\pi(z-z_1)}+\frac{\im\Gamma_2}{2\pi(z-z_2)}.
+          </me>
+          The velocity of each vortex is given by evaluating this
+          expression at the position of the other vortex.
+        </p>
+      </hint>
+      <!--<solution>
+        <p>
+          The complex potential for the two vortices is
+          <me>
+            w(z)=\frac{\im\Gamma_1}{2\pi}\log(z-z_1)+\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
+          </me>
+          Hence, the velocity field is given by
+          <me>
+            u-\im v=\frac{\im\Gamma_1}{2\pi(z-z_1)}+\frac{\im\Gamma_2}{2\pi(z-z_2)}.
+          </me>
+          The velocity of each vortex is given by evaluating this
+          expression at the position of the other vortex.
+        </p>
+        <p>
+          Thus, the equations of motion for the vortices are
+          <md>
+            <mrow>
+              \dd{z_1}{t}=&amp;\frac{\im\Gamma_2}{2\pi(z_1-z_2)},
+            </mrow>
+            <mrow>
+              \dd{z_2}{t}=&amp;\frac{\im\Gamma_1}{2\pi(z_2-z_1)}.
+            </mrow>
+          </md>
+        </p>
+        <p>
+          We calculate
+          <md>
+            <mrow>
+              \dd{Z}{t}=&amp;\frac{\Gamma_1}{\Gamma_1+\Gamma_2}\dd{z_1}{t}
+              +\frac{\Gamma_2}{\Gamma_1+\Gamma_2}\dd{z_2}{t}
+            </mrow>
+            <mrow>
+              =&amp;\frac{\im\Gamma_1\Gamma_2}{2\pi(\Gamma_1+\Gamma_2)}
+              \left(\frac1{z_1-z_2}-\frac1{z_2-z_1}\right)
+            </mrow>
+            <mrow>
+              =&amp;0.
+            </mrow>
+          </md>
+          Similarly,
+          <md>
+            <mrow>
+              \dd{a^2}{t}=&amp;\dd{}{t}\left((z_1-z_2)(\overline{z_1-z_2})\right)
+            </mrow>
+            <mrow>
+              =&amp;(z_1-z_2)\dd{}t(\overline{z_1-z_2})
+              +(\overline{z_1-z_2})\dd{}{t}(z_1-z_2)
+            </mrow>
+            <mrow>
+              =&amp;(z_1-z_2)\left(\overline{\dd{z_1}{t}}-\overline{\dd{z_2}{t}}\right)
+              +(\overline{z_1-z_2})\left(\dd{z_1}{t}-\dd{z_2}{t}\right)
+            </mrow>
+            <mrow>
+              =&amp;\frac{-\im\Gamma_1\Gamma_2}{2\pi}
+              \left(\frac{z_1-z_2}{\overline{z_1-z_2}}
+              -\frac{\overline{z_1-z_2}}{z_1-z_2}\right)
+            </mrow>
+            <mrow>
+              =&amp;0.
+            </mrow>
+          </md>
+        </p>
+        <p>
+          Thus, <m>Z</m> and <m>a</m> are constant in time.
+          To find the angular velocity, we set <m>z_1=Z+a\exp(\im\theta_1)</m>
+        </p>
+      </solution>-->
     </exercise>
 
     <exercise xml:id="ex-obstacle">
