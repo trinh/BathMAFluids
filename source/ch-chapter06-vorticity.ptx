@@ -47,7 +47,7 @@
 
   <section xml:id="sec-vorticity-circulation">
     <title>Vorticity and circulation</title>
-    <subsection>
+    <subsection xml:id="sec-vorticity">
       <title>Vorticity</title>
       <p>
         The fluid vorticity <m>\bomega=\nabla\times\bu</m> was introduced in
@@ -588,7 +588,7 @@
           then they pull in to speed up the spin.
         </p>
       </remark>
-      <example>
+      <example xml:id="ex-spinup-spindown">
         <title>Everyday examples of spin up and spin down</title>
         <sidebyside>
           <figure xml:id="fig-spinup">
@@ -624,7 +624,7 @@
           making the tornado visible.
         </p>
       </example>
-      <example>
+      <example xml:id="ex-plughole-vortex">
         <title>Plug hole vortex</title>
         <p>
           We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’
@@ -761,7 +761,7 @@
           and thus evolve with the background flow with the line vortex removed.
         </p>
       </proof>
-      <remark>
+      <remark xml:id="rem-helmholtz-application">
         <title>Application of the Helmholtz principle</title>
         <p>
           In the case of a two-dimensional flow containing a line vortex that is everywhere irrotational
@@ -1131,7 +1131,7 @@
           \DD{}{t}\left(\frac{\omega}{r\sin\theta}\right)=0.
         </men>
       </p>
-      <example>
+      <example xml:id="ex-smoke-rings">
         <title>Smoke rings</title>
         <p>
           In <xref ref="ex-axisymmetric-flow"/> you are asked to prove a formulation of the
@@ -1322,6 +1322,214 @@
           low-Reynolds-number flow.
         </p>
       </remark>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-ncfmf-vorticity-films">
+    <title>National Committee for Fluid Mechanics Films: Vorticity Parts 1 and 2</title>
+    <introduction>
+      <p>
+        The excellent fluid dynamics films produced by the
+        <url href="https://web.mit.edu/hml/ncfmf.html" visual="National Committee for Fluid Mechanics Films">National Committee for Fluid Mechanics Films</url>
+        include two films on vorticity.
+        These are available to view online at the above link.
+        Please watch both films, and use the notes below to guide your viewing.
+      </p>
+      <p>
+        If you are short of time, you may watch the Part 1 up to 18'35''
+        and then watch Part 2 from 3'00'' to 13'25'' and 17'25'' to the end,
+        as these parts relate most strongly to the material in this course.
+        However, it is recommended that you watch both films in their entirety
+      </p>
+    </introduction>
+    <subsection xml:id="subsec-vorticity-part-1">
+      <title>Vorticity Part 1</title>
+      <p>
+        Here is a list of points to look out for while watching Vorticity Part 1:
+        <ul>
+          <li>
+            <p>
+              0'0'': The film starts by defining vorticity, c.f. <xref ref="sec-vorticity"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              1'10'': Vortex lines are defined, c.f. <xref ref="sec-vortex-lines"/>.'
+            </p>
+          </li>
+          <li>
+            <p>
+              2'00'': There is a description of a `vorticity meter',
+              which can be used to illustrate the vorticity of various flows.
+            </p>
+          </li>
+          <li>
+            <p>
+              3'00'': Vorticity in solid body rotation of a fluid
+              (a bit like the cup of tea in <xref ref="ex-spinup-spindown"/>).
+            </p>
+          </li>
+          <li>
+            <p>
+              3'30'': Channel flow. We will study this in <xref ref="ch-viscousflows"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              4'30'': Plug hole vortex (<xref ref="ex-plughole-vortex"/>).
+              This will nicely illustrate an important concept in this chapter:
+              a line vortex <xref ref="example-complexpotential-linevortex"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              6'50'': Crocco's theorem applied to the channel flow.
+              The theorem as presented is related to the Bernoulli equation
+              <xref ref="sec-bernoulli"/>. This section is beyond the scope of this course.
+            </p>
+          </li>
+          <li>
+            <p>
+              9'20'': Back to the plughole vortex.
+              We will derive an equation for the surface profile, the 'hyperboloid'.
+              There is also a really nice illustration that the vorticity is zero everywhere
+              except on the axis of the vortex, where it is infinite (in an ideal fluid).
+            </p>
+          </li>
+          <li>
+            <p>
+              11'10'': Definition of the circulation, c.f. <xref ref="sec-circulation"/>,
+              and Kelvin's circulation theorem,
+              c.f. <xref ref="thm-kelvin-circulation-theorem"/>.
+              Several examples of circulation are given, which should help you to conceptualise
+              this important quantity, although note that doing calculations on some of these
+              (e.g. the developing boundary layer, the creation of a wingtip vortex) is beyond
+              the scope of this course.
+            </p>
+          </li>
+          <li>
+            <p>
+              18'15'': Vorticity dissipates due to friction (viscosity).
+              Viscosity is a way of describing the internal friction in the fluid and will be studied
+              in <xref ref="ch-viscousflows"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              18'35'': This section of the film describes Kelvin's circulation theorem
+              in the presence of a non-conservative body force.
+              They consider the Coriolis force due to the Earth's rotation;
+              this has only a small effect on scales of a few metres, but a big effect on
+              long lengthscales such as occur in atmosphere and ocean dynamics,
+              so it is important in weather forecasting).
+              in more detail than we do it in this course, so this is non-examinable.
+              However, it is worth watching to get a better understanding of the theorem
+              and fluid dynamics in general.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+    <subsection xml:id="subsec-vorticity-part-2">
+      <title>Vorticity Part 2</title>
+      <p>
+        Here is a list of points to look out for while watching Vorticity Part 2:
+        <ul>
+          <li>
+            <p>
+              0'0'': The film starts by continuing to discuss Kelvin's circulation theorem,
+              this time in the case of non-constant density.
+              Again, this is beyond the scope of this course, although watching this will
+              help you to understand the subject better.
+            </p>
+          </li>
+          <li>
+            <p>
+              3'00'': Aerofoils and how they generate lift. This is at a higher level than
+              most of the material on this course, so if you can follow it, it will really
+              help your understanding of circulation and vorticity.
+            </p>
+          </li>
+          <li>
+            <p>
+              5'15'': Helmholtz's vortex laws are introduced,
+              As mentioned in the lecture, these are equivalent to the theorems we had
+              <xref ref="thm-helmholtz-vortex-theorems"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              6'45'': Smoke rings, see <xref ref="ex-smoke-rings"/>.
+              This should be understandable.
+              It also includes a verbal description of the image vortex,
+              c.f. <xref ref="rem-helmholtz-application"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              7'55'': Wingtip vortices are described.
+            </p>
+          </li>
+          <li>
+            <p>
+              8'55'': Another vorticity meter is introduced
+              and initially used to measure wingtip vortices.
+            </p>
+          </li>
+          <li>
+            <p>
+              9'40'': Application to propellors.
+            </p>
+          </li>
+          <li>
+            <p>
+              10'25'': Application to flying birds.
+            </p>
+          </li>
+          <li>
+            <p>
+              11'20'': Vortex stretching, see <xref ref="ex-spinup-spindown"/>,
+              which includes a description of a figure skater, as mentioned in the lecture.
+
+              At 4:00, the second Helmholtz vortex theorem is described.
+              This states that the strength of a vortex tube is constant along its length
+              and in time.
+              Note that this is a direct consequence of the vorticity equation
+              <xref ref="eqn-vorticity-equation-lagrange"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              13'25'': Channel flow around a bend.
+              This is beyond the scope of this course,
+              although, as with other parts of the film,
+              it would help your understanding to watch it.
+              It also includes a description of secondary flow,
+              both in a channel bend, such as a river,
+              and in a closed pipe bend, such as an artery.
+            </p>
+          </li>
+          <li>
+            <p>
+              17'25'': Another example of vortex line stretching,
+              see <xref ref="ex-spinup-spindown"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              18'20'': Generation of vertical vorticity and tornadoes.
+              This includes visual explanations of some of the properties
+              we discussed in the lecture.
+            </p>
+          </li>
+          <li>
+            <p>
+              19'55'': Importance of the Coriolis force in
+              large-scale atmospheric and oceanic flows.
+            </p>
+          </li>
+        </ul>
+      </p>
     </subsection>
   </section>
 

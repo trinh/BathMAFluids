@@ -1099,9 +1099,9 @@ var ptx_lunr_docs = [
   "body": " Line source  line source, complex  We can verify that the complex potential for a line source flow is given by This can be compared to .  The complex logarithm is an example of a function that is not analytic at the isolated point where it possesess a branch point . However, it still provides a permissible analytic function away from the origin.  The evaluation of the complex logarithm can be performed via the definition where is the polar form representation of . In particular is a multi-function with a branch point at the origin.  With the above decomposition of the logarithm in mind, notice that we can then conclude that the velocity potential and streamfunction are given by Indeed the streamlines are along the rays constant.  From , we can also compute the velocities using the relationship . We thus have once we have multiplied the top and bottom by the conjugate of .  "
 },
 {
-  "id": "subsec-complex-examples-8",
+  "id": "example-complexpotential-linevortex",
   "level": "2",
-  "url": "sec-complex-potential.html#subsec-complex-examples-8",
+  "url": "sec-complex-potential.html#example-complexpotential-linevortex",
   "type": "Example",
   "number": "4.3.13",
   "title": "Line vortex flow.",
@@ -1720,18 +1720,18 @@ var ptx_lunr_docs = [
   "body": " The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by , and this must remain constant, and therefore, since the area of the cross-section is decreasing, the magnitude of vorticiy must increase in the tube. This is spin up . Conversely, if a vortex tube becomes shorter, we get the opposite effect of spin down and gets smaller.  A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.  "
 },
 {
-  "id": "sec-helmholtz-3-5",
+  "id": "ex-spinup-spindown",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-3-5",
+  "url": "sec-helmholtz.html#ex-spinup-spindown",
   "type": "Example",
   "number": "6.2.5",
   "title": "Everyday examples of spin up and spin down.",
   "body": " Everyday examples of spin up and spin down    Spin up of vorticity as thunderclouds move overhead.   Spin up     Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).   Spin up     The two sketches in and (taken from ) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.  There is a nice video of a tornado on Instagram . Due to the fast flow in the tornado, the pressure in the core is very low (this is an application of Bernoulli's equation), and water condenses out of the air, making the tornado visible.  "
 },
 {
-  "id": "sec-helmholtz-3-6",
+  "id": "ex-plughole-vortex",
   "level": "2",
-  "url": "sec-helmholtz.html#sec-helmholtz-3-6",
+  "url": "sec-helmholtz.html#ex-plughole-vortex",
   "type": "Example",
   "number": "6.2.8",
   "title": "Plug hole vortex.",
@@ -1774,9 +1774,9 @@ var ptx_lunr_docs = [
   "body": " A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem , these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.  "
 },
 {
-  "id": "helmholtz-principle-6",
+  "id": "rem-helmholtz-application",
   "level": "2",
-  "url": "sec-helmholtz.html#helmholtz-principle-6",
+  "url": "sec-helmholtz.html#rem-helmholtz-application",
   "type": "Remark",
   "number": "6.2.12",
   "title": "Application of the Helmholtz principle.",
@@ -1909,9 +1909,9 @@ var ptx_lunr_docs = [
   "body": " Since the definitions in cylindrical and spherical coordinates are equivalent, it suffices to prove the theorem in spherical coordinates. In this case, and, substituting the velocity components , this equals zero. Hence is constant along streamlines.  "
 },
 {
-  "id": "subsec-streamfunction-vorticity-4",
+  "id": "ex-smoke-rings",
   "level": "2",
-  "url": "sec-axisymmetric-flow.html#subsec-streamfunction-vorticity-4",
+  "url": "sec-axisymmetric-flow.html#ex-smoke-rings",
   "type": "Example",
   "number": "6.3.10",
   "title": "Smoke rings.",
@@ -1945,11 +1945,20 @@ var ptx_lunr_docs = [
   "body": " In we will calculate the flow past a sphere in a low-Reynolds-number flow.  "
 },
 {
+  "id": "sec-ncfmf-vorticity-films",
+  "level": "1",
+  "url": "sec-ncfmf-vorticity-films.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "National Committee for Fluid Mechanics Films: Vorticity Parts 1 and 2",
+  "body": " National Committee for Fluid Mechanics Films: Vorticity Parts 1 and 2   The excellent fluid dynamics films produced by the National Committee for Fluid Mechanics Films include two films on vorticity. These are available to view online at the above link. Please watch both films, and use the notes below to guide your viewing.  If you are short of time, you may watch the Part 1 up to 18'35'' and then watch Part 2 from 3'00'' to 13'25'' and 17'25'' to the end, as these parts relate most strongly to the material in this course. However, it is recommended that you watch both films in their entirety    Vorticity Part 1  Here is a list of points to look out for while watching Vorticity Part 1:   0'0'': The film starts by defining vorticity, c.f. .    1'10'': Vortex lines are defined, c.f. .'    2'00'': There is a description of a `vorticity meter', which can be used to illustrate the vorticity of various flows.    3'00'': Vorticity in solid body rotation of a fluid (a bit like the cup of tea in ).    3'30'': Channel flow. We will study this in .    4'30'': Plug hole vortex ( ). This will nicely illustrate an important concept in this chapter: a line vortex .    6'50'': Crocco's theorem applied to the channel flow. The theorem as presented is related to the Bernoulli equation . This section is beyond the scope of this course.    9'20'': Back to the plughole vortex. We will derive an equation for the surface profile, the 'hyperboloid'. There is also a really nice illustration that the vorticity is zero everywhere except on the axis of the vortex, where it is infinite (in an ideal fluid).    11'10'': Definition of the circulation, c.f. , and Kelvin's circulation theorem, c.f. . Several examples of circulation are given, which should help you to conceptualise this important quantity, although note that doing calculations on some of these (e.g. the developing boundary layer, the creation of a wingtip vortex) is beyond the scope of this course.    18'15'': Vorticity dissipates due to friction (viscosity). Viscosity is a way of describing the internal friction in the fluid and will be studied in .    18'35'': This section of the film describes Kelvin's circulation theorem in the presence of a non-conservative body force. They consider the Coriolis force due to the Earth's rotation; this has only a small effect on scales of a few metres, but a big effect on long lengthscales such as occur in atmosphere and ocean dynamics, so it is important in weather forecasting). in more detail than we do it in this course, so this is non-examinable. However, it is worth watching to get a better understanding of the theorem and fluid dynamics in general.       Vorticity Part 2  Here is a list of points to look out for while watching Vorticity Part 2:   0'0'': The film starts by continuing to discuss Kelvin's circulation theorem, this time in the case of non-constant density. Again, this is beyond the scope of this course, although watching this will help you to understand the subject better.    3'00'': Aerofoils and how they generate lift. This is at a higher level than most of the material on this course, so if you can follow it, it will really help your understanding of circulation and vorticity.    5'15'': Helmholtz's vortex laws are introduced, As mentioned in the lecture, these are equivalent to the theorems we had .    6'45'': Smoke rings, see . This should be understandable. It also includes a verbal description of the image vortex, c.f. .    7'55'': Wingtip vortices are described.    8'55'': Another vorticity meter is introduced and initially used to measure wingtip vortices.    9'40'': Application to propellors.    10'25'': Application to flying birds.    11'20'': Vortex stretching, see , which includes a description of a figure skater, as mentioned in the lecture. At 4:00, the second Helmholtz vortex theorem is described. This states that the strength of a vortex tube is constant along its length and in time. Note that this is a direct consequence of the vorticity equation .    13'25'': Channel flow around a bend. This is beyond the scope of this course, although, as with other parts of the film, it would help your understanding to watch it. It also includes a description of secondary flow, both in a channel bend, such as a river, and in a closed pipe bend, such as an artery.    17'25'': Another example of vortex line stretching, see .    18'20'': Generation of vertical vorticity and tornadoes. This includes visual explanations of some of the properties we discussed in the lecture.    19'55'': Importance of the Coriolis force in large-scale atmospheric and oceanic flows.      "
+},
+{
   "id": "ws-vorticity",
   "level": "1",
   "url": "ws-vorticity.html",
   "type": "Exercises",
-  "number": "6.4",
+  "number": "6.5",
   "title": "Exercises",
   "body": "   Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Method one: Consider the following diagram.   Curve at times and . The inset shows the relationship between the two curves.    By definition, We therefore need to write and at time on the curve to values at time on the curve :    Method two: We can parametrise via for and rewrite the integral as an integral over the parameter : Then start from and simplify.      The circulation around a vortex tube   (Based on Exercise 5.5 in ). Define a vortex tube. Prove that the quantity where is any surface spanning the tube, is the same for all such surfaces. Relate this quantity to a circulation of the flow.    Given two different such surfaces and , define a `cylindrical' volume , whose ends are the the two surfaces and and whose sides are the sides of the vortex tube, and let , for .      Evolution of a line integral   (Based on Exercise 5.6 in ). Show that if is any suitably smooth vector field and where is a circuit consisting of the same fluid particles as time proceeds, then     Similar to , there are two methods of solution possible.   First method:    Curve at times and . The inset shows the relationship between the two curves.    We write    Second method: Parametrise as for . Then       Axisymmetric flow   (Based on Exercise 5.7 in ). In this question, please make use of the vector calculus formulae given in cylindrical polar coordinates, available at this website . Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     Axisymmetry implies that has no -component, that is , and that . Hence, .  Then, using the formula for curl in cylindrical polar coordinates,   We have Show that and use       Two vortices   Two vortices, of strengths and , are at the points and , respectively, in the complex plane. Write down the equations of motion for the position vectors and if the vortices are free to move. Assuming that , show that , where is the centroid of the two vortices, and is the distance between them.  Deduce that each vortex moves in a circle centred on , with angular velocity What happens in the exceptional case where ?    The complex potential for the two vortices is Hence, the velocity field is given by The velocity of each vortex is given by evaluating this expression at the position of the other vortex.      Obstacle   Fluid occupies the region outside a circular obstacle of radius . By using the Circle Theorem, find the resulting complex potential when a vortex of strength is placed at , where (assuming there to be no circulation about the obstacle).  Explain why the vortex will move in a circle of radius with angular velocity of magnitude      Flow in a quadrant  Fluid occupies the quadrant , bounded by two rigid boundaries along the - and -axes. Find the complex potential for the flow caused by a vortex at a point in the fluid. If the vortex is free to move, show that it follows a path on which     Channel flow   [Harder] Fluid occupies the semi-infinite channel . Show that the flow induced by a line vortex of strength at the point has complex potential Show that the velocity components satisfy   Deduce that, if the vortex is free to move, it will instantaneously travel downwards with speed .    Use the identity .    "
 },
@@ -1958,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-kelvin-circulation-theorem",
   "type": "Exercise",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "Kelvin’s Circulation Theorem.",
   "body": " Kelvin’s Circulation Theorem   The circulation around a closed curve is defined by By transforming to Lagrangian variables show that is independent of . Deduce that a flow that is initially irrotational (i.e. at ) remains irrotational for all time.  Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential such that .     Method one: Consider the following diagram.   Curve at times and . The inset shows the relationship between the two curves.    By definition, We therefore need to write and at time on the curve to values at time on the curve :    Method two: We can parametrise via for and rewrite the integral as an integral over the parameter : Then start from and simplify.    "
 },
@@ -1967,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-circulation-vortex-tube",
   "type": "Exercise",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "The circulation around a vortex tube.",
   "body": " The circulation around a vortex tube   (Based on Exercise 5.5 in ). Define a vortex tube. Prove that the quantity where is any surface spanning the tube, is the same for all such surfaces. Relate this quantity to a circulation of the flow.    Given two different such surfaces and , define a `cylindrical' volume , whose ends are the the two surfaces and and whose sides are the sides of the vortex tube, and let , for .    "
 },
@@ -1976,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-line-integral-evolution",
   "type": "Exercise",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "Evolution of a line integral.",
   "body": " Evolution of a line integral   (Based on Exercise 5.6 in ). Show that if is any suitably smooth vector field and where is a circuit consisting of the same fluid particles as time proceeds, then     Similar to , there are two methods of solution possible.   First method:    Curve at times and . The inset shows the relationship between the two curves.    We write    Second method: Parametrise as for . Then     "
 },
@@ -1985,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-axisymmetric-flow",
   "type": "Exercise",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "Axisymmetric flow.",
   "body": " Axisymmetric flow   (Based on Exercise 5.7 in ). In this question, please make use of the vector calculus formulae given in cylindrical polar coordinates, available at this website . Consider an axisymmetric flow. Working in cylindrical polar coordinates , show that the vorticity is given by and that the vorticity equation reduces to Thus the vorticity changes in proportion to distance from the axis of symmetry.  Note that in spherical polar coordinates this is equivalent to     Axisymmetry implies that has no -component, that is , and that . Hence, .  Then, using the formula for curl in cylindrical polar coordinates,   We have Show that and use     "
 },
@@ -1994,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-two-vortices",
   "type": "Exercise",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "Two vortices.",
   "body": " Two vortices   Two vortices, of strengths and , are at the points and , respectively, in the complex plane. Write down the equations of motion for the position vectors and if the vortices are free to move. Assuming that , show that , where is the centroid of the two vortices, and is the distance between them.  Deduce that each vortex moves in a circle centred on , with angular velocity What happens in the exceptional case where ?    The complex potential for the two vortices is Hence, the velocity field is given by The velocity of each vortex is given by evaluating this expression at the position of the other vortex.    "
 },
@@ -2003,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-obstacle",
   "type": "Exercise",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "Obstacle.",
   "body": " Obstacle   Fluid occupies the region outside a circular obstacle of radius . By using the Circle Theorem, find the resulting complex potential when a vortex of strength is placed at , where (assuming there to be no circulation about the obstacle).  Explain why the vortex will move in a circle of radius with angular velocity of magnitude    "
 },
@@ -2012,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-quadrant",
   "type": "Exercise",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "Flow in a quadrant.",
   "body": " Flow in a quadrant  Fluid occupies the quadrant , bounded by two rigid boundaries along the - and -axes. Find the complex potential for the flow caused by a vortex at a point in the fluid. If the vortex is free to move, show that it follows a path on which   "
 },
@@ -2021,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "ws-vorticity.html#ex-channel",
   "type": "Exercise",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "Channel flow.",
   "body": " Channel flow   [Harder] Fluid occupies the semi-infinite channel . Show that the flow induced by a line vortex of strength at the point has complex potential Show that the velocity components satisfy   Deduce that, if the vortex is free to move, it will instantaneously travel downwards with speed .    Use the identity .   "
 },
