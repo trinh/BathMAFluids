@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: Wing tip vortices.</span>
+</h4>
+<div class="para logical">
+<div class="para">(From Exercise 5.8 in <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>). An inviscid fluid occupies the region <span class="process-math">\(x,y\geq0\text{,}\)</span> and is bounded by rigid boundaries at <span class="process-math">\(x=0\)</span> and at <span class="process-math">\(y=0\text{.}\)</span> Its motion results wholly from the presence of a line vortex of strength <span class="process-math">\(\Gamma\text{.}\)</span> Show that the path taken by the vortex is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ref-acheson.html">
+\begin{equation*}
+\frac1{x^2}+\frac1{y^2}=\mathrm{constant}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">At take-off, an aircraft generates strong vortices shed from the tips of its wings, see <a href="ch-chapter06-vorticity.html#fig-wingtip-vortices" class="xref" data-knowl="./knowl/xref/fig-wingtip-vortices.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.0.2">Figure 6.0.2</a>. These are observed to move downwards and outwards under each other’s influence.<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Suppose the vortex is at the point</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z_1=x_1+\im y_1.
+\end{equation*}
+</div>
+<div class="para">We use three image vortices at <span class="process-math">\(x_1-\im y_1\)</span> and at <span class="process-math">\(-x_1+\im y_1\text{,}\)</span> both of strength <span class="process-math">\(-\Gamma\text{,}\)</span> and at <span class="process-math">\(-x_1-\im y_1\)</span> of strength <span class="process-math">\(\Gamma\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Recall that the complex potential of a line vortex at <span class="process-math">\(z=c\)</span> of strength <span class="process-math">\(\Gamma\)</span> is <span class="process-math">\(-\im\Gamma\log(z-c)/(2\pi)\)</span> and its velocity is given by the derivative of this map: <span class="process-math">\(u-\im v=-\im\Gamma/(2\pi(z-c))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The velocity of the vortex is given by the sum of the velocities due to the other three vortices:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dd{x_1}{t}-\im\dd{y_1}{t}
+=&amp;\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(x_1-\im y_1))}\\
+&amp;+\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1+\im y_1))}\\
+&amp;-\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1-\im y_1))}\\
+&amp;=\frac{\im\Gamma}{4\pi}\left(\frac1{x_1}+\frac1{\im y_1}-\frac1{x_1+\im y_1}\right).
+\end{align*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\dd{x_1}{t}
+=\frac{\Gamma}{4\pi}\left(\frac1{y_1}-\frac{y_1}{x_1^2+y_1^2}\right)
+=\frac{\Gamma x_1^2}{4\pi y_1(x_1^2+y_1^2)},\\
+\dd{y_1}{t}
+=\frac{\Gamma}{4\pi}\left(-\frac1{x_1}+\frac{x_1}{x_1^2+y_1^2}\right)
+=-\frac{\Gamma y_1^2}{4\pi x_1(x_1^2+y_1^2)},
+\end{gather*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{y_1}{x_1}=-\frac{y_1^3}{x_1^3},
+\end{equation*}
+</div>
+<div class="para">which can be solved by separation of variables to give</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int\frac1{y_1^3}\de y_1=-\int\frac1{x_1^3}\de x_1
+\quad\Rightarrow\quad
+-\frac1{2y_1^2}=\frac1{2x_1^2}+c,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c\)</span> is constant, and this can be rearranged into the required form.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.2.15.1"><a href="#ex-wing-tip-vortices-3" title="Copy heading and permalink for Solution 6.2.15.1" aria-label="Copy heading and permalink for Solution 6.2.15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 6.2.15: Example: Wing tip vortices"><a href="#ex-wing-tip-vortices" title="Copy heading and permalink for Example 6.2.15: Example: Wing tip vortices" aria-label="Copy heading and permalink for Example 6.2.15: Example: Wing tip vortices">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-helmholtz.html#ex-wing-tip-vortices">in-context</a></span>
+</body>
+</html>
