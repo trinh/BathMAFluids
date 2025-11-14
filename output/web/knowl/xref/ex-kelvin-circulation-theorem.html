@@ -32,7 +32,8 @@
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para">Note that this is a key result: if a flow is initially irrotational, it remains so indefinitely and we can introduce a velocity potential <span class="process-math">\(\phi\)</span> such that <span class="process-math">\(\mathbf{u} = \nabla \phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para">
 <em class="emphasis">Method one:</em> Consider the following diagram.<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -47,9 +48,11 @@
 <div class="para">We therefore need to write <span class="process-math">\(\bu\)</span> and <span class="process-math">\(\de\bx\)</span> at time <span class="process-math">\(t+\de t\)</span> on the curve <span class="process-math">\(C(t+\de t)\)</span> to values at time <span class="process-math">\(t\)</span> on the curve <span class="process-math">\(C(t)\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
-\begin{equation*}
-\left.\bu\cdot\de\bx\right|_{t+\de t}=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right).
-\end{equation*}
+\begin{align*}
+&amp;\left.\bu\cdot\de\bx\right|_{t+\de t}\\
+=&amp;\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\\
+&amp;\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right).
+\end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -66,7 +69,79 @@
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 6.5.1.1"><a href="#ex-kelvin-circulation-theorem-3" title="Copy heading and permalink for Hint 6.5.1.1" aria-label="Copy heading and permalink for Hint 6.5.1.1">🔗</a></div>
-</div></details></div>
+</div></details><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">We present two methods.<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<em class="emphasis">Method one:</em><div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Assuming a conservative body force <span class="process-math">\(-\bnabla\chi\)</span> per unit volume, the Euler equation reads</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{\bu}{t}=-\bnabla\left(\frac{p}{\rho}-\chi\right).
+\end{equation*}
+</div>
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\Gamma}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.
+\end{equation*}
+</div>
+<div class="para">We calculate</div>
+<div class="displaymath process-math">
+\begin{align*}
+\left.\bu\cdot\de\bx\right|_{t+\de t}=&amp;\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\\
+&amp;\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)\\
+=&amp;\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)\\
+=&amp;\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.
+\end{align*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dd{\Gamma}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t\\
+&amp;=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\\
+&amp;=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx\\
+&amp;=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx\\
+&amp;=0.
+\end{align*}
+</div>
+<div class="para">The final equality above follows because the line integral of a gradient around a closed curve is zero. Thus <span class="process-math">\(\Gamma\)</span> is independent of <span class="process-math">\(t\text{.}\)</span> If the flow is initially irrotational, then <span class="process-math">\(\Gamma=0\)</span> at <span class="process-math">\(t=0\)</span> for any closed curve <span class="process-math">\(C(0)\text{,}\)</span> and hence <span class="process-math">\(\Gamma=0\)</span> for all time. Since this holds for any closed curve, it follows that <span class="process-math">\(\omega=\bnabla\times\bu=0\)</span> for all time.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<em class="emphasis">Method two:</em> This can also be proven by parametrising <span class="process-math">\(C(t)\)</span> via <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;x&lt;1\)</span> and rewriting the integral as an integral over the parameter <span class="process-math">\(s\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dd{\Gamma}{t}=
+&amp;\int_0^1
+\left.\pd{}{t}\left(\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\right)\right|_s\de s\\
+=&amp;\int_0^1
+\left(\left(\pd{\bu}{t}+\pd{\bx}{t}\cdot\nabla\bu\right)\cdot\pd{\bx}{s}
++\bu\cdot\pd{^2\bx}{s\partial t}\right)\de s\\
+=&amp;\int_0^1
+\left(\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)\cdot\pd{\bx}{s}
++\bu\cdot\pd{\bu}{s}\right)\de s\\
+=&amp;\int_0^1\left(\DD{\bu}{t}\cdot\pd{\bx}{s}+\frac12\pd{|\bu|^2}{s}\right)\de s\\
+=&amp;\int_0^1\left(-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\pd{\bx}{s}+\frac12\pd{|\bu|^2}{s}\right)\de s\\
+=&amp;\int_0^1\left(-\pd{}{s}\left(\frac{p}{\rho}-\chi\right)+\frac12\pd{|\bu|^2}{s}\right)\de s\\
+=&amp;0.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-kelvin-circulation-theorem-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.1.1"><a href="#ex-kelvin-circulation-theorem-4" title="Copy heading and permalink for Solution 6.5.1.1" aria-label="Copy heading and permalink for Solution 6.5.1.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Exercise 6.5.1: Kelvin’s Circulation Theorem"><a href="#ex-kelvin-circulation-theorem" title="Copy heading and permalink for Exercise 6.5.1: Kelvin’s Circulation Theorem" aria-label="Copy heading and permalink for Exercise 6.5.1: Kelvin’s Circulation Theorem">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-vorticity.html#ex-kelvin-circulation-theorem">in-context</a></span>
 </body>
 </html>

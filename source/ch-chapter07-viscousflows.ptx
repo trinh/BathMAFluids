@@ -943,168 +943,175 @@
           </image>
         </figure>
     </introduction>
-    <definition xml:id="def-newtonian-fluid">
-      <title>Incompressible Newtonian fluid</title>
-      <statement>
+    <subsection xml:id="subsec-incompressible-newtonian-fluids">
+      <title>Incompressible Newtonian fluids</title>
+      <p>
+        Many common fluids may be well described as
+        <em>incompressible Newtonian fluids</em>.
+      </p>
+      <definition xml:id="def-newtonian-fluid">
+        <title>Incompressible Newtonian fluid</title>
+        <statement>
+          <p>
+            We can define a <em>Newtonian fluid</em> by stating its constitutive relationship.
+            <men xml:id="eq-Newtonianstress-incompressible">
+              \sigma_{ij}=-p\delta_{ij}
+              +\mu\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
+            </men>
+            where <m>\mu</m>
+            is the <em>dynamic shear viscosity</em>. Alternatively, in vector form,
+            <men xml:id="eq-Newtonianstress-incompressible-vectorform">
+              \bsigma=-p\bI+2\mu\be,
+            </men>
+            where <m>\be</m> is the rate-of-strain tensor,
+            <me>\be=\left(\begin{matrix}
+              e_{11}&amp;e_{12}&amp;e_{13}\\
+              e_{21}&amp;e_{22}&amp;e_{23}\\
+              e_{31}&amp;e_{32}&amp;e_{33}
+              \end{matrix}\right),
+            </me>
+            where
+            <men xml:id="eq-rateofstrain">
+              \be=\frac12\left(\nabla\bu+\left(\nabla\bu\right)^T\right)
+              \quad\textrm{or}\quad
+              e_{ij}=\frac12\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
+            </men>
+            or, alternatively,
+            <men xml:id="eq-cartesianrateofstrain">
+              \be=\left(\begin{array}{ccc}
+              \pd{u}{x}&amp;\frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\frac12\left(\pd{u}{z}+\pd{w}{x}\right)\\
+              \frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\pd{v}{y}&amp;\frac12\left(\pd{v}{z}+\pd{w}{y}\right)\\
+              \frac12\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\frac12\left(\pd{v}{z}+\pd{w}{y}\right)&amp;\pd{w}{z}
+              \end{array}\right).
+            </men>
+            All three of these forms (<xref ref="eq-rateofstrain"/> and <xref ref="eq-cartesianrateofstrain"/>)
+            are equivalent.
+            Using <xref ref="eq-Newtonianstress-incompressible-vectorform"/>, we may write the stress tensor
+            of an incompressible Newtonian fluid in component form in Cartesian coordinates as
+            <men xml:id="eq-cartesiannewtonianstress">
+              \bsigma=\left(\begin{matrix}
+              -p+2\mu\pd{u}{x}&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)\\
+              \mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;-p+2\mu\pd{v}{y}&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)\\
+              \mu\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)&amp;-p+2\mu\pd{w}{z}
+              \end{matrix}\right).
+            </men>
+          </p>
+        </statement>
+      </definition>
+      <remark>
+        <title>Derivation of Newtonian fluid stress tensor from first principles</title>
+        <p><em>Non-examinable:</em></p>
         <p>
-          We can define a <em>Newtonian fluid</em> by stating its constitutive relationship.
-          <men xml:id="eq-Newtonianstress-incompressible">
-            \sigma_{ij}=-p\delta_{ij}
+          Newtonian fluids have the following properties:
+          <ol>
+            <li>
+              <p>
+                The deviatoric part of the stress tensor, <m>\bd</m>, is a linear function
+                of the nine velocity gradients,
+                <me>(\nabla\bu)_{ij}=\pd{u_j}{x_i}.</me>
+                This implies
+                <me>d_{ij}=\sum_{l=1}^3\sum_{k=1}^3c_{ijkl}\pd{u_l}{x_k}</me>
+                for some unknown scalars <m>c_{ijkl}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The fluid is homogeneous, i.e. <m>\bsigma</m> does not depend explicitly on
+                <m>\bx</m>. This implies that the <m>c_{ijkl}</m>'s are constant in space.
+                An example of when this would not be the case would be an inhomogeneous fluid,
+                such as a fluid that is heated differentially.
+              </p>
+            </li>
+            <li>
+              <p>
+                The fluid is isotropic, i.e. there is no preferred direction.
+                Insisting that <m>\bd</m> transforms correctly under rotations
+                (and in fact we only need to consider rotations through <m>90^\circ</m>
+                about the coordinate axes) implies that <m>c_{ijkl}</m> is zero unless
+                each subscript appears an even number of times. That is, the only non-zero terms
+                are <m>c_{1111}</m>, <m>c_{2222}</m>, <m>c_{3333}</m> (which must all be equal),
+                and those <m>c_{ijkl}</m>'s in which two of the indices
+                <m>i</m>, <m>j</m>, <m>k</m>, <m>l</m>
+                are '1' and two indices are '2', also terms with two `2's and two `3's,
+                and terms with two `1's and two `3's (and these obey certain equalities too).
+                An example of when this would not be the case would be an anisotropic fluid,
+                such as nematic liquid crystals (long chain molecules that align in a magnetic field)
+                or flowing blood in which the red blood cells align in the direction of flow).
+              </p>
+            </li>
+          </ol>
+          Additionally requiring that <m>\bd</m> is a symmetric matrix means that,
+          in component form, we can reduce the <m>c_{ijkl}</m>'s down to just two
+          independent scalar parameters, <m>\lambda</m> and <m>\mu</m>, and we have
+          <men xml:id="eq-Newtonianstress">
+            \sigma_{ij}=-p\delta_{ij}+\lambda\delta_{ij}\sum_{k=1}^3\pd{u_k}{x_k}
             +\mu\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
           </men>
-          where <m>\mu</m>
-          is the <em>dynamic shear viscosity</em>. Alternatively, in vector form,
-          <men xml:id="eq-Newtonianstress-incompressible-vectorform">
-            \bsigma=-p\bI+2\mu\be,
-          </men>
-          where <m>\be</m> is the rate-of-strain tensor,
+          where <m>\lambda</m> is the <em>bulk viscosity</em> of the fluid and <m>\mu</m>
+          is the <em>dynamic shear viscosity</em>. In vector form
+          <me>
+            \bsigma=-p\bI+\lambda\left(\nabla\cdot\bu\right)\bI+2\mu\be,
+          </me>
+          where <m>\be</m> is the rate-of-strain tensor, given by
           <me>\be=\left(\begin{matrix}
             e_{11}&amp;e_{12}&amp;e_{13}\\
             e_{21}&amp;e_{22}&amp;e_{23}\\
             e_{31}&amp;e_{32}&amp;e_{33}
-            \end{matrix}\right),
+            \end{matrix}\right).
           </me>
-          where
-          <men xml:id="eq-rateofstrain">
-            \be=\frac12\left(\nabla\bu+\left(\nabla\bu\right)^T\right)
-            \quad\textrm{or}\quad
-            e_{ij}=\frac12\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
+          If the fluid is incompressible, then <m>\nabla\cdot\bu=0</m> and
+          the bulk viscosity is undefined, meaning that <xref ref="eq-Newtonianstress"/>
+          reduces to
+          <xref ref="eq-Newtonianstress-incompressible"/>.
+        </p>
+      </remark>
+      <remark>
+        <title>Formula in cylindrical and spherical coordinates</title>
+        <p>
+          In cylindrical polar coordinates the rate-of-strain tensor is given by
+          <men xml:id="eq-strainrate-cyl">
+            \be=\left(\begin{matrix}
+            \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)\\
+            \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)\\
+            \frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)&amp;\pd{u_z}{z}
+            \end{matrix}\right),
           </men>
-          or, alternatively,
-          <men xml:id="eq-cartesianrateofstrain">
-            \be=\left(\begin{array}{ccc}
-            \pd{u}{x}&amp;\frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\frac12\left(\pd{u}{z}+\pd{w}{x}\right)\\
-            \frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\pd{v}{y}&amp;\frac12\left(\pd{v}{z}+\pd{w}{y}\right)\\
-            \frac12\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\frac12\left(\pd{v}{z}+\pd{w}{y}\right)&amp;\pd{w}{z}
-            \end{array}\right).
-          </men>
-          All three of these forms (<xref ref="eq-rateofstrain"/> and <xref ref="eq-cartesianrateofstrain"/>)
-          are equivalent.
-          Using <xref ref="eq-Newtonianstress-incompressible-vectorform"/>, we may write the stress tensor
-          of an incompressible Newtonian fluid in component form in Cartesian coordinates as
-          <men xml:id="eq-cartesiannewtonianstress">
-            \bsigma=\left(\begin{matrix}
-            -p+2\mu\pd{u}{x}&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)\\
-            \mu\left(\pd{u}{y}+\pd{v}{x}\right)&amp;-p+2\mu\pd{v}{y}&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)\\
-            \mu\left(\pd{u}{z}+\pd{w}{x}\right)&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)&amp;-p+2\mu\pd{w}{z}
+          and in spherical polar coordinates it is
+          <men xml:id="eq-eincylsph">
+            \be=\left(\begin{matrix}
+            \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(r\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)\\
+            \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\frac1{r\sin\theta}\pd{u_\theta}{\phi}+\frac{\sin\theta}{r}\pd{(u_\phi/\sin\theta)}{\theta}\right)\\
+            \frac12\left(r\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)&amp;\frac12\left(\frac1{r\sin\theta}\pd{u_\theta}{\phi}+\frac{\sin\theta}r\pd{(u_\phi/\sin\theta)}{\theta}\right)&amp;\frac1{r\sin\theta}\pd{u_\phi}{\phi}+\frac{u_r+u_\theta\cot\theta}{r}
             \end{matrix}\right).
           </men>
+          You do not need to know these matrices for this course.
+          You might have to use them, but these formulae would be supplied.
+          You do need to know the Cartesian equivalent <xref ref="eq-cartesianrateofstrain"/>.
         </p>
-      </statement>
-    </definition>
-    <remark>
-      <title>Derivation of Newtonian fluid stress tensor from first principles</title>
-      <p><em>Non-examinable:</em></p>
-      <p>
-        Newtonian fluids have the following properties:
-        <ol>
-          <li>
-            <p>
-              The deviatoric part of the stress tensor, <m>\bd</m>, is a linear function
-              of the nine velocity gradients,
-              <me>(\nabla\bu)_{ij}=\pd{u_j}{x_i}.</me>
-              This implies
-              <me>d_{ij}=\sum_{l=1}^3\sum_{k=1}^3c_{ijkl}\pd{u_l}{x_k}</me>
-              for some unknown scalars <m>c_{ijkl}</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The fluid is homogeneous, i.e. <m>\bsigma</m> does not depend explicitly on
-              <m>\bx</m>. This implies that the <m>c_{ijkl}</m>'s are constant in space.
-              An example of when this would not be the case would be an inhomogeneous fluid,
-              such as a fluid that is heated differentially.
-            </p>
-          </li>
-          <li>
-            <p>
-              The fluid is isotropic, i.e. there is no preferred direction.
-              Insisting that <m>\bd</m> transforms correctly under rotations
-              (and in fact we only need to consider rotations through <m>90^\circ</m>
-              about the coordinate axes) implies that <m>c_{ijkl}</m> is zero unless
-              each subscript appears an even number of times. That is, the only non-zero terms
-              are <m>c_{1111}</m>, <m>c_{2222}</m>, <m>c_{3333}</m> (which must all be equal),
-              and those <m>c_{ijkl}</m>'s in which two of the indices
-              <m>i</m>, <m>j</m>, <m>k</m>, <m>l</m>
-              are '1' and two indices are '2', also terms with two `2's and two `3's,
-              and terms with two `1's and two `3's (and these obey certain equalities too).
-              An example of when this would not be the case would be an anisotropic fluid,
-              such as nematic liquid crystals (long chain molecules that align in a magnetic field)
-              or flowing blood in which the red blood cells align in the direction of flow).
-            </p>
-          </li>
-        </ol>
-        Additionally requiring that <m>\bd</m> is a symmetric matrix means that,
-        in component form, we can reduce the <m>c_{ijkl}</m>'s down to just two
-        independent scalar parameters, <m>\lambda</m> and <m>\mu</m>, and we have
-        <men xml:id="eq-Newtonianstress">
-          \sigma_{ij}=-p\delta_{ij}+\lambda\delta_{ij}\sum_{k=1}^3\pd{u_k}{x_k}
-          +\mu\left(\pd{u_j}{x_i}+\pd{u_i}{x_j}\right),
-        </men>
-        where <m>\lambda</m> is the <em>bulk viscosity</em> of the fluid and <m>\mu</m>
-        is the <em>dynamic shear viscosity</em>. In vector form
-        <me>
-          \bsigma=-p\bI+\lambda\left(\nabla\cdot\bu\right)\bI+2\mu\be,
-        </me>
-        where <m>\be</m> is the rate-of-strain tensor, given by
-        <me>\be=\left(\begin{matrix}
-          e_{11}&amp;e_{12}&amp;e_{13}\\
-          e_{21}&amp;e_{22}&amp;e_{23}\\
-          e_{31}&amp;e_{32}&amp;e_{33}
-          \end{matrix}\right).
-        </me>
-        If the fluid is incompressible, then <m>\nabla\cdot\bu=0</m> and
-        the bulk viscosity is undefined, meaning that <xref ref="eq-Newtonianstress"/>
-        reduces to
-        <xref ref="eq-Newtonianstress-incompressible"/>.
-      </p>
-    </remark>
-    <remark>
-      <title>Formula in cylindrical and spherical coordinates</title>
-      <p>
-        In cylindrical polar coordinates the rate-of-strain tensor is given by
-        <men xml:id="eq-strainrate-cyl">
-          \be=\left(\begin{matrix}
-          \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)\\
-          \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)\\
-          \frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)&amp;\pd{u_z}{z}
-          \end{matrix}\right),
-        </men>
-        and in spherical polar coordinates it is
-        <men xml:id="eq-eincylsph">
-          \be=\left(\begin{matrix}
-          \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(r\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)\\
-          \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\frac1{r\sin\theta}\pd{u_\theta}{\phi}+\frac{\sin\theta}{r}\pd{(u_\phi/\sin\theta)}{\theta}\right)\\
-          \frac12\left(r\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)&amp;\frac12\left(\frac1{r\sin\theta}\pd{u_\theta}{\phi}+\frac{\sin\theta}r\pd{(u_\phi/\sin\theta)}{\theta}\right)&amp;\frac1{r\sin\theta}\pd{u_\phi}{\phi}+\frac{u_r+u_\theta\cot\theta}{r}
-          \end{matrix}\right).
-        </men>
-        You do not need to know these matrices for this course.
-        You might have to use them, but these formulae would be supplied.
-        You do need to know the Cartesian equivalent <xref ref="eq-cartesianrateofstrain"/>.
-      </p>
-    </remark>
-    <remark>
-      <title>Notes on the Newtonian fluids stress tensor</title>
-      <p>
-        <ul>
-          <li>
-            <p>
-              For an incompressible Newtonian fluid the stress tensor has only one parameter,
-              the shear viscosity, <m>\mu</m>, and there are are only two parameters needed to
-              describe the mechanical behaviour of the fluid: <m>\mu</m> and the fluid density, <m>\rho</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The shear viscosity, <m>\mu</m>, is often a function of temperature,
-              and sometimes of pressure too. For most common fluids the shear viscosity
-              decreases with increasing temperature.
-            </p>
-          </li>
-        </ul>
-      </p>
-    </remark>
-    <remark>
+      </remark>
+      <remark>
+        <title>Notes on the Newtonian fluids stress tensor</title>
+        <p>
+          <ul>
+            <li>
+              <p>
+                For an incompressible Newtonian fluid the stress tensor has only one parameter,
+                the shear viscosity, <m>\mu</m>, and there are are only two parameters needed to
+                describe the mechanical behaviour of the fluid: <m>\mu</m> and the fluid density, <m>\rho</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The shear viscosity, <m>\mu</m>, is often a function of temperature,
+                and sometimes of pressure too. For most common fluids the shear viscosity
+                decreases with increasing temperature.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </remark>
+    </subsection>
+    <subsection xml:id="subsec-stress-surface">
       <title>Stress at a surface</title>
       <p>
         In <xref ref="def-stress-surface-calculation"/>, we stated formulae for the stress that a
@@ -1198,12 +1205,13 @@
             </p>
           </li>
         </ul>
-      </p>
-    </remark>
-    <remark>
+      </p>      
+    </subsection>
+    <subsection xml:id="inviscid-fluids">
       <title>Inviscid fluids</title>
       <p>
-        In previous chapters, you studied <em>inviscid</em> or <em>ideal</em> fluids.
+        In previous chapters in this course,
+        you studied <em>inviscid</em> or <em>ideal</em> fluids.
         These are fluids with <m>\mu=0</m>.
         In this case, the constitutive law <xref ref="eq-cartesiannewtonianstress"/> becomes
         <men xml:id="eq-inviscidstress">
@@ -1215,8 +1223,8 @@
         </men>
         and thus the stress in the fluid is not affected by the fluid motion.
       </p>
-    </remark>
-    <remark>
+    </subsection>
+    <subsection xml:id="subsec-nonnewtonian-fluids">
       <title>Non-Newtonian fluids</title>
       <p>
         Many fluids do not obey the assumptions underlying a Newtonian fluid, meaning that their
@@ -1311,133 +1319,136 @@
           </li>
         </ul>
       </p>
-    </remark>
-    <example>
-      <title>Calculating the stress due to a shear flow</title>
-      <statement>
-        <figure xml:id="fig-sample-flow1">
-          <caption>Shear flow</caption>
-          <image source="ch-chapter07-sample-flow1.jpg" width="50%">
-            <shortdescription>Shear flow</shortdescription>
-          </image>
-        </figure>
-        <p>
-          Consider an incompressible Newtonian fluid flowing in <m>y\geq0</m>
-          in Cartesian coordinates <m>(x,y,z)</m> in a uniform pressure field
-          <m>p=p_0</m> with <m>p_0</m> constant, and whose velocity components are respectively given by
-          <me>
-            u=ky,\quad v=0,\quad w=0,
-          </me>
-          (it may be shown these satisfy the governing equations).
-          Find the stress tensor at a general location.
-          Hence find the stress at a general location on an imaginary surface with
-          unit normal vector <m>\bn=(n_x,n_y,0)</m>. In this question you may neglect gravity.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          The stress tensor is given by
-          <me>
-            \bsigma=-p\bI+2\mu\be,
-          </me>
-          where the rate-of-strain tensor <m>\be</m> is given by
-          <me>
-            \be=\left(\begin{matrix}
-            \pd{u}{x}&amp;\frac12\left(\pd{u}{y}+\pd{v}{x}\right)\\
-            \frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\pd{v}{y}
-            \end{matrix}\right)
-            =\left(\begin{matrix}0&amp;k/2\\k/2&amp;0\end{matrix}\right).
-          </me>
-          Hence the stress tensor <m>\bsigma</m> is given by
-          <me>
-            \bsigma=-p\bI+2\mu\be
-            =\left(\begin{matrix}-p_0&amp;k\mu\\k\mu&amp;-p_0\end{matrix}\right).
-          </me>
-          Thus for a general unit vector
-          <me>
-            \btau=\bsigma\bn
-            =\left(\begin{matrix}-p_0&amp;k\mu\\k\mu&amp;-p_0\end{matrix}\right)\left(\begin{matrix}n_x\\n_y\end{matrix}\right)
-            =\left(\begin{matrix}-p_0n_x+k\mu n_y\\k\mu n_x-p_0n_y\end{matrix}\right).
-          </me>
-          Note:
-          <ul>
-            <li>
-              <p>
-                For example with <m>\bn=\bj</m>, we have <m>\btau=(k\mu,-p_0)</m>.
-                This makes sense as there is a background pressure <m>p_0</m> pressing into the surface
-                and a stress <m>k\mu</m> arising from the shear flow and running along the surface.
-                It also agrees with the formulae for stress at a surface given in
-                <xref ref="def-stress-surface-calculation"/>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Likewise if <m>\bn=\bi</m>, we have <m>\btau=(-p_0,k\mu)</m>.
-                This formula cannot be compared with the formula given in
-                <xref ref="def-stress-surface-calculation"/> as it would not be possible to
-                put in a rigid surface with normal <m>\bn=\bi</m> without changing the flow.
-              </p>
-            </li>
-          </ul>
-        </p>
-      </solution>
-    </example>
-    <example>
-      <title>Calculating the stress due to flow in a pipe</title>
-      <statement>
-        <p>
-          We consider a flow of an incompressible Newtonian fluid in a circular cylinder of radius <m>a</m>
-          and infinite length in the <m>z</m>-direction,
-          working in cylindrical polar coordinates <m>(r,\theta,z)</m> with axis along the cylinder axis.
-          The velocity components are given by
-          <me>(u_r,u_\theta,u_z)=\left(0,0,\frac{G}{4\mu}\left(a^2-r^2\right)\right),</me>
-          where <m>G=-\partial p/\partial z</m> is the axial pressure gradient.
-          Find the stress tensor at a general point and comment on it.
-          Note that this flow is a famous solution of the governing equations and is
-          called <em>Hagen<ndash/>Poiseuille flow</em>.
-        </p>
-      </statement>
-      <solution>
-        <p>
-          We have the rate-of-strain tensor given by <xref ref="eq-strainrate-cyl"/> as
-          <md>
-            <mrow>\be=&amp;\left(\begin{matrix}
-            \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)\\
-            \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)\\
-            \frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)&amp;\pd{u_z}{z}
-            \end{matrix}\right)</mrow>
-            <mrow>=&amp;\left(\begin{matrix}0&amp;0&amp;-\frac{Gr}{4\mu}\\0&amp;0&amp;0\\-\frac{Gr}{4\mu}&amp;0&amp;0\end{matrix}\right)</mrow>
-          </md>
-          and hence
-          <me>
-            \bsigma=-p\bI+2\mu\be
-            =\left(\begin{matrix}-p&amp;0&amp;-\frac12Gr\\0&amp;-p&amp;0\\-\frac12Gr&amp;0&amp;-p\end{matrix}\right).
-          </me>
-          Incompressibility requires <m>G</m> to be constant, and hence <m>p=p_0-Gz</m>,
-          where <m>p_0</m> is a constant, and giving
-          <me>
-            \bsigma=\left(\begin{matrix}-p_0+Gz&amp;0&amp;-\frac12Gr\\0&amp;-p_0+Gz&amp;0\\-\frac12Gr&amp;0&amp;-p_0+Gz\end{matrix}\right).
-          </me>
-          Hence for imaginary surfaces with normal vectors
-          <m>\hat{\boldsymbol{r}}</m>, <m>\hat{\boldsymbol{\theta}}</m>, <m>\hat{\boldsymbol{z}}</m>,
-          respectively, the stress on the surface is given by
-          <md>
-            <mrow>\btau_r=&amp;\bsigma\hat{\boldsymbol{r}}=\left(Gz-p_0\right)\hat{\boldsymbol{r}}-\frac12Gr\hat{\boldsymbol{z}},</mrow>
-            <mrow>\btau_\theta=&amp;\bsigma\hat{\boldsymbol{\theta}}=\left(Gz-p_0\right)\hat{\boldsymbol{\theta}},</mrow>
-            <mrow>\btau_z=&amp;\bsigma\hat{\boldsymbol{z}}=\left(Gz-p_0\right)\hat{\boldsymbol{z}}-\frac12Gr\hat{\boldsymbol{r}}.</mrow>
-          </md>
-          It is not possible to compare these formulae with the ones given in
-          <xref ref="def-stress-surface-calculation"/>.
-          The exception is the case when we find the stress on the wall (<m>r=a</m>), which we can do
-          by setting the normal vector <m>\bn=-\hat{\boldsymbol{r}}</m>, giving
-          <me>
-            \btau=-\bsigma\hat{\boldsymbol{r}}=\left(p_0-Gz\right)\hat{\boldsymbol{r}}+\frac12Ga\hat{\boldsymbol{z}},
-          </me>
-          that is a normal stress equal to minus the pressure and an axial shear stress <m>Ga/2</m>
-          (which is <m>-\mu\,\partial u_z/\partial r</m>, as expected).
-        </p>
-      </solution>
-    </example>
+    </subsection>
+    <subsection xml:id="subsec-examples">
+      <title>examples</title>
+      <example>
+        <title>Calculating the stress due to a shear flow</title>
+        <statement>
+          <figure xml:id="fig-sample-flow1">
+            <caption>Shear flow</caption>
+            <image source="ch-chapter07-sample-flow1.jpg" width="50%">
+              <shortdescription>Shear flow</shortdescription>
+            </image>
+          </figure>
+          <p>
+            Consider an incompressible Newtonian fluid flowing in <m>y\geq0</m>
+            in Cartesian coordinates <m>(x,y,z)</m> in a uniform pressure field
+            <m>p=p_0</m> with <m>p_0</m> constant, and whose velocity components are respectively given by
+            <me>
+              u=ky,\quad v=0,\quad w=0,
+            </me>
+            (it may be shown these satisfy the governing equations).
+            Find the stress tensor at a general location.
+            Hence find the stress at a general location on an imaginary surface with
+            unit normal vector <m>\bn=(n_x,n_y,0)</m>. In this question you may neglect gravity.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The stress tensor is given by
+            <me>
+              \bsigma=-p\bI+2\mu\be,
+            </me>
+            where the rate-of-strain tensor <m>\be</m> is given by
+            <me>
+              \be=\left(\begin{matrix}
+              \pd{u}{x}&amp;\frac12\left(\pd{u}{y}+\pd{v}{x}\right)\\
+              \frac12\left(\pd{u}{y}+\pd{v}{x}\right)&amp;\pd{v}{y}
+              \end{matrix}\right)
+              =\left(\begin{matrix}0&amp;k/2\\k/2&amp;0\end{matrix}\right).
+            </me>
+            Hence the stress tensor <m>\bsigma</m> is given by
+            <me>
+              \bsigma=-p\bI+2\mu\be
+              =\left(\begin{matrix}-p_0&amp;k\mu\\k\mu&amp;-p_0\end{matrix}\right).
+            </me>
+            Thus for a general unit vector
+            <me>
+              \btau=\bsigma\bn
+              =\left(\begin{matrix}-p_0&amp;k\mu\\k\mu&amp;-p_0\end{matrix}\right)\left(\begin{matrix}n_x\\n_y\end{matrix}\right)
+              =\left(\begin{matrix}-p_0n_x+k\mu n_y\\k\mu n_x-p_0n_y\end{matrix}\right).
+            </me>
+            Note:
+            <ul>
+              <li>
+                <p>
+                  For example with <m>\bn=\bj</m>, we have <m>\btau=(k\mu,-p_0)</m>.
+                  This makes sense as there is a background pressure <m>p_0</m> pressing into the surface
+                  and a stress <m>k\mu</m> arising from the shear flow and running along the surface.
+                  It also agrees with the formulae for stress at a surface given in
+                  <xref ref="def-stress-surface-calculation"/>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Likewise if <m>\bn=\bi</m>, we have <m>\btau=(-p_0,k\mu)</m>.
+                  This formula cannot be compared with the formula given in
+                  <xref ref="def-stress-surface-calculation"/> as it would not be possible to
+                  put in a rigid surface with normal <m>\bn=\bi</m> without changing the flow.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </solution>
+      </example>
+      <example>
+        <title>Calculating the stress due to flow in a pipe</title>
+        <statement>
+          <p>
+            We consider a flow of an incompressible Newtonian fluid in a circular cylinder of radius <m>a</m>
+            and infinite length in the <m>z</m>-direction,
+            working in cylindrical polar coordinates <m>(r,\theta,z)</m> with axis along the cylinder axis.
+            The velocity components are given by
+            <me>(u_r,u_\theta,u_z)=\left(0,0,\frac{G}{4\mu}\left(a^2-r^2\right)\right),</me>
+            where <m>G=-\partial p/\partial z</m> is the axial pressure gradient.
+            Find the stress tensor at a general point and comment on it.
+            Note that this flow is a famous solution of the governing equations and is
+            called <em>Hagen<ndash/>Poiseuille flow</em>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have the rate-of-strain tensor given by <xref ref="eq-strainrate-cyl"/> as
+            <md>
+              <mrow>\be=&amp;\left(\begin{matrix}
+              \pd{u_r}{r}&amp;\frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)\\
+              \frac12\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)&amp;\frac1r\pd{u_\theta}{\theta}+\frac{u_r}{r}&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)\\
+              \frac12\left(\pd{u_z}{r}+\pd{u_r}{z}\right)&amp;\frac12\left(\pd{u_\theta}{z}+\frac1r\pd{u_z}{\theta}\right)&amp;\pd{u_z}{z}
+              \end{matrix}\right)</mrow>
+              <mrow>=&amp;\left(\begin{matrix}0&amp;0&amp;-\frac{Gr}{4\mu}\\0&amp;0&amp;0\\-\frac{Gr}{4\mu}&amp;0&amp;0\end{matrix}\right)</mrow>
+            </md>
+            and hence
+            <me>
+              \bsigma=-p\bI+2\mu\be
+              =\left(\begin{matrix}-p&amp;0&amp;-\frac12Gr\\0&amp;-p&amp;0\\-\frac12Gr&amp;0&amp;-p\end{matrix}\right).
+            </me>
+            Incompressibility requires <m>G</m> to be constant, and hence <m>p=p_0-Gz</m>,
+            where <m>p_0</m> is a constant, and giving
+            <me>
+              \bsigma=\left(\begin{matrix}-p_0+Gz&amp;0&amp;-\frac12Gr\\0&amp;-p_0+Gz&amp;0\\-\frac12Gr&amp;0&amp;-p_0+Gz\end{matrix}\right).
+            </me>
+            Hence for imaginary surfaces with normal vectors
+            <m>\hat{\boldsymbol{r}}</m>, <m>\hat{\boldsymbol{\theta}}</m>, <m>\hat{\boldsymbol{z}}</m>,
+            respectively, the stress on the surface is given by
+            <md>
+              <mrow>\btau_r=&amp;\bsigma\hat{\boldsymbol{r}}=\left(Gz-p_0\right)\hat{\boldsymbol{r}}-\frac12Gr\hat{\boldsymbol{z}},</mrow>
+              <mrow>\btau_\theta=&amp;\bsigma\hat{\boldsymbol{\theta}}=\left(Gz-p_0\right)\hat{\boldsymbol{\theta}},</mrow>
+              <mrow>\btau_z=&amp;\bsigma\hat{\boldsymbol{z}}=\left(Gz-p_0\right)\hat{\boldsymbol{z}}-\frac12Gr\hat{\boldsymbol{r}}.</mrow>
+            </md>
+            It is not possible to compare these formulae with the ones given in
+            <xref ref="def-stress-surface-calculation"/>.
+            The exception is the case when we find the stress on the wall (<m>r=a</m>), which we can do
+            by setting the normal vector <m>\bn=-\hat{\boldsymbol{r}}</m>, giving
+            <me>
+              \btau=-\bsigma\hat{\boldsymbol{r}}=\left(p_0-Gz\right)\hat{\boldsymbol{r}}+\frac12Ga\hat{\boldsymbol{z}},
+            </me>
+            that is a normal stress equal to minus the pressure and an axial shear stress <m>Ga/2</m>
+            (which is <m>-\mu\,\partial u_z/\partial r</m>, as expected).
+          </p>
+        </solution>
+      </example>
+    </subsection>
   </section>
 
   <section xml:id="sec-linear-momentum-cons">

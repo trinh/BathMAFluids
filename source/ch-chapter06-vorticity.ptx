@@ -171,9 +171,9 @@
               <me>
                 \bomega = \bnabla\times\bu
                 = \begin{vmatrix}
-                \bi &&amp; \bj &&amp; \bk \\
-                \pd{}{x} &&amp; \pd{}{y} &&amp; \pd{}{z} \\
-                -y &&amp; x &&amp; 0
+                \bi &amp; \bj &amp; \bk \\
+                \pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
+                -y &amp; x &amp; 0
                 \end{vmatrix}
                 = (0,0,2),
               </me>
@@ -225,9 +225,9 @@
               <me>\dd{r}{t}=\frac{x}{r}(-y)+\frac{y}{r}(x)=0,</me>
               and
               <md>
-                <mrow>\dd{\theta}{t}&&amp;=\dd{}{t}\left(\tan^{-1}\frac{y}{x}\right)</mrow>
-                <mrow>&&amp;=\frac{1}{1+y^2/x^2}\left(-\frac{y}{x^2}\right)(-y)+\frac{1}{1+y^2/x^2}\left(\frac{1}{x}\right)(x)</mrow>
-                <mrow>&&amp;=1.</mrow>
+                <mrow>\dd{\theta}{t}&amp;=\dd{}{t}\left(\tan^{-1}\frac{y}{x}\right)</mrow>
+                <mrow>&amp;=\frac{1}{1+y^2/x^2}\left(-\frac{y}{x^2}\right)(-y)+\frac{1}{1+y^2/x^2}\left(\frac{1}{x}\right)(x)</mrow>
+                <mrow>&amp;=1.</mrow>
               </md>
               Thus, in plane polar coordinates, the velocity is <m>(0,1)</m>.
             </p>
@@ -257,9 +257,9 @@
               <me>
                 \bomega = \bnabla\times\bu
                 = \begin{vmatrix}
-                \bi &&amp; \bj &&amp; \bk \\
-                \pd{}{x} &&amp; \pd{}{y} &&amp; \pd{}{z} \\
-                -y &&amp; x &&amp; 0
+                \bi &amp; \bj &amp; \bk \\
+                \pd{}{x} &amp; \pd{}{y} &amp; \pd{}{z} \\
+                -y &amp; x &amp; 0
                 \end{vmatrix}
                 = (0,0,2),
               </me>
@@ -875,6 +875,23 @@
         </p>
       </example>
       <example>
+        <title>Vortex near a wall</title>
+        <statement>
+          <p>
+            Consider a vortex of strength <m>\Gamma</m> at a distance <m>d</m> from a flat wall.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            This can be analysed using the method of images,
+            and we put an image vortex a distance <m>d</m> on the other side of the wall,
+            directly opposite the real vortex, also of strength <m>-\Gamma</m>.
+            Then the problem is equivalent to that of two vortices in free space,
+            and we can use the result from the previous example to find the motion of the vortex.            
+          </p>
+        </solution>
+      </example>
+      <example xml:id="ex-wing-tip-vortices">
         <title>Example: Wing tip vortices</title>
         <statement>
           <p>
@@ -910,15 +927,23 @@
             <m>u-\im v=-\im\Gamma/(2\pi(z-c))</m>.
           </p>
           <p>
-            The velocty of the vortex is given by the sum of the velocities due to
+            The velocity of the vortex is given by the sum of the velocities due to
             the other three vortices:
-            <me>
-              \dd{x_1}{t}-\im\dd{y_1}{t}
-              =\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(x_1-\im y_1))}
-              +\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1+\im y_1))}
-              -\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1-\im y_1))}
-              =\frac{\im\Gamma}{4\pi}\left(\frac1{x_1}+\frac1{\im y_1}-\frac1{x_1+\im y_1}\right).
-            </me>
+            <md>
+              <mrow>
+                \dd{x_1}{t}-\im\dd{y_1}{t}
+                =&amp;\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(x_1-\im y_1))}
+              </mrow>
+              <mrow>
+                &amp;+\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1+\im y_1))}
+              </mrow>
+              <mrow>
+                &amp;-\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1-\im y_1))}
+              </mrow>
+              <mrow>
+                &amp;=\frac{\im\Gamma}{4\pi}\left(\frac1{x_1}+\frac1{\im y_1}-\frac1{x_1+\im y_1}\right).
+              </mrow>
+            </md>
             Hence
             <md>
               <mrow>
@@ -1583,9 +1608,17 @@
           </men>
           We therefore need to write <m>\bu</m> and <m>\de\bx</m> at time <m>t+\de t</m>
           on the curve <m>C(t+\de t)</m> to values at time <m>t</m> on the curve <m>C(t)</m>:
-          <me>
-            \left.\bu\cdot\de\bx\right|_{t+\de t}=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right).
-          </me>
+          <md>
+            <mrow>
+              &amp;\left.\bu\cdot\de\bx\right|_{t+\de t}
+            </mrow>
+            <mrow>
+              =&amp;\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot
+            </mrow>
+            <mrow>
+              &amp;\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right).
+            </mrow>
+          </md>
         </p>
         <p>
           <em>Method two:</em> We can parametrise <m>C(t)</m> via <m>\bx(s,t)</m>
@@ -1597,7 +1630,7 @@
           Then start from <xref ref="eq-ex-kelvin-dGammadt"/> and simplify.
         </p>
       </hint>
-      <!--<solution>
+      <solution>
         <p>
           We present two methods.
         </p>
@@ -1616,17 +1649,18 @@
           </me>
           We calculate
           <md>
-            <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}&&amp;=\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
-            <mrow>&&amp;=\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
-            <mrow>&&amp;=\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.</mrow>
+            <mrow>\left.\bu\cdot\de\bx\right|_{t+\de t}=&amp;\bu(\bx+\bu(\bx,t)\de t,t+\de t)\cdot</mrow>
+            <mrow>&amp;\left((\bx+\de\bx+\bu(\bx+\de\bx,t)\de t)-(\bx+\bu(\bx,t)\de t)\right)</mrow>
+            <mrow>=&amp;\left(\bu(\bx,t)-\bnabla\left(\frac{p}{\rho}-\chi\right)\de t\right)\cdot\left(\de\bx+(\de\bx\cdot\bnabla)\bu\de t\right)</mrow>
+            <mrow>=&amp;\left.\bu\cdot\de\bx\right|_{t}+\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t.</mrow>
           </md>
           Hence
           <md>
-            <mrow>\dd{\Gamma}{t}&&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t</mrow>
-            <mrow>&&amp;=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
-            <mrow>&&amp;=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx</mrow>
-            <mrow>&&amp;=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
-            <mrow>&&amp;=0.</mrow>
+            <mrow>\dd{\Gamma}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\oint_C\left(\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx\right)\de t</mrow>
+            <mrow>&amp;=\oint_C\bu\cdot(\de\bx\cdot\bnabla)\bu-\bnabla\left(\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+            <mrow>&amp;=\oint_C\bnabla\left(\frac12\bu^2\right)\cdot\de\bx-\bnabla\left(\frac{p}{\rho}+\chi\right)\cdot\de\bx</mrow>
+            <mrow>&amp;=\oint_C\bnabla\left(\frac12\bu^2-\frac{p}{\rho}-\chi\right)\cdot\de\bx</mrow>
+            <mrow>&amp;=0.</mrow>
           </md>
           The final equality above follows because the line integral of a gradient around a closed curve is zero.
           Thus <m>\Gamma</m> is independent of <m>t</m>.
@@ -1672,7 +1706,7 @@
             </mrow>
           </md>
         </p>
-      </solution>-->
+      </solution>
     </exercise>
     
     <exercise xml:id="ex-circulation-vortex-tube">
@@ -2194,18 +2228,83 @@
 
     <exercise xml:id="ex-quadrant">
       <title>Flow in a quadrant</title>
-      <p>
-        Fluid occupies the quadrant <m>x > 0</m>, <m>y > 0</m> bounded by
-        two rigid boundaries along the
-        <m>x</m>- and <m>y</m>-axes.
-        Find the complex potential for the flow caused by
-        a vortex at a point <m>z=c=a+\im b</m> in the fluid.
-        If the vortex is free to move,
-        show that it follows a path on which
-        <me>
-          \frac1{x^2}+\frac1{y^2}=\text{constant}.
-        </me>
-      </p>
+      <statement>
+        <p>
+          Fluid occupies the quadrant <m>x > 0</m>, <m>y > 0</m> bounded by
+          two rigid boundaries along the
+          <m>x</m>- and <m>y</m>-axes.
+          Find the complex potential for the flow caused by
+          a vortex at a point <m>z=c=a+\im b</m> in the fluid.
+          If the vortex is free to move,
+          show that it follows a path on which
+          <me>
+            \frac1{x^2}+\frac1{y^2}=\text{constant}.
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>See also <xref ref="ex-wing-tip-vortices"/>.</em>
+        </p>
+        <p>
+          Suppose the vortex is at the point
+          <me>
+            z_1=x_1+\im y_1.
+          </me>
+          We use three image vortices at <m>x_1-\im y_1</m> and at <m>-x_1+\im y_1</m>,
+          both of strength <m>-\Gamma</m>, and at <m>-x_1-\im y_1</m> of strength
+          <m>\Gamma</m>.
+        </p>
+        <p>
+          Recall that the complex potential of a line vortex at <m>z=c</m>
+          of strength <m>\Gamma</m> is <m>-\im\Gamma\log(z-c)/(2\pi)</m> and
+          its velocity is given by the derivative of this map:
+          <m>u-\im v=-\im\Gamma/(2\pi(z-c))</m>.
+        </p>
+        <p>
+          The velocity of the vortex is given by the sum of the velocities due to
+          the other three vortices:
+          <md>
+            <mrow>
+              \dd{x_1}{t}-\im\dd{y_1}{t}
+              =&amp;\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(x_1-\im y_1))}
+            </mrow>
+            <mrow>
+              &amp;+\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1+\im y_1))}
+            </mrow>
+            <mrow>
+              &amp;-\frac{\im\Gamma}{2\pi((x_1+\im y_1)-(-x_1-\im y_1))}
+            </mrow>
+            <mrow>
+              &amp;=\frac{\im\Gamma}{4\pi}\left(\frac1{x_1}+\frac1{\im y_1}-\frac1{x_1+\im y_1}\right).
+            </mrow>
+          </md>
+          Hence
+          <md>
+            <mrow>
+              \dd{x_1}{t}
+              =\frac{\Gamma}{4\pi}\left(\frac1{y_1}-\frac{y_1}{x_1^2+y_1^2}\right)
+              =\frac{\Gamma x_1^2}{4\pi y_1(x_1^2+y_1^2)},
+            </mrow>
+            <mrow>
+              \dd{y_1}{t}
+              =\frac{\Gamma}{4\pi}\left(-\frac1{x_1}+\frac{x_1}{x_1^2+y_1^2}\right)
+              =-\frac{\Gamma y_1^2}{4\pi x_1(x_1^2+y_1^2)},
+            </mrow>
+          </md>
+          and therefore
+          <me>
+            \dd{y_1}{x_1}=-\frac{y_1^3}{x_1^3},
+          </me>
+          which can be solved by separation of variables to give
+          <me>
+            \int\frac1{y_1^3}\de y_1=-\int\frac1{x_1^3}\de x_1
+            \quad\Rightarrow\quad
+            -\frac1{2y_1^2}=\frac1{2x_1^2}+c,
+          </me>
+          where <m>c</m> is constant, and this can be rearranged into the required form.
+        </p>
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-channel">
@@ -2217,26 +2316,31 @@
           Show that the flow induced by a line vortex of strength
           <m>\Gamma>0</m> at the point <m>z = d \in\mathbb{R}^+</m>
           has complex potential
-          <me>
-            w(z)=\frac{\im\Gamma}{2\pi}\left\{
-              -\log\left[\sinh\left(\frac{\pi z}{2a}\right)
-              -\sinh\left(\frac{\pi d}{2a}\right)\right]
-              +\log\left[\sinh\left(\frac{\pi z}{2a}\right)
-              +\sinh\left(\frac{\pi d}{2a}\right)\right]
-              \right\}.
-          </me>
+          <md>
+            <mrow>
+              w(z)=&amp;\frac{\im\Gamma}{2\pi}\left\{
+                -\log\left[\sinh\left(\frac{\pi z}{2a}\right)
+                -\sinh\left(\frac{\pi d}{2a}\right)\right]\right.
+            </mrow>
+            <mrow>
+              &amp;+\left.
+                \log\left[\sinh\left(\frac{\pi z}{2a}\right)
+                +\sinh\left(\frac{\pi d}{2a}\right)\right]
+                \right\}.
+            </mrow>
+          </md>
           Show that the velocity components satisfy
           <me>
             u-\im v=\frac{\im\Gamma}{4a}\left\{
-              \cosech\left(\frac{\pi(z+d)}{2a}\right)
-              -\cosech\left(\frac{\pi(z-d)}{2a}\right)
+              \mathrm{cosech}\left(\frac{\pi(z+d)}{2a}\right)
+              -\mathrm{cosech}\left(\frac{\pi(z-d)}{2a}\right)
               \right\}.
           </me>
         </p>
         <p>
           Deduce that, if the vortex is free to move,
           it will instantaneously travel downwards
-          with speed <m>(\Gamma/4a)\cosech(\pi d/a)</m>.
+          with speed <m>(\Gamma/4a)\mathrm{cosech}(\pi d/a)</m>.
         </p>
         <p>
           You may use the identity <m>\sinh^2(x)− \sinh^2(y)
@@ -2278,7 +2382,7 @@
           <me>
             \zeta=\im\sin\left(\frac{\pi y}{2a}\right),
           </me>
-          and the constraint <m>-a\lt; y\lt; a</m> corresponds to the line between the points <m>\pm\im</m>. The lines <m>y=\pm a</m> transform to
+          and the constraint <m>-a\lt y\lt a</m> corresponds to the line between the points <m>\pm\im</m>. The lines <m>y=\pm a</m> transform to
           <me>
             \zeta=\pm\im\cosh\left(\frac{\pi x}{2a}\right),
           </me>
@@ -2287,7 +2391,7 @@
         </p>
         <figure xml:id="fig-ex-channel">
           <caption>Conformal map of channel</caption>
-          <image source="ch-chapter06-ex-channel.jpg" width="50%">
+          <image source="ch-chapter06-ex-channel.jpg" width="100%">
             <shortdescription>Channel map</shortdescription>
           </image>
         </figure>
@@ -2305,12 +2409,11 @@
           <md>
             <mrow>
               f(z) = &amp;
-              -\frac{\im\Gamma}{2\pi}\log\left(\sinh\left(\frac{\pi z}{2a}\right)-\sinh\left(\frac{\pi d}{2a}\right)\right)
-              +\frac{\im\Gamma}{2\pi}\log\left(\sinh\left(\frac{\pi z}{2a}\right)+\sinh\left(\frac{\pi d}{2a}\right)\right)
+              -\frac{\im\Gamma}{2\pi}\log\left(\sinh\left(\frac{\pi z}{2a}\right)
+              -\sinh\left(\frac{\pi d}{2a}\right)\right)
             </mrow>
             <mrow>
-              = &amp;
-              -\frac{\im\Gamma}{2\pi}\log\left(\sinh\left(\frac{\pi z}{2a}\right)-\sinh\left(\frac{\pi d}{2a}\right)\right)
+              &amp;
               +\frac{\im\Gamma}{2\pi}\log\left(\sinh\left(\frac{\pi z}{2a}\right)+\sinh\left(\frac{\pi d}{2a}\right)\right)
             </mrow>
             <mrow>
@@ -2328,8 +2431,11 @@
             <mrow>
               = &amp;
               \frac{\im\Gamma}{4a}\left(
-              -\frac{\cosh(\pi z/(2a))}{\sinh(\pi z/(2a))-\sinh(\pi d/(2a))}
-              +\frac{\cosh(\pi z/(2a))}{\sinh(\pi z/(2a))+\sinh(\pi d/(2a))}
+              -\frac{\cosh(\pi z/(2a))}{\sinh(\pi z/(2a))-\sinh(\pi d/(2a))}\right.
+            </mrow>
+            <mrow>
+              &amp;
+              \left.+\frac{\cosh(\pi z/(2a))}{\sinh(\pi z/(2a))+\sinh(\pi d/(2a))}
               \right)
             </mrow>
             <mrow>
@@ -2350,28 +2456,29 @@
             <mrow>
               f’(z)=&amp;
               -\frac{\im\Gamma}{4a}\left(
-              \frac{\sinh(\pi(d+z)/(2a))-\sinh(\pi(d-z)/(2a))}{\sinh(\pi(z+d)/(2a))\sinh(\pi(z-d)/(2a))}
+              \frac{\sinh(\pi(d+z)/(2a))+\sinh(\pi(d-z)/(2a))}{\sinh(\pi(z+d)/(2a))\sinh(\pi(z-d)/(2a))}
               \right)
             </mrow>
             <mrow>
               f’(z)=&amp;
               -\frac{\im\Gamma}{4a}\left(
-              \cosech\left(\frac{\pi(z-d)}{2a}\right)
-              +\cosech\left(\frac{\pi(z+d)}{2a}\right)
-              \right)
+              \mathrm{cosech}\left(\frac{\pi(z-d)}{2a}\right)
+              -\mathrm{cosech}\left(\frac{\pi(z+d)}{2a}\right)
+              \right),
             </mrow>
           </md>
+          as required.
         </p>
         <p>
           Using the Helmholtz principle, the vortex moves due to the flow of everything but itself.
           Thus at <m>z=d</m>, excluding the part of the flow due to the vortex, if the vortex flow moves with velocity <m>(u_V,v_V)</m>, we have
           <me>
             u_V-\im v_V
-            =-\frac{\im\Gamma}{4a}\cosech\left(\frac{\pi d}{a}\right),
+            =-\frac{\im\Gamma}{4a}\mathrm{cosech}\left(\frac{\pi d}{a}\right),
           </me>
           corresponding to a downward velocity
           <me>
-            \frac{\Gamma}{4a}\cosech\left(\frac{\pi d}{a}\right).
+            \frac{\Gamma}{4a}\mathrm{cosech}\left(\frac{\pi d}{a}\right).
           </me>
         </p>
       </solution>
