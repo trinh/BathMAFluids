@@ -2125,11 +2125,11 @@
         <p>
           The complex potential for the two vortices is
           <me>
-            w(z)=\frac{\im\Gamma_1}{2\pi}\log(z-z_1)+\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
+            w(z)=-\frac{\im\Gamma_1}{2\pi}\log(z-z_1)-\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
           </me>
           Hence, the velocity field is given by
           <me>
-            u-\im v=\frac{\im\Gamma_1}{2\pi(z-z_1)}+\frac{\im\Gamma_2}{2\pi(z-z_2)}.
+            u-\im v=-\frac{\im\Gamma_1}{2\pi(z-z_1)}-\frac{\im\Gamma_2}{2\pi(z-z_2)}.
           </me>
           The velocity of each vortex is given by evaluating this
           expression at the position of the other vortex.
@@ -2139,11 +2139,11 @@
         <p>
           The complex potential for the two vortices is
           <me>
-            w(z)=\frac{\im\Gamma_1}{2\pi}\log(z-z_1)+\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
+            w(z)=-\frac{\im\Gamma_1}{2\pi}\log(z-z_1)-\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
           </me>
           Hence, the velocity field is given by
           <me>
-            u-\im v=\frac{\im\Gamma_1}{2\pi(z-z_1)}+\frac{\im\Gamma_2}{2\pi(z-z_2)}.
+            u-\im v=-\frac{\im\Gamma_1}{2\pi(z-z_1)}-\frac{\im\Gamma_2}{2\pi(z-z_2)}.
           </me>
           The velocity of each vortex is given by evaluating this
           expression at the position of the other vortex.
@@ -2152,10 +2152,10 @@
           Thus, the equations of motion for the vortices are
           <md>
             <mrow>
-              \dd{z_1}{t}=&amp;\frac{\im\Gamma_2}{2\pi(z_1-z_2)},
+              \dd{z_1}{t}=&amp;-\frac{\im\Gamma_2}{2\pi(z_1-z_2)},
             </mrow>
             <mrow>
-              \dd{z_2}{t}=&amp;\frac{\im\Gamma_1}{2\pi(z_2-z_1)}.
+              \dd{z_2}{t}=&amp;-\frac{\im\Gamma_1}{2\pi(z_2-z_1)}.
             </mrow>
           </md>
         </p>
@@ -2167,7 +2167,7 @@
               +\frac{\Gamma_2}{\Gamma_1+\Gamma_2}\dd{z_2}{t}
             </mrow>
             <mrow>
-              =&amp;\frac{\im\Gamma_1\Gamma_2}{2\pi(\Gamma_1+\Gamma_2)}
+              =&amp;-\frac{\im\Gamma_1\Gamma_2}{2\pi(\Gamma_1+\Gamma_2)}
               \left(\frac1{z_1-z_2}-\frac1{z_2-z_1}\right)
             </mrow>
             <mrow>
@@ -2188,7 +2188,7 @@
               +(\overline{z_1-z_2})\left(\dd{z_1}{t}-\dd{z_2}{t}\right)
             </mrow>
             <mrow>
-              =&amp;\frac{-\im\Gamma_1\Gamma_2}{2\pi}
+              =&amp;\frac{\im\Gamma_1\Gamma_2}{2\pi}
               \left(\frac{z_1-z_2}{\overline{z_1-z_2}}
               -\frac{\overline{z_1-z_2}}{z_1-z_2}\right)
             </mrow>
@@ -2210,7 +2210,7 @@
         <p>
           Fluid occupies the region <m>x^2+y^2>a^2</m> outside a circular obstacle
           of radius <m>a</m>. By using
-          the Circle Theorem, find the resulting complex potential
+          the Milne-Thomson Circle Theorem, find the resulting complex potential
           when a vortex of strength
           <m>\Gamma</m> is placed at <m>(x, y) = (b, 0)</m>,
           where <m>b > a</m> (assuming there to be no circulation about
@@ -2223,7 +2223,67 @@
             \Omega=\frac{\Gamma a^2}{2\pi b^2(b^2-a^2)}.
           </me>
         </p>
-      </statement>      
+      </statement>
+      <!--<solution>
+        <p>
+          The complex potential associated with the vortex in isolation is
+          <me>
+            f(z)=-\frac{\im\Gamma}{2\pi}\log(z-b).
+          </me>
+          We construct the complex potential in the presence of the obstacle
+          using the Milne-Thomson Circle Theorem:
+          <md>
+            <mrow>
+              w(z)=&amp;f(z)+\overline{f\left(\frac{a^2}{\overline{z}}\right)}
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im\Gamma}{2\pi}\log(z-b)
+              +\frac{\im\Gamma}{2\pi}\overline{\log\left(\frac{a^2}{\overline{z}}-b\right)}
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im\Gamma}{2\pi}\log(z-b)
+              +\frac{\im\Gamma}{2\pi}\log\left(\frac{a^2}{z}-b\right)
+            </mrow>
+            <mrow>
+              =&amp;\frac{\im\Gamma}{2\pi}\log\left(\frac{a^2-bz}{z(z-b)}\right)
+            </mrow>
+            <mrow>
+              =&amp;\frac{\im\Gamma}{2\pi}\left(\log\left(a^2-bz\right)-\log z-\log(z-b)\right);
+            </mrow>
+          </md>
+          separating the logarithms in the final step enables the derivative to be taken more easily.
+          This has a single singularity at the vortex <m>z=b</m> and the circle
+          <m>|z|=a</m> is a streamline, as required.
+        </p>
+        <p>
+          The velocity field can be found by taking the derivative of <m>w(z)</m>:
+          <md>
+            <mrow>
+              u-\im v&amp;=\dd{w}{z}
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im\Gamma}{2\pi}\left(\frac{b}{a^2-bz}+\frac1{z-b}+\frac1{z}\right),
+            </mrow>
+          </md>
+          and, removing the vortex (the term proportional to <m>1/(z-b)</m>),
+          the velocity of the vortex at <m>z=b</m> is
+          <me>
+            u_V-\im v_V=-\frac{\im\Gamma}{2\pi}\left(\frac{b}{a^2-b^2}+\frac1{b}\right),
+          </me>
+          which is an instantaneous velocity of magnitude
+          <me>
+            \frac{\Gamma}{2\pi}\left(\frac{b}{a^2-b^2}+\frac1{b}\right)
+          </me>
+          upwards. By symmetry,
+          the vortex moves in a circle of radius <m>b</m> about the origin
+          with speed equal to this value, giving an angular velocity of
+          <me>
+            \frac{\Gamma}{2\pi}\left(\frac1{a^2-b^2}+\frac1{b^2}\right)
+            =\frac{\Gamma a^2}{2\pi b^2(a^2-b^2)}+\frac1{b^2},
+          </me>
+          as required.
+        </p>
+      </solution>-->
     </exercise>
 
     <exercise xml:id="ex-quadrant">
