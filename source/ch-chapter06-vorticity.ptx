@@ -871,8 +871,19 @@
         <p>
           If we dye the fluid within these two curves, we would create a blob of fluid surrounding the
           vortices. An observer would see this blob of fluid travelling at the speed
-          <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction without changing shape.
+          <m>\Gamma/(4\pi d)</m> in the <m>-y</m>-direction without changing shape,
+          see Figure <xref ref="fig-vortex-pair"/>b.
         </p>
+        <figure xml:id="fig-vortex-pair">
+          <caption>Flow due to a vortex pair relative to (a) a fixed frame,
+            and (b) a frame moving with the vortices.
+            Note that the shaded region in (b) represents a fluid region that,
+            if it were dyed, the dyed fluid would remain in the same region throughout
+            the evolution of the flow. From <xref ref="ref-acheson"/>.</caption>
+          <image source="ch-chapter06-vortex-pair.jpg" width="50%">
+            <shortdescription>Vortex pair</shortdescription>
+          </image>
+        </figure>
       </example>
       <example>
         <title>Vortex near a wall</title>
