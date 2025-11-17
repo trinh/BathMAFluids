@@ -1976,6 +1976,9 @@
       <title>Axisymmetric flow</title>
       <statement>
         <p>
+          <em>Please feel free to omit this problem as we have not covered the material.</em>
+        </p>
+        <p>
           (Based on Exercise 5.7 in <xref ref="ref-acheson"/>).
           In this question, please make use of the vector calculus formulae given
           in cylindrical polar coordinates, available at
@@ -2030,7 +2033,7 @@
           </me>
         </p>
       </hint>
-      <!--<solution>
+      <solution>
         <p>
           Axisymmetry implies that <m>\bu</m> has no  <m>\theta</m>-component,
           that is <m>\bu\cdot\be_{\theta}=0</m>, and that <m>\partial\bu/\partial\theta=0</m>.
@@ -2092,7 +2095,7 @@
           </me>
           as required.
         </p>
-      </solution>-->
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-two-vortices">
