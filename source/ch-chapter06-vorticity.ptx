@@ -1633,7 +1633,7 @@
         </p>
         <p>
           <em>Method two:</em> We can parametrise <m>C(t)</m> via <m>\bx(s,t)</m>
-          for <m>0&lt;x&lt;1</m>
+          for <m>0&lt;s&lt;1</m>
           and rewrite the integral as an integral over the parameter <m>s</m>:
           <me>
             \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s
@@ -1681,7 +1681,7 @@
         </p>
         <p>
           <em>Method two:</em>
-          This can also be proven by parametrising <m>C(t)</m> via <m>\bx(s,t)</m> for <m>0&lt;x&lt;1</m>
+          This can also be proven by parametrising <m>C(t)</m> via <m>\bx(s,t)</m> for <m>0&lt;s&lt;1</m>
           and rewriting the integral as an integral over the parameter <m>s</m>:
           <me>
             \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s.
@@ -2417,8 +2417,15 @@
           with speed <m>(\Gamma/4a)\mathrm{cosech}(\pi d/a)</m>.
         </p>
         <p>
-          You may use the identity <m>\sinh^2(x)− \sinh^2(y)
-            \equiv \sinh(x + y) \sinh(x− y)</m>.
+          You may use the identities
+          <me>
+            \sinh^2(x)− \sinh^2(y)
+            \equiv \sinh(x + y) \sinh(x− y)
+          </me>
+          and
+          <me>
+            \cosh x\sinh y=\frac12\left(\sinh(x+y)+\sinh(y-x)\right).
+          </me>
         </p>
       </statement>
       <hint>
