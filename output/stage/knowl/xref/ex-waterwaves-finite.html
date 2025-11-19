@@ -34,9 +34,8 @@
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
 <div class="para">Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -46,18 +45,16 @@
 </div>
 <div class="para">and now applied on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
 <div class="para">Show that travelling harmonic waves, with <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y)\sin(kx - \omega t)\text{,}\)</span> are possible and derive the associated dispersion relation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \omega^2 = gk \tanh(kh). 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
 <div class="para">In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -65,8 +62,109 @@
 \end{equation*}
 </div>
 <div class="para">and note that the cosh function is even at <span class="process-math">\(z = 0\)</span> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <span class="process-math">\(f(y)\)</span> and is a common trick when solving boundary-value problems with exponentials.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions,</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},\\
+\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0,
+\end{gather*}
+</div>
+<div class="para">which are imposed on <span class="process-math">\(y = \eta(x)\text{.}\)</span> The quadratic terms can be ignored by assuming that the fluid is linearised about a small disturbance. Hence <span class="process-math">\(\eta\)</span> is assumed to be small. Similarly, the velocity terms are expanded about <span class="process-math">\(y = 0\text{.}\)</span> For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{x}\biggr\rvert_{y = \eta} = \pd{\phi}{x}\biggr\rvert_{y = 0} + \pd{^2\phi}{x^2}\biggr\rvert_{y = 0}\eta + \ldots.
+\end{equation*}
+</div>
+<div class="para">Thus we can approximate this quantity to leading order by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{x}\biggr\rvert_{y = \eta} \sim \pd{\phi}{x}\biggr\rvert_{y = 0}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Therefore, both kinematic and dynamic conditions are simplified in this manner, yielding</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\pd{\phi}{y}= \pd{\eta}{t},\\
+\pd{\phi}{t} + g\eta = 0,
+\end{gather*}
+</div>
+<div class="para">now imposed on <span class="process-math">\(y = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We substitute now the ansatzes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\eta = A\cos(kx - \omega t), \qquad \phi = f(y)\sin(kx - \omega t),
+\end{equation*}
+</div>
+<div class="para">into the governing equations.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Written in terms of <span class="process-math">\(f\text{,}\)</span> we must now solve the following system:</div>
+<div class="displaymath process-math">
+\begin{gather*}
+f'' + k^2 f = 0, \\
+f'(-h) = 0, \\
+f'(0) = (\omega)A, \\
+-(\omega) f(0) + gA = 0. 
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now instead of writing the solution for <span class="process-math">\(f\)</span> in terms of the two exponentials <span class="process-math">\(\e^{\pm ky}\text{,}\)</span> it is better to write the general solution of the second-order ODE as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(y) = B \text{cosh}[k(y - y_0)],
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y_0\)</span> is constant. We can then see that if <span class="process-math">\(y_0 = -h\text{,}\)</span> then the boundary condition <span class="process-math">\(f'(-h) = 0\)</span> is satisfied.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">The last two boundary conditions, evaluated on <span class="process-math">\(y = 0\)</span> yield</div>
+<div class="displaymath process-math">
+\begin{equation}
+\begin{pmatrix}
+\omega &amp; -k \sinh (kH) \\
+g &amp; -(\omega)\cosh(kh)
+\end{pmatrix}
+\begin{pmatrix}
+A \\ B
+\end{pmatrix}
+= 0.\tag{5.5.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For there to be non-trivial solutions, we thus need</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\omega)^2 = gk \tanh(kh),
+\end{equation*}
+</div>
+<div class="para">and therefore there are two possible wave speeds, namely</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c = \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2},
+\end{equation*}
+</div>
+<div class="para">and both are simply negatives of one another; so represent left and rightwards propagating waves of the same speed.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.2.1"><a href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Solution 5.5.2.1" aria-label="Copy heading and permalink for Solution 5.5.2.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Exercise 5.5.2: Stokes waves in finite depth"><a href="#ex-waterwaves-finite" title="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth" aria-label="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth">🔗</a></div></article><span class="incontext"><a class="internal" href="exercises-water-waves.html#ex-waterwaves-finite">in-context</a></span>
 </body>
 </html>
