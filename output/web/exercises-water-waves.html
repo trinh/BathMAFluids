@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.18';
+eBookConfig.runestone_version = '7.9.19';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cefb0224014f3333.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c50cdcad467c8d3e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -468,7 +468,7 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 <div class="autopermalink" data-description="Exercise 5.5.1: Derivation of the kinematic condition"><a href="#exercises-water-waves-1" title="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition" aria-label="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-finite"><h3 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stokes waves in finite depth.</span>
 </h3>
-<div class="para logical" id="ex-waterwaves-finite-2">
+<div class="para logical" id="ex-waterwaves-finite-2-1">
 <div class="para">Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <span class="process-math">\(\phi(x, y,t)\text{,}\)</span> with <span class="process-math">\(\phi\)</span> satisfying <span class="process-math">\(\nabla^2 \phi = 0\text{.}\)</span> Let the free surface be at <span class="process-math">\(y = \eta(x, t)\)</span> and assume the water is confined above a flat channel of depth <span class="process-math">\(y = -h\text{.}\)</span> Show that on the free surface, <span class="process-math">\(y = \eta(x, t)\text{,}\)</span> the kinematic equation is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -481,11 +481,10 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-waterwaves-finite-3">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-waterwaves-finite-2-2">
 <div class="para">Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be</div>
-<div class="displaymath process-math" id="ex-waterwaves-finite-3-1">
+<div class="displaymath process-math" id="ex-waterwaves-finite-2-2-1">
 \begin{align*}
 \pd{\phi}{y} \amp= \pd{\eta}{t}, \\
 \pd{\phi}{t} + g\eta \amp= 0, 
@@ -493,18 +492,16 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 </div>
 <div class="para">and now applied on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-waterwaves-finite-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-waterwaves-finite-2-3">
 <div class="para">Show that travelling harmonic waves, with <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y)\sin(kx - \omega t)\text{,}\)</span> are possible and derive the associated dispersion relation,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \omega^2 = gk \tanh(kh). 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-waterwaves-finite-5">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-waterwaves-finite-2-4">
 <div class="para">In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -512,8 +509,109 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 \end{equation*}
 </div>
 <div class="para">and note that the cosh function is even at <span class="process-math">\(z = 0\)</span> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <span class="process-math">\(f(y)\)</span> and is a common trick when solving boundary-value problems with exponentials.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-waterwaves-finite-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-waterwaves-finite-3-1">
+<div class="para">Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions,</div>
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-1-1">
+\begin{gather*}
+\pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},\\
+\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0,
+\end{gather*}
+</div>
+<div class="para">which are imposed on <span class="process-math">\(y = \eta(x)\text{.}\)</span> The quadratic terms can be ignored by assuming that the fluid is linearised about a small disturbance. Hence <span class="process-math">\(\eta\)</span> is assumed to be small. Similarly, the velocity terms are expanded about <span class="process-math">\(y = 0\text{.}\)</span> For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{x}\biggr\rvert_{y = \eta} = \pd{\phi}{x}\biggr\rvert_{y = 0} + \pd{^2\phi}{x^2}\biggr\rvert_{y = 0}\eta + \ldots.
+\end{equation*}
+</div>
+<div class="para">Thus we can approximate this quantity to leading order by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{x}\biggr\rvert_{y = \eta} \sim \pd{\phi}{x}\biggr\rvert_{y = 0}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-2">
+<div class="para">Therefore, both kinematic and dynamic conditions are simplified in this manner, yielding</div>
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-2-1">
+\begin{gather*}
+\pd{\phi}{y}= \pd{\eta}{t},\\
+\pd{\phi}{t} + g\eta = 0,
+\end{gather*}
+</div>
+<div class="para">now imposed on <span class="process-math">\(y = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-3">
+<div class="para">We substitute now the ansatzes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\eta = A\cos(kx - \omega t), \qquad \phi = f(y)\sin(kx - \omega t),
+\end{equation*}
+</div>
+<div class="para">into the governing equations.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-4">
+<div class="para">Written in terms of <span class="process-math">\(f\text{,}\)</span> we must now solve the following system:</div>
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-4-2">
+\begin{gather*}
+f'' + k^2 f = 0, \\
+f'(-h) = 0, \\
+f'(0) = (\omega)A, \\
+-(\omega) f(0) + gA = 0. 
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-5">
+<div class="para">Now instead of writing the solution for <span class="process-math">\(f\)</span> in terms of the two exponentials <span class="process-math">\(\e^{\pm ky}\text{,}\)</span> it is better to write the general solution of the second-order ODE as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(y) = B \text{cosh}[k(y - y_0)],
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y_0\)</span> is constant. We can then see that if <span class="process-math">\(y_0 = -h\text{,}\)</span> then the boundary condition <span class="process-math">\(f'(-h) = 0\)</span> is satisfied.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-6">
+<div class="para">The last two boundary conditions, evaluated on <span class="process-math">\(y = 0\)</span> yield</div>
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-6-2">
+\begin{equation}
+\begin{pmatrix}
+\omega &amp; -k \sinh (kH) \\
+g &amp; -(\omega)\cosh(kh)
+\end{pmatrix}
+\begin{pmatrix}
+A \\ B
+\end{pmatrix}
+= 0.\tag{5.5.1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-finite-3-7">
+<div class="para">For there to be non-trivial solutions, we thus need</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\omega)^2 = gk \tanh(kh),
+\end{equation*}
+</div>
+<div class="para">and therefore there are two possible wave speeds, namely</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c = \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2},
+\end{equation*}
+</div>
+<div class="para">and both are simply negatives of one another; so represent left and rightwards propagating waves of the same speed.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.2.1"><a href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Solution 5.5.2.1" aria-label="Copy heading and permalink for Solution 5.5.2.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Exercise 5.5.2: Stokes waves in finite depth"><a href="#ex-waterwaves-finite" title="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth" aria-label="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-current"><h3 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear waves in a current.</span>
 </h3>
@@ -680,7 +778,7 @@ g &amp; -(\omega - Uh)\cosh(kh)
 \begin{pmatrix}
 A \\ B
 \end{pmatrix}
-= 0.\tag{5.5.1}
+= 0.\tag{5.5.2}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -728,7 +826,7 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 </div>
 <div class="solutions"><details id="ex-waterwaves-density-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-waterwaves-density-3-1">
-<div class="para">The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <span class="process-math">\(\\DD{(y - \eta}{t} = 0,\)</span> for both fluids. This gives,</div>
+<div class="para">The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <span class="process-math">\(\DD{(y - \eta)}{t} = 0,\)</span> for both fluids. This gives,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
@@ -738,12 +836,110 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para logical" id="ex-waterwaves-density-3-2">
+<div class="para">The dynamic condition expresses the fact that the pressures are equal at the interface between the two fluids. Therefore at the interface, we have (ignoring quadratic terms), from <a href="sec-waterwaves-equations.html#thm-bernoulli-unsteady-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-unsteady-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.1: Bernoulli’s equation for unsteady potential flow">Theorem 5.1.1</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html" id="ex-waterwaves-density-3-2-2">
+\begin{align*}
+\pd{\phi_1}{t} + \frac{p_1}{\rho_1} + g\eta \amp= B_1, \\
+\pd{\phi_2}{t} + \frac{p_2}{\rho_2} + g\eta \amp= B_2. 
+\end{align*}
+</div>
+<div class="para">However at the interface, we need the pressures to be equal. Therefore we can set <span class="process-math">\(p_1 = p_2\text{.}\)</span> Subtracting the two equations then yields</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html">
+\begin{equation*}
+\rho_1\left( \pd{\phi_1}{t}+ g\eta\right) + \left( \frac{p}{\rho_1} - \frac{p}{\rho_2} - B_1 + B_2\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
+\end{equation*}
+</div>
+<div class="para">as applied on <span class="process-math">\(y = 0\text{.}\)</span> We are free to pick the constants, so we pick them so as to completely zero the expression in the second group of brackets. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html">
+\begin{equation*}
+\rho_1\left( \pd{\phi_1}{t}+ g\eta\right)  = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\(y = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-density-3-3">
+<div class="para">So now the natural question is to ask how the linearisation procedure changes with the two fluids of different densities. Gain, we set <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi_i = f_i(y) \sin(kx - \omega t)\text{.}\)</span> The equation for <span class="process-math">\(f\)</span> is similarly given by <span class="process-math">\(f'' = k^2 f,\)</span> and this time, we must select different exponential powers so as to ensure the fluid is bounded either as <span class="process-math">\(y \to \infty\)</span>  or as <span class="process-math">\(y \to -\infty\text{.}\)</span> This essentially yields</div>
+<div class="displaymath process-math" id="ex-waterwaves-density-3-3-7">
+\begin{align*}
+f_1 = B \e^{ky}, \amp \qquad y &lt; 0, \\
+f_2 = C \e^{-ky}, \amp \qquad y &gt; 0, 
+\end{align*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+
+\end{equation*}
+</div>
+<div class="para">for constants <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-density-3-4">
+<div class="para">The remaining boundary conditions are:</div>
+<div class="displaymath process-math" id="ex-waterwaves-density-3-4-1">
+\begin{gather*}
+f_1'(0) = (\omega)A, \\
+f_2'(0) = (\omega)A, \\
+\rho_1(-\omega f_1(0) + gA) = \rho_2(-\omega f_2(0) + gA), 
+\end{gather*}
+</div>
+<div class="para">thus</div>
+<div class="displaymath process-math" id="ex-waterwaves-density-3-4-2">
+\begin{gather*}
+Bk = \omega A, \\
+-Ck = \omega A, \\
+\rho_1(-\omega B + gA) = \rho_2(-\omega C + gA), 
+\end{gather*}
+</div>
+<div class="para">which in matrix form is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\omega \amp -k \amp 0 \\
+\omega \amp 0 \amp k \\
+g(\rho_1 - \rho_2) \amp -\omega\rho_1 \amp \omega \rho_2
+\end{pmatrix}
+\begin{pmatrix}
+A \\ B \\ C
+\end{pmatrix}
+= 
+\begin{pmatrix}
+0 \\ 0 \\ 0
+\end{pmatrix}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-density-3-5">
+<div class="para">Expanding the determinant about the first row yields</div>
+<div class="displaymath process-math" id="ex-waterwaves-density-3-5-1">
+\begin{align*}
+\omega
+\begin{vmatrix}
+0 \amp k \\
+-\omega \rho_1 \amp \omega \rho_2 
+\end{vmatrix}
++ k
+\begin{vmatrix}
+\omega \amp k \\ 
+g(\rho_1 - \rho_2) \amp \rho_2 \omega
+\end{vmatrix}\\
+= \omega^2 k (\rho_1 + \rho_2) - k^2 g (\rho_1 - \rho_2) = 0,
+\end{align*}
+</div>
+<div class="para">which gives the desired result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Solution 5.5.4.1"><a href="#ex-waterwaves-density-3" title="Copy heading and permalink for Solution 5.5.4.1" aria-label="Copy heading and permalink for Solution 5.5.4.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Exercise 5.5.4: Fluids of different densities"><a href="#ex-waterwaves-density" title="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities" aria-label="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-surfacetension"><h3 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluids with surface tension.</span>
 </h3>
-<div class="para logical" id="ex-waterwaves-surfacetension-2">
+<div class="para logical" id="ex-waterwaves-surfacetension-2-1">
 <div class="para">Suppose now that there is surface tension <span class="process-math">\(T\)</span> between the two fluids of <a href="exercises-water-waves.html#ex-waterwaves-density" class="xref" data-knowl="./knowl/xref/ex-waterwaves-density.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.5.4: Fluids of different densities">Exercise 5.5.4</a>. In lectures, it was shown that the linear dynamic boundary condition is given by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-waterwaves-density.html">
 \begin{equation*}
@@ -758,19 +954,57 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 </div>
 <div class="para">and only need to consider the single potential <span class="process-math">\(\phi_1 = \phi\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-waterwaves-surfacetension-3">The linear kinematic condition should be unchanged from the usual linear kinematic condition, <span class="process-math">\(\pd{\eta}{t} = v = \pd{\phi}{y}\)</span> on <span class="process-math">\(y = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-waterwaves-surfacetension-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-waterwaves-surfacetension-2-2">The linear kinematic condition should be unchanged from the usual linear kinematic condition, <span class="process-math">\(\pd{\eta}{t} = v = \pd{\phi}{y}\)</span> on <span class="process-math">\(y = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-waterwaves-surfacetension-2-3">
 <div class="para">For the case of deep water waves, show that the frequency <span class="process-math">\(\omega\)</span> is now related to the wavenumber <span class="process-math">\(k\)</span> by the equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \omega^2 = gk + \frac{Tk^3}{\rho}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-waterwaves-surfacetension-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-waterwaves-surfacetension-3-1">This question was done in the problem class recordings on 11 November 2025 accessed <a class="external" href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695" target="_blank">here</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-surfacetension-3-2">
+<div class="para">Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, 
+\end{equation*}
+</div>
+<div class="para">evaluated on <span class="process-math">\(y = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-surfacetension-3-3">
+<div class="para">Thus in this equation, we use the same ansatzes as for the previous few questions. The system of equations is</div>
+<div class="displaymath process-math" id="ex-waterwaves-surfacetension-3-3-1">
+\begin{gather*}
+f'' + k^2 f = 0, \\
+f(-\infty) \text{ is bounded}, \\
+f'(0) = (\omega)A, \\
+-(\omega) f(0) + [g + (T/\rho)k^2] A = 0, 
+\end{gather*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-waterwaves-surfacetension-3-4">The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <span class="process-math">\(g\text{,}\)</span> we can substitute <span class="process-math">\(g + (T/\rho)k^2\)</span> we we impose the boundary conditions and apply the determinant condition.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-waterwaves-surfacetension-3-5">
+<div class="para">Previously for deep-water gravity waves, we had <span class="process-math">\(\omega^2 = gk\text{.}\)</span> So now we must have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\omega^2 = \left(g + \frac{T}{\rho} k^2\right) k,
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.5.1"><a href="#ex-waterwaves-surfacetension-3" title="Copy heading and permalink for Solution 5.5.5.1" aria-label="Copy heading and permalink for Solution 5.5.5.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Exercise 5.5.5: Fluids with surface tension"><a href="#ex-waterwaves-surfacetension" title="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension" aria-label="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension">🔗</a></div></article><article class="exercise exercise-like" id="exercises-water-waves-6"><h3 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The dispersion relation (simple).</span>
 </h3>
@@ -798,6 +1032,18 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 <div class="para">to put the wave <span class="process-math">\(\eta\)</span> into the form of a product of sinusoidal waves.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="exercises-water-waves-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-water-waves-6-3-2-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2 t)}{2}\right] 
+\cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2 t)}{2}\right] 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.6.a.1"><a href="#exercises-water-waves-6-3-2" title="Copy heading and permalink for Solution 5.5.6.a.1" aria-label="Copy heading and permalink for Solution 5.5.6.a.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 5.5.6.a"><a href="#exercises-water-waves-6-3" title="Copy heading and permalink for Task 5.5.6.a" aria-label="Copy heading and permalink for Task 5.5.6.a">🔗</a></div></article><article class="task exercise-like" id="exercises-water-waves-6-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="exercises-water-waves-6-4-1-1">
 <div class="para">Consider now</div>
@@ -811,6 +1057,19 @@ k_{1,2} = k \pm \Delta k \quad \text{and} \quad
 <div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="exercises-water-waves-6-4-1-2">In the limit that <span class="process-math">\(\Delta k, \Delta \omega \ll 1\)</span> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="exercises-water-waves-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-water-waves-6-4-2-1">
+<div class="para">Setting in the substutitions, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\eta = 2\sin(kx - \omega t)\cos(\Delta k x - \Delta \omega t).
+\end{equation*}
+</div>
+<div class="para">The point here is that <span class="process-math">\(\Delta k, \Delta \omega \ll 1\text{,}\)</span> so the cosine term is very nearly 1. This yields the standard travelling sinusoidal wave. However, over long timescales, notably when <span class="process-math">\(t\)</span> is large, the cosine term is no longer constant. This yields a slowly varying envelope or amplitude multiplying the sine,</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.6.b.1"><a href="#exercises-water-waves-6-4-2" title="Copy heading and permalink for Solution 5.5.6.b.1" aria-label="Copy heading and permalink for Solution 5.5.6.b.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 5.5.6.b"><a href="#exercises-water-waves-6-4" title="Copy heading and permalink for Task 5.5.6.b" aria-label="Copy heading and permalink for Task 5.5.6.b">🔗</a></div></article><article class="task exercise-like" id="exercises-water-waves-6-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para logical" id="exercises-water-waves-6-5-1-1">
 <div class="para">show that the envelope developed in the last part exhibits maxima as</div>
@@ -819,7 +1078,7 @@ k_{1,2} = k \pm \Delta k \quad \text{and} \quad
 x(t) = \frac{\Delta \omega}{\Delta k} t,
 \end{equation*}
 </div>
-<div class="para">and therefore in the limit <span class="process-math">\(\Delta k, \Delta \omega \to 0\text{,}\)</span> the velocicty of such maxima (called the group velocity) is given by</div>
+<div class="para">and therefore in the limit <span class="process-math">\(\Delta k, \Delta \omega \to 0\text{,}\)</span> the velocity of such maxima (called the group velocity) is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 v_g = \dd{\omega}{k}.
@@ -827,6 +1086,20 @@ v_g = \dd{\omega}{k}.
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="exercises-water-waves-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-water-waves-6-5-2-1">This part is quite straightforward. The maxima of the cosines are found at multiples of <span class="process-math">\(2\pi\)</span> in the argument. For example, the first maxima lies at <span class="process-math">\(\Delta k x - \Delta \omega t = 0,\)</span> hence <span class="process-math">\(x(t) = (\Delta k/\Delta \omega)t.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-water-waves-6-5-2-2">
+<div class="para">This is indeed equivalent to a particle that moves with velocity <span class="process-math">\(\Delta k/\Delta \omega\text{.}\)</span> In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v_g = \dd{\omega}{k}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.5.6.c.1"><a href="#exercises-water-waves-6-5-2" title="Copy heading and permalink for Solution 5.5.6.c.1" aria-label="Copy heading and permalink for Solution 5.5.6.c.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Task 5.5.6.c"><a href="#exercises-water-waves-6-5" title="Copy heading and permalink for Task 5.5.6.c" aria-label="Copy heading and permalink for Task 5.5.6.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 5.5.6: The dispersion relation (simple)"><a href="#exercises-water-waves-6" title="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)" aria-label="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.5"><a href="#exercises-water-waves" title="Copy heading and permalink for Exercises 5.5" aria-label="Copy heading and permalink for Exercises 5.5">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-waterwaves-generalisations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter06-vorticity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

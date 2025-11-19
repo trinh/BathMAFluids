@@ -589,6 +589,8 @@
 
     <exercise xml:id="ex-waterwaves-finite">
       <title>Stokes waves in finite depth</title>
+
+<statement>
       <p>
         Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <m>\phi(x, y,t)</m>, with <m>\phi</m> satisfying <m>\nabla^2 \phi = 0</m>. Let the free surface be at <m>y = \eta(x, t)</m> and assume the water is confined above a flat channel of depth <m>y = -h</m>. Show that on the free surface, <m>y = \eta(x, t)</m>, the kinematic equation is given by 
         <me>
@@ -623,7 +625,86 @@
         </me>
         and note that the cosh function is even at <m>z = 0</m> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <m>f(y)</m> and is a common trick when solving boundary-value problems with exponentials. 
       </p>
+    </statement>
+
+<solution>
+  <p>
+    Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions, 
+    <md>
+      <mrow>\pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},</mrow>
+      <mrow>\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0,</mrow>
+    </md>
+    which are imposed on <m>y = \eta(x)</m>. The quadratic terms can be ignored by assuming that the fluid is linearised about a small disturbance. Hence <m>\eta</m> is assumed to be small. Similarly, the velocity terms are expanded about <m>y = 0</m>. For example, 
+    <me>
+      \pd{\phi}{x}\biggr\rvert_{y = \eta} = \pd{\phi}{x}\biggr\rvert_{y = 0} + \pd{^2\phi}{x^2}\biggr\rvert_{y = 0}\eta + \ldots.
+    </me>
+    Thus we can approximate this quantity to leading order by 
+    <me>
+      \pd{\phi}{x}\biggr\rvert_{y = \eta} \sim \pd{\phi}{x}\biggr\rvert_{y = 0}.
+    </me>
+  </p>
+
+  <p>
+    Therefore, both kinematic and dynamic conditions are simplified in this manner, yielding 
+    <md>
+      <mrow>\pd{\phi}{y}= \pd{\eta}{t},</mrow>
+      <mrow>\pd{\phi}{t} + g\eta = 0,</mrow>
+    </md>
+    now imposed on <m>y = 0</m>.
+  </p>
+
+  <p>
+    We substitute now the ansatzes
+    <me>
+      \eta = A\cos(kx - \omega t), \qquad \phi = f(y)\sin(kx - \omega t),
+    </me>
+   into the governing equations.</p>
+
+  <p>Written in terms of <m>f</m>, we must now solve the following system: 
+          <md>
+            <mrow>f'' + k^2 f = 0, </mrow>
+            <mrow>f'(-h) = 0, </mrow>
+            <mrow>f'(0) = (\omega)A, </mrow>
+            <mrow>-(\omega) f(0) + gA = 0. </mrow>
+          </md>
+  </p>
+
+  <p>
+    Now instead of writing the solution for <m>f</m> in terms of the two exponentials <m>\e^{\pm ky}</m>, it is better to write the general solution of the second-order ODE as 
+    <me>
+      f(y) = B \text{cosh}[k(y - y_0)],
+    </me>
+    where <m>y_0</m> is constant. We can then see that if <m>y_0 = -h</m>, then the boundary condition <m>f'(-h) = 0</m> is satisfied.
+  </p>
+
+  <p>
+    The last two boundary conditions, evaluated on <m>y = 0</m> yield
+         <men>
+        \begin{pmatrix}
+        \omega &amp; -k \sinh (kH) \\
+        g &amp; -(\omega)\cosh(kh)
+        \end{pmatrix}
+        \begin{pmatrix}
+        A \\ B
+        \end{pmatrix}
+        = 0.
+         </men> 
+        </p>
+
+        <p>
+          For there to be non-trivial solutions, we thus need 
+          <me>
+            (\omega)^2 = gk \tanh(kh),
+          </me>
+          and therefore there are two possible wave speeds, namely
+          <me>
+            c = \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2},
+          </me>
+          and both are simply negatives of one another; so represent left and rightwards propagating waves of the same speed. 
+  </p>
+</solution>
     </exercise>
+
 
     <exercise xml:id="ex-waterwaves-current">
       <title>Linear waves in a current</title>
@@ -831,11 +912,90 @@
 
       <solution>
         <p>
-          The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <m>\\DD{(y - \eta}{t} = 0,</m> for both fluids. This gives, 
+          The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <m>\DD{(y - \eta)}{t} = 0,</m> for both fluids. This gives, 
           <me>
             \eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
           </me>
           after linearising, and as imposed on <m>i = 1, 2</m>.
+        </p>
+
+        <p>
+          The dynamic condition expresses the fact that the pressures are equal at the interface between the two fluids. Therefore at the interface, we have (ignoring quadratic terms), from <xref ref="thm-bernoulli-unsteady-potential"/>
+          <md>
+            <mrow>\pd{\phi_1}{t} + \frac{p_1}{\rho_1} + g\eta \amp= B_1, </mrow>
+            <mrow>\pd{\phi_2}{t} + \frac{p_2}{\rho_2} + g\eta \amp= B_2. </mrow>
+          </md>
+          However at the interface, we need the pressures to be equal. Therefore we can set <m>p_1 = p_2</m>. Subtracting the two equations then yields
+          <me>
+            \rho_1\left( \pd{\phi_1}{t}+ g\eta\right) + \left( \frac{p}{\rho_1} - \frac{p}{\rho_2} - B_1 + B_2\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
+          </me>
+          as applied on <m>y = 0</m>. We are free to pick the constants, so we pick them so as to completely zero the expression in the second group of brackets. Thus  
+          <me>
+            \rho_1\left( \pd{\phi_1}{t}+ g\eta\right)  = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
+          </me>
+          on <m>y = 0</m>. 
+        </p>
+
+        <p>
+          So now the natural question is to ask how the linearisation procedure changes with the two fluids of different densities. Gain, we set <m>\eta = A\cos(kx - \omega t)</m> and <m>\phi_i = f_i(y) \sin(kx - \omega t)</m>. The equation for <m>f</m> is similarly given by <m>f'' = k^2 f,</m> and this time, we must select different exponential powers so as to ensure the fluid is bounded either as <m>y \to \infty</m>  or as <m>y \to -\infty</m>. This essentially yields 
+          <md>
+            <mrow> f_1 = B \e^{ky}, \amp \qquad y &lt; 0, </mrow>
+            <mrow> f_2 = C \e^{-ky}, \amp \qquad y &gt; 0, </mrow>
+          </md>
+          <me>
+          </me>
+          for constants <m>B</m> and <m>C</m>. 
+        </p>
+
+        <p>
+         The remaining boundary conditions are:  
+          <md>
+            <mrow>f_1'(0) = (\omega)A, </mrow>
+            <mrow>f_2'(0) = (\omega)A, </mrow>
+            <mrow>\rho_1(-\omega f_1(0) + gA) = \rho_2(-\omega f_2(0) + gA), </mrow>
+          </md>
+          thus
+          <md>
+            <mrow>Bk = \omega A, </mrow>
+            <mrow>-Ck = \omega A, </mrow>
+            <mrow>\rho_1(-\omega B + gA) = \rho_2(-\omega C + gA), </mrow>
+          </md>
+          which in matrix form is 
+       <me>
+        \begin{pmatrix}
+        \omega \amp -k \amp 0 \\
+        \omega \amp 0 \amp k \\
+        g(\rho_1 - \rho_2) \amp -\omega\rho_1 \amp \omega \rho_2
+        \end{pmatrix}
+        \begin{pmatrix}
+        A \\ B \\ C
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        0 \\ 0 \\ 0
+        \end{pmatrix}.
+       </me>
+        </p>
+
+        <p>
+          Expanding the determinant about the first row yields 
+          <md>
+            <mrow>\omega
+            \begin{vmatrix}
+            0 \amp k \\
+            -\omega \rho_1 \amp \omega \rho_2 
+            \end{vmatrix}
+            + k
+            \begin{vmatrix}
+            \omega \amp k \\ 
+            g(\rho_1 - \rho_2) \amp \rho_2 \omega
+            \end{vmatrix}</mrow>
+            <mrow>
+            = \omega^2 k (\rho_1 + \rho_2) - k^2 g (\rho_1 - \rho_2) = 0,
+            </mrow>
+          </md>
+          which gives the desired result. 
+          
         </p>
       </solution>
     </exercise>
@@ -843,6 +1003,7 @@
     <exercise xml:id="ex-waterwaves-surfacetension">
       <title>Fluids with surface tension</title>
 
+      <statement>
         <p>
           Suppose now that there is surface tension <m>T</m> between the two fluids of <xref ref="ex-waterwaves-density"/>. In lectures, it was shown that the linear dynamic boundary condition is given by 
           <me>
@@ -863,6 +1024,43 @@
           \omega^2 = gk + \frac{Tk^3}{\rho}.
           </me>
         </p>
+      </statement>
+
+
+        <solution>
+          <p>
+            This question was done in the problem class recordings on 11 November 2025 accessed <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695">here</url>.
+          </p>
+
+          <p>
+            Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give 
+            <me>
+              \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, 
+            </me>
+           evaluated on <m>y = 0</m>.  
+          </p>
+        <p>
+          Thus in this equation, we use the same ansatzes as for the previous few questions. The system of equations is 
+          <md>
+            <mrow>f'' + k^2 f = 0, </mrow>
+            <mrow>f(-\infty) \text{ is bounded}, </mrow>
+            <mrow>f'(0) = (\omega)A, </mrow>
+            <mrow>-(\omega) f(0) + [g + (T/\rho)k^2] A = 0, </mrow>
+          </md>
+        </p>
+
+        <p>
+          The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <m>g</m>, we can substitute <m>g + (T/\rho)k^2</m> we we impose the boundary conditions and apply the determinant condition. 
+        </p>
+
+        <p>
+          Previously for deep-water gravity waves, we had <m>\omega^2 = gk</m>. So now we must have 
+          <me>
+            \omega^2 = \left(g + \frac{T}{\rho} k^2\right) k,
+          </me>
+         as desired.  
+        </p>
+        </solution>
     </exercise>
 
     <exercise>
@@ -890,6 +1088,16 @@
             to put the wave <m>\eta</m> into the form of a product of sinusoidal waves. 
             </p>
           </statement>
+
+
+          <solution>
+            <p>
+              <me>
+              \eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2 t)}{2}\right] 
+              \cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2 t)}{2}\right] 
+              </me>
+            </p>
+          </solution>
         </task>
 
         <task>
@@ -907,6 +1115,16 @@
               In the limit that <m>\Delta k, \Delta \omega \ll 1</m> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope. 
             </p>
           </statement>
+
+          <solution>
+            <p>
+              Setting in the substutitions, we have 
+              <me>
+                \eta = 2\sin(kx - \omega t)\cos(\Delta k x - \Delta \omega t).
+              </me>
+             The point here is that <m>\Delta k, \Delta \omega \ll 1</m>, so the cosine term is very nearly 1. This yields the standard travelling sinusoidal wave. However, over long timescales, notably when <m>t</m> is large, the cosine term is no longer constant. This yields a slowly varying envelope or amplitude multiplying the sine, 
+            </p>
+          </solution>
         </task>
 
         <task>
@@ -916,12 +1134,25 @@
             <me>
               x(t) = \frac{\Delta \omega}{\Delta k} t,
             </me>
-            and therefore in the limit <m>\Delta k, \Delta \omega \to 0</m>, the velocicty of such maxima (called the group velocity) is given by 
+            and therefore in the limit <m>\Delta k, \Delta \omega \to 0</m>, the velocity of such maxima (called the group velocity) is given by 
             <me>
               v_g = \dd{\omega}{k}.
             </me>
             </p>
           </statement>
+
+          <solution>
+            <p>
+              This part is quite straightforward. The maxima of the cosines are found at multiples of <m>2\pi</m> in the argument. For example, the first maxima lies at <m>\Delta k x - \Delta \omega t = 0,</m> hence <m>x(t) = (\Delta k/\Delta \omega)t.</m>
+            </p>
+
+            <p>
+              This is indeed equivalent to a particle that moves with velocity <m>\Delta k/\Delta \omega</m>. In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity, 
+              <me>
+                v_g = \dd{\omega}{k}.
+              </me>
+            </p>
+          </solution>
         </task>
     </exercise>
     
