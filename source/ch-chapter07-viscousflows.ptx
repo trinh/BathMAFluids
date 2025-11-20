@@ -2272,11 +2272,115 @@
       </task>
     </exercise>
 
+    <exercise xml:id="ps-stress-pressure">
+      <title>Stress on a surface due to the pressure</title>
+      <introduction>
+        <p>
+          In this problem, you will calculate the resultant force on the cube shown in
+          <xref ref="fig-small-cube"/> due to the pressure in the surrounding fluid acting on the fluid
+          within the cube.
+          We will consider two different methods of calculating this force.
+        </p>
+        <p>
+          Note that, in this question, as with the derivation of the
+          Navier<ndash/>Stokes equations <xref ref="eqn-navierstokes"/>,
+          you may use some sleight of hand, so as to avoid carefully integrating
+          the force over the surface.
+          However, as in that case, fortunately the errors cancel and the result is correct.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Assuming that the pressure <m>p(x,y,z)</m> is uniform over the surface
+            <m>x=x_0</m> and over the surface <m>x=x_0+\delta</m>,
+            calculate the force on the fluid in the cube due to the pressure of the
+            surrounding fluid on these two faces and show that it is approximately
+            <me>-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi,</me>
+            where <m>V=\delta^3</m> is the volume of the cube.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The force on <m>x=x_0</m> is pressure times area acting into the cube,
+            which is <m>\delta^2p|_{x_0}\bi</m>, while the force on <m>x=x_0+\delta</m>
+            equals <m>-\delta^2p|_{x+\delta}\bi</m>.
+            Hence the contribution to the force from these two faces is
+            <me>\delta^2p|_{x_0}\bi-\delta^2p|_{x+\delta}\bi
+              \approx-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi.</me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Similarly, calculate the force on the fluid in the cube due to the pressure of the
+            surrounding fluid on the faces <m>y=y_0</m> and <m>y=y_0+\delta</m>,
+            and on the faces <m>z=z_0</m> and <m>z=z_0+\delta</m>.
+            Hence show that the total force on the fluid in the cube due to the pressure
+            of the surrounding fluid is given by
+            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The force on <m>y=y_0</m> is <m>\delta^2p|_{y_0}\bj</m> and that on <m>y=y_0+\delta</m>
+            is <m>-\delta^2p|_{y+\delta}\bj</m>. This gives a contribution
+            <me>\delta^2p|_{y_0}\bj-\delta^2p|_{y+\delta}\bj
+              \approx-\delta^3\pd{p}{y}\bj=-V\pd{p}{y}\bj.
+            </me>
+            Similarly,
+            the force on <m>z=z_0</m> is <m>\delta^2p|_{z_0}\bk</m> and that on <m>z=z_0+\delta</m>
+            is <m>-\delta^2p|_{z+\delta}\bk</m>. This gives a contribution
+            <me>\delta^2p|_{z_0}\bk-\delta^2p|_{z+\delta}\bk
+              \approx-\delta^3\pd{p}{z}\bk=-V\pd{p}{z}\bk.
+            </me>
+            Hence the total force on the fluid in the cube due to the pressure
+            of the surrounding fluid is given by
+            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Check that you get the same result using the stress tensor of an inviscid fluid
+            <xref ref="eq-inviscidstress"/>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The unit normal to the face <m>x=x_0</m> is <m>\hat{\bn}=-\bi</m>,
+            and hence the stress at a point in this face is
+            <me>\tau=\bsigma\hat{\bn}=-p\bI(-\bi)=p\bi.</me>
+            Hence the force on this face equals <m>\delta^2p_{x=x_0}\bi</m>.
+            Similarly, the unit normal to the face <m>x=x_0+\delta</m> is <m>\hat{\bn}=\bi</m>,
+            and hence the stress at a point in this face is
+            <me>\tau=\bsigma\hat{\bn}=-p\bI(\bi)=-p\bi.</me>
+            Hence the force on this face equals <m>-\delta^2p_{x=x_0+\delta}\bi</m>.
+            Thus the contribution to the force from these two faces is
+            <me>\delta^2p|_{x_0}\bi-\delta^2p|_{x+\delta}\bi
+              \approx-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi.
+            </me>
+            The contributions from the other faces can be calculated similarly,
+            and the total force on the fluid in the cube due to the pressure
+            of the surrounding fluid is given by
+            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>                
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
     <exercise>
       <title>Force on a blob of fluid</title>
       <introduction>
         <p>
-          In this exercise, you will find a new expression for the stress at surface
+          In this exercise, you will find an expression for force per unit volume acting
+          on an incompressible Newtonian fluid.
+          You will do this by finding the force acting on a small blob of the fluid
+          as an integral over its volume. First you will find a new expression
+          for the stress vector at the blob's surface,
+          which makes the rest of the calculation easier.
           with normal <m>\hat{\bn}</m>,
           and use this to find an expression for the force on a blob of fluid.
         </p>
@@ -2448,105 +2552,6 @@
               \frac{\bF}{V}=-\nabla p+\mu\nabla^2\bu,
             </me>
             as required.
-          </p>
-        </solution>
-      </task>
-    </exercise>
-
-    <exercise xml:id="ps-stress-pressure">
-      <title>Stress on a surface due to the pressure</title>
-      <introduction>
-        <p>
-          In this problem, you will calculate the resultant force on the cube shown in
-          <xref ref="fig-small-cube"/> due to the pressure in the surrounding fluid acting on the fluid
-          within the cube.
-          We will consider two different methods of calculating this force.
-        </p>
-        <p>
-          Note that, in this question, as with the derivation of the
-          Navier<ndash/>Stokes equations <xref ref="eqn-navierstokes"/>,
-          you may use some sleight of hand, so as to avoid carefully integrating
-          the force over the surface.
-          However, as in that case, fortunately the errors cancel and the result is correct.
-        </p>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            Assuming that the pressure <m>p(x,y,z)</m> is uniform over the surface
-            <m>x=x_0</m> and over the surface <m>x=x_0+\delta</m>,
-            calculate the force on the fluid in the cube due to the pressure of the
-            surrounding fluid on these two faces and show that it is approximately
-            <me>-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi,</me>
-            where <m>V=\delta^3</m> is the volume of the cube.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            The force on <m>x=x_0</m> is pressure times area acting into the cube,
-            which is <m>\delta^2p|_{x_0}\bi</m>, while the force on <m>x=x_0+\delta</m>
-            equals <m>-\delta^2p|_{x+\delta}\bi</m>.
-            Hence the contribution to the force from these two faces is
-            <me>\delta^2p|_{x_0}\bi-\delta^2p|_{x+\delta}\bi
-              \approx-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi.</me>
-          </p>
-        </solution>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Similarly, calculate the force on the fluid in the cube due to the pressure of the
-            surrounding fluid on the faces <m>y=y_0</m> and <m>y=y_0+\delta</m>,
-            and on the faces <m>z=z_0</m> and <m>z=z_0+\delta</m>.
-            Hence show that the total force on the fluid in the cube due to the pressure
-            of the surrounding fluid is given by
-            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>
-          </p>
-        </statement>
-        <solution>
-          <p>
-            The force on <m>y=y_0</m> is <m>\delta^2p|_{y_0}\bj</m> and that on <m>y=y_0+\delta</m>
-            is <m>-\delta^2p|_{y+\delta}\bj</m>. This gives a contribution
-            <me>\delta^2p|_{y_0}\bj-\delta^2p|_{y+\delta}\bj
-              \approx-\delta^3\pd{p}{y}\bj=-V\pd{p}{y}\bj.
-            </me>
-            Similarly,
-            the force on <m>z=z_0</m> is <m>\delta^2p|_{z_0}\bk</m> and that on <m>z=z_0+\delta</m>
-            is <m>-\delta^2p|_{z+\delta}\bk</m>. This gives a contribution
-            <me>\delta^2p|_{z_0}\bk-\delta^2p|_{z+\delta}\bk
-              \approx-\delta^3\pd{p}{z}\bk=-V\pd{p}{z}\bk.
-            </me>
-            Hence the total force on the fluid in the cube due to the pressure
-            of the surrounding fluid is given by
-            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>
-          </p>
-        </solution>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Check that you get the same result using the stress tensor of an inviscid fluid
-            <xref ref="eq-inviscidstress"/>.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            The unit normal to the face <m>x=x_0</m> is <m>\hat{\bn}=-\bi</m>,
-            and hence the stress at a point in this face is
-            <me>\tau=\bsigma\hat{\bn}=-p\bI(-\bi)=p\bi.</me>
-            Hence the force on this face equals <m>\delta^2p_{x=x_0}\bi</m>.
-            Similarly, the unit normal to the face <m>x=x_0+\delta</m> is <m>\hat{\bn}=\bi</m>,
-            and hence the stress at a point in this face is
-            <me>\tau=\bsigma\hat{\bn}=-p\bI(\bi)=-p\bi.</me>
-            Hence the force on this face equals <m>-\delta^2p_{x=x_0+\delta}\bi</m>.
-            Thus the contribution to the force from these two faces is
-            <me>\delta^2p|_{x_0}\bi-\delta^2p|_{x+\delta}\bi
-              \approx-\delta^3\pd{p}{x}\bi=-V\pd{p}{x}\bi.
-            </me>
-            The contributions from the other faces can be calculated similarly,
-            and the total force on the fluid in the cube due to the pressure
-            of the surrounding fluid is given by
-            <me>-V\pd{p}{x}\bi-V\pd{p}{y}\bj-V\pd{p}{z}\bk=-V\nabla p.</me>                
           </p>
         </solution>
       </task>
