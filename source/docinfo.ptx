@@ -40,6 +40,7 @@
     \newcommand{\dxyz}{\de{x}\de{y}\de{z}} % Do this
     \newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} % Do this
     \newcommand{\bx}{\boldsymbol{x}}
+    \newcommand{\bs}{\boldsymbol{s}}
     \newcommand{\be}{\boldsymbol{e}}
     \newcommand{\bX}{\boldsymbol{X}}
     \newcommand{\bn}{\boldsymbol{n}}
@@ -51,6 +52,7 @@
     \newcommand{\bg}{\boldsymbol{g}}
     \newcommand{\bF}{\boldsymbol{F}}
     \newcommand{\bomega}{\boldsymbol{\omega}}
+    \newcommand{\bOmega}{\boldsymbol{\Omega}}
     \newcommand{\bsigma}{\boldsymbol{\sigma}}
     \newcommand{\btau}{\boldsymbol{\tau}}
     \newcommand{\bd}{\boldsymbol{d}}

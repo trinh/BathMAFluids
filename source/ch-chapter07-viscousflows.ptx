@@ -2375,6 +2375,9 @@
       <title>Force on a blob of fluid</title>
       <introduction>
         <p>
+          <em>Based on Exercises 6.1 and 6.2 in <xref ref="ref-acheson"/>.</em>
+        </p>
+        <p>
           In this exercise, you will find an expression for force per unit volume acting
           on an incompressible Newtonian fluid.
           You will do this by finding the force acting on a small blob of the fluid
@@ -2552,6 +2555,329 @@
               \frac{\bF}{V}=-\nabla p+\mu\nabla^2\bu,
             </me>
             as required.
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-rotating-flow">
+      <title>Rotating flow</title>
+      <introduction>
+        <p>
+          <em>Based on Exercise 6.6 in <xref ref="ref-acheson"/>.</em>
+        </p>
+        <p>
+          Consider an incompressible Newtonian fluid flowing with velocity <m>\bu=\bOmega\times\bx</m>,
+          where <m>\bOmega</m> is a constant vector.
+          Since <m>\bOmega</m> is constant, for simplicity you may assume that <m>\bOmega=\Omega\bk</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Calculate the velocity components in Cartesian coordinates
+            in the case <m>\bOmega=\Omega\bk</m>.
+            Show that this flow is incompressible.
+            Find the components
+            of the deviatoric stress tensor.
+            Comment on this result.            
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Calculate the velocity components in Cartesian coordinates
+            in the case <m>\bOmega=\Omega\bk</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have
+            <me>
+              \bu=\bOmega\times\bx
+              =\begin{vmatrix}
+                \bi &amp; \bj &amp; \bk \\
+                0 &amp; 0 &amp; \Omega \\
+                x &amp; y &amp; z
+              \end{vmatrix}
+              =-\Omega y\bi+\Omega x\bj+0\bk.
+            </me>
+            Hence the velocity components are
+            <me>
+              u=-\Omega y,\quad v=\Omega x,\quad w=0.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that this flow is incompressible.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have
+            <me>
+              \nabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
+            </me>
+            and hence the flow is incompressible.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the components of the stress tensor.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have
+            <md>
+              <mrow>
+                \sigma_{11}=&amp;-p+2\mu\pd{u}{x}=-p+0=-p,
+              </mrow>
+              <mrow>
+                \sigma_{12}=&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)
+                =\mu(-\Omega+ \Omega)=0,
+              </mrow>
+              <mrow>
+                \sigma_{13}=&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)=\mu(0+0)=0,
+              </mrow>
+              <mrow>
+                \sigma_{21}=&amp;\mu\left(\pd{v}{x}+\pd{u}{y}\right)
+                =\mu(\Omega -\Omega)=0,
+              </mrow>
+              <mrow>
+                \sigma_{22}=&amp;-p+2\mu\pd{v}{y}=-p+0=-p,
+              </mrow>
+              <mrow>
+                \sigma_{23}=&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)=\mu(0+0)=0,
+              </mrow>
+              <mrow>
+                \sigma_{31}=&amp;\mu\left(\pd{w}{x}+\pd{u}{z}\right)=\mu(0+0)=0,
+              </mrow>
+              <mrow>
+                \sigma_{32}=&amp;\mu\left(\pd{w}{y}+\pd{v}{z}\right)=\mu(0+0)=0,
+              </mrow>
+              <mrow>
+                \sigma_{33}=&amp;-p+2\mu\pd{w}{z}=-p+0=-p.
+              </mrow>
+            </md>
+            Hence the deviatoric stress tensor is
+            <me>
+              \bsigma
+              =\left(\begin{matrix}
+                -p &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; -p \\
+                0 &amp; 0 &amp; -p
+              \end{matrix}\right),
+              =-p\bI,
+            </me>
+            where <m>\bI</m> is the identity tensor.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Comment on this result by explaining why you got this answer.          
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The result shows that the deviatoric stress tensor is zero,
+            meaning there are no viscous stresses in this flow.
+            The only stress is due to the pressure in the fluid.
+            This is as expected since the flow represents a solid body rotation
+            with angular velocity <m>\bOmega</m>.
+            In a solid body rotation, there is no relative motion between
+            adjacent fluid particles, and hence no viscous stresses.
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>General deformation of a fluid element</title>
+      <introduction>
+        <p>
+          <em>Based on Exercise 6.7 in <xref ref="ref-acheson"/>.</em>
+        </p>
+        <p>
+          In this exercise, you will consider the general deformation of a fluid element
+          in an incompressible Newtonian fluid.
+          You will show that the deformation can be expressed as a combination of
+          three types of motion: translation, rotation and pure strain.
+        </p>
+        <p>
+          Note that, if the fluid were also compressible,
+          there would be a fourth type of motion,
+          namely expansion or contraction.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>P</m> be a point in the fluid with position vector <m>\bx</m>,
+            and let <m>Q</m> be a nearby point with position vector <m>\bx+\bs</m>.
+            Explain why the velocity at point <m>Q</m> can be expressed in terms
+            of that at point <m>P</m> as
+            <me>
+              \bu_Q=\bu_P+(\bs\cdot\nabla)\bu.
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The velocity at point <m>Q</m> can be expressed as a Taylor series expansion
+            about point <m>P</m>:
+            <me>
+              \bu_Q=\bu_P+\left(\bs\cdot\nabla\right)\bu
+              +\frac{1}{2!}\left(\bs\cdot\nabla\right)^2\bu
+              +\frac{1}{3!}\left(\bs\cdot\nabla\right)^3\bu+\cdots.
+            </me>
+            Since <m>Q</m> is a nearby point to <m>P</m>, the higher order terms
+            in <m>\bs</m> are negligible, and hence we have
+            <me>
+              \bu_Q=\bu_P+(\bs\cdot\nabla)\bu,
+            </me>
+            as required.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that
+            <me>
+              \bu_Q=\bu_P+\frac12(\nabla_x\times\bu)\times\bs
+              +\frac12\nabla_s(\sum_{i=1}^3\sum_{j=1}^3e_{ij}s_is_j),
+            </me>
+            where <m>\nabla_x</m> denotes differentiation with respect to the
+            components of <m>\bx</m>, <m>\nabla_s</m> denotes differentiation with respect to the
+            components of <m>\bs</m>, and
+            <me>
+              e_{ij}=\frac12\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+            </me>
+          </p>
+          <p>
+            You may use the fact that
+            <m>(\nabla\times\bf)\times\bg=\bg\cdot\nabla\bf-\nabla(\bg\cdot\bf)</m>,
+            where, in the second term on the right-hand side,
+            the operator <m>\nabla</m> acts on <m>\bf</m> but not <m>\bg</m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have that the <m>k</m>th component of the final term of the target expression is
+            <md>
+              <mrow>
+                &amp;\left\{\frac12\nabla_s(\sum_{i=1}^3\sum_{j=1}^3e_{ij}s_is_j)\right\}_k
+              </mrow>
+              <mrow>
+                =&amp;\frac12\pd{}{s_k}(\sum_{i=1}^3\sum_{j=1}^3e_{ij}s_is_j)
+              </mrow>
+              <mrow>
+                =&amp;\frac12(\sum_{i=1}^3e_{ik}s_i+\sum_{j=1}^3e_{kj}s_j)
+              </mrow>
+              <mrow>
+                =&amp;\frac12\sum_{i=1}^3(e_{ik}s_i+e_{ki}s_i)
+              </mrow>
+              <mrow>
+                =&amp;\sum_{i=1}^3e_{ik}s_i,
+              </mrow>
+            </md>
+            where the final equality uses the fact that
+            the rate-of-strain tensor is symmetric <m>e_{ij}=e_{ji}</m>.
+            Substituting for <m>e_{ik}</m> gives
+            <md>
+              <mrow>
+                &amp;\sum_{i=1}^3e_{ik}s_i
+              </mrow>
+              <mrow>
+                =&amp;\frac12\sum_{i=1}^3\left(\pd{u_i}{x_k}+\pd{u_k}{x_i}\right)s_i.
+              </mrow>
+            </md>
+          </p>
+          <p>
+            Using the given vector identity, the <m>k</m>th component of the second term
+            of the target expression is
+            <md>
+              <mrow>
+                &amp;\left\{\frac12(\nabla_x\times\bu)\times\bs\right\}_k
+              </mrow>
+              <mrow>  
+                =&amp;\frac12\left\{\bs\cdot\nabla_x\bu-\nabla_x(\bs\cdot\bu)\right\}_k
+              </mrow>
+              <mrow>
+                =&amp;\frac12\left\{\sum_{i=1}^3s_i\pd{u_k}{x_i}
+                -\sum_{i=1}^3s_i\pd{u_i}{x_k}\right\}
+              </mrow>
+              <mrow>  
+                =&amp;\frac12\sum_{i=1}^3\left(\pd{u_k}{x_i}-\pd{u_i}{x_k}\right)s_i.
+              </mrow>
+            </md>
+          </p>
+          <p>
+            Hence the <m>k</m>th component of the sum of the second and the third terms of the target expression is
+            <md>
+              <mrow>
+                &amp;\frac12(\nabla_x\times\bu)\times\bs
+                +\frac12\nabla_s(\sum_{i=1}^3\sum_{j=1}^3e_{ij}s_is_j)
+              </mrow>
+              <mrow>
+                =&amp;\frac12\sum_{i=1}^3\left(\pd{u_k}{x_i}-\pd{u_i}{x_k}\right)s_i
+                +\frac12\sum_{i=1}^3\left(\pd{u_i}{x_k}+\pd{u_k}{x_i}\right)s_i
+              </mrow>
+              <mrow>
+                =&amp;\sum_{i=1}^3\pd{u_k}{x_i}s_i,
+              </mrow>
+            </md>
+            which is the <m>k</m>th component of <m>(\bs\cdot\nabla)\bu</m>, thus proving the result.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Explain why the three terms on the right-hand side of the expression
+            in the previous part represent translation, rotation and pure strain,
+            respectively.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  The first term <m>\bu_P</m> represents translation since it is the velocity
+                  at point <m>P</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The second term
+                  <m>\frac12(\nabla_x\times\bu)\times\bs</m>
+                  represents rotation since, setting <m>\bOmega=\nabla_x\times\bu/2=\bomega/2</m>,
+                  this term is of the form <m>\bOmega\times\bs</m>,
+                  which is purely rotational motion about point <m>P</m> (see <xref ref="ex-rotating-flow"/>).
+                  Note also that this again shows a result that we used in <xref ref="sec-vorticity"/>
+                  that the vorticity <m>\bomega</m> is twice the angular velocity
+                  since <m>\bOmega=\bomega/2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The third term
+                  <m>\frac12\nabla_s(\sum_{i=1}^3\sum_{j=1}^3e_{ij}s_is_j)</m>
+                  represents pure strain since it depends on the rate-of-strain tensor <m>e_{ij}</m>,
+                  which describes how the fluid element is deformed without rotation.
+                </p>
+              </li>
+            </ul>
           </p>
         </solution>
       </task>
