@@ -2272,6 +2272,187 @@
       </task>
     </exercise>
 
+    <exercise>
+      <title>Force on a blob of fluid</title>
+      <introduction>
+        <p>
+          In this exercise, you will find a new expression for the stress at surface
+          with normal <m>\hat{\bn}</m>,
+          and use this to find an expression for the force on a blob of fluid.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Recall that <m>\btau=\bsigma\cdot\hat{\bn}</m> is the stress vector
+            acting on a surface with normal <m>\hat{\bn}</m>, and this is given by
+            <me>
+              \tau_i=-pn_i+\mu\sum_{j=1}^3n_j\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right).
+            </me>
+            Show that this is identical to
+            <me>
+              \btau=-p\hat{\bn}+\mu\left[2(\hat{\bn}\cdot\nabla)\bu
+              +\hat{\bn}\times(\nabla\times\bu)\right].
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Expanding,
+            <me>
+              \hat{\bn}\times\left(\nabla\times\bu\right)
+              =\nabla(\hat{\bn}\cdot\bu)-(\hat{\bn}\cdot\nabla)\bu,
+            </me>
+            where, in the first bracket,
+            the operator <m>\nabla</m> acts on <m>\bu</m> but not <m>\bn</m>.
+            The <m>i</m>th component of this expression is
+            <md>
+              <mrow>
+                \left[\hat{\bn}\times(\nabla\times\bu)\right]_i
+                &amp;=\sum_{j=1}^3n_j\pd{u_j}{x_i}-(\hat{\bn}\cdot\nabla)u_i
+              </mrow>
+              <mrow>
+                &amp;=\sum_{j=1}^3n_j\pd{u_j}{x_i}-\sum_{j=1}^3n_j\pd{u_i}{x_j}.
+              </mrow>
+            </md>
+            Hence, the <m>i</m>th component of the target expression is
+            <md>
+              <mrow>
+                &amp;\left\{-p\bn+\mu\left[2(\hat{\bn}\cdot\nabla)\bu
+                +\hat{\bn}\times(\nabla\times\bu)\right]\right\}_i
+              </mrow>
+              <mrow>
+                &amp;=-pn_i+\mu\left[2\sum_{j=1}^3n_j\pd{u_i}{x_j}
+                +\sum_{j=1}^3n_j\pd{u_j}{x_i}-\sum_{j=1}^3n_j\pd{u_i}{x_j}\right]
+              </mrow>
+              <mrow>
+                &amp;=-pn_i+\mu\left[\sum_{j=1}^3n_j\pd{u_i}{x_j}
+                +\sum_{j=1}^3n_j\pd{u_j}{x_i}\right]
+              </mrow>
+              <mrow>
+                &amp;=\sum_{j=1}^3\left[-p\delta_{ij}+\mu\left(\pd{u_i}{x_j}
+                +\pd{u_j}{x_i}\right)\right]n_j
+              </mrow>
+              <mrow>
+                &amp;=\sum_{j=1}^3\sigma_{ij}n_j
+              </mrow>
+              <mrow>
+                &amp;=\btau_i,
+              </mrow>
+            </md>
+            as required.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Hence show that the force on a blob of incompressible fluid of volume <m>V</m> due to the
+            surrounding fluid is given by
+            <me>
+              \bF=\iint_S\btau\de S
+              =\iiint_V\left(-\nabla p+\mu\nabla^2\right)\de V,
+            </me>
+            where <m>S</m> is the surface of the blob of fluid.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Use the following vector calculus identities:
+            <md>
+              <mrow>
+                &amp;\iint_S\phi\bn\de S=\iiint_V-\nabla\phi\de V,
+              </mrow>
+              <mrow>
+                &amp;\iint_S\bF\times\hat{\bn}\de S=-\iiint_V\nabla\times\bF\de V,
+              </mrow>
+              <mrow>
+                &amp;\iint_S(\hat{\bn}\cdot\nabla)\phi\de S=\iiint_V\nabla^2\phi\de V,
+              </mrow>
+              <mrow>
+                &amp;\nabla^2\bF=\nabla(\nabla\cdot\bF)-\nabla\times(\nabla\times\bF).
+              </mrow>
+            </md>
+          </p>
+        </hint>
+        <solution>
+          <p>
+            We have
+            <md>
+              <mrow>
+                \bf=&amp;\iint_S\btau\de S
+              </mrow>
+              <mrow>
+                =&amp;\iint_S\left\{-p\hat{\bn}+\mu\left[2(\hat{\bn}\cdot\nabla)\bu
+                +\hat{\bn}\times(\nabla\times\bu)\right]\right\}\de S.
+              </mrow>
+            </md>
+            We now make use of the vector calculus identities given in the hint.
+            The first term becoems
+            <me>
+              \iint_S-p\hat{\bn}\de S=\iiint_V-\nabla p\de V,
+            </me>
+            the second term becomes
+            <me>
+              \iint_S2\mu(\hat{\bn}\cdot\nabla)\bu\de S
+              =\iiint_V2\mu\nabla^2\bu\de V,
+            </me>
+            and for the third term,
+            <md>
+              <mrow>
+                \iint_S\mu\hat{\bn}\times(\nabla\times\bu)\de S
+                =&amp;-\iint_S\mu(\nabla\times\bu)\times\hat{\bn}\de S
+              </mrow>
+              <mrow>
+                =&amp;\iiint_V\mu\nabla\times(\nabla\times\bu)\de V,
+              </mrow>
+              <mrow>
+                =&amp;\iiint_V\mu\nabla(\nabla\cdot\bu)-\mu\nabla^2\bu\de V.
+              </mrow>
+            </md>
+            Hence, since the fluid is incompressible and <m>\nabla\cdot\bu=0</m>,
+            the third term becomes
+            <me>
+              \\\int_V-\mu\nabla^2\bu\de V.
+            </me>
+            Combining these three results gives
+            <md>
+              <mrow>
+                \bF=&amp;\iiint_V\left(-\nabla p+2\mu\nabla^2\bu-\mu\nabla^2\bu\right)\de V
+              </mrow>
+              <mrow>
+                =&amp;\iiint_V\left(-\nabla p+\mu\nabla^2\bu\right)\de V,
+              </mrow>
+            </md>
+            as required.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Deduce that, if the blob is small, the net force on it per unit volume of fluid
+            equals <m>-\nabla p+\mu\nabla^2\bu</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            If the blob is small, then the integrand in the expression for the force
+            varies little over the volume of the blob, and so
+            <me>
+              \bF\approx\left(-\nabla p+\mu\nabla^2\bu\right)V,
+            </me>
+            where <m>V</m> is the volume of the blob. Hence the force per unit volume
+            is given by
+            <me>
+              \frac{\bF}{V}=-\nabla p+\mu\nabla^2\bu,
+            </me>
+            as required.
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
     <exercise xml:id="ps-stress-pressure">
       <title>Stress on a surface due to the pressure</title>
       <introduction>
