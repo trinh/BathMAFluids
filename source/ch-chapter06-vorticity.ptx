@@ -2238,6 +2238,23 @@
           </me>
         </p>
       </statement>
+      <hint>
+        <p>
+          The complex potential associated with a vortex in isolation at the point <m>c</m> is
+          <me>
+            f(z)=-\frac{\im\Gamma}{2\pi}\log(z-c).
+          </me>
+          The Milne-Thomson Circle Theorem <xref ref="thm-circle-theorem"/> states that,
+          for a complex potential <m>g(z)</m>, the function
+          <me>
+            w(z)=g(z)+\overline{g\left(\frac{R^2}{\overline{z}}\right)}
+          </me>
+          has the same singularities as <m>g(z)</m> outside the circle <m>|z|=R</m> and that <m>|z|=R</m>
+          is a streamline of the flow with complex potential <m>w(z)</m>.
+          Removing the line vortex from the associated flow allows 
+          its velocity to be found.
+        </p>
+      </hint>
       <!--<solution>
         <p>
           The complex potential associated with the vortex in isolation is
