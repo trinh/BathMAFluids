@@ -416,7 +416,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-low-Reynolds-number-sphere.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Low-Reynolds-number flow past a sphere</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Practice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-10.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Problems set 7 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-11.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Problems set 8 to hand in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -444,35 +446,38 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-axisymmetric-flow"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Axisymmetric flow</span>
 </h2>
-<section class="introduction" id="sec-axisymmetric-flow-2"><div class="para" id="sec-axisymmetric-flow-2-1">In the special case in which the flow possesses axisymmetry, you might not be surprised to learn that the equations simplify considerably. In fact, axisymmetry can be viewed as a reduction of the dimension of the problem and axisymmetric flows share some features in common with two-dimensional flows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="sec-axisymmetric-flow-2"><div class="para" id="sec-axisymmetric-flow-2-1">
+<em class="emphasis">In this section, we only covered <a href="sec-axisymmetric-flow.html#def-axisymmetric-flow" class="xref" data-knowl="./knowl/xref/def-axisymmetric-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.1: Axisymmetric flow">Definition 6.3.1</a> and  <a href="sec-axisymmetric-flow.html#def-stokes-streamfunction" class="xref" data-knowl="./knowl/xref/def-stokes-streamfunction.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.3: The Stokes streamfunction">Definition 6.3.3</a>. We did not do examples. For the exam, you therefore need to be aware of the concept of axisymmetric flow and the Stokes streamfunction, but you wouldn’t be asked to do a calculation.</em><div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="sec-axisymmetric-flow-2-2"><h3 class="heading">
+<div class="para" id="sec-axisymmetric-flow-2-2">In the special case in which the flow possesses axisymmetry, you might not be surprised to learn that the equations simplify considerably. In fact, axisymmetry can be viewed as a reduction of the dimension of the problem and axisymmetric flows share some features in common with two-dimensional flows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-axisymmetric-flow"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Axisymmetric flow.</span>
 </h3>
-<div class="para logical" id="sec-axisymmetric-flow-2-2-2-1">
+<div class="para logical" id="def-axisymmetric-flow-2-1">
 <div class="para">Given an axis of symmetry, an axisymmetric flow must possess:</div>
-<ul class="disc" id="sec-axisymmetric-flow-2-2-2-1-1">
-<li id="sec-axisymmetric-flow-2-2-2-1-1-1">
-<div class="para" id="sec-axisymmetric-flow-2-2-2-1-1-1-1">rotational symmetry about the axis, meaning the flow is unaffected by a rotation through any angle about the axis, and<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-2-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="def-axisymmetric-flow-2-1-1">
+<li id="def-axisymmetric-flow-2-1-1-1">
+<div class="para" id="def-axisymmetric-flow-2-1-1-1-1">rotational symmetry about the axis, meaning the flow is unaffected by a rotation through any angle about the axis, and<div class="autopermalink" data-description="Paragraph"><a href="#def-axisymmetric-flow-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-axisymmetric-flow-2-2-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#def-axisymmetric-flow-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="sec-axisymmetric-flow-2-2-2-1-1-2">
-<div class="para" id="sec-axisymmetric-flow-2-2-2-1-1-2-1">reflectional symmetry in any plane containing the axis.<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-2-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="def-axisymmetric-flow-2-1-1-2">
+<div class="para" id="def-axisymmetric-flow-2-1-1-2-1">reflectional symmetry in any plane containing the axis.<div class="autopermalink" data-description="Paragraph"><a href="#def-axisymmetric-flow-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#sec-axisymmetric-flow-2-2-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#def-axisymmetric-flow-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-axisymmetric-flow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 6.3.1: Axisymmetric flow"><a href="#sec-axisymmetric-flow-2-2" title="Copy heading and permalink for Definition 6.3.1: Axisymmetric flow" aria-label="Copy heading and permalink for Definition 6.3.1: Axisymmetric flow">🔗</a></div></article><article class="remark remark-like" id="sec-axisymmetric-flow-2-3"><h3 class="heading">
+<div class="autopermalink" data-description="Definition 6.3.1: Axisymmetric flow"><a href="#def-axisymmetric-flow" title="Copy heading and permalink for Definition 6.3.1: Axisymmetric flow" aria-label="Copy heading and permalink for Definition 6.3.1: Axisymmetric flow">🔗</a></div></article><article class="remark remark-like" id="sec-axisymmetric-flow-2-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="sec-axisymmetric-flow-2-3-1">Note that rotationally symmetric flows are not in general axisymmetric. Working in cylindrical polar coordinates <span class="process-math">\((r,\theta.z)\)</span> centred on the axis of symmetry, any flow that is independent of <span class="process-math">\(\theta\)</span> is rotationally symmetric. In order to have the stronger property of being axisymmetric, the flow must also satisfy <span class="process-math">\(u_{\theta}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-axisymmetric-flow-2-4-1">Note that rotationally symmetric flows are not in general axisymmetric. Working in cylindrical polar coordinates <span class="process-math">\((r,\theta.z)\)</span> centred on the axis of symmetry, any flow that is independent of <span class="process-math">\(\theta\)</span> is rotationally symmetric. In order to have the stronger property of being axisymmetric, the flow must also satisfy <span class="process-math">\(u_{\theta}=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-axisymmetric-flow-2-3-2">A flow <span class="process-math">\(\bu=f(r,z,t)\be_{\theta}\)</span> is rotationally symmetric but not axisymmetric, for example a line vortex <a href="sec-streamfunction.html#example-streamfunction-linevortex" class="xref" data-knowl="./knowl/xref/example-streamfunction-linevortex.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.10: Line vortex">Example 4.2.10</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-axisymmetric-flow-2-4-2">A flow <span class="process-math">\(\bu=f(r,z,t)\be_{\theta}\)</span> is rotationally symmetric but not axisymmetric, for example a line vortex <a href="sec-streamfunction.html#example-streamfunction-linevortex" class="xref" data-knowl="./knowl/xref/example-streamfunction-linevortex.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.10: Line vortex">Example 4.2.10</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-axisymmetric-flow-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 6.3.2"><a href="#sec-axisymmetric-flow-2-3" title="Copy heading and permalink for Remark 6.3.2" aria-label="Copy heading and permalink for Remark 6.3.2">🔗</a></div></article></section><section class="subsection" id="subsec-stokes-streamfunction"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Remark 6.3.2"><a href="#sec-axisymmetric-flow-2-4" title="Copy heading and permalink for Remark 6.3.2" aria-label="Copy heading and permalink for Remark 6.3.2">🔗</a></div></article></section><section class="subsection" id="subsec-stokes-streamfunction"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Stokes streamfunction for axisymmetric flow</span>
 </h3>
 <article class="definition definition-like" id="def-stokes-streamfunction"><h4 class="heading">
