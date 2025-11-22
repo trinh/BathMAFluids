@@ -1008,13 +1008,20 @@
     <title>Axisymmetric flow</title>
     <introduction>
       <p>
+        <em>In this section,
+          we only covered <xref ref="def-axisymmetric-flow"/> and  <xref ref="def-stokes-streamfunction"/>.
+          We did not do examples.
+          For the exam, you therefore need to be aware of the concept of axisymmetric flow and the Stokes streamfunction,
+          but you wouldn't be asked to do a calculation.</em>
+      </p>
+      <p>
         In the special case in which the flow possesses axisymmetry,
         you might not be surprised to learn that the equations simplify considerably.
         In fact, axisymmetry can be viewed as a reduction of the dimension
         of the problem and axisymmetric flows share some features in common with
         two-dimensional flows.
       </p>
-      <definition>
+      <definition xml:id="def-axisymmetric-flow">
         <title>Axisymmetric flow</title>
         <statement>
           <p>
