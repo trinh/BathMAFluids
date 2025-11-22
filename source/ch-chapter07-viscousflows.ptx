@@ -1728,7 +1728,6 @@
         <p>
           The special case of an axisymmetric flow (one that is rotationally symmetric)
           is also much simpler to analyse (and sometimes this is also referred to as being two-dimensional).
-          You will derive the equations in other coordinates in <xref ref="ps-polar-coordinates"/>.
         </p>
       </remark>
       <remark>
@@ -1965,6 +1964,205 @@
         </p>
       </warning>
     </introduction>
+
+    <exercise>
+      <title>Reynolds number estimation</title>
+      <introduction>
+        <p>
+          <em>Based on Problem 2.1 in <xref ref="ref-acheson"/>.</em>
+        </p>
+        <p>
+          Give an order-of-magnitude estimate of the Reynolds number in each of the following situations:
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            flow past the wing of a jumbo jet at 150 m/s (roughly half the speed of sound);
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The kinematic viscosity of air at standard temperature and pressure is
+            about <m>1.5\times10^{-5}~\textrm{m}^2/\textrm{s}</m>.
+            The wingspan of a jumbo jet is about <m>60~\textrm{m}</m>, so the Reynolds
+            number is approximately
+            <me>
+              \textrm{Re}=\frac{UL}{\nu}
+              =\frac{150\times60}{1.5\times10^{-5}}
+              =6\times10^8.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            blood flow in a large artery (diameter 2 cm) at 0.3 m/s;
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The kinematic viscosity of blood is about <m>2.4\times10^{-6}~\textrm{m}^2/\textrm{s}</m>.
+            The diameter of the artery is about <m>0.02~\textrm{m}</m>, so the Reynolds
+            number is approximately
+            <me>
+              \textrm{Re}=\frac{UL}{\nu}
+              =\frac{0.3\times0.02}{2.4\times10^{-6}}
+              =2500.
+            </me>
+            Although this is above 2000, blood flow in arteries is typically laminar.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            a thick layer of honey draining off a spoon at 1 cm/s;
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The kinematic viscosity of honey is about <m>0.007~\textrm{m}^2/\textrm{s}</m>.
+            The thickness of the layer is about <m>0.005~\textrm{m}</m>, so the Reynolds
+            number is approximately
+            <me>
+              \textrm{Re}=\frac{UL}{\nu}
+              =\frac{0.01\times0.005}{0.007}
+              \approx0.007.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            a spermatozoon with tail length <m>10^{-3}</m> swimming at 100 <m>\mu</m>m/s in water.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The kinematic viscosity of water at room temperature is about
+            <m>10^{-6}~\textrm{m}^2/\textrm{s}</m>. The length of the tail is about
+            <m>10^{-3}~\textrm{m}</m>, so the Reynolds number is approximately
+            <me>
+              \textrm{Re}=\frac{UL}{\nu}
+              =\frac{100\times10^{-6}\times10^{-3}}{10^{-6}}
+              =0.1.
+            </me>
+          </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>Nondimensionalisation</title>
+      <introduction>
+        <p>
+          <em>Based on Problem 2.2 in <xref ref="ref-acheson"/></em>
+        </p>
+        <p>
+          In this problem you will work through the nondimensionalisation of
+          a typical fluid flow problem to identify the Reynolds number as a key
+          dimensionless parameter.
+        </p>
+        <p>
+          Consider the two-dimensional steady flow of a viscous incompressible fluid
+          past a circular cylinder of radius <m>a</m>.
+          Far from the cylinder, the fluid velocity is uniform with magnitude <m>U</m>
+          in the <m>x</m>-direction.
+          The governing equations are the incompressible Navier<ndash/>Stokes equations
+          and continuity equation:
+          <me>
+            \left(\bu\cdot\nabla\right)\bu=-\frac{1}{\rho}\nabla p+\nu\nabla^2\bu,\quad
+            \nabla\cdot\bu=0,
+          </me>
+          where <m>\bu=(u,v)</m> is the velocity field, <m>p</m> is the pressure field,
+          <m>\rho</m> is the fluid density,
+          and <m>\nu</m> is the kinematic viscosity of the fluid.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write down suitable boundary conditions at the cylinder surface
+            and far from the cylinder.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            At the cylinder surface, we have the no-slip and no-penetration
+            boundary conditions:
+            <me>
+              u=v=0.
+            </me>
+            Far from the cylinder, the velocity approaches the uniform flow:
+            <me>
+              u\rightarrow U,\quad v\rightarrow0\quad\textrm{as }\sqrt{x^2+y^2}\rightarrow\infty.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Introduce nondimensional variables
+            <me>
+              x^*=\frac{x}{a},\quad y^*=\frac{y}{a},\quad
+              u^*=\frac{u}{U},\quad v^*=\frac{v}{U},\quad
+              p^*=\frac{p}{\rho U^2}.
+            </me>
+            Rewrite the governing equations and boundary conditions in terms of
+            these nondimensional variables.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have:
+            <me>
+              \frac{U^2}{L}\left(\bu^*\cdot\nabla^*\right)\bu^*
+              =-\frac{U^2}{L}\nabla^*p^*
+              +\frac{\nu U}{L^2}\nabla^{*2}\bu^*,\quad
+              \frac{U}{L}\nabla^*\cdot\bu^*=0,
+            </me>
+            which simplify to
+            <me>
+              \mathrm{Re}\left(\bu^*\cdot\nabla^*\right)\bu^*
+              =-\mathrm{Re}\nabla^*p^*
+              +\nabla^{*2}\bu^*,\quad
+              \nabla^*\cdot\bu^*=0,
+            </me>
+            while the boundary conditions become:
+            <me>
+              u^*=v^*=0
+            </me>
+            at <m>x^{*2}+y^{*2}=1</m> and
+            <me>
+              u^*\rightarrow 1,\quad v^*\rightarrow0\quad\textrm{as }\sqrt{x^{*2}+y^{*2}}\rightarrow\infty.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            You should have found that the nondimensional problem depends
+            only on a single parameter: the Reynolds number.
+            Thus flows at equal Reynolds numbers are geometrically similar,
+            and one only needs to know the Reynolds number to understand the
+            flow.
+          </p>
+          <p>
+            This was a particularly simple problem
+            that has an unambiguous length and velocity scale,
+            and so nondimensionalisation of the problem works particularly well.
+            However, it is frequently helpful to nondimensionalise problems before
+            solving so that key dimensionless groups of parameters
+            (such as the Reynolds number) can be identified.
+          </p>
+        </statement>
+      </task>
+    </exercise>
 
     <exercise xml:id="ps-falling-ball-viscometer">
       <title>Falling ball viscometer</title>
@@ -2969,26 +3167,7 @@
         </solution>
       </task>
     </exercise>
-
-    <exercise xml:id="ps-polar-coordinates">
-      <title>Expressing the Navier<ndash/>Stokes equation in other coordinates</title>
-      <statement>
-        <p>
-          In this problem, you will express the Navier<ndash/>Stokes equation
-          in terms of cylindrical and spherical polar coordinates.
-        </p>
-      </statement>
-    </exercise>
-
-    <exercise xml:id="ps-streamfunction">
-      <title>Expressing the Navier<ndash/>Stokes equation in other coordinates</title>
-      <statement>
-        <p>
-          Streamfunction and in axisymmetric flows.
-        </p>
-      </statement>
-    </exercise>
-  </exercises>
+ </exercises>
 
   <exercises>
     <title>Problems set 7 to hand in</title>
