@@ -2857,7 +2857,7 @@
             surrounding fluid is given by
             <me>
               \bF=\iint_S\btau\de S
-              =\iiint_V\left(-\nabla p+\mu\nabla^2\right)\de V,
+              =\iiint_V\left(-\nabla p+\mu\nabla^2\bu\right)\de V,
             </me>
             where <m>S</m> is the surface of the blob of fluid.
           </p>
