@@ -2963,7 +2963,7 @@
       <title>General deformation of a fluid element</title>
       <introduction>
         <p>
-          <em>Based on Exercise 6.8 in <xref ref="ref-acheson"/>.</em>
+          <em>Based on Exercise 6.7 in <xref ref="ref-acheson"/>.</em>
         </p>
         <p>
           In this exercise, you will consider the general deformation of a fluid element
@@ -3145,6 +3145,9 @@
     <exercise>
       <title>Decomposition of a shear flow</title>
       <introduction>
+        <p>
+          <em>Based on Exercise 6.8 in <xref ref="ref-acheson"/>.</em>
+        </p>
         <p>
           In this problem, you will apply the equation from the previous problem
           <xref ref="ex-general-deformation-fluid-element"/>
