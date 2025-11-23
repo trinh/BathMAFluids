@@ -561,16 +561,16 @@ u_z=\frac{P}{4\mu}\left(a-r\right)
 <div class="para">The Navier–Stokes equations in cylindrical polar coordinates are</div>
 <div class="displaymath process-math" id="ch-viscousflows-10-5-5-1-1-2">
 \begin{align*}
-&amp;\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
-=-\pd{p}{r}
+&amp;\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)\\
+=&amp;-\pd{p}{r}
 +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)
 +\rho f_r,\\
-&amp;\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
-=-\frac{1}{r}\pd{p}{\theta}
+&amp;\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)\\
+=&amp;-\frac{1}{r}\pd{p}{\theta}
 +\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)
 +\rho f_{\theta},\\
-&amp;\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
-=-\pd{p}{z}
+&amp;\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)\\
+=&amp;-\pd{p}{z}
 +\mu\nabla^2u_z+\rho f_z,
 \end{align*}
 </div>
