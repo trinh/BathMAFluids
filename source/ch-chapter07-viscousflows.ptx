@@ -1495,7 +1495,8 @@
       </p>
 
       <p>
-        <em>Body forces:</em> These are equal to either zero (if gravity is not important)
+        <em>Body forces:</em> In this course,
+        these are equal to either zero (if gravity is not important)
         or equal to the gravitational force
         <me>
           \bF_{\textrm{surface}}=\bF_{\textrm{gravity}}=\rho V\bg.
@@ -1881,11 +1882,11 @@
       <remark>
         <p>
           Note that in general if we have an expression for <m>\nabla p</m>,
-          say we know that <m>\nabla p={\bf q}</m>, then we can check whether or not
+          say we know that <m>\nabla p={\bq}</m>, then we can check whether or not
           it it is possible to find <m>p</m> by taking the curl of both sides,
-          i.e. <m>\nabla\times{\bf q}=\nabla\times\nabla p=0</m>
+          i.e. <m>\nabla\times{\bq}=\nabla\times\nabla p=0</m>
           (since <m>\nabla\times\nabla f=0</m> for all functions <m>f</m>).
-          If <m>{\bf q}</m> satisfies <m>\nabla\times{\bf q}=0</m> then
+          If <m>{\bq}</m> satisfies <m>\nabla\times{\bq}=0</m> then
           it is possible to find a pressure field (and hence the Navier<ndash/>Stokes
           equations are satisfied), otherwise it is not.  In this example
           <me>
