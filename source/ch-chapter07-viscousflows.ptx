@@ -1700,10 +1700,24 @@
         <title>Solving the equations</title>
         <p>
           The Navier<ndash/>Stokes equation is notoriously difficult to solve, particularly as the term
-          <me>\rho\bu\cdot\nabla\bu</me> is nonlinear. In fact, one of the famous <url href="https://www.claymath.org/millennium-problems/">Millennium Prize Problems</url> is to prove that in three dimensions, given suitable initial and boundary conditions, there always exists a smooth solution of the Navier<ndash/>Stokes equation for all time, or to provide an example where this does not hold.  The problem is that the nonlinear term can lead to singularities developing in the solution, which would correspond to infinite velocities or pressures at some point in the fluid.  This is not expected to happen in real fluids, but proving this rigorously is a major challenge.
+          <me>\rho\bu\cdot\nabla\bu</me> is nonlinear.
+          In fact, one of the famous
+          <url href="https://www.claymath.org/millennium-problems/">Millennium Prize Problems</url>
+          is to prove that in three dimensions,
+          given suitable initial and boundary conditions,
+          there always exists a smooth solution of the
+          Navier<ndash/>Stokes equation for all time,
+          or to provide an example where this does not hold.
+          The problem is that the nonlinear term can lead to singularities developing
+          in the solution, which would correspond to infinite velocities or pressures
+          at some point in the fluid.
+          This is not expected to happen in real fluids,
+          but proving this rigorously is a major challenge.
         </p>
         <p>
-          You will be relieved to know that in this course we will only consider simple solutions of the Navier<ndash/>Stokes equations (often ones in which the nonlinear term equals zero).
+          You will be relieved to know that in this course we will only consider
+          simple solutions of the Navier<ndash/>Stokes equations
+          (often ones in which the nonlinear term equals zero).
         </p>
         <p>
           In a typical problem, there are four unknown variables: <m>u</m>, <m>v</m>, <m>w</m> and <m>p</m>. There are four equations governing their behaviour, which are the incompressible continuity equation <xref ref="eqn-incompressibledef"/> and the three components of the Navier<ndash/>Stokes equation <xref ref="eqn-navierstokes"/>. In addition, we need to specify appropriate boundary conditions (for example, no slip conditions at a solid boundary) and initial conditions (the velocity and pressure at time <m>t=0</m>).
@@ -1754,7 +1768,10 @@
           </men>
           where <m>\bf</m> is the body force per unit mass (for example, gravity).
           This is a more general equation than the Navier<ndash/>Stokes equation,
-          which applies only to Newtonian fluids obeying the consititutive law <xref ref="eq-cartesiannewtonianstress"/>. You will perform the derivation in this more general case in <xref ref="ps-Cauchy-equation"/>.
+          which applies only to Newtonian fluids obeying the consititutive law
+          <xref ref="eq-cartesiannewtonianstress"/>.
+          You will perform the derivation in this more general case in
+          <xref ref="ps-Cauchy-equation"/>.
         </p>
       </remark>
       <remark>
@@ -1763,7 +1780,7 @@
           The Navier<ndash/>Stokes equations can be adapted for use in a non-inertial reference frame:
           <me>
             \rho\left(\pd{\bu_n}{t}+\bu_n\cdot\nabla_n\bu_n\right)
-            =-\nabla_n p+\mu\nabla_n^2\bu_n+\rho\bf_{\textrm{apparent}}+\rho{\bf g}_n,
+            =-\nabla_n p+\mu\nabla_n^2\bu_n+\rho\bf_{\textrm{apparent}}+\rho\bg_n,
           </me>
           where <m>\bu_n</m> and <m>\nabla_n</m> are, respectively, the velocity and gradient operator in the
           non-inertial coordinates, and <m>\bf_{\textrm{apparent}}</m> is the apparent additional
@@ -1777,6 +1794,92 @@
         <p>
           In the case of an inviscid fluid, <m>\mu=0</m>,
           and we recover the Euler equation <xref ref="eqn-euler-momentum"/>.
+        </p>
+      </remark>
+      <remark>
+        <title>Navier<ndash/>Stokes Equations in cylindrical coordinates</title>
+        <p>
+          In cylindrical coordinates <m>(r,\theta,z)</m> the continuity equation is
+          <me>
+            \frac1r\pd{(ru_r)}{r}+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+          </me>
+          and the Navier<ndash/>Stokes equations are
+          <md>
+            <mrow>
+              \rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+              =-\pd{p}{r}
+              +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)+\rho f_r,
+            </mrow>
+            <mrow>
+              \rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+              =-\frac{1}{r}\pd{p}{\theta}
+              +\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)+\rho f_{\theta},
+            </mrow>
+            <mrow>
+              \rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+              =-\pd{p}{z}
+              +\mu\nabla^2u_z+\rho f_z,
+            </mrow>
+          </md>
+          where the Laplacian is defined by its action on a function <m>A(r,\theta,z)</m>:
+          <me>
+            \nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+          </me>
+          and <m>{\bf}=(f_r,f_\theta,f_z)</m> represents the body forces per unit mass
+          acting on the fluid.
+          In the case of gravity we set <m>{\bf}=\rho{\bg}</m>,
+          where <m>{\bg}=(0,0,-g)</m> is the acceleration due to gravity.
+        </p>
+        <p>
+          Note that the vector calculus operators in cylindrical (and also in spherical)
+          coordinates are quite complicated.
+          I would always recommend looking up the formulae,
+          because they is very tricky to remember and extremely time-consuming to derive.
+          A helpful website that lists these formulae along with many other useful formulae is
+          <url href="http://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates">here</url>,
+          and <xref ref="ref-acheson"/> gives these formulae in the appendices,
+          as do many other textbooks.
+          Note in particular that the Laplacian of a vector quantity
+          is not given by the Laplacians of its components individually.
+        </p>
+      </remark>
+      <remark>
+        <title>Navier<ndash/>Stokes Equations in spherical coordinates</title>
+        <p>
+          In spherical coordinates <m>(r,\theta,\phi)</m> the continuity equation is
+          <me>
+            \frac1{r^2}\pd{(r^2u_r)}{r}+\frac1{r\sin\theta}\pd{(u_\theta\sin\theta)}{\theta}+\frac1{r\sin\theta}\pd{u_\phi}{\phi}=0,
+          </me>
+          and the Navier<ndash/>Stokes equations are
+          <md>
+            <mrow>
+              \rho\left(\pd{u_r}{t}+u_r \pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+\frac{u_{\phi}}{r \sin\theta}\pd{u_r}{\phi}-\frac{u_{\phi}^2+u_{\theta}^2}{r}\right)
+              =-\pd{p}{r}
+              +\mu\left(\nabla^2u_r-\frac{2u_r}{r^2}-\frac2{r^2\sin\theta}\pd{}{\theta}\left(u_\theta\sin\theta\right)
+              +\frac{2}{r^2\sin\theta}\pd{u_{\phi}}{\phi}
+              \right)
+              +\rho f_r,
+            </mrow>
+            <mrow>
+              \rho\left(\pd{u_\theta}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+\frac{u_{\phi}}{r\sin\theta}\pd{u_{\theta}}{\phi}+\frac{u_ru_{\theta}-u_{\phi}^2\cot\theta}{r}\right)
+              =-\frac1r\pd{p}{\theta}
+              +\mu\left(\nabla^2u_\theta-\frac{u_\theta}{r^2\sin^2\theta}+\frac2{r^2}\pd{u_r}{\theta}-\frac{2\cos\theta}{r^2\sin^2\theta}\pd{u_\phi}{\phi}\right)
+              +\rho f_\theta,
+            </mrow>
+            <mrow>
+              \rho\left(\pd{u_{\phi}}{t}+u_r\pd{u_{\phi}}{r}+\frac{u_{\theta}}{r}\pd{u_{\phi}}{\theta}+\frac{u_{\phi}}{r\sin\theta}\pd{u_{\phi}}{\phi}+\frac{u_ru_{\phi}+u_{\phi}u_{\theta}\cot\theta}{r}\right)
+              =-\frac1{r\sin\theta}\pd{p}{\phi}
+              +\mu\left(\nabla^2u_\phi-\frac{u_\phi}{r^2\sin^2\theta}+\frac{2}{r^2\sin\theta}\pd{u_r}{\phi}+\frac{2\cos\theta}{r^2\sin^2\theta}\pd{u_\theta}{\phi}\right)
+              +\rho f_\phi,
+            </mrow>
+          </md>
+          where the Laplacian is defined by its action on a function <m>A(r,\theta,\phi)</m>:
+          <me>
+            \nabla^2A=\frac1{r^2}\pd{}{r}\left(r^2\pd{A}{r}\right)+\frac1{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{A}{\theta}\right)+\frac1{r^2\sin^2\theta}\pd{^2A}{\phi^2},
+          </me>
+          and <m>{\bf}=(f_r,f_\theta,f_\phi)</m> represents the body forces per unit mass
+          acting on the fluid. Again in the case of gravity we set <m>{\bf}=\rho{\bg}</m>,
+          where <m>{\bg}=(-g\cos\theta,g\sin\theta,0)</m>.
         </p>
       </remark>
     </subsection>
@@ -1936,6 +2039,241 @@
         </p>
       </remark>
     </subsection>
+  </section>
+
+  <section xml:id="sec-viscous-dissipation-of-energy">
+    <title>Viscous Dissipation of Energy</title>
+    <introduction>
+      <p>
+        In this section we derive an expression for the rate of dissipation
+        of kinetic energy in terms of the rate-of-strain tensor.
+      </p>
+      <p>
+        We consider a volume <m>V(t)</m> of fluid moving with the fluid.
+        The total kinetic energy in <m>V</m> is
+        <me>
+          T=\frac12\int_V\rho\left|\bu\right|^2\de V
+          =\sum_{i=1}^3\frac12\int_V\rho u_i^2\de V.
+        </me>
+      </p>
+      <theorem xml:id="thm-viscous-dissipation">
+        <title>Viscous dissipation of energy</title>
+        <statement>
+          <p>
+            For an incompressible Newtonian fluid and a volume <m>V(t)</m> of the fluid
+            with surface <m>S(t)</m>,
+            which both move with the fluid, the rate of change of kinetic energy
+            equals
+            <men xml:id="eq-viscous-dissipation">
+              \dd{T}{t}=\int_V\rho\bu\cdot\bg\,\de V+\int_S\btau\cdot\bu\,\de S
+              -2\mu\int_V\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2\,\de V.
+            </men>
+          </p>
+        </statement>
+      </theorem>
+      <proof>
+        <p>
+          We need derive an expression for the rate of change:
+          <me>
+            \dd{T}{t}=\sum_{i=1}^3\int_V\rho u_i\DD{u_i}{t}\de V
+          </me>
+          Using the Cauchy equation <xref ref="eqn-cauchy-equation"/>:
+          <md>
+            <mrow>
+              \dd{T}{t}=&amp;\sum_{i=1}^3\int_Vu_i\left(\sum_{j=1}^3\pd{\sigma_{ij}}{x_j}+\rho g_i\right)\de V
+            </mrow>
+            <mrow>
+              =&amp;\sum_{i=1}^3\int_V\left(\sum_{j=1}^3\pd{}{x_j}\left(u_i\sigma_{ij}\right)-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V
+            </mrow>
+            <mrow>
+              =&amp;\sum_{i=1}^3\left(\int_S\sum_{j=1}^3u_i\sigma_{ij}n_j\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right)
+            </mrow>
+            <mrow>
+              =&amp;\sum_{i=1}^3\left(\int_Su_i\tau_i\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right),
+            </mrow>
+            <mrow>
+              =&amp;\int_S\btau\cdot\bu\,\de S-\int_V\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}\,\de V+\int_V\rho\bg\cdot\bu\,\de V,
+            </mrow>
+          </md>
+          where, in the above calculation, we used the divergence theorem to obtain the penultimate line
+          and the definition of stress to obtain the fourth line.
+          We need to simplify
+          <md>
+            <mrow>
+              \sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}
+              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(\sigma_{ij}+\sigma_{ji}\right)\pd{u_i}{x_j}
+            </mrow>
+            <mrow>
+              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+            </mrow>
+            <mrow>
+              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(-p\delta_{ij}+\mu\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+            </mrow>
+            <mrow>
+              =&amp;-\frac{p}2\sum_{i=1}^3\pd{u_i}{x_i}+\frac{\mu}2\sum_{i=1}^3\sum_{j=1}^3\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+            </mrow>
+            <mrow>
+              =&amp;2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
+            </mrow>
+          </md>
+          where in the first line of the above we used the fact that <m>\sigma_{ij}</m> is symmetric,
+          in the second line we swapped the <m>i</m> and <m>j</m> indices on the second term,
+          in the third line we used the constitutive relationship for a Newtonian fluid
+          <xref ref="eq-Newtonianstress-incompressible"/>, and in the final line we
+          used the fact that the divergence of <m>\bu</m> is zero due to mass conservaion.
+        </p>
+        <p>
+          Hence,
+          <me>
+            \dd{T}{t}=\int_S\btau\cdot\bu\,\de S-2\mu\int_V\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2\,\de V+\int_V\rho\bg\cdot\bu\,\de V,
+          </me>
+          and the result follows.
+        </p>
+      </proof>
+      <remark>
+        <title>Interpretation of the terms in the viscous dissipation</title>
+        <p>
+          The terms on the right-hand side of <xref ref="eq-viscous-dissipation"/>
+          have physical interpretations as follows:
+          <ul>
+            <li>
+              <p>
+                The first term <m>\int_V\rho\bu\cdot\bg\,\de V</m> is the decrease in
+                gravitational potential energy associated with the flow.
+                This energy is converted into kinetic energy.
+              </p>
+            </li>
+            <li>
+              <p>
+                The second term <m>\int_S\btau\cdot\bu\,\de S</m> equals the rate at
+                which the surrounding fluid is doing work on the fluid in <m>V</m>
+                via the surface stresses <m>\btau</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Throughout the volume of fluid, the viscous stresses
+                <m>2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
+                act to reduce the energy.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </remark>
+      <remark>
+        <title>Viscous stresses</title>
+        <p>
+          Recall from <xref ref="exercise-velocity-decomposition"/> that any
+          incompressible flow may locally be written as a sum of
+          a translation, a rotation and a straining component.
+          The viscous stresses <m>2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
+          are zero for the translational and rotational components of the flow
+          and non-zero for the straining component.
+        </p>
+        <p>
+          Since the rate-of-strain tensor is symmetric, and writing
+          <me>
+            \be=PDP^{-1}
+          </me>
+          where <m>D</m> is symmetric, we have
+          <md>
+            <mrow>
+              2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
+              =&amp;2\mu\mathrm{tr}\left(\be^2\right)
+            </mrow>
+            <mrow>
+              =&amp;2\mu\mathrm{tr}\left(PDP^{-1}PDP^{-1}\right)
+            </mrow>
+            <mrow>
+              =&amp;2\mu\mathrm{tr}\left(PD^2P^{-1}\right)
+            </mrow>
+            <mrow>
+              =&amp;2\mu\mathrm{tr}\left(D^2\right)
+            </mrow>
+            <mrow>
+              =&amp;2\mu\left(\lambda_1^2+\lambda_2^2+\lambda_3^2\right),
+            </mrow>
+          </md>
+          where <m>\lambda_i</m>, <m>i=1,2,3</m>, are the eigenvalues of <m>\be</m>.
+        </p>
+      </remark>
+      <remark>
+        <title>The energy equation</title>
+        <p>
+          We can also use the Reynolds Transport Theorem to perform
+          conservation of energy in the control volume instead of mass.
+          The energy is the sum of the internal energy,
+          kinetic energy and the gravitational potential energy
+          <me>
+            e=\hat{u}+\frac12\left|{\bu}\right|^2-{\bg}\cdot{\bx},
+          </me>
+          where <m>\hat{u}</m> is the internal energy per unit mass
+          (which is often expressed as <m>d\hat{u}\approx c_v\,dT</m>)
+          and <m>{\bg}</m> is the acceleration due to gravity.
+        </p>
+        <p>
+          In the special case that the fluid is incompressible and Newtonian
+          and that the specific heat <m>c_v</m> is constant and the fluid is
+          homogeneous and isotropic, and,
+          upon letting the volume of the control volume tend to zero, we obtain
+          <me>
+            \rho c_v\left(\pd{T}{t}+{\bu}\cdot\bnabla T\right)=k\nabla^2 T+\Phi+\dot{S},
+          </me>
+          where
+          <ul>
+            <li>
+              <p>
+                <m>c_v</m> is the specific heat at constant volume,
+                which is the rate of change of internal energy of the fluid
+                with respect to temperature,
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>T</m> is the temperature of the fluid,
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>k</m> is the coefficient of thermal conductivity,
+                which is the heat flux per unit area per unit temperature gradient
+                (by Fourier's law,
+                which is <m>{\bq}=-k\bnabla T</m>, where <m>{\bq}</m>
+                is the flux of heat per unit area <ndash/> cf Fick's law), and
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Phi</m> is the rate of heating due to viscous stresses, given by
+                <me>
+                  \Phi=2\mu e_{ij}e_{ij}
+                  =\mu\left(2\left(\pd{u}{x}\right)^2+2\left(\pd{v}{y}\right)^2+2\left(\pd{w}{z}\right)^2+\left(\pd{v}{x}+\pd{u}{y}\right)^2\right.\\
+                  \left.+\left(\pd{w}{y}+\pd{v}{z}\right)^2+\left(\pd{u}{z}+\pd{w}{x}\right)^2\right).
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\dot{S}</m> is the energy production per unit volume per unit time.
+              </p>
+            </li>
+          </ul>
+          This is the diffusion equation with an extra term, <m>\Phi</m>,
+          representing the heating due to viscous stresses in the fluid.
+          It is the energy loss due to the viscous forces per unit volume
+          of fluid per unit time.
+          Often this term is neglected to give the usual advection--diffusion equation.
+          In a non-Newtonian fluid the equation is significantly more complicated.
+        </p>
+      </remark>
+    </introduction>
+  </section>
+
+  <section xml:id="sec-exact-solutions">
+    <title>Examples of solutions to the Navier<ndash/>Stokes equations</title>
+    <p>
+      We consider
+    </p>
   </section>
 
   <section xml:id="sec-low-Reynolds-number-sphere">
@@ -3143,7 +3481,7 @@
       </task>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="exercise-velocity-decomposition">
       <title>Decomposition of a shear flow</title>
       <introduction>
         <p>
