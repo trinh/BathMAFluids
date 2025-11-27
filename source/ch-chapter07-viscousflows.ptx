@@ -2073,7 +2073,7 @@
               =\mu\left(2\left(\pd{u}{x}\right)^2+2\left(\pd{v}{y}\right)^2+2\left(\pd{w}{z}\right)^2+\left(\pd{v}{x}+\pd{u}{y}\right)^2\right.\\
               \left.+\left(\pd{w}{y}+\pd{v}{z}\right)^2+\left(\pd{u}{z}+\pd{w}{x}\right)^2\right).
             </me>
-            is the dissipation due to the viscous stresses.
+            is the rate of dissipation per unit volume due to the viscous stresses.
           </p>
         </statement>
       </theorem>
