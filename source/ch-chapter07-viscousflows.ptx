@@ -1796,8 +1796,8 @@
           and we recover the Euler equation <xref ref="eqn-euler-momentum"/>.
         </p>
       </remark>
-      <remark>
-        <title>Navier<ndash/>Stokes Equations in cylindrical coordinates</title>
+      <remark xml:id="navier-stokes-continuity-cylindrical">
+        <title>Navier<ndash/>Stokes and continuity equations in cylindrical coordinates</title>
         <p>
           In cylindrical coordinates <m>(r,\theta,z)</m> the continuity equation is
           <me>
@@ -1825,10 +1825,10 @@
           <me>
             \nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
           </me>
-          and <m>{\bf}=(f_r,f_\theta,f_z)</m> represents the body forces per unit mass
+          and <m>\bf=(f_r,f_\theta,f_z)</m> represents the body forces per unit mass
           acting on the fluid.
-          In the case of gravity we set <m>{\bf}=\rho{\bg}</m>,
-          where <m>{\bg}=(0,0,-g)</m> is the acceleration due to gravity.
+          In the case of gravity we set <m>\bf=\rho{\bg}</m>,
+          where <m>\bg=(0,0,-g)</m> is the acceleration due to gravity.
         </p>
         <p>
           Note that the vector calculus operators in cylindrical (and also in spherical)
@@ -1843,8 +1843,8 @@
           is not given by the Laplacians of its components individually.
         </p>
       </remark>
-      <remark>
-        <title>Navier<ndash/>Stokes Equations in spherical coordinates</title>
+      <remark xml:id="navier-stokes-continuity-spherical">
+        <title>Navier<ndash/>Stokes and continuity equations in spherical coordinates</title>
         <p>
           In spherical coordinates <m>(r,\theta,\phi)</m> the continuity equation is
           <me>
@@ -1877,9 +1877,9 @@
           <me>
             \nabla^2A=\frac1{r^2}\pd{}{r}\left(r^2\pd{A}{r}\right)+\frac1{r^2\sin\theta}\pd{}{\theta}\left(\sin\theta\pd{A}{\theta}\right)+\frac1{r^2\sin^2\theta}\pd{^2A}{\phi^2},
           </me>
-          and <m>{\bf}=(f_r,f_\theta,f_\phi)</m> represents the body forces per unit mass
-          acting on the fluid. Again in the case of gravity we set <m>{\bf}=\rho{\bg}</m>,
-          where <m>{\bg}=(-g\cos\theta,g\sin\theta,0)</m>.
+          and <m>\bf=(f_r,f_\theta,f_\phi)</m> represents the body forces per unit mass
+          acting on the fluid. Again in the case of gravity we set <m>\bf=\rho{\bg}</m>,
+          where <m>\bg=(-g\cos\theta,g\sin\theta,0)</m>.
         </p>
       </remark>
     </subsection>
@@ -2039,260 +2039,1798 @@
         </p>
       </remark>
     </subsection>
+    <subsection xml:id="sec-low-and-high-reynolds-number">
+      <title>Limits of low and high Reynolds number</title>
+      <introduction>
+        <p>
+          By nondimensionalising the Navier<ndash/>Stokes equation,
+          we may show that it simplifies in the limits of low and
+          high Reynolds number.
+          We present the limiting forms in this section.
+          In <xref ref="ex-limits-low-high-Reynolds"/>, you will derive these results.
+        </p>
+      </introduction>
+      <subsubsection xml:id="subsec-low-Reynolds-number">
+        <title>Low Reynolds number</title>
+        <p>
+          We obtain the so-called Stokes equation
+          <men xml:id="low-reynolds-number">
+            \mu\nabla^2\bu=\nabla p-\rho\bg,\quad \nabla\cdot\bu=0.
+          </men>
+        </p>
+      </subsubsection>
+      <subsubsection xml:id="subsec-high-Reynolds-number">
+        <title>High Reynolds number</title>
+        <p>
+          We obtain the Euler equation
+          <men xml:id="high-reynolds-number">
+            \rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)=-\nabla p+\rho\bg,\quad \nabla\cdot\bu=0.
+          </men>
+        </p>
+      </subsubsection>
+    </subsection>
   </section>
 
   <section xml:id="sec-viscous-dissipation-of-energy">
     <title>Viscous Dissipation of Energy</title>
-    <introduction>
-      <p>
-        In this section we derive an expression for the rate of dissipation
-        of kinetic energy in terms of the rate-of-strain tensor.
-      </p>
-      <p>
-        We consider a volume <m>V(t)</m> of fluid moving with the fluid.
-        The total kinetic energy in <m>V</m> is
-        <me>
-          T=\frac12\int_V\rho\left|\bu\right|^2\de V
-          =\sum_{i=1}^3\frac12\int_V\rho u_i^2\de V.
-        </me>
-      </p>
-      <theorem xml:id="thm-viscous-dissipation">
-        <title>Viscous dissipation of energy</title>
-        <statement>
-          <p>
-            For an incompressible Newtonian fluid and a volume <m>V(t)</m> of the fluid
-            with surface <m>S(t)</m>,
-            which both move with the fluid, the rate of change of kinetic energy
-            equals
-            <men xml:id="eq-viscous-dissipation">
-              \dd{T}{t}=\int_V\rho\bu\cdot\bg\,\de V+\int_S\btau\cdot\bu\,\de S-\int_V\Phi\,\de V,
-            </men>
-            where
-            <me>
-              \Phi=2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
-              =\mu\left(2\left(\pd{u}{x}\right)^2+2\left(\pd{v}{y}\right)^2+2\left(\pd{w}{z}\right)^2+\left(\pd{v}{x}+\pd{u}{y}\right)^2\right.\\
-              \left.+\left(\pd{w}{y}+\pd{v}{z}\right)^2+\left(\pd{u}{z}+\pd{w}{x}\right)^2\right).
-            </me>
-            is the rate of dissipation per unit volume due to the viscous stresses.
-          </p>
-        </statement>
-      </theorem>
-      <proof>
+    <p>
+      In this section we derive an expression for the rate of dissipation
+      of kinetic energy in terms of the rate-of-strain tensor.
+    </p>
+    <p>
+      We consider a volume <m>V(t)</m> of fluid moving with the fluid.
+      The total kinetic energy in <m>V</m> is
+      <me>
+        T=\frac12\int_V\rho\left|\bu\right|^2\de V
+        =\sum_{i=1}^3\frac12\int_V\rho u_i^2\de V.
+      </me>
+    </p>
+    <theorem xml:id="thm-viscous-dissipation">
+      <title>Viscous dissipation of energy</title>
+      <statement>
         <p>
-          We need derive an expression for the rate of change:
-          <me>
-            \dd{T}{t}=\sum_{i=1}^3\int_V\rho u_i\DD{u_i}{t}\de V
-          </me>
-          Using the Cauchy equation <xref ref="eqn-cauchy-equation"/>:
-          <md>
-            <mrow>
-              \dd{T}{t}=&amp;\sum_{i=1}^3\int_Vu_i\left(\sum_{j=1}^3\pd{\sigma_{ij}}{x_j}+\rho g_i\right)\de V
-            </mrow>
-            <mrow>
-              =&amp;\sum_{i=1}^3\int_V\left(\sum_{j=1}^3\pd{}{x_j}\left(u_i\sigma_{ij}\right)-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V
-            </mrow>
-            <mrow>
-              =&amp;\sum_{i=1}^3\left(\int_S\sum_{j=1}^3u_i\sigma_{ij}n_j\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right)
-            </mrow>
-            <mrow>
-              =&amp;\sum_{i=1}^3\left(\int_Su_i\tau_i\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right),
-            </mrow>
-            <mrow>
-              =&amp;\int_S\btau\cdot\bu\,\de S-\int_V\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}\,\de V+\int_V\rho\bg\cdot\bu\,\de V,
-            </mrow>
-          </md>
-          where, in the above calculation, we used the divergence theorem to obtain the penultimate line
-          and the definition of stress to obtain the fourth line.
-          We need to simplify
-          <md>
-            <mrow>
-              \sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}
-              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(\sigma_{ij}+\sigma_{ji}\right)\pd{u_i}{x_j}
-            </mrow>
-            <mrow>
-              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
-            </mrow>
-            <mrow>
-              =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(-p\delta_{ij}+\mu\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
-            </mrow>
-            <mrow>
-              =&amp;-\frac{p}2\sum_{i=1}^3\pd{u_i}{x_i}+\frac{\mu}2\sum_{i=1}^3\sum_{j=1}^3\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
-            </mrow>
-            <mrow>
-              =&amp;2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
-            </mrow>
-          </md>
-          where in the first line of the above we used the fact that <m>\sigma_{ij}</m> is symmetric,
-          in the second line we swapped the <m>i</m> and <m>j</m> indices on the second term,
-          in the third line we used the constitutive relationship for a Newtonian fluid
-          <xref ref="eq-Newtonianstress-incompressible"/>, and in the final line we
-          used the fact that the divergence of <m>\bu</m> is zero due to mass conservaion.
-        </p>
-        <p>
-          Hence,
-          <me>
-            \dd{T}{t}=\int_S\btau\cdot\bu\,\de S-\Phi+\int_V\rho\bg\cdot\bu\,\de V,
-          </me>
-          and the result follows.
-        </p>
-      </proof>
-      <remark>
-        <title>Interpretation of the terms in the viscous dissipation</title>
-        <p>
-          The terms on the right-hand side of <xref ref="eq-viscous-dissipation"/>
-          have physical interpretations as follows:
-          <ul>
-            <li>
-              <p>
-                The first term <m>\int_V\rho\bu\cdot\bg\,\de V</m> is the decrease in
-                gravitational potential energy associated with the flow.
-                This energy is converted into kinetic energy.
-              </p>
-            </li>
-            <li>
-              <p>
-                The second term <m>\int_S\btau\cdot\bu\,\de S</m> equals the rate at
-                which the surrounding fluid is doing work on the fluid in <m>V</m>
-                via the surface stresses <m>\btau</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Throughout the volume of fluid, the viscous stresses
-                <m>\Phi=2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
-                act to reduce the energy, so this term is integrated over the volume.
-              </p>
-            </li>
-          </ul>
-        </p>
-      </remark>
-      <remark>
-        <title>Viscous stresses</title>
-        <p>
-          Recall from <xref ref="exercise-velocity-decomposition"/> that any
-          incompressible flow may locally be written as a sum of
-          a translation, a rotation and a straining component.
-          The viscous stresses <m>2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
-          are zero for the translational and rotational components of the flow
-          and non-zero for the straining component.
-        </p>
-        <p>
-          Since the rate-of-strain tensor is symmetric, and writing
-          <me>
-            \be=PDP^{-1}
-          </me>
-          where <m>D</m> is symmetric, we have
-          <md>
-            <mrow>
-              2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
-              =&amp;2\mu\,\mathrm{tr}\left(\be^2\right)
-            </mrow>
-            <mrow>
-              =&amp;2\mu\,\mathrm{tr}\left(PDP^{-1}PDP^{-1}\right)
-            </mrow>
-            <mrow>
-              =&amp;2\mu\,\mathrm{tr}\left(PD^2P^{-1}\right)
-            </mrow>
-            <mrow>
-              =&amp;2\mu\,\mathrm{tr}\left(D^2\right)
-            </mrow>
-            <mrow>
-              =&amp;2\mu\,\left(\lambda_1^2+\lambda_2^2+\lambda_3^2\right),
-            </mrow>
-          </md>
-          where <m>\lambda_i</m>, <m>i=1,2,3</m>, are the eigenvalues of <m>\be</m>.
-        </p>
-      </remark>
-      <remark>
-        <title>The energy equation</title>
-        <p>
-          We can also use the Reynolds Transport Theorem to perform
-          conservation of energy in the control volume instead of mass.
-          The energy is the sum of the internal energy,
-          kinetic energy and the gravitational potential energy
-          <me>
-            e=\hat{u}+\frac12\left|{\bu}\right|^2-{\bg}\cdot{\bx},
-          </me>
-          where <m>\hat{u}</m> is the internal energy per unit mass
-          (which is often expressed as <m>d\hat{u}\approx c_v\,dT</m>)
-          and <m>{\bg}</m> is the acceleration due to gravity.
-        </p>
-        <p>
-          In the special case that the fluid is incompressible and Newtonian
-          and that the specific heat <m>c_v</m> is constant and the fluid is
-          homogeneous and isotropic, and,
-          upon letting the volume of the control volume tend to zero, we obtain
-          <me>
-            \rho c_v\left(\pd{T}{t}+{\bu}\cdot\bnabla T\right)=k\nabla^2 T+\Phi+\dot{S},
-          </me>
+          For an incompressible Newtonian fluid and a volume <m>V(t)</m> of the fluid
+          with surface <m>S(t)</m>,
+          which both move with the fluid, the rate of change of kinetic energy
+          equals
+          <men xml:id="eq-viscous-dissipation">
+            \dd{T}{t}=\int_V\rho\bu\cdot\bg\,\de V+\int_S\btau\cdot\bu\,\de S-\int_V\Phi\,\de V,
+          </men>
           where
-          <ul>
-            <li>
-              <p>
-                <m>c_v</m> is the specific heat at constant volume,
-                which is the rate of change of internal energy of the fluid
-                with respect to temperature,
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>T</m> is the temperature of the fluid,
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>k</m> is the coefficient of thermal conductivity,
-                which is the heat flux per unit area per unit temperature gradient
-                (by Fourier's law,
-                which is <m>{\bq}=-k\bnabla T</m>, where <m>{\bq}</m>
-                is the flux of heat per unit area <ndash/> cf Fick's law), and
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\Phi</m> is the rate of heating due to viscous stresses.
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\dot{S}</m> is the energy production per unit volume per unit time.
-              </p>
-            </li>
-          </ul>
-          This is the diffusion equation with an extra term, <m>\Phi</m>,
-          representing the heating due to viscous stresses in the fluid.
-          It is the energy loss due to the viscous forces per unit volume
-          of fluid per unit time.
-          Often this term is neglected to give the usual advection--diffusion equation.
-          In a non-Newtonian fluid the equation is significantly more complicated.
+          <me>
+            \Phi=2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
+            =\mu\left(2\left(\pd{u}{x}\right)^2+2\left(\pd{v}{y}\right)^2+2\left(\pd{w}{z}\right)^2+\left(\pd{v}{x}+\pd{u}{y}\right)^2\right.\\
+            \left.+\left(\pd{w}{y}+\pd{v}{z}\right)^2+\left(\pd{u}{z}+\pd{w}{x}\right)^2\right).
+          </me>
+          is the rate of dissipation per unit volume due to the viscous stresses.
         </p>
-      </remark>
-    </introduction>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We need derive an expression for the rate of change:
+        <me>
+          \dd{T}{t}=\sum_{i=1}^3\int_V\rho u_i\DD{u_i}{t}\de V
+        </me>
+        Using the Cauchy equation <xref ref="eqn-cauchy-equation"/>:
+        <md>
+          <mrow>
+            \dd{T}{t}=&amp;\sum_{i=1}^3\int_Vu_i\left(\sum_{j=1}^3\pd{\sigma_{ij}}{x_j}+\rho g_i\right)\de V
+          </mrow>
+          <mrow>
+            =&amp;\sum_{i=1}^3\int_V\left(\sum_{j=1}^3\pd{}{x_j}\left(u_i\sigma_{ij}\right)-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V
+          </mrow>
+          <mrow>
+            =&amp;\sum_{i=1}^3\left(\int_S\sum_{j=1}^3u_i\sigma_{ij}n_j\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right)
+          </mrow>
+          <mrow>
+            =&amp;\sum_{i=1}^3\left(\int_Su_i\tau_i\de S+\int_V\left(-\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}+\rho g_iu_i\right)\de V\right),
+          </mrow>
+          <mrow>
+            =&amp;\int_S\btau\cdot\bu\,\de S-\int_V\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}\,\de V+\int_V\rho\bg\cdot\bu\,\de V,
+          </mrow>
+        </md>
+        where, in the above calculation, we used the divergence theorem to obtain the penultimate line
+        and the definition of stress to obtain the fourth line.
+        We need to simplify
+        <md>
+          <mrow>
+            \sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\pd{u_i}{x_j}
+            =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(\sigma_{ij}+\sigma_{ji}\right)\pd{u_i}{x_j}
+          </mrow>
+          <mrow>
+            =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\sigma_{ij}\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+          </mrow>
+          <mrow>
+            =&amp;\frac12\sum_{i=1}^3\sum_{j=1}^3\left(-p\delta_{ij}+\mu\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+          </mrow>
+          <mrow>
+            =&amp;-\frac{p}2\sum_{i=1}^3\pd{u_i}{x_i}+\frac{\mu}2\sum_{i=1}^3\sum_{j=1}^3\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)\left(\pd{u_i}{x_j}+\pd{u_j}{x_i}\right)
+          </mrow>
+          <mrow>
+            =&amp;2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
+          </mrow>
+        </md>
+        where in the first line of the above we used the fact that <m>\sigma_{ij}</m> is symmetric,
+        in the second line we swapped the <m>i</m> and <m>j</m> indices on the second term,
+        in the third line we used the constitutive relationship for a Newtonian fluid
+        <xref ref="eq-Newtonianstress-incompressible"/>, and in the final line we
+        used the fact that the divergence of <m>\bu</m> is zero due to mass conservaion.
+      </p>
+      <p>
+        Hence,
+        <me>
+          \dd{T}{t}=\int_S\btau\cdot\bu\,\de S-\Phi+\int_V\rho\bg\cdot\bu\,\de V,
+        </me>
+        and the result follows.
+      </p>
+    </proof>
+    <remark>
+      <title>Interpretation of the terms in the viscous dissipation</title>
+      <p>
+        The terms on the right-hand side of <xref ref="eq-viscous-dissipation"/>
+        have physical interpretations as follows:
+        <ul>
+          <li>
+            <p>
+              The first term <m>\int_V\rho\bu\cdot\bg\,\de V</m> is the decrease in
+              gravitational potential energy associated with the flow.
+              This energy is converted into kinetic energy.
+            </p>
+          </li>
+          <li>
+            <p>
+              The second term <m>\int_S\btau\cdot\bu\,\de S</m> equals the rate at
+              which the surrounding fluid is doing work on the fluid in <m>V</m>
+              via the surface stresses <m>\btau</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Throughout the volume of fluid, the viscous stresses
+              <m>\Phi=2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
+              act to reduce the energy, so this term is integrated over the volume.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </remark>
+    <remark>
+      <title>Viscous stresses</title>
+      <p>
+        Recall from <xref ref="exercise-velocity-decomposition"/> that any
+        incompressible flow may locally be written as a sum of
+        a translation, a rotation and a straining component.
+        The viscous stresses <m>2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2</m>
+        are zero for the translational and rotational components of the flow
+        and non-zero for the straining component.
+      </p>
+      <p>
+        Since the rate-of-strain tensor is symmetric, and writing
+        <me>
+          \be=PDP^{-1}
+        </me>
+        where <m>D</m> is symmetric, we have
+        <md>
+          <mrow>
+            2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2
+            =&amp;2\mu\,\mathrm{tr}\left(\be^2\right)
+          </mrow>
+          <mrow>
+            =&amp;2\mu\,\mathrm{tr}\left(PDP^{-1}PDP^{-1}\right)
+          </mrow>
+          <mrow>
+            =&amp;2\mu\,\mathrm{tr}\left(PD^2P^{-1}\right)
+          </mrow>
+          <mrow>
+            =&amp;2\mu\,\mathrm{tr}\left(D^2\right)
+          </mrow>
+          <mrow>
+            =&amp;2\mu\,\left(\lambda_1^2+\lambda_2^2+\lambda_3^2\right),
+          </mrow>
+        </md>
+        where <m>\lambda_i</m>, <m>i=1,2,3</m>, are the eigenvalues of <m>\be</m>.
+      </p>
+    </remark>
+    <remark>
+      <title>The energy equation</title>
+      <p>
+        We can also use the Reynolds Transport Theorem to perform
+        conservation of energy in the control volume instead of mass.
+        The energy is the sum of the internal energy,
+        kinetic energy and the gravitational potential energy
+        <me>
+          e=\hat{u}+\frac12\left|{\bu}\right|^2-{\bg}\cdot{\bx},
+        </me>
+        where <m>\hat{u}</m> is the internal energy per unit mass
+        (which is often expressed as <m>d\hat{u}\approx c_v\,dT</m>)
+        and <m>{\bg}</m> is the acceleration due to gravity.
+      </p>
+      <p>
+        In the special case that the fluid is incompressible and Newtonian
+        and that the specific heat <m>c_v</m> is constant and the fluid is
+        homogeneous and isotropic, and,
+        upon letting the volume of the control volume tend to zero, we obtain
+        <me>
+          \rho c_v\left(\pd{T}{t}+{\bu}\cdot\bnabla T\right)=k\nabla^2 T+\Phi+\dot{S},
+        </me>
+        where
+        <ul>
+          <li>
+            <p>
+              <m>c_v</m> is the specific heat at constant volume,
+              which is the rate of change of internal energy of the fluid
+              with respect to temperature,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>T</m> is the temperature of the fluid,
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>k</m> is the coefficient of thermal conductivity,
+              which is the heat flux per unit area per unit temperature gradient
+              (by Fourier's law,
+              which is <m>{\bq}=-k\bnabla T</m>, where <m>{\bq}</m>
+              is the flux of heat per unit area <ndash/> cf Fick's law), and
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Phi</m> is the rate of heating due to viscous stresses.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\dot{S}</m> is the energy production per unit volume per unit time.
+            </p>
+          </li>
+        </ul>
+        This is the diffusion equation with an extra term, <m>\Phi</m>,
+        representing the heating due to viscous stresses in the fluid.
+        It is the energy loss due to the viscous forces per unit volume
+        of fluid per unit time.
+        Often this term is neglected to give the usual advection--diffusion equation.
+        In a non-Newtonian fluid the equation is significantly more complicated.
+      </p>
+    </remark>
+  </section>
+
+  <section xml:id="sec-methods-to-solve-equations">
+    <title>Methods to solve the Navier<ndash/>Stokes and continuity equations</title>
+    <subsection xml:id="subsec-methods">
+      <title>Methods of solution</title>
+      <p>
+        For real problems, it is notoriously difficult to solve the
+        Navier<ndash/>Stokes <xref ref="eqn-navierstokes"/> and
+        continuity <xref ref="eqn-incompressibledef"/> equations.
+        Many researchers spend their entire careers analysing and solving these very equations!
+        In practical terms, a variety of analytical and numerical techniques
+        must be employed, and usually we only get an approximate solution.
+        In this course we are only looking at analytical approaches,
+        but you should be aware that there are many different approaches possible,
+        and we describe a few in the following:
+      </p>
+      <p>
+        <ul>
+          <li>
+            <p>
+              A few problems in fluid mechanics have analytical solutions,
+              meaning they can be solved exactly.
+              For example the solution for Poiseuille flow in a pipe is exact,
+              and has proved to be an excellent description of steady flow in a pipe,
+              even in realistic, imperfect conditions.            
+            </p>
+          </li>
+          <li>
+            <p>
+              Other problems can be solved in the form of an infinite series.
+              An example of this is boundary layer theory or lubrication theory,
+              in which we choose a small parameter <m>\epsilon\ll1</m>
+              (which is a dimensionless quantity with a physical meaning).
+              For example, it could be that two lengthscales in the problem
+              are very different from one another, and we choose <m>\epsilon</m>
+              equal to the smaller lengthscale divided by the large one.
+              We write the solution as an infinite series of terms, for example
+              <md>
+                <mrow>
+                  \bu=&amp;\bu_0+\epsilon\bu_1+\epsilon^2\bu_2+\epsilon^3\bu_3+\dots,
+                </mrow>
+                <mrow>
+                  p=&amp;p_0+\epsilon p_1+\epsilon^2p_2+\epsilon^3p_3+\dots,
+                </mrow>
+              </md>
+              where the dots indicate terms multiplied by higher powers of
+              <m>\epsilon</m> (that is, smaller terms).
+              Examples include:
+              <ul>
+                <li>
+                  <p>
+                    flow in a curved pipe for small Dean numbers
+                    (proportional to the Reynolds number times the square root of the
+                    curvature of the pipe),
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    flow of a thin film of fluid.
+                    We take <m>\epsilon</m> equal to a typical film thickness divided
+                    by a typical lengthscale tangential to the film.
+                    Often, it is sufficient to compute only the leading nontrivial terms in the series,
+                    and the equations governing these terms represent a hugh simplification over the
+                    Navier<ndash/>Stokes and continuity equations.
+                    Whilst the resulting equations generally need to be solved numerically,
+                    the spatial dimension of the problem is reduced by one for such flows,
+                    and this is a huge saving
+                    of computational time.
+                  </p>
+                </li>
+              </ul> 
+            </p>
+          </li>
+          <li>
+            <p>
+              Other problems can be solved approximately
+              by neglecting terms that are known to be small.
+              An example of this is high-Reynolds-number flow when we can solve the Euler equations
+              and low-Reynolds-number flow when we can solve the Stokes equations
+              instead of the full Navier<ndash/>Stokes equations.
+              Flow in a porous medium (such as flow of water through soil,
+              oil through porous rocks or tissue fluid between cells in the body)
+              is a different type of approximation in which we only consider average flow variables.
+              This approximation is a simplification of the solution in the form of an
+              infinite series, and effectively,
+              we are just finding the first term of the infinite series,
+              that is we are finding <m>\bu_0</m> and <m>p_0</m> from
+              the series solutions given above.
+            </p>
+          </li>
+          <li>
+            <p>
+              In many cases, we cannot solve the equations analytically,
+              but we can find a solution by simulating them on a computer.
+            </p>
+          </li>
+          <li>
+            <p>
+              In other cases we need to simplify the equations somewhat
+              to solve them on a computer.
+              An example is if there are sharp boundary layers,
+              which need fine resolution for the solution to be found there.
+            </p>
+          </li>
+          <li>
+            <p>
+              Finally, one can use an experimental approach,
+              either by building a scale model,
+              which should have dimensionless parameters such as the Reynolds number
+              the same as the original,
+              or by taking measurements on the original system.
+              The big advantage is that,
+              as long as the experiment is correctly performed,
+              the flows should be realistic of the system being studied,
+              but the disadvantages are that it is often hard to perform
+              measurements of flow and pressure with sufficient accuracy or resolution.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </subsection>
+    <subsection xml:id="subsec-methods-analytical">
+      <title>Methods to solve the equations analytically</title>
+      <p>
+        We start by looking at the special cases in which we can
+        solve the equations analytically.
+        In these cases, we typically first make some simplifying assumptions.
+        Note that for these types of problems,
+        we are only trying to find a solution that works
+        (proving the uniqueness of the solutions we find is a much harder thing
+        to do <ndash/> i.e. it is hard to prove that the solution we found is
+        the only one).
+      </p>
+      <p>
+        <em>Stability:</em>
+        Whether or not a given solution that we find is stable is a crucial question,
+        because if it is not stable then it would not be seen in an experiment.
+        To determine stability mathematically we would need to use techniques
+        such as those taught in the course MA40045 Dynamical Systems.
+        However, it is typically very difficult to do this in practice
+        in the study of fluid dynamics because of the (infinite) dimensionality
+        of the phase space.
+        The methods we use in this course to find exact solutions
+        <ndash/> that is, making assumptions and finding a solution to the equations
+        <ndash/> get us a solution, but don't know whether or not it is stable.
+        A practical way of determining stability is to perform an experiment
+        or numerical simulation (which is sometimes called a numerical experiment)
+        <ndash/> an unstable solution would not be able to be found this way,
+        but these methods can be difficult if it is only very weakly unstable.
+        Plus part of the reason for finding analytical solutions is to avoid
+        having to do experiments or numerics,
+        which are often much more time-consuming and difficult!
+      </p>
+      <p>
+        <em>Simplifying a problem by making assumptions:</em>
+        When considering a problem that involves solving the Navier<ndash/>Stokes
+        and continuity equations,
+        we often make one or more (in fact as many as possible!)
+        of the following simplifying assumptions:
+        <ul>
+          <li>
+            <p>
+              <em>Two-dimensional flow (in <m>(x,y)</m>-plane):</em>
+              <m>\partial u/\partial z=\partial v/\partial z
+                =\partial w/\partial z=\partial p/\partial z=0</m>
+              (indeed <m>\partial/\partial z=0</m> for any variable)
+              and <m>w=0</m>.
+              Of course, this can be generalised to two-dimensional flow in the
+              <m>(x,z)</m>- or <m>(y,z)</m>-planes and also two-dimensional flow
+              in the <m>(r,\theta)</m>-directions in cylindrical polar coordinates.
+              For example we may do a lab experiment between closely separated
+              parallel plates to ensure that the flow is approximately two-dimensional
+              (Hele<ndash/>Shaw cell).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>One-dimensional flow (in <m>x</m>-direction):</em>
+              <m>\partial/\partial y=0</m> and <m>\partial/\partial z=0</m> and <m>v=w=0</m>.
+              This can be generalised to any direction.
+              For example,
+              blood flow in arteries has been successfully analysed using a one-dimensional
+              approach in which the changes in flow and pressure that happen during a cardiac cycle
+              can be seen as waves that travel around the body with a characteristic wave speed
+              (that is different from the blood velocity).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Independence of a coordinate:</em>
+              For example <m>\partial/\partial x=0</m> if nothing in the problem
+              depends on <m>x</m> and there is no reason to assume that anything
+              should depend on <m>x</m>.
+              We used this for the Stokes boundary layer problem <xref ref="example-stokes-boundary-layer"/>.              
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Axisymmetric flow:</em>
+              <m>\partial u_r/\partial\theta=\partial u_\theta/\partial\theta
+                =\partial u_z/\theta=\partial p/\theta=0</m>
+              (indeed <m>\partial/\partial\theta=0</m> for all variables)
+              and <m>u_\theta=0</m>.
+              In addition, if there is a symmetry in a plane that includes the axis the
+              This can alternatively be written in spherical coordinates
+              (in which case <m>\partial/\partial\phi=0</m> and <m>u_\phi=0</m>).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Rotationally symmetric flow:</em>
+              <m>\partial u_r/\partial\theta=\partial u_\theta/\partial\theta
+                =\partial u_z/\theta=\partial p/\theta=0</m>
+              (indeed <m>\partial/\partial\theta=0</m> for all variables)
+              but <m>u_\theta</m> is not necesarily zero.
+              For example a line vortex is rotationally symmetric but not axisymmetric.
+              We can similarly write
+              Problems of this sort can also be written in spherical coordinates
+              (in which case <m>\partial {}{\phi}=0</m>).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Spherically symmetric flow:</em>
+              <m>\partial/\partial\theta=0</m> and <m>\partial/\partial\phi=0</m>
+              and <m>u_\theta=u_\phi=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Steady flow:</em>
+              <m>\partial u/\partial t=\partial v/\partial t
+                =\partial w/\partial t=\partial p/\partial t=0</m>
+              (indeed <m>\partial/\partial t=0</m> for any variable).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Fully developed flow:</em>
+              <m>\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0</m>,
+              but <m>\partial p/\partial z</m> is not, in general, zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Periodic and sinusoidal flow (with period <m>T</m>):</em>
+              <md>
+                <mrow>
+                  u(x,y,z,t)=&amp;u_0(x,y,z)e^{\im\omega t}+\overline{u_0(x,y,z)}e^{-\im\omega t},
+                </mrow>
+                <mrow>
+                  v(x,y,z,t)=&amp;v_0(x,y,z)e^{\im\omega t}+\overline{v_0(x,y,z)}e^{-\im\omega t},
+                </mrow>
+                <mrow>
+                  w(x,y,z,t)=&amp;w_0(x,y,z)e^{\im\omega t}+\overline{w_0(x,y,z)}e^{-\im\omega t},
+                </mrow>
+                <mrow>
+                  p(x,y,z,t)=&amp;p_0(x,y,z)e^{\im\omega t}+\overline{p_0(x,y,z)}e^{-\im\omega t},
+                </mrow>
+              </md>
+              where the angular frequency <m>\omega=2\pi/T</m>.
+              This assumption will be made in the
+              Stokes boundary layer example <xref ref="example-stokes-boundary-layer"/>.
+            </p>
+          </li>
+        </ul>
+        Most of these are assumptions on the <em>geometry</em> and
+        <em>spatial symmetries</em> of the problem, but the assumptions of
+        steady flow, fully developed flow and
+        periodic and sinusoidal flow are different.
+        The trick is to look carefully at the problem,
+        and think which (if any) of the above assumptions might be reasonable.
+        We can try making them, and then check that the problem is still consistent.
+        If it is consistent that is fine,
+        but if not it means that the assumption was wrong.
+      </p>
+    </subsection>
   </section>
 
   <section xml:id="sec-exact-solutions">
     <title>Examples of solutions to the Navier<ndash/>Stokes equations</title>
     <p>
-      We consider
+      There is a remarkably small number of types of exact solutions
+      to the Navier<ndash/>Stokes <xref ref="eqn-navierstokes"/> and
+      continuity <xref ref="eqn-incompressibledef"/> equations.
+      A particular reason for this is the nonlinear term <m>\bu\cdot\bnabla\bu</m>,
+      which makes it difficult to find mathematically exact solutions, and indeed,
+      many of the known exact solutions have <m>\bu\cdot\bnabla\bu=\bzero</m>,
+      thus removing the problem of the nonlinear term.
+      In this section, we present a few of the more well known exact solutions.
+      <em>N.B.</em> In all of the examples in this section we neglect gravity.
     </p>
-  </section>
 
-  <section xml:id="sec-low-Reynolds-number-sphere">
-    <title>Low-Reynolds-number flow past a sphere</title>
+    <example xml:id="subsec-shear-flow">
+      <title>Shear flow</title>
+      <p>
+        Shear flow often occurs near a rigid flat surface, and has the following properties:
+        <ul>
+          <li>
+            <p>
+              The flow is unidirectional and parallel to the surface.
+            </p>
+          </li>
+          <li>
+            <p>
+              The flow speed increases linearly as we move away from the surface.
+            </p>
+          </li>
+        </ul>
+        For example if the surface is the plane <m>y=0</m>,
+        then the flow <m>\bu=(ky,0,0)</m> is a shear flow,
+        where <m>k</m> is constant, see <xref ref="fig-shear-flow"/>.
+      </p>
+      <figure xml:id="fig-shear-flow">
+        <caption>Sketch of shear flow velocity profile.</caption>
+        <image source="ch-chapter07-shear-flow.jpg" width="80%"/>
+      </figure>
+      <p>
+        To check this is a solution of the Navier<ndash/>Stokes and continuity equations,
+        we substitute in the expressions.
+        The continuity equation <xref ref="eqn-incompressibledef"/> is readily satisfied,
+        whilst the Navier<ndash/>Stokes equations <xref ref="eqn-navierstokes"/> give
+        <me>
+          0=-\pd{p}{x},\quad0=-\pd{p}{y},\quad0=-\pd{p}{z},
+        </me>
+        and thus <m>p</m> is constant everywhere in space.
+      </p>
+      <p>
+        For a Newtonian fluid contained between parallel plates moving tangentially,
+        we obtain a shear flow in the gap.
+        The velocity varies linearly across the gap and matches the plate velocity
+        at each of the two plates.
+        This is called <em>Couette flow</em> and it is an exact solution of the
+        Navier<ndash/>Stokes and continuity equations:
+        <ul>
+          <li>
+            <p>
+              <m>\rho\partial\bu/\partial t</m>: The flow is steady so this term is zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\rho\bu\cdot\nabla\bu</m>: Since <m>\bu</m> is directed tangential to the plates,
+              <m>\bu\cdot\nabla</m> is a derivative in the tangential direction;
+              however, <m>\bu</m> varies only in the direction normal to the plates.
+              Therefore, <m>\bu\cdot\nabla\bu</m> is zero for this flow.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>-\nabla p</m>: The pressure is uniform, so this term is zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mu\nabla^2\bu</m>: The flow has a linear profile so <m>\nabla^2\bu</m>
+              is zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\nabla\cdot\bu</m>: The flow only varies in the direction normal to the plates
+              and the normal component of the velocity is zero, meaning that this term is zero.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <figure xml:id="fig-couette-flow">
+        <caption>Sketch of shear flow velocity profile.</caption>
+        <image source="ch-chapter07-couette.jpg" width="80%"/>
+      </figure>
+    </example>
+
+    <example xml:id="sec-poiseuille">
+      <title>Hagen<ndash/>Poiseuille flow (or Poiseuille flow)</title>
+      <p>
+        Poiseuille flow is the characteristic flow seen when an incompressible Newtonian
+        fluid flows steadily along a cylindrical pipe whose length is long compared with
+        its diameter.
+        To find the fluid velocity we use cylindrical polar coordinates <m>(r,\theta,z)</m>,
+        and assume that the pipe wall is at <m>r=a</m>.
+        We denote the fluid velocity components as <m>(u,v,w)</m> in the
+        three coordinate directions, i.e. <m>\bu=u\hat{\br}+v\hat{\btheta}+w\hat{\bz}</m>,
+        and assume a no-slip boundary condition at the pipe wall:
+        <men xml:id="eq-poiseuillebc">
+          u=v=w=0\quad\mathrm{at}\quad r=a.
+        </men>
+        We also assume that the flow is steady, is axisymmetric, has no swirl
+        (i.e.no azimuthal flow), is fully-developed, and we neglect gravity.
+        <ol>
+          <li>
+            <p>
+              Steady flow:
+              <me>
+                \pd{u}{t}=\pd{v}{t}=\pd{w}{t}=\pd{p}{t}=0;
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Axisymmetric flow:
+              <me>
+                \pd{u}{\theta}=\pd{v}{\theta}=\pd{w}{\theta}=\pd{p}{\theta}=0;
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              No swirl:
+              <me>
+                v=0;
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Fully-developed flow means the fluid velocity doesn't change
+              as we move along the pipe (we ignore end effects since the
+              pipe length is long compared to the diameter),
+              and also that the axial pressure gradient is constant, i.e.
+              <md>
+                <mrow>
+                  &amp;\pd{u}{z}=\pd{v}{z}=\pd{w}{z}=0
+                </mrow>
+                <mrow>
+                  &amp;\pd{p}{z}=-G\mathrm{(constant)}.
+                </mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Since the fluid is incompressible and Newtonian we take as our starting point
+        the Navier<ndash/>Stokes and
+        continuity equations in cylindrical polar coordinates
+        <xref ref="navier-stokes-continuity-cylindrical"/>.
+        The continuity equation is
+        <me>
+          \bnabla\cdot\bu=\frac1r\pd{(ru)}{r}+\frac1r\pd{v}{\theta}+\pd{w}{z}=0,
+        </me>
+        and applying assumptions 2 (or 3) and 4 in the list above, we get
+        <me>
+          \frac1r\pd{(ru)}{r}=0
+          \quad\Rightarrow\quad
+          u=\frac Ar,
+        </me>
+        where <m>A</m> is constant.
+        Applying the boundary conditions <xref ref="eq-poiseuillebc"/> gives <m>A=0</m>,
+        and therefore <m>u=0</m>, so the velocity is axial <m>\bu=(0,0,w)=w\hat{\bz}</m>.
+      </p>
+      <p>
+        Neglecting time-dependence and gravity, the Navier<ndash/>Stokes equations
+        <xref ref="eqn-navierstokes"/> are:
+        <men xml:id="eq-navierstokes-simppoiseuille">
+          \rho\left(\bu\cdot\bnabla\right)\bu=-\bnabla p+\mu\nabla^2\bu.
+        </men>
+        We take the terms individually:
+        <ul>
+          <li>
+            <p>
+              Since <m>\bu=w\hat{\bz}</m>,
+              <me>
+                \bu\cdot\bnabla=w\pd{}{z}
+                \quad\Rightarrow\quad
+                \left(\bu\cdot\bnabla\right)\bu
+                =w\pd{(w\hat{\bz})}{z},
+              </me>
+              and this equals zero by the fully developed assumption (4 above).
+            </p>
+          </li>
+          <li>
+            <p>
+              The pressure gradient equals
+              <me>
+                \bnabla p=\pd{p}{r}\hat{\br}-G\hat{\bz}.
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              Since the <m>\theta</m>- and <m>z</m>-derivatives of <m>w</m> vanish,
+              <me>
+                \nabla^2\bu
+                =\nabla^2\left(w\hat{\bz}\right)
+                =\left(\nabla^2w\right)\hat{\bz}
+                =\frac1r\pd{}{r}\left(r\pd{w}{r}\right)\hat{\bz}.
+              </me>
+              Note that the formula used here for <m>\nabla^2w</m> is standard and can
+              be looked up (so you don't need to remember it, though you should be
+              aware that the gradient operator <m>\bnabla</m>
+              takes a different form in polar coordinates).
+            </p>
+          </li>
+        </ul>
+        Thus the three components of the Navier<ndash/>Stokes
+        equation <xref ref="eq-navierstokes-simppoiseuille"/> are
+        <ul>
+          <li>
+            <p>
+              <m>r</m>-component:
+              <me>
+                0=-\pd{p}{r}.
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\theta</m>-component:
+              <me>
+                0=0.
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>z</m>-component:
+              <me>
+                0=G+\frac{\mu}{r}\pd{}{r}\left(r\pd{w}{r}\right).
+              </me>
+            </p>
+          </li>
+        </ul>
+        Solving the <m>z</m>-component gives the axial velocity component <m>w</m>:
+        <md>
+          <mrow>
+            &amp;\pd{}{r}\left(r\pd{w}{r}\right)=0-\frac{G}{\mu}r
+          </mrow>
+          <mrow>
+            \Rightarrow\quad&amp;
+            r\pd{w}{r}=-\frac{Gr^2}{2\mu}+A
+          </mrow>
+          <mrow>
+            \Rightarrow\quad&amp;
+            \pd{w}{r}=-\frac{Gr}{2\mu}+\frac{A}{r}
+          </mrow>
+          <mrow>
+            \Rightarrow\quad&amp;
+            w=-\frac{Gr^2}{4\mu}+A\ln r+B.
+          </mrow>
+        </md>
+        We require <m>A=0</m> for regularity of the solution at <m>r=0</m>,
+        and since the boundary condition <xref ref="eq-poiseuillebc"/> has
+        <m>w=0</m> at <m>r=a</m>, we must set <m>B=Ga^2/(4\mu)</m>.
+        Therefore the fluid velocity in Poiseuille flow is given by
+        <men xml:id="eq-poiseuille-flow-profile">
+          u=v=0\quad
+          w=\frac{G}{4\mu}\left(a^2-r^2\right),
+        </men>
+        which is illustrated in <xref ref="fig-poiseuille-flow"/>.
+      </p>
+      <figure xml:id="fig-poiseuille-flow">
+        <caption>Sketch of Poiseuille flow velocity profile.</caption>
+        <image source="ch-chapter07-poiseuille.jpg" width="80%"/>
+      </figure>
+      <p>
+        The celebrated <em>Hagen<ndash/>Poiseuille formula</em> can be derived from
+        <xref ref="eq-poiseuille-flow-profile"/>:
+        <men xml:id="hagen-poiseuille-formula">
+          \Delta P=\frac{8\mu LQ}{\pi a^4}.
+        </men>
+        This relates the volumetric flux <m>Q</m> and pressure drop <m>\Delta P</m>
+        along a circular pipe of length <m>L</m> and radius <m>a</m>
+        in a Newtonian fluid with shear viscosity <m>\mu</m> for steady,
+        fully developed flow.
+        You will derive this result in <xref ref="ex-hagen-poiseuille-flow"/>.
+      </p>
+      <p>
+        We now consider two generalisations:
+        <ul>
+          <li>
+            <p>
+              <em>Womersley flow:</em>
+              This is pipe flow driven by an axial pressure drop along the pipe
+              that oscillates sinusoidally in time
+              (Poiseuille flow was driven by a constant pressure gradient).
+              Unlike Poiseuille flow,
+              the exact profile of the flow depends on a parameter called
+              the Womersley parameter (which depends on the frequency).
+              <xref ref="fig-womersley-flow"/> shows an example.
+              The flow is:
+              <ul>
+                <li>
+                  <p>
+                    Unidirectional axial flow (purely along the pipe)
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Axisymmetric
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Flow direction oscillates in time.
+                    Sometimes the flow goes in both directions at once,
+                    which can be seen in <xref ref="fig-womersley-flow"/>.
+                  </p>
+                </li>
+              </ul>
+              If we add the velocity field of Poiseuille flow <xref ref="eq-poiseuille-flow-profile"/>
+              onto the Womersley flow velocity field,
+              we obtain the flow that would be driven by a pressure gradient that oscillates
+              about a non-zero mean.
+              Flow profiles of this sort can be seen in blood flow,
+              since the beating of the heart provides a pressure gradient
+              that can be approximated by a constant plus sinusoidally varying component.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Dean flow:</em>
+              This is a steady flow driven by a steady prescribed pressure drop along the pipe,
+              but the pipe is curved, see <xref ref="fig-dean-flow"/>.
+              Within the pipe the flow is predominantly in the axial direction,
+              but the centrifugal force due to the curvature drives a secondary flow
+              across the centre of the pipe towards the outside of the bend,
+              and then back around the walls of the pipe towards the inside of the bend.
+              This secondary flow forms Dean vortices.
+              This is thought to provide a possible explanation as to why the disease
+              atherosclerosis in arteries is more common on the inside of bends in arteries,
+              since the cells lining the artery walls are more healthy in conditions of high stress.
+              <xref ref="fig-dean-flow"/> shows shows the secondary flow in the transverse cross section,
+              which are termed <em>Dean vortices</em>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <figure xml:id="fig-womersley-flow">
+        <caption>Sketch of Womersley flow velocity profile.</caption>
+        <image source="ch-chapter07-womersley.jpg" width="80%"/>
+      </figure>
+      <figure xml:id="fig-dean-flow">
+        <caption>Sketch of Dean flow velocity profile:
+          (a) longitudinal cross-section; (b) transverse cross-section.</caption>
+        <image source="ch-chapter07-dean.jpg" width="80%"/>
+      </figure>
+    </example>
+    <example cml-id="subsec-channel-flow">
+      <title>Channel flow</title>
+      <p>
+        This is the characteristic flow seen between two fixed parallel plates
+        driven by a steady pressure gradient. The assumptions are:
+        <ul>
+          <li>
+            <p>
+              Parallel fixed plates
+            </p>
+          </li>
+          <li>
+            <p>
+              Two-dimensional flow
+            </p>
+          </li>
+          <li>
+            <p>
+              Steady flow
+            </p>
+          </li>
+          <li>
+            <p>
+              Fully developed flow
+            </p>
+          </li>
+        </ul>
+        The resulting profile is shown in <xref ref="fig-channel-flow"/>.
+        The flow is parabolic and looks similar to a cross-section of Poiseuille flow.
+        See also
+        <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/search?q=channel%20flow">the cartoon of channel flow</url>
+        between two plates.
+      </p>
+      <figure xml:id="fig-channel-flow">
+        <caption>Sketch of channel flow velocity profile.</caption>
+        <image source="ch-chapter07-channel.jpg" width="80%"/>
+      </figure>
+    </example>
+    <example>
+      <title>Axisymmetric Couette flow</title>
+      <p>
+        This is the characteristic flow that is observed between cylinders
+        that are rotating relative to one another.
+        We assume:
+        <ul>
+          <li>
+            <p>
+              Coaxial cylinders, rotating at different constant angular velocities
+            </p>
+          </li>
+          <li>
+            <p>
+              Two-dimensional flow (no dependence on <m>z</m>-coordinate)
+            </p>
+          </li>
+          <li>
+            <p>
+              Axisymmetric flow
+            </p>
+          </li>
+          <li>
+            <p>
+              Steady flow
+            </p>
+          </li>
+        </ul>
+        The resulting flow is illustrated in <xref ref="fig-axisym-couette-flow"/>.
+      </p>
+      <figure xml:id="fig-axisym-couette-flow">
+        <caption>Sketch of axisymmetric Couette flow.</caption>
+        <image source="ch-chapter07-axisym-couette.jpg" width="80%"/>
+      </figure>
+    </example>
+    <example xml:id="example-stokes-boundary-layer">
+      <title>Stokes boundary layer</title>
+      <introduction>
+        <figure xml:id="fig-stokes-boundary-layer-setup">
+          <caption>Sketch of set up for Stokes boundary layer.</caption>
+          <image source="ch-chapter07-stokes-boundary-layer-setup.jpg" width="80%"/>
+        </figure>
+        <p>
+          In this question you will investigate the flow field generated next to
+          a flat oscillating plate.
+          Assume that the plate is at <m>y=0</m> with an incompressible Newtonian fluid
+          of density <m>\rho</m> and kinematic viscosity <m>\nu</m> in <m>y>0</m>,
+          and that the plate oscillates purely in the <m>x</m>-direction with displacement
+          <m>A\cos\omega t\,\bi</m> at time <m>t</m>,
+          as shown in <xref ref="fig-stokes-boundary-layer-setup"/>.
+          You may also assume that the plate and volume of fluid are
+          large enough that you can neglect their boundaries
+          (that is, the plate occupies the whole plane <m>y=0</m> and the fluid occupies
+          the whole of <m>y>0</m>)
+          and that the plate has been oscillating long enough so that the whole fluid
+          is oscillating periodically.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write down the equations and boundary conditions governing the flow.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The fluid is governed by the Navier<ndash/>Stokes and continuity equations:
+            <me>
+              \pd{\bu}{t}+\bu\cdot\bnabla\bu=-\frac1{\rho}\bnabla p+\nu\nabla^2\bu,\quad
+              \bnabla\cdot\bu=0.
+            </me>
+            At <m>y=0</m> the boundary conditions are
+            <me>
+              u=-A\omega\sin\omega t,\quad v=w=0.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Write down assumptions about the components of the fluid flow and their
+            dependence on the spatial coordinates <m>x</m>, <m>y</m> and <m>z</m>.
+            Use this to simplify the the governing equations and boundary conditions.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We assume this is a two-dimensional flow,
+            with <m>w=0</m> and all components not depending on <m>z</m>.
+            In addition we assume the velocity components do not depend on <m>x</m>
+            (because translating the problem in the <m>x</m>-direction is the same problem).
+            Thus we have <m>u(y,t)</m>, <m>v(y,t)</m>, <m>w=0</m> and <m>p(y,t)</m>.
+          </p>
+          <p>
+            The continuity equation is
+            <me>
+              \pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0.
+            </me>
+            The first and third terms are zero by assumption, and therefore
+            <me>
+              \pd{v}{y}=0.
+            </me>
+            Hence <m>v</m> is constant, and the boundary condition <m>v=0</m> at <m>y=0</m>
+            implies that <m>v=0</m> everywhere.
+            The three components of the Navier<ndash/>Stokes equation simplify to
+            <md>
+              <mrow>
+                &amp;\pd{u}{t}+0+0+0=0+\nu\left(0+\pd{^2u}{y^2}+0\right),\\
+              </mrow>
+              <mrow>
+                &amp;0+0+0+0=-\frac1{\rho}\pd{p}{y}+\nu\left(0+0+0\right),\\
+              </mrow>
+              <mrow>
+                &amp;0+0+0+0=0+\nu\left(0+0+0\right).
+              </mrow>
+            </md>
+            Thus <m>p</m> is constant in space and the only non-trivial equation is
+            <me>
+              \pd{u}{t}=\nu\pd{^2u}{y^2},
+            </me>
+            together with boundary conditions <m>u=-A\omega\sin\omega t</m> at <m>y=0</m>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Make the assumption that the flow and pressure are sinusoidal,
+            that is
+            <m>\bu(\bx,t)=\bu(\bx)e^{\im\omega t}+\overline{\bu(\bx)}e^{-\im\omega t}</m>
+            and
+            <m>p(\bx,t)=P(\bx)e^{\im\omega t}+\overline{P(\bx)}e^{-\im\omega t}</m>.
+            Use this to simplify and solve the governing equations to find the velocity field.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The periodic assumption simplifies to
+            <m>u=U(y)e^{\im\omega t}+\overline{U(y)}e^{-\im\omega t}</m>
+            (the other components are not needed).
+            Substituting into the governing equation,
+            <me>
+              \im\omega Ue^{i\omega t}-\im\omega \overline{U(y)}e^{-\im\omega t}
+              =\nu\left(\frac{d^2U}{dy^2}e^{\im\omega t}
+              +\frac{d^2\overline{U}}{dy^2}e^{-\im\omega t}\right).
+            </me>
+            The coefficients of <m>e^{\im\omega t}</m> must balance and the coefficients of
+            <m>e^{-\im\omega t}</m> must balance.
+            Therefore
+            <me>
+              \im\omega U=\nu\frac{d^2U}{dy^2},
+              \quad\mathrm{and}\quad
+              -\im\omega\overline{U}=\nu\frac{d^2\overline{U}}{dy^2}.
+            </me>
+            These two equations are the complex conjugates of one another,
+            so we only need to solve one of them, which gives the general solution
+            <me>
+              U=C_1e^{\sqrt{\frac{\im\omega}{\nu}}y}+C_2e^{-\sqrt{\frac{\im\omega}{\nu}}y}.
+            </me>
+            The function <m>e^{\sqrt{\frac{\im\omega}{\nu}}y}\rightarrow\infty</m>
+            as <m>y\rightarrow\infty</m>, and thus <m>C_1=0</m>.
+            The boundary condition
+            <m>u=-A\omega\sin\omega t
+              =(A\omega i/2)e^{\im\omega t}-(A\omega\im/2)e^{-\im\omega t}</m> at <m>y=0</m>.
+            Hence <m>U=A\omega\im/2</m>, meaning that <m>C_2=A\omega\im/2</m>.
+            Hence
+            <md>
+              <mrow>
+                u=&amp;\frac{A\omega \im}{2}e^{-\sqrt{\frac{\im\omega}{\nu}}y+\im\omega t}-\frac{A\omega \im}{2}e^{-\sqrt{\frac{-\im\omega}{\nu}}y-\im\omega t}\\
+              </mrow>
+              <mrow>
+                =&amp;-\frac{A\omega}{2\im}\left(e^{-(1+\im)\sqrt{\frac{\omega}{2\nu}}y+\im\omega t}-e^{-(1-\im)\sqrt{\frac{\omega}{2\nu}}y-\im\omega t}\right)\\
+              </mrow>
+              <mrow>
+                =&amp;-A\omega e^{-\sqrt{\frac{\omega}{2\nu}}y}\frac{\left(e^{\im(-\sqrt{\frac{\omega}{2\nu}}y+\omega t)}-e^{-\im(-\sqrt{\frac{\omega}{2\nu}}y+\omega t)}\right)}{2\im}\\
+              </mrow>
+              <mrow>
+                =&amp;-A\omega e^{-\sqrt{\frac{\omega}{2\nu}}y}\sin\left(\omega t-\sqrt{\frac{\omega}{2\nu}}y\right).
+              </mrow>
+            </md>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Sketch the velocity profile at time <m>t</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The velocity profile is a sinusoidal function whose amplitude decays
+            exponentially with the distance from the surface.
+          </p>
+          <figure xml:id="fig-stokes-boundary-layer">
+            <caption>Stokes boundary layer flow.</caption>
+            <image source="ch-chapter07-stokes-boundary-layer.jpg" width="80%"/>
+          </figure>
+          <p>
+            This is a famous exact solution of the Navier<ndash/>Stokes equations, and the flow we have found here is characteristic of the flow that exists near an oscillating boundary. Note that the flow decays away from the wall, and for this reason it is often described as a boundary later,
+            and the solution is called <em>Stokes boundary layer</em> flow.
+          </p>
+        </solution>
+      </task>
+    </example>
+
+    <example xml:id="sec-low-Reynolds-number-sphere">
+      <title>Low-Reynolds-number flow past a sphere (non-examinable)</title>
+      <p><em>This section is non-examinable.</em></p>
+      <figure xml:id="fig-low-reynolds-sphere">
+        <caption>Photographs of a sphere moving through a fluid with <m>\mathrm{Re} = 0.1</m>.
+          The top photograph is in the reference frame in which the sphere is stationary,
+          and the bottom photograph is in a fixed frame,
+          (note the shadow cast by the sphere is not indicative of the flow).
+          Taken from <xref ref="ref-album"/>, and see also Figs. 25, 51, 56, 58 from this book,
+        which show the flow for higher Reynolds numbers.</caption>
+        <image source="ch-chapter07-low-reynolds-sphere.png" width="80%"/>
+      </figure>
+      <figure xml:id="fig-sphere-through-fluid">
+        <caption>Sketches of the flow field around of a fixed sphere
+          in a moving fluid for (a) low, (b) moderate
+          and (c) high Reynolds numbers.
+          </caption>
+        <image source="ch-chapter07-sphere-through-fluid.jpg" width="80%"/>
+      </figure>
     <p>
-      We consider
+      In this section we find the flow around a sphere moving through a fluid
+      at a low Reynolds number, using a Stokes streamfunction.
+      We use this to find the drag on the sphere.
+      <xref ref="fig-low-reynolds-sphere"/> shows two photographs of the same flow,
+      but visualised in two different ways,
+      and <xref ref="fig-sphere-through-fluid"/> shows sketches of the flow
+      for a range of Reynolds numbers.
     </p>
+    <p>
+      The calculation shows that the drag force experienced by an object moving
+      through a fluid at low Reynolds numbers can be derived from the Stokes equations.
+      This analysis shows that the Stokes drag on a sphere is <m>6\pi\mu Ua</m>
+      in the direction opposing motion, which holds as long as <m>\rho Ua/\mu\ll1</m>.
+      This is a famous classical result in fluid mechanics.
+    </p>
+    <p>
+      This principle is used in a falling ball viscometer in which a small spherical ball
+      of known radius <m>a</m> and mass <m>m</m> is dropped into a fluid,
+      whose viscosity <m>\mu</m> we wish to measure.
+      Once the ball has reached its terminal falling velocity <m>U</m>,
+      the forces on it must be in equilibrium,
+      meaning that the force of gravity balances the drag force.
+      Assuming the sphere is small enough and going slowly enough and the fluid is
+      viscous enough that the flow has a low Reynolds number,
+      the drag is given by <m>6\pi\mu Ua</m> and the force of gravity is <m>mg</m>,
+      where <m>g</m> is the acceleration due to gravity. Thus
+      <me>
+        \mu=\frac{mg}{6\pi Ua},
+      </me>
+      and so measuring the terminal velocity and substituting into this equation
+      gives an estimate of the viscosity of the fluid.
+    </p>
+    <p>
+      We assume the flow is axisymmetric and work in a moving reference frame
+      centred on the sphere using spherical coordinates.
+      As shown in <xref ref="subsec-stokes-streamfunction"/>, we can write the velocity
+      in terms of a Stokes streamfunction <m>\Psi</m> using
+      <xref ref="eq-stokes-streamfunction-cylindrical"/>:
+      <md>
+        <mrow>
+          u_r=&amp;\frac1{r^2\sin\theta}\pd{\Psi}{\theta},
+        </mrow>
+        <mrow>
+          u_\theta=&amp;-\frac1{r\sin\theta}\pd{\Psi}{r},
+        </mrow>
+        <mrow>
+          u_\phi=&amp;0.
+        </mrow>
+      </md>
+      From <xref ref="eq-axisym-vorticity-sphericals"/>,
+      the vorticity is given by
+      <me>
+        \bomega=-\frac1{r\sin\theta}\left(\mathcal{L}_s\left(\Psi\right)\right)\hat\bphi,
+      </me>
+      where the differential operator <m>L_s</m> is a variant of the Laplacian operator,
+      defined by its action on a function <m>A</m> by
+      <men xml:id="eq-definitionofLs">
+        \mathcal{L}_s\left(A\right)=\pd{^2A}{r^2}
+        +\frac{\sin\theta}{r^2}\pd{}{\theta}\left(\frac1{\sin\theta}\pd{A}{\theta}\right).
+      </men>
+      At low Reynolds numbers, we take the curl of the Stokes equation
+      <xref ref="low-reynolds-number"/> to give
+      <me>
+        \nabla^2\bomega=\bzero,
+      </me>
+      and, after some work, we may show this is equivalent to
+      <men xml:id="eq-stokes-eq-streamfunction-axisym">
+        \mathcal{L}_s^2\Psi=0.
+      </men>
+      We need boundary conditions on <m>\Psi</m>, which are given by the following:
+      <ul>
+        <li>
+          <p>
+            No-slip conditions on the surface of the sphere (<m>r=a</m>).
+            Using the expressions for <m>u_r</m> and <m>u_\theta</m> above, these become
+            <md>
+              <mrow>
+                &amp;u_r=0\quad\Rightarrow\quad\pd{\Psi}{\theta}=0,
+              </mrow>
+              <mrow>
+                &amp;u_\theta=0\quad\Rightarrow\quad\pd{\Psi}{r}=0.
+              </mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            As <m>r\rightarrow\infty</m> we must have uniform flow with velocity
+            <m>U</m> in the direction <m>\theta=\pi</m>.
+            Using the expressions for the velocity components
+            <m>u_r</m> and <m>u_\theta</m> above, these become
+            <md>
+              <mrow>
+                &amp;u_r\sim -U\cos\theta\quad\Rightarrow\quad \pd{\Psi}{\theta}\sim-Ur^2\sin\theta\cos\theta,
+              </mrow>
+              <mrow>
+                &amp;u_\theta\sim U\sin\theta\quad\Rightarrow\quad \pd{\Psi}{r}\sim-Ur\sin^2\theta.
+              </mrow>
+            </md>
+            Combining these we get
+            <me>
+              \Psi\sim-\frac12Ur^2\sin^2\theta+C,
+            </me>
+            where <m>C</m> is constant.
+            Adding a constant onto the streamfunction does not affect the velocity,
+            and thus we may arbitrarily set <m>C=0</m>, giving
+            <men xml:id="eq-stokes-behaviour-infty">
+              \Psi\sim-\frac12Ur^2\sin^2\theta\quad\mathrm{as}\quad r\rightarrow\infty.
+            </men>
+          </p>
+        </li>
+      </ul>
+      Thus we have to solve <xref ref="eq-stokes-eq-streamfunction-axisym"/>
+      subject to the <m>\partial\Psi/\partial r=\partial\Psi/\partial\theta=0</m>
+      on <m>r=a</m> and <xref ref="eq-stokes-behaviour-infty"/> as <m>r\rightarrow\infty</m>.
+      We try a separable function
+      <men xml:id="eq-separablePsi">
+        \Psi=f(r)g(\theta),
+      </men>
+      and the condition <xref ref="eq-stokes-behaviour-infty"/> implies that
+      <m>g(\theta)=\sin^2\theta</m> (or a multiple thereof).
+      Substituting <xref ref="eq-separablePsi"/>
+      into <xref ref="eq-stokes-eq-streamfunction-axisym"/>
+      and using <xref ref="eq-definitionofLs"/>, after some algebra we obtain
+      <men xml:id="eq-fourth-order">
+        \dd{^4f}{r^4}
+        -\frac{4}{r^2}\dd{^2f}{r^2}
+        +\frac{8}{r^3}\dd{f}{r}
+        -\frac{8f}{r^4}
+        =0.
+      </men>
+      We try <m>f\propto r^\alpha</m> and obtain
+      <md>
+        <mrow>
+          &amp;\alpha(\alpha-1)(\alpha-2)(\alpha-3)r^{\alpha-4}
+          -\frac{4}{r^2}\alpha(\alpha-1)r^{\alpha-2}
+          +\frac{8}{r^3}\alpha r^{\alpha-1}-\frac{8}{r^4}r^\alpha=0
+        </mrow>
+        <mrow>
+          \Rightarrow\quad
+          &amp;\alpha(\alpha-1)(\alpha-2)(\alpha-3)-4\alpha(\alpha-1)+8\alpha-8=0
+        </mrow>
+        <mrow>
+          \Rightarrow\quad
+          &amp;(\alpha-4)(\alpha-2)(\alpha+1)(\alpha-1)=0.
+        </mrow>
+      </md>
+      Thus <m>\alpha=4,2,1</m> or <m>-1</m>, and so the general solution of
+      <xref ref="eq-fourth-order"/> is
+      <me>
+        f(r)=C_1r^4+C_2r^2+C_3r+\frac{C_4}{r}.
+      </me>
+      <ul>
+        <li>
+          <p>
+            Enforcing the behaviour <xref ref="eq-stokes-behaviour-infty"/>
+            as <m>r\rightarrow\infty</m>, we need <m>f\sim-Ur^2/2</m>,
+            and so <m>C_1=0</m>, <m>C_2=-U/2</m>. Thus
+            <me>
+              f(r)=-\frac12Ur^2+C_3r+\frac{C_4}{r}.
+            </me>            
+          </p>
+        </li>
+        <li>
+          <p>
+            Applying the boundary condition <m>\partial\Psi/\partial\theta=0</m> at <m>r=a</m>,
+            <md>
+              <mrow>
+                &amp;\left.\pd{\Psi}{\theta}\right|_{r=a}=0
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;f(a)g'(\theta)=0
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;\left(-\frac12Ua^2+C_3a+\frac{C_4}{a}\right)
+                \left(2\sin\theta\cos\theta\right)=0
+              </mrow>
+            </md>
+            which must be true for all values of <m>\theta</m>. Thus
+            <men xml:id="eq-condition1">
+              -\frac12Ua^2+C_3a+\frac{C_4}{a}=0.
+            </men>
+          </p>
+        </li>
+        <li>
+          <p>
+            Applying the boundary condition <m>\partial\Psi/\partial r=0</m> at <m>r=a</m>,
+            <md>
+              <mrow>
+                &amp;\left.\pd{\Psi}{r}\right|_{r=a}=0
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;f'(a)g(\theta)=0
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;\left(-Ua+C_3-\frac{C_4}{a^2}\right)\left(\sin^2\theta\right)=0,
+              </mrow>
+            </md>
+            which must be true for all <m>\theta</m>. Thus
+            <men xml:id="eq-condition2">
+              -Ua+C_3-\frac{C_4}{a^2}=0.
+            </men>
+          </p>
+        </li>
+      </ul>
+      Equations <xref ref="eq-condition1"/> and <xref ref="eq-condition2"/>
+      have the solution <m>C_3=3Ua/4</m> and <m>C_4=-Ua^3/4</m>. Thus
+      <me>
+        \Psi=-\frac{U}{4r}\left(a^3-3ar^2+2r^3\right)\sin^2\theta,
+      </me>
+      and we can substitute this into the expressions for the components of the velocity field
+      to obtain the velocity:
+      <md>
+        <mrow>
+          &amp;u_r=\frac1{r^2\sin\theta}\pd{\Psi}{\theta}
+          =-\frac{U}{2}\left(2-\frac{3a}{r}+\frac{a^3}{r^3}\right)\cos\theta
+          =-\frac{U}{2}\left(1-\frac{a}{r}\right)^2\left(2+\frac{a}{r}\right)\cos\theta,
+        </mrow>
+        <mrow>
+          &amp;u_\theta=-\frac1{r\sin\theta}\pd{\Psi}{r}
+          =\frac{U}{4}\left(4-\frac{3a}{r}-\frac{a^3}{r^3}\right)\sin\theta
+          =\frac{U}{4}\left(1-\frac{a}{r}\right)\left(4+\frac{a}{r}+\frac{a^2}{r^2}\right)\sin\theta,
+        </mrow>
+        <mrow>
+          &amp;u_\phi=0.
+        </mrow>
+      </md>
+    </p>
+    <p>
+      We can also find the pressure using the Stokes equation in the form
+      <m>\bnabla p=\mu\nabla^2\bu</m>. After a lot of algebra we obtain
+      <me>
+        \pd{p}{r}=-\frac{3\mu Ua}{r^3}\cos\theta,\quad
+        \frac1r\pd{p}{\theta}=-\frac{3\mu Ua}{2r^3}\sin\theta,\quad
+        \frac1{r\sin\theta}\pd{p}{\phi}=0,
+      </me>
+      which we solve to find
+      <me>
+        p=p_0+\frac{3\mu Ua}{2r^2}\cos\theta,
+      </me>
+      where <m>p_0</m> is constant.      
+    </p>
+    <p>
+      Perhaps the most interesting application of this solution
+      is to find the drag on the sphere,
+      which is the total force of the fluid on the sphere,
+      retarding the motion.
+      Since the stress is the force per unit area on the sphere,
+      the drag equals the integral of the stress over the surface.
+      We find the stress using
+      <men xml:id="eq-stressonstokessphere">
+        \btau=\bsigma\hat\br,\quad\mathrm{where}\quad
+        \bsigma=-p \bI +2\mu \be\quad\mathrm{and}\quad
+        \hat\br=\left(\begin{array}{c}1\\0\\0\end{array}\right).
+      </men>
+      We use the expression for <m>\be</m> in spherical polar coordinates
+      <xref ref="eq-eincylsph"/>, and then <xref ref="eq-stressonstokessphere"/>
+      gives the stress on the surface as
+      <md>
+        <mrow>
+          \btau=&amp;\left.\left(\begin{array}{c}
+          -p+2\mu\pd{u_r}{r}\\
+          \mu\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)\\
+          \mu\left(\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)
+          \end{array}\right)\right|_{r=a}
+        </mrow>
+        <mrow>
+          =&amp;\left.\left(-p+2\mu\pd{u_r}{r}\right)\right|_{r=a}\hat\br
+          +\left.\mu\left(r\pd{(u_\theta/r)}{r}+\frac1r\pd{u_r}{\theta}\right)\right|_{r=a}\hat\btheta
+        </mrow>
+        <mrow>
+          &amp;+\left.\mu\left(\pd{(u_\phi/r)}{r}+\frac1{r\sin\theta}\pd{u_r}{\phi}\right)\right|_{r=a}\hat\bphi.
+        </mrow>
+      </md>
+      On substituting in the expressions for the velocity components
+      <m>u_r</m>, <m>u_\theta</m>, <m>u_\phi</m>,
+      we find that
+      <me>
+        \btau
+        =\left(-p_0-\frac{3\mu U}{2a}\cos\theta\right)\hat\br+\frac{3\mu U}{2a}\sin\theta\hat\btheta+0\hat\bphi
+        =-p_0\hat\br+\frac{3\mu U}{2a}\left(\sin\theta\hat\btheta-\cos\theta\hat\br\right).\label{eq:tauworking}
+      </me>
+      We express the bracket <m>(\sin\theta\hat\btheta-\cos\theta\hat\br)</m>
+      in this equation in terms of Cartesian coordinates, using the conversion formulae
+      <me>
+        \hat\br=\cos\phi\sin\theta\bI+\sin\phi\sin\theta\bj+\cos\theta\bk,\quad
+        \hat\btheta=\cos\phi\cos\theta\bI+\sin\phi\cos\theta\bj-\sin\theta\bk.
+      </me>
+      Substituting this into the expression for <m>\btau</m>, we obtain the stress
+      <me>
+        \btau=-p_0\hat\br-\frac{3\mu U}{2a}\bk.
+      </me>
+      The drag equals the integral of <m>\btau</m> over the surface of the sphere.
+      The integral of the term <m>-p_0\hat\br</m> is zero because this force cancels
+      on opposite sides of the sphere, but the term <m>-\frac{3\mu U}{2a}\hat\bk</m>
+      is always in the same direction;
+      thus the total drag force is this term times the area, which is
+      <me>
+        \left(-\frac{3\mu U}{2a}\hat\bk\right)\times\left(4\pi a^2\right)=-6\pi\mu Ua\hat\bk.
+      </me>
+      Thus the drag force is <m>\boxed{6\pi\mu Ua}</m> in the direction opposing motion.
+      This is called the <em>Stokes drag</em> and it is a famous result in fluid mechanics.
+    </p>
+    <remark>
+      <p>
+        This derivation is extremely complicated in terms of the algebra,
+        and you would certainly not be asked to reproduce something so long-winded
+        as this in this course.
+        However, you should understand the concepts, and be able to follow the general argument.
+        In fact the mathematics presented here is very elegant indeed,
+        and it is amazing that an exact solution exists and can be calculated.
+      </p>
+    </remark>
+    <remark>
+      <p>
+        Notice that in the course of the derivation <xref ref="eq-separablePsi"/>,
+        we made the assumption that <m>\Psi</m> is separable.
+        Thus we have not rigorously shown that the solution we found was unique,
+        that is there might be other solutions to this problem that satisfy
+        the boundary conditions at <m>r=a</m> and the condition as
+        <m>r\rightarrow\infty</m>.
+      </p>
+    </remark>
+    </example>
+    <example xml:id="example-womersley-flow">
+      <title>Womersley flow (non-examinable)</title>
+      <p>
+        <em>This section is non-examinable.</em>
+      </p>
+      <p>
+        Womersley flow occurs in pipes in which there is an imposed oscillating pressure gradient.
+        Characteristics of this flow are often seen in blood flow in arteries,
+        since the flow and pressure gradient are unsteady.
+        As for the derivation of Poiseuille flow, we consider a long,
+        circular cylindrical pipe of radius <m>a</m>,
+        and work in cylindrical polar coordinates centred on the axis of the pipe.
+        We make the following assumptions:
+        <ul>
+          <li>
+            <p>
+              The flow is <em>fully developed</em>; thus <m>\partial\bu/\partial z=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The flow is <em>axisymmetric</em>;
+              thus <m>\partial\bu/\partial\theta=\partial p/\partial\theta=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The flow has a <em>symmetry</em> in a diameter of the cross-section.
+              In turn this means there is no swirl in the flow, and thus <m>u_\theta=0</m>.
+            </p>
+          </li>
+        </ul>
+        The derivation proceed similarly to that of Poiseuille flow
+        (so we cover it quite briefly here).
+        With the assumptions, the continuity equation reduces to
+        <me>
+          \frac1r\pd{}{r}\left(ru_r\right)=0,
+        </me>
+        which gives <m>u_r\propto1/r</m>,
+        whereupon the boundary condition implies that the constant of proportionality is zero,
+        and hence <m>u_r=0</m>.
+        Thus the only flow component is the axial flow, <m>u_z</m>,
+        which, according to the assumptions, is a function of <m>r</m> and <m>t</m> only
+        (and does not depend on either <m>\theta</m> or <m>z</m>).
+        The radial and azimuthal components of the Navier<ndash/>Stokes equation reduce to the
+        equations
+        <me>
+          \pd{p}{r}=\pd{p}{\theta}=0,
+        </me>
+        and thus <m>p</m> is a function of <m>z</m> and <m>t</m> only.
+        The axial component of the Navier<ndash/>Stokes equation is
+        <men xml:id="eq-axialNS">
+          \rho\pd{u_z}{t}=-\pd{p}{z}+\mu\frac1r\pd{}{r}\left(r\pd{u_z}{r}\right).
+        </men>
+        Consider what happens to the three terms in this equation at
+        fixed values of <m>t</m> and <m>r</m> as <m>z</m> alone is varied.
+        Since <m>u_z</m> is not a function of <m>z</m>,
+        the only term that can vary is <m>\pd{p}{z}</m>,
+        while the other two terms stay constant.
+        Since equality must be maintained this shows that, in fact,
+        <m>\pd{p}{z}</m> must be fixed as <m>z</m> varies,
+        and thus <m>p=A(t)z+B(t)</m>, where <m>A</m> and <m>B</m> are unknown functions of time.
+        We set <m>G(t)=-A(t)</m> to be the pressure gradient of the flow at time <m>t</m>.
+      </p>
+      <p>
+        In Poiseuille flow <m>G</m> is fixed in time, but in Womersley flow we set
+        <m>G(t)=G_0\cos\omega t</m>, where <m>G_0</m> is constant
+        (by fixing the origin of time we may fix <m>G_0</m> to be real and positive).
+        We can write this as
+        <me>
+          G(t)=\frac{G_0}{2}e^{\im\omega t}+\mathrm{c.c.},
+        </me>
+        where <m>\mathrm{c.c.}</m> denotes the complex conjugate.
+        We try a solution of the form
+        <men xml:id="eq-ansatz-uz">
+          u_z(r,t)=U(r)e^{\im\omega t}+\mathrm{c.c.},\label{eq:udecomp}
+        </men>
+        where <m>U</m> is a complex-valued function, and, substituting this into
+        <xref ref="eq-axialNS"/>, we obtain
+        <md>
+          <mrow>
+            &amp;\rho\im\omega Ue^{\im\omega t}-\rho\im\omega\overline{U}e^{-\im\omega t}
+            =\frac{G_0}2e^{\im\omega t}+\frac{G_0}2e^{-\im\omega t}
+            +\mu\frac1r\pd{}{r}\left(r\pd{U}{r}\right)e^{\im\omega t}+\mu\frac1r\pd{}{r}\left(r\pd{\overline{U}}{r}\right)e^{-\im\omega t}
+          </mrow>
+          <mrow>
+            \Rightarrow\quad&amp;
+            \left\{\rho\im\omega U-\frac{G_0}2-\mu\frac1r\pd{}{r}\left(r\pd{U}{r}\right)\right\}e^{\im\omega t}
+            +\left\{-\rho\im\omega\overline{U}-\frac{G_0}2-\mu\frac1r\pd{}{r}\left(r\pd{\overline{U}}{r}\right)\right\}e^{-\im\omega t}
+            =0.
+          </mrow>
+        </md>
+        This equation must be true for all values of <m>t</m>,
+        which means that both of the expressions in brackets <m>\{\}</m> must be be zero.
+        Since the two bracketed expressions are complex conjugates of one another,
+        we only need to consider the first bracket. Thus
+        <me>
+          \im\omega\rho U-\frac{G_0}2-\mu\frac1r\dd{}{r}\left(r\dd{U}{r}\right)=0
+          \quad\Rightarrow\quad
+          \dd{^2U}{r^2}+\frac1r\dd{U}{r}-\frac{\im\omega\rho}{\mu}U=-\frac{G_0}{2\mu}.
+        </me>
+        This is a linear, second-order, non-constant-coefficient,
+        non-homogeneous ordinary differential equation for <m>U</m>.
+        We can therefore solve it as a complementary function <m>U_{cf}</m>
+        plus a particular integral <m>U_{pi}</m>.
+        The particular integral is given by
+        <me>
+          U_{pi}=\frac{G_0}{2\im\omega\rho}.
+        </me>
+        To find the complementary function we must solve
+        <me>
+          \dd{^2U_{cf}}{r^2}+\frac1r\dd{U_{cf}}{r}-\frac{\im\omega\rho}{\mu}U_{cf}=0,
+        </me>
+        and substituting <m>s=(\sqrt{-\im\omega/\nu})r</m> and simplifying,
+        we remove the coefficients on the left-hand side to obtain
+        <me>
+          \dd{^2U_{cf}}{s^2}+\frac1s\dd{U_{cf}}{s}+U_{cf}=0.
+        </me>
+        This equation is the standard form of a special equation called Bessel's equation.
+        The two linearly independent solutions are called Bessel functions of order zero,
+        and they are denoted <m>J_0</m> and <m>Y_0</m>, see
+        <xref ref="fig-bessel-functions-first-kind"/> and
+        <xref ref="fig-bessel-functions-second-kind"/>.
+      </p>
+      <figure xml:id="fig-bessel-functions-first-kind">
+        <caption>Bessel functions of the first kind <m>J_0</m>, <m>J_1</m> and <m>J_2</m>
+          (from Wikipedia entry on Bessel functions).</caption>
+        <image source="ch-chapter07-Bessel_Functions_1st_Kind_n0_1_2-eps-converted-to.jpg" width="80%"/>
+      </figure>
+      <figure xml:id="fig-bessel-functions-second-kind">
+        <caption>Bessel functions of the second kind <m>Y_0</m>, <m>Y_1</m> and <m>Y_2</m>
+          (from Wikipedia entry on Bessel functions).</caption>
+        <image source="ch-chapter-07-Bessel_Functions_2nd_Kind_n0_1_2-eps-converted-to.jpg" width="80%"/>
+      </figure>
+      <p>
+        We therefore obtain the complementary function
+        <me>
+          U_{cf}=C_1J_0(s)+C_2Y_0(s),
+        </me>
+        where <m>C_1</m> and <m>C_2</m> are constants of integration, and thus
+        <md>
+          <mrow>
+            U=U_{cf}+U_{pi}
+            =&amp;C_1J_0\left(\sqrt{\frac{-\im\omega}{\nu}}r\right)+C_2Y_0\left(\sqrt{\frac{-\im\omega}{\nu}}r\right)+\frac{G_0}{2\im\omega\rho}
+          </mrow>
+          <mrow>
+            =&amp;C_1J_0\left(\sqrt{-\im}\alpha\frac{r}{a}\right)+C_2Y_0\left(\sqrt{-\im}\alpha\frac{r}{a}\right)+\frac{G_0}{2\im\omega\rho},
+          </mrow>
+        </md>
+        where the Womersley number <m>\alpha</m> is a dimensionless parameter defined by
+        <me>
+          \alpha=\sqrt{\frac{\omega}{\nu}}.
+        </me>
+        To find the constants <m>C_1</m> and <m>C_2</m> we apply the boundary conditions
+        and regularity conditions at the origin <m>r=0</m> (as we did for Poiseuille flow):
+        <ul>
+          <li>
+            <p>
+              At <m>r=0</m>: The function <m>Y_0(x)</m> tends to infinity as
+              <m>x\rightarrow0</m> and so contributions from
+              <m>Y_0((\sqrt{-\im\omega/\nu})r)</m> are not allowed, meaning that
+              <m>C_2</m> must be set to zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>r=a</m>: The no-slip boundary condition is <m>u_z=0</m>
+              at the wall for all times, which from <xref ref="eq-ansatz-uz"/>
+              means that <m>U</m> must also be zero at <m>r=a</m>.
+              Substituting into the solution for <m>U</m> gives
+              <me>
+                C_1=-\frac{G_0}{2\im\omega\rho J_0(\sqrt{-\im}\alpha)}.
+              </me>
+            </p>
+          </li>
+        </ul>
+        Hence
+        <me>
+          U=\frac{G_0}{2\im\omega\rho}\left(1-\frac{J_0(\sqrt{-\im}\alpha r/a)}{J_0(\sqrt{-\im}\alpha)}\right),
+        </me>
+        and, substituting this into <xref ref="eq-ansatz-uz"/>, we get
+        <men xml:id="eq-womsersley-flow">
+          u_z=-\frac{\im G_0}{2\omega\rho}\left(1-\frac{J_0(\sqrt{-\im}\alpha r/a)}{J_0(\sqrt{-\im}\alpha)}\right)e^{\im\omega t}+\mathrm{c.c.}\label{eq:womersleyflow}
+        </men>
+        This is Womersley flow, which was first described by Womersley in 1955.
+        The nondimensionalised flow profile is
+        <me>
+          u_z^*=-\frac{\im}{2}\left(1-\frac{J_0(\sqrt{-\im}\alpha r^*)}{J_0(\sqrt{-\im}\alpha)}\right)e^{\im t^*}+\mathrm{c.c.},\label{eq:womersleyflownondim}
+        </me>
+        where <m>u_z^*=u_z/(G_0/(\omega\rho))</m>, <m>r^*=r/a</m>, <m>t^*=\omega t</m>.
+        This nondimensionalisation shows that the flow is characterised by a single parameter,
+        the Womersley number, <m>\alpha</m>
+        (as opposed to 4 dimensional parameters: <m>\rho</m>, <m>\mu</m>, <m>a</m> and <m>\omega</m>).
+        Sketches of the flow profiles for different values of <m>\alpha</m> are given in Figure~\ref{fig:womersley} and some movies will be shown in the lecture.
+      </p>
+      <figure xml:id="fig-womserley-number-effect">
+        <caption>Snapshots of sketches of Womersley flow profiles for various Womersley numbers.
+          (a) Low Womersley number (profile is Poiseuille flow multiplied by a time-dependent factor),
+          (b) intermediate Womersley number,
+          (c) high Womersley number (profile is flat across the interior with a boundary layer
+          in which the flow oscillates rapidly).</caption>
+        <image source="ch-chapter07-low-medium-high-womersley-number.jpg" width="80%"/>
+      </figure>
+      <remark>
+        <p>
+          We may do a similar analysis for any prescribed periodic pressure gradient <m>G(t)</m>.
+          To do this we decompose <m>G(t)</m> into a Fourier series sum of terms of different
+          frequencies. We solve for the flow generated by each component of <m>G(t)</m> individually.
+          The total flow is the sum of these flow components.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          In the human arterial system the Womersley number of the fundamental harmonic
+          is different in different arteries and it takes values up to about 20.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          For small Womersley numbers we use the Taylor series expansion of the Bessel function:
+          <me>
+            J_0(z)=1-\frac{z^2}{4}+\dots
+          </me>
+          to find an approximation of <m>u_z</m>.
+          <md>
+            <mrow>
+              u_z=\frac{\im G_0}{2\omega\rho}\left(\frac{\im\alpha^2}4-\frac{\im}{4}\left(\frac{\alpha r}{a}\right)^2+\dots\right)e^{\im\omega t}+\mathrm{c.c.}
+              \approx&amp;-\frac{G_0}{8\mu}\left(a^2-r^2\right)e^{\im\omega t}+\mathrm{c.c.}
+            </mrow>
+            <mrow>
+              =&amp;-\frac{G_0}{4\mu}\left(a^2-r^2\right)\cos\omega t,
+            </mrow>
+          </md>
+          which is a Poiseuille flow profile (multiplied by an oscillating amplitude).
+          This flow is called <em>quasi-steady</em>,
+          because this is the solution that we would obtain if we neglected the
+          time-derivative term in the Navier<ndash/>Stokes equation.
+        </p>
+      </remark>
+      <remark>
+        <p>
+          For large Womersley numbers we use the standard asymptotic expansions for the
+          Bessel function, which is:
+          <me>
+            J_0(z)\approx\sqrt{\frac{2}{\pi z}}\cos\left(z-\frac{\pi}{4}\right)
+          </me>
+          when <m>|z|\gg1</m>. Letting <m>z=x+\im y</m>, where <m>x</m> and <m>y</m> are real,
+          we can expand the cosine function:
+          <me>
+            J_0(z)\approx\sqrt{\frac{1}{2\pi z}}\left(e^{\im x-\im\pi/4}e^{-y}+e^{-\im x+\im\pi/4}e^{y}\right)
+            \approx\sqrt{\frac{1}{2\pi z}}e^{\im x-\im\pi/4}e^{-y}=\sqrt{\frac{1}{2\pi z}}e^{\im z-\im\pi/4}.
+          </me>
+          where the second approximation is valid if <m>y\ll0</m> (which is the case we have).
+          Substituting into <xref ref="eq-womsersley-flow"/>, we obtain
+          <md>
+            <mrow>
+              u_z\approx&amp;-\frac{\im G_0}{2\omega\rho}\left(1-\sqrt{\frac{a}{r}}e^{-\sqrt{\im}\alpha(1-r/a)}\right)e^{\im\omega t}+\mathrm{c.c.}
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im G_0}{2\omega\rho}\left(1-\sqrt{\frac{a}{r}}e^{-\frac{\alpha}{\sqrt{2}}(1-\frac{r}{a})}e^{-\im\frac{\alpha}{\sqrt{2}}(1-\frac{r}{a})}\right)e^{\im\omega t}+\mathrm{c.c.}
+            </mrow>
+          </md>
+          Away from the boundaries, <m>\frac{\alpha}{\sqrt{2}}(1-\frac{r}{a})</m> is large
+          and so the exponential terms in the bracket in this expression are very small, and
+          <me>
+            u_z\approx-\frac{\im G_0}{2\omega\rho}e^{\im\omega t}+\mathrm{c.c.}
+            =\frac{G_0}{\omega\rho}\sin\omega t.
+          </me>
+          This type of flow is called <em>plug flow</em>,
+          since at any fixed time the profile is uniform across the interior.
+        </p>
+        <p>
+          Near the walls of the pipe the exponential terms become important.
+          At the walls themselves, the flow is zero, and, as we move away,
+          the expression for the velocity shows there are rapid oscillations
+          that decrease in magnitude as we move away from the wall.
+        </p>
+        <p>
+          Thus we see that the flow is divided into two distinct regions.
+          There is the core in which the dominant balance is between the pressure gradient
+          and the inertial term (the time-derivative term),
+          and in which the viscosity plays a minor role.
+          Sometimes this is termed an <em>inviscid core</em>.
+          The other region is the boundary layer,
+          in which the viscosity is important.
+          The width of the boundary layer is of the order of magnitude <m>\alpha^{-1}a</m>
+          (often we would just say loosely that the boundary layer has width <m>\alpha^{-1}a</m>).
+          Within a few <m>\alpha^{-1}a</m>'s away from the boundary,
+          the flow is affected by the presence of the boundary,
+          but further away the effect is negligible.
+        </p>
+        <p>
+          Another way that we could find the flow for large Womersley number is
+          to use boundary layer analysis in the boundary,
+          and an inviscid flow method (such as potential flow analysis) in the interior,
+          and match the two solutions at the edge of the boundary layer.
+          Since we have the exact solution valid for all Womersley numbers,
+          this method of separating into the boundary layer and core regions is not necessary
+          to find the solution.
+          However, in many problems, no solution can be found in the general case,
+          but a solution can be found in the particular case when one parameter is large or small.
+          It is surprising how often such solutions are possible in real world problems,
+          and this method often provides significant insight into the problem.
+        </p>
+      </remark>
+    </example>
   </section>
-
-<!--<section xml:id="sec-streamfunction">
-  <title>Streamfunction formulation for two-dimensional flow</title>
-  In two dimensions, see the equations in <xref ref="remark-navierstokes-components"/>
-  As mentioned in Section If the flow is two-dimensional then this allows a new variable called the streamfunction,
-  usually denoted <m>>\psi</m>, to be introduced. The equations can all be written in terms of <m>\psi</m>,
-  which can make solving them easier.
-  This is beyond the scope of the course, and more details are provided in the supplementary notes.
-
-</section>-->
 
   <exercises xml:id="ws-viscousflows">
     <title>Practice Exercises</title>
@@ -3574,26 +5112,453 @@
         <p>
           In this problem, you will derive the Cauchy equation
           <xref ref="eqn-cauchy-equation"/> for the conservation of linear momentum
-          in a more general fluid (the Navier<ndash/>Stokes equation only applies to Newtonian fluids).
-          We will consider a small cube of fluid as shown in
-          <xref ref="fig-small-cube"/>, and apply the Reynolds Transport Theorem
-          <xref ref="eqn-RTT"/>.
+          in an incompressible fluid that is not necessarily Newtonian
+          (the Navier<ndash/>Stokes equation only applies to Newtonian fluids).
         </p>
       </introduction>
       <task>
         <statement>
           <p>
-            In this task you will
+            Consider a volume <m>V(t)</m> moving with the fluid that,
+            at the time <m>t</m> is the small cube of fluid as shown in
+            <xref ref="fig-small-cube"/>, and apply the Reynolds Transport Theorem
+            <xref ref="eqn-RTT"/> to the fluid in this volume.
           </p>
         </statement>
         <solution>
           <p>
-            Here is the solution.
+            We consider a volume <m>V</m> with surface <m>S</m>
+            consisting of a small cube of side length <m>\delta</m>,
+            as shown in <xref ref="fig-small-cube"/>. We apply the
+            Reynolds Transport Theorem to the fluid in the cube:
+            <me>
+              \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
+              \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z},
+            </me>
+            where <m>f</m> is any function, a vector or a scalar.
+          </p>
+          <p>
+            Setting <m>\bf=\rho\bu</m> equal to the momentum per unit volume in the fluid,
+            the integral equals the momentum of the fluid in the cube,
+            and the time derivative is the rate of change of momentum,
+            which is the total force acting on the fluid in the cube.
+          </p>
+          <p>
+            The total force equals the sum of the surface forces and body forces.
+            The body force equals the force of gravity: <m>\rho V\bg</m>.
+            The surface forces are an integral:
+            <me>
+              \iint_S\btau\,\de S=\iint_S\bsigma\bn\,\de S;
+            </me>
+            and we sum the contributions over the six faces in pairs:
+            <ul>
+              <li>
+                <p>
+                  Front and back faces: The contribution on the back face (<m>\bn=-\bi</m>) is
+                  <me>
+                    -\delta^2\left.\left(\begin{array}{c}
+                    \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+                    \end{array}\right)\right|_{x=x_0}
+                  </me>
+                  and on the front face (<m>\bn=\bi</m>), it is
+                  <me>
+                    \delta^2\left.\left(\begin{array}{c}
+                    \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+                    \end{array}\right)\right|_{x=x_0+\delta}.
+                  </me>
+                  The sum of these is
+                  <me>
+                    \delta^2\left.\left(\begin{array}{c}
+                    \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+                    \end{array}\right)\right|_{x=x_0+\delta}
+                    -\delta^2\left.\left(\begin{array}{c}
+                    \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+                    \end{array}\right)\right|_{x=x_0}
+                    =\delta^3\pd{}{x}\left(\begin{array}{c}
+                    \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+                    \end{array}\right).
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Left and right faces: In a similar way, the contribution is
+                  <me>
+                    \delta^3\pd{}{y}\left(\begin{array}{c}
+                    \sigma_{21}\\\sigma_{22}\\\sigma_{23}
+                    \end{array}\right).
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Bottom and top faces: The contribution is
+                  <me>
+                    \delta^3\pd{}{z}\left(\begin{array}{c}
+                    \sigma_{31}\\\sigma_{32}\\\sigma_{33}
+                    \end{array}\right).
+                  </me>
+                </p>
+              </li>
+            </ul>
+            Hence, the surface force is given by
+            <me>
+              \delta^3\pd{}{x}\left(\begin{array}{c}
+              \sigma_{11}\\\sigma_{12}\\\sigma_{13}
+              \end{array}\right)
+              +\delta^3\pd{}{y}\left(\begin{array}{c}
+              \sigma_{21}\\\sigma_{22}\\\sigma_{23}
+              \end{array}\right)
+              +\delta^3\pd{}{z}\left(\begin{array}{c}
+              \sigma_{31}\\\sigma_{32}\\\sigma_{33}
+              \end{array}\right)
+              =\delta^3\nabla\cdot\bsigma,
+            </me>
+          </p>
+          <p>
+            Hence
+            <me>
+              \rho V\bg+\delta^3\nabla\cdot\bsigma
+              =\iiint_{V(t)} \left[\pd{(\rho\bu)}{t} + \nabla \cdot (\rho\bu\bu)\right]\,\de{x}\,\de{y}\,\de{z},
+            </me>
+            Since the cube is small,
+            the right-hand side is approximately the volume <m>V</m> times
+            the integrand evaluated at a point in <m>V</m>.
+            Dividing by <m>V=\delta^3</m> gives
+            <me>
+              \rho\bg+\nabla\cdot\bsigma
+              =\pd{(\rho\bu)}{t} + \nabla \cdot ((\rho\bu)\bu).
+            </me>
+            Since <m>\rho</m> is constant,
+            <me>
+              \rho\bg+\nabla\cdot\bsigma
+              =\rho\pd{\bu}{t} + \rho\bu\cdot\nabla\bu+\rho(\nabla\cdot\bu)\bu.
+            </me>
+            Since the fluid is incompressible, we have <m>\nabla\cdot\bu=0</m>, and,
+            rearranging, we obtain the Cauchy equation:
+            <me>
+              \rho\left(\pd{\bu}{t} + \bu\cdot\nabla\bu\right)
+              =\nabla\cdot\bsigma+\rho\bg
+            </me>
           </p>
         </solution>
       </task>
     </exercise>
- </exercises>
+    <exercise xml:id="ex-limits-low-high-Reynolds">
+      <title>Limits of low and high Reynolds number</title>
+      <introduction>
+        <p>
+          An incompressible Newtonian fluid with density <m>\rho</m> and
+          shear viscosity <m>\mu</m> flows in a space with
+          a typical lengthscale <m>L</m> and velocity scale <m>U</m>.          
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Perform a nondimensionalisation of
+            the Navier<ndash/>Stokes <xref ref="eqn-navierstokes"/> and
+            continuity <xref ref="eqn-incompressibledef"/> equations, using a scale <m>P</m>
+            for the pressure and <m>T</m> for time, and writing the gravitational acceleration
+            as <m>\bg=g\hat{\bg}</m>, where <m>\hat{\bg}</m> is a unit vector in the direction of <m>\bg</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have
+            <me>
+              \rho\pd{\bu}{t}+\rho\bu\cdot\nabla\bu=-\nabla p+\mu\nabla^2\bu+\rho{\bg},\quad
+              \nabla\cdot\bu=0,
+            </me>
+            which, after nondimensionalising, become
+            <me>
+              \frac{\rho U}{T}\pd{\bu^*}{t^*}+\frac{\rho U^2}{L}\bu^*\cdot\nabla^*\bu^*
+              =-\frac{P}{L}\nabla^* p^*+\frac{\mu U}{L^2}\nabla^{*2}\bu^*+\rho g\hat{\bg},\quad
+              \frac{U}{L}\nabla^*\cdot\bu^*=0.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Choose a suitable timescale <m>T</m> so that the inertial terms balance and
+            multiply the Navier<ndash/>Stokes equation by a suitable factor so that
+            the nondimensional viscous term has coefficient 1. What do you notice
+            about the coefficient of the inertial terms?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We set the coefficients of the two inertial terms equal:
+            <me>
+              \frac{\rho U}{T}=\frac{\rho U^2}{L}
+              \quad\Rightarrow\quad
+              T=\frac{L}{U}.
+            </me>
+            Multiplying the Navier<ndash/>Stokes equation by <m>L^2/(\mu U)</m>, we get
+            <me>
+              \mathrm{Re}\DD{\bu^*}{t^*}
+              =-\frac{LP}{\mu U}\nabla^* p^*+\nabla^{*2}\bu^*+\frac{\rho L^2g}{\mu U}\hat{\bg}.
+            </me>
+            The coefficient multiplying the inertial terms is the Reynolds number <m>\mathrm{Re}</m>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Hence, in the case of a low-Reynolds-number flow, <m>\mathrm{Re}\ll1</m>,
+            show that, to leading order,
+            the equations simplify to one of the following three cases:
+            <me>
+              0=-\nabla p+\rho{\bg},
+            </me>
+            or
+            <me>
+              0=-\nabla p+\mu\nabla^2\bu+\rho{\bg},\quad
+              \nabla\cdot\bu=0,
+            </me>
+            or
+            <me>
+              0=-\nabla p+\mu\nabla^2\bu,\quad
+              \nabla\cdot\bu=0.
+            </me>
+            Specify the conditions under which each of these equations is obtained.
+            In the latter two cases, we term the equations governing the fluid velocity
+            <em>the Stokes equations</em>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            In this case, the inertial terms are small compared to the viscous terms,
+            so we can neglect them.
+            The gravitational acceleration term has order of magnitude <m>\rho L^2g/(\mu U)</m>.
+            We need to consider the cases in which this is large, order one or small:
+            <ul>
+              <li>
+                <p>
+                  If <m>\rho L^2g/(\mu U)\gg1</m>, the pressre have a predominantly hydrostatic
+                  pressure profile, with the fluid dynamical problem being a small perturbation
+                  to the background static problem.
+                  Thus the pressure gradient balances this term:
+                  <me>
+                    \frac{LP}{\mu U}=\frac{\rho L^2g}{\mu U}
+                    \quad\Rightarrow\quad
+                    P=\rho Lg,
+                  </me>
+                  and, to leading order, the Navier<ndash/>Stokes equation becomes
+                  <me>
+                    0=-\nabla^* p^*+\hat{\bg}.
+                  </me>
+                  Once we have solved this problem, we could in principle solve a
+                  secondary problem to find the fluid flow. Thus the dimensional problem is
+                  <me>
+                    0=-\nabla p+\rho\bg.
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>\rho L^2g/(\mu U)</m> is of order 1, the gravitational acceleration
+                  term balances the leading-order terms in the equation, and we set
+                  <me>
+                    \frac{LP}{\mu U}=1\quad\Rightarrow\quad P=\frac{\mu U}{L}.
+                  </me>
+                  We obtain the leading-order system
+                  <me>
+                    0=-\nabla^* p^*+\nabla^{*2}\bu^*+\frac{\rho L^2g}{\mu U}\hat{\bg},
+                  </me>
+                  and redimensionalising, we get
+                  <me>
+                    0=-\nabla p+\mu\nabla^2\bu,
+                  </me>
+                  and the continuity equation is retained in full:
+                  <me>
+                    \nabla\cdot\bu=0.
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>\rho L^2g/(\mu U)\ll1</m>, the gravitational acceleration
+                  term is small compared to the leading-order terms in the equation, and we set
+                  <me>
+                    \frac{LP}{\mu U}=1\quad\Rightarrow\quad P=\frac{\mu U}{L}.
+                  </me>
+                  We obtain the leading-order system
+                  <me>
+                    0=-\nabla^* p^*+\nabla^{*2}\bu^*,
+                  </me>
+                  and redimensionalising, we get
+                  <me>
+                    0=-\nabla p+\mu\nabla^2\bu,
+                  </me>
+                  and the continuity equation is retained in full:
+                  <me>
+                    \nabla\cdot\bu=0.
+                  </me>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In the case of a high-Reynolds-number flow, <m>\mathrm{Re}\gg1</m>,
+            show that, to leading order,
+            the equations simplify to one of the following three cases:
+            <me>
+              0=-\nabla p+\rho{\bg},
+            </me>
+            or
+            <me>
+              \rho\DD{u}{t}=-\nabla p+\rho{\bg},\quad
+              \nabla\cdot\bu=0,
+            </me>
+            or
+            <me>
+              \rho\DD{u}{t}=-\nabla p,\quad
+              \nabla\cdot\bu=0.
+            </me>
+            Specify the conditions under which each of these equations is obtained.
+            In the latter two cases, we term the equations governing the fluid velocity
+            <em>the Euler equations</em>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            In this case, the viscous terms are small compared to the inertial terms,
+            so we can neglect them.
+            Dividing the Navier<ndash/>Stokes equation by <m>\mathrm{Re}</m>,
+            <me>
+              \DD{\bu^*}{t^*}
+              =-\frac{P}{\rho U^2}\nabla^* p^*+\frac{Lg}{U^2}\hat{\bg}.
+            </me>
+            The gravitational acceleration term now has order of magnitude <m>Lg/U^2</m>.
+            We need to consider the cases in which this is large, order one or small:
+            <ul>
+              <li>
+                <p>
+                  If <m>Lg/U^2\gg1</m>, the pressre have a predominantly hydrostatic
+                  pressure profile, with the fluid dynamical problem being a small perturbation
+                  to the background static problem.
+                  Thus the pressure gradient balances this term:
+                  <me>
+                    \frac{P}{\rho U^2}=\frac{Lg}{U^2}
+                    \quad\Rightarrow\quad
+                    P=\rho Lg,
+                  </me>
+                  and, to leading order, the Navier<ndash/>Stokes equation becomes
+                  <me>
+                    0=-\nabla^* p^*+\hat{\bg}.
+                  </me>
+                  As in the low-Reynolds-number cases,
+                  once we have solved this problem, we could in principle solve a
+                  secondary problem to find the fluid flow. Thus the dimensional problem is
+                  <me>
+                    0=-\nabla p+\rho\bg.
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>Lg/U^2</m> is of order 1, the gravitational acceleration
+                  term balances the leading-order terms in the equation, and we set
+                  <me>
+                    \frac{P}{\rho U^2}=1\quad\Rightarrow\quad P=\rho U^2.
+                  </me>
+                  We obtain the leading-order system
+                  <me>
+                    \DD{u^*}{t^*}=-\nabla^* p^*+\frac{Lg}{U^2}\hat{\bg},
+                  </me>
+                  and redimensionalising, we get
+                  <me>
+                    \rho\DD{u}{t}=-\nabla p+\rho\bg,
+                  </me>
+                  and the continuity equation is retained in full:
+                  <me>
+                    \nabla\cdot\bu=0.
+                  </me>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>Lg/U^2\ll1</m>, the gravitational acceleration
+                  term is small compared to the leading-order terms in the equation, and we set
+                  <me>
+                    \frac{P}{\rho U^2}=1\quad\Rightarrow\quad P=\rho U^2.
+                  </me>
+                  We obtain the leading-order system
+                  <me>
+                    \DD{u^*}{t^*}=-\nabla^* p^*,
+                  </me>
+                  and redimensionalising, we get
+                  <me>
+                    \rho\DD{u}{t}=-\nabla p,
+                  </me>
+                  and the continuity equation is retained in full:
+                  <me>
+                    \nabla\cdot\bu=0.
+                  </me>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </solution>
+      </task>
+    </exercise>
+    <exercise xml:id="ex-hagen-poiseuille-flow">
+      <title>Hagen<ndash/>Poiseuille flow</title>
+      <introduction>
+        <p>
+          In this exercise you will review the derivation of Poiseuille flow and prove the
+          Hagen<ndash/>Poiseuille formula <xref ref="hagen-poiseuille-formula"/>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Review the derivation <xref ref="sec-poiseuille"/>, making your own notes.
+            Use the flow profile to prove the formula <xref ref="hagen-poiseuille-formula"/>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have that the volumetric flux along the pipe equals
+            (<m>A</m> is a circular cross-section <m>z=\mathrm{constant}</m> of the pipe)
+            <md>
+              <mrow>
+                Q=&amp;\iint_Aw\,\de A
+              </mrow>
+              <mrow>
+                =&amp;\int_0^{2\pi}\int_0^a\frac{G}{4\mu}\left(a^2-r^2\right)r\,\de r\,\de \theta
+              </mrow>
+              <mrow>
+                =&amp;2\pi\frac{G}{4\mu}\int_0^a\left(a^2r-r^3\right)\,\de r
+              </mrow>
+              <mrow>
+                =&amp;\frac{\pi G}{2\mu}\left[\frac{a^2r^2}{2}-\frac{r^4}{4}\right]_0^a
+              </mrow>
+              <mrow>
+                =&amp;\frac{\pi G}{2\mu}\left(\frac{a^4}{2}-\frac{a^4}{4}\right)
+              </mrow>
+              <mrow>
+                =&amp;\frac{\pi Ga^4}{8\mu},
+              </mrow>
+            </md>
+            where <m>G=\Delta p/L</m> is the pressure gradient. Rearranging,
+            <me>
+              \Delta p=\frac{8\mu LQ}{\pi a^4},
+            </me>
+            as expected.
+          </p>
+        </solution>
+      </task>
+    </exercise>
+  </exercises>
 
   <exercises>
     <title>Problems set 7 to hand in</title>
@@ -4142,7 +6107,7 @@
     </exercise>
   </exercises>
 
-  <exercises>
+  <exercises xml:id="problems-set-8">
     <title>Problems set 8 to hand in</title>
     <introduction>
       <p>

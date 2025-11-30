@@ -61,6 +61,9 @@
     \newcommand{\bj}{\boldsymbol{j}}
     \newcommand{\bk}{\boldsymbol{k}}
     \newcommand{\br}{\boldsymbol{r}}
+    \newcommand{\btheta}{\boldsymbol{\theta}}
+    \newcommand{\bphi}{\boldsymbol{\phi}}
+    \newcommand{\bz}{\boldsymbol{z}}
     \newcommand{\bq}{\boldsymbol{q}}
     \newcommand{\bzero}{\boldsymbol{0}}
     \newcommand{\bnabla}{\boldsymbol{\nabla}}

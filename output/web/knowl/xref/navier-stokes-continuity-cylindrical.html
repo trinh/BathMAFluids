@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="remark remark-like"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Navier–Stokes and continuity equations in cylindrical coordinates.</span>
+</h4>
+<div class="para logical">
+<div class="para">In cylindrical coordinates <span class="process-math">\((r,\theta,z)\)</span> the continuity equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac1r\pd{(ru_r)}{r}+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+\end{equation*}
+</div>
+<div class="para">and the Navier–Stokes equations are</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+=-\pd{p}{r}
++\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)+\rho f_r,\\
+\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+=-\frac{1}{r}\pd{p}{\theta}
++\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)+\rho f_{\theta},\\
+\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+=-\pd{p}{z}
++\mu\nabla^2u_z+\rho f_z,
+\end{gather*}
+</div>
+<div class="para">where the Laplacian is defined by its action on a function <span class="process-math">\(A(r,\theta,z)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(\bf=(f_r,f_\theta,f_z)\)</span> represents the body forces per unit mass acting on the fluid. In the case of gravity we set <span class="process-math">\(\bf=\rho{\bg}\text{,}\)</span> where <span class="process-math">\(\bg=(0,0,-g)\)</span> is the acceleration due to gravity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#navier-stokes-continuity-cylindrical-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Note that the vector calculus operators in cylindrical (and also in spherical) coordinates are quite complicated. I would always recommend looking up the formulae, because they is very tricky to remember and extremely time-consuming to derive. A helpful website that lists these formulae along with many other useful formulae is <a class="external" href="http://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates" target="_blank">here</a>, and <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a> gives these formulae in the appendices, as do many other textbooks. Note in particular that the Laplacian of a vector quantity is not given by the Laplacians of its components individually.<div class="autopermalink" data-description="Paragraph"><a href="#navier-stokes-continuity-cylindrical-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.5.11: Navier–Stokes and continuity equations in cylindrical coordinates"><a href="#navier-stokes-continuity-cylindrical" title="Copy heading and permalink for Remark 7.5.11: Navier–Stokes and continuity equations in cylindrical coordinates" aria-label="Copy heading and permalink for Remark 7.5.11: Navier–Stokes and continuity equations in cylindrical coordinates">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-linear-momentum-cons.html#navier-stokes-continuity-cylindrical">in-context</a></span>
+</body>
+</html>
