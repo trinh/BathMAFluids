@@ -167,6 +167,9 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\br}{\boldsymbol{r}}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+\newcommand{\bphi}{\boldsymbol{\phi}}
+\newcommand{\bz}{\boldsymbol{z}}
 \newcommand{\bq}{\boldsymbol{q}}
 \newcommand{\bzero}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
@@ -414,14 +417,27 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html#sec-low-and-high-reynolds-number" class="internal"><span class="codenumber">7.5.6</span> <span class="title">Limits of low and high Reynolds number</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-low-Reynolds-number" class="internal"><span class="codenumber">7.5.6.1</span> <span class="title">Low Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-high-Reynolds-number" class="internal"><span class="codenumber">7.5.6.2</span> <span class="title">High Reynolds number</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-viscous-dissipation-of-energy.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Viscous Dissipation of Energy</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-low-Reynolds-number-sphere.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Low-Reynolds-number flow past a sphere</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-methods-to-solve-equations.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Methods to solve the Navier–Stokes and continuity equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Methods of solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods-analytical" class="internal"><span class="codenumber">7.7.2</span> <span class="title">Methods to solve the equations analytically</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Practice Exercises</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-12.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Problems set 7 to hand in</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-13.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Problems set 8 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="problems-set-8.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Problems set 8 to hand in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -783,7 +799,7 @@ u_\theta=\frac1r\pd{\phi}{\theta}=U\left(1+\frac{a^3}{2r^3}\right)\sin\theta.
 <div class="autopermalink" data-description="Remark 6.3.12"><a href="#subsec-irrot-sphere-11" title="Copy heading and permalink for Remark 6.3.12" aria-label="Copy heading and permalink for Remark 6.3.12">🔗</a></div></article><article class="remark remark-like" id="subsec-irrot-sphere-12"><h4 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="subsec-irrot-sphere-12-1">In <a href="sec-low-Reynolds-number-sphere.html" class="internal" title="Section 7.8: Low-Reynolds-number flow past a sphere">Section 7.8</a> we will calculate the flow past a sphere in a low-Reynolds-number flow.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-irrot-sphere-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-irrot-sphere-12-1">In <a href="sec-exact-solutions.html#sec-low-Reynolds-number-sphere" class="xref" data-knowl="./knowl/xref/sec-low-Reynolds-number-sphere.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.15: Low-Reynolds-number flow past a sphere (non-examinable)">Example 7.8.15</a> we will calculate the flow past a sphere in a low-Reynolds-number flow.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-irrot-sphere-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Remark 6.3.13"><a href="#subsec-irrot-sphere-12" title="Copy heading and permalink for Remark 6.3.13" aria-label="Copy heading and permalink for Remark 6.3.13">🔗</a></div></article><div class="autopermalink" data-description="Subsection 6.3.3: Irrotational flow past a sphere"><a href="#subsec-irrot-sphere" title="Copy heading and permalink for Subsection 6.3.3: Irrotational flow past a sphere" aria-label="Copy heading and permalink for Subsection 6.3.3: Irrotational flow past a sphere">🔗</a></div></section><div class="autopermalink" data-description="Section 6.3: Axisymmetric flow"><a href="#sec-axisymmetric-flow" title="Copy heading and permalink for Section 6.3: Axisymmetric flow" aria-label="Copy heading and permalink for Section 6.3: Axisymmetric flow">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
