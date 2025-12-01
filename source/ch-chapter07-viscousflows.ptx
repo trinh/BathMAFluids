@@ -4680,16 +4680,25 @@
             </me>
           </p>
         </statement>
-        <solution>
+        <hint>
           <p>
-            Expanding,
+            You may use the fact that 
             <me>
               \hat{\bn}\times\left(\nabla\times\bu\right)
               =\nabla(\hat{\bn}\cdot\bu)-(\hat{\bn}\cdot\nabla)\bu,
             </me>
             where, in the first bracket,
             the operator <m>\nabla</m> acts on <m>\bu</m> but not <m>\bn</m>.
-            The <m>i</m>th component of this expression is
+          </p>
+        </hint>
+        <solution>
+          <p>
+            The <m>i</m>th component of
+            <me>
+              \hat{\bn}\times\left(\nabla\times\bu\right)
+              =\nabla(\hat{\bn}\cdot\bu)-(\hat{\bn}\cdot\nabla)\bu,
+            </me>
+            is
             <md>
               <mrow>
                 \left[\hat{\bn}\times(\nabla\times\bu)\right]_i
