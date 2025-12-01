@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits of low and high Reynolds number.</span>
+</h3>
+<div class="introduction"><div class="para">An incompressible Newtonian fluid with density <span class="process-math">\(\rho\)</span> and shear viscosity <span class="process-math">\(\mu\)</span> flows in a space with a typical lengthscale <span class="process-math">\(L\)</span> and velocity scale <span class="process-math">\(U\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Perform a nondimensionalisation of the Navier–Stokes <a href="sec-linear-momentum-cons.html#eqn-navierstokes" class="xref" data-knowl="./knowl/xref/eqn-navierstokes.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> and continuity <a href="sec-incompressible.html#eqn-incompressibledef" class="xref" data-knowl="./knowl/xref/eqn-incompressibledef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a> equations, using a scale <span class="process-math">\(P\)</span> for the pressure and <span class="process-math">\(T\)</span> for time, and writing the gravitational acceleration as <span class="process-math">\(\bg=g\hat{\bg}\text{,}\)</span> where <span class="process-math">\(\hat{\bg}\)</span> is a unit vector in the direction of <span class="process-math">\(\bg\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\pd{\bu}{t}+\rho\bu\cdot\nabla\bu=-\nabla p+\mu\nabla^2\bu+\rho{\bg},\quad
+\nabla\cdot\bu=0,
+\end{equation*}
+</div>
+<div class="para">which, after nondimensionalising, become</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\rho U}{T}\pd{\bu^*}{t^*}+\frac{\rho U^2}{L}\bu^*\cdot\nabla^*\bu^*
+=-\frac{P}{L}\nabla^* p^*+\frac{\mu U}{L^2}\nabla^{*2}\bu^*+\rho g\hat{\bg},\quad
+\frac{U}{L}\nabla^*\cdot\bu^*=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.11.a.1"><a href="#ex-limits-low-high-Reynolds-3-2" title="Copy heading and permalink for Solution 7.9.11.a.1" aria-label="Copy heading and permalink for Solution 7.9.11.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.11.a"><a href="#ex-limits-low-high-Reynolds-3" title="Copy heading and permalink for Task 7.9.11.a" aria-label="Copy heading and permalink for Task 7.9.11.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Choose a suitable timescale <span class="process-math">\(T\)</span> so that the inertial terms balance and multiply the Navier–Stokes equation by a suitable factor so that the nondimensional viscous term has coefficient 1. What do you notice about the coefficient of the inertial terms?<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We set the coefficients of the two inertial terms equal:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\rho U}{T}=\frac{\rho U^2}{L}
+\quad\Rightarrow\quad
+T=\frac{L}{U}.
+\end{equation*}
+</div>
+<div class="para">Multiplying the Navier–Stokes equation by <span class="process-math">\(L^2/(\mu U)\text{,}\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathrm{Re}\DD{\bu^*}{t^*}
+=-\frac{LP}{\mu U}\nabla^* p^*+\nabla^{*2}\bu^*+\frac{\rho L^2g}{\mu U}\hat{\bg}.
+\end{equation*}
+</div>
+<div class="para">The coefficient multiplying the inertial terms is the Reynolds number <span class="process-math">\(\mathrm{Re}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.11.b.1"><a href="#ex-limits-low-high-Reynolds-4-2" title="Copy heading and permalink for Solution 7.9.11.b.1" aria-label="Copy heading and permalink for Solution 7.9.11.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.11.b"><a href="#ex-limits-low-high-Reynolds-4" title="Copy heading and permalink for Task 7.9.11.b" aria-label="Copy heading and permalink for Task 7.9.11.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical">
+<div class="para">Hence, in the case of a low-Reynolds-number flow, <span class="process-math">\(\mathrm{Re}\ll1\text{,}\)</span> show that, to leading order, the equations simplify to one of the following three cases:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\rho{\bg},
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\mu\nabla^2\bu+\rho{\bg},\quad
+\nabla\cdot\bu=0,
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\mu\nabla^2\bu,\quad
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="para">Specify the conditions under which each of these equations is obtained. In the latter two cases, we term the equations governing the fluid velocity <em class="emphasis">the Stokes equations</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">In this case, the inertial terms are small compared to the viscous terms, so we can neglect them. The gravitational acceleration term has order of magnitude <span class="process-math">\(\rho L^2g/(\mu U)\text{.}\)</span> We need to consider the cases in which this is large, order one or small:</div>
+<ul class="disc" id="ex-limits-low-high-Reynolds-5-2-1-2">
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(\rho L^2g/(\mu U)\gg1\text{,}\)</span> the pressre have a predominantly hydrostatic pressure profile, with the fluid dynamical problem being a small perturbation to the background static problem. Thus the pressure gradient balances this term:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{LP}{\mu U}=\frac{\rho L^2g}{\mu U}
+\quad\Rightarrow\quad
+P=\rho Lg,
+\end{equation*}
+</div>
+<div class="para">and, to leading order, the Navier–Stokes equation becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla^* p^*+\hat{\bg}.
+\end{equation*}
+</div>
+<div class="para">Once we have solved this problem, we could in principle solve a secondary problem to find the fluid flow. Thus the dimensional problem is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\rho\bg.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(\rho L^2g/(\mu U)\)</span> is of order 1, the gravitational acceleration term balances the leading-order terms in the equation, and we set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{LP}{\mu U}=1\quad\Rightarrow\quad P=\frac{\mu U}{L}.
+\end{equation*}
+</div>
+<div class="para">We obtain the leading-order system</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla^* p^*+\nabla^{*2}\bu^*+\frac{\rho L^2g}{\mu U}\hat{\bg},
+\end{equation*}
+</div>
+<div class="para">and redimensionalising, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\mu\nabla^2\bu,
+\end{equation*}
+</div>
+<div class="para">and the continuity equation is retained in full:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(\rho L^2g/(\mu U)\ll1\text{,}\)</span> the gravitational acceleration term is small compared to the leading-order terms in the equation, and we set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{LP}{\mu U}=1\quad\Rightarrow\quad P=\frac{\mu U}{L}.
+\end{equation*}
+</div>
+<div class="para">We obtain the leading-order system</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla^* p^*+\nabla^{*2}\bu^*,
+\end{equation*}
+</div>
+<div class="para">and redimensionalising, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\mu\nabla^2\bu,
+\end{equation*}
+</div>
+<div class="para">and the continuity equation is retained in full:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-5-2-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.11.c.1"><a href="#ex-limits-low-high-Reynolds-5-2" title="Copy heading and permalink for Solution 7.9.11.c.1" aria-label="Copy heading and permalink for Solution 7.9.11.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.11.c"><a href="#ex-limits-low-high-Reynolds-5" title="Copy heading and permalink for Task 7.9.11.c" aria-label="Copy heading and permalink for Task 7.9.11.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical">
+<div class="para">In the case of a high-Reynolds-number flow, <span class="process-math">\(\mathrm{Re}\gg1\text{,}\)</span> show that, to leading order, the equations simplify to one of the following three cases:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\rho{\bg},
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\DD{u}{t}=-\nabla p+\rho{\bg},\quad
+\nabla\cdot\bu=0,
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\DD{u}{t}=-\nabla p,\quad
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="para">Specify the conditions under which each of these equations is obtained. In the latter two cases, we term the equations governing the fluid velocity <em class="emphasis">the Euler equations</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">In this case, the viscous terms are small compared to the inertial terms, so we can neglect them. Dividing the Navier–Stokes equation by <span class="process-math">\(\mathrm{Re}\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{\bu^*}{t^*}
+=-\frac{P}{\rho U^2}\nabla^* p^*+\frac{Lg}{U^2}\hat{\bg}.
+\end{equation*}
+</div>
+<div class="para">The gravitational acceleration term now has order of magnitude <span class="process-math">\(Lg/U^2\text{.}\)</span> We need to consider the cases in which this is large, order one or small:</div>
+<ul class="disc" id="ex-limits-low-high-Reynolds-6-2-1-5">
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(Lg/U^2\gg1\text{,}\)</span> the pressre have a predominantly hydrostatic pressure profile, with the fluid dynamical problem being a small perturbation to the background static problem. Thus the pressure gradient balances this term:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{P}{\rho U^2}=\frac{Lg}{U^2}
+\quad\Rightarrow\quad
+P=\rho Lg,
+\end{equation*}
+</div>
+<div class="para">and, to leading order, the Navier–Stokes equation becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla^* p^*+\hat{\bg}.
+\end{equation*}
+</div>
+<div class="para">As in the low-Reynolds-number cases, once we have solved this problem, we could in principle solve a secondary problem to find the fluid flow. Thus the dimensional problem is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0=-\nabla p+\rho\bg.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(Lg/U^2\)</span> is of order 1, the gravitational acceleration term balances the leading-order terms in the equation, and we set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{P}{\rho U^2}=1\quad\Rightarrow\quad P=\rho U^2.
+\end{equation*}
+</div>
+<div class="para">We obtain the leading-order system</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{u^*}{t^*}=-\nabla^* p^*+\frac{Lg}{U^2}\hat{\bg},
+\end{equation*}
+</div>
+<div class="para">and redimensionalising, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\DD{u}{t}=-\nabla p+\rho\bg,
+\end{equation*}
+</div>
+<div class="para">and the continuity equation is retained in full:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">If <span class="process-math">\(Lg/U^2\ll1\text{,}\)</span> the gravitational acceleration term is small compared to the leading-order terms in the equation, and we set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{P}{\rho U^2}=1\quad\Rightarrow\quad P=\rho U^2.
+\end{equation*}
+</div>
+<div class="para">We obtain the leading-order system</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{u^*}{t^*}=-\nabla^* p^*,
+\end{equation*}
+</div>
+<div class="para">and redimensionalising, we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\DD{u}{t}=-\nabla p,
+\end{equation*}
+</div>
+<div class="para">and the continuity equation is retained in full:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla\cdot\bu=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-limits-low-high-Reynolds-6-2-1-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-limits-low-high-Reynolds-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.11.d.1"><a href="#ex-limits-low-high-Reynolds-6-2" title="Copy heading and permalink for Solution 7.9.11.d.1" aria-label="Copy heading and permalink for Solution 7.9.11.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.11.d"><a href="#ex-limits-low-high-Reynolds-6" title="Copy heading and permalink for Task 7.9.11.d" aria-label="Copy heading and permalink for Task 7.9.11.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.11: Limits of low and high Reynolds number"><a href="#ex-limits-low-high-Reynolds" title="Copy heading and permalink for Exercise 7.9.11: Limits of low and high Reynolds number" aria-label="Copy heading and permalink for Exercise 7.9.11: Limits of low and high Reynolds number">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-viscousflows.html#ex-limits-low-high-Reynolds">in-context</a></span>
+</body>
+</html>

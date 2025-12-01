@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hagen–Poiseuille flow.</span>
+</h3>
+<div class="introduction"><div class="para">In this exercise you will review the derivation of Poiseuille flow and prove the Hagen–Poiseuille formula <a href="sec-exact-solutions.html#hagen-poiseuille-formula" class="xref" data-knowl="./knowl/xref/hagen-poiseuille-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.4">(7.8.4)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hagen-poiseuille-flow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Review the derivation <a href="sec-exact-solutions.html#sec-poiseuille" class="xref" data-knowl="./knowl/xref/sec-poiseuille.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.4: Hagen–Poiseuille flow (or Poiseuille flow)">Example 7.8.4</a>, making your own notes. Use the flow profile to prove the formula <a href="sec-exact-solutions.html#hagen-poiseuille-formula" class="xref" data-knowl="./knowl/xref/hagen-poiseuille-formula.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.4">(7.8.4)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-hagen-poiseuille-flow-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We have that the volumetric flux along the pipe equals (<span class="process-math">\(A\)</span> is a circular cross-section <span class="process-math">\(z=\mathrm{constant}\)</span> of the pipe)</div>
+<div class="displaymath process-math">
+\begin{align*}
+Q=&amp;\iint_Aw\,\de A\\
+=&amp;\int_0^{2\pi}\int_0^a\frac{G}{4\mu}\left(a^2-r^2\right)r\,\de r\,\de \theta\\
+=&amp;2\pi\frac{G}{4\mu}\int_0^a\left(a^2r-r^3\right)\,\de r\\
+=&amp;\frac{\pi G}{2\mu}\left[\frac{a^2r^2}{2}-\frac{r^4}{4}\right]_0^a\\
+=&amp;\frac{\pi G}{2\mu}\left(\frac{a^4}{2}-\frac{a^4}{4}\right)\\
+=&amp;\frac{\pi Ga^4}{8\mu},
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(G=\Delta p/L\)</span> is the pressure gradient. Rearranging,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta p=\frac{8\mu LQ}{\pi a^4},
+\end{equation*}
+</div>
+<div class="para">as expected.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-hagen-poiseuille-flow-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.12.a.1"><a href="#ex-hagen-poiseuille-flow-3-2" title="Copy heading and permalink for Solution 7.9.12.a.1" aria-label="Copy heading and permalink for Solution 7.9.12.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.12.a"><a href="#ex-hagen-poiseuille-flow-3" title="Copy heading and permalink for Task 7.9.12.a" aria-label="Copy heading and permalink for Task 7.9.12.a">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.12: Hagen–Poiseuille flow"><a href="#ex-hagen-poiseuille-flow" title="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow" aria-label="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-viscousflows.html#ex-hagen-poiseuille-flow">in-context</a></span>
+</body>
+</html>

@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.19';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5c6d23c3bf7decb7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.296eb9cf978e3bdb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -146,6 +146,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\dxyz}{\de{x}\de{y}\de{z}} 
 \newcommand{\dXYZ}{\de{X}\de{Y}\de{Z}} 
 \newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\bs}{\boldsymbol{s}}
 \newcommand{\be}{\boldsymbol{e}}
 \newcommand{\bX}{\boldsymbol{X}}
 \newcommand{\bn}{\boldsymbol{n}}
@@ -157,6 +158,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bg}{\boldsymbol{g}}
 \newcommand{\bF}{\boldsymbol{F}}
 \newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bOmega}{\boldsymbol{\Omega}}
 \newcommand{\bsigma}{\boldsymbol{\sigma}}
 \newcommand{\btau}{\boldsymbol{\tau}}
 \newcommand{\bd}{\boldsymbol{d}}
@@ -165,6 +167,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\br}{\boldsymbol{r}}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+\newcommand{\bphi}{\boldsymbol{\phi}}
+\newcommand{\bz}{\boldsymbol{z}}
+\newcommand{\bq}{\boldsymbol{q}}
 \newcommand{\bzero}{\boldsymbol{0}}
 \newcommand{\bnabla}{\boldsymbol{\nabla}}
 \DeclareGraphicsRule{.gif}{png}{.png}{}
@@ -411,10 +417,27 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html#sec-low-and-high-reynolds-number" class="internal"><span class="codenumber">7.5.6</span> <span class="title">Limits of low and high Reynolds number</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-low-Reynolds-number" class="internal"><span class="codenumber">7.5.6.1</span> <span class="title">Low Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-high-Reynolds-number" class="internal"><span class="codenumber">7.5.6.2</span> <span class="title">High Reynolds number</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-low-Reynolds-number-sphere.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Low-Reynolds-number flow past a sphere</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-viscous-dissipation-of-energy.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Viscous Dissipation of Energy</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-methods-to-solve-equations.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Methods to solve the Navier–Stokes and continuity equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Methods of solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods-analytical" class="internal"><span class="codenumber">7.7.2</span> <span class="title">Methods to solve the equations analytically</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">7.9</span> <span class="title">Practice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-12.html" class="internal"><span class="codenumber">7.10</span> <span class="title">Problems set 7 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="problems-set-8.html" class="internal"><span class="codenumber">7.11</span> <span class="title">Problems set 8 to hand in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -482,7 +505,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="ex-kelvin-circulation-theorem-3-4">
 <div class="para">
-<em class="emphasis">Method two:</em> We can parametrise <span class="process-math">\(C(t)\)</span> via <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;x&lt;1\)</span> and rewrite the integral as an integral over the parameter <span class="process-math">\(s\text{:}\)</span>
+<em class="emphasis">Method two:</em> We can parametrise <span class="process-math">\(C(t)\)</span> via <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;s&lt;1\)</span> and rewrite the integral as an integral over the parameter <span class="process-math">\(s\text{:}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-ex-kelvin-dGammadt.html">
 \begin{equation*}
@@ -536,7 +559,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="ex-kelvin-circulation-theorem-4-4">
 <div class="para">
-<em class="emphasis">Method two:</em> This can also be proven by parametrising <span class="process-math">\(C(t)\)</span> via <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;x&lt;1\)</span> and rewriting the integral as an integral over the parameter <span class="process-math">\(s\text{:}\)</span>
+<em class="emphasis">Method two:</em> This can also be proven by parametrising <span class="process-math">\(C(t)\)</span> via <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;s&lt;1\)</span> and rewriting the integral as an integral over the parameter <span class="process-math">\(s\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -579,11 +602,31 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">where <span class="process-math">\(S\)</span> is any surface spanning the tube, is the same for all such surfaces. Relate this quantity to a circulation of the flow.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-circulation-vortex-tube-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details id="ex-circulation-vortex-tube-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="ex-circulation-vortex-tube-3-1">Given two different such surfaces <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{,}\)</span> define a `cylindrical’ volume <span class="process-math">\(V\text{,}\)</span> whose ends are the the two surfaces <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\)</span> and whose sides are the sides of the vortex tube, and let <span class="process-math">\(\Gamma_i = \int_{S_i}\bomega\cdot\bn_i\,\de S\text{,}\)</span> for <span class="process-math">\(i=1,2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 6.5.2.1"><a href="#ex-circulation-vortex-tube-3" title="Copy heading and permalink for Hint 6.5.2.1" aria-label="Copy heading and permalink for Hint 6.5.2.1">🔗</a></div>
-</div></details></div>
+</div></details><details id="ex-circulation-vortex-tube-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-circulation-vortex-tube-4-1">Given two different such surfaces <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{,}\)</span> define a `cylindrical’ volume <span class="process-math">\(V\text{,}\)</span> whose ends are the the two surfaces <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\)</span> and whose sides are the sides of the vortex tube, and let <span class="process-math">\(\Gamma_i = \int_{S_i}\bomega\cdot\bn_i\,\de S\text{,}\)</span> for <span class="process-math">\(i=1,2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-circulation-vortex-tube-4-2">Consider <span class="process-math">\(\int_{\partial V}\bomega\cdot\bn\,\de S\text{.}\)</span> This is equal to <span class="process-math">\(\Gamma_1\)</span> minus <span class="process-math">\(\Gamma_2\)</span> plus the integral of <span class="process-math">\(\bomega\cdot\bn\)</span> over the sides of the cylinder. On the sides of the cylinder, we have <span class="process-math">\(\bomega\cdot\bn=0\text{.}\)</span> Hence, <span class="process-math">\(\Gamma_1=\Gamma_2\)</span> for any two such surfaces.<div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-circulation-vortex-tube-4-3">
+<div class="para">Stokes theorem implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma = \oint_C\bomega\times\de\bx,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C\)</span> is the curve around the edge of <span class="process-math">\(S\text{,}\)</span> which is the circulation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-circulation-vortex-tube-4-4">Since the circulation is constant in time, this implies the flux of vorticity through any vortex tube is uniform and independent of time.<div class="autopermalink" data-description="Paragraph"><a href="#ex-circulation-vortex-tube-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.2.1"><a href="#ex-circulation-vortex-tube-4" title="Copy heading and permalink for Solution 6.5.2.1" aria-label="Copy heading and permalink for Solution 6.5.2.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Exercise 6.5.2: The circulation around a vortex tube"><a href="#ex-circulation-vortex-tube" title="Copy heading and permalink for Exercise 6.5.2: The circulation around a vortex tube" aria-label="Copy heading and permalink for Exercise 6.5.2: The circulation around a vortex tube">🔗</a></div></article><article class="exercise exercise-like" id="ex-line-integral-evolution"><h3 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evolution of a line integral.</span>
 </h3>
@@ -604,14 +647,15 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-line-integral-evolution-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details id="ex-line-integral-evolution-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="ex-line-integral-evolution-3-1">Similar to <a href="ws-vorticity.html#ex-kelvin-circulation-theorem" class="xref" data-knowl="./knowl/xref/ex-kelvin-circulation-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.5.1: Kelvin’s Circulation Theorem">Exercise 6.5.1</a>, there are two methods of solution possible.<div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ex-line-integral-evolution-3-2">
 <em class="emphasis">First method:</em><div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="line-integral-evolution-fig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter06-line-integral-evolution.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Curve <span class="process-math">\(C\)</span> at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span> The inset shows the relationship between the two curves.<div class="autopermalink" data-description="Figure 6.5.2"><a href="#line-integral-evolution-fig" title="Copy heading and permalink for Figure 6.5.2" aria-label="Copy heading and permalink for Figure 6.5.2">🔗</a></div></figcaption></figure><div class="para logical" id="ex-line-integral-evolution-3-4">
+<figure class="figure figure-like" id="line-integral-evolution-fig-1"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter06-line-integral-evolution.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Curve <span class="process-math">\(C\)</span> at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span> The inset shows the relationship between the two curves.<div class="autopermalink" data-description="Figure 6.5.2"><a href="#line-integral-evolution-fig-1" title="Copy heading and permalink for Figure 6.5.2" aria-label="Copy heading and permalink for Figure 6.5.2">🔗</a></div></figcaption></figure><div class="para logical" id="ex-line-integral-evolution-3-4">
 <div class="para">We write</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -633,7 +677,154 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 6.5.3.1"><a href="#ex-line-integral-evolution-3" title="Copy heading and permalink for Hint 6.5.3.1" aria-label="Copy heading and permalink for Hint 6.5.3.1">🔗</a></div>
-</div></details></div>
+</div></details><details id="ex-line-integral-evolution-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-line-integral-evolution-4-1">We present two methods of solution.<div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-line-integral-evolution-4-2">
+<em class="emphasis">First method:</em><div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="line-integral-evolution-fig-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter06-line-integral-evolution.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Curve <span class="process-math">\(C\)</span> at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span> The inset shows the relationship between the two curves.<div class="autopermalink" data-description="Figure 6.5.3"><a href="#line-integral-evolution-fig-2" title="Copy heading and permalink for Figure 6.5.3" aria-label="Copy heading and permalink for Figure 6.5.3">🔗</a></div></figcaption></figure><div class="para logical" id="ex-line-integral-evolution-4-4">
+<div class="para">We write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\mathcal{C}}{t}=\lim_{\de t\rightarrow0}\frac1{\de t}
+\left(\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx
+-\int_{C(t)}\mathbf{a}(\bx,t)\cdot\de\bx\right)
+\end{equation*}
+</div>
+<div class="para">and note that</div>
+<div class="displaymath process-math" id="ex-line-integral-evolution-4-4-2">
+\begin{align*}
+&amp;\int_{C(t+\de t)}\mathbf{a}(\bx,t+\de t)\cdot\de\bx\\
+=&amp;\int_{C(t)}\mathbf{a}\left(\bx+\bu(x,t)\de t+\dots,t+\de t\right)\cdot
+\left(\bx+\de\bx+\bu(\bx+\de\bx,t)\de t-\bx-\bu(\bx,t)\de t\right)\\
+=&amp;\int_{C(t)}\left(\mathbf{a}(\bx,t)+\pd{\mathbf{a}}{t}(\bx,t)\de t
++\bu(x,t)\cdot\nabla\mathbf{a}(\bx,t)\de t+\dots\right)\cdot
+\left(\de\bx+\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\de t\right)
+\end{align*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math" id="ex-line-integral-evolution-4-4-3">
+\begin{align*}
+\dd{\mathcal{C}}{t}=&amp;\lim_{\de t\rightarrow0}\frac1{\de t}
+\int_{C(t)}\left(
+\mathbf{a}(\bx,t)\cdot\left(\left(\de\bx\cdot\nabla\right)\bu(\bx,t)\right)\de t
++\pd{\mathbf{a}}{t}(\bx,t)\de t\cdot\de\bx
++\left(\bu(\bx,t)\cdot\nabla\right)\mathbf{a}(\bx,t)\de t\cdot\de\bx
++\dots\right)\\
+=&amp;\int_{C(t)}\left(
+\mathbf{a}\cdot\left(\left(\de\bx\cdot\nabla\right)\bu\right)
++\pd{\mathbf{a}}{t}\cdot\de\bx
++\left(\left(\bu\cdot\nabla\right)\mathbf{a}\right)\cdot\de\bx\right)
+\end{align*}
+</div>
+<div class="para">Now we use the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\mathbf{p}\times\mathbf{q}\right)\times\mathbf{r}
+=\left(\mathbf{p}\cdot\mathbf{r}\right)\mathbf{q}
+-\left(\mathbf{q}\cdot\mathbf{r}\right)\mathbf{p}
+\end{equation*}
+</div>
+<div class="para">to expand</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+=\left(\left(\bu\cdot\nabla\right)\mathbf{a}\right)\cdot\de\bx
+-\bu\cdot\left(\left(\de\bx\cdot\nabla\right)\mathbf{a}\right).
+\end{equation*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math" id="ex-line-integral-evolution-4-4-6">
+\begin{align*}
+\dd{\mathcal{C}}{t}
+-\int_{C(t)}\left(\pd{\mathbf{a}}{t}
++\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+=&amp;
+\int_{C(t)}
+\mathbf{a}\cdot\left(\left(\de\bx\cdot\nabla\right)\bu\right)
++\bu\cdot\left(\left(\de\bx\cdot\nabla\right)\mathbf{a}\right)\\
+=&amp;\int_{C(t)}
+\mathbf{a}\cdot\de\bu
++\bu\cdot\de\mathbf{a}\\
+=&amp;\int_{C(t)}
+\de\left(\mathbf{a}\cdot\bu\right)\\
+=&amp;0,
+\end{align*}
+</div>
+<div class="para">whence the result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-line-integral-evolution-4-5">
+<div class="para">
+<em class="emphasis">Second method:</em> Parametrise <span class="process-math">\(C(t)\)</span> as <span class="process-math">\(\bx(s,t)\)</span> for <span class="process-math">\(0&lt;s&lt;1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathcal{C}(t)=\int_0^1\mathbf{a}\cdot\pd{\bx}{s}\de s
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" id="ex-line-integral-evolution-4-5-6">
+\begin{align*}
+\dd{\mathcal{C}}{t}
+=&amp;\int_0^1\pd{\mathbf{a}(\bx(s,t),t)}{t}\cdot\pd{\bx}{s}+\mathbf{a}\cdot\pd{\bu}{s}\de s\\
+=&amp;\int_0^1\left(\pd{\mathbf{a}}{t}+\bu\cdot\nabla\mathbf{a}\right)\cdot\pd{\bx}{s}+\mathbf{a}\cdot\pd{\bu}{s}\de s.
+\end{align*}
+</div>
+<div class="para">We can rewrite the expression we are aiming for:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{C(t)}\left(\pd{\mathbf{a}}{t}
++\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+=\int_0^1\left(\pd{\mathbf{a}}{t}
++\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\pd{\bx}{s}\de s.
+\end{equation*}
+</div>
+<div class="para">We use the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\mathbf{p}\times\mathbf{q}\right)\times\mathbf{r}
+=\left(\mathbf{p}\cdot\mathbf{r}\right)\mathbf{q}
+-\left(\mathbf{q}\cdot\mathbf{r}\right)\mathbf{p},
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{C(t)}\left(\pd{\mathbf{a}}{t}
++\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+=\int_0^1\left(\pd{\mathbf{a}}{t}\cdot\pd{\bx}{s}
++\left(\bu\cdot\nabla\mathbf{a}\right)\cdot\pd{\bx}{s}
+-\left(\pd{\bx}{s}\cdot\nabla\mathbf{a}\right)\cdot\bu\right)\de s.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-line-integral-evolution-4-6">
+<div class="para">Hence,</div>
+<div class="displaymath process-math" id="ex-line-integral-evolution-4-6-1">
+\begin{align*}
+\dd{\mathcal{C}}{t}
+-\int_{C(t)}\left(\pd{\mathbf{a}}{t}
++\left(\nabla\times\mathbf{a}\right)\times\bu\right)\cdot\de\bx
+=&amp;
+\int_0^1\left(\mathbf{a}\cdot\pd{\bu}{s}
++\left(\pd{\bx}{s}\cdot\nabla\mathbf{a}\right)\cdot\bu\right)\de s\\
+=&amp;
+\int_0^1\left(\mathbf{a}\cdot\pd{\bu}{s}
++\pd{\mathbf{a}}{s}\cdot\bu\right)\de s\\
+=&amp;
+\int_0^1\pd{}{s}\left(\mathbf{a}\cdot\bu\right)\de s\\
+=&amp;0,
+\end{align*}
+</div>
+<div class="para">whence the result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-line-integral-evolution-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.3.1"><a href="#ex-line-integral-evolution-4" title="Copy heading and permalink for Solution 6.5.3.1" aria-label="Copy heading and permalink for Solution 6.5.3.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Exercise 6.5.3: Evolution of a line integral"><a href="#ex-line-integral-evolution" title="Copy heading and permalink for Exercise 6.5.3: Evolution of a line integral" aria-label="Copy heading and permalink for Exercise 6.5.3: Evolution of a line integral">🔗</a></div></article><article class="exercise exercise-like" id="ex-axisymmetric-flow"><h3 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Axisymmetric flow.</span>
 </h3>
@@ -796,7 +987,8 @@ Z=\frac{\Gamma_1z_1+\Gamma_2z_2}{\Gamma_1+\Gamma_2}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-two-vortices-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details id="ex-two-vortices-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para logical" id="ex-two-vortices-3-1">
 <div class="para">The complex potential for the two vortices is</div>
 <div class="displaymath process-math">
@@ -814,7 +1006,65 @@ u-\im v=-\frac{\im\Gamma_1}{2\pi(z-z_1)}-\frac{\im\Gamma_2}{2\pi(z-z_2)}.
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 6.5.5.1"><a href="#ex-two-vortices-3" title="Copy heading and permalink for Hint 6.5.5.1" aria-label="Copy heading and permalink for Hint 6.5.5.1">🔗</a></div>
-</div></details></div>
+</div></details><details id="ex-two-vortices-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-two-vortices-4-1">
+<div class="para">The complex potential for the two vortices is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w(z)=-\frac{\im\Gamma_1}{2\pi}\log(z-z_1)-\frac{\im\Gamma_2}{2\pi}\log(z-z_2).
+\end{equation*}
+</div>
+<div class="para">Hence, the velocity field is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u-\im v=-\frac{\im\Gamma_1}{2\pi(z-z_1)}-\frac{\im\Gamma_2}{2\pi(z-z_2)}.
+\end{equation*}
+</div>
+<div class="para">The velocity of each vortex is given by evaluating this expression at the position of the other vortex.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-two-vortices-4-2">
+<div class="para">Thus, the equations of motion for the vortices are</div>
+<div class="displaymath process-math" id="ex-two-vortices-4-2-1">
+\begin{align*}
+\dd{z_1}{t}=&amp;-\frac{\im\Gamma_2}{2\pi(z_1-z_2)},\\
+\dd{z_2}{t}=&amp;-\frac{\im\Gamma_1}{2\pi(z_2-z_1)}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-two-vortices-4-3">
+<div class="para">We calculate</div>
+<div class="displaymath process-math" id="ex-two-vortices-4-3-1">
+\begin{align*}
+\dd{Z}{t}=&amp;\frac{\Gamma_1}{\Gamma_1+\Gamma_2}\dd{z_1}{t}
++\frac{\Gamma_2}{\Gamma_1+\Gamma_2}\dd{z_2}{t}\\
+=&amp;-\frac{\im\Gamma_1\Gamma_2}{2\pi(\Gamma_1+\Gamma_2)}
+\left(\frac1{z_1-z_2}-\frac1{z_2-z_1}\right)\\
+=&amp;0.
+\end{align*}
+</div>
+<div class="para">Similarly,</div>
+<div class="displaymath process-math" id="ex-two-vortices-4-3-2">
+\begin{align*}
+\dd{a^2}{t}=&amp;\dd{}{t}\left((z_1-z_2)(\overline{z_1-z_2})\right)\\
+=&amp;(z_1-z_2)\dd{}t(\overline{z_1-z_2})
++(\overline{z_1-z_2})\dd{}{t}(z_1-z_2)\\
+=&amp;(z_1-z_2)\left(\overline{\dd{z_1}{t}}-\overline{\dd{z_2}{t}}\right)
++(\overline{z_1-z_2})\left(\dd{z_1}{t}-\dd{z_2}{t}\right)\\
+=&amp;\frac{\im\Gamma_1\Gamma_2}{2\pi}
+\left(\frac{z_1-z_2}{\overline{z_1-z_2}}
+-\frac{\overline{z_1-z_2}}{z_1-z_2}\right)\\
+=&amp;0.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-two-vortices-4-4">Thus, <span class="process-math">\(Z\)</span> and <span class="process-math">\(a\)</span> are constant in time. To find the angular velocity, we set <span class="process-math">\(z_1=Z+a\exp(\im\theta_1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-two-vortices-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.5.1"><a href="#ex-two-vortices-4" title="Copy heading and permalink for Solution 6.5.5.1" aria-label="Copy heading and permalink for Solution 6.5.5.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Exercise 6.5.5: Two vortices"><a href="#ex-two-vortices" title="Copy heading and permalink for Exercise 6.5.5: Two vortices" aria-label="Copy heading and permalink for Exercise 6.5.5: Two vortices">🔗</a></div></article><article class="exercise exercise-like" id="ex-obstacle"><h3 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Obstacle.</span>
 </h3>
@@ -827,6 +1077,82 @@ u-\im v=-\frac{\im\Gamma_1}{2\pi(z-z_1)}-\frac{\im\Gamma_2}{2\pi(z-z_2)}.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-obstacle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-obstacle-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="ex-obstacle-3-1">
+<div class="para">The complex potential associated with a vortex in isolation at the point <span class="process-math">\(c\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-circle-theorem.html">
+\begin{equation*}
+f(z)=-\frac{\im\Gamma}{2\pi}\log(z-c).
+\end{equation*}
+</div>
+<div class="para">The Milne-Thomson Circle Theorem <a href="ch-chapter04-potentialflows-8.html#thm-circle-theorem" class="xref" data-knowl="./knowl/xref/thm-circle-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.6.1: Milne-Thomson’s Circle Theorem">Theorem 4.6.1</a> states that, for a complex potential <span class="process-math">\(g(z)\text{,}\)</span> the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-circle-theorem.html">
+\begin{equation*}
+w(z)=g(z)+\overline{g\left(\frac{R^2}{\overline{z}}\right)}
+\end{equation*}
+</div>
+<div class="para">has the same singularities as <span class="process-math">\(g(z)\)</span> outside the circle <span class="process-math">\(|z|=R\)</span> and that <span class="process-math">\(|z|=R\)</span> is a streamline of the flow with complex potential <span class="process-math">\(w(z)\text{.}\)</span> Removing the line vortex from the associated flow allows its velocity to be found.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-obstacle-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.5.6.1"><a href="#ex-obstacle-3" title="Copy heading and permalink for Hint 6.5.6.1" aria-label="Copy heading and permalink for Hint 6.5.6.1">🔗</a></div>
+</div></details><details id="ex-obstacle-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-obstacle-4-1">
+<div class="para">The complex potential associated with the vortex in isolation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z)=-\frac{\im\Gamma}{2\pi}\log(z-b).
+\end{equation*}
+</div>
+<div class="para">We construct the complex potential in the presence of the obstacle using the Milne-Thomson Circle Theorem:</div>
+<div class="displaymath process-math" id="ex-obstacle-4-1-2">
+\begin{align*}
+w(z)=&amp;f(z)+\overline{f\left(\frac{a^2}{\overline{z}}\right)}\\
+=&amp;-\frac{\im\Gamma}{2\pi}\log(z-b)
++\frac{\im\Gamma}{2\pi}\overline{\log\left(\frac{a^2}{\overline{z}}-b\right)}\\
+=&amp;-\frac{\im\Gamma}{2\pi}\log(z-b)
++\frac{\im\Gamma}{2\pi}\log\left(\frac{a^2}{z}-b\right)\\
+=&amp;\frac{\im\Gamma}{2\pi}\log\left(\frac{a^2-bz}{z(z-b)}\right)\\
+=&amp;\frac{\im\Gamma}{2\pi}\left(\log\left(a^2-bz\right)-\log z-\log(z-b)\right);
+\end{align*}
+</div>
+<div class="para">separating the logarithms in the final step enables the derivative to be taken more easily. This has a single singularity at the vortex <span class="process-math">\(z=b\)</span> and the circle <span class="process-math">\(|z|=a\)</span> is a streamline, as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-obstacle-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-obstacle-4-2">
+<div class="para">The velocity field can be found by taking the derivative of <span class="process-math">\(w(z)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-obstacle-4-2-2">
+\begin{align*}
+u-\im v&amp;=\dd{w}{z}\\
+=&amp;-\frac{\im\Gamma}{2\pi}\left(\frac{b}{a^2-bz}+\frac1{z-b}+\frac1{z}\right),
+\end{align*}
+</div>
+<div class="para">and, removing the vortex (the term proportional to <span class="process-math">\(1/(z-b)\)</span>), the velocity of the vortex at <span class="process-math">\(z=b\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_V-\im v_V=-\frac{\im\Gamma}{2\pi}\left(\frac{b}{a^2-b^2}+\frac1{b}\right),
+\end{equation*}
+</div>
+<div class="para">which is an instantaneous velocity of magnitude</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\Gamma}{2\pi}\left(\frac{b}{a^2-b^2}+\frac1{b}\right)
+\end{equation*}
+</div>
+<div class="para">upwards. By symmetry, the vortex moves in a circle of radius <span class="process-math">\(b\)</span> about the origin with speed equal to this value, giving an angular velocity of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\Gamma}{2\pi}\left(\frac1{a^2-b^2}+\frac1{b^2}\right)
+=\frac{\Gamma a^2}{2\pi b^2(a^2-b^2)}+\frac1{b^2},
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-obstacle-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.6.1"><a href="#ex-obstacle-4" title="Copy heading and permalink for Solution 6.5.6.1" aria-label="Copy heading and permalink for Solution 6.5.6.1">🔗</a></div>
+</div></details>
 </div>
 <div class="autopermalink" data-description="Exercise 6.5.6: Obstacle"><a href="#ex-obstacle" title="Copy heading and permalink for Exercise 6.5.6: Obstacle" aria-label="Copy heading and permalink for Exercise 6.5.6: Obstacle">🔗</a></div></article><article class="exercise exercise-like" id="ex-quadrant"><h3 class="heading">
 <span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow in a quadrant.</span>
@@ -925,8 +1251,21 @@ u-\im v=\frac{\im\Gamma}{4a}\left\{
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-channel-2-2">Deduce that, if the vortex is free to move, it will instantaneously travel downwards with speed <span class="process-math">\((\Gamma/4a)\mathrm{cosech}(\pi d/a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-channel-2-3">You may use the identity <span class="process-math">\(\sinh^2(x)− \sinh^2(y)
-\equiv \sinh(x + y) \sinh(x− y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-channel-2-3">
+<div class="para">You may use the identities</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sinh^2(x)− \sinh^2(y)
+\equiv \sinh(x + y) \sinh(x− y)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cosh x\sinh y=\frac12\left(\sinh(x+y)+\sinh(y-x)\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
 <details id="ex-channel-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
@@ -976,7 +1315,7 @@ z = \frac{2a}{\pi}\sinh^{-1}\left(\zeta\right).
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-ex-channel"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter06-ex-channel.jpg" class="contained" alt="Channel map"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Conformal map of channel<div class="autopermalink" data-description="Figure 6.5.3"><a href="#fig-ex-channel" title="Copy heading and permalink for Figure 6.5.3" aria-label="Copy heading and permalink for Figure 6.5.3">🔗</a></div></figcaption></figure><div class="para" id="ex-channel-4-4">We have a vortex of strength <span class="process-math">\(\Gamma\)</span> at the point <span class="process-math">\(z=d\text{,}\)</span> which point transforms to <span class="process-math">\(\zeta=\sinh(\pi d/(2a))\text{.}\)</span> In the <span class="process-math">\(\zeta\)</span>-plane, we also require an image vortex of strength <span class="process-math">\(-\Gamma\)</span> at the point <span class="process-math">\(\zeta=-\sinh(\pi d/(2a))\text{.}\)</span> This will ensure that the transformed channel boundary in the <span class="process-math">\(\zeta\)</span>-plane (i.e. the imaginary axis) has a no-penetration boundary condition.<div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Conformal map of channel<div class="autopermalink" data-description="Figure 6.5.4"><a href="#fig-ex-channel" title="Copy heading and permalink for Figure 6.5.4" aria-label="Copy heading and permalink for Figure 6.5.4">🔗</a></div></figcaption></figure><div class="para" id="ex-channel-4-4">We have a vortex of strength <span class="process-math">\(\Gamma\)</span> at the point <span class="process-math">\(z=d\text{,}\)</span> which point transforms to <span class="process-math">\(\zeta=\sinh(\pi d/(2a))\text{.}\)</span> In the <span class="process-math">\(\zeta\)</span>-plane, we also require an image vortex of strength <span class="process-math">\(-\Gamma\)</span> at the point <span class="process-math">\(\zeta=-\sinh(\pi d/(2a))\text{.}\)</span> This will ensure that the transformed channel boundary in the <span class="process-math">\(\zeta\)</span>-plane (i.e. the imaginary axis) has a no-penetration boundary condition.<div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-channel-4-5">
 <div class="para">Therefore, the complex potential in the <span class="process-math">\(\zeta\)</span>-plane is given by</div>

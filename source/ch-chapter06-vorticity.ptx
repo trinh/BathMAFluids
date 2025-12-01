@@ -1008,13 +1008,20 @@
     <title>Axisymmetric flow</title>
     <introduction>
       <p>
+        <em>In this section,
+          we only covered <xref ref="def-axisymmetric-flow"/> and  <xref ref="def-stokes-streamfunction"/>.
+          We did not do examples.
+          For the exam, you therefore need to be aware of the concept of axisymmetric flow and the Stokes streamfunction,
+          but you wouldn't be asked to do a calculation.</em>
+      </p>
+      <p>
         In the special case in which the flow possesses axisymmetry,
         you might not be surprised to learn that the equations simplify considerably.
         In fact, axisymmetry can be viewed as a reduction of the dimension
         of the problem and axisymmetric flows share some features in common with
         two-dimensional flows.
       </p>
-      <definition>
+      <definition xml:id="def-axisymmetric-flow">
         <title>Axisymmetric flow</title>
         <statement>
           <p>
@@ -1633,7 +1640,7 @@
         </p>
         <p>
           <em>Method two:</em> We can parametrise <m>C(t)</m> via <m>\bx(s,t)</m>
-          for <m>0&lt;x&lt;1</m>
+          for <m>0&lt;s&lt;1</m>
           and rewrite the integral as an integral over the parameter <m>s</m>:
           <me>
             \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s
@@ -1681,7 +1688,7 @@
         </p>
         <p>
           <em>Method two:</em>
-          This can also be proven by parametrising <m>C(t)</m> via <m>\bx(s,t)</m> for <m>0&lt;x&lt;1</m>
+          This can also be proven by parametrising <m>C(t)</m> via <m>\bx(s,t)</m> for <m>0&lt;s&lt;1</m>
           and rewriting the integral as an integral over the parameter <m>s</m>:
           <me>
             \Gamma=\int_0^1\bu(\bx(s,t),t)\cdot\pd{\bx(s,t)}{s}\de s.
@@ -1745,7 +1752,7 @@
           for <m>i=1,2</m>.          
         </p>
       </hint>
-      <!--<solution>
+      <solution>
         <p>
           Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
           define a `cylindrical' volume <m>V</m>,
@@ -1775,7 +1782,7 @@
           this implies the flux of vorticity through any vortex tube is
           uniform and independent of time.
         </p>
-      </solution>-->
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-line-integral-evolution">
@@ -1804,7 +1811,7 @@
         <p>
           <em>First method:</em>
         </p>
-        <figure xml:id="line-integral-evolution-fig">
+        <figure xml:id="line-integral-evolution-fig-1">
           <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
             The inset shows the relationship between the two curves.</caption>
           <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
@@ -1826,14 +1833,14 @@
           </me>
         </p>
       </hint>
-      <!--<solution>
+      <solution>
         <p>
           We present two methods of solution.
         </p>
         <p>
           <em>First method:</em>
         </p>
-        <figure xml:id="line-integral-evolution-fig">
+        <figure xml:id="line-integral-evolution-fig-2">
           <caption>Curve <m>C</m> at times <m>t</m> and <m>t+\de t</m>.
             The inset shows the relationship between the two curves.</caption>
           <image source="ch-chapter06-line-integral-evolution.png" width="80%"/>
@@ -1980,7 +1987,7 @@
           </md>
           whence the result.
         </p>
-      </solution>-->
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-axisymmetric-flow">
@@ -2149,7 +2156,7 @@
           expression at the position of the other vortex.
         </p>
       </hint>
-      <!--<solution>
+      <solution>
         <p>
           The complex potential for the two vortices is
           <me>
@@ -2215,7 +2222,7 @@
           Thus, <m>Z</m> and <m>a</m> are constant in time.
           To find the angular velocity, we set <m>z_1=Z+a\exp(\im\theta_1)</m>
         </p>
-      </solution>-->
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-obstacle">
@@ -2238,7 +2245,24 @@
           </me>
         </p>
       </statement>
-      <!--<solution>
+      <hint>
+        <p>
+          The complex potential associated with a vortex in isolation at the point <m>c</m> is
+          <me>
+            f(z)=-\frac{\im\Gamma}{2\pi}\log(z-c).
+          </me>
+          The Milne-Thomson Circle Theorem <xref ref="thm-circle-theorem"/> states that,
+          for a complex potential <m>g(z)</m>, the function
+          <me>
+            w(z)=g(z)+\overline{g\left(\frac{R^2}{\overline{z}}\right)}
+          </me>
+          has the same singularities as <m>g(z)</m> outside the circle <m>|z|=R</m> and that <m>|z|=R</m>
+          is a streamline of the flow with complex potential <m>w(z)</m>.
+          Removing the line vortex from the associated flow allows 
+          its velocity to be found.
+        </p>
+      </hint>
+      <solution>
         <p>
           The complex potential associated with the vortex in isolation is
           <me>
@@ -2297,7 +2321,7 @@
           </me>
           as required.
         </p>
-      </solution>-->
+      </solution>
     </exercise>
 
     <exercise xml:id="ex-quadrant">
@@ -2417,8 +2441,15 @@
           with speed <m>(\Gamma/4a)\mathrm{cosech}(\pi d/a)</m>.
         </p>
         <p>
-          You may use the identity <m>\sinh^2(x)− \sinh^2(y)
-            \equiv \sinh(x + y) \sinh(x− y)</m>.
+          You may use the identities
+          <me>
+            \sinh^2(x)− \sinh^2(y)
+            \equiv \sinh(x + y) \sinh(x− y)
+          </me>
+          and
+          <me>
+            \cosh x\sinh y=\frac12\left(\sinh(x+y)+\sinh(y-x)\right).
+          </me>
         </p>
       </statement>
       <hint>
