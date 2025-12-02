@@ -1468,10 +1468,11 @@
         with <m>\bf(\bx,t)</m> equal to the linear momentum of the fluid per unit volume,
         <m>\bf=\rho\bu</m>, and <m>V(t)</m> being the small volume of fluid under consideration,
         which coincides with the cube at time <m>t</m> (however, note that the volume of fluid
-        we are following is not generally a cube at other times). The theorem states that:
+        we are following is not generally a cube at other times). Substituting
+        <m>\bf=\rho\bu</m>, the theorem states that:
         <me>
-          \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
-          \pd{f}{t} + \nabla \cdot (f\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
+          \dd{}{t} \iiint_{V(t)} \rho\bu \, \de{x} \, \de{y} \, \de{z} = \iiint_{V(t)} \left[
+          \pd{\rho\bu}{t} + \nabla \cdot (\rho\bu\otimes\bu)\right] \, \de{x} \, \de{y} \, \de{z}.
         </me>
       </p>
     </introduction>
@@ -1479,16 +1480,16 @@
     <subsection xml:id="subsec-rtt-lhs">
       <title>Left-hand side</title>
       <p>
-        We note that <m>\iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}</m> is the integral of the
+        We note that <m>\iiint_{V(t)} \rho\bu \, \de{x} \, \de{y} \, \de{z}</m> is the integral of the
         linear momentum per unit volume over the volume and is therefore the total momentum
         of the fluid particles in <m>V(t)</m>. The left-hand side of this equation is thus
         the Lagrangian rate of change of momentum of these fluid particles.
-        By Newton's second law, this must equal the total force acting on the fluid
-        in <m>V(t)</m>, which we denote by <m>\bF</m>. This force has different contributions, which
+        By Newton's second law, this must equal the resultant force acting on the fluid
+        in <m>V(t)</m>, which we denote by <m>\bF</m>. This force is the sum of different contributions, which
         can be categorised into <em>body forces</em> (which act on the whole volume of fluid)
         and <em>surface forces</em> (acting only on the surface of the fluid, and which arise from the fluid stress):
         <me>
-          \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+          \dd{}{t} \iiint_{V(t)} \rho\bu \, \de{x} \, \de{y} \, \de{z}
           = \bF
           = \bF_{\textrm{body}} + \bF_{\textrm{surface}}.
         </me>
@@ -1625,7 +1626,7 @@
       <p>
         Hence, the left-hand side of the Reynolds Transport Theorem becomes
         <me>
-          \dd{}{t} \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}
+          \dd{}{t} \iiint_{V(t)} \rho\bu \, \de{x} \, \de{y} \, \de{z}
           = \bF_{\textrm{body}} + \bF_{\textrm{surface}}
           = \left(\rho\bg-\nabla p + \mu\nabla^2\bu\right)V.
         </me>
@@ -1636,8 +1637,7 @@
       <p>
         We now evaluate the right-hand side of the Reynolds Transport Theorem:
         <md>
-          <mrow>&amp;\iiint_{V(t)} \left[ \pd{\bf}{t} + \nabla \cdot (\bf\bu)\right] \, \de{x} \, \de{y} \, \de{z}</mrow>
-          <mrow>=&amp; \iiint_{V(t)} \left[ \pd{(\rho\bu)}{t} + \nabla \cdot (\rho\bu\otimes\bu)\right] \, \de{x} \, \de{y} \, \de{z}</mrow>
+          <mrow>&amp; \iiint_{V(t)} \left[ \pd{(\rho\bu)}{t} + \nabla \cdot (\rho\bu\otimes\bu)\right] \, \de{x} \, \de{y} \, \de{z}</mrow>
           <mrow>=&amp; \iiint_{V(t)} \rho\left[ \pd{\bu}{t} + (\bu\cdot\nabla)\bu+\bu(\nabla\cdot\bu)\right] \, \de{x} \, \de{y} \, \de{z}</mrow>
           <mrow>=&amp; \iiint_{V(t)} \rho\left[ \pd{\bu}{t} + (\bu\cdot\nabla)\bu\right] \, \de{x} \, \de{y} \, \de{z},</mrow>
         </md>
@@ -1747,6 +1747,9 @@
       </remark>
       <remark>
         <title>Comparison with analysis of the extensive properties</title>
+        <p>
+          <em>Non-examinable.</em>
+        </p>
         <p>
           As mentioned in <xref ref="rem-RTT-control-volume"/>, some engineering problems can be analysed
           in terms of applying the principle of mass and linear momentum conservation to a defined region
@@ -2073,6 +2076,9 @@
 
   <section xml:id="sec-viscous-dissipation-of-energy">
     <title>Viscous Dissipation of Energy</title>
+    <p>
+      <em>Non-examinable.</em>
+    </p>
     <p>
       In this section we derive an expression for the rate of dissipation
       of kinetic energy in terms of the rate-of-strain tensor.
@@ -2490,7 +2496,10 @@
               For example <m>\partial/\partial x=0</m> if nothing in the problem
               depends on <m>x</m> and there is no reason to assume that anything
               should depend on <m>x</m>.
-              We used this for the Stokes boundary layer problem <xref ref="example-stokes-boundary-layer"/>.              
+            </p>
+            <p>
+              We used this for the Stokes boundary layer problem
+              <xref ref="example-stokes-boundary-layer"/>.              
             </p>
           </li>
           <li>
@@ -2532,12 +2541,19 @@
                 =\partial w/\partial t=\partial p/\partial t=0</m>
               (indeed <m>\partial/\partial t=0</m> for any variable).
             </p>
+            <p>
+              Many examples that we cover make this assumption.
+            </p>
           </li>
           <li>
             <p>
               <em>Fully developed flow:</em>
               <m>\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0</m>,
               but <m>\partial p/\partial z</m> is not, in general, zero.
+            </p>
+            <p>
+              The pipe flow problem, Poiseuille flow <xref ref="sec-poiseuille"/>
+              uses this assumption.
             </p>
           </li>
           <li>
@@ -2558,6 +2574,8 @@
                 </mrow>
               </md>
               where the angular frequency <m>\omega=2\pi/T</m>.
+            </p>
+            <p>
               This assumption will be made in the
               Stokes boundary layer example <xref ref="example-stokes-boundary-layer"/>.
             </p>
@@ -2665,7 +2683,7 @@
         </ul>
       </p>
       <figure xml:id="fig-couette-flow">
-        <caption>Sketch of shear flow velocity profile.</caption>
+        <caption>Shear flow would be generated under the block.</caption>
         <image source="ch-chapter07-couette.jpg" width="80%"/>
       </figure>
     </example>
@@ -4583,15 +4601,15 @@
           <p>
             The pressure at a general point is given by
             <me>
-              p=p_0+Px.
+              p=p_0-Px.
             </me>
           </p>
           <p>
             At <m>y=-h</m>, the normal stress is given by the pressure, pointing into the plate:
             <me>
-              \tau_y=-p=-p_0-Px.
+              \tau_y=-p=-p_0+Px.
             </me>
-            (note the negative sign as "into the plate" is in the <m>+y</m>-direction).
+            (note the negative sign as "into the plate" is in the <m>-y</m>-direction).
             The <m>x</m>-component of the shear stress at <m>y=-h</m> is given by
             <me>
               \tau_x=\mu\pd{u}{y}=\mu\pd{}{y}\left[\frac{P}{2\mu}(h^2-y^2)\right]
@@ -4601,13 +4619,13 @@
             The <m>z</m>-component of the shear stress at <m>y=-h</m> is zero since <m>w=0</m>.
             Hence
             <me>
-              \tau=(Ph,-p_0-Px,0).
+              \tau=(Ph,-p_0+Px,0).
             </me>
           </p>
           <p>
             At <m>y=h</m>, the normal stress is given by the pressure, pointing into the plate:
             <me>
-              \tau_y=p_0+Px
+              \tau_y=p_0-Px
             </me>
             (note the sign change compared to the previous part as "into the plate" is in the <m>+y</m>-direction).
             The <m>x</m>-component of the shear stress at <m>y=h</m> is given by
@@ -4621,7 +4639,7 @@
             The <m>z</m>-component of the shear stress at <m>y=h</m> is zero since <m>w=0</m>.
             Hence
             <me>
-              \tau=(Ph,p_0+Px,0).
+              \tau=(Ph,p_0-Px,0).
             </me>
           </p>
         </solution>
@@ -5567,6 +5585,159 @@
         </solution>
       </task>
     </exercise>
+    <exercise>
+      <title>Flow outside a cylinder</title>
+      <introduction>
+        <p>
+          A Newtonian incompressible fluid of density <m>\rho</m> and
+          shear viscosity <m>\mu</m> surrounds a circular cylinder of radius <m>a</m>.
+          Working in cylindrical polar coordinates, the cylinder surface is at <m>r=a</m>.
+        </p>
+        <p>
+          The Navier<ndash/>Stokes and continuity equations in cylindrical polar coordinates
+          read:
+          <md>
+            <mrow>
+              &amp;\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+            </mrow>
+            <mrow>
+              =&amp;-\pd{p}{r}
+              +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right),
+            </mrow>
+            <mrow>
+              &amp;\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+            </mrow>
+            <mrow>
+              =&amp;-\frac{1}{r}\pd{p}{\theta}
+              +\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right),
+            </mrow>
+            <mrow>
+              &amp;\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+            </mrow>
+            <mrow>
+              =&amp;-\pd{p}{z}
+              +\mu\nabla^2u_z,
+            </mrow>
+            <mrow>
+              &amp;\frac1r\pd{}{r}\left(ru_r\right)+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+            </mrow>
+          </md>
+          where the Laplacian is defined by its action on a function <m>A(r,\theta,z)</m>:
+          <me>
+            \nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+          </me>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            In the case that the surface of the cylinder is porous and there is a uniform suction
+            inside it, which induces a steady flow into the cylinder with inflow velocity
+            <m>U</m> at the surface, you may assume that the flow is steady,
+            two-dimensional and axisymmetric. With these assumptions,
+            use the continuity equation to show that
+            <me>
+              u_r=-\frac{Ua}{r}.
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Axisymmetry implies <m>u_\theta=0</m> and two-dimensional flow implies <m>u_z=0</m>.
+            With these assumptions, the continuity equation becomes
+            <me>
+              \frac1r\pd{}{r}\left(ru_r\right)=0.
+            </me>
+            Multiplying by <m>r</m> and integrating,
+            <me>
+              ru_r=A\quad\Rightarrow\quad u_r=\frac{A}{r},
+            </me>
+            where <m>A</m> is constant. The boundary condition on <m>r=a</m> reads
+            <m>u_r=-U</m>, and hence
+            <me>
+              -U=\frac{A}{a}\quad\Rightarrow\quad A=-aU.
+            </me>
+            Substituting this in,
+            <me>
+              u_r=\frac{-aU}{r}.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that the Navier<ndash/>Stokes equations reduce to
+            <me>
+              \pd{p}{r}
+              =-\left(\rho aU+2\mu\right)\frac{aU}{r^3}.
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We substitute the assumptions into the Navier<ndash/>Stokes equations,
+            which state that all <m>t</m>, <m>\theta</m> and <m>z</m> derivatives are zero
+            and <m>u_\theta=u_z=0</m>. The equations become:
+            <md>
+              <mrow>
+                &amp;\rho\left(u_r\pd{u_r}{r}-\frac{u_{\theta}^2}{r}\right)
+              </mrow>
+              <mrow>
+                =&amp;-\pd{p}{r}
+                +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}\right),
+              </mrow>
+              <mrow>
+                0=&amp;0,
+              </mrow>
+              <mrow>
+                0=&amp;0,
+              </mrow>
+            </md>
+            and
+            <me>
+              nabla^2u_r
+              =\frac1r\pd{}{r}\left(r\pd{u_r}{r}\right)
+              =\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}.
+            </me>
+            Hence, the only non-trivial equation is the <m>r</m>-component, which reduces to
+            <me>
+              \rho u_r\pd{u_r}{r}
+              =-\pd{p}{r}
+              +\mu\left(\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}-\frac{u_r}{r^2}\right).
+            </me>
+            Substituting the expression for <m>u_r</m>,
+            <me>
+              \rho \left(-\frac{aU}{r}\right)\left(\frac{aU}{r^2}\right)
+              =-\pd{p}{r}
+              +\mu\left(-\frac{2aU}{r^3}+\frac{aU}{r^3}-\frac{aU}{r^3}\right),
+            </me>
+            which simplifies to
+            <me>
+              \pd{p}{r}=-\frac{\rho a^2U^2}{r^3}-\frac{2\mu aU}{r^3}
+              =-\left(\rho aU+2\mu\right)\frac{aU}{r^3},
+            </me>
+            as required.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve this to find the pressure field, given that the far-field pressure is <m>p_0</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We solve the equation, applying the boundary condition as <m>r\rightarrow\infty</m>
+            to find that
+            <me>
+              \pd{p}{r}=p_0+\left(\rho aU+2\mu\right)\frac{aU}{2r^2},
+            </me>
+          </p>
+        </solution>
+      </task>
+    </exercise>
   </exercises>
 
   <exercises>
@@ -6129,7 +6300,210 @@
         </p>
       </warning>
     </introduction>
-
+    <exercise>
+      <title>Channel flow</title>
+      <introduction>
+        <p>
+          A Newtonian viscous fluid flows steadily in the <m>+x</m>-direction in two dimensions
+          between plates at <m>y=\pm d</m>. You may neglect gravity in this problem.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write down the boundary conditions at each plate.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have <m>u=v=w=0</m> at <m>y=\pm d</m>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Make the assumption that the flow is fully developed and use the continuity equation
+            to show that <m>v=0</m> everywhere.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Fully-developed flow implies the velocity components do not depend on <m>x</m>.
+            Thus, the continuity equation reduces to
+            <me>
+              \pd{v}{y}=0,
+            </me>
+            implying that <m>v</m> is independent of <m>y</m>.
+            The no-slip boundary conditions at each plate implies <m>v=0</m> there.
+            Hence, <m>v=0</m> everywhere.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Simplify the Navier<ndash/>Stokes equations using the assumptions and <m>v=0</m>
+            to show that
+            <me>
+              \mu\pd{^2u}{y^2}=-G,
+            </me>
+            where <m>G</m> is a constant that you should specify.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The three components of the Navier<ndash/>Stokes equations simplify to
+            <md>
+              <mrow>
+                &amp;0=-\pd{p}{x}+\mu\pd{^2u}{y^2},
+              </mrow>
+              <mrow>
+                &amp;0=-pd{p}{y},
+              </mrow>
+              <mrow>
+                &amp;0=0.
+              </mrow>
+            </md>
+            The <m>y</m>-component shows the pressure only depends on <m>x</m>,
+            and for the two terms in the <m>x</m>-component:
+            <md>
+              <mrow>
+                &amp;-\pd{p}{x}\quad\mbox{depends on <m>x</m> only},
+              </mrow>
+              <mrow>
+                &amp;\mu\pd{^2u}{y^2}\quad\mbox{depends on <m>y</m> only}.
+              </mrow>
+            </md>
+            Hence both these terms are constant. Setting
+            <me>
+              G=-\pd{p}{x},
+            </me>
+            where <m>G</m> is constant, we have
+            <me>
+              \mu\pd{^2u}{y^2}=-G.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve this applying the boundary conditions to find the flow profile.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have
+            <me>
+              u=-\frac{G}{2}y^2+C_1y+C_2,
+            </me>
+            where <m>C_1</m> and <m>C_2</m> are constants, and, applying the boundary condition
+            at <m>y=d</m>,
+            <me>
+              0=-\frac{G}{2}d^2+C_1d+C_2,
+            </me>
+            and at <m>y=-d</m>,
+            <me>
+              0=-\frac{G}{2}d^2-C_1d+C_2.
+            </me>
+            Subtracting these equations, we see that <m>C_1=0</m> and then we find <m>C_2=Gd^2/2</m>.
+            Hence
+            <me>
+              u=-\frac{G}{2}y^2+\frac{Gd^2}{2}
+              =\frac{G}{2}\left(d^2-y^2\right),
+            </me>
+            and <m>v=w=0</m>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the stress exerted by the fluid on both plates.
+            If each plates has (large) area <m>A</m>, what is the tethering force required
+            keep the plate fixed in place?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            For the plate at <m>y=k</m>,
+            the <m>x</m>-component of the stress is
+            <me>
+              \tau=-\mu\pd{u}{y}
+            </me>
+            (the minus sign occurs since the vector into the fluid points in the <m>-y</m>-direction)
+            and the <m>z</m>-component of the stress is zero since the flow is two-dimensional.
+            The <m>x</m>-component equals
+            <me>
+              \tau=-\mu (-Gd)=\mu Gd.
+            </me>
+          </p>
+          <p>
+            For the plate at <m>y=-k</m>,
+            the <m>x</m>-component of the stress is
+            <me>
+              \tau=\mu\pd{u}{y}
+            </me>
+            (the plus sign occurs since the vector into the fluid points in the <m>+y</m>-direction)
+            and the <m>z</m>-component of the stress is zero since the flow is two-dimensional.
+            The <m>x</m>-component equals
+            <me>
+              \tau=\mu (-G(-d))=\mu Gd.
+            </me>
+          </p>
+          <p>
+            Thus the stress at both plates is <m>\mu Gd</m> in the <m>+x</m>-direction,
+            and the force on the whole plate is <m>\mu GdA</m> in the <m>+x</m>-direction.
+            Hence the tethering force to keep each plate fixed is <m>\mu GdA</m> in the <m>-x</m>-direction.
+          </p>
+        </solution>
+      </task>
+    </exercise>
+    <!--<exercise>
+      <introduction>
+        <p>
+          A tethered sphere of radius <m>a</m> is surrounded by a flowing
+          incompressible Newtonian fluid
+          of density <m>\rho</m> and shear viscosity <m>\mu</m>.
+          In the far field, the fluid velocity is uniform and equal to <m>U</m>.
+        </p>
+        <figure>
+          <caption>Flow profiles of a sphere surrounded by a flowing fluid.</caption>
+          <image source="ch-chapter07-schematic-sphere-flow.jpg" width="100%" />
+        </figure>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write down an expression for the Reynolds number <m>\mathrm{Re}</m> of the fluid.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <me>
+              \mathrm{Re}=\frac{\rho Ua}{\mu}.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Describe what you can infer about the Reynolds number in each case (a), (b) and (c)
+            from these pictures. Explain your reasoning.
+          </p>
+        </statement>
+      </task>
+    </exercise>-->
+<!--    <exercise>
+      <introduction>
+        <p>
+          A funnel in a device has a core that removes fluid 
+          Do mass conservation by considering the region between x and x + delta x.
+        </p>
+      </introduction>
+    </exercise>-->
   </exercises>
 
 </chapter>
