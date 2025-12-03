@@ -1111,7 +1111,7 @@ u(h)=\frac{P}{2\mu}\left(h^2-h^2\right)
 <div class="para">The pressure at a general point is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-p=p_0+Px.
+p=p_0-Px.
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-flow-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1120,10 +1120,10 @@ p=p_0+Px.
 <div class="para">At <span class="process-math">\(y=-h\text{,}\)</span> the normal stress is given by the pressure, pointing into the plate:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tau_y=-p=-p_0-Px.
+\tau_y=-p=-p_0+Px.
 \end{equation*}
 </div>
-<div class="para">(note the negative sign as "into the plate" is in the <span class="process-math">\(+y\)</span>-direction). The <span class="process-math">\(x\)</span>-component of the shear stress at <span class="process-math">\(y=-h\)</span> is given by</div>
+<div class="para">(note the negative sign as "into the plate" is in the <span class="process-math">\(-y\)</span>-direction). The <span class="process-math">\(x\)</span>-component of the shear stress at <span class="process-math">\(y=-h\)</span> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \tau_x=\mu\pd{u}{y}=\mu\pd{}{y}\left[\frac{P}{2\mu}(h^2-y^2)\right]
@@ -1133,7 +1133,7 @@ p=p_0+Px.
 <div class="para">(note that this is positive since the fluid is pushing the plate in the positive <span class="process-math">\(x\)</span>-direction). The <span class="process-math">\(z\)</span>-component of the shear stress at <span class="process-math">\(y=-h\)</span> is zero since <span class="process-math">\(w=0\text{.}\)</span> Hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tau=(Ph,-p_0-Px,0).
+\tau=(Ph,-p_0+Px,0).
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-flow-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1142,7 +1142,7 @@ p=p_0+Px.
 <div class="para">At <span class="process-math">\(y=h\text{,}\)</span> the normal stress is given by the pressure, pointing into the plate:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tau_y=p_0+Px
+\tau_y=p_0-Px
 \end{equation*}
 </div>
 <div class="para">(note the sign change compared to the previous part as "into the plate" is in the <span class="process-math">\(+y\)</span>-direction). The <span class="process-math">\(x\)</span>-component of the shear stress at <span class="process-math">\(y=h\)</span> is given by</div>
@@ -1155,7 +1155,7 @@ p=p_0+Px.
 <div class="para">Note that the formula used has a negative sign as "into the fluid" is in the <span class="process-math">\(-y\)</span>-direction. The overall sign is positive since the fluid is pushing the plate in the positive <span class="process-math">\(x\)</span>-direction. (It is good to check signs after this kind of calculation by checking the direction of the force.) The <span class="process-math">\(z\)</span>-component of the shear stress at <span class="process-math">\(y=h\)</span> is zero since <span class="process-math">\(w=0\text{.}\)</span> Hence</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\tau=(Ph,p_0+Px,0).
+\tau=(Ph,p_0-Px,0).
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-channel-flow-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -2044,7 +2044,154 @@ Q=&amp;\iint_Aw\,\de A\\
 </div>
 <div class="autopermalink" data-description="Solution 7.9.12.a.1"><a href="#ex-hagen-poiseuille-flow-3-2" title="Copy heading and permalink for Solution 7.9.12.a.1" aria-label="Copy heading and permalink for Solution 7.9.12.a.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 7.9.12.a"><a href="#ex-hagen-poiseuille-flow-3" title="Copy heading and permalink for Task 7.9.12.a" aria-label="Copy heading and permalink for Task 7.9.12.a">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.12: Hagen–Poiseuille flow"><a href="#ex-hagen-poiseuille-flow" title="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow" aria-label="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow">🔗</a></div></article><div class="autopermalink" data-description="Exercises 7.9: Practice Exercises"><a href="#ws-viscousflows" title="Copy heading and permalink for Exercises 7.9: Practice Exercises" aria-label="Copy heading and permalink for Exercises 7.9: Practice Exercises">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 7.9.12.a"><a href="#ex-hagen-poiseuille-flow-3" title="Copy heading and permalink for Task 7.9.12.a" aria-label="Copy heading and permalink for Task 7.9.12.a">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.12: Hagen–Poiseuille flow"><a href="#ex-hagen-poiseuille-flow" title="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow" aria-label="Copy heading and permalink for Exercise 7.9.12: Hagen–Poiseuille flow">🔗</a></div></article><article class="exercise exercise-like" id="ws-viscousflows-15"><h3 class="heading">
+<span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow outside a cylinder.</span>
+</h3>
+<div class="introduction" id="ws-viscousflows-15-2">
+<div class="para" id="ws-viscousflows-15-2-1">A Newtonian incompressible fluid of density <span class="process-math">\(\rho\)</span> and shear viscosity <span class="process-math">\(\mu\)</span> surrounds a circular cylinder of radius <span class="process-math">\(a\text{.}\)</span> Working in cylindrical polar coordinates, the cylinder surface is at <span class="process-math">\(r=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ws-viscousflows-15-2-2">
+<div class="para">The Navier–Stokes and continuity equations in cylindrical polar coordinates read:</div>
+<div class="displaymath process-math" id="ws-viscousflows-15-2-2-2">
+\begin{align*}
+&amp;\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)\\
+=&amp;-\pd{p}{r}
++\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right),\\
+&amp;\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)\\
+=&amp;-\frac{1}{r}\pd{p}{\theta}
++\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right),\\
+&amp;\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)\\
+=&amp;-\pd{p}{z}
++\mu\nabla^2u_z,\\
+&amp;\frac1r\pd{}{r}\left(ru_r\right)+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+\end{align*}
+</div>
+<div class="para">where the Laplacian is defined by its action on a function <span class="process-math">\(A(r,\theta,z)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ws-viscousflows-15-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ws-viscousflows-15-3-1-1">
+<div class="para">In the case that the surface of the cylinder is porous and there is a uniform suction inside it, which induces a steady flow into the cylinder with inflow velocity <span class="process-math">\(U\)</span> at the surface, you may assume that the flow is steady, two-dimensional and axisymmetric. With these assumptions, use the continuity equation to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_r=-\frac{Ua}{r}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-15-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-15-3-2-1">
+<div class="para">Axisymmetry implies <span class="process-math">\(u_\theta=0\)</span> and two-dimensional flow implies <span class="process-math">\(u_z=0\text{.}\)</span> With these assumptions, the continuity equation becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac1r\pd{}{r}\left(ru_r\right)=0.
+\end{equation*}
+</div>
+<div class="para">Multiplying by <span class="process-math">\(r\)</span> and integrating,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ru_r=A\quad\Rightarrow\quad u_r=\frac{A}{r},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is constant. The boundary condition on <span class="process-math">\(r=a\)</span> reads <span class="process-math">\(u_r=-U\text{,}\)</span> and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-U=\frac{A}{a}\quad\Rightarrow\quad A=-aU.
+\end{equation*}
+</div>
+<div class="para">Substituting this in,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_r=\frac{-aU}{r}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.13.a.1"><a href="#ws-viscousflows-15-3-2" title="Copy heading and permalink for Solution 7.9.13.a.1" aria-label="Copy heading and permalink for Solution 7.9.13.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.13.a"><a href="#ws-viscousflows-15-3" title="Copy heading and permalink for Task 7.9.13.a" aria-label="Copy heading and permalink for Task 7.9.13.a">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-15-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ws-viscousflows-15-4-1-1">
+<div class="para">Show that the Navier–Stokes equations reduce to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{p}{r}
+=-\left(\rho aU+2\mu\right)\frac{aU}{r^3}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-15-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-15-4-2-1">
+<div class="para">We substitute the assumptions into the Navier–Stokes equations, which state that all <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(\theta\)</span> and <span class="process-math">\(z\)</span> derivatives are zero and <span class="process-math">\(u_\theta=u_z=0\text{.}\)</span> The equations become:</div>
+<div class="displaymath process-math" id="ws-viscousflows-15-4-2-1-6">
+\begin{align*}
+&amp;\rho\left(u_r\pd{u_r}{r}-\frac{u_{\theta}^2}{r}\right)\\
+=&amp;-\pd{p}{r}
++\mu\left(\nabla^2u_r-\frac{u_r}{r^2}\right),\\
+0=&amp;0,\\
+0=&amp;0,
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+nabla^2u_r
+=\frac1r\pd{}{r}\left(r\pd{u_r}{r}\right)
+=\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}.
+\end{equation*}
+</div>
+<div class="para">Hence, the only non-trivial equation is the <span class="process-math">\(r\)</span>-component, which reduces to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho u_r\pd{u_r}{r}
+=-\pd{p}{r}
++\mu\left(\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}-\frac{u_r}{r^2}\right).
+\end{equation*}
+</div>
+<div class="para">Substituting the expression for <span class="process-math">\(u_r\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho \left(-\frac{aU}{r}\right)\left(\frac{aU}{r^2}\right)
+=-\pd{p}{r}
++\mu\left(-\frac{2aU}{r^3}+\frac{aU}{r^3}-\frac{aU}{r^3}\right),
+\end{equation*}
+</div>
+<div class="para">which simplifies to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{p}{r}=-\frac{\rho a^2U^2}{r^3}-\frac{2\mu aU}{r^3}
+=-\left(\rho aU+2\mu\right)\frac{aU}{r^3},
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.13.b.1"><a href="#ws-viscousflows-15-4-2" title="Copy heading and permalink for Solution 7.9.13.b.1" aria-label="Copy heading and permalink for Solution 7.9.13.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.13.b"><a href="#ws-viscousflows-15-4" title="Copy heading and permalink for Task 7.9.13.b" aria-label="Copy heading and permalink for Task 7.9.13.b">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-15-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ws-viscousflows-15-5-1-1">Solve this to find the pressure field, given that the far-field pressure is <span class="process-math">\(p_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-15-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-15-5-2-1">
+<div class="para">We solve the equation, applying the boundary condition as <span class="process-math">\(r\rightarrow\infty\)</span> to find that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{p}{r}=p_0+\left(\rho aU+2\mu\right)\frac{aU}{2r^2},
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-15-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.13.c.1"><a href="#ws-viscousflows-15-5-2" title="Copy heading and permalink for Solution 7.9.13.c.1" aria-label="Copy heading and permalink for Solution 7.9.13.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.13.c"><a href="#ws-viscousflows-15-5" title="Copy heading and permalink for Task 7.9.13.c" aria-label="Copy heading and permalink for Task 7.9.13.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.13: Flow outside a cylinder"><a href="#ws-viscousflows-15" title="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder" aria-label="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder">🔗</a></div></article><div class="autopermalink" data-description="Exercises 7.9: Practice Exercises"><a href="#ws-viscousflows" title="Copy heading and permalink for Exercises 7.9: Practice Exercises" aria-label="Copy heading and permalink for Exercises 7.9: Practice Exercises">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-exact-solutions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-viscousflows-12.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
