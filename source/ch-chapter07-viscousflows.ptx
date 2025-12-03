@@ -6301,6 +6301,43 @@
       </warning>
     </introduction>
     <exercise>
+      <introduction>
+        <p>
+          A tethered sphere of radius <m>a</m> is surrounded by a flowing
+          incompressible Newtonian fluid
+          of density <m>\rho</m> and shear viscosity <m>\mu</m>.
+          In the far field, the fluid velocity is uniform and equal to <m>U</m>
+          (right to left).
+        </p>
+        <figure>
+          <caption>Flow profiles of a sphere surrounded by a flowing fluid.</caption>
+          <image source="ch-chapter07-schematic-sphere-flow.jpg" width="100%" />
+        </figure>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write down an expression for the Reynolds number <m>\mathrm{Re}</m> of the fluid.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            <me>
+              \mathrm{Re}=\frac{\rho Ua}{\mu}.
+            </me>
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            Describe what you can infer about the Reynolds number in each case (a), (b) and (c)
+            from these pictures. Explain your reasoning.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise>
       <title>Channel flow</title>
       <introduction>
         <p>
@@ -6460,42 +6497,6 @@
         </solution>-->
       </task>
     </exercise>
-    <!--<exercise>
-      <introduction>
-        <p>
-          A tethered sphere of radius <m>a</m> is surrounded by a flowing
-          incompressible Newtonian fluid
-          of density <m>\rho</m> and shear viscosity <m>\mu</m>.
-          In the far field, the fluid velocity is uniform and equal to <m>U</m>.
-        </p>
-        <figure>
-          <caption>Flow profiles of a sphere surrounded by a flowing fluid.</caption>
-          <image source="ch-chapter07-schematic-sphere-flow.jpg" width="100%" />
-        </figure>
-      </introduction>
-      <task>
-        <statement>
-          <p>
-            Write down an expression for the Reynolds number <m>\mathrm{Re}</m> of the fluid.
-          </p>
-        </statement>
-        <solution>
-          <p>
-            <me>
-              \mathrm{Re}=\frac{\rho Ua}{\mu}.
-            </me>
-          </p>
-        </solution>
-      </task>
-      <task>
-        <statement>
-          <p>
-            Describe what you can infer about the Reynolds number in each case (a), (b) and (c)
-            from these pictures. Explain your reasoning.
-          </p>
-        </statement>
-      </task>
-    </exercise>-->
 <!--    <exercise>
       <introduction>
         <p>

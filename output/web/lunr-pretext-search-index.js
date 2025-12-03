@@ -2950,7 +2950,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "7.11",
   "title": "Problems set 8 to hand in",
-  "body": " Problems set 8 to hand in   Please hand in the problems in this Section for Set 8 (the final set of problems, due in the week commencing 8 Dec).   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.     Channel flow   A Newtonian viscous fluid flows steadily in the -direction in two dimensions between plates at . You may neglect gravity in this problem.     Write down the boundary conditions at each plate.       Make the assumption that the flow is fully developed and use the continuity equation to show that everywhere.       Simplify the Navier Stokes equations using the assumptions and to show that where is a constant that you should specify.       Solve this applying the boundary conditions to find the flow profile.       Find the stress exerted by the fluid on both plates. If each plates has (large) area , what is the tethering force required keep the plate fixed in place?        "
+  "body": " Problems set 8 to hand in   Please hand in the problems in this Section for Set 8 (the final set of problems, due in the week commencing 8 Dec).   We look to complete worksheets in the week prior to the content being delivered. Once this is done, this disclaimer message will be removed.      A tethered sphere of radius is surrounded by a flowing incompressible Newtonian fluid of density and shear viscosity . In the far field, the fluid velocity is uniform and equal to (right to left).   Flow profiles of a sphere surrounded by a flowing fluid.       Write down an expression for the Reynolds number of the fluid.       Describe what you can infer about the Reynolds number in each case (a), (b) and (c) from these pictures. Explain your reasoning.      Channel flow   A Newtonian viscous fluid flows steadily in the -direction in two dimensions between plates at . You may neglect gravity in this problem.     Write down the boundary conditions at each plate.       Make the assumption that the flow is fully developed and use the continuity equation to show that everywhere.       Simplify the Navier Stokes equations using the assumptions and to show that where is a constant that you should specify.       Solve this applying the boundary conditions to find the flow profile.       Find the stress exerted by the fluid on both plates. If each plates has (large) area , what is the tethering force required keep the plate fixed in place?       "
 },
 {
   "id": "problems-set-8-2-2",
@@ -2967,6 +2967,15 @@ var ptx_lunr_docs = [
   "url": "problems-set-8.html#problems-set-8-3",
   "type": "Exercise",
   "number": "7.11.1",
+  "title": "",
+  "body": "  A tethered sphere of radius is surrounded by a flowing incompressible Newtonian fluid of density and shear viscosity . In the far field, the fluid velocity is uniform and equal to (right to left).   Flow profiles of a sphere surrounded by a flowing fluid.       Write down an expression for the Reynolds number of the fluid.       Describe what you can infer about the Reynolds number in each case (a), (b) and (c) from these pictures. Explain your reasoning.    "
+},
+{
+  "id": "problems-set-8-4",
+  "level": "2",
+  "url": "problems-set-8.html#problems-set-8-4",
+  "type": "Exercise",
+  "number": "7.11.2",
   "title": "Channel flow.",
   "body": " Channel flow   A Newtonian viscous fluid flows steadily in the -direction in two dimensions between plates at . You may neglect gravity in this problem.     Write down the boundary conditions at each plate.       Make the assumption that the flow is fully developed and use the continuity equation to show that everywhere.       Simplify the Navier Stokes equations using the assumptions and to show that where is a constant that you should specify.       Solve this applying the boundary conditions to find the flow profile.       Find the stress exerted by the fluid on both plates. If each plates has (large) area , what is the tethering force required keep the plate fixed in place?     "
 },
