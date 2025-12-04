@@ -6497,14 +6497,177 @@
         </solution>-->
       </task>
     </exercise>
-<!--    <exercise>
+    <exercise>
+      <title>Wavy-walled pipe</title>
       <introduction>
         <p>
-          A funnel in a device has a core that removes fluid 
-          Do mass conservation by considering the region between x and x + delta x.
+          A long cylindrical pipe with slowly varying radius <m>R(z)</m>
+          is aligned with its axis pointing in the <m>z</m>-direction.
+          A much narrower cylinder of constant radius <m>a</m> is placed coaxially within
+          the larger cylinder.
+          The narrow cylinder has porous walls and emits fluid
+          at a constant velocity <m>U</m> perpendicular to its surface.
+          A fluid flows steadily in the gap between the two cylinders.
+        </p>
+        <figure>
+          <caption>Wavy-walled pipe with inner cylinder that emits fluid.</caption>
+          <image source="ch-chapter07-wavywalledtube.jpg" width="60%" />
+        </figure>
+        <p>
+          In this question, you will work in cylindrical polar coodinates <m>(r,\theta,z)</m>,
+          centred on the axis of the pipe.
+        </p>
+        <p>
+          Despite the fact that there is flow out from the inner cylinder in the radial direction,
+          you may assume that the flow in the annular gap between the cylinders is unidirectional
+          along the pipe in the <m>+z</m>-direction.
+          (In reality there will be a thin layer next to the inner cylinder in which this is not true.)
+          Furthermore, you may assume that the flow is uniform across the cross-section,
+          that is <m>\bu=(u(z),0,0)</m>.
         </p>
       </introduction>
-    </exercise>-->
+      <task>
+        <statement>
+          <p>
+            Consider a narrow slice of the cylinder between <m>z</m> and <m>z+\de z</m>.
+            Find an expression for the volumetric flux of fluid through the surfaces
+            <m>z</m> and <m>z+\de z</m>.
+          </p>
+        </statement>
+        <!--<solution>
+          <figure>
+            <caption>Wavy-walled pipe <ndash/> planes to apply mass conservation.</caption>
+            <image source="ch-chapter07-wavywalledtube-masscons.jpg" width="60%" />
+          </figure>
+          <p>
+            The volumetric flux into the left-hand surface of this region equals
+            area times velocity:
+            <me>
+              \pi (R^2-a^2)u
+            </me>
+            and that out of the right-hand surfae equals
+            <me>
+              \pi \left((R+\de R)^2-a^2\right)(u+\de u)
+              =\pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),
+            </me>
+            where we used the chain rule to rewrite the increments in terms of <m>\de z</m>.
+            Note that throughout this equation, we neglect <m>\de z^2</m> and higher powers,
+            as they are small.
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now find an expression for the volumetric flux of fluid through the
+            section of the inner cylinder between <m>z</m> and <m>z+\de z</m>.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            The area of the inner cylinder in this region is <m>2\pi a\de z</m>,
+            and thus we have a volumetric flux <m>2\pi aU\de z</m> entering this region
+            from the inner cylinder.
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now use the principle of mass conservation to show that
+            <me>
+              \dd{u}{z}=\frac{2(aU-RR'u)}{R^2-a^2}.
+            </me>
+            This equation can be solved numerically to find <m>u</m>
+            (but you do not need to do that in this question!).
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            Since the volume of the pipe between <m>z</m> and <m>z+\de z</m> is fixed,
+            the total volumetric flux into this region equals the total volumetric flux out.
+          </p>
+          <p>
+            Thus
+            <md>
+              <mrow>
+                &amp;\pi (R^2-a^2)u + 2\pi aU\de z = \pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;
+                2\pi aU\de z = \pi \left((R^2-a^2)u'+2RR'u\right)\de z,
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;
+                2aU = (R^2-a^2)u'+2RR'u,
+              </mrow>
+              <mrow>
+                \Rightarrow\quad&amp;
+                u' = \frac{2(aU-RR'u)}{R^2-a^2},
+              </mrow>
+            </md>
+            thus proving the result.
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            Write down an expression for the Reynolds number of this flow,
+            explaining your reasoning.
+            You may assume that the pipe
+            has length <m>L</m> and that <m>R_0</m> is a typical value of <m>R(z)</m>.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            A suitable lengthscale is <m>R_0</m>.
+            Simplifying the differential equation for <m>u</m>, by neglecting variations in
+            pipe radius <m>R'</m> and the radius of the inner cylinder <m>a</m>, gives
+            <me>
+              \dd{u}{z} \approx \frac{2aU}{R_0^2},
+            </me>
+            suggesting a suitable velocity scale is this times <m>L</m>
+            (the velocity that would be attained at the end of the pipe):
+            <me>
+              \frac{2aLU}{R_0^2}.
+            </me>
+            Hence the Reynolds number is
+            <me>
+              \mathrm{Re}=\frac{\rho R_0}{\mu}\frac{2aLU}{R_0^2}
+              =\frac{2aLU\rho}{\mu R_0}.
+            </me>
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            State in a sentence the conditions under which it might be appropriate to assume
+            that the velocity is uniform across the cross section.
+            You do not need to do a calculation.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            The Reynolds number would need to be large.
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            In reality, in a sentence, what would you observe in the flow near the outer wall?
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            The flow would need to satisfy the no-slip boundary condition at the outer cylinder
+            and the velocity there would therefore tend to zero.
+          </p>
+        </solution>-->
+      </task>
+    </exercise>
   </exercises>
 
 </chapter>
