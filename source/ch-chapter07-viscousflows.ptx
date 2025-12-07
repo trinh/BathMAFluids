@@ -3933,7 +3933,7 @@
       <task>
         <statement>
           <p>
-            a spermatozoon with tail length <m>10^{-3}</m> swimming at 100 <m>\mu</m>m/s in water.
+            a spermatozoon with tail length <m>10^{-3}</m> m swimming at 100 <m>\mu</m>m/s in water.
           </p>
         </statement>
         <solution>
@@ -4362,6 +4362,67 @@
             <me>
               \mu\alpha(1+k^2)LW.
             </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In this part, find the drag force on the plate by using the stress tensor,
+            and check your answer against the previous part.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We have the normal vector to the plate
+            <me>
+              \hat{\bn}=\frac1{\sqrt{1+k^2}}(-k,1,0).
+            </me>
+            The rate-of-strain tensor is given by
+            <me>
+              \be=\left(\begin{matrix}
+              -\alpha k&amp;\frac12\alpha(1-k^2)&amp;0\\
+              \frac12\alpha(1-k^2)&amp;\alpha k&amp;0\\
+              0&amp;0&amp;0
+              \end{matrix}\right).
+            </me>
+            Hence the stress tensor equals
+            <me>
+              \bsigma=-p\bI+2\mu\be
+              =\left(\begin{matrix}
+              -p-2\mu\alpha k&amp;\mu\alpha(1-k^2)&amp;0\\
+              \mu\alpha(1-k^2)&amp;-p+2\mu\alpha k&amp;0\\
+              0&amp;0&amp;-p
+              \end{matrix}\right).
+            </me>
+            The stress on the surface is given by
+            <md>
+              <mrow>
+                \tau=&amp;\bsigma\hat{\bn}
+              </mrow>
+              <mrow>
+                =&amp;\frac1{\sqrt{1+k^2}}\left(kp+2\mu\alpha k^2+\mu\alpha(1-k^2),-\mu k\alpha(1-k^2)-p+2\mu\alpha k,0\right)
+              </mrow>
+              <mrow>
+                =&amp;\frac1{\sqrt{1+k^2}}\left(kp+\mu\alpha(1+k^2),-p+\mu k\alpha(1+k^2),0\right)
+              </mrow>
+              <mrow>
+                =&amp;\frac1{\sqrt{1+k^2}}\left(p(k,-1,0)+\mu\alpha(1+k^2)(1,k,0)\right)
+              </mrow>
+              <mrow>
+                =&amp;-p\hat{\bn}+\mu\alpha(1+k^2)\hat{\bt},
+              </mrow>
+            </md>
+            where <m>\hat{\bt}</m> is the unit tangential vector to the plate in the <m>(x,y)</m>-plane.            
+          </p>
+          <p>
+            This is the pressure pushing into the plate (direction <m>-\hat{\bn}</m>) plus the drag
+            <m>\mu\alpha(1+k^2)</m> along the plate.
+            Hence, the total drag force is the drag times the area:
+            <me>
+              \mu\alpha(1+k^2)
+            </me>
+            which agrees with the previous answer.
           </p>
         </solution>
       </task>
@@ -5696,7 +5757,7 @@
             </md>
             and
             <me>
-              nabla^2u_r
+              \nabla^2u_r
               =\frac1r\pd{}{r}\left(r\pd{u_r}{r}\right)
               =\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}.
             </me>
@@ -5736,6 +5797,198 @@
             </me>
           </p>
         </solution>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>Oscillating flow in a pipe</title>
+      <introduction>
+        <p>
+          In this exercise, you will derive the equations for flow in a circular pipe,
+          driven by an oscillating pressure gradient
+          <me>
+            \pd{p}{z}=-G_0\cos\omega t.
+          </me>          
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            In cylindrical polar coordinates <m>(r,\theta,z)</m> the continuity equation is
+            <me>
+              \frac1r\pd{(ru_r)}{r}+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+            </me>
+            and the Navier<ndash/>Stokes equations are
+            <md>
+              <mrow>
+                \rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+                =&amp;-\pd{p}{r}
+                +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)+\rho f_r,
+              </mrow>
+              <mrow>
+                \rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+                =&amp;-\frac{1}{r}\pd{p}{\theta}
+                +\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)+\rho f_{\theta},
+              </mrow>
+              <mrow>
+                \rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+                =&amp;-\pd{p}{z}
+                +\mu\nabla^2u_z+\rho f_z,
+              </mrow>
+            </md>
+            where the Laplacian is defined by its action on a function <m>A(r,\theta,z)</m>:
+            <me>
+              \nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+            </me>
+            and <m>\bf=(f_r,f_\theta,f_z)</m> represents the body forces per unit mass
+            acting on the fluid.
+          </p>
+          <p>
+            Stating your assumptions, use the continuity equation to show that <m>u_r</m> is everywhere zero.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We assume that the flow is axisymmetric and fully developed.
+            The continuity equation reduces to
+            <me>
+              \frac1r\pd{}{r}\left(ru_r\right)=0,
+            </me>
+            which implies that
+            <me>
+              u_r=\frac{A}{r}
+            </me>
+            where <m>A</m> is independent of <m>r</m>.
+            Regularity at <m>r=0</m> implies that <m>A=0</m>, and therefore <m>u_r=0</m> everywhere.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Simplify the Navier<ndash/>Stokes equations, and use them to show that
+            <me>
+              u_z=U(r)e^{\im\omega t}+{\mathrm{c.c.}},
+            </me>
+            where
+            <me>
+              \dd{^2U}{r^2}+\frac1r\dd{U}{r}-\frac{\im\rho\omega}{\mu} U=-\frac{G_0}{2\mu}.
+            </me>
+            You may neglect gravity.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            With the assumptions, the Navier<ndash/>Stokes equations reduce to
+            <md>
+              <mrow>
+                0=&amp;-\pd{p}{r},
+              </mrow>
+              <mrow>
+                0=&amp;0,
+              </mrow>
+              <mrow>
+                \rho\im\omega Ue^{\im\omega t}+\mathrm{c.c.}
+                =G_0\cos\omega t+\frac{\mu}{r}\dd{}{r}\left(rU'\right)e^{\im\omega t}+\mathrm{c.c.}.
+              </mrow>
+            </md>
+            There is thus one non-trivial component, and, taking the part proportional to <m>e^{\im\omega t}</m>,
+            we have
+            <me>
+              \rho\im\omega U=\frac12G_0+\frac{\mu}{r}\dd{}{r}\left(rU'\right),
+            </me>
+            which, dividing by <m>\mu</m>, is equivalent to
+            <me>
+              \frac{\im\rho\omega}{\mu} U=\frac{G_0}{2\mu}+U''+\frac1rU'.
+            </me>
+            Rearranging gives the result.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Make the substitution <m>s=e^{-\im\pi/4}\alpha r</m>,
+            where <m>\alpha=\sqrt{\rho\omega/\mu}</m>,
+            to obtain the canonical form
+            <me>
+              \dd{^2U}{s^2}+\frac1s\dd{U}{s}+U=-\frac{\im G_0}{2\rho\omega}
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            With this substitution, we have
+            <me>
+              \dd{}{r}=e^{-\im\pi/4}\alpha\dd{}{s},
+            </me>
+            and hence
+            <me>
+              -\im\alpha^2\dd{^2U}{s^2}-\im\alpha^2\frac1s\dd{U}{s}
+              -\im\alpha^2U=-\frac{G_0}{2\mu},
+            </me>
+            giving
+            <me>
+              \dd{^2U}{s^2}+\frac1s\dd{U}{s}+U=-\frac{\im G_0}{2\rho\omega}.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a particular integral to this equation, i.e. any solution that satisfies the
+            inhomogeneous equation
+          </p>
+        </statement>
+        <solution>
+          <p>
+            For simplicity, seek a constant solution, and we find
+            <me>
+              U_{PI}=-\frac{\im G_0}{2\rho\omega}.
+            </me>
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The complementary function can be written in terms of a special function of which
+            you are probably not aware called a
+            <em>Bessel function</em>.
+            Regularity implies that we pick the Bessel functions of the the first kind,
+            which are shown in <xref ref="fig-bessel-functions-first-kind"/>.
+          </p>
+          <p>
+            Examples of the solution for three different Womersley numbers are shown in
+            <xref ref="fig-womersley-example-1"/>, <xref ref="fig-womersley-example-10"/>
+            and <xref ref="fig-womersley-example-100"/>.
+            The solution for small Womersley numbers resembles the Poiseuille flow profile,
+            while that for large Womersley numbers is plug (uniform) flow across the core of the pipe
+            with boundary layers exhibiting rapid spatial oscillations.
+          </p>
+          <figure xml:id="fig-womersley-example-1">
+            <caption>Womersley flow profile for <m>\alpha=1</m>.</caption>
+            <image source="ch-chapter07-womersley1.gif" width="50%">
+              <!-- <image source="womersley1.gif"> -->
+              <shortdescription>Womersley <m>\alpha=1</m></shortdescription>
+            </image>
+          </figure>
+          <figure xml:id="fig-womersley-example-10">
+            <caption>Womersley flow profile for <m>\alpha=10</m>.</caption>
+            <image source="ch-chapter07-womersley10.gif" width="50%">
+              <!-- <image source="womersley10.gif"> -->
+              <shortdescription>Womersley <m>\alpha=10</m></shortdescription>
+            </image>
+          </figure>
+          <figure xml:id="fig-womersley-example-100">
+            <caption>Womersley flow profile for <m>\alpha=100</m>.</caption>
+            <image source="ch-chapter07-womersley100.gif" width="50%">
+              <!-- <image source="womersley100.gif"> -->
+              <shortdescription>Womersley <m>\alpha=100</m></shortdescription>
+            </image>
+          </figure>
+        </statement>
       </task>
     </exercise>
   </exercises>
