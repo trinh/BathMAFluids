@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -167,6 +167,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\br}{\boldsymbol{r}}
+\newcommand{\bt}{\boldsymbol{t}}
 \newcommand{\btheta}{\boldsymbol{\theta}}
 \newcommand{\bphi}{\boldsymbol{\phi}}
 \newcommand{\bz}{\boldsymbol{z}}
@@ -533,7 +534,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Solution 7.9.1.c.1"><a href="#ws-viscousflows-3-5-2" title="Copy heading and permalink for Solution 7.9.1.c.1" aria-label="Copy heading and permalink for Solution 7.9.1.c.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Task 7.9.1.c"><a href="#ws-viscousflows-3-5" title="Copy heading and permalink for Task 7.9.1.c" aria-label="Copy heading and permalink for Task 7.9.1.c">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-3-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="ws-viscousflows-3-6-1-1">a spermatozoon with tail length <span class="process-math">\(10^{-3}\)</span> swimming at 100 <span class="process-math">\(\mu\)</span>m/s in water.<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ws-viscousflows-3-6-1-1">a spermatozoon with tail length <span class="process-math">\(10^{-3}\)</span> m swimming at 100 <span class="process-math">\(\mu\)</span>m/s in water.<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="ws-viscousflows-3-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ws-viscousflows-3-6-2-1">
@@ -901,7 +902,64 @@ y=\frac{k\xi}{\sqrt{1+k^2}}+\frac{\eta}{\sqrt{1+k^2}}.
 <div class="autopermalink" data-description="Solution 7.9.4.b.1"><a href="#ps-stress-plate-4-3" title="Copy heading and permalink for Solution 7.9.4.b.1" aria-label="Copy heading and permalink for Solution 7.9.4.b.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Task 7.9.4.b"><a href="#ps-stress-plate-4" title="Copy heading and permalink for Task 7.9.4.b" aria-label="Copy heading and permalink for Task 7.9.4.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.4: Stress on a plate"><a href="#ps-stress-plate" title="Copy heading and permalink for Exercise 7.9.4: Stress on a plate" aria-label="Copy heading and permalink for Exercise 7.9.4: Stress on a plate">🔗</a></div></article><article class="exercise exercise-like" id="ps-stress-pressure"><h3 class="heading">
+<div class="autopermalink" data-description="Task 7.9.4.b"><a href="#ps-stress-plate-4" title="Copy heading and permalink for Task 7.9.4.b" aria-label="Copy heading and permalink for Task 7.9.4.b">🔗</a></div></article><article class="task exercise-like" id="ps-stress-plate-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ps-stress-plate-5-1-1">In this part, find the drag force on the plate by using the stress tensor, and check your answer against the previous part.<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ps-stress-plate-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ps-stress-plate-5-2-1">
+<div class="para">We have the normal vector to the plate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\bn}=\frac1{\sqrt{1+k^2}}(-k,1,0).
+\end{equation*}
+</div>
+<div class="para">The rate-of-strain tensor is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\be=\left(\begin{matrix}
+-\alpha k&amp;\frac12\alpha(1-k^2)&amp;0\\
+\frac12\alpha(1-k^2)&amp;\alpha k&amp;0\\
+0&amp;0&amp;0
+\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">Hence the stress tensor equals</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bsigma=-p\bI+2\mu\be
+=\left(\begin{matrix}
+-p-2\mu\alpha k&amp;\mu\alpha(1-k^2)&amp;0\\
+\mu\alpha(1-k^2)&amp;-p+2\mu\alpha k&amp;0\\
+0&amp;0&amp;-p
+\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">The stress on the surface is given by</div>
+<div class="displaymath process-math" id="ps-stress-plate-5-2-1-4">
+\begin{align*}
+\tau=&amp;\bsigma\hat{\bn}\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(kp+2\mu\alpha k^2+\mu\alpha(1-k^2),-\mu k\alpha(1-k^2)-p+2\mu\alpha k,0\right)\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(kp+\mu\alpha(1+k^2),-p+\mu k\alpha(1+k^2),0\right)\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(p(k,-1,0)+\mu\alpha(1+k^2)(1,k,0)\right)\\
+=&amp;-p\hat{\bn}+\mu\alpha(1+k^2)\hat{\bt},
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\hat{\bt}\)</span> is the unit tangential vector to the plate in the <span class="process-math">\((x,y)\)</span>-plane.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ps-stress-plate-5-2-2">
+<div class="para">This is the pressure pushing into the plate (direction <span class="process-math">\(-\hat{\bn}\)</span>) plus the drag <span class="process-math">\(\mu\alpha(1+k^2)\)</span> along the plate. Hence, the total drag force is the drag times the area:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu\alpha(1+k^2)
+\end{equation*}
+</div>
+<div class="para">which agrees with the previous answer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.4.c.1"><a href="#ps-stress-plate-5-2" title="Copy heading and permalink for Solution 7.9.4.c.1" aria-label="Copy heading and permalink for Solution 7.9.4.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.4.c"><a href="#ps-stress-plate-5" title="Copy heading and permalink for Task 7.9.4.c" aria-label="Copy heading and permalink for Task 7.9.4.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.4: Stress on a plate"><a href="#ps-stress-plate" title="Copy heading and permalink for Exercise 7.9.4: Stress on a plate" aria-label="Copy heading and permalink for Exercise 7.9.4: Stress on a plate">🔗</a></div></article><article class="exercise exercise-like" id="ps-stress-pressure"><h3 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stress on a surface due to the pressure.</span>
 </h3>
 <div class="introduction" id="ps-stress-pressure-2">
@@ -2142,7 +2200,7 @@ u_r=\frac{-aU}{r}.
 <div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-nabla^2u_r
+\nabla^2u_r
 =\frac1r\pd{}{r}\left(r\pd{u_r}{r}\right)
 =\pd{^2u_r}{r^2}+\frac1r\pd{u_r}{r}.
 \end{equation*}
@@ -2191,7 +2249,172 @@ nabla^2u_r
 </div>
 <div class="autopermalink" data-description="Solution 7.9.13.c.1"><a href="#ws-viscousflows-15-5-2" title="Copy heading and permalink for Solution 7.9.13.c.1" aria-label="Copy heading and permalink for Solution 7.9.13.c.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 7.9.13.c"><a href="#ws-viscousflows-15-5" title="Copy heading and permalink for Task 7.9.13.c" aria-label="Copy heading and permalink for Task 7.9.13.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.13: Flow outside a cylinder"><a href="#ws-viscousflows-15" title="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder" aria-label="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder">🔗</a></div></article><div class="autopermalink" data-description="Exercises 7.9: Practice Exercises"><a href="#ws-viscousflows" title="Copy heading and permalink for Exercises 7.9: Practice Exercises" aria-label="Copy heading and permalink for Exercises 7.9: Practice Exercises">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Task 7.9.13.c"><a href="#ws-viscousflows-15-5" title="Copy heading and permalink for Task 7.9.13.c" aria-label="Copy heading and permalink for Task 7.9.13.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.13: Flow outside a cylinder"><a href="#ws-viscousflows-15" title="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder" aria-label="Copy heading and permalink for Exercise 7.9.13: Flow outside a cylinder">🔗</a></div></article><article class="exercise exercise-like" id="ws-viscousflows-16"><h3 class="heading">
+<span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Oscillating flow in a pipe.</span>
+</h3>
+<div class="introduction" id="ws-viscousflows-16-2"><div class="para logical" id="ws-viscousflows-16-2-1">
+<div class="para">In this exercise, you will derive the equations for flow in a circular pipe, driven by an oscillating pressure gradient</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{p}{z}=-G_0\cos\omega t.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ws-viscousflows-16-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ws-viscousflows-16-3-1-1">
+<div class="para">In cylindrical polar coordinates <span class="process-math">\((r,\theta,z)\)</span> the continuity equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac1r\pd{(ru_r)}{r}+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
+\end{equation*}
+</div>
+<div class="para">and the Navier–Stokes equations are</div>
+<div class="displaymath process-math" id="ws-viscousflows-16-3-1-1-4">
+\begin{align*}
+\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+=&amp;-\pd{p}{r}
++\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)+\rho f_r,\\
+\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+=&amp;-\frac{1}{r}\pd{p}{\theta}
++\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)+\rho f_{\theta},\\
+\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+=&amp;-\pd{p}{z}
++\mu\nabla^2u_z+\rho f_z,
+\end{align*}
+</div>
+<div class="para">where the Laplacian is defined by its action on a function <span class="process-math">\(A(r,\theta,z)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla^2A=\frac1r\pd{}{r}\left(r\pd{A}{r}\right)+\frac1{r^2}\pd{^2A}{\theta^2}+\pd{^2A}{z^2},
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(\bf=(f_r,f_\theta,f_z)\)</span> represents the body forces per unit mass acting on the fluid.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ws-viscousflows-16-3-1-2">Stating your assumptions, use the continuity equation to show that <span class="process-math">\(u_r\)</span> is everywhere zero.<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-16-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-16-3-2-1">
+<div class="para">We assume that the flow is axisymmetric and fully developed. The continuity equation reduces to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac1r\pd{}{r}\left(ru_r\right)=0,
+\end{equation*}
+</div>
+<div class="para">which implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_r=\frac{A}{r}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is independent of <span class="process-math">\(r\text{.}\)</span> Regularity at <span class="process-math">\(r=0\)</span> implies that <span class="process-math">\(A=0\text{,}\)</span> and therefore <span class="process-math">\(u_r=0\)</span> everywhere.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.14.a.1"><a href="#ws-viscousflows-16-3-2" title="Copy heading and permalink for Solution 7.9.14.a.1" aria-label="Copy heading and permalink for Solution 7.9.14.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.14.a"><a href="#ws-viscousflows-16-3" title="Copy heading and permalink for Task 7.9.14.a" aria-label="Copy heading and permalink for Task 7.9.14.a">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-16-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ws-viscousflows-16-4-1-1">
+<div class="para">Simplify the Navier–Stokes equations, and use them to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_z=U(r)e^{\im\omega t}+{\mathrm{c.c.}},
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{^2U}{r^2}+\frac1r\dd{U}{r}-\frac{\im\rho\omega}{\mu} U=-\frac{G_0}{2\mu}.
+\end{equation*}
+</div>
+<div class="para">You may neglect gravity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-16-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-16-4-2-1">
+<div class="para">With the assumptions, the Navier–Stokes equations reduce to</div>
+<div class="displaymath process-math" id="ws-viscousflows-16-4-2-1-2">
+\begin{align*}
+0=&amp;-\pd{p}{r},\\
+0=&amp;0,\\
+\rho\im\omega Ue^{\im\omega t}+\mathrm{c.c.}
+=G_0\cos\omega t+\frac{\mu}{r}\dd{}{r}\left(rU'\right)e^{\im\omega t}+\mathrm{c.c.}.
+\end{align*}
+</div>
+<div class="para">There is thus one non-trivial component, and, taking the part proportional to <span class="process-math">\(e^{\im\omega t}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho\im\omega U=\frac12G_0+\frac{\mu}{r}\dd{}{r}\left(rU'\right),
+\end{equation*}
+</div>
+<div class="para">which, dividing by <span class="process-math">\(\mu\text{,}\)</span> is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\im\rho\omega}{\mu} U=\frac{G_0}{2\mu}+U''+\frac1rU'.
+\end{equation*}
+</div>
+<div class="para">Rearranging gives the result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.14.b.1"><a href="#ws-viscousflows-16-4-2" title="Copy heading and permalink for Solution 7.9.14.b.1" aria-label="Copy heading and permalink for Solution 7.9.14.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.14.b"><a href="#ws-viscousflows-16-4" title="Copy heading and permalink for Task 7.9.14.b" aria-label="Copy heading and permalink for Task 7.9.14.b">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-16-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="ws-viscousflows-16-5-1-1">
+<div class="para">Make the substitution <span class="process-math">\(s=e^{-\im\pi/4}\alpha r\text{,}\)</span> where <span class="process-math">\(\alpha=\sqrt{\rho\omega/\mu}\text{,}\)</span> to obtain the canonical form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{^2U}{s^2}+\frac1s\dd{U}{s}+U=-\frac{\im G_0}{2\rho\omega}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-16-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-16-5-2-1">
+<div class="para">With this substitution, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{}{r}=e^{-\im\pi/4}\alpha\dd{}{s},
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\im\alpha^2\dd{^2U}{s^2}-\im\alpha^2\frac1s\dd{U}{s}
+-\im\alpha^2U=-\frac{G_0}{2\mu},
+\end{equation*}
+</div>
+<div class="para">giving</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{^2U}{s^2}+\frac1s\dd{U}{s}+U=-\frac{\im G_0}{2\rho\omega}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.14.c.1"><a href="#ws-viscousflows-16-5-2" title="Copy heading and permalink for Solution 7.9.14.c.1" aria-label="Copy heading and permalink for Solution 7.9.14.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.14.c"><a href="#ws-viscousflows-16-5" title="Copy heading and permalink for Task 7.9.14.c" aria-label="Copy heading and permalink for Task 7.9.14.c">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-16-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ws-viscousflows-16-6-1-1">Find a particular integral to this equation, i.e. any solution that satisfies the inhomogeneous equation<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ws-viscousflows-16-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ws-viscousflows-16-6-2-1">
+<div class="para">For simplicity, seek a constant solution, and we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+U_{PI}=-\frac{\im G_0}{2\rho\omega}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.14.d.1"><a href="#ws-viscousflows-16-6-2" title="Copy heading and permalink for Solution 7.9.14.d.1" aria-label="Copy heading and permalink for Solution 7.9.14.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.14.d"><a href="#ws-viscousflows-16-6" title="Copy heading and permalink for Task 7.9.14.d" aria-label="Copy heading and permalink for Task 7.9.14.d">🔗</a></div></article><article class="task exercise-like" id="ws-viscousflows-16-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="ws-viscousflows-16-7-1-1">The complementary function can be written in terms of a special function of which you are probably not aware called a <em class="emphasis">Bessel function</em>. Regularity implies that we pick the Bessel functions of the the first kind, which are shown in <a href="sec-exact-solutions.html#fig-bessel-functions-first-kind" class="xref" data-knowl="./knowl/xref/fig-bessel-functions-first-kind.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.21">Figure 7.8.21</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ws-viscousflows-16-7-1-2">Examples of the solution for three different Womersley numbers are shown in <a href="ws-viscousflows.html#fig-womersley-example-1" class="xref" data-knowl="./knowl/xref/fig-womersley-example-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.9.6">Figure 7.9.6</a>, <a href="ws-viscousflows.html#fig-womersley-example-10" class="xref" data-knowl="./knowl/xref/fig-womersley-example-10.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.9.7">Figure 7.9.7</a> and <a href="ws-viscousflows.html#fig-womersley-example-100" class="xref" data-knowl="./knowl/xref/fig-womersley-example-100.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.9.8">Figure 7.9.8</a>. The solution for small Womersley numbers resembles the Poiseuille flow profile, while that for large Womersley numbers is plug (uniform) flow across the core of the pipe with boundary layers exhibiting rapid spatial oscillations.<div class="autopermalink" data-description="Paragraph"><a href="#ws-viscousflows-16-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-womersley-example-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter07-womersley1.gif" class="contained" alt="Womersley \(\alpha=1\)"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Womersley flow profile for <span class="process-math">\(\alpha=1\text{.}\)</span><div class="autopermalink" data-description="Figure 7.9.6"><a href="#fig-womersley-example-1" title="Copy heading and permalink for Figure 7.9.6" aria-label="Copy heading and permalink for Figure 7.9.6">🔗</a></div></figcaption></figure> <figure class="figure figure-like" id="fig-womersley-example-10"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter07-womersley10.gif" class="contained" alt="Womersley \(\alpha=10\)"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Womersley flow profile for <span class="process-math">\(\alpha=10\text{.}\)</span><div class="autopermalink" data-description="Figure 7.9.7"><a href="#fig-womersley-example-10" title="Copy heading and permalink for Figure 7.9.7" aria-label="Copy heading and permalink for Figure 7.9.7">🔗</a></div></figcaption></figure> <figure class="figure figure-like" id="fig-womersley-example-100"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter07-womersley100.gif" class="contained" alt="Womersley \(\alpha=100\)"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Womersley flow profile for <span class="process-math">\(\alpha=100\text{.}\)</span><div class="autopermalink" data-description="Figure 7.9.8"><a href="#fig-womersley-example-100" title="Copy heading and permalink for Figure 7.9.8" aria-label="Copy heading and permalink for Figure 7.9.8">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Task 7.9.14.e"><a href="#ws-viscousflows-16-7" title="Copy heading and permalink for Task 7.9.14.e" aria-label="Copy heading and permalink for Task 7.9.14.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.14: Oscillating flow in a pipe"><a href="#ws-viscousflows-16" title="Copy heading and permalink for Exercise 7.9.14: Oscillating flow in a pipe" aria-label="Copy heading and permalink for Exercise 7.9.14: Oscillating flow in a pipe">🔗</a></div></article><div class="autopermalink" data-description="Exercises 7.9: Practice Exercises"><a href="#ws-viscousflows" title="Copy heading and permalink for Exercises 7.9: Practice Exercises" aria-label="Copy heading and permalink for Exercises 7.9: Practice Exercises">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-exact-solutions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-viscousflows-12.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
