@@ -5821,17 +5821,23 @@
             and the Navier<ndash/>Stokes equations are
             <md>
               <mrow>
-                \rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+                &amp;\rho\left(\pd{u_r}{t}+u_r\pd{u_r}{r}+\frac{u_{\theta}}{r}\pd{u_r}{\theta}+u_z\pd{u_r}{z}-\frac{u_{\theta}^2}{r}\right)
+              </mrow>
+              <mrow>
                 =&amp;-\pd{p}{r}
                 +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\pd{u_\theta}{\theta}\right)+\rho f_r,
               </mrow>
               <mrow>
-                \rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+                &amp;\rho\left(\pd{u_{\theta}}{t}+u_r\pd{u_{\theta}}{r}+\frac{u_{\theta}}{r}\pd{u_{\theta}}{\theta}+u_z\pd{u_{\theta}}{z}+\frac{u_ru_{\theta}}{r}\right)
+              </mrow>
+              <mrow>
                 =&amp;-\frac{1}{r}\pd{p}{\theta}
                 +\mu\left(\nabla^2u_\theta+\frac{2}{r^2}\pd{u_r}{\theta}-\frac{u_{\theta}}{r^2}\right)+\rho f_{\theta},
               </mrow>
               <mrow>
-                \rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+                &amp;\rho\left(\pd{u_z}{t}+u_r\pd{u_z}{r}+\frac{u_{\theta}}{r}\pd{u_z}{\theta}+u_z\pd{u_z}{z}\right)
+              </mrow>
+              <mrow>
                 =&amp;-\pd{p}{z}
                 +\mu\nabla^2u_z+\rho f_z,
               </mrow>
