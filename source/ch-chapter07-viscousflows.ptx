@@ -5730,8 +5730,7 @@
           <p>
             Show that the Navier<ndash/>Stokes equations reduce to
             <me>
-              \pd{p}{r}
-              =-\left(\rho aU+2\mu\right)\frac{aU}{r^3}.
+              \pd{p}{r}=\frac{\rho a^2U^2}{r^3}.
             </me>
           </p>
         </statement>
@@ -5742,7 +5741,7 @@
             and <m>u_\theta=u_z=0</m>. The equations become:
             <md>
               <mrow>
-                &amp;\rho\left(u_r\pd{u_r}{r}-\frac{u_{\theta}^2}{r}\right)
+                &amp;\rho u_r\pd{u_r}{r}
               </mrow>
               <mrow>
                 =&amp;-\pd{p}{r}
@@ -5771,12 +5770,11 @@
             <me>
               \rho \left(-\frac{aU}{r}\right)\left(\frac{aU}{r^2}\right)
               =-\pd{p}{r}
-              +\mu\left(-\frac{2aU}{r^3}+\frac{aU}{r^3}-\frac{aU}{r^3}\right),
+              +\mu\left(-\frac{2aU}{r^3}+\frac{aU}{r^3}+\frac{aU}{r^3}\right),
             </me>
             which simplifies to
             <me>
-              \pd{p}{r}=-\frac{\rho a^2U^2}{r^3}-\frac{2\mu aU}{r^3}
-              =-\left(\rho aU+2\mu\right)\frac{aU}{r^3},
+              \pd{p}{r}=\frac{\rho a^2U^2}{r^3},
             </me>
             as required.
           </p>
@@ -5793,7 +5791,7 @@
             We solve the equation, applying the boundary condition as <m>r\rightarrow\infty</m>
             to find that
             <me>
-              \pd{p}{r}=p_0+\left(\rho aU+2\mu\right)\frac{aU}{2r^2},
+              \pd{p}{r}=p_0-\frac{\rho a^2U^2}{2r^2}.
             </me>
           </p>
         </solution>
