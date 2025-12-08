@@ -5741,9 +5741,7 @@
             and <m>u_\theta=u_z=0</m>. The equations become:
             <md>
               <mrow>
-                &amp;\rho u_r\pd{u_r}{r}
-              </mrow>
-              <mrow>
+                \rho u_r\pd{u_r}{r}
                 =&amp;-\pd{p}{r}
                 +\mu\left(\nabla^2u_r-\frac{u_r}{r^2}\right),
               </mrow>
