@@ -1610,14 +1610,14 @@
             \end{matrix}\right)V
           </mrow>
           <mrow>
-            =&amp;\left(\nabla p+\mu\left(\nabla\pd{u}{x}+\nabla\pd{v}{y}+\nabla\pd{w}{z}\right)
+            =&amp;\left(-\nabla p+\mu\left(\nabla\pd{u}{x}+\nabla\pd{v}{y}+\nabla\pd{w}{z}\right)
             +\mu\nabla^2\bu\right)V
           </mrow>
           <mrow>
-            =&amp;\left(\nabla p+\mu\nabla\nabla\cdot\bu+\mu\nabla^2\bu\right)V
+            =&amp;\left(-\nabla p+\mu\nabla\nabla\cdot\bu+\mu\nabla^2\bu\right)V
           </mrow>
           <mrow>
-            =&amp;\left(\nabla p+\mu\nabla^2\bu\right)V,
+            =&amp;\left(-\nabla p+\mu\nabla^2\bu\right)V,
           </mrow>
         </md>
         where the final equality was obtained using the incompressibility condition <m>\nabla\cdot\bu=0</m>
