@@ -442,6 +442,7 @@
           <mrow xml:id="eqn-identity-grad-polar">\nabla \phi \amp= \pd{\phi}{r}\be_r + \frac{1}{r} \pd{\phi}{\theta}\be_{\theta} </mrow>
           <mrow xml:id="eqn-identity-curlpolar">\nabla \times \bu \amp= \left(\frac{1}{r} \pd{(ru_\theta)}{r} - \frac{1}{r} \pd{u_r}{\theta}\right) \bk </mrow>
         </mdn>
+        You would always be given these formulae in an exam question if you needed them.
         </p>
       </subsection>
     </section>
