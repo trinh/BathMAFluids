@@ -593,11 +593,26 @@ p=p_0+Pz.
 0&amp;0&amp;\frac12\pd{u_z}{r}\\
 0&amp;0&amp;0\\
 \frac12\pd{u_z}{r}&amp;0&amp;0
+\end{matrix}\right)
+=\left(\begin{matrix}
+0&amp;0&amp;-\frac{Pr}{4\mu}\\
+0&amp;0&amp;0\\
+-\frac{Pr}{4\mu}&amp;0&amp;0
+\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">Hence,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
+\begin{equation*}
+\bsigma=\left(\begin{matrix}
+-p_0-Pz&amp;0&amp;-Pr/2\\
+0&amp;-p_0-Pz&amp;0\\
+-Pr/2&amp;0&amp;-p_0-Pz
 \end{matrix}\right).
 \end{equation*}
 </div>
 <div class="para">At <span class="process-math">\(r=a\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html" id="ch-viscousflows-12-3-8-2-2-7">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html" id="ch-viscousflows-12-3-8-2-2-8">
 \begin{align*}
 \tau=&amp;\bsigma\bn\\
 =&amp;\left(-p\bI+2\mu\be\right)(-\hat{\br})\\
@@ -612,13 +627,19 @@ p=p_0+Pz.
 \end{equation*}
 </div>
 <div class="para">and the axial component of the shear stress vector is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html" id="ch-viscousflows-12-3-8-2-2-9">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html" id="ch-viscousflows-12-3-8-2-2-10">
 \begin{gather*}
 \tau_z=-\mu\pd{u_z}{r}\\
 =-\mu\pd{}{r}\left[\frac{P}{4\mu}(a^2-r^2)\right]\\
 =-\mu\left(-\frac{P}{2\mu}r\right)\\
 =\frac{Pa}{2}
 \end{gather*}
+</div>
+<div class="para">The <span class="process-math">\(\theta\)</span>-component of the stress vector is zero:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
+\begin{equation*}
+\tau_\theta=0.
+\end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ch-viscousflows-12-3-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -852,7 +873,7 @@ u=-\Omega y,\quad v=\Omega x,\quad w=0.
 p(r)=p_0+\frac{\rho a^4\Omega^2}{2}\left(\frac1{a^2}-\frac1{r^2}\right),
 \end{equation*}
 </div>
-<div class="para">and therefore this component of the Navier–Stokes equation is also satisfied.</div>
+<div class="para">for some constant <span class="process-math">\(p_0\text{,}\)</span> and therefore (since we have been able to find a suitable pressure), this component of the Navier–Stokes equation is also satisfied.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ch-viscousflows-12-5-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch-viscousflows-12-5-5-2-4">
