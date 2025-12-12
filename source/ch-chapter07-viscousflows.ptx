@@ -6289,6 +6289,19 @@
               0&amp;0&amp;\frac12\pd{u_z}{r}\\
               0&amp;0&amp;0\\
               \frac12\pd{u_z}{r}&amp;0&amp;0
+              \end{matrix}\right)
+              =\left(\begin{matrix}
+              0&amp;0&amp;-\frac{Pr}{4\mu}\\
+              0&amp;0&amp;0\\
+              -\frac{Pr}{4\mu}&amp;0&amp;0
+              \end{matrix}\right).
+            </me>
+            Hence,
+            <me>
+              \bsigma=\left(\begin{matrix}
+              -p_0-Pz&amp;0&amp;-Pr/2\\
+              0&amp;-p_0-Pz&amp;0\\
+              -Pr/2&amp;0&amp;-p_0-Pz
               \end{matrix}\right).
             </me>
             At <m>r=a</m>, we have
@@ -6325,6 +6338,10 @@
                 =\frac{Pa}{2}
               </mrow>
             </md>
+            The <m>\theta</m>-component of the stress vector is zero:
+            <me>
+              \tau_\theta=0.
+            </me>
           </p>
         </solution>
       </task>
@@ -6636,7 +6653,8 @@
             <me>
               p(r)=p_0+\frac{\rho a^4\Omega^2}{2}\left(\frac1{a^2}-\frac1{r^2}\right),
             </me>
-            and therefore this component of the Navier<ndash/>Stokes equation is also satisfied.
+            for some constant <m>p_0</m>, and therefore (since we have been able to find a suitable pressure),
+            this component of the Navier<ndash/>Stokes equation is also satisfied.
           </p>
           <p>
             Hence the flow <m>\bu=(0,a^2\Omega/r,0)</m>
