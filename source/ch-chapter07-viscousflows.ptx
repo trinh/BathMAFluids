@@ -6151,14 +6151,14 @@
             Write down the boundary conditions to be applied.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The no-slip boundary conditions give
             <me>
               \left.\bu\right|_{r=a}=0.
             </me>
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6169,7 +6169,7 @@
             and also that the <m>\theta</m>-component of the velocity is zero.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Assuming axisymmetric flow implies there is no dependence on <m>\theta</m>
             and that the <m>\theta</m>-component of the velocity is zero <m>u_\theta=0</m>.
@@ -6178,7 +6178,7 @@
             there is no preferred location in this directions,
             and hence the velocity profile is independent of <m>z</m>.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6193,7 +6193,7 @@
             </me>
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have no <m>\theta</m>- or <m>z</m>-dependence, meaning that the continuity equation
             reduces to
@@ -6204,7 +6204,7 @@
             Since the cylinder is a solid boundary, we need <m>u_r=0</m> at <m>r=a</m>.
             Therefore, <m>A=0</m>, and so <m>u_r=0</m> everywhere.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6230,7 +6230,7 @@
             would not be smooth at <m>r=0</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             At <m>r=a</m>, we have
             <me>
@@ -6238,7 +6238,7 @@
             </me>
             which satisfies the no-slip boundary condition.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6249,7 +6249,7 @@
             what you already know.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             A larger pressure gradient <m>P</m> means a larger driving force for the flow,
             and hence a larger velocity.
@@ -6258,7 +6258,7 @@
             Therefore, it is to be expected that the velocity profile increases as <m>P</m> increases
             and decreases as <m>\mu</m> increases.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6273,7 +6273,7 @@
             <xref ref="eq-Newtonianstress-incompressible-vectorform"/>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The pressure at a general point is given by
             <me>
@@ -6326,7 +6326,7 @@
               </mrow>
             </md>
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6336,7 +6336,7 @@
             Explain why you would expect these directions.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The normal stress is due to the pressure in the fluid,
             which acts equally in all directions,
@@ -6347,7 +6347,7 @@
             and hence the fluid exerts a tangential force on the pipe wall
             in this direction.
           </p>
-        </solution>-->
+        </solution>
       </task>
     </exercise>
 
@@ -6370,7 +6370,7 @@
             in the case <m>\bOmega=\Omega\bk</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have
             <me>
@@ -6387,7 +6387,7 @@
               u=-\Omega y,\quad v=\Omega x,\quad w=0.
             </me>
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6395,7 +6395,7 @@
             Show that this flow is incompressible.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have
             <me>
@@ -6403,7 +6403,7 @@
             </me>
             and hence the flow is incompressible.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6411,7 +6411,7 @@
             Find the components of the stress tensor.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have
             <md>
@@ -6450,14 +6450,14 @@
               \bsigma
               =\left(\begin{matrix}
                 -p &amp; 0 &amp; 0 \\
-                0 &amp; 0 &amp; -p \\
+                0 &amp; -p &amp; 0 \\
                 0 &amp; 0 &amp; -p
               \end{matrix}\right),
               =-p\bI,
             </me>
             where <m>\bI</m> is the identity tensor.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6465,7 +6465,7 @@
             Without doing a calculation, explain why you would have expected this answer.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The result shows that the deviatoric stress tensor is zero,
             meaning there are no viscous stresses in this flow.
@@ -6475,7 +6475,7 @@
             In a solid body rotation, there is no relative motion between
             adjacent fluid particles, and hence no viscous stresses.
           </p>
-        </solution>-->
+        </solution>
       </task>
     </exercise>
 
@@ -6500,7 +6500,7 @@
             and <m>\bu=(u_r(r),u_\theta(r),0)</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The flow and pressure are steady since the cylinder rotates at constant angular velocity.
             The flow and pressure have rotational symmetry and therefore no dependence on <m>\theta</m>.
@@ -6509,7 +6509,7 @@
             The <m>z</m>-component of velocity is zero since there is no motion of the cylinder
             or pressure gradient in this direction.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6523,7 +6523,7 @@
             </me>
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Since there is no <m>\theta</m>- or <m>z</m>-dependence,
             the continuity equation reduces to
@@ -6534,7 +6534,7 @@
             Since the cylinder is a solid boundary, we need <m>u_r=0</m> at <m>r=a</m>.
             Therefore, <m>A=0</m>, and so <m>u_r=0</m> everywhere.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6580,7 +6580,7 @@
             satisfies the Navier<ndash/>Stokes equations and boundary conditions.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Since <m>u_r=u_z=0</m> and there is no <m>\theta</m>- or <m>z</m>-dependence,
             the Navier<ndash/>Stokes equations reduce to
@@ -6647,7 +6647,7 @@
             </me>
             which matches the velocity of the cylinder surface.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6657,7 +6657,7 @@
             explain qualitatively how you would expect the flow to evolve with time.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Initially, there will be a thin boundary layer of fluid close to the cylinder surface
             that starts to rotate with the cylinder due to the no-slip boundary condition.
@@ -6666,7 +6666,7 @@
             Eventually, the flow will reach a steady state,
             which is the flow found in the previous part.
           </p>
-        </solution>-->
+        </solution>
       </task>
     </exercise>
   </exercises>
