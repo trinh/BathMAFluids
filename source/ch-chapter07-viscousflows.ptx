@@ -3541,6 +3541,15 @@
         <m>r\rightarrow\infty</m>.
       </p>
     </remark>
+    <remark>
+      <p>
+        This solution is the same as the irrotational flow solution
+        (see <xref ref="subsec-irrot-sphere"/>).
+        Note that for any real fluid (i.e. one with viscosity),
+        this solution would only be seen for low Reynolds numbers,
+        despite the fact that inviscid fluids correspond to high Reynolds numbers.
+      </p>
+    </remark>
     </example>
     <example xml:id="example-womersley-flow">
       <title>Womersley flow (non-examinable)</title>
@@ -6722,13 +6731,17 @@
             Write down an expression for the Reynolds number <m>\mathrm{Re}</m> of the fluid.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             <me>
-              \mathrm{Re}=\frac{\rho Ua}{\mu}.
+              \mathrm{Re}=\frac{\rho Ua}{\mu},
             </me>
+            where <m>U</m> is the characteristic velocity,
+            <m>a</m> is the characteristic length scale (the radius of the sphere),
+            <m>\rho</m> is the density of the fluid,
+            and <m>\mu</m> is the shear viscosity of the fluid.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6737,6 +6750,31 @@
             from these pictures. Explain your reasoning.
           </p>
         </statement>
+        <solution>
+          <p>
+            <ul>
+              <li>
+                <p>
+                  In case (a), the flow is smooth and steady around the sphere,
+                  and the flow is also reversible (left<ndash/>right symmetry),
+                  indicating a low Reynolds number.                  
+                </p>
+              </li>
+              <li>
+                <p>
+                  In case (b), there is some disturbance in the flow behind the sphere,
+                  suggesting a moderate Reynolds number, of order 100.
+                </p>
+              </li>
+              <li>
+                <p>
+                  In case (c), there is a turbulent wake behind the sphere,
+                  indicating a high Reynolds number, <m>\mathrm{Re}\gg 10^3</m>.                  
+                </p>
+              </li>
+            </ul>
+          </p>
+        </solution>
       </task>
     </exercise>
     <exercise>
@@ -6753,11 +6791,11 @@
             Write down the boundary conditions at each plate.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have <m>u=v=w=0</m> at <m>y=\pm d</m>.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6766,7 +6804,7 @@
             to show that <m>v=0</m> everywhere.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Fully-developed flow implies the velocity components do not depend on <m>x</m>.
             Thus, the continuity equation reduces to
@@ -6777,7 +6815,7 @@
             The no-slip boundary conditions at each plate implies <m>v=0</m> there.
             Hence, <m>v=0</m> everywhere.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6790,7 +6828,7 @@
             where <m>G</m> is a constant that you should specify.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The three components of the Navier<ndash/>Stokes equations simplify to
             <md>
@@ -6823,7 +6861,7 @@
               \mu\pd{^2u}{y^2}=-G.
             </me>
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6831,7 +6869,7 @@
             Solve this applying the boundary conditions to find the flow profile.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             We have
             <me>
@@ -6854,7 +6892,7 @@
             </me>
             and <m>v=w=0</m>.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6864,7 +6902,7 @@
             keep the plate fixed in place?
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             For the plate at <m>y=k</m>,
             the <m>x</m>-component of the stress is
@@ -6896,7 +6934,7 @@
             and the force on the whole plate is <m>\mu GdA</m> in the <m>+x</m>-direction.
             Hence the tethering force to keep each plate fixed is <m>\mu GdA</m> in the <m>-x</m>-direction.
           </p>
-        </solution>-->
+        </solution>
       </task>
     </exercise>
     <exercise>
@@ -6936,7 +6974,7 @@
             <m>z</m> and <m>z+\de z</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <figure>
             <caption>Wavy-walled pipe <ndash/> planes to apply mass conservation.</caption>
             <image source="ch-chapter07-wavywalledtube-masscons.jpg" width="60%" />
@@ -6956,7 +6994,7 @@
             Note that throughout this equation, we neglect <m>\de z^2</m> and higher powers,
             as they are small.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6965,13 +7003,13 @@
             section of the inner cylinder between <m>z</m> and <m>z+\de z</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The area of the inner cylinder in this region is <m>2\pi a\de z</m>,
             and thus we have a volumetric flux <m>2\pi aU\de z</m> entering this region
             from the inner cylinder.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -6984,7 +7022,7 @@
             (but you do not need to do that in this question!).
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             Since the volume of the pipe between <m>z</m> and <m>z+\de z</m> is fixed,
             the total volumetric flux into this region equals the total volumetric flux out.
@@ -7010,7 +7048,7 @@
             </md>
             thus proving the result.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -7021,7 +7059,7 @@
             has length <m>L</m> and that <m>R_0</m> is a typical value of <m>R(z)</m>.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             A suitable lengthscale is <m>R_0</m>.
             Simplifying the differential equation for <m>u</m>, by neglecting variations in
@@ -7040,7 +7078,7 @@
               =\frac{2aLU\rho}{\mu R_0}.
             </me>
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -7050,11 +7088,11 @@
             You do not need to do a calculation.
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The Reynolds number would need to be large.
           </p>
-        </solution>-->
+        </solution>
       </task>
       <task>
         <statement>
@@ -7062,12 +7100,12 @@
             In reality, in a sentence, what would you observe in the flow near the outer wall?
           </p>
         </statement>
-        <!--<solution>
+        <solution>
           <p>
             The flow would need to satisfy the no-slip boundary condition at the outer cylinder
             and the velocity there would therefore tend to zero.
           </p>
-        </solution>-->
+        </solution>
       </task>
     </exercise>
   </exercises>
