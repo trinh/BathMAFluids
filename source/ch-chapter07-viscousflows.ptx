@@ -6873,22 +6873,22 @@
           <p>
             We have
             <me>
-              u=-\frac{G}{2}y^2+C_1y+C_2,
+              u=-\frac{G}{2\mu}y^2+C_1y+C_2,
             </me>
             where <m>C_1</m> and <m>C_2</m> are constants, and, applying the boundary condition
             at <m>y=d</m>,
             <me>
-              0=-\frac{G}{2}d^2+C_1d+C_2,
+              0=-\frac{G}{2\mu}d^2+C_1d+C_2,
             </me>
             and at <m>y=-d</m>,
             <me>
-              0=-\frac{G}{2}d^2-C_1d+C_2.
+              0=-\frac{G}{2\mu}d^2-C_1d+C_2.
             </me>
-            Subtracting these equations, we see that <m>C_1=0</m> and then we find <m>C_2=Gd^2/2</m>.
+            Subtracting these equations, we see that <m>C_1=0</m> and then we find <m>C_2=Gd^2/(2\mu)</m>.
             Hence
             <me>
-              u=-\frac{G}{2}y^2+\frac{Gd^2}{2}
-              =\frac{G}{2}\left(d^2-y^2\right),
+              u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
+              =\frac{G}{2\mu}\left(d^2-y^2\right),
             </me>
             and <m>v=w=0</m>.
           </p>
@@ -6914,7 +6914,7 @@
             and the <m>z</m>-component of the stress is zero since the flow is two-dimensional.
             The <m>x</m>-component equals
             <me>
-              \tau=-\mu (-Gd)=\mu Gd.
+              \tau=-\mu \left(-\frac{Gd}{\mu}\right)=Gd.
             </me>
           </p>
           <p>
@@ -6927,13 +6927,13 @@
             and the <m>z</m>-component of the stress is zero since the flow is two-dimensional.
             The <m>x</m>-component equals
             <me>
-              \tau=\mu (-G(-d))=\mu Gd.
+              \tau=\mu \left(-\frac{G(-d)}{\mu}\right)=Gd.
             </me>
           </p>
           <p>
-            Thus the stress at both plates is <m>\mu Gd</m> in the <m>+x</m>-direction,
-            and the force on the whole plate is <m>\mu GdA</m> in the <m>+x</m>-direction.
-            Hence the tethering force to keep each plate fixed is <m>\mu GdA</m> in the <m>-x</m>-direction.
+            Thus the stress at both plates is <m>Gd</m> in the <m>+x</m>-direction,
+            and the force on the whole plate is <m>GdA</m> in the <m>+x</m>-direction.
+            Hence the tethering force to keep each plate fixed is <m>GdA</m> in the <m>-x</m>-direction.
           </p>
         </solution>
       </task>
