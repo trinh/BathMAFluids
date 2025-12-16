@@ -6836,7 +6836,7 @@
                 &amp;0=-\pd{p}{x}+\mu\pd{^2u}{y^2},
               </mrow>
               <mrow>
-                &amp;0=-pd{p}{y},
+                &amp;0=-\pd{p}{y},
               </mrow>
               <mrow>
                 &amp;0=0.
