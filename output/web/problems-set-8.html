@@ -102,14 +102,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.1';
+eBookConfig.runestone_version = '7.11.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.49eb29f446982553.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.49eb29f446982553.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.8afc9108798b9170.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -668,6 +668,8 @@ u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
 </div>
 <div class="para" id="problems-set-8-4-7-2-3">Thus the stress at both plates is <span class="process-math">\(Gd\)</span> in the <span class="process-math">\(+x\)</span>-direction, and the force on the whole plate is <span class="process-math">\(GdA\)</span> in the <span class="process-math">\(+x\)</span>-direction. Hence the tethering force to keep each plate fixed is <span class="process-math">\(GdA\)</span> in the <span class="process-math">\(-x\)</span>-direction.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-4-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="problems-set-8-4-7-2-4">Note that it is very easy to make a sign error on this type of question. I would therefore recommend always reflecting on your answer to see if the direction you get is what you’d expect from the physics. A viscous fluid tries to drag the surface along with the flow, and so the force due to the shear stress is sometimes called the <em class="emphasis">drag force</em>. Thus, the tethering force must oppose this drag force, which is what we found.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-4-7-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Solution 7.11.2.e.1"><a href="#problems-set-8-4-7-2" title="Copy heading and permalink for Solution 7.11.2.e.1" aria-label="Copy heading and permalink for Solution 7.11.2.e.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Task 7.11.2.e"><a href="#problems-set-8-4-7" title="Copy heading and permalink for Task 7.11.2.e" aria-label="Copy heading and permalink for Task 7.11.2.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.11.2: Channel flow"><a href="#problems-set-8-4" title="Copy heading and permalink for Exercise 7.11.2: Channel flow" aria-label="Copy heading and permalink for Exercise 7.11.2: Channel flow">🔗</a></div></article><article class="exercise exercise-like" id="problems-set-8-5"><h3 class="heading">
@@ -694,7 +696,7 @@ u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
 \pi (R^2-a^2)u
 \end{equation*}
 </div>
-<div class="para">and that out of the right-hand surfae equals</div>
+<div class="para">and that out of the right-hand surface equals</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \pi \left((R+\de R)^2-a^2\right)(u+\de u)
@@ -722,8 +724,28 @@ u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
 \dd{u}{z}=\frac{2(aU-RR'u)}{R^2-a^2}.
 \end{equation*}
 </div>
-<div class="para">This equation can be solved numerically to find <span class="process-math">\(u\)</span> (but you do not need to do that in this question!).</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="problems-set-8-5-5-1-2">
+<div class="para">Note that you can actually solve this equation by instead considering the volume between <span class="process-math">\(z=0\)</span> and <span class="process-math">\(z=z_0\text{.}\)</span> This volume has four surfaces: the inner cylinder surface <span class="process-math">\(r=a\text{,}\)</span> the outer cylinder surface <span class="process-math">\(r=R(z)\text{,}\)</span> and the two cross-sectional surfaces at <span class="process-math">\(z=0\)</span> and <span class="process-math">\(z=z_0\text{.}\)</span> The inner cylinder surface gives a volume flux in of <span class="process-math">\(2\pi aUz_0\text{,}\)</span> the outer cylinder surface gives no volume flux, the surface <span class="process-math">\(z=0\)</span> gives a volume flux in of <span class="process-math">\(\pi(R(0)^2-a^2)u(0)\text{,}\)</span> and the surface <span class="process-math">\(z=z_0\)</span> gives a volume flux out of <span class="process-math">\(\pi(R(z_0)^2-a^2)u(z_0)\text{.}\)</span> Equating total volume flux in and volume flux out gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2\pi aUz_0+\pi(R(0)^2-a^2)u(0)=\pi(R(z_0)^2-a^2)u(z_0),
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(z_0)=\frac{2aUz_0+(R(0)^2-a^2)u(0)}{R(z_0)^2-a^2}.
+\end{equation*}
+</div>
+<div class="para">This is true for all <span class="process-math">\(z_0\text{,}\)</span> hence (setting <span class="process-math">\(z=z_0\)</span>)</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u=\frac{2aUz+(R(0)^2-a^2)u(0)}{R(z)^2-a^2}.
+\end{equation*}
+</div>
+<div class="para">This was not asked for in this question.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="problems-set-8-5-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="problems-set-8-5-5-2-1">Since the volume of the pipe between <span class="process-math">\(z\)</span> and <span class="process-math">\(z+\de z\)</span> is fixed, the total volumetric flux into this region equals the total volumetric flux out.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -747,7 +769,7 @@ u' = \frac{2(aU-RR'u)}{R^2-a^2},
 <div class="autopermalink" data-description="Solution 7.11.3.c.1"><a href="#problems-set-8-5-5-2" title="Copy heading and permalink for Solution 7.11.3.c.1" aria-label="Copy heading and permalink for Solution 7.11.3.c.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Task 7.11.3.c"><a href="#problems-set-8-5-5" title="Copy heading and permalink for Task 7.11.3.c" aria-label="Copy heading and permalink for Task 7.11.3.c">🔗</a></div></article><article class="task exercise-like" id="problems-set-8-5-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="problems-set-8-5-6-1-1">Write down an expression for the Reynolds number of this flow, explaining your reasoning. You may assume that the pipe has length <span class="process-math">\(L\)</span> and that <span class="process-math">\(R_0\)</span> is a typical value of <span class="process-math">\(R(z)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="problems-set-8-5-6-1-1">Write down an expression for the Reynolds number of this flow, explaining your reasoning. You may assume that the pipe has length <span class="process-math">\(L\)</span> and that <span class="process-math">\(R_0\)</span> is a typical value of <span class="process-math">\(R(z)\text{.}\)</span> Your answer should be in terms of the problem parameters <span class="process-math">\(\rho\text{,}\)</span> <span class="process-math">\(\mu\text{,}\)</span> <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(L\)</span> and <span class="process-math">\(R_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="problems-set-8-5-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="problems-set-8-5-6-2-1">
@@ -772,13 +794,19 @@ u' = \frac{2(aU-RR'u)}{R^2-a^2},
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="problems-set-8-5-6-2-2">Many students did not find an expression for the velocity scale, and just left it as <span class="process-math">\(u(z)\)</span> or similar. This would mean that we do not have an expression for the Reynolds number in terms of the problem parameters. Also, many students did not approximate <span class="process-math">\(R-a\)</span> as <span class="process-math">\(R_0\text{,}\)</span> which simplifies the expression (some did get <span class="process-math">\(R_0-a\text{,}\)</span> but you can go further than this).<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="problems-set-8-5-6-2-3">I have added a final sentence to the question to clarify that the answer should be in terms of the problem parameters as very few students attempted to find an order of magnitude for <span class="process-math">\(u(z)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Solution 7.11.3.d.1"><a href="#problems-set-8-5-6-2" title="Copy heading and permalink for Solution 7.11.3.d.1" aria-label="Copy heading and permalink for Solution 7.11.3.d.1">🔗</a></div>
 </div></details></div>
 <div class="autopermalink" data-description="Task 7.11.3.d"><a href="#problems-set-8-5-6" title="Copy heading and permalink for Task 7.11.3.d" aria-label="Copy heading and permalink for Task 7.11.3.d">🔗</a></div></article><article class="task exercise-like" id="problems-set-8-5-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="problems-set-8-5-7-1-1">State in a sentence the conditions under which it might be appropriate to assume that the velocity is uniform across the cross section. You do not need to do a calculation.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="problems-set-8-5-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="problems-set-8-5-7-2-1">The Reynolds number would need to be large.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="problems-set-8-5-7-2-1">The Reynolds number would need to be large (but not so large that the flow becomes turbulent).<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="problems-set-8-5-7-2-2">In the limit of large Reynolds number, we would recover the Euler equation from the Navier–Stokes equation (see <a href="ws-viscousflows.html#ex-limits-low-high-Reynolds" class="xref" data-knowl="./knowl/xref/ex-limits-low-high-Reynolds.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.9.11: Limits of low and high Reynolds number">Exercise 7.9.11</a>). In this limit we only need a no-penetration condition (<span class="process-math">\(\bu\cdot\hat{\bn}=0\)</span>) and not the full no-slip conditions (<span class="process-math">\(\bu=\bzero\)</span>), and so in this case uniform flow is possible.<div class="autopermalink" data-description="Paragraph"><a href="#problems-set-8-5-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 7.11.3.e.1"><a href="#problems-set-8-5-7-2" title="Copy heading and permalink for Solution 7.11.3.e.1" aria-label="Copy heading and permalink for Solution 7.11.3.e.1">🔗</a></div>
 </div></details></div>

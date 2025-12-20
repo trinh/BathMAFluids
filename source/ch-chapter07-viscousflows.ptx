@@ -6935,6 +6935,15 @@
             and the force on the whole plate is <m>GdA</m> in the <m>+x</m>-direction.
             Hence the tethering force to keep each plate fixed is <m>GdA</m> in the <m>-x</m>-direction.
           </p>
+          <p>
+            Note that it is very easy to make a sign error on this type of question.
+            I would therefore recommend always reflecting on your answer to see if the
+            direction you get is what you'd expect from the physics.
+            A viscous fluid tries to drag the surface along with the flow,
+            and so the force due to the shear stress is sometimes called the <em>drag force</em>.
+            Thus, the tethering force must oppose this drag force,
+            which is what we found.
+          </p>
         </solution>
       </task>
     </exercise>
@@ -6986,7 +6995,7 @@
             <me>
               \pi (R^2-a^2)u
             </me>
-            and that out of the right-hand surfae equals
+            and that out of the right-hand surface equals
             <me>
               \pi \left((R+\de R)^2-a^2\right)(u+\de u)
               =\pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),
@@ -7019,8 +7028,32 @@
             <me>
               \dd{u}{z}=\frac{2(aU-RR'u)}{R^2-a^2}.
             </me>
-            This equation can be solved numerically to find <m>u</m>
-            (but you do not need to do that in this question!).
+          </p>
+          <p>
+            Note that you can actually solve this equation by instead
+            considering the volume between <m>z=0</m> and <m>z=z_0</m>.
+            This volume has four surfaces: the inner cylinder surface <m>r=a</m>,
+            the outer cylinder surface <m>r=R(z)</m>,
+            and the two cross-sectional surfaces at <m>z=0</m> and <m>z=z_0</m>.
+            The inner cylinder surface gives a volume flux in of <m>2\pi aUz_0</m>,
+            the outer cylinder surface gives no volume flux,
+            the surface <m>z=0</m> gives a volume flux in of
+            <m>\pi(R(0)^2-a^2)u(0)</m>,
+            and the surface <m>z=z_0</m> gives a volume flux out of
+            <m>\pi(R(z_0)^2-a^2)u(z_0)</m>.
+            Equating total volume flux in and volume flux out gives
+            <me>
+              2\pi aUz_0+\pi(R(0)^2-a^2)u(0)=\pi(R(z_0)^2-a^2)u(z_0),
+            </me>
+            and hence
+            <me>
+              u(z_0)=\frac{2aUz_0+(R(0)^2-a^2)u(0)}{R(z_0)^2-a^2}.
+            </me>
+            This is true for all <m>z_0</m>, hence (setting <m>z=z_0</m>)
+            <me>
+              u=\frac{2aUz+(R(0)^2-a^2)u(0)}{R(z)^2-a^2}.
+            </me>
+            This was not asked for in this question.
           </p>
         </statement>
         <solution>
@@ -7058,6 +7091,8 @@
             explaining your reasoning.
             You may assume that the pipe
             has length <m>L</m> and that <m>R_0</m> is a typical value of <m>R(z)</m>.
+            Your answer should be in terms of the problem parameters
+            <m>\rho</m>, <m>\mu</m>, <m>a</m>, <m>U</m>, <m>L</m> and <m>R_0</m>.
           </p>
         </statement>
         <solution>
@@ -7079,6 +7114,17 @@
               =\frac{2aLU\rho}{\mu R_0}.
             </me>
           </p>
+          <p>
+            Many students did not find an expression for the velocity scale, and just left it as <m>u(z)</m> or similar.
+            This would mean that we do not have an expression for the Reynolds number in terms of the problem parameters.
+            Also, many students did not approximate <m>R-a</m> as <m>R_0</m>,
+            which simplifies the expression (some did get <m>R_0-a</m>, but you can go further than this).
+          </p>
+          <p>
+            I have added a final sentence to the question to clarify
+            that the answer should be in terms of the problem parameters as very few students attempted to find
+            an order of magnitude for <m>u(z)</m>.
+          </p>
         </solution>
       </task>
       <task>
@@ -7091,7 +7137,15 @@
         </statement>
         <solution>
           <p>
-            The Reynolds number would need to be large.
+            The Reynolds number would need to be large (but not so large that the flow becomes turbulent).
+          </p>
+          <p>
+             In the limit of large Reynolds number,
+             we would recover the Euler equation from the Navier<ndash/>Stokes equation
+             (see <xref ref="ex-limits-low-high-Reynolds"/>).
+             In this limit we only need a no-penetration condition (<m>\bu\cdot\hat{\bn}=0</m>)
+             and not the full no-slip conditions (<m>\bu=\bzero</m>),
+             and so in this case uniform flow is possible.
           </p>
         </solution>
       </task>
