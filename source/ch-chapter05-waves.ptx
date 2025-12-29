@@ -807,7 +807,7 @@
         </me>
         it is prudent to take the choice of <m>F(t)</m> so that the inertial term is removed. Specifically, if we take 
         <me>
-          F(t) = \frac{U^2}{2} + p_\text{atm}{\rho}, 
+          F(t) = \frac{U^2}{2} + \frac{p_\text{atm}}{\rho}, 
         </me>
         this would remove the leading term from inertia.
       </p>
@@ -819,8 +819,9 @@
           </me>
          so now Bernoulli's equation yields (dropping hats):
          <me>
-          \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = \eta(x, t). 
+          \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = 0,
          </me>
+         where we have placed the boundary condition on <m>y = 0</m> as standard.
         </p>
         </solution>
       </task>

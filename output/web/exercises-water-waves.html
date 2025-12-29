@@ -167,7 +167,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\br}{\boldsymbol{r}}
-\newcommand{\bt}{\boldsymbol{t}}
+\renewcommand{\bt}{\boldsymbol{t}}
 \newcommand{\btheta}{\boldsymbol{\theta}}
 \newcommand{\bphi}{\boldsymbol{\phi}}
 \newcommand{\bz}{\boldsymbol{z}}
@@ -752,7 +752,7 @@ u = U + \pd{\phi}{x}, \qquad v = \pd{\phi}{y},
 <div class="para">it is prudent to take the choice of <span class="process-math">\(F(t)\)</span> so that the inertial term is removed. Specifically, if we take</div>
 <div class="displaymath process-math">
 \begin{equation*}
-F(t) = \frac{U^2}{2} + p_\text{atm}{\rho}, 
+F(t) = \frac{U^2}{2} + \frac{p_\text{atm}}{\rho}, 
 \end{equation*}
 </div>
 <div class="para">this would remove the leading term from inertia.</div>
@@ -768,9 +768,10 @@ F(t) = \frac{U^2}{2} + p_\text{atm}{\rho},
 <div class="para">so now Bernoulli’s equation yields (dropping hats):</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = \eta(x, t). 
+\pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = 0,
 \end{equation*}
 </div>
+<div class="para">where we have placed the boundary condition on <span class="process-math">\(y = 0\)</span> as standard.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 5.5.3.b.1"><a href="#ex-waterwaves-current-4-2" title="Copy heading and permalink for Solution 5.5.3.b.1" aria-label="Copy heading and permalink for Solution 5.5.3.b.1">🔗</a></div>

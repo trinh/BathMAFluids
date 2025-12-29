@@ -61,7 +61,7 @@
     \newcommand{\bj}{\boldsymbol{j}}
     \newcommand{\bk}{\boldsymbol{k}}
     \newcommand{\br}{\boldsymbol{r}}
-    \newcommand{\bt}{\boldsymbol{t}}
+    \renewcommand{\bt}{\boldsymbol{t}}
     \newcommand{\btheta}{\boldsymbol{\theta}}
     \newcommand{\bphi}{\boldsymbol{\phi}}
     \newcommand{\bz}{\boldsymbol{z}}
