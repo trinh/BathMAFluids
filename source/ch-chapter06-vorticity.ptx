@@ -1583,14 +1583,34 @@
   </section>
 
   <exercises xml:id="ws-vorticity">
-    <!--<introduction>
-      <warning>
+    <introduction>
+      <note>
         <p>
-          We look to complete worksheets in the week prior to the content being delivered.
-          Once this is done, this disclaimer message will be removed.
+          **Edits w/c 1 Dec**: we have included some more commentary in the solutions, and are more precise at the start of questions which questions are examinable and which ones are more for deepening your knowledge of the material. Some additional notes have been added into the solutions based on the submitted problem sets of students. 
         </p>
-      </warning>
-    </introduction>-->
+
+        <p>
+          We would suggest the following priorities: 
+          <ol>
+            <li>
+              <p>
+                Q1, 2, 7, 8: these were hinted at in lectures. 
+              </p>
+            </li>
+            <li>
+              <p>
+                Q6: good to do as this is connected to previous material. 
+              </p>
+            </li>
+            <li>
+              <p>
+                Q3--Q5: not examinable
+              </p>
+            </li>
+          </ol>
+        </p>
+      </note>
+    </introduction>
 
     <exercise xml:id="ex-kelvin-circulation-theorem">
       <title>Kelvin’s Circulation Theorem</title>
@@ -1786,7 +1806,7 @@
     </exercise>
 
     <exercise xml:id="ex-line-integral-evolution">
-      <title>Evolution of a line integral</title>
+      <title>Evolution of a line integral (non-examinable)</title>
       <statement>
         <p>
           (Based on Exercise 5.6 in <xref ref="ref-acheson"/>).
@@ -1991,7 +2011,7 @@
     </exercise>
 
     <exercise xml:id="ex-axisymmetric-flow">
-      <title>Axisymmetric flow</title>
+      <title>Axisymmetric flow (non-examinable)</title>
       <statement>
         <p>
           <em>Please feel free to omit this problem as we have not covered the material.</em>
@@ -2117,7 +2137,7 @@
     </exercise>
 
     <exercise xml:id="ex-two-vortices">
-      <title>Two vortices</title>
+      <title>Two vortices (non-examinable) </title>
       <statement>
         <p>
           Two vortices, of strengths <m>\Gamma_1</m> and <m>\Gamma_2</m>,
@@ -2226,7 +2246,7 @@
     </exercise>
 
     <exercise xml:id="ex-obstacle">
-      <title>Obstacle</title>
+      <title>Flow past a circle with a vortex</title>
       <statement>
         <p>
           Fluid occupies the region <m>x^2+y^2>a^2</m> outside a circular obstacle
@@ -2238,18 +2258,21 @@
           the obstacle).
         </p>
         <p>
-          Explain why the vortex will move in a circle of radius <m>b</m>
-          with angular velocity of magnitude
+          If the vortex moves in a circle of radius <m>b</m>, show that the angular velocity is of magnitude
           <me>
             \Omega=\frac{\Gamma a^2}{2\pi b^2(b^2-a^2)}.
           </me>
         </p>
+
+        <p>
+          It is helpful to note that the relationship between instantaneous (linear) velocity, say <m>v_\perp</m> and angular velocity is <m>\Omega = v_\perp/R</m> for an object rotating around a circle of radius <m>R</m>. 
+        </p>
       </statement>
       <hint>
         <p>
-          The complex potential associated with a vortex in isolation at the point <m>c</m> is
+          The complex potential associated with a vortex in isolation at the point <m>b</m> is
           <me>
-            f(z)=-\frac{\im\Gamma}{2\pi}\log(z-c).
+            f(z)=-\frac{\im\Gamma}{2\pi}\log(z-b).
           </me>
           The Milne-Thomson Circle Theorem <xref ref="thm-circle-theorem"/> states that,
           for a complex potential <m>g(z)</m>, the function
@@ -2312,15 +2335,22 @@
           <me>
             \frac{\Gamma}{2\pi}\left(\frac{b}{a^2-b^2}+\frac1{b}\right)
           </me>
-          upwards. By symmetry,
+          upwards.</p>
+          
+          <p>By symmetry,
           the vortex moves in a circle of radius <m>b</m> about the origin
-          with speed equal to this value, giving an angular velocity of
+          with speed equal to this value. We thus divide the above by the radius <m>b</m>, giving an angular velocity of
           <me>
             \frac{\Gamma}{2\pi}\left(\frac1{a^2-b^2}+\frac1{b^2}\right)
             =\frac{\Gamma a^2}{2\pi b^2(a^2-b^2)}+\frac1{b^2},
           </me>
           as required.
         </p>
+
+        <note>
+          <p>Why is angular velocity equal to linear velocity divided by the radius? Consider a particle given by <m>z(t) = b\e^{\im\theta(t)}.</m> Then <m>|\dot{z}| = b \dot{\theta}</m>. Hence <m>\dot{\theta}</m> (or the angular velocity) is equal to the magnitude of the (linear) velocity divided by <m>b</m>.</p>
+        </note>
+
       </solution>
     </exercise>
 
@@ -2406,10 +2436,10 @@
     </exercise>
 
     <exercise xml:id="ex-channel">
-      <title>Channel flow</title>
+      <title>Channel flow (Hard)</title>
       <statement>
         <p>
-          [Harder] Fluid occupies the semi-infinite channel
+          Fluid occupies the semi-infinite channel
           <m>\{z : \Re z > 0,−a &lt; \Im z &lt; a\}</m>.
           Show that the flow induced by a line vortex of strength
           <m>\Gamma>0</m> at the point <m>z = d \in\mathbb{R}^+</m>
