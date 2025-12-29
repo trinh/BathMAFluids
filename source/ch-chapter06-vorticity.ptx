@@ -2342,7 +2342,12 @@
           with speed equal to this value. We thus divide the above by the radius <m>b</m>, giving an angular velocity of
           <me>
             \frac{\Gamma}{2\pi}\left(\frac1{a^2-b^2}+\frac1{b^2}\right)
-            =\frac{\Gamma a^2}{2\pi b^2(a^2-b^2)}+\frac1{b^2},
+            =\frac{\Gamma a^2}{2\pi b^2(a^2-b^2)}.
+          </me>
+          This is negative, so the line vortex goes clockwise around the origin
+          with angular velocity
+          <me>
+            \frac{\Gamma a^2}{2\pi b^2(b^2-a^2)}.
           </me>
           as required.
         </p>

@@ -130,6 +130,63 @@ y=\frac{k\xi}{\sqrt{1+k^2}}+\frac{\eta}{\sqrt{1+k^2}}.
 <div class="autopermalink" data-description="Solution 7.9.4.b.1"><a href="#ps-stress-plate-4-3" title="Copy heading and permalink for Solution 7.9.4.b.1" aria-label="Copy heading and permalink for Solution 7.9.4.b.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Task 7.9.4.b"><a href="#ps-stress-plate-4" title="Copy heading and permalink for Task 7.9.4.b" aria-label="Copy heading and permalink for Task 7.9.4.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.4: Stress on a plate"><a href="#ps-stress-plate" title="Copy heading and permalink for Exercise 7.9.4: Stress on a plate" aria-label="Copy heading and permalink for Exercise 7.9.4: Stress on a plate">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-viscousflows.html#ps-stress-plate">in-context</a></span>
+<div class="autopermalink" data-description="Task 7.9.4.b"><a href="#ps-stress-plate-4" title="Copy heading and permalink for Task 7.9.4.b" aria-label="Copy heading and permalink for Task 7.9.4.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">In this part, find the drag force on the plate by using the stress tensor, and check your answer against the previous part.<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We have the normal vector to the plate</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat{\bn}=\frac1{\sqrt{1+k^2}}(-k,1,0).
+\end{equation*}
+</div>
+<div class="para">The rate-of-strain tensor is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\be=\left(\begin{matrix}
+-\alpha k&amp;\frac12\alpha(1-k^2)&amp;0\\
+\frac12\alpha(1-k^2)&amp;\alpha k&amp;0\\
+0&amp;0&amp;0
+\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">Hence the stress tensor equals</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\bsigma=-p\bI+2\mu\be
+=\left(\begin{matrix}
+-p-2\mu\alpha k&amp;\mu\alpha(1-k^2)&amp;0\\
+\mu\alpha(1-k^2)&amp;-p+2\mu\alpha k&amp;0\\
+0&amp;0&amp;-p
+\end{matrix}\right).
+\end{equation*}
+</div>
+<div class="para">The stress on the surface is given by</div>
+<div class="displaymath process-math">
+\begin{align*}
+\tau=&amp;\bsigma\hat{\bn}\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(kp+2\mu\alpha k^2+\mu\alpha(1-k^2),-\mu k\alpha(1-k^2)-p+2\mu\alpha k,0\right)\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(kp+\mu\alpha(1+k^2),-p+\mu k\alpha(1+k^2),0\right)\\
+=&amp;\frac1{\sqrt{1+k^2}}\left(p(k,-1,0)+\mu\alpha(1+k^2)(1,k,0)\right)\\
+=&amp;-p\hat{\bn}+\mu\alpha(1+k^2)\hat{\bt},
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\hat{\bt}\)</span> is the unit tangential vector to the plate in the <span class="process-math">\((x,y)\)</span>-plane.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">This is the pressure pushing into the plate (direction <span class="process-math">\(-\hat{\bn}\)</span>) plus the drag <span class="process-math">\(\mu\alpha(1+k^2)\)</span> along the plate. Hence, the total drag force is the drag times the area:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mu\alpha(1+k^2)
+\end{equation*}
+</div>
+<div class="para">which agrees with the previous answer.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ps-stress-plate-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.9.4.c.1"><a href="#ps-stress-plate-5-2" title="Copy heading and permalink for Solution 7.9.4.c.1" aria-label="Copy heading and permalink for Solution 7.9.4.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.9.4.c"><a href="#ps-stress-plate-5" title="Copy heading and permalink for Task 7.9.4.c" aria-label="Copy heading and permalink for Task 7.9.4.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.9.4: Stress on a plate"><a href="#ps-stress-plate" title="Copy heading and permalink for Exercise 7.9.4: Stress on a plate" aria-label="Copy heading and permalink for Exercise 7.9.4: Stress on a plate">🔗</a></div></article><span class="incontext"><a class="internal" href="ws-viscousflows.html#ps-stress-plate">in-context</a></span>
 </body>
 </html>

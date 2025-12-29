@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.10.0';
+eBookConfig.runestone_version = '7.11.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.49eb29f446982553.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.8afc9108798b9170.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -167,6 +167,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\bj}{\boldsymbol{j}}
 \newcommand{\bk}{\boldsymbol{k}}
 \newcommand{\br}{\boldsymbol{r}}
+\newcommand{\bt}{\boldsymbol{t}}
 \newcommand{\btheta}{\boldsymbol{\theta}}
 \newcommand{\bphi}{\boldsymbol{\phi}}
 \newcommand{\bz}{\boldsymbol{z}}
@@ -553,7 +554,9 @@ p=&amp;p_0+\epsilon p_1+\epsilon^2p_2+\epsilon^3p_3+\dots,
 </li>
 <li id="subsec-methods-analytical-4-3-3">
 <div class="para" id="subsec-methods-analytical-4-3-3-1">
-<em class="emphasis">Independence of a coordinate:</em> For example <span class="process-math">\(\partial/\partial x=0\)</span> if nothing in the problem depends on <span class="process-math">\(x\)</span> and there is no reason to assume that anything should depend on <span class="process-math">\(x\text{.}\)</span> We used this for the Stokes boundary layer problem <a href="sec-exact-solutions.html#example-stokes-boundary-layer" class="xref" data-knowl="./knowl/xref/example-stokes-boundary-layer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.12: Stokes boundary layer">Example 7.8.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Independence of a coordinate:</em> For example <span class="process-math">\(\partial/\partial x=0\)</span> if nothing in the problem depends on <span class="process-math">\(x\)</span> and there is no reason to assume that anything should depend on <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-methods-analytical-4-3-3-2">We used this for the Stokes boundary layer problem <a href="sec-exact-solutions.html#example-stokes-boundary-layer" class="xref" data-knowl="./knowl/xref/example-stokes-boundary-layer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.12: Stokes boundary layer">Example 7.8.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#subsec-methods-analytical-4-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
@@ -582,18 +585,22 @@ p=&amp;p_0+\epsilon p_1+\epsilon^2p_2+\epsilon^3p_3+\dots,
 <em class="emphasis">Steady flow:</em> <span class="process-math">\(\partial u/\partial t=\partial v/\partial t
 =\partial w/\partial t=\partial p/\partial t=0\)</span> (indeed <span class="process-math">\(\partial/\partial t=0\)</span> for any variable).<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="subsec-methods-analytical-4-3-7-2">Many examples that we cover make this assumption.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Item"><a href="#subsec-methods-analytical-4-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-methods-analytical-4-3-8">
 <div class="para" id="subsec-methods-analytical-4-3-8-1">
 <em class="emphasis">Fully developed flow:</em> <span class="process-math">\(\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0\text{,}\)</span> but <span class="process-math">\(\partial p/\partial z\)</span> is not, in general, zero.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="subsec-methods-analytical-4-3-8-2">The pipe flow problem, Poiseuille flow <a href="sec-exact-solutions.html#sec-poiseuille" class="xref" data-knowl="./knowl/xref/sec-poiseuille.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.4: Hagen–Poiseuille flow (or Poiseuille flow)">Example 7.8.4</a> uses this assumption.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Item"><a href="#subsec-methods-analytical-4-3-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="subsec-methods-analytical-4-3-9">
 <div class="para logical" id="subsec-methods-analytical-4-3-9-1">
 <div class="para"><em class="emphasis">Periodic and sinusoidal flow (with period <span class="process-math">\(T\)</span>):</em></div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-stokes-boundary-layer.html" id="subsec-methods-analytical-4-3-9-1-2">
+<div class="displaymath process-math" id="subsec-methods-analytical-4-3-9-1-2">
 \begin{align*}
 u(x,y,z,t)=&amp;u_0(x,y,z)e^{\im\omega t}+\overline{u_0(x,y,z)}e^{-\im\omega t},\\
 v(x,y,z,t)=&amp;v_0(x,y,z)e^{\im\omega t}+\overline{v_0(x,y,z)}e^{-\im\omega t},\\
@@ -601,8 +608,11 @@ w(x,y,z,t)=&amp;w_0(x,y,z)e^{\im\omega t}+\overline{w_0(x,y,z)}e^{-\im\omega t},
 p(x,y,z,t)=&amp;p_0(x,y,z)e^{\im\omega t}+\overline{p_0(x,y,z)}e^{-\im\omega t},
 \end{align*}
 </div>
-<div class="para">where the angular frequency <span class="process-math">\(\omega=2\pi/T\text{.}\)</span> This assumption will be made in the Stokes boundary layer example <a href="sec-exact-solutions.html#example-stokes-boundary-layer" class="xref" data-knowl="./knowl/xref/example-stokes-boundary-layer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.12: Stokes boundary layer">Example 7.8.12</a>.</div>
+<div class="para">where the angular frequency <span class="process-math">\(\omega=2\pi/T\text{.}\)</span>
+</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-methods-analytical-4-3-9-2">This assumption will be made in the Stokes boundary layer example <a href="sec-exact-solutions.html#example-stokes-boundary-layer" class="xref" data-knowl="./knowl/xref/example-stokes-boundary-layer.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8.12: Stokes boundary layer">Example 7.8.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-methods-analytical-4-3-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#subsec-methods-analytical-4-3-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
