@@ -309,9 +309,9 @@
           \delta\pd{\overline{\eta}}{t} = \delta \pd{\overline{\phi}}{y} + O(\delta^2), \qquad \text{on $y = 0$}.
         </me>
         As we indicated, the use of <m>\delta</m> is only to aid with ordering. We see that if we return back to the original variable scalings, then the above indicates that the approximate kinematic condition to be considered is: 
-        <me>
+        <men xml:id="eqn-waves-kinematiccondition01">
           \pd{\eta}{t} \sim \pd{\phi}{y} \qquad \text{on $y = 0$}.
-        </me>
+        </men>
         It is typical, when dealing with linear water waves, to dispense with the notation indicating "approximate", i.e. <m>\sim</m> here, on the understanding that the solutions are satisfied only approximately. 
       </p>
 
@@ -338,12 +338,17 @@
         <me>
           |\nabla \phi|^2 = \left( \pd{\phi}{x}\right)^2  + \left( \pd{\phi}{y}\right)^2,
         </me>
-        is assumed to be small compared to the other terms of the equation. Therefore, Bernoulli's equation is then approximated as 
+        is assumed to be small compared to the other terms of the equation.</p>
+        
+        <p>Using the linearisation techniques, similar to the kinematic equation and its linear variation <xref ref="eqn-waves-kinematiccondition01"/>, Bernoulli's equation in <xref ref="wwfull03"/> is then approximated as 
       <me>
-        \pd{\eta}{t} + u \pd{\eta}{x} = v \qquad \text{on $y = \eta$}.
+        \pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta  = 0 \qquad \text{on $y = 0$}.
       </me>
       </p>
      
+      <p>
+        This yields the set of governing linear equations as follows.
+      </p>
 
       <theorem xml:id="thm-waterwaves-equations">
         <title>Linear water wave equations</title>
@@ -351,9 +356,9 @@
           <p>
            Consider two-dimensional potential flow (inviscid, incompressible, irrotational) of fluid. A model for linear water waves is as follows:
            <mdn>
-            <mrow xml:id="ww01"> \nabla^2 \phi = 0 &amp; \qquad \text{$-\infty &lt; y &lt; \eta$}</mrow>
-            <mrow xml:id="ww02"> \pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta = 0 &amp; \qquad \text{on $y = \eta$}</mrow>
-            <mrow xml:id="ww03"> \pd{\eta}{t} + u \pd{\eta}{x} = v &amp; \qquad \text{on $y = \eta$}</mrow>
+            <mrow xml:id="ww01"> \nabla^2 \phi = 0 &amp; \qquad \text{$-\infty &lt; y &lt; 0$}</mrow>
+            <mrow xml:id="ww02"> \pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta = 0 &amp; \qquad \text{on $y = 0$}</mrow>
+            <mrow xml:id="ww03"> \pd{\eta}{t} + u \pd{\eta}{x} = v &amp; \qquad \text{on $y = 0$}</mrow>
            </mdn> 
            where the free surface is located at <m>y = \eta(x, t)</m>.
           </p>

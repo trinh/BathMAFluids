@@ -25,9 +25,9 @@
 <div class="para">Consider two-dimensional potential flow (inviscid, incompressible, irrotational) of fluid. A model for linear water waves is as follows:</div>
 <div class="displaymath process-math">
 \begin{align}
-\nabla^2 \phi = 0 &amp; \qquad \text{$-\infty &lt; y &lt; \eta$}\tag{5.3.3}\\
-\pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta = 0 &amp; \qquad \text{on $y = \eta$}\tag{5.3.4}\\
-\pd{\eta}{t} + u \pd{\eta}{x} = v &amp; \qquad \text{on $y = \eta$}\tag{5.3.5}
+\nabla^2 \phi = 0 &amp; \qquad \text{$-\infty &lt; y &lt; 0$}\tag{5.3.4}\\
+\pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta = 0 &amp; \qquad \text{on $y = 0$}\tag{5.3.5}\\
+\pd{\eta}{t} + u \pd{\eta}{x} = v &amp; \qquad \text{on $y = 0$}\tag{5.3.6}
 \end{align}
 </div>
 <div class="para">where the free surface is located at <span class="process-math">\(y = \eta(x, t)\text{.}\)</span>
@@ -37,13 +37,13 @@
 <div class="para">In water of infinite depth, we require that</div>
 <div class="displaymath process-math">
 \begin{equation}
-\nabla\phi \to (0, 0) \qquad \text{as $y \to -\infty$},\tag{5.3.6}
+\nabla\phi \to (0, 0) \qquad \text{as $y \to -\infty$},\tag{5.3.7}
 \end{equation}
 </div>
 <div class="para">while for the case of finite depth, we have</div>
 <div class="displaymath process-math">
 \begin{equation}
-\pd{\phi}{y} = 0 \qquad \text{on $y = -h$}.\tag{5.3.7}
+\pd{\phi}{y} = 0 \qquad \text{on $y = -h$}.\tag{5.3.8}
 \end{equation}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-waterwaves-equations-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
