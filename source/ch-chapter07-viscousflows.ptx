@@ -4025,10 +4025,10 @@
           <p>
             We have:
             <me>
-              \frac{U^2}{L}\left(\bu^*\cdot\nabla^*\right)\bu^*
-              =-\frac{U^2}{L}\nabla^*p^*
-              +\frac{\nu U}{L^2}\nabla^{*2}\bu^*,\quad
-              \frac{U}{L}\nabla^*\cdot\bu^*=0,
+              \frac{U^2}{a}\left(\bu^*\cdot\nabla^*\right)\bu^*
+              =-\frac{U^2}{a}\nabla^*p^*
+              +\frac{\nu U}{a^2}\nabla^{*2}\bu^*,\quad
+              \frac{U}{a}\nabla^*\cdot\bu^*=0,
             </me>
             which simplify to
             <me>
@@ -4037,7 +4037,12 @@
               +\nabla^{*2}\bu^*,\quad
               \nabla^*\cdot\bu^*=0,
             </me>
-            while the boundary conditions become:
+            where
+            <me>
+              \mathrm{Re}=\frac{\rho Ua}{\mu}
+            </me>
+            is the Reynolds number of the flow.
+            The boundary conditions become:
             <me>
               u^*=v^*=0
             </me>
