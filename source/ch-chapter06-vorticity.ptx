@@ -2367,7 +2367,7 @@
           two rigid boundaries along the
           <m>x</m>- and <m>y</m>-axes.
           Find the complex potential for the flow caused by
-          a vortex at a point <m>z=c=a+\im b</m> in the fluid.
+          a vortex of strength <m>\Gamma</m> at a point <m>z=c=a+\im b</m> in the fluid.
           If the vortex is free to move,
           show that it follows a path on which
           <me>
@@ -2436,6 +2436,47 @@
             -\frac1{2y_1^2}=\frac1{2x_1^2}+c,
           </me>
           where <m>c</m> is constant, and this can be rearranged into the required form.
+        </p>
+        <p>
+          <em>Alternative method:</em> We could achieve the same solution using a conformal map.
+          The map <me>\zeta=z^2</me> transforms the quadrant
+          <m>x>0</m>, <m>y>0</m> to the upper half plane
+          <m>\Im\zeta>0</m>. The vortex at <m>z=c=a+\im b</m>
+          transforms to a vortex at
+          <m>\zeta = c^2</m> with complex potential
+          <me>
+            -\frac{\im\Gamma}{2\pi}\log(\zeta - c^2).
+          </me>
+          We need to add an image vortex at <m>\zeta = \overline{c^2}</m> of strength <m>-\Gamma</m>.
+          Thus the complex potential in the <m>\zeta</m>-plane is
+          <md>
+            <mrow>
+              w=&amp;-\frac{\im\Gamma}{2\pi}\left(\log(\zeta - c^2)
+              -\log(\zeta - \overline{c^2})\right).
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im\Gamma}{2\pi}\left(\log(z^2 - c^2)
+              -\log(z^2 - \overline{c^2})\right).
+            </mrow>
+            <mrow>
+              =&amp;-\frac{\im\Gamma}{2\pi}\log(z - c)
+              -\frac{\im\Gamma}{2\pi}\log(z + c)
+              +\frac{\im\Gamma}{2\pi}\log(z - \overline{c})
+              +\frac{\im\Gamma}{2\pi}\log(z + \overline{c}).
+            </mrow>
+          </md>
+          This is equivalent to having vortices of strength <m>\Gamma</m> at
+          <m>z=c</m> and <m>z=-\overline{c}</m>, and vortices of strength
+          <m>-\Gamma</m> at <m>z=-c</m> and <m>z=\overline{c}</m>,
+          which is the same result as above.
+        </p>
+        <p>
+          <em>Additional note:</em>
+          We could have tried the transformation <me>\zeta = z^4</me> to map the quadrant
+          to the whole plane.
+          However, we would need to find the solution for a vortex with a half-line
+          (the positive real axis) removed, which is more complicated than
+          the upper half plane.
         </p>
       </solution>
     </exercise>
