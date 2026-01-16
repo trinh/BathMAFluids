@@ -2466,8 +2466,8 @@
             </mrow>
           </md>
           This is equivalent to having vortices of strength <m>\Gamma</m> at
-          <m>z=c</m> and <m>z=-\overline{c}</m>, and vortices of strength
-          <m>-\Gamma</m> at <m>z=-c</m> and <m>z=\overline{c}</m>,
+          <m>z=\pm c</m>, and vortices of strength
+          <m>-\Gamma</m> at <m>z=\pm\overline{c}</m>,
           which is the same result as above.
         </p>
         <p>
