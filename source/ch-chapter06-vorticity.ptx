@@ -1056,6 +1056,9 @@
           for example a line vortex <xref ref="example-streamfunction-linevortex"/>.
         </p>
       </remark>
+      <p>
+        The remainder of this section is non-examinable.
+      </p>
     </introduction>
     <subsection xml:id="subsec-stokes-streamfunction">
       <title>The Stokes streamfunction for axisymmetric flow</title>
