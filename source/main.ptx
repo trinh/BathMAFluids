@@ -7,18 +7,18 @@
 
 
   <book xml:id="my-great-book">
-    <title>Mathematics of fluid dynamics</title>
-    <subtitle>University of Bath 25-26, MA32051/MA52129</subtitle>
+    <title>Fluid dynamics</title>
+    <subtitle>University of Bath 26-27, MA32051/MA52129</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
     <xi:include href="./ch-chapter01-introduction.ptx" />
-    <xi:include href="./ch-chapter02-kinematics.ptx" /> 
-    <xi:include href="./ch-chapter03-equations.ptx" /> 
+    <xi:include href="./ch-chapter02-kinematics.ptx" />
+    <xi:include href="./ch-chapter03-equations.ptx" />
     <xi:include href="./ch-chapter04-potentialflows.ptx" />
-    <xi:include href="./ch-chapter05-waves.ptx" /> 
+    <xi:include href="./ch-chapter05-waves.ptx" />
     <xi:include href="./ch-chapter06-vorticity.ptx" />
     <xi:include href="./ch-chapter07-viscousflows.ptx" />
     <!-- <xi:include href="./ch-chapter08-PS.ptx" /> -->

@@ -19,68 +19,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
 <meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
-<meta property="book:title" content="Mathematics of fluid dynamics">
-<meta property="book:author" content=" ">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Fluid dynamics">
+<meta property="og:title" content="Fluid dynamics">
+<meta property="book:title" content="Fluid dynamics">
+<meta name="twitter:description" content="University of Bath 26-27, MA32051/MA52129">
+<meta property="og:description" content="University of Bath 26-27, MA32051/MA52129">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -102,37 +62,60 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '8.3.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Fluid dynamics</span> <span class="subtitle">University of Bath 26-27, MA32051/MA52129</span></a></div>
 <p class="byline"> </p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-waterwaves-generalisations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter05-waves.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter06-vorticity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-waterwaves-generalisations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter05-waves.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-chapter06-vorticity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -182,10 +165,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
@@ -194,17 +177,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter01-introduction" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter01-introduction-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-preliminary-complex-variables" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-intro-multifunctions" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
@@ -212,14 +192,15 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter02-kinematics" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter02-kinematics-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-eulerlagrang" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-flowexamples" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
@@ -230,64 +211,66 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter03-equations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter03-equations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-RTT" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter03-equations-4" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+<ul id="ptx-toc-group-subsec-euler-momentum" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-incompressible" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter04-potentialflows" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-Potential-and-streamfunction" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-streamfunction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-streamfunction.html#sec-streamfunction-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-streamfunction" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-streamfunction.html#sec-streamfunction-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-complex-potential" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-method-of-images" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-conformal-mapping" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
@@ -295,7 +278,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Flow past an aerofoil</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter04-potentialflows-8" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-circle-maps" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Circle maps</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-" class="internal"><span class="codenumber">4.6.2</span> <span class="title">The Joukowski map</span></a></div></li>
 </ul>
@@ -305,13 +288,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-chapter05-waves">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter05-waves-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-waterwaves-equations.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Governing equations of water waves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-waterwaves-equations" class="structural toc-item-list">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsec-waterwaves-boundaryconditions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Boundary conditions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subsec-waterwaves-boundaryconditions" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-otherBC" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Bottom boundary conditions</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-dynamicBC" class="internal"><span class="codenumber">5.1.1.2</span> <span class="title">Dynamic boundary conditions</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-kinematicBC" class="internal"><span class="codenumber">5.1.1.3</span> <span class="title">Kinematic boundary conditions</span></a></div></li>
@@ -323,7 +307,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-wave-parameters.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wave parameters</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Stokes waves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-waterwaves-stokeswaves" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html#subsec-waterwaves-linearisation" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Linearisation of the water-wave equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html#subsec-linear-waves-solution" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Solving for linear waves in infinite depth</span></a></div></li>
 </ul>
@@ -334,10 +318,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter06-vorticity" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter06-vorticity-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-vorticity-circulation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vorticity and circulation</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-vorticity-circulation" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vorticity" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vorticity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-circulation" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The circulation in a flow</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vortex-lines" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Vortex lines and surfaces</span></a></div></li>
@@ -345,14 +330,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Helmholtz vortex theorems</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-helmholtz" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">The theorems</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#helmholtz-principle" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Helmholtz principle</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-axisymmetric-flow.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Axisymmetric flow</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-axisymmetric-flow" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-stokes-streamfunction" class="internal"><span class="codenumber">6.3.1</span> <span class="title">The Stokes streamfunction for axisymmetric flow</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-streamfunction-vorticity" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Relationship to vorticity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-irrot-sphere" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Irrotational flow past a sphere</span></a></div></li>
@@ -360,7 +345,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html" class="internal"><span class="codenumber">6.4</span> <span class="title">National Committee for Fluid Mechanics Films: Vorticity Parts 1 and 2</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-ncfmf-vorticity-films" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html#subsec-vorticity-part-1" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Vorticity Part 1</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html#subsec-vorticity-part-2" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Vorticity Part 2</span></a></div></li>
 </ul>
@@ -370,15 +355,16 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-viscousflows" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-viscousflows-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-definitions" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-state-relations" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
 </ul>
@@ -387,7 +373,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-boundaries-surfaces-interfaces" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
@@ -395,14 +381,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-stress" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subsec-newtonian-fluids" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-incompressible-newtonian-fluids" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Incompressible Newtonian fluids</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-stress-surface" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Stress at a surface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#inviscid-fluids" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Inviscid fluids</span></a></div></li>
@@ -412,7 +398,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-linear-momentum-cons" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
@@ -420,7 +406,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-linear-momentum-cons.html#sec-low-and-high-reynolds-number" class="internal"><span class="codenumber">7.5.6</span> <span class="title">Limits of low and high Reynolds number</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-low-and-high-reynolds-number" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-low-Reynolds-number" class="internal"><span class="codenumber">7.5.6.1</span> <span class="title">Low Reynolds number</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-high-Reynolds-number" class="internal"><span class="codenumber">7.5.6.2</span> <span class="title">High Reynolds number</span></a></div></li>
 </ul>
@@ -430,7 +416,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-viscous-dissipation-of-energy.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Viscous Dissipation of Energy</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-methods-to-solve-equations.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Methods to solve the Navier–Stokes and continuity equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-methods-to-solve-equations" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Methods of solution</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods-analytical" class="internal"><span class="codenumber">7.7.2</span> <span class="title">Methods to solve the equations analytically</span></a></div></li>
 </ul>
@@ -443,12 +429,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Vector calculus</span></a></div>
+<ul id="ptx-toc-group-backmatter-2" class="structural toc-item-list"><li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-converting-between-coordinates.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Converting between different coordinate systems</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-converting-between-coordinates" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar" class="internal"><span class="codenumber">A.1.1</span> <span class="title">Converting between Cartesian coordinates and cylindrical polar coordinates</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-plane-polar" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Converting between Cartesian coordinates and plane polar coordinates</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-spherical-polar" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Converting between Cartesian coordinates and spherical polar coordinates</span></a></div></li>
@@ -457,72 +443,81 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li></ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B.</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="exercises-water-waves"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="exercises" id="exercises-water-waves">
+<h1 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h2>
-<article class="exercise exercise-like" id="exercises-water-waves-1"><h3 class="heading">
+</h1>
+<article class="exercise exercise-like" id="exercises-water-waves-1"><h2 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivation of the kinematic condition.</span>
-</h3>
+</h2>
 <div class="para logical" id="exercises-water-waves-1-2-1">
 <div class="para">In this question, you will derive the kinematic boundary condition on a free surface, which ensures that fluid particles on the free surface must remain on the free surface. Consider a vector that points to a location on a 2D free surface given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-1-2-1-1">
 \begin{equation*}
 \br(s, t) = (x, \eta(x, t)).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="exercises-water-waves-1-2-2">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="exercises-water-waves-1-2-2">
 <div class="para">Introduce the curve <span class="process-math">\(F(x, y, t) = y - \eta(x, t)\text{.}\)</span> For any particle on the surface, it must be the case that <span class="process-math">\(F(x, y, t) \equiv 0\text{.}\)</span> By applying the material derivative show that the condition that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-1-2-2-3">
 \begin{equation*}
 \DD{F}{t} = 0,
 \end{equation*}
 </div>
 <div class="para">for particles on the free surface is equivalent to the kinematic condition</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-1-2-2-4">
 \begin{equation*}
 v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-water-waves-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-water-waves-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-water-waves-1-3-1">
 <div class="para">By the definition of the material derivative, we have that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-1-3-1-1">
 \begin{equation*}
 \DD{(y - \eta)}{t} = \pd{(y - \eta)}{t} + (u, v) \cdot \nabla(y - \eta) = -\pd{\eta}{t} + (u, v) \cdot (-\eta_x, 1).
 \end{equation*}
 </div>
 <div class="para">Equating the above to zero for the case of <span class="process-math">\(y = \eta(x, t)\)</span> yields the desired result.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.1.1"><a href="#exercises-water-waves-1-3" title="Copy heading and permalink for Solution 5.5.1.1" aria-label="Copy heading and permalink for Solution 5.5.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercise 5.5.1: Derivation of the kinematic condition"><a href="#exercises-water-waves-1" title="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition" aria-label="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-finite"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.1.1"><a tabindex="-1" href="#exercises-water-waves-1-3" title="Copy heading and permalink for Solution 5.5.1.1" aria-label="Copy heading and permalink for Solution 5.5.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.1: Derivation of the kinematic condition"><a tabindex="-1" href="#exercises-water-waves-1" title="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition" aria-label="Copy heading and permalink for Exercise 5.5.1: Derivation of the kinematic condition">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-waterwaves-finite"><h2 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stokes waves in finite depth.</span>
-</h3>
+</h2>
 <div class="para logical" id="ex-waterwaves-finite-2-1">
 <div class="para">Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential <span class="process-math">\(\phi(x, y,t)\text{,}\)</span> with <span class="process-math">\(\phi\)</span> satisfying <span class="process-math">\(\nabla^2 \phi = 0\text{.}\)</span> Let the free surface be at <span class="process-math">\(y = \eta(x, t)\)</span> and assume the water is confined above a flat channel of depth <span class="process-math">\(y = -h\text{.}\)</span> Show that on the free surface, <span class="process-math">\(y = \eta(x, t)\text{,}\)</span> the kinematic equation is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-2-1-7">
 \begin{equation*}
 \pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},
 \end{equation*}
 </div>
 <div class="para">while the dynamic (Bernouilli) equation is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-2-1-8">
 \begin{equation*}
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-finite-2-2">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-finite-2-2">
 <div class="para">Show that when the problem is linearised by ignoring quadratic terms, then instead the boundary conditions can be simplified to be</div>
 <div class="displaymath process-math" id="ex-waterwaves-finite-2-2-1">
 \begin{align*}
@@ -532,26 +527,30 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 </div>
 <div class="para">and now applied on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-finite-2-3">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-finite-2-3">
 <div class="para">Show that travelling harmonic waves, with <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y)\sin(kx - \omega t)\text{,}\)</span> are possible and derive the associated dispersion relation,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-2-3-3">
 \begin{equation*}
 \omega^2 = gk \tanh(kh). 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-finite-2-4">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-finite-2-4">
 <div class="para">In deriving the above, it will be convenient for you to use the hyperbolic cosine and sine functions:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-2-4-1">
 \begin{equation*}
 \cosh z = \frac{\e^{z} + \e^{-z}}{2} \quad \text{and} \quad \sinh z = \frac{\e^{z} - \e^{-z}}{2},
 \end{equation*}
 </div>
 <div class="para">and note that the cosh function is even at <span class="process-math">\(z = 0\)</span> (and therefore has a zero derivative). The use of hyperbolic functions is used in the solution of <span class="process-math">\(f(y)\)</span> and is a common trick when solving boundary-value problems with exponentials.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-finite-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-waterwaves-finite-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-waterwaves-finite-3-1">
 <div class="para">Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions,</div>
 <div class="displaymath process-math" id="ex-waterwaves-finite-3-1-1">
@@ -561,18 +560,18 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 \end{gather*}
 </div>
 <div class="para">which are imposed on <span class="process-math">\(y = \eta(x)\text{.}\)</span> The quadratic terms can be ignored by assuming that the fluid is linearised about a small disturbance. Hence <span class="process-math">\(\eta\)</span> is assumed to be small. Similarly, the velocity terms are expanded about <span class="process-math">\(y = 0\text{.}\)</span> For example,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-1-5">
 \begin{equation*}
 \pd{\phi}{x}\biggr\rvert_{y = \eta} = \pd{\phi}{x}\biggr\rvert_{y = 0} + \pd{^2\phi}{x^2}\biggr\rvert_{y = 0}\eta + \ldots.
 \end{equation*}
 </div>
 <div class="para">Thus we can approximate this quantity to leading order by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-1-6">
 \begin{equation*}
 \pd{\phi}{x}\biggr\rvert_{y = \eta} \sim \pd{\phi}{x}\biggr\rvert_{y = 0}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-2">
 <div class="para">Therefore, both kinematic and dynamic conditions are simplified in this manner, yielding</div>
@@ -584,17 +583,17 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 </div>
 <div class="para">now imposed on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-3">
 <div class="para">We substitute now the ansatzes</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-3-1">
 \begin{equation*}
 \eta = A\cos(kx - \omega t), \qquad \phi = f(y)\sin(kx - \omega t),
 \end{equation*}
 </div>
 <div class="para">into the governing equations.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-4">
 <div class="para">Written in terms of <span class="process-math">\(f\text{,}\)</span> we must now solve the following system:</div>
@@ -606,17 +605,17 @@ f'(0) = (\omega)A, \\
 -(\omega) f(0) + gA = 0. 
 \end{gather*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-5">
 <div class="para">Now instead of writing the solution for <span class="process-math">\(f\)</span> in terms of the two exponentials <span class="process-math">\(\e^{\pm ky}\text{,}\)</span> it is better to write the general solution of the second-order ODE as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-5-3">
 \begin{equation*}
 f(y) = B \text{cosh}[k(y - y_0)],
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(y_0\)</span> is constant. We can then see that if <span class="process-math">\(y_0 = -h\text{,}\)</span> then the boundary condition <span class="process-math">\(f'(-h) = 0\)</span> is satisfied.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-6">
 <div class="para">The last two boundary conditions, evaluated on <span class="process-math">\(y = 0\)</span> yield</div>
@@ -632,163 +631,183 @@ A \\ B
 = 0.\tag{5.5.1}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-finite-3-7">
 <div class="para">For there to be non-trivial solutions, we thus need</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-7-1">
 \begin{equation*}
 (\omega)^2 = gk \tanh(kh),
 \end{equation*}
 </div>
 <div class="para">and therefore there are two possible wave speeds, namely</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-finite-3-7-2">
 \begin{equation*}
 c = \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2},
 \end{equation*}
 </div>
 <div class="para">and both are simply negatives of one another; so represent left and rightwards propagating waves of the same speed.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-finite-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-finite-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.2.1"><a href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Solution 5.5.2.1" aria-label="Copy heading and permalink for Solution 5.5.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercise 5.5.2: Stokes waves in finite depth"><a href="#ex-waterwaves-finite" title="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth" aria-label="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-current"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.2.1"><a tabindex="-1" href="#ex-waterwaves-finite-3" title="Copy heading and permalink for Solution 5.5.2.1" aria-label="Copy heading and permalink for Solution 5.5.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.2: Stokes waves in finite depth"><a tabindex="-1" href="#ex-waterwaves-finite" title="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth" aria-label="Copy heading and permalink for Exercise 5.5.2: Stokes waves in finite depth">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-waterwaves-current"><h2 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear waves in a current.</span>
-</h3>
-<div class="introduction" id="ex-waterwaves-current-2"><div class="para" id="ex-waterwaves-current-2-1">We now consider linear waves in a channel of depth <span class="process-math">\(h\text{,}\)</span> as in the previous question. This time, however, assume that there is a uniform flow of speed <span class="process-math">\(U\)</span> at infinity.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<article class="task exercise-like" id="ex-waterwaves-current-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="ex-waterwaves-current-3-1-1">Begin by writing down the boundary conditions that you expect at <span class="process-math">\(y = -h\)</span> and also far upstream, with <span class="process-math">\(x \to -\infty.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-current-3-1-2">
+</h2>
+<div class="introduction" id="ex-waterwaves-current-2">
+<div class="para" id="ex-waterwaves-current-2-1">We now consider linear waves in a channel of depth <span class="process-math">\(h\text{,}\)</span> as in the previous question. This time, however, assume that there is a uniform flow of speed <span class="process-math">\(U\)</span> at infinity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ex-waterwaves-current-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ex-waterwaves-current-3-1-1">Begin by writing down the boundary conditions that you expect at <span class="process-math">\(y = -h\)</span> and also far upstream, with <span class="process-math">\(x \to -\infty.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-current-3-1-2">
 <div class="para">Therefore, this time, we shall consider the velocity as expressed as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-3-1-2-1">
 \begin{equation*}
 u = U + \pd{\phi}{x}, \qquad v = \pd{\phi}{y},
 \end{equation*}
 </div>
 <div class="para">and again linearise the necessary equations.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-current-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-waterwaves-current-3-2-1">We begin with the governing equations as shown in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing" class="xref" data-knowl="./knowl/xref/thm-waterwaves-governing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.2: Water wave equations in potential flow">Theorem 5.1.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="ex-waterwaves-current-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ex-waterwaves-current-3-2-1">We begin with the governing equations as shown in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing" class="xref" data-knowl="./knowl/xref/thm-waterwaves-governing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.2: Water wave equations in potential flow">Theorem 5.1.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-3-2-2">
 <div class="para">On the channel bottom, we expect that the vertical velocity is zero, hence</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-3-2-2-1">
 \begin{equation*}
 \pd{\phi}{y} = 0, \qquad y = -h,
 \end{equation*}
 </div>
 <div class="para">while at upstream infinity, we expect the the velocity to be uniform and of speed <span class="process-math">\(U\text{.}\)</span> Hence in terms of the potential,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-3-2-2-3">
 \begin{equation*}
 \phi \sim Ux, \qquad x \to -\infty.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-3-2-3">
 <div class="para">Indeed, this suggests that we should linearise about the uniform flow, with</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-3-2-3-1">
 \begin{equation*}
 \phi = Ux + \hat{\phi},
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(\hat{\phi}\)</span> is the approximation, which we expect to be small (as is standard in linear problens, we often ignore the hat notation).</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.3.a.1"><a href="#ex-waterwaves-current-3-2" title="Copy heading and permalink for Solution 5.5.3.a.1" aria-label="Copy heading and permalink for Solution 5.5.3.a.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.3.a"><a href="#ex-waterwaves-current-3" title="Copy heading and permalink for Task 5.5.3.a" aria-label="Copy heading and permalink for Task 5.5.3.a">🔗</a></div></article><article class="task exercise-like" id="ex-waterwaves-current-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.3.a.1"><a tabindex="-1" href="#ex-waterwaves-current-3-2" title="Copy heading and permalink for Solution 5.5.3.a.1" aria-label="Copy heading and permalink for Solution 5.5.3.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.3.a"><a tabindex="-1" href="#ex-waterwaves-current-3" title="Copy heading and permalink for Task 5.5.3.a" aria-label="Copy heading and permalink for Task 5.5.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ex-waterwaves-current-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para logical" id="ex-waterwaves-current-4-1-1">
 <div class="para">Linearise the associate free-surface equations, and show that this time, they produce</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-1-1-1">
 \begin{equation*}
 \pd{\phi}{y} = \pd{\eta}{t} + U \pd{\eta}{x}, \qquad \text{on $y = 0$},
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-1-1-2">
 \begin{equation*}
 \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad \text{on $y = 0$}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-current-4-1-2">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-current-4-1-2">
 <div class="para">When considering the second of the two equations above (Bernoilli’s) return to the original Bernoulli equation:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-1-2-1">
 \begin{equation*}
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
 \end{equation*}
 </div>
 <div class="para">and choose your constant <span class="process-math">\(F\)</span> more strategically.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-current-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-waterwaves-current-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-waterwaves-current-4-2-1">
 <div class="para">The linearisation process for the kinematic condition remains largely the same, except we would produce:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-1-1">
 \begin{equation*}
 \pd{\eta}{t} + \left[ U + \pd{\hat\phi}{x}\right] \pd{\eta}{x} = \pd{\hat{\phi}}{y}.
 \end{equation*}
 </div>
 <div class="para">Again quadratic terms are ignored, and we see that the requisite condition becomes (dropping the hat):</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-1-2">
 \begin{equation*}
 \pd{\eta}{t} + U\pd{\eta}{x} = \pd{\phi}{y}, \qquad y = \eta(x, t).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-waterwaves-current-4-2-2">The linearisation of Bernoulli’s equation is done similarly.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-waterwaves-current-4-2-2">The linearisation of Bernoulli’s equation is done similarly.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-4-2-3">
 <div class="para">When considering the Bernoulli equation,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-3-1">
 \begin{equation*}
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + \frac{p}{\rho} + gy = F(t),
 \end{equation*}
 </div>
 <div class="para">it is prudent to take the choice of <span class="process-math">\(F(t)\)</span> so that the inertial term is removed. Specifically, if we take</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-3-3">
 \begin{equation*}
 F(t) = \frac{U^2}{2} + \frac{p_\text{atm}}{\rho}, 
 \end{equation*}
 </div>
 <div class="para">this would remove the leading term from inertia.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-4-2-4">
 <div class="para">The only difference with the usual linearisation process is the inertial term:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-4-1">
 \begin{equation*}
 |\nabla \phi|^2 = \left\lvert \left(U + \pd{\hat{\phi}}{x}\right)^2 + \left(\pd{\hat{\phi}}{y}\right)^2 \right\rvert = 2U \pd{\hat\phi}{x} + \ldots
 \end{equation*}
 </div>
 <div class="para">so now Bernoulli’s equation yields (dropping hats):</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-4-2-4-2">
 \begin{equation*}
 \pd{\phi}{t} + U \pd{\phi}{x} + g\eta = 0, \qquad y = 0,
 \end{equation*}
 </div>
 <div class="para">where we have placed the boundary condition on <span class="process-math">\(y = 0\)</span> as standard.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.3.b.1"><a href="#ex-waterwaves-current-4-2" title="Copy heading and permalink for Solution 5.5.3.b.1" aria-label="Copy heading and permalink for Solution 5.5.3.b.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.3.b"><a href="#ex-waterwaves-current-4" title="Copy heading and permalink for Task 5.5.3.b" aria-label="Copy heading and permalink for Task 5.5.3.b">🔗</a></div></article><article class="task exercise-like" id="ex-waterwaves-current-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.3.b.1"><a tabindex="-1" href="#ex-waterwaves-current-4-2" title="Copy heading and permalink for Solution 5.5.3.b.1" aria-label="Copy heading and permalink for Solution 5.5.3.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.3.b"><a tabindex="-1" href="#ex-waterwaves-current-4" title="Copy heading and permalink for Task 5.5.3.b" aria-label="Copy heading and permalink for Task 5.5.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ex-waterwaves-current-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para logical" id="ex-waterwaves-current-5-1-1">
 <div class="para">Show finally that the the dispersion relation predicts possible waves of speeds</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-5-1-1-1">
 \begin{equation*}
 c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-waterwaves-current-5-1-2">The regime where the flow speed is less than <span class="process-math">\(\sqrt{gh}\)</span> is known as subcritical. The regime where flow is greater than <span class="process-math">\(\sqrt{gh}\)</span> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ex-waterwaves-current-5-1-2">The regime where the flow speed is less than <span class="process-math">\(\sqrt{gh}\)</span> is known as subcritical. The regime where flow is greater than <span class="process-math">\(\sqrt{gh}\)</span> is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-current-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-waterwaves-current-5-2-1">At this point, the linear solution follows similar steps to the case of finite depth with zero current. We have <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y) \sin(kx - \omega t)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="ex-waterwaves-current-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ex-waterwaves-current-5-2-1">At this point, the linear solution follows similar steps to the case of finite depth with zero current. We have <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi = f(y) \sin(kx - \omega t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-5-2-2">
 <div class="para">Written in terms of <span class="process-math">\(f\text{,}\)</span> we must now solve the following system:</div>
@@ -800,11 +819,11 @@ f'(0) = (\omega - Uk)A, \\
 -(\omega - Uk) f(0) + gA = 0, 
 \end{gather*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-5-2-3">
 <div class="para">The first two equations yileld the typical solution for the case of finite depth:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-5-2-3-1">
 \begin{equation*}
 f(y) = B \cosh[k(y + h)].
 \end{equation*}
@@ -822,30 +841,34 @@ A \\ B
 = 0.\tag{5.5.2}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-current-5-2-4">
 <div class="para">For there to be non-trivial solutions, we thus need</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-5-2-4-1">
 \begin{equation*}
 (\omega - Uk)^2 = gk \tanh(kh),
 \end{equation*}
 </div>
 <div class="para">and therefore there are two possible wave speeds, namely</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-current-5-2-4-2">
 \begin{equation*}
 c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-waterwaves-current-5-2-5">In the deep water limit, if <span class="process-math">\(U &lt; \sqrt{g/k}\)</span> this yields subcritical solutions, and it is possible to have a wave pattern that is non-trivial upstream of the flow.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-current-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-waterwaves-current-5-2-5">In the deep water limit, if <span class="process-math">\(U &lt; \sqrt{g/k}\)</span> this yields subcritical solutions, and it is possible to have a wave pattern that is non-trivial upstream of the flow.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-current-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.3.c.1"><a href="#ex-waterwaves-current-5-2" title="Copy heading and permalink for Solution 5.5.3.c.1" aria-label="Copy heading and permalink for Solution 5.5.3.c.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.3.c"><a href="#ex-waterwaves-current-5" title="Copy heading and permalink for Task 5.5.3.c" aria-label="Copy heading and permalink for Task 5.5.3.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 5.5.3: Linear waves in a current"><a href="#ex-waterwaves-current" title="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current" aria-label="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-density"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.3.c.1"><a tabindex="-1" href="#ex-waterwaves-current-5-2" title="Copy heading and permalink for Solution 5.5.3.c.1" aria-label="Copy heading and permalink for Solution 5.5.3.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.3.c"><a tabindex="-1" href="#ex-waterwaves-current-5" title="Copy heading and permalink for Task 5.5.3.c" aria-label="Copy heading and permalink for Task 5.5.3.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.3: Linear waves in a current"><a tabindex="-1" href="#ex-waterwaves-current" title="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current" aria-label="Copy heading and permalink for Exercise 5.5.3: Linear waves in a current">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-waterwaves-density"><h2 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluids of different densities.</span>
-</h3>
+</h2>
 <div class="para logical" id="ex-waterwaves-density-2-1">
 <div class="para">Inviscid incompressible fluid of density <span class="process-math">\(\rho_2\)</span> lies in the region <span class="process-math">\(y &gt; 0\)</span> above a fluid with greater density <span class="process-math">\(\rho_1\)</span> for <span class="process-math">\(y &lt; 0\text{.}\)</span> Assume there there is a small-amplitude disturbance the two fluids with the surface given by <span class="process-math">\(y = \eta(x, t)\text{.}\)</span> Assuming <span class="process-math">\(\eta\)</span> and the fluid velocities are small, assume that the linearised boundary conditions on the approximated boundary at <span class="process-math">\(y = 0\)</span> are given by</div>
 <div class="displaymath process-math" id="ex-waterwaves-density-2-1-8">
@@ -855,27 +878,30 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 \end{align*}
 </div>
 <div class="para">(Notice that these are three conditions; two kinematic conditions for the two fluids, and a dynamic (Bernoulli) condition).</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-density-2-2">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-density-2-2">
 <div class="para">If <span class="process-math">\(\eta(x, t) = A\cos(kx - \omega t)\)</span> with <span class="process-math">\(k &gt; 0\text{,}\)</span> derive the dispersion relation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-density-2-2-3">
 \begin{equation*}
 \omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-density-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-waterwaves-density-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-waterwaves-density-3-1">
 <div class="para">The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting <span class="process-math">\(\DD{(y - \eta)}{t} = 0,\)</span> for both fluids. This gives,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-density-3-1-2">
 \begin{equation*}
 \eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
 \end{equation*}
 </div>
 <div class="para">after linearising, and as imposed on <span class="process-math">\(i = 1, 2\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-density-3-2">
 <div class="para">The dynamic condition expresses the fact that the pressures are equal at the interface between the two fluids. Therefore at the interface, we have (ignoring quadratic terms), from <a href="sec-waterwaves-equations.html#thm-bernoulli-unsteady-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-unsteady-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.1: Bernoulli’s equation for unsteady potential flow">Theorem 5.1.1</a>
@@ -887,20 +913,20 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 \end{align*}
 </div>
 <div class="para">However at the interface, we need the pressures to be equal. Therefore we can set <span class="process-math">\(p_1 = p_2\text{.}\)</span> Subtracting the two equations then yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html" id="ex-waterwaves-density-3-2-4">
 \begin{equation*}
 \rho_1\left( \pd{\phi_1}{t}+ g\eta\right) + \left( \frac{p}{\rho_1} - \frac{p}{\rho_2} - B_1 + B_2\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
 \end{equation*}
 </div>
 <div class="para">as applied on <span class="process-math">\(y = 0\text{.}\)</span> We are free to pick the constants, so we pick them so as to completely zero the expression in the second group of brackets. Thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-unsteady-potential.html" id="ex-waterwaves-density-3-2-6">
 \begin{equation*}
 \rho_1\left( \pd{\phi_1}{t}+ g\eta\right)  = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
 \end{equation*}
 </div>
 <div class="para">on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-density-3-3">
 <div class="para">So now the natural question is to ask how the linearisation procedure changes with the two fluids of different densities. Gain, we set <span class="process-math">\(\eta = A\cos(kx - \omega t)\)</span> and <span class="process-math">\(\phi_i = f_i(y) \sin(kx - \omega t)\text{.}\)</span> The equation for <span class="process-math">\(f\)</span> is similarly given by <span class="process-math">\(f'' = k^2 f,\)</span> and this time, we must select different exponential powers so as to ensure the fluid is bounded either as <span class="process-math">\(y \to \infty\)</span>  or as <span class="process-math">\(y \to -\infty\text{.}\)</span> This essentially yields</div>
@@ -910,14 +936,14 @@ f_1 = B \e^{ky}, \amp \qquad y &lt; 0, \\
 f_2 = C \e^{-ky}, \amp \qquad y &gt; 0, 
 \end{align*}
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-density-3-3-8">
 \begin{equation*}
 
 \end{equation*}
 </div>
 <div class="para">for constants <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-density-3-4">
 <div class="para">The remaining boundary conditions are:</div>
@@ -937,7 +963,7 @@ Bk = \omega A, \\
 \end{gather*}
 </div>
 <div class="para">which in matrix form is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-density-3-4-3">
 \begin{equation*}
 \begin{pmatrix}
 \omega \amp -k \amp 0 \\
@@ -953,7 +979,7 @@ A \\ B \\ C
 \end{pmatrix}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-density-3-5">
 <div class="para">Expanding the determinant about the first row yields</div>
@@ -973,52 +999,59 @@ g(\rho_1 - \rho_2) \amp \rho_2 \omega
 \end{align*}
 </div>
 <div class="para">which gives the desired result.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-density-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-density-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.4.1"><a href="#ex-waterwaves-density-3" title="Copy heading and permalink for Solution 5.5.4.1" aria-label="Copy heading and permalink for Solution 5.5.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercise 5.5.4: Fluids of different densities"><a href="#ex-waterwaves-density" title="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities" aria-label="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities">🔗</a></div></article><article class="exercise exercise-like" id="ex-waterwaves-surfacetension"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.4.1"><a tabindex="-1" href="#ex-waterwaves-density-3" title="Copy heading and permalink for Solution 5.5.4.1" aria-label="Copy heading and permalink for Solution 5.5.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.4: Fluids of different densities"><a tabindex="-1" href="#ex-waterwaves-density" title="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities" aria-label="Copy heading and permalink for Exercise 5.5.4: Fluids of different densities">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-waterwaves-surfacetension"><h2 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fluids with surface tension.</span>
-</h3>
+</h2>
 <div class="para logical" id="ex-waterwaves-surfacetension-2-1">
 <div class="para">Suppose now that there is surface tension <span class="process-math">\(T\)</span> between the two fluids of <a href="exercises-water-waves.html#ex-waterwaves-density" class="xref" data-knowl="./knowl/xref/ex-waterwaves-density.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.5.4: Fluids of different densities">Exercise 5.5.4</a>. In lectures, it was shown that the linear dynamic boundary condition is given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-waterwaves-density.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-waterwaves-density.html" id="ex-waterwaves-surfacetension-2-1-3">
 \begin{equation*}
 \rho_1\left( \pd{\phi_1}{t} + g\eta\right) - \rho_2 \left( \pd{\phi_2}{t} + g\eta\right) = T \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$}.
 \end{equation*}
 </div>
 <div class="para">consider the specific situation where the top fluid is air, with <span class="process-math">\(\rho_2 = 0\text{.}\)</span> Then the dynamic condition is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-waterwaves-density.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-waterwaves-density.html" id="ex-waterwaves-surfacetension-2-1-5">
 \begin{equation*}
 \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$},
 \end{equation*}
 </div>
 <div class="para">and only need to consider the single potential <span class="process-math">\(\phi_1 = \phi\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-waterwaves-surfacetension-2-2">The linear kinematic condition should be unchanged from the usual linear kinematic condition, <span class="process-math">\(\pd{\eta}{t} = v = \pd{\phi}{y}\)</span> on <span class="process-math">\(y = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="ex-waterwaves-surfacetension-2-3">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ex-waterwaves-surfacetension-2-2">The linear kinematic condition should be unchanged from the usual linear kinematic condition, <span class="process-math">\(\pd{\eta}{t} = v = \pd{\phi}{y}\)</span> on <span class="process-math">\(y = 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ex-waterwaves-surfacetension-2-3">
 <div class="para">For the case of deep water waves, show that the frequency <span class="process-math">\(\omega\)</span> is now related to the wavenumber <span class="process-math">\(k\)</span> by the equation</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-surfacetension-2-3-3">
 \begin{equation*}
 \omega^2 = gk + \frac{Tk^3}{\rho}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-waterwaves-surfacetension-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-waterwaves-surfacetension-3-1">This question was done in the problem class recordings on 11 November 2025 accessed <a class="external" href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695" target="_blank">here</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="ex-waterwaves-surfacetension-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="ex-waterwaves-surfacetension-3-1">This question was done in the problem class recordings on 11 November 2025 accessed <a class="external" href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695" target="_blank">here</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-surfacetension-3-2">
 <div class="para">Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-surfacetension-3-2-1">
 \begin{equation*}
 \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, 
 \end{equation*}
 </div>
 <div class="para">evaluated on <span class="process-math">\(y = 0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-surfacetension-3-3">
 <div class="para">Thus in this equation, we use the same ansatzes as for the previous few questions. The system of equations is</div>
@@ -1030,118 +1063,139 @@ f'(0) = (\omega)A, \\
 -(\omega) f(0) + [g + (T/\rho)k^2] A = 0, 
 \end{gather*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-waterwaves-surfacetension-3-4">The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <span class="process-math">\(g\text{,}\)</span> we can substitute <span class="process-math">\(g + (T/\rho)k^2\)</span> we we impose the boundary conditions and apply the determinant condition.<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-waterwaves-surfacetension-3-4">The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <span class="process-math">\(g\text{,}\)</span> we can substitute <span class="process-math">\(g + (T/\rho)k^2\)</span> we we impose the boundary conditions and apply the determinant condition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-waterwaves-surfacetension-3-5">
 <div class="para">Previously for deep-water gravity waves, we had <span class="process-math">\(\omega^2 = gk\text{.}\)</span> So now we must have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-waterwaves-surfacetension-3-5-2">
 \begin{equation*}
 \omega^2 = \left(g + \frac{T}{\rho} k^2\right) k,
 \end{equation*}
 </div>
 <div class="para">as desired.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-waterwaves-surfacetension-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.5.1"><a href="#ex-waterwaves-surfacetension-3" title="Copy heading and permalink for Solution 5.5.5.1" aria-label="Copy heading and permalink for Solution 5.5.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Exercise 5.5.5: Fluids with surface tension"><a href="#ex-waterwaves-surfacetension" title="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension" aria-label="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension">🔗</a></div></article><article class="exercise exercise-like" id="exercises-water-waves-6"><h3 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.5.1"><a tabindex="-1" href="#ex-waterwaves-surfacetension-3" title="Copy heading and permalink for Solution 5.5.5.1" aria-label="Copy heading and permalink for Solution 5.5.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.5: Fluids with surface tension"><a tabindex="-1" href="#ex-waterwaves-surfacetension" title="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension" aria-label="Copy heading and permalink for Exercise 5.5.5: Fluids with surface tension">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-water-waves-6"><h2 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The dispersion relation (simple).</span>
-</h3>
+</h2>
 <div class="introduction" id="exercises-water-waves-6-2">
-<div class="para" id="exercises-water-waves-6-2-1">The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="exercises-water-waves-6-2-1">The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-water-waves-6-2-2">
 <div class="para">Consider two sinusoidal waves with nearly the same wavenumber and frequency:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-2-2-1">
 \begin{equation*}
 \eta(x, t) = \sin(k_1 x - \omega_1 t) + \sin(k_2 x - \omega_2 t). 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="exercises-water-waves-6-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="exercises-water-waves-6-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
 <div class="para logical" id="exercises-water-waves-6-3-1-1">
 <div class="para">Use the trig angle identity</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-3-1-1-1">
 \begin{equation*}
 \sin A + \sin B = 2\sin\left( \frac{A + B}{2}\right) \cos\left(\frac{A - B}{2}\right),
 \end{equation*}
 </div>
 <div class="para">to put the wave <span class="process-math">\(\eta\)</span> into the form of a product of sinusoidal waves.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-water-waves-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-water-waves-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-water-waves-6-3-2-1">
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-3-2-1-1">
 \begin{equation*}
 \eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2 t)}{2}\right] 
 \cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2 t)}{2}\right] 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.6.a.1"><a href="#exercises-water-waves-6-3-2" title="Copy heading and permalink for Solution 5.5.6.a.1" aria-label="Copy heading and permalink for Solution 5.5.6.a.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.6.a"><a href="#exercises-water-waves-6-3" title="Copy heading and permalink for Task 5.5.6.a" aria-label="Copy heading and permalink for Task 5.5.6.a">🔗</a></div></article><article class="task exercise-like" id="exercises-water-waves-6-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.6.a.1"><a tabindex="-1" href="#exercises-water-waves-6-3-2" title="Copy heading and permalink for Solution 5.5.6.a.1" aria-label="Copy heading and permalink for Solution 5.5.6.a.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.6.a"><a tabindex="-1" href="#exercises-water-waves-6-3" title="Copy heading and permalink for Task 5.5.6.a" aria-label="Copy heading and permalink for Task 5.5.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercises-water-waves-6-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para logical" id="exercises-water-waves-6-4-1-1">
 <div class="para">Consider now</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-4-1-1-1">
 \begin{equation*}
 k_{1,2} = k \pm \Delta k \quad \text{and} \quad
 \omega_{1,2} = \omega + \Delta \omega,
 \end{equation*}
 </div>
 <div class="para">i.e. each wavenumber and frequency are centred about either <span class="process-math">\(k\)</span> or <span class="process-math">\(\omega\text{,}\)</span> respectively.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="exercises-water-waves-6-4-1-2">In the limit that <span class="process-math">\(\Delta k, \Delta \omega \ll 1\)</span> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="exercises-water-waves-6-4-1-2">In the limit that <span class="process-math">\(\Delta k, \Delta \omega \ll 1\)</span> (are small), argue that the wave consists of a rapidly oscillating waveform within a slowly-varying envelope.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-water-waves-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-water-waves-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-water-waves-6-4-2-1">
 <div class="para">Setting in the substutitions, we have</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-4-2-1-1">
 \begin{equation*}
 \eta = 2\sin(kx - \omega t)\cos(\Delta k x - \Delta \omega t).
 \end{equation*}
 </div>
 <div class="para">The point here is that <span class="process-math">\(\Delta k, \Delta \omega \ll 1\text{,}\)</span> so the cosine term is very nearly 1. This yields the standard travelling sinusoidal wave. However, over long timescales, notably when <span class="process-math">\(t\)</span> is large, the cosine term is no longer constant. This yields a slowly varying envelope or amplitude multiplying the sine,</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.6.b.1"><a href="#exercises-water-waves-6-4-2" title="Copy heading and permalink for Solution 5.5.6.b.1" aria-label="Copy heading and permalink for Solution 5.5.6.b.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.6.b"><a href="#exercises-water-waves-6-4" title="Copy heading and permalink for Task 5.5.6.b" aria-label="Copy heading and permalink for Task 5.5.6.b">🔗</a></div></article><article class="task exercise-like" id="exercises-water-waves-6-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.6.b.1"><a tabindex="-1" href="#exercises-water-waves-6-4-2" title="Copy heading and permalink for Solution 5.5.6.b.1" aria-label="Copy heading and permalink for Solution 5.5.6.b.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.6.b"><a tabindex="-1" href="#exercises-water-waves-6-4" title="Copy heading and permalink for Task 5.5.6.b" aria-label="Copy heading and permalink for Task 5.5.6.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercises-water-waves-6-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para logical" id="exercises-water-waves-6-5-1-1">
 <div class="para">show that the envelope developed in the last part exhibits maxima as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-5-1-1-1">
 \begin{equation*}
 x(t) = \frac{\Delta \omega}{\Delta k} t,
 \end{equation*}
 </div>
 <div class="para">and therefore in the limit <span class="process-math">\(\Delta k, \Delta \omega \to 0\text{,}\)</span> the velocity of such maxima (called the group velocity) is given by</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-5-1-1-3">
 \begin{equation*}
 v_g = \dd{\omega}{k}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-water-waves-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-water-waves-6-5-2-1">This part is quite straightforward. The maxima of the cosines are found at multiples of <span class="process-math">\(2\pi\)</span> in the argument. For example, the first maxima lies at <span class="process-math">\(\Delta k x - \Delta \omega t = 0,\)</span> hence <span class="process-math">\(x(t) = (\Delta k/\Delta \omega)t.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="exercises-water-waves-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="exercises-water-waves-6-5-2-1">This part is quite straightforward. The maxima of the cosines are found at multiples of <span class="process-math">\(2\pi\)</span> in the argument. For example, the first maxima lies at <span class="process-math">\(\Delta k x - \Delta \omega t = 0,\)</span> hence <span class="process-math">\(x(t) = (\Delta k/\Delta \omega)t.\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-water-waves-6-5-2-2">
 <div class="para">This is indeed equivalent to a particle that moves with velocity <span class="process-math">\(\Delta k/\Delta \omega\text{.}\)</span> In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-water-waves-6-5-2-2-2">
 \begin{equation*}
 v_g = \dd{\omega}{k}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#exercises-water-waves-6-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#exercises-water-waves-6-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 5.5.6.c.1"><a href="#exercises-water-waves-6-5-2" title="Copy heading and permalink for Solution 5.5.6.c.1" aria-label="Copy heading and permalink for Solution 5.5.6.c.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Task 5.5.6.c"><a href="#exercises-water-waves-6-5" title="Copy heading and permalink for Task 5.5.6.c" aria-label="Copy heading and permalink for Task 5.5.6.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 5.5.6: The dispersion relation (simple)"><a href="#exercises-water-waves-6" title="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)" aria-label="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.5"><a href="#exercises-water-waves" title="Copy heading and permalink for Exercises 5.5" aria-label="Copy heading and permalink for Exercises 5.5">🔗</a></div></section></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.5.6.c.1"><a tabindex="-1" href="#exercises-water-waves-6-5-2" title="Copy heading and permalink for Solution 5.5.6.c.1" aria-label="Copy heading and permalink for Solution 5.5.6.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.5.6.c"><a tabindex="-1" href="#exercises-water-waves-6-5" title="Copy heading and permalink for Task 5.5.6.c" aria-label="Copy heading and permalink for Task 5.5.6.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 5.5.6: The dispersion relation (simple)"><a tabindex="-1" href="#exercises-water-waves-6" title="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)" aria-label="Copy heading and permalink for Exercise 5.5.6: The dispersion relation (simple)">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.5"><a tabindex="-1" href="#exercises-water-waves" title="Copy heading and permalink for Exercises 5.5" aria-label="Copy heading and permalink for Exercises 5.5">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-waterwaves-generalisations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-chapter06-vorticity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

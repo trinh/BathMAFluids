@@ -1624,7 +1624,7 @@
         \zeta = \frac{1}{2} \left(z \pm \sqrt{z^2 - 4a^2}\right) = 
         \frac{1}{2} \left(z \pm \sqrt{z-2a}\sqrt{z + 2a}\right).
       </men>
-    As noted in <xref ref="sec-intro-multifunctions"/>, we must take care to define the proper branch cut structure for the two branch points at <m>z = \pm 2a</m>. 
+    As noted in <xref ref="sec-preliminary-complex-variables"/>, we must take care to define the proper branch cut structure for the two branch points at <m>z = \pm 2a</m>.
     </p>
 
     <p>
