@@ -19,68 +19,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
 <meta property="og:image" content="https://trinh.github.io/BathMAFluids/external/cover02.png">
-<meta property="book:title" content="Mathematics of fluid dynamics">
-<meta property="book:author" content=" ">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="Fluid dynamics">
+<meta property="og:title" content="Fluid dynamics">
+<meta property="book:title" content="Fluid dynamics">
+<meta name="twitter:description" content="University of Bath 26-27, MA32051/MA52129">
+<meta property="og:description" content="University of Bath 26-27, MA32051/MA52129">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -102,37 +62,60 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.10';
+eBookConfig.runestone_version = '8.3.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="https://trinh.github.io/BathMAFluids/"><img src="external/cover02.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Mathematics of fluid dynamics</span> <span class="subtitle">University of Bath 25-26, MA32051/MA52129</span></a></h1>
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Fluid dynamics</span> <span class="subtitle">University of Bath 26-27, MA32051/MA52129</span></a></div>
 <p class="byline"> </p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-vorticity-circulation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter06-vorticity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-axisymmetric-flow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec-vorticity-circulation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter06-vorticity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-axisymmetric-flow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand*{\Re}{\operatorname{Re}}
 \renewcommand*{\Im}{\operatorname{Im}}
 \newcommand{\e}{\mathrm{e}}
@@ -182,10 +165,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Official description</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="history.html" class="internal"><span class="title">History of the unit</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Related units at Bath</span></a></div></li>
@@ -194,17 +177,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter01-introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter01-introduction" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter01-introduction-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-vector-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A reminder of vector calculus</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-preliminary-complex-variables.html" class="internal"><span class="codenumber">1.2</span> <span class="title">A reminder of complex variables</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-preliminary-complex-variables" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Basic complex representations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Complex functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-intro-multifunctions" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Multifunctions, branch cuts, and Riemann sheets</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Other functions and visualisations</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Differentiation of complex functions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-preliminary-complex-variables.html#sec-preliminary-complex-variables-8" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Summary</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-intro.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li>
@@ -212,14 +192,15 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter02-kinematics.html" class="internal"><span class="codenumber">2</span> <span class="title">Kinematics</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter02-kinematics" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter02-kinematics-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-eulerlagrang.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Eulerian and Lagrangian coordinates</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-eulerlagrang" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-eulerlagrang.html#subsec-laglabel" class="internal"><span class="codenumber">2.1.1</span> <span class="title">The convective derivative</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-flowexamples.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Flow visualisation, fluxes, and forces</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-flowexamples" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#sec-flowexamples-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Definitions of streamlines, pathlines, streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-examples-streamlines" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Examples of streamlines, pathlines, and streaklines</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-flowexamples.html#subsec-fluxes-and-forces" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Fluxes and forces</span></a></div></li>
@@ -230,64 +211,66 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter03-equations.html" class="internal"><span class="codenumber">3</span> <span class="title">Equations of motion</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter03-equations" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter03-equations-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-RTT" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-chapter03-equations-4.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conservation of mass</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter03-equations-4" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#ch-chapter03-equations-4-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Derivation of mass conservation using Eulerian methods</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter03-equations-4.html#subsec-cor-consvmass" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Corollary of the Transport Theorem</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subsec-euler-momentum.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Momentum balance</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
+<ul id="ptx-toc-group-subsec-euler-momentum" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-euler-momentum.html#subsec-euler-momentum-3" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Proof of the momentum equation for an inviscid fluid</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-incompressible" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter04-potentialflows.html" class="internal"><span class="codenumber">4</span> <span class="title">Potential flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter04-potentialflows" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The velocity potential</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-Potential-and-streamfunction" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Potential-and-streamfunction.html#sec-Potential-and-streamfunction-3" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-streamfunction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The streamfunction</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-streamfunction.html#sec-streamfunction-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-streamfunction" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-streamfunction.html#sec-streamfunction-3" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Elementary flows</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-complex-potential.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The complex potential</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-complex-potential" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-introduction" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Cauchy’s theorem and harmonic functions</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-complex-potential.html#subsec-complex-examples" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Examples of elementary flows</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-method-of-images.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The method of images</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-method-of-images" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-method-of-images.html#subsec-images-planar" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Planar boundaries: a half-plane</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-conformal-mapping.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Conformal mapping</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-conformal-mapping" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-3" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Source in a wedge</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#subsec-conformal-theory" class="internal"><span class="codenumber">4.5.2</span> <span class="title">The conformal mapping method</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-conformal-mapping.html#sec-conformal-mapping-5" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Standard conformal maps</span></a></div></li>
@@ -295,7 +278,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Flow past an aerofoil</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter04-potentialflows-8" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-circle-maps" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Circle maps</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-chapter04-potentialflows-8.html#subsec-" class="internal"><span class="codenumber">4.6.2</span> <span class="title">The Joukowski map</span></a></div></li>
 </ul>
@@ -305,13 +288,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-chapter05-waves.html" class="internal"><span class="codenumber">5</span> <span class="title">Water waves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-chapter05-waves" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter05-waves-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-waterwaves-equations.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Governing equations of water waves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-waterwaves-equations" class="structural toc-item-list">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsec-waterwaves-boundaryconditions" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Boundary conditions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subsec-waterwaves-boundaryconditions" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-otherBC" class="internal"><span class="codenumber">5.1.1.1</span> <span class="title">Bottom boundary conditions</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-dynamicBC" class="internal"><span class="codenumber">5.1.1.2</span> <span class="title">Dynamic boundary conditions</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-waterwaves-equations.html#subsubsec-waterwaves-kinematicBC" class="internal"><span class="codenumber">5.1.1.3</span> <span class="title">Kinematic boundary conditions</span></a></div></li>
@@ -323,7 +307,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-wave-parameters.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wave parameters</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Stokes waves</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-waterwaves-stokeswaves" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html#subsec-waterwaves-linearisation" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Linearisation of the water-wave equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-waterwaves-stokeswaves.html#subsec-linear-waves-solution" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Solving for linear waves in infinite depth</span></a></div></li>
 </ul>
@@ -334,10 +318,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter06-vorticity.html" class="internal"><span class="codenumber">6</span> <span class="title">Vortex motion</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch-chapter06-vorticity">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-chapter06-vorticity-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-vorticity-circulation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Vorticity and circulation</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-vorticity-circulation" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vorticity" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Vorticity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-circulation" class="internal"><span class="codenumber">6.1.2</span> <span class="title">The circulation in a flow</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vorticity-circulation.html#sec-vortex-lines" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Vortex lines and surfaces</span></a></div></li>
@@ -345,14 +330,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-helmholtz.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Helmholtz vortex theorems</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-helmholtz">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#sec-helmholtz-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">The theorems</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-helmholtz.html#helmholtz-principle" class="internal"><span class="codenumber">6.2.2</span> <span class="title">The Helmholtz principle</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-axisymmetric-flow.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Axisymmetric flow</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-axisymmetric-flow" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-stokes-streamfunction" class="internal"><span class="codenumber">6.3.1</span> <span class="title">The Stokes streamfunction for axisymmetric flow</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-streamfunction-vorticity" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Relationship to vorticity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-axisymmetric-flow.html#subsec-irrot-sphere" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Irrotational flow past a sphere</span></a></div></li>
@@ -360,7 +345,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html" class="internal"><span class="codenumber">6.4</span> <span class="title">National Committee for Fluid Mechanics Films: Vorticity Parts 1 and 2</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-ncfmf-vorticity-films" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html#subsec-vorticity-part-1" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Vorticity Part 1</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ncfmf-vorticity-films.html#subsec-vorticity-part-2" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Vorticity Part 2</span></a></div></li>
 </ul>
@@ -370,15 +355,16 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">7</span> <span class="title">Viscous flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-ch-viscousflows" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-viscousflows-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Important definitions</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-definitions" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Viscosity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Reynolds number</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">7.1.3</span> <span class="title">State relations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-state-relations" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">7.1.3.1</span> <span class="title">Liquids</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">7.1.3.2</span> <span class="title">Gases</span></a></div></li>
 </ul>
@@ -387,7 +373,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-boundaries-surfaces-interfaces" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Surface tension</span></a></div></li>
@@ -395,14 +381,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Stress in a fluid</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-stress" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">7.3.2</span> <span class="title">The stress tensor</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Newtonian fluids</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-subsec-newtonian-fluids" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-incompressible-newtonian-fluids" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Incompressible Newtonian fluids</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-stress-surface" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Stress at a surface</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#inviscid-fluids" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Inviscid fluids</span></a></div></li>
@@ -412,7 +398,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Conservation of linear momentum</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-linear-momentum-cons" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">7.5.1</span> <span class="title">Left-hand side</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">7.5.2</span> <span class="title">Right-hand side</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">7.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
@@ -420,7 +406,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">7.5.5</span> <span class="title">Example of the application</span></a></div></li>
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-linear-momentum-cons.html#sec-low-and-high-reynolds-number" class="internal"><span class="codenumber">7.5.6</span> <span class="title">Limits of low and high Reynolds number</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-low-and-high-reynolds-number" class="structural toc-item-list">
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-low-Reynolds-number" class="internal"><span class="codenumber">7.5.6.1</span> <span class="title">Low Reynolds number</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-high-Reynolds-number" class="internal"><span class="codenumber">7.5.6.2</span> <span class="title">High Reynolds number</span></a></div></li>
 </ul>
@@ -430,7 +416,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-viscous-dissipation-of-energy.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Viscous Dissipation of Energy</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-methods-to-solve-equations.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Methods to solve the Navier–Stokes and continuity equations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-methods-to-solve-equations" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Methods of solution</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods-analytical" class="internal"><span class="codenumber">7.7.2</span> <span class="title">Methods to solve the equations analytically</span></a></div></li>
 </ul>
@@ -443,12 +429,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Vector calculus</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Vector calculus</span></a></div>
+<ul id="ptx-toc-group-backmatter-2" class="structural toc-item-list"><li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-converting-between-coordinates.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Converting between different coordinate systems</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sec-converting-between-coordinates" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar" class="internal"><span class="codenumber">A.1.1</span> <span class="title">Converting between Cartesian coordinates and cylindrical polar coordinates</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-plane-polar" class="internal"><span class="codenumber">A.1.2</span> <span class="title">Converting between Cartesian coordinates and plane polar coordinates</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-converting-between-coordinates.html#subsec-Cartesian-spherical-polar" class="internal"><span class="codenumber">A.1.3</span> <span class="title">Converting between Cartesian coordinates and spherical polar coordinates</span></a></div></li>
@@ -457,65 +443,77 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li></ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B.</span> <span class="title">List of Symbols</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-references"><div class="toc-title-box"><a href="refs-references.html" class="internal"><span class="title">References and further reading</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-helmholtz"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-helmholtz">
+<h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz vortex theorems</span>
-</h2>
-<section class="introduction" id="sec-helmholtz-2"><div class="para" id="sec-helmholtz-2-1">In this section, we cover some important theorems governing the motion of vortices in a fluid flow.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h1>
+<section class="introduction" id="sec-helmholtz-2">
+<div class="para" id="sec-helmholtz-2-1">In this section, we cover some important theorems governing the motion of vortices in a fluid flow.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-helmholtz"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter06-Hermann_von_Helmholtz.jpg" class="contained" alt="Helmholtz"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Hermann von Helmholtz (1821-1894)<div class="autopermalink" data-description="Figure 6.2.1"><a href="#fig-helmholtz" title="Copy heading and permalink for Figure 6.2.1" aria-label="Copy heading and permalink for Figure 6.2.1">🔗</a></div></figcaption></figure></section><section class="subsection" id="sec-helmholtz-3"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Hermann von Helmholtz (1821-1894)<div class="autopermalink" aria-hidden="true" data-description="Figure 6.2.1"><a tabindex="-1" href="#fig-helmholtz" title="Copy heading and permalink for Figure 6.2.1" aria-label="Copy heading and permalink for Figure 6.2.1">🔗</a></div></figcaption>
+</figure></section>
+<section class="subsection" id="sec-helmholtz-3">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The theorems</span>
+</h2>
+<article class="theorem theorem-like" id="thm-helmholtz-vortex-theorems"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz vortex theorems.</span>
 </h3>
-<article class="theorem theorem-like" id="thm-helmholtz-vortex-theorems"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz vortex theorems.</span>
-</h4>
 <div class="para logical" id="thm-helmholtz-vortex-theorems-2">
 <div class="para">For an inviscid, incompressible fluid under the influence of a conservative body force, the theorems state:</div>
 <ol class="decimal" id="thm-helmholtz-vortex-theorems-2-1">
 <li id="thm-helmholtz-vortex-theorems-2-1-1">
-<div class="para" id="thm-helmholtz-vortex-theorems-2-1-1-1">Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in <a href="sec-helmholtz.html#fig-vortextube" class="xref" data-knowl="./knowl/xref/fig-vortextube.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.3">Figure 6.2.3</a> (taken from <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.<div class="autopermalink" data-description="Paragraph"><a href="#thm-helmholtz-vortex-theorems-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-helmholtz-vortex-theorems-2-1-1-1">Vortex lines move with the fluid. Thus they follow the material paths of the fluid particles. We can group nearby vortex lines together to form a vortex tube, as shown in <a href="sec-helmholtz.html#fig-vortextube" class="xref" data-knowl="./knowl/xref/fig-vortextube.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.3">Figure 6.2.3</a> (taken from <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>), and the vortex tube moves with the flow. The surfaces of the vortex tube are vortex lines. This is a strong part of the reason why it is useful to calculate vortex lines.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#thm-helmholtz-vortex-theorems-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="thm-helmholtz-vortex-theorems-2-1-2">
 <figure class="figure figure-like" id="fig-vortextube"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter06-vortextube.jpg" class="contained" alt="Vortex tube"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of a vortex tube.<div class="autopermalink" data-description="Figure 6.2.3"><a href="#fig-vortextube" title="Copy heading and permalink for Figure 6.2.3" aria-label="Copy heading and permalink for Figure 6.2.3">🔗</a></div></figcaption></figure><div class="para" id="thm-helmholtz-vortex-theorems-2-1-2-2">The circulation of the tube is <span class="process-math">\(\Gamma=\oint_C\bu\cdot \de{\bx}\)</span> around any closed curve <span class="process-math">\(C\)</span> that goes once anticlockwise around the vortex tube, or equivalently <span class="process-math">\(\Gamma=\int_S\bomega\cdot{\bn}\,\de S\text{,}\)</span> where <span class="process-math">\(S\)</span> is any cross-section of the vortex tube, see <a href="sec-vorticity-circulation.html#eq-circulationvorticity" class="xref" data-knowl="./knowl/xref/eq-circulationvorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.1.1">(6.1.1)</a>. The circulation is independent of the choice of curve <span class="process-math">\(C\)</span> or cross-section <span class="process-math">\(S\)</span> at all times.<div class="autopermalink" data-description="Paragraph"><a href="#thm-helmholtz-vortex-theorems-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of a vortex tube.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.2.3"><a tabindex="-1" href="#fig-vortextube" title="Copy heading and permalink for Figure 6.2.3" aria-label="Copy heading and permalink for Figure 6.2.3">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="thm-helmholtz-vortex-theorems-2-1-2-2">The circulation of the tube is <span class="process-math">\(\Gamma=\oint_C\bu\cdot \de{\bx}\)</span> around any closed curve <span class="process-math">\(C\)</span> that goes once anticlockwise around the vortex tube, or equivalently <span class="process-math">\(\Gamma=\int_S\bomega\cdot{\bn}\,\de S\text{,}\)</span> where <span class="process-math">\(S\)</span> is any cross-section of the vortex tube, see <a href="sec-vorticity-circulation.html#eq-circulationvorticity" class="xref" data-knowl="./knowl/xref/eq-circulationvorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.1.1">(6.1.1)</a>. The circulation is independent of the choice of curve <span class="process-math">\(C\)</span> or cross-section <span class="process-math">\(S\)</span> at all times.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#thm-helmholtz-vortex-theorems-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-helmholtz-vortex-theorems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 6.2.2: The Helmholtz vortex theorems"><a href="#thm-helmholtz-vortex-theorems" title="Copy heading and permalink for Theorem 6.2.2: The Helmholtz vortex theorems" aria-label="Copy heading and permalink for Theorem 6.2.2: The Helmholtz vortex theorems">🔗</a></div></article><details id="sec-helmholtz-3-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Proof of the Helmholtz vortex theorems.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-helmholtz-3-3-2">
-<em class="emphasis">Proof of the first vortex theorem.</em> For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 6.2.2: The Helmholtz vortex theorems"><a tabindex="-1" href="#thm-helmholtz-vortex-theorems" title="Copy heading and permalink for Theorem 6.2.2: The Helmholtz vortex theorems" aria-label="Copy heading and permalink for Theorem 6.2.2: The Helmholtz vortex theorems">🔗</a></div>
+</article>
+<details id="sec-helmholtz-3-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of the Helmholtz vortex theorems.</span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="sec-helmholtz-3-3-2">
+<em class="emphasis">Proof of the first vortex theorem.</em> For a given vortex line, choose two vortex surfaces containing the line such that the vortex line is the intersection of the two vortex surfaces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-helmholtz-3-3-3">
 <div class="para">Choose a closed curve <span class="process-math">\(C\)</span> lying within one the vortex surfaces. The circulation around <span class="process-math">\(C\)</span> is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-kelvin-circulation-theorem.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-kelvin-circulation-theorem.html" id="sec-helmholtz-3-3-3-3">
 \begin{equation*}
 \Gamma=\oint_C\bu\cdot\de\bx=\iint_S\bomega\cdot\bn\,\de S,
 \end{equation*}
 </div>
 <div class="para">where the final equality is by Stokes’ theorem. Since the curve is within the vortex surface, the vorticity is parallel to the surface, and hence <span class="process-math">\(\bomega\cdot\bn=0\text{.}\)</span> Thus <span class="process-math">\(\Gamma=0\text{,}\)</span> and by Kelvin’s circulation theorem <a href="sec-vorticity-circulation.html#thm-kelvin-circulation-theorem" class="xref" data-knowl="./knowl/xref/thm-kelvin-circulation-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.2: Kelvin’s circulation theorem">Theorem 6.1.2</a>, <span class="process-math">\(\Gamma\)</span> must remain at zero for all times.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-3-4">Thus at time <span class="process-math">\(t\text{,}\)</span> the evolved surface has circulation zero for all closed curves, and therefore by Stokes’ theorem, the integral of <span class="process-math">\(\bomega\cdot\bn\)</span> over any sub-surface must be zero. Hence <span class="process-math">\(\bomega\cdot\bn=0\)</span> at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-3-4">Thus at time <span class="process-math">\(t\text{,}\)</span> the evolved surface has circulation zero for all closed curves, and therefore by Stokes’ theorem, the integral of <span class="process-math">\(\bomega\cdot\bn\)</span> over any sub-surface must be zero. Hence <span class="process-math">\(\bomega\cdot\bn=0\)</span> at all points on the surface, meaning that the vorticity is everywhere parallel to the evolved surface. This means that the evolved surface must be a vortex surface.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-3-5">Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-3-5">Recall that any vortex line can be defined by the intersection of two vortex surfaces. Let the two surfaces evolve and the evolution of the vortex line remains as the intersection of the two evolved vortex surfaces. As proven already, the vorticity is everywhere parallel to the two evolved vortex surfaces and thus it is parallel to the evolved vortex line. This means that it remains as a vortex line.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-3-6">This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen’ in the fluid, meaning that the evolve in the same way as a dye `frozen’ into the fluid would.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-3-6">This completes the proof of the first vortex theorem: vortex lines evolve with the fluid. We sometimes say that the vortex lines are `frozen’ in the fluid, meaning that the evolve in the same way as a dye `frozen’ into the fluid would.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-helmholtz-3-3-7">
 <div class="para">
 <em class="emphasis">Proof of the second vortex theorem. Proof that <span class="process-math">\(\Gamma\)</span> is the same for all cross-sections.</em> To prove the second vortex theorem, choose two different cross-sections of the vortex tube, <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\)</span> say, and consider the section <span class="process-math">\(V\)</span> of the vortex tube lying between <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{.}\)</span> We integrate over the surface of <span class="process-math">\(V\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-helmholtz-3-3-7-8">
 \begin{equation*}
 \iint_{\partial V}\bomega\cdot\bn\de S
 =\iint_{S_2}\bomega\cdot\bn\de S
@@ -524,29 +522,29 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">where `outside’ refers to the outer surface of the vortex tube between <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{.}\)</span> Since vortex lines are paralled to this surface, we have <span class="process-math">\(\bomega\cdot\bn=0\)</span> there, and so</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-helmholtz-3-3-7-12">
 \begin{equation*}
 \iint_{\partial V}\bomega\cdot\bn\de S
 =\iint_{S_2}\bomega\cdot\bn\de S
 -\iint_{S_1}\bomega\cdot\bn\de S.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-helmholtz-3-3-8">
 <div class="para">Now, by the divergence theorem,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-helmholtz-3-3-8-1">
 \begin{equation*}
 \iint_{\partial V}\bomega\cdot\bn\de S
 =\iiint_V\nabla\cdot\omega \de V,
 \end{equation*}
 </div>
 <div class="para">but this equals zero, since <span class="process-math">\(\nabla\cdot\omega=0\)</span> (divergence of a curl is zero).</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-helmholtz-3-3-9">
 <div class="para">Putting this together,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-helmholtz-3-3-9-1">
 \begin{equation*}
 \iint_{\partial V}\bomega\cdot\bn\de S
 =\iint_{S_2}\bomega\cdot\bn\de S
@@ -555,14 +553,14 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">and this was true for any choice of <span class="process-math">\(S_1\)</span> and <span class="process-math">\(S_2\text{.}\)</span> Hence, <span class="process-math">\(\Gamma\)</span> is the same for all cross-sections of a vortex tube.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-helmholtz-3-3-10">
-<em class="emphasis">Proof of the second vortex theorem (continued). Proof that <span class="process-math">\(\Gamma\)</span> is independent of time.</em> To prove that <span class="process-math">\(\Gamma\)</span> is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Proof of the second vortex theorem (continued). Proof that <span class="process-math">\(\Gamma\)</span> is independent of time.</em> To prove that <span class="process-math">\(\Gamma\)</span> is independent of time, we note that, since the vortex lines move with the fluid, the vortex tube also moves with the fluid, being composed of vortex lines, and the same vortex lines lie on the surface and are enclosed within the vortex tube for all time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-helmholtz-3-3-11">
 <div class="para">Moreover,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-kelvin-circulation-theorem.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-kelvin-circulation-theorem.html" id="sec-helmholtz-3-3-11-1">
 \begin{equation*}
 \Gamma=\iint\omega\cdot\bn\de S
 =\oint\bu\cdot\de\bx
@@ -570,105 +568,133 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">by Stokes’ theorem, which is the circulation around the boundary of <span class="process-math">\(S\text{.}\)</span> As the tube evolves, the material surface <span class="process-math">\(S\)</span> moves with the vortex tube. By Kelvin’s circulation theorem <a href="sec-vorticity-circulation.html#thm-kelvin-circulation-theorem" class="xref" data-knowl="./knowl/xref/thm-kelvin-circulation-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.2: Kelvin’s circulation theorem">Theorem 6.1.2</a>, <span class="process-math">\(\Gamma\)</span> remains independent of <span class="process-math">\(t\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 6.2.1.1: Proof of the Helmholtz vortex theorems"><a href="#sec-helmholtz-3-3" title="Copy heading and permalink for Proof 6.2.1.1: Proof of the Helmholtz vortex theorems" aria-label="Copy heading and permalink for Proof 6.2.1.1: Proof of the Helmholtz vortex theorems">🔗</a></div></article></details><article class="remark remark-like" id="sec-helmholtz-3-4"><h4 class="heading">
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.2.1.1: Proof of the Helmholtz vortex theorems"><a tabindex="-1" href="#sec-helmholtz-3-3" title="Copy heading and permalink for Proof 6.2.1.1: Proof of the Helmholtz vortex theorems" aria-label="Copy heading and permalink for Proof 6.2.1.1: Proof of the Helmholtz vortex theorems">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="sec-helmholtz-3-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="sec-helmholtz-3-4-1">The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by <span class="process-math">\(\Gamma=\int_S\bomega\cdot{\bn}\,dS\text{,}\)</span> and this must remain constant, and therefore, since the area of the cross-section <span class="process-math">\(S\)</span> is decreasing, the magnitude of vorticiy  <span class="process-math">\(\bomega\)</span> must increase in the tube. This is <em class="emphasis">spin up</em>. Conversely, if a vortex tube becomes shorter, we get the opposite effect of <em class="emphasis">spin down</em> and <span class="process-math">\(\bomega\)</span> gets smaller.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3>
+<div class="para" id="sec-helmholtz-3-4-1">The second theorem shows us that if a vortex tube becomes stretched then by mass conservation, it must get thinner. The flux of vorticity along the vortex tube is given by <span class="process-math">\(\Gamma=\int_S\bomega\cdot{\bn}\,dS\text{,}\)</span> and this must remain constant, and therefore, since the area of the cross-section <span class="process-math">\(S\)</span> is decreasing, the magnitude of vorticiy  <span class="process-math">\(\bomega\)</span> must increase in the tube. This is <em class="emphasis">spin up</em>. Conversely, if a vortex tube becomes shorter, we get the opposite effect of <em class="emphasis">spin down</em> and <span class="process-math">\(\bomega\)</span> gets smaller.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-4-2">A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-4-2">A non-fluids example of the same principle can be seen when dancers perform moves involving spins, especially ice skaters, the dance starts rotating with their arms or legs out, and then they pull in to speed up the spin.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 6.2.4"><a href="#sec-helmholtz-3-4" title="Copy heading and permalink for Remark 6.2.4" aria-label="Copy heading and permalink for Remark 6.2.4">🔗</a></div></article><details id="ex-spinup-spindown" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Everyday examples of spin up and spin down.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-spinup"><img src="external/ch-chapter06-spinup.jpg" class="contained" alt="Spin up"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Spin up of vorticity as thunderclouds move overhead.<div class="autopermalink" data-description="Figure 6.2.6"><a href="#fig-spinup" title="Copy heading and permalink for Figure 6.2.6" aria-label="Copy heading and permalink for Figure 6.2.6">🔗</a></div></figcaption></figure></div>
-<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-spindown"><img src="external/ch-chapter06-spindown.jpg" class="contained" alt="Spin up"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).<div class="autopermalink" data-description="Figure 6.2.7"><a href="#fig-spindown" title="Copy heading and permalink for Figure 6.2.7" aria-label="Copy heading and permalink for Figure 6.2.7">🔗</a></div></figcaption></figure></div>
-</div></div>
-<div class="para" id="ex-spinup-spindown-3">The two sketches in <a href="sec-helmholtz.html#fig-spinup" class="xref" data-knowl="./knowl/xref/fig-spinup.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.6">Figure 6.2.6</a> and <a href="sec-helmholtz.html#fig-spindown" class="xref" data-knowl="./knowl/xref/fig-spindown.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.7">Figure 6.2.7</a> (taken from <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.<div class="autopermalink" data-description="Paragraph"><a href="#ex-spinup-spindown-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 6.2.4"><a tabindex="-1" href="#sec-helmholtz-3-4" title="Copy heading and permalink for Remark 6.2.4" aria-label="Copy heading and permalink for Remark 6.2.4">🔗</a></div>
+</article>
+<details id="ex-spinup-spindown" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Everyday examples of spin up and spin down.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="fig-spinup"><div class="image-box"><img src="external/ch-chapter06-spinup.jpg" class="contained" alt="Spin up"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Spin up of vorticity as thunderclouds move overhead.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.2.6"><a tabindex="-1" href="#fig-spinup" title="Copy heading and permalink for Figure 6.2.6" aria-label="Copy heading and permalink for Figure 6.2.6">🔗</a></div></figcaption>
+</figure>
 </div>
-<div class="para" id="ex-spinup-spindown-4">There is a nice video of a <a class="external" href="https://www.instagram.com/reel/DLfUkDxuxmR/?hl=en" target="_blank">tornado on Instagram</a>. Due to the fast flow in the tornado, the pressure in the core is very low (this is an application of Bernoulli’s equation), and water condenses out of the air, making the tornado visible.<div class="autopermalink" data-description="Paragraph"><a href="#ex-spinup-spindown-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="fig-spindown"><div class="image-box"><img src="external/ch-chapter06-spindown.jpg" class="contained" alt="Spin up"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Spin down of a cup of tea. Secondary circulations (shown by the arrows) tend to spread the material lines out radially. Thus the tall thin column of fluid (a) becomes a short fat one(b).<div class="autopermalink" aria-hidden="true" data-description="Figure 6.2.7"><a tabindex="-1" href="#fig-spindown" title="Copy heading and permalink for Figure 6.2.7" aria-label="Copy heading and permalink for Figure 6.2.7">🔗</a></div></figcaption>
+</figure>
 </div>
-<div class="autopermalink" data-description="Example 6.2.5: Everyday examples of spin up and spin down"><a href="#ex-spinup-spindown" title="Copy heading and permalink for Example 6.2.5: Everyday examples of spin up and spin down" aria-label="Copy heading and permalink for Example 6.2.5: Everyday examples of spin up and spin down">🔗</a></div></article></details><details id="ex-plughole-vortex" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Plug hole vortex.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="ex-plughole-vortex-2">We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’ at <a class="external" href="https://web.mit.edu/hml/ncfmf.html" target="_blank">this website</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-plughole-vortex-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-plughole-vortex-3">The presenter commented that the angular momentum of a fluid parcel remains constant. Using angular momentum equals velocity times distance from axis, this implies the angular velocity is proportial to the inverse of the radial distance. This is precisely the<div class="autopermalink" data-description="Paragraph"><a href="#ex-plughole-vortex-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-spinup-spindown-3">The two sketches in <a href="sec-helmholtz.html#fig-spinup" class="xref" data-knowl="./knowl/xref/fig-spinup.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.6">Figure 6.2.6</a> and <a href="sec-helmholtz.html#fig-spindown" class="xref" data-knowl="./knowl/xref/fig-spindown.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.7">Figure 6.2.7</a> (taken from <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>) show examples of spin up and spin down, respectively. Spin up occurs in thunderstorms; as the cloud moves, the vortex lines get stretched, and this can result in a tornado. Spin up happens in a cup of tea after it has been stirred. Secondary flows in the cup tend to spread the column of rotating fluid horizontally, making the area of the cross-section of the vortex tube bigger, and hence the vorticity smaller, which is spin down.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spinup-spindown-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-spinup-spindown-4">There is a nice video of a <a class="external" href="https://www.instagram.com/reel/DLfUkDxuxmR/?hl=en" target="_blank">tornado on Instagram</a>. Due to the fast flow in the tornado, the pressure in the core is very low (this is an application of Bernoulli’s equation), and water condenses out of the air, making the tornado visible.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-spinup-spindown-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.5: Everyday examples of spin up and spin down"><a tabindex="-1" href="#ex-spinup-spindown" title="Copy heading and permalink for Example 6.2.5: Everyday examples of spin up and spin down" aria-label="Copy heading and permalink for Example 6.2.5: Everyday examples of spin up and spin down">🔗</a></div>
+</article></details>
+<details id="ex-plughole-vortex" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Plug hole vortex.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="ex-plughole-vortex-2">We saw the vortex that forms around a plug hole in the movie `Vorticity, Part 1’ at <a class="external" href="https://web.mit.edu/hml/ncfmf.html" target="_blank">this website</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-plughole-vortex-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-plughole-vortex-3">The presenter commented that the angular momentum of a fluid parcel remains constant. Using angular momentum equals velocity times distance from axis, this implies the angular velocity is proportial to the inverse of the radial distance. This is precisely the<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-plughole-vortex-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-plughole-vortex-4">
 <div class="para">In it, we saw a reference to `Crocco’s theorem’, which can be derived from the derivation of Bernoulli’s equation <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.6">(3.5.6)</a>:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="ex-plughole-vortex-4-2">
 \begin{equation*}
 \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
 \end{equation*}
 </div>
 <div class="para">where</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="ex-plughole-vortex-4-3">
 \begin{equation*}
 B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi,
 \end{equation*}
 </div>
 <div class="para">with</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="ex-plughole-vortex-4-4">
 \begin{equation*}
 \bg = -\nabla \chi.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-plughole-vortex-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-plughole-vortex-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-plughole-vortex-5">
 <div class="para">Noting that this flow is steady and has zero vorticity away from the plughole, we must have <span class="process-math">\(\bnabla B=0\text{,}\)</span> that is <span class="process-math">\(B\)</span> is constant everywhere. On the surface, we have <span class="process-math">\(p=p_{\mathrm{atm}}\)</span> and hence <span class="process-math">\(|\bu|^2/2 + gz\)</span> is constant, where <span class="process-math">\(z\)</span> is vertical height. Using <a href="sec-streamfunction.html#eq-u-line-vortex" class="xref" data-knowl="./knowl/xref/eq-u-line-vortex.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.9">(4.2.9)</a>, the speed is <span class="process-math">\(\Gamma/(2\pi r)\text{.}\)</span> Hence, the quantity</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-u-line-vortex.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-u-line-vortex.html" id="ex-plughole-vortex-5-8">
 \begin{equation*}
 \frac{\Gamma^2}{8\pi^2r^2}+gz
 \end{equation*}
 </div>
 <div class="para">is constant, that is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-u-line-vortex.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-u-line-vortex.html" id="ex-plughole-vortex-5-9">
 \begin{equation*}
 z=z_0-\frac{\Gamma^2}{8\pi^2gr^2},
 \end{equation*}
 </div>
 <div class="para">thus explaining the shape of the surface that was seen.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-plughole-vortex-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-plughole-vortex-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 6.2.8: Plug hole vortex"><a href="#ex-plughole-vortex" title="Copy heading and permalink for Example 6.2.8: Plug hole vortex" aria-label="Copy heading and permalink for Example 6.2.8: Plug hole vortex">🔗</a></div></article></details><details id="sec-helmholtz-3-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tornado.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-helmholtz-3-7-2">
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.8: Plug hole vortex"><a tabindex="-1" href="#ex-plughole-vortex" title="Copy heading and permalink for Example 6.2.8: Plug hole vortex" aria-label="Copy heading and permalink for Example 6.2.8: Plug hole vortex">🔗</a></div>
+</article></details>
+<details id="sec-helmholtz-3-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tornado.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="sec-helmholtz-3-7-2">
 <div class="para">As commented in the `Vorticity, Part 2’ at <a class="external" href="https://web.mit.edu/hml/ncfmf.html" target="_blank">this website</a>, the pressure in the middle of a tornado is very low. This can also be understood from Bernoulli’s equation <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.6">(3.5.6)</a>:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="sec-helmholtz-3-7-2-3">
 \begin{equation*}
 \pd{\bu}{t} + \bomega \times \bu = -\nabla B,
 \end{equation*}
 </div>
 <div class="para">with</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="sec-helmholtz-3-7-2-4">
 \begin{equation*}
 B = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi.
 \end{equation*}
 </div>
 <div class="para">In the steady case, and outside the vortex core, there is no vorticity and hence <span class="process-math">\(B\)</span> is constant, meaning that, as we approach the vortex core, the pressure decreases as the fluid speed increases. Furthermore, in the vortex core where the vorticity is non-zero, the quantity <span class="process-math">\(\bomega \times \bu\)</span> points towards the axis. Thus <span class="process-math">\(B\)</span> decreases as the axis is approached, further decreasing the pressure.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-7-3">This pressure reduction leads to condensation in the core of the tornado, and this is visible, allowing us to see the tornado, and, to some extent, visualise the intense air flows associated with it.<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-7-3">This pressure reduction leads to condensation in the core of the tornado, and this is visible, allowing us to see the tornado, and, to some extent, visualise the intense air flows associated with it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-helmholtz-3-7-4">As commented, in propellors of boats, this pressure reduction in the core of a vortex can cause the water to boil!<div class="autopermalink" data-description="Paragraph"><a href="#sec-helmholtz-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-helmholtz-3-7-4">As commented, in propellors of boats, this pressure reduction in the core of a vortex can cause the water to boil!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-helmholtz-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 6.2.9: Tornado"><a href="#sec-helmholtz-3-7" title="Copy heading and permalink for Example 6.2.9: Tornado" aria-label="Copy heading and permalink for Example 6.2.9: Tornado">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.2.1: The theorems"><a href="#sec-helmholtz-3" title="Copy heading and permalink for Subsection 6.2.1: The theorems" aria-label="Copy heading and permalink for Subsection 6.2.1: The theorems">🔗</a></div></section><section class="subsection" id="helmholtz-principle"><h3 class="heading hide-type">
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.9: Tornado"><a tabindex="-1" href="#sec-helmholtz-3-7" title="Copy heading and permalink for Example 6.2.9: Tornado" aria-label="Copy heading and permalink for Example 6.2.9: Tornado">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.2.1: The theorems"><a tabindex="-1" href="#sec-helmholtz-3" title="Copy heading and permalink for Subsection 6.2.1: The theorems" aria-label="Copy heading and permalink for Subsection 6.2.1: The theorems">🔗</a></div>
+</section>
+<section class="subsection" id="helmholtz-principle">
+<h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz principle</span>
+</h2>
+<article class="remark remark-like" id="helmholtz-principle-2"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recap of line vortex.</span>
 </h3>
-<article class="remark remark-like" id="helmholtz-principle-2"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Recap of line vortex.</span>
-</h4>
 <div class="para logical" id="helmholtz-principle-2-2">
 <div class="para">The Helmholtz vertex theorems help us to understand the concept of a line vortex in irrotational flow that was introduced in <a href="sec-streamfunction.html#example-streamfunction-linevortex" class="xref" data-knowl="./knowl/xref/example-streamfunction-linevortex.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.2.10: Line vortex">Example 4.2.10</a>. Recall that this is associated with the complex potential</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-streamfunction-linevortex.html ./knowl/xref/eq-line-vortex-complex-potential.html ./knowl/xref/eq-line-vortex-circulation.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-streamfunction-linevortex.html ./knowl/xref/eq-line-vortex-complex-potential.html ./knowl/xref/eq-line-vortex-circulation.html" id="helmholtz-principle-2-2-2">
 \begin{equation*}
 f(z) = -\frac{\im \Gamma}{2\pi} \log z.
 \end{equation*}
 </div>
 <div class="para">(see <a href="sec-complex-potential.html#eq-line-vortex-complex-potential" class="xref" data-knowl="./knowl/xref/eq-line-vortex-complex-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.3.7">(4.3.7)</a>), and has corresponding velocity components</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-streamfunction-linevortex.html ./knowl/xref/eq-line-vortex-complex-potential.html ./knowl/xref/eq-line-vortex-circulation.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/example-streamfunction-linevortex.html ./knowl/xref/eq-line-vortex-complex-potential.html ./knowl/xref/eq-line-vortex-circulation.html" id="helmholtz-principle-2-2-4">
 \begin{equation*}
 u = -\frac{\Gamma y}{2\pi(x^2+y^2)},\quad
 v = \frac{\Gamma x}{2\pi(x^2+y^2)}.
@@ -676,49 +702,61 @@ v = \frac{\Gamma x}{2\pi(x^2+y^2)}.
 </div>
 <div class="para">The vorticity associated with this flow <span class="process-math">\(\bomega=\bzero\)</span> at all points except the singularity at the origin. However, it was also notes in <a href="sec-streamfunction.html#eq-line-vortex-circulation" class="xref" data-knowl="./knowl/xref/eq-line-vortex-circulation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.2.10">(4.2.10)</a> that the circulation around any closed curve containing the origin is <span class="process-math">\(\Gamma\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="helmholtz-principle-2-3">Thus, a line vortex of strength <span class="process-math">\(\Gamma\)</span> is the limit of a vortex tube of strength <span class="process-math">\(\Gamma\)</span> as its thickness goes to zero.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-2-3">Thus, a line vortex of strength <span class="process-math">\(\Gamma\)</span> is the limit of a vortex tube of strength <span class="process-math">\(\Gamma\)</span> as its thickness goes to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="helmholtz-principle-2-4">We note that in any real fluid, the effects of viscosity would come into play in the core of the line vortex, disallowing an infinite concentration of vorticity there. Despite this, we can use the concept of a line vortex to gain insight into a number of real-world problems.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-2-4">We note that in any real fluid, the effects of viscosity would come into play in the core of the line vortex, disallowing an infinite concentration of vorticity there. Despite this, we can use the concept of a line vortex to gain insight into a number of real-world problems.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 6.2.10: Recap of line vortex"><a href="#helmholtz-principle-2" title="Copy heading and permalink for Remark 6.2.10: Recap of line vortex" aria-label="Copy heading and permalink for Remark 6.2.10: Recap of line vortex">🔗</a></div></article><div class="para" id="helmholtz-principle-3">The following corollary is a useful application of the Helmholtz vortex theorems.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 6.2.10: Recap of line vortex"><a tabindex="-1" href="#helmholtz-principle-2" title="Copy heading and permalink for Remark 6.2.10: Recap of line vortex" aria-label="Copy heading and permalink for Remark 6.2.10: Recap of line vortex">🔗</a></div>
+</article>
+<div class="para" id="helmholtz-principle-3">The following corollary is a useful application of the Helmholtz vortex theorems.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="corollary theorem-like" id="cor-vortex-movement"><h4 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz principle.</span>
-</h4>
-<div class="para" id="cor-vortex-movement-2-1">A useful corollary to the Helmholtz vortex theorems <a href="sec-helmholtz.html#thm-helmholtz-vortex-theorems" class="xref" data-knowl="./knowl/xref/thm-helmholtz-vortex-theorems.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.2: The Helmholtz vortex theorems">Theorem 6.2.2</a> is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.’<div class="autopermalink" data-description="Paragraph"><a href="#cor-vortex-movement-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="corollary theorem-like" id="cor-vortex-movement"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Helmholtz principle.</span>
+</h3>
+<div class="para" id="cor-vortex-movement-2-1">A useful corollary to the Helmholtz vortex theorems <a href="sec-helmholtz.html#thm-helmholtz-vortex-theorems" class="xref" data-knowl="./knowl/xref/thm-helmholtz-vortex-theorems.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.2: The Helmholtz vortex theorems">Theorem 6.2.2</a> is capture by the following statement: `A line vortex moves with the velocity field due to everything except itself.’<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#cor-vortex-movement-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 6.2.11: The Helmholtz principle"><a href="#cor-vortex-movement" title="Copy heading and permalink for Corollary 6.2.11: The Helmholtz principle" aria-label="Copy heading and permalink for Corollary 6.2.11: The Helmholtz principle">🔗</a></div></article><details id="helmholtz-principle-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="helmholtz-principle-5-1">A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem <a href="sec-helmholtz.html#thm-helmholtz-vortex-theorems" class="xref" data-knowl="./knowl/xref/thm-helmholtz-vortex-theorems.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.2: The Helmholtz vortex theorems">Theorem 6.2.2</a>, these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Corollary 6.2.11: The Helmholtz principle"><a tabindex="-1" href="#cor-vortex-movement" title="Copy heading and permalink for Corollary 6.2.11: The Helmholtz principle" aria-label="Copy heading and permalink for Corollary 6.2.11: The Helmholtz principle">🔗</a></div>
+</article>
+<details id="helmholtz-principle-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="helmholtz-principle-5-1">A flow with a line vortex has an infinite concentration of vortex lines along the axis of the line vortex. By the first vortex theorem <a href="sec-helmholtz.html#thm-helmholtz-vortex-theorems" class="xref" data-knowl="./knowl/xref/thm-helmholtz-vortex-theorems.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.2: The Helmholtz vortex theorems">Theorem 6.2.2</a>, these are frozen in the fluid, and thus evolve with the background flow with the line vortex removed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 6.2.2.1"><a href="#helmholtz-principle-5" title="Copy heading and permalink for Proof 6.2.2.1" aria-label="Copy heading and permalink for Proof 6.2.2.1">🔗</a></div></article></details><article class="remark remark-like" id="rem-helmholtz-application"><h4 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application of the Helmholtz principle.</span>
-</h4>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 6.2.2.1"><a tabindex="-1" href="#helmholtz-principle-5" title="Copy heading and permalink for Proof 6.2.2.1" aria-label="Copy heading and permalink for Proof 6.2.2.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="rem-helmholtz-application"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application of the Helmholtz principle.</span>
+</h3>
 <div class="para logical" id="rem-helmholtz-application-2">
 <div class="para">In the case of a two-dimensional flow containing a line vortex that is everywhere irrotational (apart from in the line vortex core), we can use the Helmholtz principle to find the motion of the line vortex. In particular, to find the evolution of the flow we can make use of the following techniques that were covered in <a href="ch-chapter04-potentialflows.html" class="internal" title="Chapter 4: Potential flows">Chapter 4</a>:</div>
 <ul class="disc" id="rem-helmholtz-application-2-2">
 <li id="rem-helmholtz-application-2-2-1">
-<div class="para" id="rem-helmholtz-application-2-2-1-1">the method of images <a href="sec-method-of-images.html" class="internal" title="Section 4.4: The method of images">Section 4.4</a>, and<div class="autopermalink" data-description="Paragraph"><a href="#rem-helmholtz-application-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rem-helmholtz-application-2-2-1-1">the method of images <a href="sec-method-of-images.html" class="internal" title="Section 4.4: The method of images">Section 4.4</a>, and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-helmholtz-application-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#rem-helmholtz-application-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rem-helmholtz-application-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="rem-helmholtz-application-2-2-2">
-<div class="para" id="rem-helmholtz-application-2-2-2-1">conformal mapping <a href="sec-conformal-mapping.html" class="internal" title="Section 4.5: Conformal mapping">Section 4.5</a>.<div class="autopermalink" data-description="Paragraph"><a href="#rem-helmholtz-application-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="rem-helmholtz-application-2-2-2-1">conformal mapping <a href="sec-conformal-mapping.html" class="internal" title="Section 4.5: Conformal mapping">Section 4.5</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-helmholtz-application-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#rem-helmholtz-application-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#rem-helmholtz-application-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#rem-helmholtz-application-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#rem-helmholtz-application-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 6.2.12: Application of the Helmholtz principle"><a href="#rem-helmholtz-application" title="Copy heading and permalink for Remark 6.2.12: Application of the Helmholtz principle" aria-label="Copy heading and permalink for Remark 6.2.12: Application of the Helmholtz principle">🔗</a></div></article><details id="helmholtz-principle-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vortex pair.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="helmholtz-principle-7-2">We assume two-dimensional flow, and consider the evolution of two line vortices of equal and opposite strengths initially a distance <span class="process-math">\(2d\)</span> apart at locations <span class="process-math">\((x,y)=(\pm d,0\)</span> with the vortex at <span class="process-math">\((d,0)\)</span> having strength <span class="process-math">\(\Gamma\)</span> and that at <span class="process-math">\((-d,0)\)</span> having strength <span class="process-math">\(-\Gamma\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 6.2.12: Application of the Helmholtz principle"><a tabindex="-1" href="#rem-helmholtz-application" title="Copy heading and permalink for Remark 6.2.12: Application of the Helmholtz principle" aria-label="Copy heading and permalink for Remark 6.2.12: Application of the Helmholtz principle">🔗</a></div>
+</article>
+<details id="helmholtz-principle-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vortex pair.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="helmholtz-principle-7-2">We assume two-dimensional flow, and consider the evolution of two line vortices of equal and opposite strengths initially a distance <span class="process-math">\(2d\)</span> apart at locations <span class="process-math">\((x,y)=(\pm d,0\)</span> with the vortex at <span class="process-math">\((d,0)\)</span> having strength <span class="process-math">\(\Gamma\)</span> and that at <span class="process-math">\((-d,0)\)</span> having strength <span class="process-math">\(-\Gamma\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="helmholtz-principle-7-3">The vortex at <span class="process-math">\((d,0)\)</span> will move under the influence of that at <span class="process-math">\((-d,0)\)</span> with speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction. Similarly, the vortex <span class="process-math">\((-d,0)\)</span> will also move with speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction. Since their separation remains constant, the two vortices will continue to move at a constant speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-3">The vortex at <span class="process-math">\((d,0)\)</span> will move under the influence of that at <span class="process-math">\((-d,0)\)</span> with speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction. Similarly, the vortex <span class="process-math">\((-d,0)\)</span> will also move with speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction. Since their separation remains constant, the two vortices will continue to move at a constant speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="helmholtz-principle-7-4">
 <div class="para">In the frame of reference moving with the vortices, there is a uniform flow <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(+y\)</span>-direction and the flow due to each of the vortices. The complex potential is the sum of the complex potentials due to these three elements:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="helmholtz-principle-7-4-3">
 \begin{equation*}
 f=-\frac{\im \Gamma z}{4\pi d}
 -\frac{\im \Gamma}{2\pi}\log\left(z-d\right)
@@ -735,7 +773,7 @@ f=-\frac{\im \Gamma z}{4\pi d}
 =&amp;-\frac{\Gamma}{4\pi}\left(\frac{x}{d}+\log\left(\frac{(x-d)^2+y^2}{(x+d)^2+y^2}\right)\right).
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="helmholtz-principle-7-5">
 <div class="para">To help with plotting the streamfunction, we note that:</div>
@@ -743,73 +781,88 @@ f=-\frac{\im \Gamma z}{4\pi d}
 <li id="helmholtz-principle-7-5-1-1">
 <div class="para logical" id="helmholtz-principle-7-5-1-1-1">
 <div class="para">The derivative of the complex potential is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="helmholtz-principle-7-5-1-1-1-1">
 \begin{equation*}
 f'=-\frac{\im\Gamma}{4\pi}\left(\frac1d+\frac{2}{z-d}-\frac{2}{z+d}\right),
 \end{equation*}
 </div>
 <div class="para">which equals zero at the points <span class="process-math">\(z=\pm\sqrt{3}\im d\text{,}\)</span> so these are stagnation points of the flow.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#helmholtz-principle-7-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#helmholtz-principle-7-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="helmholtz-principle-7-5-1-2">
-<div class="para" id="helmholtz-principle-7-5-1-2-1">We have <span class="process-math">\(\psi=0\)</span> on the line <span class="process-math">\(x=0\text{,}\)</span> so this is a streamline.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-5-1-2-1">We have <span class="process-math">\(\psi=0\)</span> on the line <span class="process-math">\(x=0\text{,}\)</span> so this is a streamline.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#helmholtz-principle-7-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#helmholtz-principle-7-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="helmholtz-principle-7-5-1-3">
-<div class="para" id="helmholtz-principle-7-5-1-3-1">Far from the vortices (in any direction), the streamfunction is approximately <span class="process-math">\(\psi\sim-\Gamma x/(4\pi d)\text{,}\)</span> so the streamlines are approximately vertical lines.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-5-1-3-1">Far from the vortices (in any direction), the streamfunction is approximately <span class="process-math">\(\psi\sim-\Gamma x/(4\pi d)\text{,}\)</span> so the streamlines are approximately vertical lines.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-5-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#helmholtz-principle-7-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#helmholtz-principle-7-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="helmholtz-principle-7-5-1-4">
-<div class="para" id="helmholtz-principle-7-5-1-4-1">As we approach the vortex at <span class="process-math">\(z=d\text{,}\)</span> <span class="process-math">\(\psi\)</span> tends to <span class="process-math">\(-\infty\)</span> and as we approach the vortex at <span class="process-math">\(z=-d\text{,}\)</span> <span class="process-math">\(\psi\)</span> tends to <span class="process-math">\(+\infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-5-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-5-1-4-1">As we approach the vortex at <span class="process-math">\(z=d\text{,}\)</span> <span class="process-math">\(\psi\)</span> tends to <span class="process-math">\(-\infty\)</span> and as we approach the vortex at <span class="process-math">\(z=-d\text{,}\)</span> <span class="process-math">\(\psi\)</span> tends to <span class="process-math">\(+\infty\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-5-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#helmholtz-principle-7-5-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#helmholtz-principle-7-5-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="helmholtz-principle-7-6">These points imply that there is a curve on which <span class="process-math">\(\psi=0\)</span> in the right-half plane. This curve joins the two stagnation points and goes around the vortex. Similarly, there is a curve on which <span class="process-math">\(\psi=0\)</span> in the left-half plane, and these two curves are reflections of one another.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-6">These points imply that there is a curve on which <span class="process-math">\(\psi=0\)</span> in the right-half plane. This curve joins the two stagnation points and goes around the vortex. Similarly, there is a curve on which <span class="process-math">\(\psi=0\)</span> in the left-half plane, and these two curves are reflections of one another.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="helmholtz-principle-7-7">If we dye the fluid within these two curves, we would create a blob of fluid surrounding the vortices. An observer would see this blob of fluid travelling at the speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction without changing shape, see Figure <a href="sec-helmholtz.html#fig-vortex-pair" class="xref" data-knowl="./knowl/xref/fig-vortex-pair.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.14">Figure 6.2.14</a>b.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-7-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="helmholtz-principle-7-7">If we dye the fluid within these two curves, we would create a blob of fluid surrounding the vortices. An observer would see this blob of fluid travelling at the speed <span class="process-math">\(\Gamma/(4\pi d)\)</span> in the <span class="process-math">\(-y\)</span>-direction without changing shape, see Figure <a href="sec-helmholtz.html#fig-vortex-pair" class="xref" data-knowl="./knowl/xref/fig-vortex-pair.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.2.14">Figure 6.2.14</a>b.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-7-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-vortex-pair"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ch-chapter06-vortex-pair.jpg" class="contained" alt="Vortex pair"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow due to a vortex pair relative to (a) a fixed frame, and (b) a frame moving with the vortices. Note that the shaded region in (b) represents a fluid region that, if it were dyed, the dyed fluid would remain in the same region throughout the evolution of the flow. From <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>.<div class="autopermalink" data-description="Figure 6.2.14"><a href="#fig-vortex-pair" title="Copy heading and permalink for Figure 6.2.14" aria-label="Copy heading and permalink for Figure 6.2.14">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 6.2.13: Vortex pair"><a href="#helmholtz-principle-7" title="Copy heading and permalink for Example 6.2.13: Vortex pair" aria-label="Copy heading and permalink for Example 6.2.13: Vortex pair">🔗</a></div></article></details><details id="helmholtz-principle-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vortex near a wall.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="helmholtz-principle-8-2-1">Consider a vortex of strength <span class="process-math">\(\Gamma\)</span> at a distance <span class="process-math">\(d\)</span> from a flat wall.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Flow due to a vortex pair relative to (a) a fixed frame, and (b) a frame moving with the vortices. Note that the shaded region in (b) represents a fluid region that, if it were dyed, the dyed fluid would remain in the same region throughout the evolution of the flow. From <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.2.14"><a tabindex="-1" href="#fig-vortex-pair" title="Copy heading and permalink for Figure 6.2.14" aria-label="Copy heading and permalink for Figure 6.2.14">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 6.2.13: Vortex pair"><a tabindex="-1" href="#helmholtz-principle-7" title="Copy heading and permalink for Example 6.2.13: Vortex pair" aria-label="Copy heading and permalink for Example 6.2.13: Vortex pair">🔗</a></div>
+</article></details>
+<details id="helmholtz-principle-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vortex near a wall.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="helmholtz-principle-8-2-1">Consider a vortex of strength <span class="process-math">\(\Gamma\)</span> at a distance <span class="process-math">\(d\)</span> from a flat wall.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="helmholtz-principle-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="helmholtz-principle-8-3-1">This can be analysed using the method of images, and we put an image vortex a distance <span class="process-math">\(d\)</span> on the other side of the wall, directly opposite the real vortex, also of strength <span class="process-math">\(-\Gamma\text{.}\)</span> Then the problem is equivalent to that of two vortices in free space, and we can use the result from the previous example to find the motion of the vortex.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions">
+<details id="helmholtz-principle-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="helmholtz-principle-8-3-1">This can be analysed using the method of images, and we put an image vortex a distance <span class="process-math">\(d\)</span> on the other side of the wall, directly opposite the real vortex, also of strength <span class="process-math">\(-\Gamma\text{.}\)</span> Then the problem is equivalent to that of two vortices in free space, and we can use the result from the previous example to find the motion of the vortex.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.2.15.1"><a href="#helmholtz-principle-8-3" title="Copy heading and permalink for Solution 6.2.15.1" aria-label="Copy heading and permalink for Solution 6.2.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 6.2.15: Vortex near a wall"><a href="#helmholtz-principle-8" title="Copy heading and permalink for Example 6.2.15: Vortex near a wall" aria-label="Copy heading and permalink for Example 6.2.15: Vortex near a wall">🔗</a></div></article></details><details id="ex-wing-tip-vortices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: Wing tip vortices.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-wing-tip-vortices-2-1">
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.2.15.1"><a tabindex="-1" href="#helmholtz-principle-8-3" title="Copy heading and permalink for Solution 6.2.15.1" aria-label="Copy heading and permalink for Solution 6.2.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.15: Vortex near a wall"><a tabindex="-1" href="#helmholtz-principle-8" title="Copy heading and permalink for Example 6.2.15: Vortex near a wall" aria-label="Copy heading and permalink for Example 6.2.15: Vortex near a wall">🔗</a></div>
+</article></details>
+<details id="ex-wing-tip-vortices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: Wing tip vortices.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="ex-wing-tip-vortices-2-1">
 <div class="para">(From Exercise 5.8 in <a href="refs-references.html#ref-acheson" class="xref" data-knowl="./knowl/xref/ref-acheson.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 4">[4]</a>). An inviscid fluid occupies the region <span class="process-math">\(x,y\geq0\text{,}\)</span> and is bounded by rigid boundaries at <span class="process-math">\(x=0\)</span> and at <span class="process-math">\(y=0\text{.}\)</span> Its motion results wholly from the presence of a line vortex of strength <span class="process-math">\(\Gamma\text{.}\)</span> Show that the path taken by the vortex is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ref-acheson.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ref-acheson.html" id="ex-wing-tip-vortices-2-1-6">
 \begin{equation*}
 \frac1{x^2}+\frac1{y^2}=\mathrm{constant}.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-wing-tip-vortices-2-2">At take-off, an aircraft generates strong vortices shed from the tips of its wings, see <a href="ch-chapter06-vorticity.html#fig-wingtip-vortices" class="xref" data-knowl="./knowl/xref/fig-wingtip-vortices.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.0.2">Figure 6.0.2</a>. These are observed to move downwards and outwards under each other’s influence.<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-wing-tip-vortices-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ex-wing-tip-vortices-2-2">At take-off, an aircraft generates strong vortices shed from the tips of its wings, see <a href="ch-chapter06-vorticity-2.html#fig-wingtip-vortices" class="xref" data-knowl="./knowl/xref/fig-wingtip-vortices.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.0.2">Figure 6.0.2</a>. These are observed to move downwards and outwards under each other’s influence.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-wing-tip-vortices-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="ex-wing-tip-vortices-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="ex-wing-tip-vortices-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-wing-tip-vortices-3-1">
 <div class="para">Suppose the vortex is at the point</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-wing-tip-vortices-3-1-1">
 \begin{equation*}
 z_1=x_1+\im y_1.
 \end{equation*}
 </div>
 <div class="para">We use three image vortices at <span class="process-math">\(x_1-\im y_1\)</span> and at <span class="process-math">\(-x_1+\im y_1\text{,}\)</span> both of strength <span class="process-math">\(-\Gamma\text{,}\)</span> and at <span class="process-math">\(-x_1-\im y_1\)</span> of strength <span class="process-math">\(\Gamma\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-wing-tip-vortices-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-wing-tip-vortices-3-2">Recall that the complex potential of a line vortex at <span class="process-math">\(z=c\)</span> of strength <span class="process-math">\(\Gamma\)</span> is <span class="process-math">\(-\im\Gamma\log(z-c)/(2\pi)\)</span> and its velocity is given by the derivative of this map: <span class="process-math">\(u-\im v=-\im\Gamma/(2\pi(z-c))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-wing-tip-vortices-3-2">Recall that the complex potential of a line vortex at <span class="process-math">\(z=c\)</span> of strength <span class="process-math">\(\Gamma\)</span> is <span class="process-math">\(-\im\Gamma\log(z-c)/(2\pi)\)</span> and its velocity is given by the derivative of this map: <span class="process-math">\(u-\im v=-\im\Gamma/(2\pi(z-c))\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-wing-tip-vortices-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ex-wing-tip-vortices-3-3">
 <div class="para">The velocity of the vortex is given by the sum of the velocities due to the other three vortices:</div>
@@ -834,13 +887,13 @@ z_1=x_1+\im y_1.
 \end{gather*}
 </div>
 <div class="para">and therefore</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-wing-tip-vortices-3-3-3">
 \begin{equation*}
 \dd{y_1}{x_1}=-\frac{y_1^3}{x_1^3},
 \end{equation*}
 </div>
 <div class="para">which can be solved by separation of variables to give</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-wing-tip-vortices-3-3-4">
 \begin{equation*}
 \int\frac1{y_1^3}\de y_1=-\int\frac1{x_1^3}\de x_1
 \quad\Rightarrow\quad
@@ -848,17 +901,26 @@ z_1=x_1+\im y_1.
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(c\)</span> is constant, and this can be rearranged into the required form.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-wing-tip-vortices-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-wing-tip-vortices-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.2.16.1"><a href="#ex-wing-tip-vortices-3" title="Copy heading and permalink for Solution 6.2.16.1" aria-label="Copy heading and permalink for Solution 6.2.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 6.2.16: Example: Wing tip vortices"><a href="#ex-wing-tip-vortices" title="Copy heading and permalink for Example 6.2.16: Example: Wing tip vortices" aria-label="Copy heading and permalink for Example 6.2.16: Example: Wing tip vortices">🔗</a></div></article></details><details id="helmholtz-principle-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application to airports.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="helmholtz-principle-10-2">At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.2.16.1"><a tabindex="-1" href="#ex-wing-tip-vortices-3" title="Copy heading and permalink for Solution 6.2.16.1" aria-label="Copy heading and permalink for Solution 6.2.16.1">🔗</a></div>
+</div></details>
 </div>
-<div class="para" id="helmholtz-principle-10-3">You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!<div class="autopermalink" data-description="Paragraph"><a href="#helmholtz-principle-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.16: Example: Wing tip vortices"><a tabindex="-1" href="#ex-wing-tip-vortices" title="Copy heading and permalink for Example 6.2.16: Example: Wing tip vortices" aria-label="Copy heading and permalink for Example 6.2.16: Example: Wing tip vortices">🔗</a></div>
+</article></details>
+<details id="helmholtz-principle-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application to airports.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="helmholtz-principle-10-2">At a busy airport, a delay is required between the take off of one aircraft and the next in order for the wing tip vortices generated from the take off of the first aircraft to move away and break up. The time required for this to happen depends on the size and speed of the aircraft, as well as the angle of attack of the wings, but it is typically 2 or 3 minutes. This need for a delay is the main reason that a given airport runway can only take so many aeroplanes per day, limiting the flight volume of the airport.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 6.2.17: Application to airports"><a href="#helmholtz-principle-10" title="Copy heading and permalink for Example 6.2.17: Application to airports" aria-label="Copy heading and permalink for Example 6.2.17: Application to airports">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 6.2.2: The Helmholtz principle"><a href="#helmholtz-principle" title="Copy heading and permalink for Subsection 6.2.2: The Helmholtz principle" aria-label="Copy heading and permalink for Subsection 6.2.2: The Helmholtz principle">🔗</a></div></section><div class="autopermalink" data-description="Section 6.2: The Helmholtz vortex theorems"><a href="#sec-helmholtz" title="Copy heading and permalink for Section 6.2: The Helmholtz vortex theorems" aria-label="Copy heading and permalink for Section 6.2: The Helmholtz vortex theorems">🔗</a></div></section></div>
+<div class="para" id="helmholtz-principle-10-3">You will have heard recent debate about the controversy surrounding the building of a third runway at London Heathrow, the busiest airport in the UK. Although not explained by the media coverage, you now understand the crucial role played by the fluid dynamics that underlies these arguments!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#helmholtz-principle-10-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 6.2.17: Application to airports"><a tabindex="-1" href="#helmholtz-principle-10" title="Copy heading and permalink for Example 6.2.17: Application to airports" aria-label="Copy heading and permalink for Example 6.2.17: Application to airports">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 6.2.2: The Helmholtz principle"><a tabindex="-1" href="#helmholtz-principle" title="Copy heading and permalink for Subsection 6.2.2: The Helmholtz principle" aria-label="Copy heading and permalink for Subsection 6.2.2: The Helmholtz principle">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 6.2: The Helmholtz vortex theorems"><a tabindex="-1" href="#sec-helmholtz" title="Copy heading and permalink for Section 6.2: The Helmholtz vortex theorems" aria-label="Copy heading and permalink for Section 6.2: The Helmholtz vortex theorems">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-vorticity-circulation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-axisymmetric-flow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

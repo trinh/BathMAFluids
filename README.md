@@ -13,6 +13,8 @@ To deploy your output to GitHub pages, run `pretext deploy`.
 
 To compile a pdf, run `pretext build print`.
 
+**Phil Note**: For deployment, you can either use Visual Studio Code's pretext package and the deploy option there. Alternatively run the deploy command above. 
+
 ---
 
 Below you will find some advice for working with PreTeXt, including help with using the [PreTeXt Codespace](https://github.com/PreTeXtBook/pretext-codespace) online editor through GitHub if you don't want to install the required software on your own computer.
