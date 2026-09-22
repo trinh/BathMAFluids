@@ -44,6 +44,17 @@
     <titlepage-items/>
   </titlepage>
 
+  <preface xml:id="downloads"><title>Downloads</title>
+    <p>
+    This set of notes is written to be read online, but two downloadable
+    versions are also available:
+    <ul>
+      <li><url href="https://trinh.github.io/BathMAFluids/pdf/main.pdf">PDF version</url>, typeset for printing.</li>
+      <li><url href="https://trinh.github.io/BathMAFluids/doc/main.docx">Word (.docx) version</url>, generated automatically and provided as a convenience &#8212; equations and figures may need manual tidying.</li>
+    </ul>
+    Both are regenerated whenever the <url href="https://trinh.github.io/BathMAFluids/">online version</url> is updated, so they may occasionally lag behind this page.
+    </p>
+  </preface>
 
   <preface><title>Official description</title>
  

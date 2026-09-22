@@ -56,11 +56,36 @@ jobs:
       - name: install local ptx files
         run: pretext --version
 
-      - name: build deploy targets
+      - name: install pandoc
+        run: |
+          which pandoc || (apt-get update && apt-get install -y pandoc)
+
+      - name: build deploy targets (web, print)
         run: pretext build --deploys
 
-      - name: run deploy
-        run: pretext deploy --no-push
+      - name: build latex source for docx conversion
+        run: pretext build latex
+
+      - name: build docx download with pandoc
+        run: |
+          mkdir -p output/doc
+          pandoc output/latex/main.tex -o output/doc/main.docx --resource-path=output/latex
+
+      - name: stage deploy targets
+        run: pretext deploy --stage-only
+
+      - name: add docx download to staged site
+        run: |
+          mkdir -p output/stage/doc
+          cp output/doc/main.docx output/stage/doc/main.docx
+
+      - name: commit staged site to gh-pages (no push yet)
+        run: |
+          python3 - <<'PYEOF'
+          from pretext.project import Project
+          project = Project.parse()
+          project.deploy(update_source=False, skip_staging=True, no_push=True)
+          PYEOF
 
       - name: push gh-pages branch
         run: git push origin gh-pages --force
