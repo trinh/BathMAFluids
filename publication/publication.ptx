@@ -74,30 +74,25 @@
       <!--<projects level="2" />-->
       <!--<equations level="2" />-->
       <!--<footnotes level="2" />-->
+
+    <!-- Number figures as chapter.figure (e.g. "2.1") rather than -->
+    <!-- chapter.section.figure (e.g. "2.0.1"). Applies uniformly -->
+    <!-- to all output formats (HTML, LaTeX/PDF, etc). @distinct  -->
+    <!-- must be "yes", or this level is ignored and figures fall -->
+    <!-- back to the generic block-numbering level.               -->
+    <figures level="1" distinct="yes" />
   </numbering>
 
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
   <!-- for printing; set @sides="two" if the printing would be two- -->
   <!-- sided.  @pageref="yes/no" controls whether page number are   -->
   <!-- included in cross-references                                 -->
-  <latex>
-  <!-- Replace the <latex> tag above with the one below to try these-->
-    <!-- <latex
-          print="no"
-          sides="one"
-          open-odd="no"
-          pageref="no"
-          font-size="10"
-          draft="no"
-          latex-style="dyslexic-font"
-      >  -->
-
-    <!-- Control text justification and bottom page behavior. Add content intended for \geometry{} inside the <geometry> element. -->
-    <!--
-      <page right-alignment="flush" bottom-alignment="ragged" crop-marks="letter">
-        <geometry></geometry>
-      </page>
-    -->
+  <latex font-size="10">
+    <!-- Lecture-notes-friendly page: smaller margins, larger text block -->
+    <!-- than PreTeXt's default (narrow Bringhurst-style measure).      -->
+    <page>
+      <geometry>margin=1in</geometry>
+    </page>
 
     <!-- The asymptote/@links set to "yes" would produce  -->
     <!-- links the html version of asymptote graphics.    -->

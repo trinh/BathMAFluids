@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2026-09-22T16:44:56+01:00       *%
+%*       on 2026-09-22T20:13:09+01:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -95,6 +95,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% which is the upper limit of Bringhurst's recommendations
 \geometry{letterpaper,total={340pt,9.0in}}
 %% Custom Page Layout Adjustments (use publisher page-geometry entry)
+\geometry{margin=1in}
 %% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex executables
 %% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
 %% The conditional below provides  pdflatex  specific configuration last
@@ -577,10 +578,14 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% facilities for most blocks (possibly not projects, 2D displays)
 %% Controlled by  numbering.theorems.level  processing parameter
 \newtcolorbox[auto counter, number within=section]{block}{}
+%%
+%% This document is set to number figure, table, list, listing on a separate numbering scheme
+%% So, a faux tcolorbox whose only purpose is to provide this numbering
+\newtcolorbox[auto counter, number within=chapter]{figure-distinct}{}
 %% A faux tcolorbox whose only purpose is to provide common numbering
 %% facilities for 2D displays which are subnumbered as part of a "sidebyside"
 \makeatletter
-\newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
+\newtcolorbox[auto counter, number within=tcb@cnt@figure-distinct, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
 \makeatother
 %%
 %% tcolorbox, with styles, for THEOREM-LIKE
@@ -618,13 +623,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %%
 %% figureptx: 2-D display structure
 \tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=block]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
+\newtcolorbox[use counter from=figure-distinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
 %%
 %% tcolorbox, with styles, for (PANEL)FIGURE-LIKE
 %%
 %% panelfigureptx: 2-D display structure
 \tcbset{ panelfigureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=block]{panelfigureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panelfigureptxstyle, }
+\newtcolorbox[use counter from=figure-distinct]{panelfigureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panelfigureptxstyle, }
 %%
 %% xparse environments for introductions and conclusions of divisions
 %%
@@ -651,6 +656,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% "tcolorbox" environment for a panel of sidebyside
 \NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
 %% Custom Preamble Entries, late (use latex.preamble.late)
+\titleformat{\chapter}[hang]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large#1}\titleformat{name=\chapter,numberless}[hang]{\normalfont\Large\bfseries}{}{0em}{\Large#1}\titlespacing*{\chapter}{0pt}{20pt}{15pt}\renewtcolorbox[use counter from=figure-distinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, breakable, figureptxstyle, }\setlength{\emergencystretch}{3em}\clubpenalty=10000\widowpenalty=10000\usepackage{parskip}\AtBeginDocument{\setlength{\parindent}{0pt}\setlength{\ptxnormalparindent}{0pt}\setlength{\ptxnormalparskip}{\parskip}}\definecolor{thmcolor}{RGB}{31,78,121}\definecolor{thmfill}{RGB}{235,242,249}\definecolor{defcolor}{RGB}{106,61,130}\definecolor{deffill}{RGB}{244,238,248}\definecolor{remcolor}{RGB}{100,100,100}\definecolor{remfill}{RGB}{245,245,245}\definecolor{excolor}{RGB}{43,108,74}\definecolor{exfill}{RGB}{234,244,238}\definecolor{exercolor}{RGB}{176,98,24}\definecolor{exerfill}{RGB}{252,240,225}\tcbset{ ptxboxstyle/.style={enhanced, breakable, arc=2.5mm, boxrule=0.6pt, top=1.5mm, bottom=1.5mm, left=2mm, right=2mm, before skip=2.0ex plus 0.5ex, after skip=2.0ex plus 0.5ex, fonttitle=\bfseries, coltitle=white} }\tcbset{ theoremstyle/.style={ptxboxstyle, colframe=thmcolor, colback=thmfill, colbacktitle=thmcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ definitionstyle/.style={ptxboxstyle, colframe=defcolor, colback=deffill, colbacktitle=defcolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxdiamond}, before upper app={\ptxsetparstyle}} }\tcbset{ remarkstyle/.style={ptxboxstyle, colframe=remcolor, colback=remfill, colbacktitle=remcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ examplestyle/.style={ptxboxstyle, colframe=excolor, colback=exfill, colbacktitle=excolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxtriangle}, before upper app={\ptxsetparstyle}} }\renewtcolorbox{divisionexercise}[4]{ptxboxstyle, colframe=exercolor, colback=exerfill, colbacktitle=exercolor, title={#1.\notblank{#2}{\space#2}{}}, phantomlabel={#4}, before upper app={\ptxsetparstyle}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Begin: Author-provided macros
 %% (From  docinfo/macros  element)
 %% Plus three from PTX for XML characters
@@ -731,32 +737,16 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \thispagestyle{empty}
 \vspace*{\stretch{2}}
 \noindent{\bfseries Website}: \href{https://trinh.github.io/BathMAFluids/}{Course website}\par\medskip
-\noindent\textcopyright{}2020\textendash{}2024\quad{}You\\[0.5\baselineskip]
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{CreativeCommons.org}\par\medskip
 \vspace*{\stretch{1}}
 \null\clearpage
 %% end:   copyright-page
 %
 %
 \typeout{************************************************}
-\typeout{Preface  Downloads}
-\typeout{************************************************}
-%
-\begin{preface}{Preface}{Downloads}{}{Downloads}{}{}{downloads}
-This set of notes is written to be read online, but two downloadable versions are also available:%
-\begin{itemize}[label=\ptxlistdisc]
-\item{}\href{https://trinh.github.io/BathMAFluids/pdf/main.pdf}{PDF version}, typeset for printing.%
-\item{}\href{https://trinh.github.io/BathMAFluids/doc/main.docx}{Word (.docx) version}, generated automatically and provided as a convenience — equations and figures may need manual tidying.%
-\end{itemize}
-Both are regenerated whenever the \href{https://trinh.github.io/BathMAFluids/}{online version} is updated, so they may occasionally lag behind this page.%
-\end{preface}
-%
-%
-\typeout{************************************************}
 \typeout{Preface  Official description}
 \typeout{************************************************}
 %
-\begin{preface}{Preface}{Official description}{}{Official description}{}{}{frontmatter-4}
+\begin{preface}{Preface}{Official description}{}{Official description}{}{}{frontmatter-3}
 \begin{figureptx}{Figure}{Rayleigh's 1883 experiment on turbulence, as duplicated in World of Flosws (Darrigol, 2005).}{fig-rayleigh}{}%
 \begin{image}{0.1}{0.8}{0.1}{}%
 \includegraphics[width=\linewidth]{external/rayleigh_tubulence.jpg}
@@ -767,13 +757,13 @@ Both are regenerated whenever the \href{https://trinh.github.io/BathMAFluids/}{o
 \par
 The description of this unit in the \href{http://www.bath.ac.uk/catalogues/2025-2026/ma/MA32051.html}{official catalogue} is the following:%
 \begin{descriptionlist}
-\begin{dlinarrow}{Aims}{frontmatter-4-3-2-1}%
+\begin{dlinarrow}{Aims}{frontmatter-3-3-2-1}%
 In this unit you will explore the mathematical theory of fluid dynamics, with a view towards applications to physical phenomena such as flight, vortex motion and water waves. You will study the mathematics of conservation laws and the derivation of governing fluid dynamical equations. This unit will provide you with a foundation for further study of more advanced theory of fluid dynamics and continuum mechanics, and its application in scientific areas including engineering, physics and biology.%
 \end{dlinarrow}%
-\begin{dlinarrow}{Outcomes}{frontmatter-4-3-2-2}%
+\begin{dlinarrow}{Outcomes}{frontmatter-3-3-2-2}%
 (i) Demonstrate an understanding of the principles of mathematical fluid dynamics; (ii) discuss and apply techniques from vector calculus and complex variable theory to analyse and solve fluid flow problems; (iii)  give a qualitative and quantitative account of a range of phenomena in fluid dynamics.%
 \end{dlinarrow}%
-\begin{dlinarrow}{Content}{frontmatter-4-3-2-3}%
+\begin{dlinarrow}{Content}{frontmatter-3-3-2-3}%
 Complex analysis primer: Cauchy-Riemann equations; harmonic functions; complex maps; residue integration. The mathematics of fluid phenomena and its applications: derivation and interpretation of governing equations; reduction of governing equations to equations of simpler formulation; potential flow; vortical flow. Two-dimensional incompressible and irrotational flow: velocity potential; stream function; complex potential. Conformal mapping. Vortex motion: vortex lines and tubes; Kelvin circulation theorem; Helmholtz' principal. Water waves: free surfaces; harmonic waves; finite depth; instability; group velocity. Computational fluid dynamics.%
 \end{dlinarrow}%
 \end{descriptionlist}
@@ -796,7 +786,7 @@ As part of the curriculum transformation (with the first change to Year 3 in 202
 \typeout{Preface  Related units at Bath}
 \typeout{************************************************}
 %
-\begin{preface}{Preface}{Related units at Bath}{}{Related units at Bath}{}{}{frontmatter-6}
+\begin{preface}{Preface}{Related units at Bath}{}{Related units at Bath}{}{}{frontmatter-5}
 We will only mention units from Year 2 onwards in this. Apart from the key pre-requisites of MA22016 (Differential equations and vector calculus) and\slash{}or MA20223 (the older Vector calculus and partial differential equations), we make an effort to keep the material in the module self-contained. You are recommended to have taken MA22021 (partial differential equations).%
 \par
 %
@@ -818,7 +808,7 @@ Note prior to curriculum transformation, this would have been part of the MA2022
 \typeout{Preface  Moodle and other references}
 \typeout{************************************************}
 %
-\begin{preface}{Preface}{Moodle and other references}{}{Moodle and other references}{}{}{frontmatter-7}
+\begin{preface}{Preface}{Moodle and other references}{}{Moodle and other references}{}{}{frontmatter-6}
 Besides this document, the main resource for this unit is the \href{https://moodle.bath.ac.uk/course/view.php?id=62758}{Moodle page}. Links to the video recordings, course notes, and other resources are collected there.%
 \par
 There are countless fluid mechanics or fluid dynamics courses and textbooks, and for the most part, the development of a \emph{first course} on fluid dynamics tends to be quite similar between universities and treatments. If you would like additional references, here are a few useful ones.%
@@ -853,6 +843,20 @@ However, note that our goal is to be as self-sufficient as possible via the lect
 %
 \end{itemize}
 %
+\end{preface}
+%
+%
+\typeout{************************************************}
+\typeout{Preface  Downloads}
+\typeout{************************************************}
+%
+\begin{preface}{Preface}{Downloads}{}{Downloads}{}{}{downloads}
+This set of notes is written to be read online, but two downloadable versions are also available for accessibility purposes:%
+\begin{itemize}[label=\ptxlistdisc]
+\item{}\href{https://trinh.github.io/BathMAFluids/pdf/main.pdf}{PDF version}, typeset for printing.%
+\item{}\href{https://trinh.github.io/BathMAFluids/doc/main.docx}{Word (.docx) version}, generated automatically and provided as a convenience — equations and figures may need manual tidying.%
+\end{itemize}
+Both are regenerated whenever the \href{https://trinh.github.io/BathMAFluids/}{online version} is updated, so they may occasionally lag behind this page. Note that the lecturers will be keeping a close eye on the online notes, and it is not always possible to check the PDF as the course proceeds. If there are severe issues it is helpful to send an email to the lecturers. The Word version is mainly provided for accessibility reasons and typically requires additional help by Accessibility assistance at the University of Bath.%
 \end{preface}
 %% begin: table of contents
 %% Adjust Table of Contents

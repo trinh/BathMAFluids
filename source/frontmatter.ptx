@@ -31,30 +31,18 @@
         <shortdescription>(for accessibility)</shortdescription>
       </image -->
 
-    <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
-      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
-      </shortlicense>
-    </copyright>
+    <!-- <copyright> -->
+    <!--   <year>2020<ndash />2024</year> -->
+    <!--   <holder>P.H. Trinh and J. Tweedy</holder> -->
+    <!--   <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href= visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url> -->
+    <!--   </shortlicense> -->
+    <!-- </copyright> -->
   
   </bibinfo>
 
   <titlepage>
     <titlepage-items/>
   </titlepage>
-
-  <preface xml:id="downloads"><title>Downloads</title>
-    <p>
-    This set of notes is written to be read online, but two downloadable
-    versions are also available:
-    <ul>
-      <li><url href="https://trinh.github.io/BathMAFluids/pdf/main.pdf">PDF version</url>, typeset for printing.</li>
-      <li><url href="https://trinh.github.io/BathMAFluids/doc/main.docx">Word (.docx) version</url>, generated automatically and provided as a convenience &#8212; equations and figures may need manual tidying.</li>
-    </ul>
-    Both are regenerated whenever the <url href="https://trinh.github.io/BathMAFluids/">online version</url> is updated, so they may occasionally lag behind this page.
-    </p>
-  </preface>
 
   <preface><title>Official description</title>
  
@@ -83,8 +71,7 @@ catalogue</url> is the following:
 
 <preface xml:id="history"><title>History of the unit</title>
 <p>
-Previously at Bath in the Mathematical Sciences, there were two units meant to teach continuum and fluid mechanics (or dynamics) to students. Prior to 2025, there was the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html">MA30253 Continuum Mechanics</url> module. This was then continued into the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html">MA40255 Viscous fluid dynamics</url> module. 
-</p>
+Previously at Bath in the Mathematical Sciences, there were two units meant to teach continuum and fluid mechanics (or dynamics) to students. Prior to 2025, there was the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30253.html">MA30253 Continuum Mechanics</url> module. This was then continued into the <url href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html" visual="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA40255.html">MA40255 Viscous fluid dynamics</url> module. </p>
 
 <p>
 As part of the curriculum transformation (with the first change to Year 3 in 2025), we are attempting to unify these two treatments, providing a more streamlined teaching of elementary fluid dynamics, which is oriented towards a broad range of styles of emphasis, from applied mathematics, to physics and engineering. The hope is that this new course on Fluid Dynamics provides you with a strong foundation in different basic fluid flows and their mathematical formulation and study. 
@@ -312,7 +299,21 @@ In this unit:
     </ul>
   </p>
   
-</preface>
+  </preface>
+
+
+  <preface xml:id="downloads"><title>Downloads</title>
+    <p>
+    This set of notes is written to be read online, but two downloadable
+    versions are also available for accessibility purposes:
+    <ul>
+      <li><url href="https://trinh.github.io/BathMAFluids/pdf/main.pdf">PDF version</url>, typeset for printing.</li>
+      <li><url href="https://trinh.github.io/BathMAFluids/doc/main.docx">Word (.docx) version</url>, generated automatically and provided as a convenience &#8212; equations and figures may need manual tidying.</li>
+    </ul>
+    Both are regenerated whenever the <url href="https://trinh.github.io/BathMAFluids/">online version</url> is updated, so they may occasionally lag behind this page. Note that the lecturers will be keeping a close eye on the online notes, and it is not always possible to check the PDF as the course proceeds. If there are severe issues it is helpful to send an email to the lecturers. The Word version is mainly provided for accessibility reasons and typically requires additional help by Accessibility assistance at the University of Bath. 
+    </p>
+  </preface>
+
 
 <!-- <preface>
   <title>Changelog</title>
