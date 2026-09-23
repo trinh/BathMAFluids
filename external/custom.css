@@ -1,0 +1,39 @@
+/* Project-specific overrides on top of the "denver" theme. */
+
+/* Box figures (image + caption together) to visually separate them from
+   the surrounding running text, matching the bordered-block look the
+   theme already uses for theorem/definition/remark/example. */
+figure.figure-like:not(.knowl__content, .born-hidden-knowl) {
+  border: 1px solid #b7c2d6;
+  /* !important: some figures (e.g. ones whose caption links out, like a
+     video source) get a background from the theme with higher priority
+     than a plain selector here can match; this keeps the box uniform
+     for every figure regardless. */
+  background-color: #f4f6fa !important;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+/* Homework exercises meant for assessed hand-in: id starts with "ex-hw-". */
+.exercise-like[id^="ex-hw-"] {
+  background-color: #fff3cd;
+  border: 1px solid #e8c874;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+/* All other exercises inside a worksheet/exercises division: normal styling. */
+.exercises .exercise-like:not([id^="ex-hw-"]),
+.worksheet .exercise-like:not([id^="ex-hw-"]) {
+  background-color: #e3f2fd;
+  border: 1px solid #a8cdea;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+/* This one remark should read as "Remark Solutions and feedback." with no
+   number, since PreTeXt has no per-instance "unnumbered" option for
+   remark-like blocks (the counter is baked into the shared box template). */
+#remark-solutions-feedback .codenumber {
+  display: none;
+}
