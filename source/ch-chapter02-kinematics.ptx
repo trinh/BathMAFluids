@@ -60,12 +60,12 @@
         \textrm{Downstream flow rate (area times velocity)} = A_2 U_2.
       </me></p>
 
-    <p> However, since mass must be conserved, that fact that there is a smaller cross-sectional
+    <p> However, since mass must be conserved, the fact that there is a smaller cross-sectional
       area downstream must mean that the velocity is higher downstream. Therefore, <m>U_2 > U_1</m>,
       and to achieve this, the fluid must therefore have been accelerated somewhere within the
       channel.</p>
 
-    <p> However, a thought to the situation might convince you that the velocity field in the
+    <p> However, a moment's thought about the situation might convince you that the velocity field in the
       channel is time-independent: it only changes as a function of its position and is therefore of
       the form <m>\bu = \bu(\bx)</m>. Indeed, at every fixed point in the channel, the velocity <em>at
       that point</em> is not changing in time. Therefore, if we use our previous definition that <m>\ba
@@ -88,7 +88,7 @@
         positioning ourselves at a fixed point in space, <m>\bx = (x, y, z)</m>. At this point, we
         then attempt to measure a fluid quantity such as the density, <m>\rho(\bx, t)</m>, or
         temperature, <m>T(\bx, t)</m>. This is essentially the <em>Eulerian frame</em>. One can
-        imagine, for example, fixing sensor station into the ocean bottom, and obtaining
+        imagine, for example, fixing a sensor station into the ocean bottom, and obtaining
         measurements of the water temperature. </p>
 
 
@@ -100,7 +100,7 @@
       </figure>
 
 
-      <p> Alternatively, we can imagine tracking of a single fixed particle (or a fluid element)
+      <p> Alternatively, we can imagine tracking a single particle (or a fluid element)
         within the flow. The particle begins at some position. Let us define a label to describe the
         particle's initial position. For example, if the particle's position is given by <me>
           (x, y, z) = (x_1(t), y_1(t), z_1(t)),
@@ -150,7 +150,7 @@
       <title>The convective derivative</title>
 
       <p>Let us now be more specific. We wish to consider how different quantities in our flow
-        changes with time, but the matter is made complicated by the two above perspectives (fixed
+        change with time, but the matter is made complicated by the two above perspectives (fixed
         or following the flow).</p>
 
       <p> Again, let us consider a scalar property of the fluid (for example, its density,
@@ -191,7 +191,7 @@
 
       <remark>
         <p>
-          The reason why the above derivatives are introduced is because, for the purpose of much of
+          The reason the above derivatives are introduced is that, for the purpose of much of
           fluid dynamics, it is easier to work with Eulerian coordinates and quantities. However,
           for the purpose of deriving many governing equations, it turns out to be much easier to
           work with Lagrangian variables. This is because physical forces act on physical particles,
@@ -222,7 +222,7 @@
         </proof>
       </theorem>
 
-      <p> The proof to <xref ref="thm-material-derivative" /> seems to use magic vector operations!
+      <p> The proof of <xref ref="thm-material-derivative" /> seems to use magic vector operations!
         In <xref ref="ex-material-derivative" />, we ask you to check this more carefully by
         expanding the vector operations explicitly. </p>
 
@@ -232,14 +232,14 @@
         derivative of the velocity: <men xml:id="eqn-accel">
           \ba \equiv \DD{\bu}{t} = \pd{\bu}{t} + (\bu \cdot \nabla) \bu.
         </men> You
-        will practice using this formula in <xref ref="ex-eulerian-lagrangian2" /> of the problem
+        will practice using this formula in <xref ref="ex-hw-eulerian-lagrangian2" /> of the problem
         set. </p>
 
       <remark xml:id="remark-vector-gradient">
         <title>Vector gradient</title>
         <p> In the formula for the acceleration in <xref ref="eqn-accel" />, the quantity <me>
             \nabla \bu
-          </me> appears. This is a tensor (matrix). One mustn't be
+          </me> appears. This is a tensor (matrix). One should not be
           too intimidated as it is just a convenient notation.</p>
 
         <p>It is worth considering what this must be by considering each individual element of the
@@ -275,9 +275,9 @@
           And hence the vector gradient can be defined as a matrix, where each row of the matrix is
           the gradient of the elements of the vector. </p>
 
-        <p> The author's opinionated note it is that it is easier simply to remember that the
-          material derivative is applied via <xref ref="eqn-material-deriv-ui" /> then it is to try
-          and untangle the multiplication of matrix via <xref ref="eqn-grad-bu" />. </p>
+        <p> It is likely that you will find it easier to remember that the
+          material derivative is applied via <xref ref="eqn-material-deriv-ui" /> -- than it is for you to try
+          and untangle the multiplication of matrices via <xref ref="eqn-grad-bu" />. </p>
 
       </remark>
     </subsection>
@@ -370,11 +370,11 @@
         </statement>
       </definition>
 
-      <p> If it is the case that the velocity is time independent, i.e. <m>\bu = \bu(\bx)</m>, then
+      <p> If it is the case that the velocity is time-independent, i.e. <m>\bu = \bu(\bx)</m>, then
         the three above definitions coincide. </p>
 
-      <p>You will practice the theory of these concepts in <xref ref="ex-particle-paths-streamlines" />
-        and do a worked example in <xref ref="ex-streamlines-pathlines-streaklines" /> of the
+      <p>You will practice the theory of these concepts in <xref ref="ex-hw-particle-paths-streamlines" />
+        and do a worked example in <xref ref="ex-hw-streamlines-pathlines-streaklines" /> of the
         problem set. </p>
     </subsection>
 
@@ -459,7 +459,7 @@
           <p> This gives <me>
               x(s) = A + s \cos t, \quad y(s) = B + \sin t, \quad z(s) = C,
             </me>
-            for constants <m>A, B, C</m>. Therefore the streamline are given by straight lines in
+            for constants <m>A, B, C</m>. Therefore the streamlines are given by straight lines in
             the <m>(x,
               y)</m> plane, if <m>z = C</m> is fixed. </p>
 
@@ -496,9 +496,9 @@
         <title>An oscillating hose/plate</title>
 
         <statement>
-          <p> Water flows out of an oscillating sprinkler head, held along the edge <m>y = 0</m>,
+          <p> Water flows out of an oscillating hose, held along the edge <m>y = 0</m>,
             such that the velocity field produced is given by <me>
-              \bu = [u_0 \sin[\omega(t - y/{v_0})], v_0],
+              \bu = (u_0 \sin(\omega(t - y/v_0)), v_0),
             </me> where <m>
             u_0</m> and <m>v_0</m> are constants. </p>
 
@@ -549,7 +549,7 @@
 
       <p>
         Before we go on, we remind the reader of two important quantities that will be used in the
-        following chapters. These are typicaly introduced in the prior modules on vector calculus.
+        following chapters. These are typically introduced in the prior modules on vector calculus.
       </p>
 
       <p> The first is the notion of <em>flux through a surface</em><idx>
@@ -575,6 +575,115 @@
         </men> The above remains a
         vector quantity. </p>
 
+      <example xml:id="example-flux-surface">
+        <title>Flux through a surface</title>
+        <statement>
+          <p>
+            Consider the velocity field <m>\bu = (x+y^2,\, 0,\, 0)</m>. Let <m>S</m> be the flat
+            rectangular surface lying in the plane <m>x=2</m>, with <m>0\le y\le 1</m> and
+            <m>0\le z\le 3</m>, oriented with outward unit normal <m>\bn = (1,0,0)</m>. Calculate
+            the flux of <m>\bu</m> through <m>S</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            On the surface <m>S</m> we have <m>x=2</m>, so
+            <me>
+              \bu \cdot \bn = (2+y^2, 0, 0)\cdot(1,0,0) = 2+y^2.
+            </me>
+          </p>
+          <p>
+            The flux is therefore
+            <md>
+              <mrow>
+                \text{flux through $S$} \amp= \iint_S \bu\cdot\bn\,\de{S}
+                = \int_0^3\int_0^1 (2+y^2)\,\de{y}\,\de{z}\\
+                \amp= \int_0^3 \left[2y+\frac{y^3}{3}\right]_0^1 \de{z}
+                = \int_0^3 \frac{7}{3}\,\de{z} = 7.
+              </mrow>
+            </md>
+          </p>
+          <p>
+            Notice that only the <m>x</m>-component of <m>\bu</m> contributes, since <m>\bn</m>
+            points purely in the <m>x</m>-direction; the flux measures how much fluid crosses
+            <m>S</m> per unit time in that direction.
+          </p>
+        </solution>
+      </example>
+
+      <example xml:id="example-flux-curve">
+        <title>Flux through a curve</title>
+        <statement>
+          <p>
+            Consider the uniform velocity field <m>\bu = (2,1)</m>. Let <m>C</m> be the straight
+            line segment from <m>(0,0)</m> to <m>(3,4)</m>. Calculate the flux of <m>\bu</m>
+            through <m>C</m>, taking the normal to point away from the origin.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The segment has length <m>5</m> (a 3-4-5 triangle), and a unit tangent vector along
+            <m>C</m> is <m>\bt = (3,4)/5</m>. Rotating <m>\bt</m> by <m>90^\circ</m> so that the
+            resulting normal points away from the origin gives
+            <me>
+              \bn = (4,-3)/5.
+            </me>
+          </p>
+          <p>
+            Since <m>\bu</m> is uniform, <m>\bu\cdot\bn</m> is constant along <m>C</m>:
+            <me>
+              \bu\cdot\bn = (2,1)\cdot(4,-3)/5 = \frac{8-3}{5} = 1.
+            </me>
+          </p>
+          <p>
+            The flux is then this constant times the length of <m>C</m>:
+            <me>
+              \text{flux through $C$} = \int_C \bu\cdot\bn\,\de{s} = 1 \times 5 = 5.
+            </me>
+          </p>
+          <p>
+            The main subtlety here is orientation: rotating the tangent the other way would have
+            given <m>\bn=(-4,3)/5</m> and a flux of <m>-5</m>, correctly describing flow in the
+            opposite sense across <m>C</m>.
+          </p>
+        </solution>
+      </example>
+
+      <example xml:id="example-total-force">
+        <title>Total force</title>
+        <statement>
+          <p>
+            Suppose a pointwise force <m>\bF = (x,\, y^2,\, 3)</m> acts over the flat rectangular
+            surface <m>S</m> given by <m>0\le x\le 2</m>, <m>0\le y\le 1</m>, in the plane
+            <m>z=0</m>. Calculate the total force on <m>S</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Since <m>S</m> lies in the plane <m>z=0</m>, the area element is simply
+            <m>\de{S}=\de{x}\,\de{y}</m>, and no normal vector is needed because <m>\bF</m> is
+            not dotted with anything in <xref ref="eqn-total-force"/>. We integrate each
+            component of <m>\bF</m> separately:
+            <md>
+              <mrow>
+                \int_0^2\int_0^1 x\,\de{y}\,\de{x} \amp= \int_0^2 x\,\de{x} = 2,\\
+                \int_0^2\int_0^1 y^2\,\de{y}\,\de{x} \amp= 2\int_0^1 y^2\,\de{y} = \frac{2}{3},\\
+                \int_0^2\int_0^1 3\,\de{y}\,\de{x} \amp= 3\times 2\times 1 = 6.
+              </mrow>
+            </md>
+          </p>
+          <p>
+            The total force is therefore
+            <me>
+              \textrm{Total force} = \iint_S \bF\,\de{S} = \left(2,\ \tfrac{2}{3},\ 6\right).
+            </me>
+          </p>
+          <p>
+            Unlike the two flux calculations above, the total force remains a vector: each
+            Cartesian component of <m>\bF</m> is integrated on its own.
+          </p>
+        </solution>
+      </example>
 
     </subsection>
   </section>
@@ -587,10 +696,21 @@
   <exercises xml:id="ws-kinematics">
 
     <introduction>
+      
       <p>The kinematics chapter covered the basic essentials about the measurement
         and computation of fluid velocities and acceleration.
         We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
         Examples of streamlines and velocity fields were examined.</p>
+
+      <remark xml:id="remark-solutions-feedback">
+        <title>Solutions and feedback</title>
+        <p>Full solutions to these exercises can be found in <xref ref="solutions"/> at the back
+          of the book.</p>
+
+        <p>If you would like feedback on your work, the tutor will by default concentrate on the
+          exercises highlighted with a yellow background in the online notes (the homework
+          exercises), unless you specifically ask for feedback on a different exercise instead.</p>
+      </remark>
       <!-- <p>
   <warning>
   <p>We look to complete worksheets in the week prior to the content being delivered.
@@ -784,7 +904,7 @@
           </task>
 </exercise>
 
-    <exercise xml:id="ex-eulerian-lagrangian2">
+    <exercise xml:id="ex-hw-eulerian-lagrangian2">
       <title>Eulerian and Lagrangian descriptions</title>
       <introduction>
         <p> A fluid flows through the nozzle shown from <m>x=0</m> to <m>x=L</m> with
@@ -889,7 +1009,7 @@
             This is the same as the Eulerian velocity at the particle position. The acceleration is <md>
               <mrow>\frac{U^2}{L}\e^{Ut/L}=&amp;\frac{U^2}{L}\left(1+\frac{x}{L}\right),</mrow>
             </md>
-            which is the same as the particle acceleration, as expected from the defintion. </p>
+            which is the same as the particle acceleration, as expected from the definition. </p>
         </solution>
       </task>
 
@@ -908,7 +1028,7 @@
       </task>
     </exercise>
 
-    <exercise xml:id="ex-particle-paths-streamlines">
+    <exercise xml:id="ex-hw-particle-paths-streamlines">
       <title>Particle paths and streamlines</title>
       <task>
         <statement>
@@ -970,7 +1090,7 @@
               <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla
             f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
               <mrow>&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},</mrow>
-            </md> (''<m>\dots</m>''
+            </md> ("<m>\dots</m>"
             denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>. </p>
         </answer>
       </task>
@@ -1018,7 +1138,7 @@
 
     </exercise>
 
-    <exercise xml:id="ex-streamlines-pathlines-streaklines">
+    <exercise xml:id="ex-hw-streamlines-pathlines-streaklines">
       <title>Streamlines, pathlines and streaklines</title>
 
 
@@ -1163,7 +1283,7 @@
           <p> In the first situation, it is assumed that <m>C</m> is distributed uniformly in the
             river, but is a naturally decaying substance with some uniform rate of change, <m>
             \dd{C}{t}</m>. Explain what is the (material) change in <m>C</m> that would be measured
-            via two sensors, one upstream ane one downstream. </p>
+            via two sensors, one upstream and one downstream. </p>
         </statement>
       </task>
 
@@ -1173,7 +1293,7 @@
             give a visual and analytical explanation of the material derivative, <me>
               \DD{C}{t} = \pd{C}{t} + u \pd{C}{x},
             </me> where <m>u</m> is
-            the horizontal velocity within the infinitessimal 1D section. Write your own explanation
+            the horizontal velocity within the infinitesimal 1D section. Write your own explanation
             of the above. </p>
         </statement>
       </task>

@@ -10,7 +10,7 @@
 
   <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
 
-  <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
+  <solutions xml:id="solutions" divisional="solution"> <title>Solutions</title> </solutions>
 
   <appendix>
     <title>Vector calculus</title>

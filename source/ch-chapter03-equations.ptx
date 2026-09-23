@@ -9,7 +9,7 @@
       scenario, this leads to Euler's equation for a perfect (or ideal) fluid. Eventually, we relax
       these assumptions so as to incorporate the effects of viscosity.</p>
 
-    <p> Let <m>D</m> be a region in a 2D or 3D region filled with fluid. The fluid is in motion and
+    <p> Let <m>D</m> be a 2D or 3D region filled with fluid. The fluid is in motion and
       we wish to describe this motion.</p>
 
     <p>Let <m>\bx\in D</m> be a point in <m>D</m> and consider the particle of fluid that moves
@@ -27,7 +27,7 @@
     <p>At each point in space and moment in time, we assume that the fluid has a well-defined mass
       density, <m>\rho(\bx, t)</m>. Let <m>V \subseteq D</m> be any subregion of <m>D</m>. Then the
       mass of the fluid in <m>V</m> at time <m>t</m> is given by <men xml:id="eqn-mass">
-        m(t) = \iiint_{V(t)} \rho(\bx, t) \, \mathrm{d}V.
+        m(t) = \iiint_{V(t)} \rho(\bx, t) \, \de{V}.
       </men>
     </p>
 
@@ -72,16 +72,16 @@
           might vary as <m>\delta V</m> varies (note the <m>x</m>-axis of the graph is
           on a logarithmic scale).
           The ideal choice of the volume <m>\delta V</m> is
-          of the order of <m>10^{-9}</m> mm<m>^3</m>
+          of the order of <m>10^{-12}</m> mm<m>^3</m>
           for liquids such as water, but note that the value of the density is pretty stable
-          for a significant range around <m>10^{-9}</m> mm<m>^3</m>, and that this is necessary in order
+          for a significant range around <m>10^{-12}</m> mm<m>^3</m>, and that this is necessary in order
           that our definition of the density makes physical sense
           (because the exact size of <m>\delta V</m> shouldn't affect the density).
-          For volumes much smaller than <m>10^{-9}</m> mm<m>^3</m>,
+          For volumes much smaller than <m>10^{-12}</m> mm<m>^3</m>,
           we can see the effects of individual molecules.
           For volumes much larger,
           we see macroscopic effects.
-          For liquids, a volume of <m>10^{-9}</m> mm<m>^3</m> contains about <m>3\times10^7</m>
+          For liquids, a volume of <m>10^{-12}</m> mm<m>^3</m> contains about <m>3\times10^7</m>
           particles.
         </p>
         <figure xml:id="fig-density-continuum">
@@ -109,7 +109,7 @@
         (if we consider smaller sizes of fluid,
         the motion of individual particles becomes important).
         Specifically, a region containing about <m>3\times10^7</m> molecules
-        must be small in comparison all lengthscales in the problem: <ul>
+        must be small in comparison to all lengthscales in the problem: <ul>
           <li> For gases at standard temperature and pressure (STP): the minimum volume is around <m>
         10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m>
         molecules).</li>
@@ -189,7 +189,7 @@
       <theorem xml:id="thm-jacobian">
         <title>Jacobian of Lagrangian to Eulerian</title>
         <statement>
-          <p>Since we assume the medium is continuous, then we would generally require that the
+          <p>Since we assume the medium is continuous, we would generally require that the
             mapping from Lagrangian to Eulerian coordinates is continuous and one-to-one; then the
             map assigns every element (label) in the original reference configuration, denoted <m>
             \bX</m>, a unique position, <m>\bx</m>, in the deformed state.</p>
@@ -223,7 +223,7 @@
 
         <proof>
           <p>
-            The proof follows from direct differentiation on the determinant and use of the
+            The proof follows from direct differentiation of the determinant and use of the
             identity of the material derivative.
           </p>
         </proof>
@@ -307,7 +307,7 @@
             </li>
             <li>
               <p> Linear momentum: <m>\bf=\rho\bu</m> is now a vector quantity and, by <em>Newton's
-          second law</em>, the left-hand side of <xref ref="eqn-RTT" /> equals the sum of the all
+          second law</em>, the left-hand side of <xref ref="eqn-RTT" /> equals the sum of all
           the forces acting on the fluid in the control volume <m>V</m>, which are: <ul>
                   <li>
                     <p> Surface forces: Forces acting on the surfaces of the fluid, which could be
@@ -320,7 +320,7 @@
                       and in this course you will usually only need to consider the force
                       of gravity, although in principle other body forces could act
                       such as an electromagnetic force. In addition, if working in
-                      a noninertial frame of reference, other apparent forces need to
+                      a non-inertial frame of reference, other apparent forces need to
                       be added (forces due to linear acceleration, angular acceleration
                       and the Coriolis and centrifugal forces).
                     </p>
@@ -515,7 +515,7 @@
             </me>
             The flux out of the boundary is also sketched in <xref ref="fig-normalvolume" />. </p>
 
-          <p> Mass conservation is now applied. Therefore, the rate of change of pass in the volume <m>
+          <p> Mass conservation is now applied. Therefore, the rate of change of mass in the volume <m>
             V</m> is equal to the rate at which mass enters the boundary in the <em>inwards</em>
             direction. </p>
         </proof>
@@ -694,7 +694,7 @@
         \rho \bg \, \de{V}.
         </me>
         We can now use the corollary to the transport theorem <xref ref="cor-convmass" />, with the
-        assignment of <m>f = \rho u_x, \rho u_y, \rho u_z</m> and this allows us to the conclude
+        assignment of <m>f = \rho u_x, \rho u_y, \rho u_z</m> and this allows us to conclude
         that <me>
           \iiint_{V} \left( \rho \DD{\bu}{t} + \nabla p - \rho \bg\right) \, \de{V} = 0.
         </me>
@@ -717,7 +717,7 @@
       <title>Incompressible fluids and the Euler equations</title>
 
 
-      <p> Recall from <xref ref="thm-Euleridentity" /> that the Jacobian relates infinitessimal
+      <p> Recall from <xref ref="thm-Euleridentity" /> that the Jacobian relates infinitesimal
         volumes in Eulerian and Lagrangian frames via <men xml:id="eq-dxyz-Jacobian">
           \dxyz = J \dXYZ
         </men>. So the Jacobian is a measure of the local
@@ -730,7 +730,7 @@
       <theorem xml:id="def-incompressible">
         <title>Incompressible fluids</title>
         <statement>
-          <p>A fluid is said to be <em>incompressible</em> if it preserves infinitessimal volumes.
+          <p>A fluid is said to be <em>incompressible</em> if it preserves infinitesimal volumes.
             Since such volumes are related via <xref ref="eq-dxyz-Jacobian" />, then this is
             equivalent to <me>
               \DD{J}{t} \equiv 0,
@@ -744,7 +744,7 @@
         </statement>
 
         <proof>
-          <p> Note that if <m>\DD{J}{t} = 0</m>, then indeed the an infinitessimal volume element
+          <p> Note that if <m>\DD{J}{t} = 0</m>, then indeed an infinitesimal volume element
             must be of static volume for all time according to <xref ref="eq-dxyz-Jacobian" />. Then
             by Euler's identity in <xref ref="thm-Euleridentity" />, this implies <m>\nabla \cdot
               \bu = 0.</m> Conversely, if <m>\nabla \cdot \bu = 0</m>, then again by the identity
@@ -783,7 +783,7 @@
         for five unknowns: the pressure <m>p</m>, density <m>\rho</m>, and the three velocity
         components <m>\bu</m>. </p>
 
-      <p> One way of proceeding is to attempt to establish or to inuit a relationship between
+      <p> One way of proceeding is to attempt to establish or to intuit a relationship between
         pressure and density. For instance, the assumption of an ideal gas law can be derived from
         kinetic theory, which leads to the empirical law that <m>p = RT\rho</m>, relating pressure
         in a linear fashion to density, and depending on the temperature, <m>T</m>, and a (gas)
@@ -848,7 +848,7 @@
         <p> There has always been an intimate link between the research field of fluid mechanics and
           the entertainment field, where cutting-edge applications in animation, movie, and
           video-game graphics use ideas from fluid mechanics to model fluids. Many fluid simulators
-          will use things like the Euler equations (or "bastardised version") to simulate fluids. In
+          will use things like the Euler equations (or a "bastardised version") to simulate fluids. In
           some cases, such simulations can even happen in real time. Here is an example of a
           real-time Euler equation solver <url
             href="https://matthias-research.github.io/pages/tenMinutePhysics/17-fluidSim.html">coded
@@ -866,8 +866,8 @@
       </idx>
 
       <p> A great deal of the complexity of fluid motion comes from the conditions that we must
-        consider between the fluid and its bounding surfaces. For water in the ocean, a bounding
-        surfaces might include the ocean floor bottom and the body of a boat, down to the vegetation
+        consider between the fluid and its bounding surfaces. For water in the ocean, bounding
+        surfaces might include the ocean floor and the body of a boat, down to the vegetation
         in the water or the sand on a beach. <em>This can get quite complex!</em> In this module,
         and when we first learn fluid dynamics, we only consider simple bounded fluid regions (fluid
         above a plate, fluid in a box, fluid in a channel, etc.)</p>
@@ -1076,7 +1076,7 @@
       <title>Potential flow</title>
 
       <p> We are interested in the simplest scenarios that will result in reducing the governing
-        equations. Previosly, we introduced the notion of incompressible flows, which results in the
+        equations. Previously, we introduced the notion of incompressible flows, which results in the
         Euler equations in <xref ref="def-euler" /> and in particular, the reduction of the mass
         conservation equation to <m>\nabla \cdot \bu = 0</m>. </p>
 
@@ -1097,7 +1097,7 @@
       <theorem xml:id="theorem-irrotational-potential">
         <title>Equivalence of irrotational and potential flow</title>
         <p>
-          If a flow with velocity vector <m>/bu(/bx,t)</m> is irrotational,
+          If a flow with velocity vector <m>\bu(\bx,t)</m> is irrotational,
           there exists a function <m>\phi(\bx,t)</m> such that
           <me>
             \bu = \nabla\phi.
@@ -1249,11 +1249,11 @@
     </exercise>
 
     <exercise xml:id="ex-leibnitz-rule">
-      <title>Leibnitz's rule</title>
+      <title>Leibniz's rule</title>
 
       <introduction>
         <p> The Reynolds' Transport Theorem <xref ref="thm-RTT" />, which relates to the passage of
-          a time derivative through an integral, is a general form of the 1D Leibnitz rule: <mdn>
+          a time derivative through an integral, is a general form of the 1D Leibniz rule: <mdn>
             <mrow number="no">\dd{}{t} &amp; \int_{a(t)}^{b(t)} f(x, t) \, \de{x} </mrow>
             <mrow xml:id="eqn-leibnitz-rule"> &amp; = \int_{a(t)}^{b(t)} \pd{f}{t} \, \de{x} +
           f(b(t), t) \dot{b}(t) - f(a(t), t)\dot{a}(t).</mrow>
@@ -1265,12 +1265,12 @@
       <task>
         <statement>
           <p> Examine the figure in <xref ref="ex-fig-leibnitz" />. Can you associate the quantities
-            in Leibnitz's rule with the circled elements in the figure?</p>
+            in Leibniz's rule with the circled elements in the figure?</p>
 
           <figure xml:id="ex-fig-leibnitz">
-            <caption>Visual "proof" of Leibnitz's rule</caption>
+            <caption>Visual "proof" of Leibniz's rule</caption>
             <image source="equations_leibnitz.jpg" width="90%">
-              <shortdescription>Leibnitz</shortdescription>
+              <shortdescription>Leibniz</shortdescription>
             </image>
           </figure>
         </statement>
@@ -1297,7 +1297,7 @@
 
       <task>
         <statement>
-          <p> A nice proof of the Leibnitz rule is given in <url
+          <p> A nice proof of the Leibniz rule is given in <url
               href="https://www.youtube.com/watch?v=zbWihK9ibhc">this YouTube video by Brian Storey</url>.
             Watch the video and follow the derivation, making your own notes. </p>
         </statement>
@@ -1846,9 +1846,9 @@ compared to the contributions due to the internal energy and the kinetic energy.
           constant. </p>
 
         <figure xml:id="fig-clepsydra">
-          <caption>Clepsyndra</caption>
+          <caption>Clepsydra</caption>
           <image source="clepsydra.png" width="50%">
-            <shortdescription>clepsyndra</shortdescription>
+            <shortdescription>clepsydra</shortdescription>
           </image>
         </figure>
 

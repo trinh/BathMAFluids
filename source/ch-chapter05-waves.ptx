@@ -948,9 +948,7 @@
             <mrow> f_1 = B \e^{ky}, \amp \qquad y &lt; 0, </mrow>
             <mrow> f_2 = C \e^{-ky}, \amp \qquad y &gt; 0, </mrow>
           </md>
-          <me>
-          </me>
-          for constants <m>B</m> and <m>C</m>. 
+          for constants <m>B</m> and <m>C</m>.
         </p>
 
         <p>

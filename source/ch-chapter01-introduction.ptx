@@ -13,19 +13,19 @@
         Now I think hydrodynamics is to be the root of all physical science, and is at present
         second to none in the beauty of its mathematics.
       </p>
-      <attribution>William Thompson (Lord Kelvin), Dec. 1857.</attribution>
+      <attribution>William Thomson (Lord Kelvin), Dec. 1857.</attribution>
     </blockquote>
 
     <p>
       As evidenced by the quotation above, during the great Victorian era, Lord Kelvin had predicted
-      that the field of hydronamics (predominantly, the study of liquids) would reign over all the
+      that the field of hydrodynamics (predominantly, the study of liquids) would reign over all the
       physical sciences. Today that is not quite true, in the sense that hydrodynamics is only one
       of many sub-branches of the wider study of fluid motion. However, Kelvin's prediction is
       certainly true in spirit: there are very few branches in the physical sciences, from biology
       and chemistry, to engineering and physics, where the study of fluid mechanics does not possess
       strong historical and scientific connections. The principles, language, and techniques of
       fluid mechanics begin from the fundamental laws of conservation; in their form, one can argue
-      that all of nature can be derived---this grandiose point is, to some extent, what Kelvin had
+      that all of nature can be derived from them---this grandiose point is, to some extent, what Kelvin had
       meant when he referred to being the "root of all physical science".</p>
 
     <p>Moreover, countless areas of mathematics, from the 19th century and onwards, have been
@@ -86,7 +86,7 @@ Fluid Mechanics
       <p>
         It is not uncommon for some scientists and mathematicians to devote their entire careers to
         an entire subbranch of fluid mechanics. Some university departments will focus solely on
-        certain subbranches as well! Hence fluid mechanics is for many, a lifelong pursuit!
+        certain subbranches as well! Hence fluid mechanics is, for many, a lifelong pursuit!
 </p>
 
     </remark>
@@ -96,7 +96,7 @@ Fluid Mechanics
     </p>
 
     <p> Our first task, starting in <xref ref="ch-chapter02-kinematics" /> and <xref
-        ref="ch-chapter03-equations" /> is to derive the so-called Euler equation, given by <me>
+        ref="ch-chapter03-equations" />, is to derive the so-called Euler equation, given by <me>
       \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho\bg.
       </me>
       Euler's equation relates the velocity of a fluid, <m>\bu</m>, with its density <m>\rho</m>,
@@ -104,7 +104,7 @@ Fluid Mechanics
       of momentum of fluid, and is completed with an accompanying equation for conservation of mass.
       Together, the two equations are solved with the specification of additional boundary
       conditions to describe many liquids, from the water in your bathtub, to the water in the ocean
-      as a ship travels through the surface. </p>
+      as a ship travels across the surface. </p>
 
     <p>
       Slowly, we will begin to appreciate the use of conservation laws, and the mathematics
@@ -114,8 +114,8 @@ Fluid Mechanics
     </p>
 
     <figure>
-      <caption>Flow around an airfoil is an example of potential flow theory. From Van Dyke, An
-        Album of Fluid Motion.</caption>
+      <caption>Flow around an airfoil is an example of potential flow theory. From Van Dyke (1982)
+        "An Album of Fluid Motion" <xref ref="ref-album" />.</caption>
       <image source="airfoil.png" width="100%">
         <shortdescription>Airfoil</shortdescription>
       </image>
@@ -131,7 +131,7 @@ Fluid Mechanics
       some of the greatest minds of our time, from Euler, Lagrange, Bernoulli, d'Alembert, and
       Laplace of the 18th century; to the great Victorian scientists of the 19th century: Kelvin,
       Green, Stokes, Helmholtz; then towards the modern 20th century workers such as Prandtl,
-      Lighthill, Milne-Thompson, and so forth. It is the simplest framework for studying the motion
+      Lighthill, Milne-Thomson, and so forth. It is the simplest framework for studying the motion
       of a liquid, such as water, but enjoys incredibly deep connections with the beautiful theory
       of complex variables. We will study some of these connections, leading to learning about
       things such as conformal mapping theory. </p>
@@ -140,13 +140,13 @@ Fluid Mechanics
       <caption>In 1887, Kelvin famously predicted that the waves trailing a ship produce a wedge of
         approximately <m>2 \times 19.5^\circ</m>. This theory belongs to the analysis of linear
         water waves (though it is unlikely we will have time to reproduce Kelvin's approximation!)
-        From Van Dyke, An Album of Fluid Motion.</caption>
+        From Van Dyke (1982) "An Album of Fluid Motion" <xref ref="ref-album" />.</caption>
       <image source="kelvinwave.png" width="70%">
         <shortdescription>Ship waves</shortdescription>
       </image>
     </figure>
 
-    <p> Water waves is probably the application that was at the forefront of Lord Kelvin's thoughts
+    <p> Water waves are probably the application that was at the forefront of Lord Kelvin's thoughts
       when he discussed the state of hydrodynamics in the quotation that begins in <xref
         ref="ch-chapter05-waves" />. The study of the surface motion of water introduces a seemingly
       minor complexity that is responsible for great heartache: the fluid is now bounded by an
@@ -165,9 +165,9 @@ Fluid Mechanics
 
     <p> In the above applications, our attention will be focused on so-called irrotational flows:
       flows that either do not contain or do not introduce new rotational characteristics. Of
-      course, real life fluids are rarely so well-behaved and indeed, the study of vortices is an
+      course, real-life fluids are rarely so well-behaved and indeed, the study of vortices is an
       important domain in its own right, leading to models for tornados, flight, and many other
-      fluid phenomena. The principle character of <xref ref="ch-chapter06-vorticity" /> is the
+      fluid phenomena. The principal character of <xref ref="ch-chapter06-vorticity" /> is the
       vorticity, <m>\omega = \nabla \times \bu</m>. What is vorticity, how does one measure it, and
       what is its role in governing fluid motion: these are the topics of this chapter. </p>
 
@@ -175,14 +175,15 @@ Fluid Mechanics
       <caption>As illustrated in <xref ref="fig-rayleigh" />, in 1883 Rayleigh performed a famous
         experiment of stability of flow in a tube, showing the emergence of an instability as the
         speed of the flow is increased. This leads to turbulence, which is predicted, in principle,
-        from the Navier-Stokes equations of viscous flows. (From Van Dyke, An Album of Fluid Motion.</caption>
+        from the Navier-Stokes equations of viscous flows. From Van Dyke (1982) "An Album of Fluid
+        Motion" <xref ref="ref-album" />.</caption>
       <image source="turbulence.png" width="70%">
         <shortdescription>Turbulence</shortdescription>
       </image>
     </figure>
 
 
-    <p> Finally, the last part of this course will open up to the important discpline of viscous
+    <p> Finally, the last part of this course will open up to the important discipline of viscous
       flows in <xref ref="ch-viscousflows" />. For this, the Euler equations are no longer
       sufficient, and we must include a dissipative component, <me>
         \rho\left(\pd{\bu}{t} + (\bu \cdot \nabla)\bu\right) = -\nabla p + \rho \bg + \mu \nabla^2
@@ -190,7 +191,7 @@ Fluid Mechanics
       </me>
       with <m>\mu</m> being the <em>viscosity</em> of the fluid. The above equation, together with
       an equation for conservation of mass, forms the so-called <em>Navier-Stokes equations</em>.
-      All fluids are viscous to some extent, though some moreso than others. You will learn about
+      All fluids are viscous to some extent, though some more so than others. You will learn about
       the connections between viscous flow theory and inviscid theory, and some of the simple
       viscous flows that are foundational in this subbranch. </p>
 
@@ -210,13 +211,13 @@ Fluid Mechanics
 
     <p> During the first week, we will provide a very brief review of some of the necessities that
       you may require in terms of vector calculus. Many of you will have taken the MA20223 Vector
-      Calculus and Partial Differential Equations module, and a version of the 2024-25 lecture notes
+      Calculus and Partial Differential Equations module, and a version of the 2026-27 lecture notes
       has been updated for easy reference <url
         href="https://moodle.bath.ac.uk/course/view.php?id=62758" visual="notes">on Moodle</url>. </p>
 
     <p> We will assume that you are familiar enough with how to interpret many of the vector
       calculus identities found in Sec. 10 of the University of Bath book of tables, which can be
-      access on Moodle or <url
+      accessed on Moodle or <url
         href="https://people.bath.ac.uk/ensdasr/ME10304.bho/UniBathFormulaeAndStatisticalTables.pdf"
         visual="tables">via this link</url>. </p>
 
@@ -224,7 +225,8 @@ Fluid Mechanics
       concepts like: <ul>
         <li>
           <p>
-            The use of identities like div curl = 0 and curl grad = 0. Some of these are found on
+            The use of identities like <m>\bnabla\cdot(\bnabla\times \mathbf{A}) = 0</m> and
+            <m>\bnabla\times(\bnabla\phi) = 0</m>. Some of these are found on
       p.24 of the above tables.
           </p>
         </li>
@@ -251,8 +253,7 @@ Fluid Mechanics
     <title>A reminder of complex variables</title>
     <introduction>
       <p> In <xref ref="ch-chapter04-potentialflows" />, we will leverage the power of complex
-        variables to study certain problems in fluids (flow of a potential flow). One concept that
-        you may be unfamiliar with at this stage is the concept of a <em>branch cut</em>. </p>
+        variables to study certain problems in fluids (flow of a potential flow). This section is not necessary to read at this stage, but you might find it useful to refresh your knowledge of basic identities for complex-valued quantities.</p>
 
 
       <figure xml:id="fig-intro-needham">
@@ -269,27 +270,30 @@ Fluid Mechanics
       <title>Basic complex representations</title>
 
 
-      <p> Generally, we write the Cartesian and polar form of a complex number as, <me>
+      <p> Generally, we write the Cartesian and polar form of a complex number as, 
+        <me>
           z = x + \im y = r\e^{\im\theta},
         </me> for magnitude <m>r > 0</m> and angle <m>
         \theta</m>. Below, we will consistently refer to <m>z\in\mathbb{C}</m>. The decomposition of
-        the complex exponential is given by Euler's identity: <men xml:id="eq-complex-euler">
+        the complex exponential is given by Euler's identity: 
+        <men xml:id="eq-complex-euler">
         \e^{\im\theta} = \cos \theta + \im \sin\theta.
         </men>
       </p>
 
       <p> The usual trigonometric functions can be extended to the complex plane by considering
-        their definition in terms of complex exponentials and Euler's identity. For example, we have <men
-          xml:id="eq-complex-cossin">
+        their definition in terms of complex exponentials and Euler's identity. For example, we have 
+        <men xml:id="eq-complex-cossin">
           \cos z = \frac{\e^{\im z} + \e^{-\im z}}{2} \quad \text{and} \quad \sin z = \frac{\e^{\im
         z} - \e^{-\im z}}{2\im}.
         </men>
       </p>
 
-      <p> Another important function we shall consider is the complex logarithm, defined as <men
-          xml:id="eqn-intro-complex-log">
+      <p> Another important function we shall consider is the complex logarithm, defined as 
+        <men xml:id="eqn-intro-complex-log">
           \log z \equiv \log r + \im \theta,
-        </men> where <m>z = r\e^{\im\theta}</m>. That
+        </men> 
+        where <m>z = r\e^{\im\theta}</m>. That
         this definition is sensible is verified by checking that the logarithm is the inverse of the
         exponential. That is, <me>
           \e^{\log z} = \e^{\log r + \im\theta} = \e^{\log r} \e^{\im\theta} = z.
@@ -299,14 +303,17 @@ Fluid Mechanics
       <p>Note that the definition <xref ref="eqn-intro-complex-log" /> is troubling because it is
         not single-valued. For example, writing <m>z = 1 \e^{\im \cdot 0}</m> and <m>z = 1 \e^{\im
         \cdot 2\pi}</m> gives two different possible values of <m>\log z</m> for the same value of <m>z
-        = 1</m>. In order to restrict the logarithm to a well-defined single-valued function, we typically establish a branch cut, restricting evaluation of the function from encircling the origin more than once.</p>
+          = 1</m>. In order to restrict the logarithm to a well-defined single-valued function, we typically establish what is called a branch cut -- this restricts the evaluation of the function from encircling the origin more than once.</p>
+
+      <p>For example, it is common to define the complex logarithm with the branch cut either along the negative real axis or the positive real axis.</p>
     </subsection>
 
     <subsection>
       <title>Complex functions</title>
 
       <p> A complex function maps points on the complex plane to points on the complex plane. For
-        instance, the square function, <me>
+        instance, the square function, 
+        <me>
           f(z) = z^2 = r^2 \e^{2\im \theta},
         </me> can be better understood by its effect
         on points on the unit circle, <m>|z| = 1</m>. </p>
