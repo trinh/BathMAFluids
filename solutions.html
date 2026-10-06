@@ -63,14 +63,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.2';
+eBookConfig.runestone_version = '8.3.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -651,19 +651,221 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.4.f.1"><a tabindex="-1" href="#ex-hw-eulerian-lagrangian2-8-2" title="Copy heading and permalink for Solution 2.3.4.f.1" aria-label="Copy heading and permalink for Solution 2.3.4.f.1">🔗</a></div>
 </div></details>
-</div></article></article><h2 class="heading hide-type" title="Exercises 3.6">
-<span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equations of motion</span><br><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
-</h2>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-continuum-assumption" aria-label="Back to 3.6.1. Continuum approximation."><span class="codenumber">3.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Continuum approximation.</span></a></h3>
+</div></article></article>
+<article class="exercise-like"><h3 class="heading"><a href="ws-kinematics.html#ex-hw-particle-paths-streamlines" aria-label="Back to 2.3.5. Particle paths and streamlines."><span class="codenumber">2.3.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Particle paths and streamlines.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.5.a"><a href="ws-kinematics.html#ex-hw-particle-paths-streamlines-2" aria-label="Back to 2.3.5.a"><span class="codenumber">2.3.5.a</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para">Salt is not like a fluid because you can make it into a pile, whereas the surface of a resting fluid is always horizontal. However, some aspects of salt flow are similar to the flow of a fluid. A typical salt particle is approximately a cube of side <span class="process-math">\(0.5\)</span> mm, and therefore has a volume of approximately <span class="process-math">\(10^{-10}\)</span> m<span class="process-math">\(^3\text{.}\)</span> We need a size of hole that admits a very large number of particles. A reasonable value of the volume <span class="process-math">\(V\)</span> appearing in the continuum approximation might be the volume of <span class="process-math">\(3\times10^7\)</span> salt grains (this was the number of gas or liquid molecules quoted in the notes), i.e. <span class="process-math">\(3\times10^{-3}\)</span> m<span class="process-math">\(^3\text{,}\)</span> which is a cube of side length approximately <span class="process-math">\(10\)</span> cm. We need a hole that is many times this distance, perhaps a hole with a diameter of one metre or so might be reasonable! See also <a href="ch-chapter03-equations-2.html#rem-continuum" class="xref" data-knowl="./knowl/xref/rem-continuum.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.0.2: Continuum assumption">Remark 3.0.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-continuum-assumption-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical">
+<div class="para">Particle paths are the trajectories of individual fluid particles, which are found by solving the ODE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\bx}{t} = \bu(\bx,t).
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.1.1"><a tabindex="-1" href="#ex-continuum-assumption-3" title="Copy heading and permalink for Solution 3.6.1.1" aria-label="Copy heading and permalink for Solution 3.6.1.1">🔗</a></div>
+<div class="para">Streamlines are curves that are instantaneously tangent to the velocity field, and therefore satisfy</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{\bx}{s} = \bu(\bx,t),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(s\)</span> is a parameter along the streamline. The two coincide if the flow is steady, i.e. <span class="process-math">\(\bu(\bx,t)=\bu(\bx)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.5.a.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-2-2" title="Copy heading and permalink for Solution 2.3.5.a.1" aria-label="Copy heading and permalink for Solution 2.3.5.a.1">🔗</a></div>
 </div></details>
-</div></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-bump" aria-label="Back to 3.6.2. Bump lemma."><span class="codenumber">3.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bump lemma.</span></a></h3>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.5.b"><a href="ws-kinematics.html#ex-hw-particle-paths-streamlines-3" aria-label="Back to 2.3.5.b"><span class="codenumber">2.3.5.b</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter02-lagrange-problem2.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Pathline, showing the particle positions at times <span class="process-math">\(t\)</span> and <span class="process-math">\(t+\de t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.10"><a tabindex="-1" href="#lagrange-problem" title="Copy heading and permalink for Figure 2.10" aria-label="Copy heading and permalink for Figure 2.10">🔗</a></div></figcaption>
+</figure>
+<div class="para logical">
+<div class="para">
+<a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.10">Figure 2.10</a> shows the points <span class="process-math">\(\bx(t)\)</span> and <span class="process-math">\(\bx(t+dt)=\bx(t)+\de\bx\text{,}\)</span> and the equation for pathlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de
+t\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> following a particle:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lagrange-problem.html">
+\begin{align*}
+\dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de
+t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla
+f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)\\
+&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla
+f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)\\
+&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},
+\end{align*}
+</div>
+<div class="para">("<span class="process-math">\(\dots\)</span>" denotes higher order terms). Thus the value is preserved if <span class="process-math">\(\DD{f}{t}=0\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.5.b.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-3" title="Copy heading and permalink for Solution 2.3.5.b.1" aria-label="Copy heading and permalink for Solution 2.3.5.b.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.5.c"><a href="ws-kinematics.html#ex-hw-particle-paths-streamlines-4" aria-label="Back to 2.3.5.c"><span class="codenumber">2.3.5.c</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Now suppose that in <a href="ws-kinematics.html#lagrange-problem" class="xref" data-knowl="./knowl/xref/lagrange-problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.10">Figure 2.10</a>, we have shown instead the situation of a streamline.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">In this case, the points <span class="process-math">\(\bx(s)\)</span> and <span class="process-math">\(\bx(s+ds)=\bx(s)+\de\bx\)</span> are shown, and the equation for streamlines gives <span class="process-math">\(\de\bx=\bu(\bx,t)\de s\text{.}\)</span> We follow the value of <span class="process-math">\(f\)</span> along the streamline:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de
+s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla
+f(\bx,t)-f(\bx,t)\right)\\
+&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla
+f(\bx,t)\right)\\
+&amp;=\bu\cdot\nabla f.
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Thus the value of <span class="process-math">\(f\)</span> is preserved if <span class="process-math">\(\bu\cdot\nabla f=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.5.c.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-3" title="Copy heading and permalink for Solution 2.3.5.c.1" aria-label="Copy heading and permalink for Solution 2.3.5.c.1">🔗</a></div>
+</div></details>
+</div></article></article>
+<article class="exercise-like"><h3 class="heading"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines" aria-label="Back to 2.3.6. Streamlines, pathlines and streaklines."><span class="codenumber">2.3.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Streamlines, pathlines and streaklines.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.a"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-3" aria-label="Back to 2.3.6.a"><span class="codenumber">2.3.6.a</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The streamlines are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+\pd{y}{x}=te^{-4x}\quad\Rightarrow\quad
+y=y_0-\frac{t}{4} e^{-4x},
+\end{equation*}
+</div>
+<div class="para">for any constant <span class="process-math">\(y_0\text{.}\)</span> Different values of <span class="process-math">\(y_0\)</span> give different streamlines. See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter02-flowvisualisationproblem.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of streamlines, pathline and streaklines.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.11"><a tabindex="-1" href="#flowvisualisationproblem" title="Copy heading and permalink for Figure 2.11" aria-label="Copy heading and permalink for Figure 2.11">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.a.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-3-2" title="Copy heading and permalink for Solution 2.3.6.a.1" aria-label="Copy heading and permalink for Solution 2.3.6.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.b"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-4" aria-label="Back to 2.3.6.b"><span class="codenumber">2.3.6.b</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The pathlines for a particle starting from <span class="process-math">\((x_0,y_0)\)</span> are given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{align*}
+&amp;\dd{x}{t}=1,\quad
+\dd{y}{t}=te^{-4x}\\
+\Rightarrow\quad&amp;
+x = x_0 + t,\quad
+y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+\end{align*}
+</div>
+<div class="para">Eliminating <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = y_0 + \frac{1}{16} e^{-4x_0}
+- \frac{1+4x-4x_0}{16} e^{-4x}.
+\end{equation*}
+</div>
+<div class="para">This is a general pathline. For the particular particle that starts from <span class="process-math">\((0,0)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.b.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-2" title="Copy heading and permalink for Solution 2.3.6.b.1" aria-label="Copy heading and permalink for Solution 2.3.6.b.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.c"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-5" aria-label="Back to 2.3.6.c"><span class="codenumber">2.3.6.c</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Suppose the particle that started at <span class="process-math">\((x_0,y_0)\)</span> hits the special point <span class="process-math">\((0,0)\)</span> at time <span class="process-math">\(t_1\text{.}\)</span> From the pathline equation:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+0 = x_0 + t_1, \quad
+0 = y_0 + \tfrac{1}{16} e^{-4x_0}
+- \tfrac{1+4t_1}{16} e^{-4(x_0+t_1)}.
+\end{equation*}
+</div>
+<div class="para">Solving for <span class="process-math">\(x_0\)</span> and <span class="process-math">\(y_0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x_0 = -t_1,\quad
+y_0 = -\tfrac{1}{16}\left(e^{4t_1} - 1 - 4t_1\right).
+\end{equation*}
+</div>
+<div class="para">At time <span class="process-math">\(t\)</span> the particle is at:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = t - t_1,\quad
+y = \tfrac{1}{16}\left((1+4t_1) - (1+4t)e^{-4(t-t_1)}\right).
+\end{equation*}
+</div>
+<div class="para">Eliminating <span class="process-math">\(t_1\)</span> gives the streakline at time <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch. Note that the streamlines, pathlines and streaklines are all very different.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.c.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-3" title="Copy heading and permalink for Solution 2.3.6.c.1" aria-label="Copy heading and permalink for Solution 2.3.6.c.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.d"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-6" aria-label="Back to 2.3.6.d"><span class="codenumber">2.3.6.d</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">From the pathline equation, a particle starting from <span class="process-math">\((x_0,0)\)</span> reaches</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = x_0 + t,\quad
+y = \tfrac{1}{16} e^{-4x_0}
+- \tfrac{1+4t}{16} e^{-4(x_0+t)}
+\end{equation*}
+</div>
+<div class="para">at time <span class="process-math">\(t\text{.}\)</span> Eliminating <span class="process-math">\(x_0\)</span> gives the timeline:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+y = \tfrac{1}{16}\left(e^{4t} - 1 - 4t\right)e^{-4x}.
+\end{equation*}
+</div>
+<div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">From the pathline equation, a particle starting from <span class="process-math">\((0,y_0)\)</span> reaches</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
+\begin{equation*}
+x = t,\quad
+y = y_0 + \tfrac{1}{16}
+- \tfrac{1+4t}{16} e^{-4t}
+\end{equation*}
+</div>
+<div class="para">at time <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(y_0\)</span> can take any value, the timeline is just the line <span class="process-math">\(x
+= t\text{.}\)</span> See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.d.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2" title="Copy heading and permalink for Solution 2.3.6.d.1" aria-label="Copy heading and permalink for Solution 2.3.6.d.1">🔗</a></div>
+</div></details>
+</div></article></article><h2 class="heading hide-type" title="Exercises 3.6">
+<span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equations of motion</span><br><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-bump" aria-label="Back to 3.6.1. Bump lemma."><span class="codenumber">3.6.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bump lemma.</span></a></h3>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -671,11 +873,11 @@ U\e^{Ut/L}=U\left(1+\frac{x}{L}\right),
 </div>
 <div class="para">Assume that there exists a point <span class="process-math">\(\bx_0 \in \Omega\)</span> where <span class="process-math">\(f(\bx_0) \neq 0\text{.}\)</span> Suppose without loss of generality <span class="process-math">\(f &gt; 0\)</span> here. Since <span class="process-math">\(f\)</span> is sufficiently smooth (and in particular, it is continuous), then there exists a non-trivial neighbourhood near <span class="process-math">\(\bx_0\)</span> where <span class="process-math">\(f &gt; 0\)</span> everywhere in this neighbourhood, say <span class="process-math">\(V_0\text{.}\)</span> Then <span class="process-math">\(\int_{V_0} f \, \de{V} = 0\text{,}\)</span> contradicting the assumption. Therefore <span class="process-math">\(f\)</span> must be zero everywhere.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bump-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.2.1"><a tabindex="-1" href="#ex-bump-3" title="Copy heading and permalink for Solution 3.6.2.1" aria-label="Copy heading and permalink for Solution 3.6.2.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.1.1"><a tabindex="-1" href="#ex-bump-3" title="Copy heading and permalink for Solution 3.6.1.1" aria-label="Copy heading and permalink for Solution 3.6.1.1">🔗</a></div>
 </div></details>
 </div></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-leibnitz-rule" aria-label="Back to 3.6.3. Leibniz’s rule."><span class="codenumber">3.6.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Leibniz’s rule.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.3.a"><a href="ws-equations.html#ex-hw-leibnitz-rule-3" aria-label="Back to 3.6.3.a"><span class="codenumber">3.6.3.a</span></a></h4>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-leibnitz-rule" aria-label="Back to 3.6.2. Leibniz’s rule."><span class="codenumber">3.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Leibniz’s rule.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.2.a"><a href="ws-equations.html#ex-hw-leibnitz-rule-3" aria-label="Back to 3.6.2.a"><span class="codenumber">3.6.2.a</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -710,9 +912,9 @@ f(x, t + \Delta t)[b(t + \Delta t) - b(t)] \frac{1}{\Delta t},
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-leibnitz-rule-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.3.a.1"><a tabindex="-1" href="#ex-hw-leibnitz-rule-3-2" title="Copy heading and permalink for Solution 3.6.3.a.1" aria-label="Copy heading and permalink for Solution 3.6.3.a.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.2.a.1"><a tabindex="-1" href="#ex-hw-leibnitz-rule-3-2" title="Copy heading and permalink for Solution 3.6.2.a.1" aria-label="Copy heading and permalink for Solution 3.6.2.a.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.3.c"><a href="ws-equations.html#ex-hw-leibnitz-rule-5" aria-label="Back to 3.6.3.c"><span class="codenumber">3.6.3.c</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.2.c"><a href="ws-equations.html#ex-hw-leibnitz-rule-5" aria-label="Back to 3.6.2.c"><span class="codenumber">3.6.2.c</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -725,10 +927,10 @@ f(x, t + \Delta t)[b(t + \Delta t) - b(t)] \frac{1}{\Delta t},
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-leibnitz-rule-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.3.c.1"><a tabindex="-1" href="#ex-hw-leibnitz-rule-5-2" title="Copy heading and permalink for Solution 3.6.3.c.1" aria-label="Copy heading and permalink for Solution 3.6.3.c.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.2.c.1"><a tabindex="-1" href="#ex-hw-leibnitz-rule-5-2" title="Copy heading and permalink for Solution 3.6.2.c.1" aria-label="Copy heading and permalink for Solution 3.6.2.c.1">🔗</a></div>
 </div></details>
 </div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-euler-check" aria-label="Back to 3.6.4. Derivation of governing equations."><span class="codenumber">3.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivation of governing equations.</span></a></h3>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-euler-check" aria-label="Back to 3.6.3. Derivation of governing equations."><span class="codenumber">3.6.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivation of governing equations.</span></a></h3>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -736,11 +938,11 @@ f(x, t + \Delta t)[b(t + \Delta t) - b(t)] \frac{1}{\Delta t},
 </div>
 <div class="para">The derivation of the Euler equations, as given in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> requires the additional assumption of an incompressible fluid, following <a href="sec-incompressible.html#def-incompressible" class="xref" data-knowl="./knowl/xref/def-incompressible.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.4.1: Incompressible fluids">Theorem 3.4.1</a>. Incompressibility implies that <span class="process-math">\(\nabla \cdot \bu = 0\text{,}\)</span> and this equation then replaces the continuity equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-euler-check-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.4.1"><a tabindex="-1" href="#ex-hw-euler-check-3" title="Copy heading and permalink for Solution 3.6.4.1" aria-label="Copy heading and permalink for Solution 3.6.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.3.1"><a tabindex="-1" href="#ex-hw-euler-check-3" title="Copy heading and permalink for Solution 3.6.3.1" aria-label="Copy heading and permalink for Solution 3.6.3.1">🔗</a></div>
 </div></details>
 </div></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity" aria-label="Back to 3.6.5. Pressure field in uniform flow."><span class="codenumber">3.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pressure field in uniform flow.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.5.a"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity-3" aria-label="Back to 3.6.5.a"><span class="codenumber">3.6.5.a</span></a></h4>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity" aria-label="Back to 3.6.4. Pressure field in uniform flow."><span class="codenumber">3.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pressure field in uniform flow.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.4.a"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity-3" aria-label="Back to 3.6.4.a"><span class="codenumber">3.6.4.a</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -813,20 +1015,20 @@ p = p_0 - \rho \big(bx + 3t^2 y + (e^t + g)z \big).
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.5.a.1"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-3-2" title="Copy heading and permalink for Solution 3.6.5.a.1" aria-label="Copy heading and permalink for Solution 3.6.5.a.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.4.a.1"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-3-2" title="Copy heading and permalink for Solution 3.6.4.a.1" aria-label="Copy heading and permalink for Solution 3.6.4.a.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.5.b"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity-4" aria-label="Back to 3.6.5.b"><span class="codenumber">3.6.5.b</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.4.b"><a href="ws-equations.html#ex-hw-fluid-pressure-uniform-velocity-4" aria-label="Back to 3.6.4.b"><span class="codenumber">3.6.4.b</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
 <div class="para">The pressure is constant on parallel planes normal to the vector <span class="process-math">\((b, \; 3t^2, \; e^t + g)\text{,}\)</span> as illustrated below:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ch-chapter03-pressure-contours.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Contours of the pressure field at fixed <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 3.6"><a tabindex="-1" href="#fig-pressure-contours" title="Copy heading and permalink for Figure 3.6" aria-label="Copy heading and permalink for Figure 3.6">🔗</a></div></figcaption>
-</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.5.b.1"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-4-2" title="Copy heading and permalink for Solution 3.6.5.b.1" aria-label="Copy heading and permalink for Solution 3.6.5.b.1">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Contours of the pressure field at fixed <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 3.4"><a tabindex="-1" href="#fig-pressure-contours" title="Copy heading and permalink for Figure 3.4" aria-label="Copy heading and permalink for Figure 3.4">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.4.b.1"><a tabindex="-1" href="#ex-hw-fluid-pressure-uniform-velocity-4-2" title="Copy heading and permalink for Solution 3.6.4.b.1" aria-label="Copy heading and permalink for Solution 3.6.4.b.1">🔗</a></div>
 </div></details>
 </div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-piston-fluid-problem" aria-label="Back to 3.6.6. Piston problem."><span class="codenumber">3.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Piston problem.</span></a></h3>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-hw-piston-fluid-problem" aria-label="Back to 3.6.5. Piston problem."><span class="codenumber">3.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Piston problem.</span></a></h3>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -875,11 +1077,11 @@ F+Ap_\text{atm},
 </div>
 <div class="para">Note that the atmospheric pressure cancels in this problem, and this is common to problems of this type, because atmospheric pressure acts uniformly on all surfaces exposed to the atmosphere and therefore does not lead to a resultant force or affect the dynamics. This motivates the introduction of a gauge pressure, <span class="process-math">\(p_{\text{gauge}}\text{,}\)</span> whereby a uniform and constant baseline pressure is chosen, in this case <span class="process-math">\(p_{\text{atm}}\text{,}\)</span> with the gauge pressure given by <span class="process-math">\(p_{\text{gauge}}=p-p_{\text{atm}}\text{.}\)</span> Since the pressure only appears as a gradient in the governing equations, using the gauge pressure does not affect the result. Introducing a gauge pressure can make the algebra simpler.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-piston-fluid-problem-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.6.1"><a tabindex="-1" href="#ex-hw-piston-fluid-problem-3" title="Copy heading and permalink for Solution 3.6.6.1" aria-label="Copy heading and permalink for Solution 3.6.6.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.5.1"><a tabindex="-1" href="#ex-hw-piston-fluid-problem-3" title="Copy heading and permalink for Solution 3.6.5.1" aria-label="Copy heading and permalink for Solution 3.6.5.1">🔗</a></div>
 </div></details>
 </div></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-vorticity-equation" aria-label="Back to 3.6.7. The vorticity equation."><span class="codenumber">3.6.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.7.a"><a href="ws-equations.html#ex-vorticity-equation-3" aria-label="Back to 3.6.7.a"><span class="codenumber">3.6.7.a</span></a></h4>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-vorticity-equation" aria-label="Back to 3.6.6. The vorticity equation."><span class="codenumber">3.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.6.a"><a href="ws-equations.html#ex-vorticity-equation-3" aria-label="Back to 3.6.6.a"><span class="codenumber">3.6.6.a</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -943,9 +1145,9 @@ v-\pd{\bu}{y}\cdot\nabla u\right),
 <div class="para">as required.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-vorticity-equation-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.7.a.1"><a tabindex="-1" href="#ex-vorticity-equation-3-2" title="Copy heading and permalink for Solution 3.6.7.a.1" aria-label="Copy heading and permalink for Solution 3.6.7.a.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.6.a.1"><a tabindex="-1" href="#ex-vorticity-equation-3-2" title="Copy heading and permalink for Solution 3.6.6.a.1" aria-label="Copy heading and permalink for Solution 3.6.6.a.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.7.b"><a href="ws-equations.html#ex-vorticity-equation-4" aria-label="Back to 3.6.7.b"><span class="codenumber">3.6.7.b</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.6.b"><a href="ws-equations.html#ex-vorticity-equation-4" aria-label="Back to 3.6.6.b"><span class="codenumber">3.6.6.b</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -966,19 +1168,19 @@ v/\partial x-\partial u/\partial y\text{.}\)</span> Thus</div>
 <div class="para">meaning that <span class="process-math">\(\bomega\)</span> is conserved following the flow.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-vorticity-equation-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.7.b.1"><a tabindex="-1" href="#ex-vorticity-equation-4-2" title="Copy heading and permalink for Solution 3.6.7.b.1" aria-label="Copy heading and permalink for Solution 3.6.7.b.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.6.b.1"><a tabindex="-1" href="#ex-vorticity-equation-4-2" title="Copy heading and permalink for Solution 3.6.6.b.1" aria-label="Copy heading and permalink for Solution 3.6.6.b.1">🔗</a></div>
 </div></details>
 </div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-bernoulli-streamline" aria-label="Back to 3.6.8. Using streamlines: The clepsydra."><span class="codenumber">3.6.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using streamlines: The clepsydra.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.8.a"><a href="ws-equations.html#ex-bernoulli-streamline-3" aria-label="Back to 3.6.8.a"><span class="codenumber">3.6.8.a</span></a></h4>
+<article class="exercise-like"><h3 class="heading"><a href="ws-equations.html#ex-bernoulli-streamline" aria-label="Back to 3.6.7. Using streamlines: The clepsydra."><span class="codenumber">3.6.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using streamlines: The clepsydra.</span></a></h3>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.7.a"><a href="ws-equations.html#ex-bernoulli-streamline-3" aria-label="Back to 3.6.7.a"><span class="codenumber">3.6.7.a</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
 <div class="para">The fluid velocity at the surface of the jar satisfies <span class="process-math">\(\bu\cdot\bn=0\text{,}\)</span> so that no fluid leaves or enters the jar through its sides. This means that the flow next to the boundary of the jar must be parallel to this boundary, meaning that streamlines are parallel to the boundary. Equivalently, the boundary <span class="process-math">\(r = a(z)\)</span> is a streamline.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-streamline-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.8.a.1"><a tabindex="-1" href="#ex-bernoulli-streamline-3-2" title="Copy heading and permalink for Solution 3.6.8.a.1" aria-label="Copy heading and permalink for Solution 3.6.8.a.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.7.a.1"><a tabindex="-1" href="#ex-bernoulli-streamline-3-2" title="Copy heading and permalink for Solution 3.6.7.a.1" aria-label="Copy heading and permalink for Solution 3.6.7.a.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.8.b"><a href="ws-equations.html#ex-bernoulli-streamline-4" aria-label="Back to 3.6.8.b"><span class="codenumber">3.6.8.b</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.7.b"><a href="ws-equations.html#ex-bernoulli-streamline-4" aria-label="Back to 3.6.7.b"><span class="codenumber">3.6.7.b</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -998,9 +1200,9 @@ gh = \frac12 u^2.
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-streamline-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.8.b.1"><a tabindex="-1" href="#ex-bernoulli-streamline-4-2" title="Copy heading and permalink for Solution 3.6.8.b.1" aria-label="Copy heading and permalink for Solution 3.6.8.b.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.7.b.1"><a tabindex="-1" href="#ex-bernoulli-streamline-4-2" title="Copy heading and permalink for Solution 3.6.7.b.1" aria-label="Copy heading and permalink for Solution 3.6.7.b.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.8.c"><a href="ws-equations.html#ex-bernoulli-streamline-5" aria-label="Back to 3.6.8.c"><span class="codenumber">3.6.8.c</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 3.6.7.c"><a href="ws-equations.html#ex-bernoulli-streamline-5" aria-label="Back to 3.6.7.c"><span class="codenumber">3.6.7.c</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -1032,7 +1234,7 @@ a=\left(\frac{a_h^2\sqrt{2g}}{u_S}\right)^{1/2} h^{1/4}.
 <div class="para">The terms in the brackets are constant, so we have that the radius of the jar must vary as the fourth root of the height.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-streamline-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.8.c.1"><a tabindex="-1" href="#ex-bernoulli-streamline-5-2" title="Copy heading and permalink for Solution 3.6.8.c.1" aria-label="Copy heading and permalink for Solution 3.6.8.c.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.6.7.c.1"><a tabindex="-1" href="#ex-bernoulli-streamline-5-2" title="Copy heading and permalink for Solution 3.6.7.c.1" aria-label="Copy heading and permalink for Solution 3.6.7.c.1">🔗</a></div>
 </div></details>
 </div></article></article><h2 class="heading hide-type" title="Exercises 4.7">
 <span class="codenumber">4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Potential flows</span><br><span class="codenumber">4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
@@ -1226,7 +1428,43 @@ U\frac{\sqrt{2}}{2} \int_{t = 0}^1 \frac{[1, 1]}{\sqrt{2}} \cdot [1, 1] \sqrt{2}
 </div></details>
 </div></article>
 <article class="exercise-like"><h3 class="heading"><a href="ws-potentialflows.html#ws-potentialflows-2-5" aria-label="Back to 4.7.3. Doublet."><span class="codenumber">4.7.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Doublet.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 4.7.3.b"><a href="ws-potentialflows.html#ws-potentialflows-2-5-4" aria-label="Back to 4.7.3.b"><span class="codenumber">4.7.3.b</span></a></h4>
+<article class="exercise-like"><h4 class="heading hide-type" title="Task 4.7.3.a"><a href="ws-potentialflows.html#ws-potentialflows-2-5-3" aria-label="Back to 4.7.3.a"><span class="codenumber">4.7.3.a</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The complex potential is the sum of a line source and line sink:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} [\log(z - a) - \log(z + a)].
+\end{equation*}
+</div>
+<div class="para">Therefore the complex velocity is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \left[ \frac{1}{z-a} - \frac{1}{z+a}\right].
+\end{equation*}
+</div>
+<div class="para">Stagnation points are where <span class="process-math">\(f'(z) = 0\text{.}\)</span> There are no stagnation points. The streamfunction is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Im f = \frac{Q}{2\pi}(\theta_1 - \theta_2), 
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\theta_1\)</span> and <span class="process-math">\(\theta_2\)</span> are angles measured relative to the positions about <span class="process-math">\(\pm a\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\theta_{1,2} = \tan^{-1} \left( \frac{y}{x \mp a} \right).
+\end{equation*}
+</div>
+<div class="para">The streamlines are given where <span class="process-math">\(\psi\)</span> is constant. The streamlines are shown below.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-potentialflows-2-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/potential_almostdoublet.png" class="contained" alt="Almost doublet"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Streamlines for a sink and source<div class="autopermalink" aria-hidden="true" data-description="Figure 4.23"><a tabindex="-1" href="#ws-potentialflows-2-5-3-2-2" title="Copy heading and permalink for Figure 4.23" aria-label="Copy heading and permalink for Figure 4.23">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 4.7.3.a.1"><a tabindex="-1" href="#ws-potentialflows-2-5-3-2" title="Copy heading and permalink for Solution 4.7.3.a.1" aria-label="Copy heading and permalink for Solution 4.7.3.a.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 4.7.3.b"><a href="ws-potentialflows.html#ws-potentialflows-2-5-4" aria-label="Back to 4.7.3.b"><span class="codenumber">4.7.3.b</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -2778,7 +3016,7 @@ p=p_0-Px.
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ex-general-deformation-fluid-element-5-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li>
-<div class="para">The second term <span class="process-math">\(\frac12(\nabla_x\times\bu)\times\bs\)</span> represents rotation since, setting <span class="process-math">\(\bOmega=\nabla_x\times\bu/2=\bomega/2\text{,}\)</span> this term is of the form <span class="process-math">\(\bOmega\times\bs\text{,}\)</span> which is purely rotational motion about point <span class="process-math">\(P\)</span> (see <a href="ch-viscousflows-12.html#ex-rotating-flow" class="xref" data-knowl="./knowl/xref/ex-rotating-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.10.2: Rotating flow">Exercise 6.10.2</a>). Note also that this again shows a result that we used in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "sec-vorticity" missing or not unique]</code> that the vorticity <span class="process-math">\(\bomega\)</span> is twice the angular velocity since <span class="process-math">\(\bOmega=\bomega/2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-general-deformation-fluid-element-5-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The second term <span class="process-math">\(\frac12(\nabla_x\times\bu)\times\bs\)</span> represents rotation since, setting <span class="process-math">\(\bOmega=\nabla_x\times\bu/2=\bomega/2\text{,}\)</span> this term is of the form <span class="process-math">\(\bOmega\times\bs\text{,}\)</span> which is purely rotational motion about point <span class="process-math">\(P\)</span> (see <a href="ch-viscousflows-12.html#ex-rotating-flow" class="xref" data-knowl="./knowl/xref/ex-rotating-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.10.2: Rotating flow">Exercise 6.10.2</a>). Note also that this shows that the vorticity <span class="process-math">\(\bomega\)</span> is twice the local angular velocity of the fluid element, since <span class="process-math">\(\bOmega=\bomega/2\text{.}\)</span> This makes precise the statement in <a href="sec-bernoulli.html#def-vorticity" class="xref" data-knowl="./knowl/xref/def-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.5.2: Vorticity of a vector field">Definition 3.5.2</a> that the vorticity measures the local rotation of the flow.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-general-deformation-fluid-element-5-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ex-general-deformation-fluid-element-5-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>

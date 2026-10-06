@@ -37,7 +37,27 @@
 </article>
 <details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
-<div class="para">The proof follows from direct differentiation of the determinant and use of the identity of the material derivative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-Euleridentity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">(Not examinable) The material derivative is the time derivative with <span class="process-math">\(\bX\)</span> held fixed, so <span class="process-math">\(\pd{x}{t} = u\text{,}\)</span> <span class="process-math">\(\pd{y}{t} = v\)</span> and <span class="process-math">\(\pd{z}{t} = w\text{.}\)</span> By the product rule, <span class="process-math">\(\DD{J}{t}\)</span> is a sum of three determinants, each with one row of <span class="process-math">\(J\)</span> differentiated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-Euleridentity-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Consider the first. A typical entry of its differentiated row is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\DD{}{t}\pd{x}{X} = \pd{u}{X} = \pd{u}{x}\pd{x}{X} + \pd{u}{y}\pd{y}{X} +
+\pd{u}{z}\pd{z}{X},
+\end{equation*}
+</div>
+<div class="para">using the chain rule; the entries for <span class="process-math">\(Y\)</span> and <span class="process-math">\(Z\)</span> are the same with <span class="process-math">\(X\)</span> replaced. So the new first row is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\pd{u}{x}\,(\text{row 1}) + \pd{u}{y}\,(\text{row 2}) + \pd{u}{z}\,(\text{row 3}).
+\end{equation*}
+</div>
+<div class="para">A determinant with two equal rows vanishes, so only the first term survives, and this determinant equals <span class="process-math">\(\pd{u}{x}J\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-Euleridentity-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">In the same way, the other two determinants give <span class="process-math">\(\pd{v}{y}J\)</span> and <span class="process-math">\(\pd{w}{z}J\text{.}\)</span> Adding them gives <span class="process-math">\(\DD{J}{t} = J\,\nabla\cdot\bu\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-Euleridentity-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 3.1.2.1"><a tabindex="-1" href="#thm-Euleridentity-3" title="Copy heading and permalink for Proof 3.1.2.1" aria-label="Copy heading and permalink for Proof 3.1.2.1">🔗</a></div>
 </article></details><span class="incontext"><a class="internal" href="sec-RTT.html#thm-Euleridentity">In Context</a></span>
