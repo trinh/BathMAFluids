@@ -19,6 +19,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
 <link rel="stylesheet" type="text/css" href="external/custom.css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -63,15 +66,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -318,6 +321,80 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-water-waves.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-viscousflows.html" class="internal"><span class="codenumber">6</span> <span class="title">Viscous flows</span></a></div>
+<ul id="ptx-toc-group-ch-viscousflows" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch-viscousflows-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="definitions.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Important definitions</span></a></div>
+<ul id="ptx-toc-group-definitions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#viscosity" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Viscosity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="definitions.html#reynolds-number" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="definitions.html#state-relations" class="internal"><span class="codenumber">6.1.3</span> <span class="title">State relations</span></a></div>
+<ul id="ptx-toc-group-state-relations" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-3" class="internal"><span class="codenumber">6.1.3.1</span> <span class="title">Liquids</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="definitions.html#state-relations-4" class="internal"><span class="codenumber">6.1.3.2</span> <span class="title">Gases</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Boundaries, surfaces and interfaces of fluids</span></a></div>
+<ul id="ptx-toc-group-boundaries-surfaces-interfaces" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundary-conditions-velocity" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Boundary conditions on the velocity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Force balance at the boundary/interface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boundaries-surfaces-interfaces.html#boundaries-surfaces-interfaces-5" class="internal"><span class="codenumber">6.2.3</span> <span class="title">Surface tension</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-stress.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Stress in a fluid</span></a></div>
+<ul id="ptx-toc-group-sec-stress" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#sec-stress-2" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-stress.html#subsec-stress-tensor" class="internal"><span class="codenumber">6.3.2</span> <span class="title">The stress tensor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="subsec-newtonian-fluids.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Newtonian fluids</span></a></div>
+<ul id="ptx-toc-group-subsec-newtonian-fluids" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-incompressible-newtonian-fluids" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Incompressible Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-stress-surface" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Stress at a surface</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#inviscid-fluids" class="internal"><span class="codenumber">6.4.3</span> <span class="title">Inviscid fluids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-nonnewtonian-fluids" class="internal"><span class="codenumber">6.4.4</span> <span class="title">Non-Newtonian fluids</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="subsec-newtonian-fluids.html#subsec-examples" class="internal"><span class="codenumber">6.4.5</span> <span class="title">examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Conservation of linear momentum</span></a></div>
+<ul id="ptx-toc-group-sec-linear-momentum-cons" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-lhs" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Left-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-rhs" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Right-hand side</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-rtt-equality" class="internal"><span class="codenumber">6.5.3</span> <span class="title">Equating the two sides</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-navierstokes-discussion" class="internal"><span class="codenumber">6.5.4</span> <span class="title">Discussion of the Navier–Stokes equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-example-application" class="internal"><span class="codenumber">6.5.5</span> <span class="title">Example of the application</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-linear-momentum-cons.html#sec-low-and-high-reynolds-number" class="internal"><span class="codenumber">6.5.6</span> <span class="title">Limits of low and high Reynolds number</span></a></div>
+<ul id="ptx-toc-group-sec-low-and-high-reynolds-number" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-low-Reynolds-number" class="internal"><span class="codenumber">6.5.6.1</span> <span class="title">Low Reynolds number</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-linear-momentum-cons.html#subsec-high-Reynolds-number" class="internal"><span class="codenumber">6.5.6.2</span> <span class="title">High Reynolds number</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-viscous-dissipation-of-energy.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Viscous Dissipation of Energy</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-methods-to-solve-equations.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Methods to solve the Navier–Stokes and continuity equations</span></a></div>
+<ul id="ptx-toc-group-sec-methods-to-solve-equations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods" class="internal"><span class="codenumber">6.7.1</span> <span class="title">Methods of solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-methods-to-solve-equations.html#subsec-methods-analytical" class="internal"><span class="codenumber">6.7.2</span> <span class="title">Methods to solve the equations analytically</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Practice Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-12.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Problems set 7 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="problems-set-8.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Problems set 8 to hand in</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
 <ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
@@ -349,21 +426,28 @@ eBookConfig.enable_chatcodes =  false;
 <section class="introduction" id="ws-kinematics-1">
 <div class="para" id="ws-kinematics-1-1">The kinematics chapter covered the basic essentials about the measurement and computation of fluid velocities and acceleration. We examined the difference between Eulerian and Lagrangian coordinates and derivatives. Examples of streamlines and velocity fields were examined.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-kinematics-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="remark remark-like" id="remark-solutions-feedback"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solutions and feedback.</span>
+<article class="remark remark-like" id="remark-solutions-feedback-kinematics"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">solutions and feedback.</span>
 </h2>
-<div class="para" id="remark-solutions-feedback-2">Full solutions to these exercises can be found in <a href="solutions.html" class="internal" title="Appendix A: Solutions">Appendix A</a> at the back of the book.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-solutions-feedback-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="remark-solutions-feedback-kinematics-2">full solutions to these exercises can be found in <a href="solutions.html" class="internal" title="Appendix A: Solutions">Appendix A</a> at the back of the book.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-solutions-feedback-kinematics-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="remark-solutions-feedback-3">If you would like feedback on your work, the tutor will by default concentrate on the exercises highlighted with a yellow background in the online notes (the homework exercises), unless you specifically ask for feedback on a different exercise instead.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-solutions-feedback-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="remark-solutions-feedback-kinematics-3">if you would like feedback on your work, the tutor will by default concentrate on the exercises highlighted with a yellow background in the online notes (the homework exercises), unless you specifically ask for feedback on a different exercise instead.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#remark-solutions-feedback-kinematics-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Remark 2.3.1: Solutions and feedback"><a tabindex="-1" href="#remark-solutions-feedback" title="Copy heading and permalink for Remark 2.3.1: Solutions and feedback" aria-label="Copy heading and permalink for Remark 2.3.1: Solutions and feedback">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 2.3.1: solutions and feedback"><a tabindex="-1" href="#remark-solutions-feedback-kinematics" title="Copy heading and permalink for Remark 2.3.1: solutions and feedback" aria-label="Copy heading and permalink for Remark 2.3.1: solutions and feedback">🔗</a></div>
 </article></section>
 <article class="exercise exercise-like" id="ex-video-flow-visualisation"><h2 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow visualisation.</span>
 </h2>
 <div class="introduction" id="ex-video-flow-visualisation-2">
-<div class="para" id="ex-video-flow-visualisation-2-1">
-<a class="external" href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization" target="_blank">Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF archives</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-flow-visualisation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="ex-video-flow-visualisation-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Optional.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ex-video-flow-visualisation-2-1-2">This question is optional. It is meant only to deepen your understanding of the processes discussed in this chapter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-flow-visualisation-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para" id="ex-video-flow-visualisation-2-2">
+<a class="external" href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization" target="_blank">Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF archives</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-flow-visualisation-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="ex-video-flow-visualisation-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
@@ -411,46 +495,16 @@ eBookConfig.enable_chatcodes =  false;
 <article class="exercise exercise-like" id="ex-eulerian-lagrangian"><h2 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
 </h2>
-<div class="introduction" id="ex-eulerian-lagrangian-2">
-<div class="para" id="ex-eulerian-lagrangian-2-1">A velocity field is described in Eulerian terms in Cartesian coordinates by <span class="process-math">\(\mathbf{u}=(-y,x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="ex-eulerian-lagrangian-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Revised in 2026.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ex-eulerian-lagrangian-2-1-2">In 2025, this question had a part (b) on expressing the position and velocity in polar coordinates. It has been removed for simplicity; polar coordinates will be introduced later in the course.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+</aside></details> 
+<div class="para" id="ex-eulerian-lagrangian-2-2">A velocity field is described in Eulerian terms in Cartesian coordinates by <span class="process-math">\(\mathbf{u}=(-y,x)\text{.}\)</span> What is the Lagrangian position of the particle that starts at the point <span class="process-math">\((x_0,y_0)\text{?}\)</span> Describe its path. What is its velocity?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="task exercise-like" id="ex-eulerian-lagrangian-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ex-eulerian-lagrangian-3-1-1">What is the Lagrangian position of the particle that starts at the point <span class="process-math">\((x_0,y_0)\text{?}\)</span> Describe its path. What is its velocity?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.3.a"><a tabindex="-1" href="#ex-eulerian-lagrangian-3" title="Copy heading and permalink for Task 2.3.3.a" aria-label="Copy heading and permalink for Task 2.3.3.a">🔗</a></div>
-</article>
-<article class="task exercise-like" id="ex-eulerian-lagrangian-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="ex-eulerian-lagrangian-4-1-1">Express the position and velocity in polar coordinates. What do you notice?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="ex-eulerian-lagrangian-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="hint solution-like knowl__content">
-<div class="para logical" id="ex-eulerian-lagrangian-4-2-1">
-<div class="para">Note that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-polarcartunitvectors-r.html ./knowl/xref/eq-polarcartunitvectors-theta.html ./knowl/xref/eq-polarcartunitvectors-z.html" id="ex-eulerian-lagrangian-4-2-1-1">
-\begin{equation*}
-\hat{\boldsymbol{r}}=
-\left(\begin{matrix}
-\cos\theta\\\sin\theta
-\end{matrix}\right)
-=\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j},
-\quad
-\hat{\boldsymbol{\theta}}=
-\left(\begin{matrix}
--\sin\theta\\\cos\theta
-\end{matrix}\right)
-=-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j},
-\end{equation*}
-</div>
-<div class="para">see also <a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar-3-7" class="xref" data-knowl="./knowl/xref/eq-polarcartunitvectors-r.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation B.1.5">(B.1.5)</a>, <a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar-3-7" class="xref" data-knowl="./knowl/xref/eq-polarcartunitvectors-theta.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation B.1.6">(B.1.6)</a> and <a href="sec-converting-between-coordinates.html#subsec-Cartesian-to-cylindrical-polar-3-7" class="xref" data-knowl="./knowl/xref/eq-polarcartunitvectors-z.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation B.1.7">(B.1.7)</a>.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-eulerian-lagrangian-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 2.3.3.b.1"><a tabindex="-1" href="#ex-eulerian-lagrangian-4-2" title="Copy heading and permalink for Hint 2.3.3.b.1" aria-label="Copy heading and permalink for Hint 2.3.3.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.3.b"><a tabindex="-1" href="#ex-eulerian-lagrangian-4" title="Copy heading and permalink for Task 2.3.3.b" aria-label="Copy heading and permalink for Task 2.3.3.b">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Exercise 2.3.3: Eulerian and Lagrangian descriptions"><a tabindex="-1" href="#ex-eulerian-lagrangian" title="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 2.3.3: Eulerian and Lagrangian descriptions"><a tabindex="-1" href="#ex-eulerian-lagrangian" title="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions" aria-label="Copy heading and permalink for Exercise 2.3.3: Eulerian and Lagrangian descriptions">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-hw-eulerian-lagrangian2"><h2 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eulerian and Lagrangian descriptions.</span>
@@ -504,46 +558,36 @@ u=U\left(1+\frac{x}{L}\right)
 <article class="exercise exercise-like" id="ex-hw-particle-paths-streamlines"><h2 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Particle paths and streamlines.</span>
 </h2>
-<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="ex-hw-particle-paths-streamlines-2-1-1">Define the particle paths and streamlines for a velocity field <span class="process-math">\(\bu(\bx,t)\text{.}\)</span> When do these coincide?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="ex-hw-particle-paths-streamlines-2">
+<details id="ex-hw-particle-paths-streamlines-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Revised in 2026.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ex-hw-particle-paths-streamlines-2-1-2">Parts (b) and (c) of this question, together with their hints and solutions, were cleaned up for 2026 to set up the pathline and streamline more carefully.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.a"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-2" title="Copy heading and permalink for Task 2.3.5.a" aria-label="Copy heading and permalink for Task 2.3.5.a">🔗</a></div>
+</aside></details>
+</div>
+<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="ex-hw-particle-paths-streamlines-3-1-1">Define the particle paths and streamlines for a velocity field <span class="process-math">\(\bu(\bx,t)\text{.}\)</span> When do these coincide?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.a"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3" title="Copy heading and permalink for Task 2.3.5.a" aria-label="Copy heading and permalink for Task 2.3.5.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para logical" id="ex-hw-particle-paths-streamlines-3-1-1">
-<div class="para">By drawing a sketch of a pathline and considering the points <span class="process-math">\(\bx\)</span> where the particle is at time <span class="process-math">\(t\)</span> and <span class="process-math">\(\bx+\de\bx\)</span> at time <span class="process-math">\(t+\de t\text{,}\)</span> show that a quantity <span class="process-math">\(f(\bx,t)\)</span> is preserved following the flow if</div>
-<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-3-1-1-6">
-\begin{equation*}
-\DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions">
-<details id="ex-hw-particle-paths-streamlines-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="hint solution-like knowl__content">
-<div class="para logical" id="ex-hw-particle-paths-streamlines-3-2-1">
-<div class="para">We can write <span class="process-math">\(\de\bx=\bu(\bx,t)\de t+\dots\text{,}\)</span> where "<span class="process-math">\(\dots\)</span>" indicates smaller corrections. We need to find</div>
-<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-3-2-1-3">
-\begin{equation*}
-\DD{f}{t}=\lim_{\de t\rightarrow0}\frac{f(\bx+\de\bx,t+\de t)-f(\bx,t)}{\de t}.
-\end{equation*}
-</div>
-<div class="para">Now write <span class="process-math">\(f(\bx+\de\bx,t+\de t)\)</span> as a Taylor series about <span class="process-math">\(f(\bx,t)\)</span> and use this to simplify the above expression.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 2.3.5.b.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3-2" title="Copy heading and permalink for Hint 2.3.5.b.1" aria-label="Copy heading and permalink for Hint 2.3.5.b.1">🔗</a></div>
-</div></details>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.b"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-3" title="Copy heading and permalink for Task 2.3.5.b" aria-label="Copy heading and permalink for Task 2.3.5.b">🔗</a></div>
-</article>
-<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-4"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
 <div class="para logical" id="ex-hw-particle-paths-streamlines-4-1-1">
-<div class="para">In a similar way, show that <span class="process-math">\(f\)</span> is constant along streamlines if</div>
-<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-4-1-1-2">
+<div class="para">Let <span class="process-math">\(\bx = \bx(t)\)</span> be a pathline of the fluid, so that <span class="process-math">\(\dd{\bx}{t} =
+\bu(\bx(t), t)\)</span> (see <a href="sec-flowexamples.html#def-particle-path" class="xref" data-knowl="./knowl/xref/def-particle-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2: Pathline or particle path">Definition 2.2.2</a>), and consider <span class="process-math">\(f\)</span> evaluated along the pathline,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-particle-path.html" id="ex-hw-particle-paths-streamlines-4-1-1-5">
 \begin{equation*}
-\bu\cdot\nabla f=0.
+F(t) = f(\bx(t), t),
 \end{equation*}
+</div>
+<div class="para">which is the value of <span class="process-math">\(f\)</span> experienced by the fluid particle. By drawing a sketch of the pathline and marking the positions <span class="process-math">\(\bx\)</span> of the particle at time <span class="process-math">\(t\)</span> and <span class="process-math">\(\bx + \de\bx\)</span> at time <span class="process-math">\(t + \de t\text{,}\)</span> show that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-particle-path.html" id="ex-hw-particle-paths-streamlines-4-1-1-11">
+\begin{equation*}
+\dd{F}{t} = \pd{f}{t} + \bu \cdot \nabla f = \DD{f}{t}.
+\end{equation*}
+</div>
+<div class="para">Hence show that <span class="process-math">\(f\)</span> is preserved following the flow if and only if <span class="process-math">\(\DD{f}{t} = 0\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -551,20 +595,80 @@ u=U\left(1+\frac{x}{L}\right)
 <details id="ex-hw-particle-paths-streamlines-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
 <div class="para logical" id="ex-hw-particle-paths-streamlines-4-2-1">
-<div class="para">In this case we can consider the points <span class="process-math">\(\bx\)</span> and <span class="process-math">\(\bx+\de\bx\)</span> on the streamline, where <span class="process-math">\(\de\bx=\bu(\bx,t)\de s+\dots\text{,}\)</span> where "<span class="process-math">\(\dots\)</span>" indicates smaller corrections. We need to find</div>
-<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-4-2-1-5">
+<div class="para">Since <span class="process-math">\(\bx(t)\)</span> is a pathline, the displacement of the particle in a small time <span class="process-math">\(\de t\)</span> is</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-4-2-1-3">
 \begin{equation*}
-\dd{f}{s}=\lim_{\de s\rightarrow0}\frac{f(\bx+\de\bx,t)-f(\bx,t)}{\de t}.
+\de\bx = \bu(\bx, t) \, \de t + O(\de t^2).
 \end{equation*}
 </div>
-<div class="para">Now write <span class="process-math">\(f(\bx+\de\bx,t)\)</span> as a Taylor series about <span class="process-math">\(f(\bx,t)\text{.}\)</span>
+<div class="para">By definition of the derivative,</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-4-2-1-4">
+\begin{equation*}
+\dd{F}{t} = \lim_{\de t \to 0} \frac{f(\bx + \de\bx, t + \de t) - f(\bx, t)}{\de t}.
+\end{equation*}
+</div>
+<div class="para">To expand the numerator, use the Taylor series for a function of several variables:</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-4-2-1-5">
+\begin{equation*}
+f(\bx + \de\bx, t + \de t) = f(\bx, t) + \de\bx \cdot \nabla f(\bx, t) + \de t \,
+\pd{f}{t}(\bx, t) + O\big(|\de\bx|^2, \, |\de\bx| \, \de t, \, \de t^2\big),
+\end{equation*}
+</div>
+<div class="para">where, in components, <span class="process-math">\(\de\bx \cdot \nabla f = \de x \, \pd{f}{x} + \de y \,
+\pd{f}{y} + \de z \, \pd{f}{z}\text{.}\)</span> Substitute for <span class="process-math">\(\de\bx\)</span> and let <span class="process-math">\(\de t \to
+0\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Hint 2.3.5.c.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-2" title="Copy heading and permalink for Hint 2.3.5.c.1" aria-label="Copy heading and permalink for Hint 2.3.5.c.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.3.5.b.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4-2" title="Copy heading and permalink for Hint 2.3.5.b.1" aria-label="Copy heading and permalink for Hint 2.3.5.b.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.c"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4" title="Copy heading and permalink for Task 2.3.5.c" aria-label="Copy heading and permalink for Task 2.3.5.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.b"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-4" title="Copy heading and permalink for Task 2.3.5.b" aria-label="Copy heading and permalink for Task 2.3.5.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="ex-hw-particle-paths-streamlines-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para logical" id="ex-hw-particle-paths-streamlines-5-1-1">
+<div class="para">Let <span class="process-math">\(\bx = \bx(s, t)\)</span> be a streamline of the flow at fixed time <span class="process-math">\(t\text{,}\)</span> so that <span class="process-math">\(\pd{\bx}{s} = \bu(\bx(s, t), t)\text{,}\)</span> where <span class="process-math">\(s\)</span> is the parameter along the streamline (see <a href="sec-flowexamples.html#def-streamline" class="xref" data-knowl="./knowl/xref/def-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1: Particle streamlines">Definition 2.2.1</a>). Consider <span class="process-math">\(f\)</span> evaluated on the streamline,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-streamline.html" id="ex-hw-particle-paths-streamlines-5-1-1-7">
+\begin{equation*}
+G(s) = f(\bx(s, t), t).
+\end{equation*}
+</div>
+<div class="para">Show that <span class="process-math">\(f\)</span> is constant along the streamline if and only if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-streamline.html" id="ex-hw-particle-paths-streamlines-5-1-1-9">
+\begin{equation*}
+\bu \cdot \nabla f = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-hw-particle-paths-streamlines-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para logical" id="ex-hw-particle-paths-streamlines-5-2-1">
+<div class="para">Consider the points <span class="process-math">\(\bx = \bx(s, t)\)</span> and <span class="process-math">\(\bx + \de\bx = \bx(s + \de s, t)\)</span> on the same streamline, at the <em class="emphasis">same</em> instant <span class="process-math">\(t\text{.}\)</span> Since the curve is a streamline,</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-5-2-1-5">
+\begin{equation*}
+\de\bx = \bu(\bx, t) \, \de s + O(\de s^2).
+\end{equation*}
+</div>
+<div class="para">By definition of the derivative,</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-5-2-1-6">
+\begin{equation*}
+\dd{G}{s} = \lim_{\de s \to 0} \frac{f(\bx + \de\bx, t) - f(\bx, t)}{\de s}.
+\end{equation*}
+</div>
+<div class="para">Because the time is the same at both points, the Taylor series now has no time term:</div>
+<div class="displaymath process-math" id="ex-hw-particle-paths-streamlines-5-2-1-7">
+\begin{equation*}
+f(\bx + \de\bx, t) = f(\bx, t) + \de\bx \cdot \nabla f(\bx, t) + O(|\de\bx|^2).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 2.3.5.c.1"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-5-2" title="Copy heading and permalink for Hint 2.3.5.c.1" aria-label="Copy heading and permalink for Hint 2.3.5.c.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.3.5.c"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines-5" title="Copy heading and permalink for Task 2.3.5.c" aria-label="Copy heading and permalink for Task 2.3.5.c">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Exercise 2.3.5: Particle paths and streamlines"><a tabindex="-1" href="#ex-hw-particle-paths-streamlines" title="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines" aria-label="Copy heading and permalink for Exercise 2.3.5: Particle paths and streamlines">🔗</a></div>
 </article>
 <article class="exercise exercise-like" id="ex-hw-streamlines-pathlines-streaklines"><h2 class="heading">
@@ -618,8 +722,15 @@ y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
 <span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An experiment for the material derivative.</span>
 </h2>
 <div class="introduction" id="ex-video-radioactive-2">
-<div class="para" id="ex-video-radioactive-2-1">
-<a class="external" href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" target="_blank">Watch around 12:00 to around 19:00 of the video "Eulerian and Lagrangian Descriptions of Fluid Mechanics" from the NCFMF archives</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-radioactive-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="ex-video-radioactive-2-1" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Optional.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ex-video-radioactive-2-1-2">This question is optional. It is meant only to deepen your understanding of the processes discussed in this chapter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-radioactive-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para" id="ex-video-radioactive-2-2">
+<a class="external" href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics" target="_blank">Watch around 12:00 to around 19:00 of the video "Eulerian and Lagrangian Descriptions of Fluid Mechanics" from the NCFMF archives</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-video-radioactive-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="ex-video-radioactive-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>

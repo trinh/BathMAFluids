@@ -7,7 +7,7 @@
     <p>Typically, the most basic introduction on fluid dynamics usually involves the study of two-dimensional incompressible and irrotational flows, otherwise known as <em>potential flows</em>. There is a good reason for this: the theory is elegant, visualisable, and uses to its benefit the enormous power of complex-variable theory. </p>
 
     <p>
-      Previously, we defined the concept of vorticity via <m>\omega = \nabla \times \bu</m>, which serves as a measure of the local angular velocity of the flow. It turns out that in 2D, irrotational flows, with <m>\omega = 0</m>, provide a powerful restricton to the complexity of flows, allowing the development of the above <em>potential flow theory.</em>. 
+      Previously, we defined the concept of vorticity via <m>\omega = \nabla \times \bu</m>, which serves as a measure of the local angular velocity of the flow. It turns out that in 2D, irrotational flows, with <m>\omega = 0</m>, provide a powerful restriction to the complexity of flows, allowing the development of the above <em>potential flow theory</em>.
     </p>
 
     <figure>
@@ -24,7 +24,7 @@
   <p>
     In this chapter, we focus on 2D flows where the velocity vector is given by 
     <me>
-      \bu(x, y, t) = u(x, y, t)\bi + v(x, y, z)\bj = [u, v].
+      \bu(x, y, t) = u(x, y, t)\bi + v(x, y, t)\bj = [u, v].
     </me>
     With the velocity given as above, the vorticity is then 
     <men xml:id="eqn-2d-vorticity">
@@ -68,7 +68,7 @@
         </p>
 
         <p>
-          We can verify, using the definition of differentiation, and the fundamental theorme of calculus, applied along each of the three coordinate directions, that <m>\nabla \phi = \bu</m> as desired. 
+          We can verify, using the definition of differentiation, and the fundamental theorem of calculus, applied along each of the three coordinate directions, that <m>\nabla \phi = \bu</m> as desired.
         </p>
 
         <p>
@@ -135,7 +135,7 @@
       <me>
         \phi(x, y) = Ux \cos\alpha + Uy \sin\alpha,
       </me>
-      with constants <m>U</m> and <m>\alpha</m>. Then by differentiation we have that the velicity is 
+      with constants <m>U</m> and <m>\alpha</m>. Then by differentiation we have that the velocity is
       <me>
         \bu = U[\cos\alpha, \sin\alpha].
       </me>
@@ -471,7 +471,7 @@
       <title>Stagnation point flow</title><idx><h>stagnation point flow, streamfunction</h></idx>
 
       <p>
-        Now turning to <xref ref="example-potential-stagnation"/>, we integrate <m>u = y = \psi_x</m> and <m>v = x = \psi_y</m>. This gives
+        Now turning to <xref ref="example-potential-stagnation"/>, we integrate <m>u = x = \psi_y</m> and <m>v = -y = -\psi_x</m>. This gives
         <me>
           \psi = xy, 
         </me>
@@ -485,7 +485,7 @@
    <idx><h>line source, streamfunction</h></idx> 
 
    <p>
-    For the situation of the line source in <xref ref="example-potential-linesource"/>, we want to work with polar coordinates. From the previous work, we have for this situation the potential <m>\phi = Q/(2\pi log r</m>. It then follows from the polar version of the gradient in <xref ref="eqn-identity-grad-polar"/>, that the velocity is entirely radial and 
+    For the situation of the line source in <xref ref="example-potential-linesource"/>, we want to work with polar coordinates. From the previous work, we have for this situation the potential <m>\phi = Q/(2\pi) \log r</m>. It then follows from the polar version of the gradient in <xref ref="eqn-identity-grad-polar"/>, that the velocity is entirely radial and 
     <men xml:id="eqn-streamfunction-u-linesource">
      \bu = \pd{\phi}{r}\be_r + 0 = \frac{Q}{2\pi r} \be_r.
     </men>
@@ -513,7 +513,7 @@
     <me>
       Uy + \frac{Q}{2\pi} \theta = \frac{Q}{2\pi}C,
     </me>
-   having designed the constant combination on the right hand-side for convenience. Then using <m>y = r\sin\theta</m>, we have
+   having chosen the constant combination on the right hand-side for convenience. Then using <m>y = r\sin\theta</m>, we have
    <me>
     r = \left(\frac{Q}{2\pi U}\right) \frac{C - \theta}{\sin\theta}.
    </me>
@@ -595,10 +595,10 @@
  </p>
 
  <p>
-  In his section, we will refer to a complex function generically as
+  In this section, we will refer to a complex function generically as
   <me>f(z) = u(x, y) + \im v(x, y)
   </me>
-  where <m>u</m> and <m>v</m> and the real-valued decompositions of the complex-valued function <m>f</m>. Also, <m>z = x + \im y</m>.
+  where <m>u</m> and <m>v</m> are the real-valued decompositions of the complex-valued function <m>f</m>. Also, <m>z = x + \im y</m>.
  </p>
 
  <p>
@@ -630,7 +630,7 @@
  
 
  <p>
-  Below, we will often use susbcripts for partial differentiation, e.g. <m>u_x = \pd{u}{x}</m>.
+  Below, we will often use subscripts for partial differentiation, e.g. <m>u_x = \pd{u}{x}</m>.
  </p>
 </introduction>
 
@@ -681,7 +681,7 @@
       <title>Cauchy-Riemann equations I</title>
       <statement>
         <p>
-         If <m>f(z) = u(x, y) + \im v(x, u)</m> is differentiable, then the Cauchy-Riemann equations, given by
+         If <m>f(z) = u(x, y) + \im v(x, y)</m> is differentiable, then the Cauchy-Riemann equations, given by
        <men xml:id="eqn-CR">
        u_x = v_y \quad \text{and} \quad u_y = -v_x,
        </men>
@@ -723,7 +723,7 @@
     <title>Cauchy-Riemann equations II</title>
     <statement>
       <p>
-      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous firsst partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z) = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
+      If two real-valued continuous functions, <m>u(x, y)</m> and <m>v(x, y)</m> of two real variables <m>x</m> and <m>y</m> have continuous first partial derivatives that satisfy the Cauchy-Riemann equations <xref ref="eqn-CR"/> in some domain, then <m>f(z) = u(x, y) + \im v(x, y)</m> is analytic in that domain.      
       </p>
     </statement>
 
@@ -781,7 +781,7 @@
 </p>
 
 <p>
-  Since Laplace's equation, <m>\nabla^2 \phi = 0</m>, is such an important equation in physics, occuring in theories of gravitation, electrostatics, fluid mechanics, etc. the theorem establishes that there exists a parallel theory in the language of complex variables for the specific case of two-dimensional applications. 
+  Since Laplace's equation, <m>\nabla^2 \phi = 0</m>, is such an important equation in physics, occurring in theories of gravitation, electrostatics, fluid mechanics, etc. the theorem establishes that there exists a parallel theory in the language of complex variables for the specific case of two-dimensional applications. 
 </p>
 
 <p>
@@ -1065,7 +1065,7 @@
     <p>
       You may be wondering: if a permissible potential function is found that satisfies the necessary boundary conditions, can we be certain it is the unique solution in the problem (up to a constant)? You may understand the construction of potentials, via the method of images, but perhaps irked that it involves the insertion of these so-called 'fictitious' points. The answer, at least for most non-pathological problems in potential flow theory (i.e. all the problems you study) is <em>yes</em>, the solution you have found is assured to be the only solution (up to a constant).</p> 
       
-     <p> This is, to some extent, related to the <url href="https://proofwiki.org/wiki/Uniqueness_of_Analytic_Continuation">uniqueness of analytic continuation</url>. In a nutshall, the relevant theorem states that given two admissible complex potentials, say <m>f_1(z)</m> and <m>f_2(z)</m>, that agree on the line <m>x = 0</m> (in the case of the above situation), it is the case that <m>f_1 = f_2</m> everywhere (where they are analytic). 
+     <p> This is, to some extent, related to the <url href="https://proofwiki.org/wiki/Uniqueness_of_Analytic_Continuation">uniqueness of analytic continuation</url>. In a nutshell, the relevant theorem states that given two admissible complex potentials, say <m>f_1(z)</m> and <m>f_2(z)</m>, that agree on the line <m>x = 0</m> (in the case of the above situation), it is the case that <m>f_1 = f_2</m> everywhere (where they are analytic). 
     </p>
 
     <p>
@@ -1097,7 +1097,7 @@
     </p>
     
     <p>
-      The hope is that within the <m>\zeta</m>-plane, the fluid region is sufficiently simple that a complex potential, say <m>F(\zeta)</m>, can be found. This task is aided by virtue of the fact that sinks/sources and vortices are preserved by the conformal map. Typically, we wish for <m>\hat{R}</m> to be e.g. the upper half-plane or the unit disc, with <m>\partial\hat{R}</m> to be the real axis or circumferance of the unit disc, respectively. Once found, the complex potential in the <m>z</m>-plane is then obtained simply by inverting the conformal map, i.e. 
+      The hope is that within the <m>\zeta</m>-plane, the fluid region is sufficiently simple that a complex potential, say <m>F(\zeta)</m>, can be found. This task is aided by virtue of the fact that sinks/sources and vortices are preserved by the conformal map. Typically, we wish for <m>\hat{R}</m> to be e.g. the upper half-plane or the unit disc, with <m>\partial\hat{R}</m> to be the real axis or circumference of the unit disc, respectively. Once found, the complex potential in the <m>z</m>-plane is then obtained simply by inverting the conformal map, i.e. 
       <me>
         f(z) = F(g(\zeta)) = \phi(x, y) + \im \psi(x, y).
       </me>
@@ -1285,7 +1285,7 @@
           <men xml:id="eqn-milne-circle-map">
             w(z) = f(z) + \overline{f(a^2/\overline{z})},
           </men>
-          and this potential has the following properties: (i) it has the asme singularities as <m>f</m> in the region <m>|z| > a</m>; and (ii) the circle <m>|z| = a</m> is a streamline. 
+          and this potential has the following properties: (i) it has the same singularities as <m>f</m> in the region <m>|z| > a</m>; and (ii) the circle <m>|z| = a</m> is a streamline.
           </p>
         </statement>
 
@@ -1431,7 +1431,7 @@
           <task>
             <statement>
               <p>
-                Show that on the surface of the cylinder, the pressure force is given by 
+                Show that on the surface of the cylinder, the pressure is given by
                 <me>
                   p = p_\infty + \frac{1}{2} \rho U^2(1 - 4\sin^2\theta),
                 </me>
@@ -1589,7 +1589,7 @@
       <me>
         z = r\e^{\im\theta} + \frac{a^2}{r}\e^{-\im\theta}  = \left(r + \frac{a^2}{r}\right)\cos\theta + \im \left(r - \frac{a^2}{r}\right)\sin\theta. 
       </me>
-      Provided that <m>r &gt; a</m>, this the equation of an ellipse with principle radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. The orientation of circles is preserved, with an anticlockwise rotation in <m>\zeta</m> corresponding to anticlockwise in <m>z</m>. The exterior of the circle <m>|\zeta| = r</m> is mapped to the exterior of the ellipse in <m>z</m>.</p>
+      Provided that <m>r &gt; a</m>, this is the equation of an ellipse with principal radii <m>r + a^2/r</m> and <m>r - a^2/r</m>. The orientation of circles is preserved, with an anticlockwise rotation in <m>\zeta</m> corresponding to anticlockwise in <m>z</m>. The exterior of the circle <m>|\zeta| = r</m> is mapped to the exterior of the ellipse in <m>z</m>.</p>
       
       <p>In addition note that if <m>r \to a</m>, the ellipses tends to the line segment
       <me>
@@ -1639,8 +1639,8 @@
     <p>
       Once the proper branch structure has been chosen, we can define the two possible inverses of the mapping, corresponding to the positive and negative branches. We have 
       <mdn>
-        <mrow>\zeta = g_+(z) \amp= \frac{1}{2}\left(z + \sqrt{z^2 - 4a}\right), </mrow>
-        <mrow>\zeta = g_-(z) \amp= \frac{1}{2}\left(z - \sqrt{z^2 - 4a}\right). </mrow>
+        <mrow>\zeta = g_+(z) \amp= \frac{1}{2}\left(z + \sqrt{z^2 - 4a^2}\right), </mrow>
+        <mrow>\zeta = g_-(z) \amp= \frac{1}{2}\left(z - \sqrt{z^2 - 4a^2}\right). </mrow>
       </mdn>
     </p>
 
@@ -1653,7 +1653,7 @@
     </p>
 
         <figure xml:id="fig-conformal-joukowski03">
-      <caption>We now consider shifting the circle with <m>|\zeta| = 2</m> to the left, so that the circumferance passes through the critical point at <m>\zeta = a = 1</m>. This produces an image that resembles an aerofoil with a sharp trailing edge.</caption>
+      <caption>We now consider shifting the circle with <m>|\zeta| = 2</m> to the left, so that the circumference passes through the critical point at <m>\zeta = a = 1</m>. This produces an image that resembles an aerofoil with a sharp trailing edge.</caption>
       <image source="conformal_joukowski03.png" width="70%">
         <shortdescription>Joukowski map</shortdescription>
       </image>
@@ -1883,7 +1883,7 @@
         </image>
 
         <p>
-          The part about integrating the flux and forces for the little diagonal plate segment has some annoy integrals. You are not expected to obtain the final values of the integrals, but you will see in the next question that they can be predicted rather easily using a theorem about the streamfunctions. 
+          The part about integrating the flux and forces for the little diagonal plate segment has some annoying integrals. You are not expected to obtain the final values of the integrals, but you will see in the next question that they can be predicted rather easily using a theorem about the streamfunctions. 
         </p>
 
         <image source="ex-potential-Q1b02.png">
@@ -1905,7 +1905,7 @@
         </image>
 
         <p>
-          The integrals for the flux and force on the plate are less annoying than in the previous geometries, but again we have left the final force calculuation un-evaluated (out of laziness). 
+          The integrals for the flux and force on the plate are less annoying than in the previous geometries, but again we have left the final force calculation un-evaluated (out of laziness).
         </p>
 
         <image source="ex-potential-Q1c02.png">
@@ -1999,7 +1999,7 @@
         </me>
         while for the plate,
         <me>
-          |psi(1, 0) - \psi(1, \pi/2)| = 0.
+          |\psi(1, 0) - \psi(1, \pi/2)| = 0.
         </me>
       </p>
     </solution>
@@ -2021,7 +2021,7 @@
         </p>
       </statement>
 
-      <answer>
+      <solution>
         <p>
           The complex potential is the sum of a line source and line sink:
           <me>
@@ -2048,7 +2048,7 @@
           <shortdescription>Almost doublet</shortdescription>
         </image>
       </figure>
-    </answer>
+    </solution>
   </task>
 
     <task>
@@ -2350,7 +2350,7 @@ from the origin. Try to sketch the streamlines in either case
           </p>
 
           <p>
-            Constuct a flow, by providing the complex potential <m>\phi + \im \psi</m> that consists of the following elements: (i) uniform flow oriented an angle <m>\alpha</m> to the horizontal at infinity; (ii) a line source of strength <m>Q</m> placed in the flow; and (iii) a horizontal flat plate of length <m>2a</m> on the axis, <m>-2a &lt; z &lt; 2a.</m> 
+            Construct a flow, by providing the complex potential <m>\phi + \im \psi</m> that consists of the following elements: (i) uniform flow oriented an angle <m>\alpha</m> to the horizontal at infinity; (ii) a line source of strength <m>Q</m> placed in the flow; and (iii) a horizontal flat plate of length <m>2a</m> on the axis, <m>-2a &lt; z &lt; 2a.</m> 
           </p>
 
           <p>

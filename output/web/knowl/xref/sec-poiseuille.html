@@ -19,13 +19,13 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h2 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hagen–Poiseuille flow (or Poiseuille flow).</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hagen–Poiseuille flow (or Poiseuille flow).</span>
 </h2>
 <div class="para logical">
 <div class="para">Poiseuille flow is the characteristic flow seen when an incompressible Newtonian fluid flows steadily along a cylindrical pipe whose length is long compared with its diameter. To find the fluid velocity we use cylindrical polar coordinates <span class="process-math">\((r,\theta,z)\text{,}\)</span> and assume that the pipe wall is at <span class="process-math">\(r=a\text{.}\)</span> We denote the fluid velocity components as <span class="process-math">\((u,v,w)\)</span> in the three coordinate directions, i.e. <span class="process-math">\(\bu=u\hat{\br}+v\hat{\btheta}+w\hat{\bz}\text{,}\)</span> and assume a no-slip boundary condition at the pipe wall:</div>
 <div class="displaymath process-math">
 \begin{equation}
-u=v=w=0\quad\mathrm{at}\quad r=a.\tag{7.8.1}
+u=v=w=0\quad\mathrm{at}\quad r=a.\tag{6.8.1}
 \end{equation}
 </div>
 <div class="para">We also assume that the flow is steady, is axisymmetric, has no swirl (i.e.no azimuthal flow), is fully-developed, and we neglect gravity.</div>
@@ -83,7 +83,7 @@ v=0;
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
-<div class="para">Since the fluid is incompressible and Newtonian we take as our starting point the Navier–Stokes and continuity equations in cylindrical polar coordinates <a href="sec-linear-momentum-cons.html#navier-stokes-continuity-cylindrical" class="xref" data-knowl="./knowl/xref/navier-stokes-continuity-cylindrical.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 7.5.11: Navier–Stokes and continuity equations in cylindrical coordinates">Remark 7.5.11</a>. The continuity equation is</div>
+<div class="para">Since the fluid is incompressible and Newtonian we take as our starting point the Navier–Stokes and continuity equations in cylindrical polar coordinates <a href="sec-linear-momentum-cons.html#navier-stokes-continuity-cylindrical" class="xref" data-knowl="./knowl/xref/navier-stokes-continuity-cylindrical.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 6.5.10: Navier–Stokes and continuity equations in cylindrical coordinates">Remark 6.5.10</a>. The continuity equation is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/navier-stokes-continuity-cylindrical.html ./knowl/xref/eq-poiseuillebc.html">
 \begin{equation*}
 \bnabla\cdot\bu=\frac1r\pd{(ru)}{r}+\frac1r\pd{v}{\theta}+\pd{w}{z}=0,
@@ -97,15 +97,15 @@ v=0;
 u=\frac Ar,
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(A\)</span> is constant. Applying the boundary conditions <a href="sec-exact-solutions.html#eq-poiseuillebc" class="xref" data-knowl="./knowl/xref/eq-poiseuillebc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.1">(7.8.1)</a> gives <span class="process-math">\(A=0\text{,}\)</span> and therefore <span class="process-math">\(u=0\text{,}\)</span> so the velocity is axial <span class="process-math">\(\bu=(0,0,w)=w\hat{\bz}\text{.}\)</span>
+<div class="para">where <span class="process-math">\(A\)</span> is constant. Applying the boundary conditions <a href="sec-exact-solutions.html#eq-poiseuillebc" class="xref" data-knowl="./knowl/xref/eq-poiseuillebc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8.1">(6.8.1)</a> gives <span class="process-math">\(A=0\text{,}\)</span> and therefore <span class="process-math">\(u=0\text{,}\)</span> so the velocity is axial <span class="process-math">\(\bu=(0,0,w)=w\hat{\bz}\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
-<div class="para">Neglecting time-dependence and gravity, the Navier–Stokes equations <a href="sec-linear-momentum-cons.html#eqn-navierstokes" class="xref" data-knowl="./knowl/xref/eqn-navierstokes.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> are:</div>
+<div class="para">Neglecting time-dependence and gravity, the Navier–Stokes equations <a href="sec-linear-momentum-cons.html#eqn-navierstokes" class="xref" data-knowl="./knowl/xref/eqn-navierstokes.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.1">(6.5.1)</a> are:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-navierstokes.html ./knowl/xref/eq-navierstokes-simppoiseuille.html ./knowl/xref/eq-poiseuillebc.html ./knowl/xref/fig-poiseuille-flow.html">
 \begin{equation}
-\rho\left(\bu\cdot\bnabla\right)\bu=-\bnabla p+\mu\nabla^2\bu.\tag{7.8.2}
+\rho\left(\bu\cdot\bnabla\right)\bu=-\bnabla p+\mu\nabla^2\bu.\tag{6.8.2}
 \end{equation}
 </div>
 <div class="para">We take the terms individually:</div>
@@ -156,7 +156,7 @@ u=\frac Ar,
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-poiseuille-4-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para">Thus the three components of the Navier–Stokes equation <a href="sec-exact-solutions.html#eq-navierstokes-simppoiseuille" class="xref" data-knowl="./knowl/xref/eq-navierstokes-simppoiseuille.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.2">(7.8.2)</a> are</div>
+<div class="para">Thus the three components of the Navier–Stokes equation <a href="sec-exact-solutions.html#eq-navierstokes-simppoiseuille" class="xref" data-knowl="./knowl/xref/eq-navierstokes-simppoiseuille.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8.2">(6.8.2)</a> are</div>
 <ul class="disc" id="sec-poiseuille-4-7">
 <li>
 <div class="para logical">
@@ -211,27 +211,27 @@ r\pd{w}{r}=-\frac{Gr^2}{2\mu}+A\\
 w=-\frac{Gr^2}{4\mu}+A\ln r+B.
 \end{align*}
 </div>
-<div class="para">We require <span class="process-math">\(A=0\)</span> for regularity of the solution at <span class="process-math">\(r=0\text{,}\)</span> and since the boundary condition <a href="sec-exact-solutions.html#eq-poiseuillebc" class="xref" data-knowl="./knowl/xref/eq-poiseuillebc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.1">(7.8.1)</a> has <span class="process-math">\(w=0\)</span> at <span class="process-math">\(r=a\text{,}\)</span> we must set <span class="process-math">\(B=Ga^2/(4\mu)\text{.}\)</span> Therefore the fluid velocity in Poiseuille flow is given by</div>
+<div class="para">We require <span class="process-math">\(A=0\)</span> for regularity of the solution at <span class="process-math">\(r=0\text{,}\)</span> and since the boundary condition <a href="sec-exact-solutions.html#eq-poiseuillebc" class="xref" data-knowl="./knowl/xref/eq-poiseuillebc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8.1">(6.8.1)</a> has <span class="process-math">\(w=0\)</span> at <span class="process-math">\(r=a\text{,}\)</span> we must set <span class="process-math">\(B=Ga^2/(4\mu)\text{.}\)</span> Therefore the fluid velocity in Poiseuille flow is given by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-navierstokes.html ./knowl/xref/eq-navierstokes-simppoiseuille.html ./knowl/xref/eq-poiseuillebc.html ./knowl/xref/fig-poiseuille-flow.html">
 \begin{equation}
 u=v=0\quad
-w=\frac{G}{4\mu}\left(a^2-r^2\right),\tag{7.8.3}
+w=\frac{G}{4\mu}\left(a^2-r^2\right),\tag{6.8.3}
 \end{equation}
 </div>
-<div class="para">which is illustrated in <a href="sec-exact-solutions.html#fig-poiseuille-flow" class="xref" data-knowl="./knowl/xref/fig-poiseuille-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.5">Figure 7.8.5</a>.</div>
+<div class="para">which is illustrated in <a href="sec-exact-solutions.html#fig-poiseuille-flow" class="xref" data-knowl="./knowl/xref/fig-poiseuille-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.21">Figure 6.21</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter07-poiseuille.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Poiseuille flow velocity profile.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.5"><a tabindex="-1" href="#fig-poiseuille-flow" title="Copy heading and permalink for Figure 7.8.5" aria-label="Copy heading and permalink for Figure 7.8.5">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Poiseuille flow velocity profile.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.21"><a tabindex="-1" href="#fig-poiseuille-flow" title="Copy heading and permalink for Figure 6.21" aria-label="Copy heading and permalink for Figure 6.21">🔗</a></div></figcaption>
 </figure>
 <div class="para logical">
-<div class="para">The celebrated <em class="emphasis">Hagen–Poiseuille formula</em> can be derived from <a href="sec-exact-solutions.html#eq-poiseuille-flow-profile" class="xref" data-knowl="./knowl/xref/eq-poiseuille-flow-profile.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.3">(7.8.3)</a>:</div>
+<div class="para">The celebrated <em class="emphasis">Hagen–Poiseuille formula</em> can be derived from <a href="sec-exact-solutions.html#eq-poiseuille-flow-profile" class="xref" data-knowl="./knowl/xref/eq-poiseuille-flow-profile.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8.3">(6.8.3)</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-poiseuille-flow-profile.html ./knowl/xref/ex-hagen-poiseuille-flow.html">
 \begin{equation}
-\Delta P=\frac{8\mu LQ}{\pi a^4}.\tag{7.8.4}
+\Delta P=\frac{8\mu LQ}{\pi a^4}.\tag{6.8.4}
 \end{equation}
 </div>
-<div class="para">This relates the volumetric flux <span class="process-math">\(Q\)</span> and pressure drop <span class="process-math">\(\Delta P\)</span> along a circular pipe of length <span class="process-math">\(L\)</span> and radius <span class="process-math">\(a\)</span> in a Newtonian fluid with shear viscosity <span class="process-math">\(\mu\)</span> for steady, fully developed flow. You will derive this result in <a href="ws-viscousflows.html#ex-hagen-poiseuille-flow" class="xref" data-knowl="./knowl/xref/ex-hagen-poiseuille-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.9.12: Hagen–Poiseuille flow">Exercise 7.9.12</a>.</div>
+<div class="para">This relates the volumetric flux <span class="process-math">\(Q\)</span> and pressure drop <span class="process-math">\(\Delta P\)</span> along a circular pipe of length <span class="process-math">\(L\)</span> and radius <span class="process-math">\(a\)</span> in a Newtonian fluid with shear viscosity <span class="process-math">\(\mu\)</span> for steady, fully developed flow. You will derive this result in <a href="ws-viscousflows.html#ex-hagen-poiseuille-flow" class="xref" data-knowl="./knowl/xref/ex-hagen-poiseuille-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.12: Hagen–Poiseuille flow">Exercise 6.9.12</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
@@ -240,7 +240,7 @@ w=\frac{G}{4\mu}\left(a^2-r^2\right),\tag{7.8.3}
 <li>
 <div class="para logical">
 <div class="para">
-<em class="emphasis">Womersley flow:</em> This is pipe flow driven by an axial pressure drop along the pipe that oscillates sinusoidally in time (Poiseuille flow was driven by a constant pressure gradient). Unlike Poiseuille flow, the exact profile of the flow depends on a parameter called the Womersley parameter (which depends on the frequency). <a href="sec-exact-solutions.html#fig-womersley-flow" class="xref" data-knowl="./knowl/xref/fig-womersley-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.6">Figure 7.8.6</a> shows an example. The flow is:</div>
+<em class="emphasis">Womersley flow:</em> This is pipe flow driven by an axial pressure drop along the pipe that oscillates sinusoidally in time (Poiseuille flow was driven by a constant pressure gradient). Unlike Poiseuille flow, the exact profile of the flow depends on a parameter called the Womersley parameter (which depends on the frequency). <a href="sec-exact-solutions.html#fig-womersley-flow" class="xref" data-knowl="./knowl/xref/fig-womersley-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.22">Figure 6.22</a> shows an example. The flow is:</div>
 <ul class="circle" id="sec-poiseuille-7-1-1-1-3">
 <li>
 <div class="para">Unidirectional axial flow (purely along the pipe)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -253,19 +253,19 @@ w=\frac{G}{4\mu}\left(a^2-r^2\right),\tag{7.8.3}
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li>
-<div class="para">Flow direction oscillates in time. Sometimes the flow goes in both directions at once, which can be seen in <a href="sec-exact-solutions.html#fig-womersley-flow" class="xref" data-knowl="./knowl/xref/fig-womersley-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.6">Figure 7.8.6</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Flow direction oscillates in time. Sometimes the flow goes in both directions at once, which can be seen in <a href="sec-exact-solutions.html#fig-womersley-flow" class="xref" data-knowl="./knowl/xref/fig-womersley-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.22">Figure 6.22</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para">If we add the velocity field of Poiseuille flow <a href="sec-exact-solutions.html#eq-poiseuille-flow-profile" class="xref" data-knowl="./knowl/xref/eq-poiseuille-flow-profile.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.3">(7.8.3)</a> onto the Womersley flow velocity field, we obtain the flow that would be driven by a pressure gradient that oscillates about a non-zero mean. Flow profiles of this sort can be seen in blood flow, since the beating of the heart provides a pressure gradient that can be approximated by a constant plus sinusoidally varying component.</div>
+<div class="para">If we add the velocity field of Poiseuille flow <a href="sec-exact-solutions.html#eq-poiseuille-flow-profile" class="xref" data-knowl="./knowl/xref/eq-poiseuille-flow-profile.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.8.3">(6.8.3)</a> onto the Womersley flow velocity field, we obtain the flow that would be driven by a pressure gradient that oscillates about a non-zero mean. Flow profiles of this sort can be seen in blood flow, since the beating of the heart provides a pressure gradient that can be approximated by a constant plus sinusoidally varying component.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-poiseuille-7-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li>
 <div class="para">
-<em class="emphasis">Dean flow:</em> This is a steady flow driven by a steady prescribed pressure drop along the pipe, but the pipe is curved, see <a href="sec-exact-solutions.html#fig-dean-flow" class="xref" data-knowl="./knowl/xref/fig-dean-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.7">Figure 7.8.7</a>. Within the pipe the flow is predominantly in the axial direction, but the centrifugal force due to the curvature drives a secondary flow across the centre of the pipe towards the outside of the bend, and then back around the walls of the pipe towards the inside of the bend. This secondary flow forms Dean vortices. This is thought to provide a possible explanation as to why the disease atherosclerosis in arteries is more common on the inside of bends in arteries, since the cells lining the artery walls are more healthy in conditions of high stress. <a href="sec-exact-solutions.html#fig-dean-flow" class="xref" data-knowl="./knowl/xref/fig-dean-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.7">Figure 7.8.7</a> shows shows the secondary flow in the transverse cross section, which are termed <em class="emphasis">Dean vortices</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Dean flow:</em> This is a steady flow driven by a steady prescribed pressure drop along the pipe, but the pipe is curved, see <a href="sec-exact-solutions.html#fig-dean-flow" class="xref" data-knowl="./knowl/xref/fig-dean-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.23">Figure 6.23</a>. Within the pipe the flow is predominantly in the axial direction, but the centrifugal force due to the curvature drives a secondary flow across the centre of the pipe towards the outside of the bend, and then back around the walls of the pipe towards the inside of the bend. This secondary flow forms Dean vortices. This is thought to provide a possible explanation as to why the disease atherosclerosis in arteries is more common on the inside of bends in arteries, since the cells lining the artery walls are more healthy in conditions of high stress. <a href="sec-exact-solutions.html#fig-dean-flow" class="xref" data-knowl="./knowl/xref/fig-dean-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.23">Figure 6.23</a> shows shows the secondary flow in the transverse cross section, which are termed <em class="emphasis">Dean vortices</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-poiseuille-7-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
@@ -273,11 +273,11 @@ w=\frac{G}{4\mu}\left(a^2-r^2\right),\tag{7.8.3}
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-poiseuille-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter07-womersley.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Womersley flow velocity profile.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.6"><a tabindex="-1" href="#fig-womersley-flow" title="Copy heading and permalink for Figure 7.8.6" aria-label="Copy heading and permalink for Figure 7.8.6">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Womersley flow velocity profile.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.22"><a tabindex="-1" href="#fig-womersley-flow" title="Copy heading and permalink for Figure 6.22" aria-label="Copy heading and permalink for Figure 6.22">🔗</a></div></figcaption>
 </figure>
 <figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/ch-chapter07-dean.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Dean flow velocity profile: (a) longitudinal cross-section; (b) transverse cross-section.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.7"><a tabindex="-1" href="#fig-dean-flow" title="Copy heading and permalink for Figure 7.8.7" aria-label="Copy heading and permalink for Figure 7.8.7">🔗</a></div></figcaption>
-</figure><div class="autopermalink" aria-hidden="true" data-description="Example 7.8.4: Hagen–Poiseuille flow (or Poiseuille flow)"><a tabindex="-1" href="#sec-poiseuille" title="Copy heading and permalink for Example 7.8.4: Hagen–Poiseuille flow (or Poiseuille flow)" aria-label="Copy heading and permalink for Example 7.8.4: Hagen–Poiseuille flow (or Poiseuille flow)">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of Dean flow velocity profile: (a) longitudinal cross-section; (b) transverse cross-section.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.23"><a tabindex="-1" href="#fig-dean-flow" title="Copy heading and permalink for Figure 6.23" aria-label="Copy heading and permalink for Figure 6.23">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 6.8.2: Hagen–Poiseuille flow (or Poiseuille flow)"><a tabindex="-1" href="#sec-poiseuille" title="Copy heading and permalink for Example 6.8.2: Hagen–Poiseuille flow (or Poiseuille flow)" aria-label="Copy heading and permalink for Example 6.8.2: Hagen–Poiseuille flow (or Poiseuille flow)">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="sec-exact-solutions.html#sec-poiseuille">In Context</a></span>
 </body>
 </html>

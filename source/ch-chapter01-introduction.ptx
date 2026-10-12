@@ -167,9 +167,10 @@ Fluid Mechanics
       flows that either do not contain or do not introduce new rotational characteristics. Of
       course, real-life fluids are rarely so well-behaved and indeed, the study of vortices is an
       important domain in its own right, leading to models for tornados, flight, and many other
-      fluid phenomena. The principal character of <xref ref="ch-chapter06-vorticity" /> is the
-      vorticity, <m>\omega = \nabla \times \bu</m>. What is vorticity, how does one measure it, and
-      what is its role in governing fluid motion: these are the topics of this chapter. </p>
+      fluid phenomena. The principal character here is the vorticity, <m>\omega = \nabla \times
+      \bu</m>, which measures the local rotation of the fluid. We introduce it in <xref
+      ref="def-vorticity" />, but a full study of vortex dynamics lies beyond the scope of this
+      course. </p>
 
     <figure>
       <caption>As illustrated in <xref ref="fig-rayleigh" />, in 1883 Rayleigh performed a famous

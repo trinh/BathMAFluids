@@ -447,7 +447,7 @@
             trajectories. What occurs with the streaklines?</p>
         </statement>
 
-        <answer>
+        <solution>
           <p> In this case, the velocity field is changing in time. Consider firstly the concept of
             the streamline in <xref ref="def-streamline" />. </p>
 
@@ -489,7 +489,7 @@
           <p> In this case, considering the streakline via <xref ref="def-streakline" />, we
             conclude that the streakline coincides with the particle path. Can you reason why this
             must be the case in this situation? What is necessary in order for this not to be true? </p>
-        </answer>
+        </solution>
       </example>
 
       <example>
@@ -505,25 +505,42 @@
           <p> Determine the streamline that passes through the origin at <m>t = 0</m> and <m>t =
             \pi/(2\omega)</m>. </p>
 
-          <!-- <answer>
-    <p>
-      We solve 
-      <md>
-        <mrow>\dd{x}{s} &amp; u_0 \sin[\omega(t- y/v_0)], </mrow>
-        <mrow>\dd{y}{s} \amp </mrow>
-      </md>
-    </p>
-  </answer> -->
-
           <p> Determine the pathline of the particle that was at the origin at <m>t = 0</m>; at <m>t
-            = \pi/2</m>. </p>
+            = \pi/(2\omega)</m>. </p>
 
           <p>
             Qualitatively describe the shape of the streakline that passes through the origin?
           </p>
         </statement>
 
-        <answer>
+        <solution>
+          <p> <em>Streamlines.</em> At a fixed time <m>t</m>, streamlines satisfy <me>
+              \dd{x}{y} = \frac{u}{v} = \frac{u_0}{v_0}\sin\big(\omega(t - y/v_0)\big),
+            </me> which integrates to <m>x = \frac{u_0}{\omega}\cos\big(\omega(t - y/v_0)\big) +
+            C</m>. Requiring the streamline to pass through the origin gives <me>
+              x = \frac{u_0}{\omega}\Big[\cos\big(\omega(t - y/v_0)\big) - \cos(\omega t)\Big].
+            </me> At <m>t = 0</m> this is <m>x = \frac{u_0}{\omega}\big[\cos(\omega y/v_0) -
+            1\big]</m>, and at <m>t = \pi/(2\omega)</m> it is <m>x = \frac{u_0}{\omega}\sin(\omega
+            y/v_0)</m>. Both are sinusoidal curves. </p>
+
+          <p> <em>Pathlines.</em> Take the particle that leaves the origin at time <m>\tau</m>.
+            Since <m>\dd{y}{t} = v_0</m>, we have <m>y = v_0(t - \tau)</m>. So <m>\omega(t -
+            y/v_0) = \omega\tau</m> is constant along the path, and <m>\dd{x}{t} =
+            u_0\sin(\omega\tau)</m> gives <me>
+              x = u_0\sin(\omega\tau)(t - \tau) = \frac{u_0}{v_0}\sin(\omega\tau)\, y.
+            </me> Each particle travels in a straight line. For <m>\tau = 0</m> this is the
+            <m>y</m>-axis, <m>x = 0</m>; for <m>\tau = \pi/(2\omega)</m> it is the line <m>x =
+            (u_0/v_0)\,y</m> (see <xref ref="fig-hose01" />). </p>
+
+          <p> <em>Streakline.</em> At time <m>t</m>, the streakline through the origin is made up of
+            all particles released there at earlier times <m>\tau \le t</m>. Eliminating <m>\tau = t
+            - y/v_0</m> from the pathline gives <me>
+              x = \frac{u_0}{v_0}\, y \sin\big(\omega(t - y/v_0)\big), \qquad y \ge 0.
+            </me> This is a wave travelling in the <m>y</m>-direction at speed <m>v_0</m>, with
+            amplitude growing linearly with distance from the hose (see <xref ref="fig-hose02" />).
+            Unlike the streamlines and pathlines, it is the oscillating pattern you actually see in
+            the water jet. </p>
+
           <figure xml:id="fig-hose01">
             <caption>Isolated pathlines show that particles move along straight paths.</caption>
             <image source="hose01.png" width="80%">
@@ -540,7 +557,7 @@
               <shortdescription>gif</shortdescription>
             </image>
           </figure>
-        </answer>
+        </solution>
       </example>
     </subsection>
 
@@ -702,12 +719,12 @@
         We examined the difference between Eulerian and Lagrangian coordinates and derivatives.
         Examples of streamlines and velocity fields were examined.</p>
 
-      <remark xml:id="remark-solutions-feedback">
-        <title>Solutions and feedback</title>
-        <p>Full solutions to these exercises can be found in <xref ref="solutions"/> at the back
+      <remark xml:id="remark-solutions-feedback-kinematics">
+        <title>solutions and feedback</title>
+        <p>full solutions to these exercises can be found in <xref ref="solutions"/> at the back
           of the book.</p>
 
-        <p>If you would like feedback on your work, the tutor will by default concentrate on the
+        <p>if you would like feedback on your work, the tutor will by default concentrate on the
           exercises highlighted with a yellow background in the online notes (the homework
           exercises), unless you specifically ask for feedback on a different exercise instead.</p>
       </remark>
@@ -724,6 +741,12 @@
       <title>Flow visualisation</title>
 
       <introduction>
+        <aside>
+          <title>Optional</title>
+          <p>This question is optional. It is meant only to deepen your understanding of the
+            processes discussed in this chapter.</p>
+        </aside>
+
         <p>
           <url href="https://techtv.mit.edu/collections/ifluids/videos/32598-flow-visualization">
           Watch the first 13 and half minutes of the video "Flow visualisation" from the NCFMF
@@ -807,18 +830,20 @@
 
     <exercise xml:id="ex-eulerian-lagrangian">
       <title>Eulerian and Lagrangian descriptions</title>
-      <introduction>
+      <statement>
+        <aside>
+          <title>Revised in 2026</title>
+          <p>In 2025, this question had a part (b) on expressing the position and velocity in polar
+            coordinates. It has been removed for simplicity; polar coordinates will be introduced
+            later in the course.</p>
+        </aside>
+
         <p> A velocity field is described in Eulerian terms in Cartesian coordinates by <m>
-          \mathbf{u}=(-y,x)</m>. </p>
-      </introduction>
+          \mathbf{u}=(-y,x)</m>. What is the Lagrangian position of the particle that starts at the
+          point <m>(x_0,y_0)</m>? Describe its path. What is its velocity? </p>
+      </statement>
 
-      <task>
-        <statement>
-          <p> What is the Lagrangian position of the particle that starts at the point <m>(x_0,y_0)</m>?
-            Describe its path. What is its velocity? </p>
-        </statement>
-
-        <solution>
+      <solution>
           <p> A particle moves with the velocity of the fluid. Then it must satisfy the equations <me>
             \dd{x}{t} = -y(t),\quad \dd{y}{t} = x(t)
             \quad\Rightarrow\quad
@@ -847,10 +872,16 @@
             \bu(t) = (-x_0\sin t - y_0\cos t, x_0\cos t - y_0\sin t).
           </me>
               </p>
-            </solution>
-          </task>
-          
+          <p>
+            This flow is an example of <em>rigid-body</em> rotation,
+            that is the fluid is moving with a velocity field that would be attainable
+            for a rigid body, and there is no <em>relative</em> motion of the fluid particles.
+          </p>
+      </solution>
 
+      <!-- Part (b) on polar coordinates, removed in 2026 for simplicity.
+           (The original part (a) was wrapped in introduction and task elements; it is now the
+           whole question above.)
       <task>
         <statement>
           <p>
@@ -902,7 +933,8 @@
         </p>
       </solution>
           </task>
-</exercise>
+      -->
+    </exercise>
 
     <exercise xml:id="ex-hw-eulerian-lagrangian2">
       <title>Eulerian and Lagrangian descriptions</title>
@@ -1030,6 +1062,14 @@
 
     <exercise xml:id="ex-hw-particle-paths-streamlines">
       <title>Particle paths and streamlines</title>
+      <introduction>
+        <aside>
+          <title>Revised in 2026</title>
+          <p>Parts (b) and (c) of this question, together with their hints and solutions, were
+            cleaned up for 2026 to set up the pathline and streamline more carefully.</p>
+        </aside>
+      </introduction>
+
       <task>
         <statement>
           <p> Define the particle paths and streamlines for a velocity field <m>\bu(\bx,t)</m>. When
@@ -1037,7 +1077,7 @@
         </statement>
 
 
-        <answer>
+        <solution>
           <p> Particle paths are the trajectories of individual fluid particles, which are found by
             solving the ODE <me>
               \dd{\bx}{t} = \bu(\bx,t).
@@ -1047,94 +1087,112 @@
             </me> where <m>s</m> is a parameter
             along the streamline. The two coincide if the flow is steady, i.e. <m>
             \bu(\bx,t)=\bu(\bx)</m>. </p>
-        </answer>
+        </solution>
       </task>
 
       <task>
         <statement>
-          <p>
-            By drawing a sketch of a pathline and considering the points
-            <m>\bx</m> where the particle is at time <m>t</m> and
-            <m>\bx+\de\bx</m> at time <m>t+\de t</m>,
-            show that a quantity <m>f(\bx,t)</m> is preserved following the flow if
-            <me>
-            \DD{f}{t}=\pd{f}{t}+\bu\cdot\nabla f=0.
-            </me>
-          </p>
+          <p> Let <m>\bx = \bx(t)</m> be a pathline of the fluid, so that <m>\dd{\bx}{t} =
+            \bu(\bx(t), t)</m> (see <xref ref="def-particle-path" />), and consider <m>f</m>
+            evaluated along the pathline, <me>
+              F(t) = f(\bx(t), t),
+            </me> which is the value of <m>f</m> experienced by the fluid particle. By drawing a
+            sketch of the pathline and marking the positions <m>\bx</m> of the particle at time <m>
+            t</m> and <m>\bx + \de\bx</m> at time <m>t + \de t</m>, show that <me>
+              \dd{F}{t} = \pd{f}{t} + \bu \cdot \nabla f = \DD{f}{t}.
+            </me> Hence show that <m>f</m> is preserved following the flow if and only if <m>
+            \DD{f}{t} = 0</m>. </p>
         </statement>
         <hint>
-          <p>
-            We can write <m>\de\bx=\bu(\bx,t)\de t+\dots</m>, where "<m>\dots</m>"
-            indicates smaller corrections. We need to find
-            <me>
-              \DD{f}{t}=\lim_{\de t\rightarrow0}\frac{f(\bx+\de\bx,t+\de t)-f(\bx,t)}{\de t}.
-            </me>
-            Now write <m>f(\bx+\de\bx,t+\de t)</m> as a Taylor series about <m>f(\bx,t)</m>
-            and use this to simplify the above expression.
-          </p>
+          <p> Since <m>\bx(t)</m> is a pathline, the displacement of the particle in a small time <m>
+            \de t</m> is <me>
+              \de\bx = \bu(\bx, t) \, \de t + O(\de t^2).
+            </me> By definition of the derivative, <me>
+              \dd{F}{t} = \lim_{\de t \to 0} \frac{f(\bx + \de\bx, t + \de t) - f(\bx, t)}{\de t}.
+            </me> To expand the numerator, use the Taylor series for a function of several
+            variables: <me>
+              f(\bx + \de\bx, t + \de t) = f(\bx, t) + \de\bx \cdot \nabla f(\bx, t) + \de t \,
+              \pd{f}{t}(\bx, t) + O\big(|\de\bx|^2, \, |\de\bx| \, \de t, \, \de t^2\big),
+            </me> where, in components, <m>\de\bx \cdot \nabla f = \de x \, \pd{f}{x} + \de y \,
+            \pd{f}{y} + \de z \, \pd{f}{z}</m>. Substitute for <m>\de\bx</m> and let <m>\de t \to
+            0</m>. </p>
         </hint>
-        <answer>
+        <solution>
           <figure xml:id="lagrange-problem">
             <caption>Pathline, showing the particle positions at times <m>t</m> and <m>t+\de t</m>.</caption>
             <image source="ch-chapter02-lagrange-problem2.jpg" width="80%" />
           </figure>
 
           <p>
-            <xref ref="lagrange-problem" /> shows the points <m>\bx(t)</m> and <m>
-            \bx(t+dt)=\bx(t)+\de\bx</m>, and the equation for pathlines gives <m>\de\bx=\bu(\bx,t)\de
-            t</m>. We follow the value of <m>f</m> following a particle: <md>
-              <mrow> \dd{f}{t}&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx+\de\bx,t+\de
-            t)-f(\bx,t)\right)</mrow>
-              <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(f(\bx,t)+\de\bx\cdot\nabla
-            f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots-f(\bx,t)\right)</mrow>
-              <mrow>&amp;=\lim_{\de t\rightarrow0}\frac1{\de t}\left(\bu(\bx,t)\de t\cdot\nabla
-            f(\bx,t)+\de t\pd{f}{t}(\bx,t)+\dots\right)</mrow>
-              <mrow>&amp;=\pd{f}{t}+\bu\cdot\nabla f=\DD{f}{t},</mrow>
-            </md> ("<m>\dots</m>"
-            denotes higher order terms). Thus the value is preserved if <m>\DD{f}{t}=0</m>. </p>
-        </answer>
+            <xref ref="lagrange-problem" /> shows the particle at <m>\bx = \bx(t)</m> and at <m>
+            \bx(t + \de t) = \bx + \de\bx</m>. Since the curve is a pathline, <m>\de\bx = \bu(\bx,
+            t) \, \de t + O(\de t^2)</m>; in particular, <m>|\de\bx| = O(\de t)</m>, so all of the
+            remainder terms in the Taylor series are <m>O(\de t^2)</m>. Following the value of <m>
+            f</m> along the pathline, <md>
+              <mrow>\dd{F}{t} &amp;= \lim_{\de t \to 0} \frac{1}{\de t} \Big( f(\bx + \de\bx, t + \de
+            t) - f(\bx, t) \Big)</mrow>
+              <mrow>&amp;= \lim_{\de t \to 0} \frac{1}{\de t} \Big( \de\bx \cdot \nabla f(\bx, t) +
+            \de t \, \pd{f}{t}(\bx, t) + O(\de t^2) \Big)</mrow>
+              <mrow>&amp;= \lim_{\de t \to 0} \frac{1}{\de t} \Big( \de t \, \bu(\bx, t) \cdot \nabla
+            f(\bx, t) + \de t \, \pd{f}{t}(\bx, t) + O(\de t^2) \Big)</mrow>
+              <mrow>&amp;= \pd{f}{t} + \bu \cdot \nabla f = \DD{f}{t}.</mrow>
+            </md>
+          </p>
+
+          <p> The value of <m>f</m> carried by the particle, <m>F(t)</m>, is constant for all <m>
+            t</m> if and only if <m>\dd{F}{t} = 0</m>. Since this holds for every pathline, <m>f</m>
+            is preserved following the flow if and only if <m>\DD{f}{t} = 0</m>. </p>
+        </solution>
       </task>
 
       <task>
         <statement>
-          <p> In a similar way, show that <m>f</m> is constant along streamlines if
-            <me>
-              \bu\cdot\nabla f=0.
+          <p> Let <m>\bx = \bx(s, t)</m> be a streamline of the flow at fixed time <m>t</m>, so that
+            <m>\pd{\bx}{s} = \bu(\bx(s, t), t)</m>, where <m>s</m> is the parameter along the
+            streamline (see <xref ref="def-streamline" />). Consider <m>f</m> evaluated on the
+            streamline, <me>
+              G(s) = f(\bx(s, t), t).
+            </me> Show that <m>f</m> is constant along the streamline if and only if <me>
+              \bu \cdot \nabla f = 0.
             </me>
           </p>
         </statement>
         <hint>
-          <p>
-            In this case we can consider the points <m>\bx</m> and <m>\bx+\de\bx</m>
-            on the streamline, where <m>\de\bx=\bu(\bx,t)\de s+\dots</m>, where "<m>\dots</m>"
-            indicates smaller corrections. We need to find
-            <me>
-              \dd{f}{s}=\lim_{\de s\rightarrow0}\frac{f(\bx+\de\bx,t)-f(\bx,t)}{\de t}.
+          <p> Consider the points <m>\bx = \bx(s, t)</m> and <m>\bx + \de\bx = \bx(s + \de s, t)</m>
+            on the same streamline, at the <em>same</em> instant <m>t</m>. Since the curve is a
+            streamline, <me>
+              \de\bx = \bu(\bx, t) \, \de s + O(\de s^2).
+            </me> By definition of the derivative, <me>
+              \dd{G}{s} = \lim_{\de s \to 0} \frac{f(\bx + \de\bx, t) - f(\bx, t)}{\de s}.
+            </me> Because the time is the same at both points, the Taylor series now has no
+            time term: <me>
+              f(\bx + \de\bx, t) = f(\bx, t) + \de\bx \cdot \nabla f(\bx, t) + O(|\de\bx|^2).
             </me>
-            Now write <m>f(\bx+\de\bx,t)</m> as a Taylor series about <m>f(\bx,t)</m>.
           </p>
         </hint>
-        <answer>
-          <p> Now suppose that in <xref ref="lagrange-problem" />, we have shown instead the
-            situation of a streamline.</p>
+        <solution>
+          <p> The two points <m>\bx = \bx(s, t)</m> and <m>\bx + \de\bx = \bx(s + \de s, t)</m> lie
+            on the same streamline at the same time, and could be sketched as in <xref
+              ref="lagrange-problem" />, with the parameter <m>s</m> in place of <m>t</m>. Since the
+            curve is a streamline, <m>\de\bx = \bu(\bx, t) \, \de s + O(\de s^2)</m>, so <m>|\de\bx|
+            = O(\de s)</m>. Following the value of <m>f</m> along the streamline, <md>
+              <mrow>\dd{G}{s} &amp;= \lim_{\de s \to 0} \frac{1}{\de s} \Big( f(\bx + \de\bx, t) -
+            f(\bx, t) \Big)</mrow>
+              <mrow>&amp;= \lim_{\de s \to 0} \frac{1}{\de s} \Big( \de\bx \cdot \nabla f(\bx, t) +
+            O(\de s^2) \Big)</mrow>
+              <mrow>&amp;= \lim_{\de s \to 0} \frac{1}{\de s} \Big( \de s \, \bu(\bx, t) \cdot \nabla
+            f(\bx, t) + O(\de s^2) \Big)</mrow>
+              <mrow>&amp;= \bu \cdot \nabla f.</mrow>
+            </md>
+          </p>
 
-          <p>In this case, the points <m>\bx(s)</m> and <m>\bx(s+ds)=\bx(s)+\de\bx</m> are shown,
-            and the equation for streamlines gives <m>\de\bx=\bu(\bx,t)\de s</m>. We follow the
-            value of <m>f</m> along the streamline: <md>
-              <mrow>\dd{f}{s}&amp;=\lim_{\de s\rightarrow0}\frac1{\de
-            s}\left(f(\bx+\de\bx,t)-f(\bx,t)\right)</mrow>
-              <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(f(\bx,t)+\de\bx\cdot\nabla
-            f(\bx,t)-f(\bx,t)\right)</mrow>
-              <mrow>&amp;=\lim_{\de s\rightarrow0}\frac1{\de s}\left(\bu(\bx,t)\de s\cdot\nabla
-            f(\bx,t)\right)</mrow>
-              <mrow>&amp;=\bu\cdot\nabla f.</mrow>
-            </md></p>
-
-          <p> Thus the value of <m>f</m> is preserved if <m>\bu\cdot\nabla f=0</m>. </p>
-        </answer>
-
+          <p> Hence <m>G(s)</m> is constant along the streamline if and only if <m>\bu \cdot \nabla
+            f = 0</m>. Compared with the previous part, time is frozen here, so there is no <m>
+            \pd{f}{t}</m> term. If both the flow and <m>f</m> are steady, then the streamlines and
+            pathlines coincide (see the first part) and <m>\DD{f}{t} = \bu \cdot \nabla f</m>, so
+            the two conditions are the same. </p>
+        </solution>
       </task>
-
 
     </exercise>
 
@@ -1153,7 +1211,7 @@
           <p> the streamlines at a fixed time <m>t &gt; 0</m>, </p>
         </statement>
 
-        <answer>
+        <solution>
           <p> The streamlines are given by <me>
               \pd{y}{x}=te^{-4x}\quad\Rightarrow\quad
               y=y_0-\frac{t}{4} e^{-4x},
@@ -1165,7 +1223,7 @@
             <caption>Sketch of streamlines, pathline and streaklines.</caption>
             <image source="ch-chapter02-flowvisualisationproblem.png" width="100%" />
           </figure>
-        </answer>
+        </solution>
       </task>
 
       <task>
@@ -1175,7 +1233,7 @@
         </statement>
 
 
-        <answer>
+        <solution>
           <p> The pathlines for a particle starting from <m>(x_0,y_0)</m> are given by <md>
               <mrow>&amp;\dd{x}{t}=1,\quad
                 \dd{y}{t}=te^{-4x}</mrow>
@@ -1191,7 +1249,7 @@
             y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
             </me> See <xref
               ref="flowvisualisationproblem" /> for a sketch. </p>
-        </answer>
+        </solution>
       </task>
 
 
@@ -1208,7 +1266,7 @@
               </me>
           </p>
         </hint>
-        <answer>
+        <solution>
           <p> Suppose the particle that started at <m>(x_0,y_0)</m> hits the special point <m>(0,0)</m>
             at time <m>t_1</m>. From the pathline equation: <me>
               0 = x_0 + t_1, \quad
@@ -1229,7 +1287,7 @@
             See <xref
               ref="flowvisualisationproblem" /> for a sketch. Note that the streamlines, pathlines
             and streaklines are all very different. </p>
-        </answer>
+        </solution>
       </task>
 
       <task>
@@ -1241,7 +1299,7 @@
 
           <p>Calculate and sketch the timelines of the line (i) <m>y=0</m>, (ii) <m>x=0</m>.</p>
         </statement>
-        <answer>
+        <solution>
           <p> From the pathline equation, a particle starting from <m>(x_0,0)</m> reaches <me>
               x = x_0 + t,\quad
               y = \tfrac{1}{16} e^{-4x_0}
@@ -1259,7 +1317,7 @@
             </me>
             at time <m>t</m>. Since <m>y_0</m> can take any value, the timeline is just the line <m>x
             = t</m>. See <xref ref="flowvisualisationproblem" /> for a sketch. </p>
-        </answer>
+        </solution>
       </task>
     </exercise>
 
@@ -1268,6 +1326,12 @@
       <title>An experiment for the material derivative</title>
 
       <introduction>
+        <aside>
+          <title>Optional</title>
+          <p>This question is optional. It is meant only to deepen your understanding of the
+            processes discussed in this chapter.</p>
+        </aside>
+
         <p>
           <url
             href="https://techtv.mit.edu/collections/ifluids/videos/32597-eulerian-and-lagrangian-descriptions-in-fluid-mechanics">

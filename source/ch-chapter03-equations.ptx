@@ -52,87 +52,87 @@
         bouncing around, and hence fluid dynamics might be posed as the study of the kinetic motion
         of molecules!
       </p>
-        <p>
-          For example, consider the fluid density, <m>\rho</m>.
-          In the continuum approximation,
-          this needs to be a smooth mathematical function of position and time.
-          We define it at a point <m>\bx</m> by taking a small volume <m>\delta V</m>
-          about <m>\bx</m> and then define <m>\rho</m> as mass of the fluid particles
-          in <m>\delta V</m> divided by <m>\delta V</m>.
-          But how big should <m>\delta V</m> be?
-          It needs to be big enough that the effects of individual particles will be
-          smoothed out and small enough that the resulting function <m>\rho</m> captures
-          macroscopic density variations in the fluid
-          (which would be averaged out if <m>\delta V</m> is too large).
-        </p>
-        <p>
-          An illustration is shown in <xref ref="fig-density-continuum"/>, which
-          shows a sketch of how the function
-          <m>\rho</m> defined as particle mass in <m>\delta V</m> divided by <m>\delta V</m>
-          might vary as <m>\delta V</m> varies (note the <m>x</m>-axis of the graph is
-          on a logarithmic scale).
-          The ideal choice of the volume <m>\delta V</m> is
-          of the order of <m>10^{-12}</m> mm<m>^3</m>
-          for liquids such as water, but note that the value of the density is pretty stable
-          for a significant range around <m>10^{-12}</m> mm<m>^3</m>, and that this is necessary in order
-          that our definition of the density makes physical sense
-          (because the exact size of <m>\delta V</m> shouldn't affect the density).
-          For volumes much smaller than <m>10^{-12}</m> mm<m>^3</m>,
-          we can see the effects of individual molecules.
-          For volumes much larger,
-          we see macroscopic effects.
-          For liquids, a volume of <m>10^{-12}</m> mm<m>^3</m> contains about <m>3\times10^7</m>
-          particles.
-        </p>
-        <figure xml:id="fig-density-continuum">
-          <caption>Sketch illustrating how the fluid density at a point might behave,
-            where the fluid density is
-            defined as mass of fluid in volume <m>\delta V</m> divided by <m>\delta V</m>,
-            and this is plotted against the volume <m>\delta V</m>.
-            Note that the <m>x</m>-axis is on a logarithmic scale.
-            Picture from Fig 1.2 of <xref ref="ref-white-9"/>,
-            which you can view in the University Library's online collection</caption>
-          <image source="ch-chapter03-density-measurement2.jpg" width="40%">
-            <shortdescription>Density and the continuum approximation</shortdescription>
-          </image>
-        </figure>
-        <p>
-          As well as the definition of the density,
-          we need to do a similar procedure to define the velocity,
-          and potentially other variables (pressure, stress, temperature etc).
-          In this course, we will generally assume the procedure of choosing
-          <m>\delta V</m> and averaging has already been carried out.
-        </p>
-      <p>
-        This approach implies there is a minimum size of the
-        fluid body required for this approach to be valid
-        (if we consider smaller sizes of fluid,
-        the motion of individual particles becomes important).
-        Specifically, a region containing about <m>3\times10^7</m> molecules
-        must be small in comparison to all lengthscales in the problem: <ul>
-          <li> For gases at standard temperature and pressure (STP): the minimum volume is around <m>
-        10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m>
-        molecules).</li>
-          <li> For liquids: the minimum volume of fluid is smaller as the particles are closer
-        together. For water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m> (this contains
-        around <m>3\times10^7</m> molecules).</li>
-          <li> For complex fluids: the minimum volume needed to invoke the continuum approximation
-        is often larger, e.g. blood contains red blood cells, which significantly affect its
-        mechanics (the mechanics of blood plasma approximates that of water) and the volume of a
-        single red blood cell is around <m>10^{-16}</m> m<m>^3</m>.</li>
-        </ul>
-      </p>
+      <!--   <p> -->
+      <!--     For example, consider the fluid density, <m>\rho</m>. -->
+      <!--     In the continuum approximation, -->
+      <!--     this needs to be a smooth mathematical function of position and time. -->
+      <!--     We define it at a point <m>\bx</m> by taking a small volume <m>\delta V</m> -->
+      <!--     about <m>\bx</m> and then define <m>\rho</m> as mass of the fluid particles -->
+      <!--     in <m>\delta V</m> divided by <m>\delta V</m>. -->
+      <!--     But how big should <m>\delta V</m> be? -->
+      <!--     It needs to be big enough that the effects of individual particles will be -->
+      <!--     smoothed out and small enough that the resulting function <m>\rho</m> captures -->
+      <!--     macroscopic density variations in the fluid -->
+      <!--     (which would be averaged out if <m>\delta V</m> is too large). -->
+      <!--   </p> -->
+      <!--   <p> -->
+      <!--     An illustration is shown in <xref ref="fig-density-continuum"/>, which -->
+      <!--     shows a sketch of how the function -->
+      <!--     <m>\rho</m> defined as particle mass in <m>\delta V</m> divided by <m>\delta V</m> -->
+      <!--     might vary as <m>\delta V</m> varies (note the <m>x</m>-axis of the graph is -->
+      <!--     on a logarithmic scale). -->
+      <!--     The ideal choice of the volume <m>\delta V</m> is -->
+      <!--     of the order of <m>10^{-12}</m> mm<m>^3</m> -->
+      <!--     for liquids such as water, but note that the value of the density is pretty stable -->
+      <!--     for a significant range around <m>10^{-12}</m> mm<m>^3</m>, and that this is necessary in order -->
+      <!--     that our definition of the density makes physical sense -->
+      <!--     (because the exact size of <m>\delta V</m> shouldn't affect the density). -->
+      <!--     For volumes much smaller than <m>10^{-12}</m> mm<m>^3</m>, -->
+      <!--     we can see the effects of individual molecules. -->
+      <!--     For volumes much larger, -->
+      <!--     we see macroscopic effects. -->
+      <!--     For liquids, a volume of <m>10^{-12}</m> mm<m>^3</m> contains about <m>3\times10^7</m> -->
+      <!--     particles. -->
+      <!--   </p> -->
+      <!--   <figure xml:id="fig-density-continuum"> -->
+      <!--     <caption>Sketch illustrating how the fluid density at a point might behave, -->
+      <!--       where the fluid density is -->
+      <!--       defined as mass of fluid in volume <m>\delta V</m> divided by <m>\delta V</m>, -->
+      <!--       and this is plotted against the volume <m>\delta V</m>. -->
+      <!--       Note that the <m>x</m>-axis is on a logarithmic scale. -->
+      <!--       Picture from Fig 1.2 of <xref ref="ref-white-9"/>, -->
+      <!--       which you can view in the University Library's online collection</caption> -->
+      <!--     <image source="ch-chapter03-density-measurement2.jpg" width="40%"> -->
+      <!--       <shortdescription>Density and the continuum approximation</shortdescription> -->
+      <!--     </image> -->
+      <!--   </figure> -->
+      <!--   <p> -->
+      <!--     As well as the definition of the density, -->
+      <!--     we need to do a similar procedure to define the velocity, -->
+      <!--     and potentially other variables (pressure, stress, temperature etc). -->
+      <!--     In this course, we will generally assume the procedure of choosing -->
+      <!--     <m>\delta V</m> and averaging has already been carried out. -->
+      <!--   </p> -->
+      <!-- <p> -->
+      <!--   This approach implies there is a minimum size of the -->
+      <!--   fluid body required for this approach to be valid -->
+      <!--   (if we consider smaller sizes of fluid, -->
+      <!--   the motion of individual particles becomes important). -->
+      <!--   Specifically, a region containing about <m>3\times10^7</m> molecules -->
+      <!--   must be small in comparison to all lengthscales in the problem: <ul> -->
+      <!--     <li> For gases at standard temperature and pressure (STP): the minimum volume is around <m> -->
+      <!--   10^{-18}</m> m<m>^3=1</m> <m>\mu</m>m<m>^3</m> (this contains around <m>3\times10^7</m> -->
+      <!--   molecules).</li> -->
+      <!--     <li> For liquids: the minimum volume of fluid is smaller as the particles are closer -->
+      <!--   together. For water, the minimum volume is around <m>10^{-21}</m> m<m>^3</m> (this contains -->
+      <!--   around <m>3\times10^7</m> molecules).</li> -->
+      <!--     <li> For complex fluids: the minimum volume needed to invoke the continuum approximation -->
+      <!--   is often larger, e.g. blood contains red blood cells, which significantly affect its -->
+      <!--   mechanics (the mechanics of blood plasma approximates that of water) and the volume of a -->
+      <!--   single red blood cell is around <m>10^{-16}</m> m<m>^3</m>.</li> -->
+      <!--   </ul> -->
+      <!-- </p> -->
     </remark>
 
-    <p> In <xref ref="ex-continuum-assumption" />, you will consider whether salt flow can be
-      considered under a continuum assumption. </p>
-
-    <figure xml:id="fig-salt-flow">
-      <caption>An AI-generated image of salt flowing out of a large orifice.</caption>
-      <image source="saltflow.png" width="40%">
-        <shortdescription>Salt flow</shortdescription>
-      </image>
-    </figure>
+    <!-- <p> In <xref ref="ex-continuum-assumption" />, you will consider whether salt flow can be -->
+    <!--   considered under a continuum assumption. </p> -->
+    <!---->
+    <!-- <figure xml:id="fig-salt-flow"> -->
+    <!--   <caption>An AI-generated image of salt flowing out of a large orifice.</caption> -->
+    <!--   <image source="saltflow.png" width="40%"> -->
+    <!--     <shortdescription>Salt flow</shortdescription> -->
+    <!--   </image> -->
+    <!-- </figure> -->
 
     <p> The derivation of the governing equations for a fluid is then based on three basic
       principles of physics: <ol>
@@ -222,10 +222,22 @@
         </statement>
 
         <proof>
-          <p>
-            The proof follows from direct differentiation of the determinant and use of the
-            identity of the material derivative.
-          </p>
+          <p> (Not examinable) The material derivative is the time derivative with <m>\bX</m> held fixed, so
+            <m>\pd{x}{t} = u</m>, <m>\pd{y}{t} = v</m> and <m>\pd{z}{t} = w</m>. By the product
+            rule, <m>\DD{J}{t}</m> is a sum of three determinants, each with one row of <m>J</m>
+            differentiated. </p>
+
+          <p> Consider the first. A typical entry of its differentiated row is <me>
+              \DD{}{t}\pd{x}{X} = \pd{u}{X} = \pd{u}{x}\pd{x}{X} + \pd{u}{y}\pd{y}{X} +
+              \pd{u}{z}\pd{z}{X},
+            </me> using the chain rule; the entries for <m>Y</m> and <m>Z</m> are the same with
+            <m>X</m> replaced. So the new first row is <me>
+              \pd{u}{x}\,(\text{row 1}) + \pd{u}{y}\,(\text{row 2}) + \pd{u}{z}\,(\text{row 3}).
+            </me> A determinant with two equal rows vanishes, so only the first term survives, and
+            this determinant equals <m>\pd{u}{x}J</m>. </p>
+
+          <p> In the same way, the other two determinants give <m>\pd{v}{y}J</m> and
+            <m>\pd{w}{z}J</m>. Adding them gives <m>\DD{J}{t} = J\,\nabla\cdot\bu</m>. </p>
         </proof>
       </theorem>
     </subsection>
@@ -288,10 +300,89 @@
         differentiation can
         pass through the integral when the domain of integration is changing in time!</p>
 
+      <example xml:id="ex-rtt-stretching-cube-example">
+        <title>Reynolds' Transport Theorem for a stretching cube</title>
+
+        <statement>
+          <aside>
+            <title>New in 2026</title>
+            <p>This worked example is a new addition to the notes in 2026.</p>
+          </aside>
+
+          <p> Consider the steady velocity field <me>
+              \bu = \left(x, \; -\tfrac12 y, \; 0\right).
+            </me> At <m>t = 0</m> the fluid occupying the unit cube <m>V(0) = [0,1]^3</m> is
+            dyed, and <m>V(t)</m> denotes the material volume occupied by this dyed fluid at later
+            times. Let <me>
+              f(\bx) = x^2 + y, \qquad I(t) = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}.
+            </me>
+          </p>
+
+          <ol marker="(a)">
+            <li>
+              <p> Find the pathlines <m>\bx = \bx(\bX, t)</m> and hence show that <m>V(t)</m>
+                remains a cuboid. Find its dimensions. </p>
+            </li>
+            <li>
+              <p> Compute the Jacobian <m>J = \pd{(x, y, z)}{(X, Y, Z)}</m> and verify Euler's
+                identity <xref ref="eqn-euler-identity" />. Is the flow incompressible? </p>
+            </li>
+          </ol>
+        </statement>
+
+        <hint>
+          <p> The natural next step is to compute <m>I(t)</m> and <m>\de{I}/\de{t}</m>. Since <m>
+            V(t)</m> is a box with known dimensions, <m>I(t)</m> can be found by integrating <m>f</m>
+            directly over <m>V(t)</m>. Alternatively, map back to the fixed cube <m>V(0)</m> using
+            the Jacobian from part (b), exactly as in the proof of <xref ref="thm-RTT" />. To verify
+            Reynolds' Transport Theorem, compute <m>\nabla \cdot (f\bu)</m> (note that <m>\pd{f}{t}
+            = 0</m>) and integrate it over <m>V(t)</m>; the two answers should agree. You will carry
+            this out in <xref ref="ex-rtt-stretching-cube" />. </p>
+        </hint>
+
+        <solution>
+          <p>
+            <alert>(a)</alert> The pathlines satisfy <m>\dot{x} = x</m>, <m>\dot{y} = -y/2</m>, <m>
+            \dot{z} = 0</m> with <m>(x, y, z) = (X, Y, Z)</m> at <m>t = 0</m>, so <me>
+              x = X\e^{t}, \qquad y = Y\e^{-t/2}, \qquad z = Z.
+            </me> Each coordinate is
+            mapped independently of the others, so the faces of the cube remain planes and <me>
+              V(t) = [0, \, \e^{t}] \times [0, \, \e^{-t/2}] \times [0, \, 1].
+            </me> The cube is
+            stretched in <m>x</m> and squashed in <m>y</m>, as shown in <xref
+              ref="fig-rtt-stretching-cube" />. </p>
+
+          <figure xml:id="fig-rtt-stretching-cube">
+            <caption>The material volume <m>V(t)</m> at <m>t = 0, 0.5, 1</m>; the dotted line is
+              the pathline of the corner initially at <m>(1, 1, 0)</m>.</caption>
+            <image source="ch-chapter03-rtt-cube.png" width="80%">
+              <shortdescription>Three overlapping rectangles showing the dyed volume stretching in
+                x and shrinking in y over time.</shortdescription>
+            </image>
+          </figure>
+
+          <p>
+            <alert>(b)</alert> The Jacobian matrix is diagonal, so <me>
+              J = \begin{vmatrix}
+              \e^{t} &amp; 0 &amp; 0 \\
+              0 &amp; \e^{-t/2} &amp; 0 \\
+              0 &amp; 0 &amp; 1
+              \end{vmatrix} = \e^{t/2}.
+            </me> Since <m>J</m> does not
+            depend on <m>\bX</m>, we have <m>\DD{J}{t} = \dd{J}{t} = \tfrac12 \e^{t/2}</m>.
+            Meanwhile, <m>\nabla \cdot \bu = 1 - \tfrac12 = \tfrac12</m>, so <me>
+              J \nabla \cdot \bu = \tfrac12 \e^{t/2} = \DD{J}{t},
+            </me> as required by
+            Euler's identity <xref ref="thm-Euleridentity" />. The flow is <em>not</em>
+            incompressible: the volume of the box is <m>|V(t)| = J = \e^{t/2}</m>, which grows in
+            time. </p>
+        </solution>
+      </example>
+
       <remark>
         <title>A 1D version of the Reynolds' Transport Theorem</title>
         <p> In 1D, Reynolds' Transport Theorem reduces to an identity known as Leibniz's rule. This
-          is presented as an exercise in <xref ref="ex-leibnitz-rule" />. </p>
+          is presented as an exercise in <xref ref="ex-hw-leibnitz-rule" />. </p>
       </remark>
 
       <remark>
@@ -705,7 +796,7 @@
         </me>
       </p>
 
-      <p> In <xref ref="ex-euler-check" />, you will practice the derivation of the mass and
+      <p> In <xref ref="ex-hw-euler-check" />, you will practice the derivation of the mass and
         momentum equations. </p>
     </subsection>
 
@@ -836,12 +927,11 @@
       </definition>
 
       <p> Simple applications of the Euler equations are given in <xref
-          ref="ex-kelvin-circulation-theorem" />, <xref ref="ex-fluid-pressure-uniform-velocity" />
-        and <xref ref="ex-piston-fluid-problem" />
+          ref="ex-hw-fluid-pressure-uniform-velocity" /> and <xref ref="ex-hw-piston-fluid-problem" />.
       </p>
 
       <p> You will consider the derivation of the Euler equations as part of <xref
-          ref="ex-euler-check" />. </p>
+          ref="ex-hw-euler-check" />. </p>
 
       <example>
         <title>Computer graphics and fluid simulations</title>
@@ -1182,7 +1272,19 @@
   <exercises xml:id="ws-equations">
 
     <introduction>
+
+      <remark xml:id="remark-solutions-feedback-equations">
+        <title>solutions and feedback</title>
+        <p>full solutions to these exercises can be found in <xref ref="solutions"/> at the back
+          of the book.</p>
+
+        <p>if you would like feedback on your work, the tutor will by default concentrate on the
+          exercises highlighted with a yellow background in the online notes (the homework
+          exercises), unless you specifically ask for feedback on a different exercise instead.</p>
+      </remark>
+
       <p>
+
         This chapter focused on deriving the key Euler equations for an inviscid and incompressible
         flow,
         starting from first principles, and deriving the conservation laws using vector calculus.
@@ -1195,33 +1297,33 @@
 </warning> -->
     </introduction>
 
-    <exercise xml:id="ex-continuum-assumption">
-      <title>Continuum approximation</title>
-      <statement>
-        <p> Domestic salt flows quite well out of a container with a hole in the bottom. Following <xref
-            ref="rem-continuum" />, consider whether salt matches up to the properties quoted for a
-          fluid</p>
-
-        <p>What is the size of a typical salt particle? What size of hole would required so that a
-          continuum model of the salt flow is a reasonable assumption? (Based on Q1, p. 42 by
-          Paterson <xref ref="ref-paterson" />.) </p>
-      </statement>
-
-      <solution>
-        <p>
-          Salt is not like a fluid because you can make it into a pile, whereas the surface of a
-          resting fluid is always horizontal. However, some aspects of salt flow are similar to the
-          flow of a fluid. A typical salt particle is approximately a cube of side <m>0.5</m> mm,
-          and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>. We need a size of
-          hole that admits a very large number of particles. A reasonable value of the volume <m>V</m>
-          appearing in the continuum approximation might be the volume of <m>3\times10^7</m> salt
-          grains (this was the number of gas or liquid molecules quoted in the notes), i.e. <m>
-          3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately <m>10</m> cm.
-          We need a hole that is many times this distance, perhaps a hole with a diameter of one
-          metre or so might be reasonable! See also <xref ref="rem-continuum"/>.
-        </p>
-      </solution>
-    </exercise>
+    <!-- <exercise xml:id="ex-continuum-assumption"> -->
+    <!--   <title>Continuum approximation</title> -->
+    <!--   <statement> -->
+    <!--     <p> Domestic salt flows quite well out of a container with a hole in the bottom. Following <xref -->
+    <!--         ref="rem-continuum" />, consider whether salt matches up to the properties quoted for a -->
+    <!--       fluid</p> -->
+    <!---->
+    <!--     <p>What is the size of a typical salt particle? What size of hole would required so that a -->
+    <!--       continuum model of the salt flow is a reasonable assumption? (Based on Q1, p. 42 by -->
+    <!--       Paterson <xref ref="ref-paterson" />.) </p> -->
+    <!--   </statement> -->
+    <!---->
+    <!--   <solution> -->
+    <!--     <p> -->
+    <!--       Salt is not like a fluid because you can make it into a pile, whereas the surface of a -->
+    <!--       resting fluid is always horizontal. However, some aspects of salt flow are similar to the -->
+    <!--       flow of a fluid. A typical salt particle is approximately a cube of side <m>0.5</m> mm, -->
+    <!--       and therefore has a volume of approximately <m>10^{-10}</m> m<m>^3</m>. We need a size of -->
+    <!--       hole that admits a very large number of particles. A reasonable value of the volume <m>V</m> -->
+    <!--       appearing in the continuum approximation might be the volume of <m>3\times10^7</m> salt -->
+    <!--       grains (this was the number of gas or liquid molecules quoted in the notes), i.e. <m> -->
+    <!--       3\times10^{-3}</m> m<m>^3</m>, which is a cube of side length approximately <m>10</m> cm. -->
+    <!--       We need a hole that is many times this distance, perhaps a hole with a diameter of one -->
+    <!--       metre or so might be reasonable! See also <xref ref="rem-continuum"/>. -->
+    <!--     </p> -->
+    <!--   </solution> -->
+    <!-- </exercise> -->
 
 
     <exercise xml:id="ex-bump">
@@ -1248,7 +1350,7 @@
       </solution>
     </exercise>
 
-    <exercise xml:id="ex-leibnitz-rule">
+    <exercise xml:id="ex-hw-leibnitz-rule">
       <title>Leibniz's rule</title>
 
       <introduction>
@@ -1492,7 +1594,7 @@
   Q8 off answers7
 </exercise>-->
 
-    <exercise xml:id="ex-euler-check">
+    <exercise xml:id="ex-hw-euler-check">
       <title>Derivation of governing equations</title>
 
       <statement>
@@ -1571,7 +1673,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
 </statement>
 </exercise> -->
 
-    <exercise xml:id="ex-fluid-pressure-uniform-velocity">
+    <exercise xml:id="ex-hw-fluid-pressure-uniform-velocity">
       <title>Pressure field in uniform flow</title>
       <introduction>
         <p> An ideal (incompressible and irrotational) fluid in a gravitational field with density <m>
@@ -1654,7 +1756,7 @@ compared to the contributions due to the internal energy and the kinetic energy.
       </task>
     </exercise>
 
-    <exercise xml:id="ex-piston-fluid-problem">
+    <exercise xml:id="ex-hw-piston-fluid-problem">
       <title>Piston problem</title>
       <statement>
         <p> The piston shown in the diagram below is pushed with a force <m>F(t)</m> into a pipe of
@@ -1923,6 +2025,77 @@ compared to the contributions due to the internal energy and the kinetic energy.
             </me>
             The terms in the brackets are constant, so we have that the radius of the jar must vary
             as the fourth root of the height. </p>
+        </solution>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-rtt-stretching-cube">
+      <title>Verifying Reynolds' Transport Theorem</title>
+      <introduction>
+        <aside>
+          <title>New in 2026</title>
+          <p>This exercise is a new addition to the notes in 2026.</p>
+        </aside>
+
+        <p> This exercise completes <xref ref="ex-rtt-stretching-cube-example" />. Consider the
+          steady velocity field <m>\bu = \left(x, \; -\tfrac12 y, \; 0\right)</m>, and let <m>
+          V(t)</m> be the material volume that initially occupies the unit cube <m>V(0) =
+          [0,1]^3</m>. From the example, <m>V(t) = [0, \, \e^{t}] \times [0, \, \e^{-t/2}] \times
+          [0, \, 1]</m> and the Jacobian is <m>J = \e^{t/2}</m>. Let <me>
+            f(\bx) = x^2 + y, \qquad I(t) = \iiint_{V(t)} f \, \de{x} \, \de{y} \, \de{z}.
+          </me>
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p> By integrating directly over <m>V(t)</m>, compute <m>I(t)</m> and hence <m>
+            \de{I}/\de{t}</m>. </p>
+        </statement>
+
+        <solution>
+          <p> Integrating over <m>V(t)</m>, <md>
+              <mrow>I(t) &amp;= \int_0^1 \int_0^{\e^{-t/2}} \int_0^{\e^{t}} (x^2 + y) \, \de{x}
+            \, \de{y} \, \de{z}</mrow>
+              <mrow>&amp;= \underbrace{\frac{\e^{3t}}{3} \cdot \e^{-t/2}}_{x^2 \text{ term}}
+                + \underbrace{\e^{t} \cdot \frac{\e^{-t}}{2}}_{y \text{ term}}
+                = \frac13 \e^{5t/2} + \frac12.</mrow>
+            </md> Therefore <me>
+              \dd{I}{t} = \frac56 \e^{5t/2}.
+            </me>
+          </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> Evaluate the right-hand side of Reynolds' Transport Theorem <xref ref="eqn-RTT" />
+            and confirm that it agrees with your answer to the previous part. </p>
+        </statement>
+
+        <solution>
+          <p> Here <m>\pd{f}{t} = 0</m> and <me>
+              f\bu = \left( (x^2 + y)x, \; -\tfrac12 (x^2 + y)y, \; 0 \right),
+            </me> so <me>
+              \nabla \cdot (f\bu) = (3x^2 + y) - \tfrac12 (x^2 + 2y) = \tfrac52 x^2.
+            </me> Hence <md>
+              <mrow>\iiint_{V(t)} \left[ \pd{f}{t} + \nabla \cdot (f\bu) \right] \de{x} \,
+            \de{y} \, \de{z}
+                &amp;= \frac52 \int_0^1 \int_0^{\e^{-t/2}} \int_0^{\e^{t}} x^2 \, \de{x} \,
+            \de{y} \, \de{z}</mrow>
+              <mrow>&amp;= \frac52 \cdot \frac{\e^{3t}}{3} \cdot \e^{-t/2} = \frac56
+            \e^{5t/2},</mrow>
+            </md> in agreement with the previous part. </p>
+
+          <p> As a check, we can also follow the Lagrangian route used in the proof of <xref
+              ref="thm-RTT" />. Mapping back to the fixed cube <m>V(0)</m>, <md>
+              <mrow>I(t) &amp;= \iiint_{V(0)} f\big(\bx(\bX, t)\big) \, J \, \de{X} \, \de{Y} \,
+            \de{Z}</mrow>
+              <mrow>&amp;= \int_0^1 \int_0^1 \int_0^1 \left( X^2 \e^{2t} + Y \e^{-t/2} \right)
+            \e^{t/2} \, \de{X} \, \de{Y} \, \de{Z}</mrow>
+              <mrow>&amp;= \frac13 \e^{5t/2} + \frac12,</mrow>
+            </md> which is now an integral over a <em>fixed</em> domain, so the time derivative
+            can be taken inside the integral. </p>
         </solution>
       </task>
     </exercise>
