@@ -217,9 +217,11 @@
           as for cylindrical coordinates and Cartesians
           <xref ref="subsec-Cartesian-to-cylindrical-polar"/>, except there is no third dimension.
         </p>
+        <!-- Part (b) of this exercise (polar coordinates) was removed in 2026.
         <p>
           See for example <xref ref="ex-eulerian-lagrangian"/> Part (b).
         </p>
+        -->
       </subsection>
       <subsection xml:id="subsec-Cartesian-spherical-polar">
         <title>Converting between Cartesian coordinates and spherical polar coordinates</title>

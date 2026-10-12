@@ -75,7 +75,7 @@
         There are now two boundary conditions to consider at the free surface. The <em>dynamic boundary condition</em> corresponds to the requirement of satisfying a force balance at the free surface. At the free surface, the pressure within the liquid must be equal to the pressure within the air. This leads to the dynamic boundary condition that 
         <men xml:id="eqn-waterwaves-pressure">
           p = p_{\text{atm}} \qquad \text{at $y = \eta(x, t)$},
-        </men> tv
+        </men>
         where <m>p_{\text{atm}}</m> is the atmospheric pressure above the fluid (assumed to be constant). 
       </p>
 
@@ -137,7 +137,7 @@
         <title>Kinematic boundary conditions</title>
 
         <p>
-          In the case of fluids near solid surfaces, we require a <em>no-penetration</em> condition, which enforces that the fluid velocity is zero in a direction normal to the surface, <m>\bu \cdot \bn = 0</m>. For the case of a free boundary, such as the one at <m>y = \eta(x, t)</m>, there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid fluid elements on the free surface must remain on the free surface. 
+          In the case of fluids near solid surfaces, we require a <em>no-penetration</em> condition, which enforces that the fluid velocity is zero in a direction normal to the surface, <m>\bu \cdot \bn = 0</m>. For the case of a free boundary, such as the one at <m>y = \eta(x, t)</m>, there is a similar constraint, and it may be shown that this is equivalent to imposing that the material fluid elements on the free surface must remain on the free surface. 
         </p>
 
         <p>
@@ -434,7 +434,7 @@
       </p>
 
       <p>
-        Therefore, in order for there to be nontrivial solutions, the determinant of the matrix must ber zero, and this yields
+        Therefore, in order for there to be nontrivial solutions, the determinant of the matrix must be zero, and this yields
         <me>
           \omega^2 = gk,
         </me>
@@ -677,7 +677,7 @@
   <p>
     Now instead of writing the solution for <m>f</m> in terms of the two exponentials <m>\e^{\pm ky}</m>, it is better to write the general solution of the second-order ODE as 
     <me>
-      f(y) = B \text{cosh}[k(y - y_0)],
+      f(y) = B \cosh[k(y - y_0)],
     </me>
     where <m>y_0</m> is constant. We can then see that if <m>y_0 = -h</m>, then the boundary condition <m>f'(-h) = 0</m> is satisfied.
   </p>
@@ -686,7 +686,7 @@
     The last two boundary conditions, evaluated on <m>y = 0</m> yield
          <men>
         \begin{pmatrix}
-        \omega &amp; -k \sinh (kH) \\
+        \omega &amp; -k \sinh (kh) \\
         g &amp; -(\omega)\cosh(kh)
         \end{pmatrix}
         \begin{pmatrix}
@@ -757,7 +757,7 @@
           <me>
             \phi = Ux + \hat{\phi},
           </me>
-         where <m>\hat{\phi}</m> is the approximation, which we expect to be small (as is standard in linear problens, we often ignore the hat notation). 
+         where <m>\hat{\phi}</m> is the approximation, which we expect to be small (as is standard in linear problems, we often ignore the hat notation). 
         </p>
         </solution>
       </task>
@@ -829,7 +829,7 @@
       <task>
         <statement>
       <p>
-        Show finally that the the dispersion relation predicts possible waves of speeds
+        Show finally that the dispersion relation predicts possible waves of speeds
         <me>
           c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
         </me>
@@ -856,15 +856,15 @@
         </p>
 
         <p>
-          The first two equations yileld the typical solution for the case of finite depth: 
+          The first two equations yield the typical solution for the case of finite depth: 
           <me>
             f(y) = B \cosh[k(y + h)].
           </me>
          The last two conditions yield
          <men>
         \begin{pmatrix}
-        \omega - Uk &amp; -k \sinh (kH) \\
-        g &amp; -(\omega - Uh)\cosh(kh)
+        \omega - Uk &amp; -k \sinh (kh) \\
+        g &amp; -(\omega - Uk)\cosh(kh)
         \end{pmatrix}
         \begin{pmatrix}
         A \\ B
@@ -1033,7 +1033,7 @@
 
         <solution>
           <p>
-            This question was done in the problem class recordings on 11 November 2025 accessed <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695">here</url>.
+            This question was done in the problem class recording on 11 November 2025, accessed <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695">here</url>.
           </p>
 
           <p>
@@ -1054,7 +1054,7 @@
         </p>
 
         <p>
-          The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <m>g</m>, we can substitute <m>g + (T/\rho)k^2</m> we we impose the boundary conditions and apply the determinant condition. 
+          The derivation must be exactly the same as for infinite-depth gravity waves, and the only difference is that instead of <m>g</m>, we can substitute <m>g + (T/\rho)k^2</m> when we impose the boundary conditions and apply the determinant condition. 
         </p>
 
         <p>
@@ -1097,8 +1097,8 @@
           <solution>
             <p>
               <me>
-              \eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2 t)}{2}\right] 
-              \cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2 t)}{2}\right] 
+              \eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2)t}{2}\right]
+              \cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2)t}{2}\right]
               </me>
             </p>
           </solution>
@@ -1122,7 +1122,7 @@
 
           <solution>
             <p>
-              Setting in the substutitions, we have 
+              Substituting these expressions, we have 
               <me>
                 \eta = 2\sin(kx - \omega t)\cos(\Delta k x - \Delta \omega t).
               </me>

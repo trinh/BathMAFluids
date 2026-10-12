@@ -3253,9 +3253,14 @@
     <p>
       We assume the flow is axisymmetric and work in a moving reference frame
       centred on the sphere using spherical coordinates.
-      As shown in <xref ref="subsec-stokes-streamfunction"/>, we can write the velocity
-      in terms of a Stokes streamfunction <m>\Psi</m> using
-      <xref ref="eq-stokes-streamfunction-cylindrical"/>:
+      For axisymmetric flow with no swirl, we can write the velocity
+      in terms of a <em>Stokes streamfunction</em> <m>\Psi(r,\theta)</m>, defined by
+      <me>
+        \bu = \nabla \times \left(\frac{\Psi}{r\sin\theta}\hat\bphi\right),
+      </me>
+      which is the axisymmetric analogue of the two-dimensional streamfunction of
+      <xref ref="sec-streamfunction"/>; in particular, <m>\Psi</m> is constant along streamlines.
+      The velocity components are then
       <md>
         <mrow>
           u_r=&amp;\frac1{r^2\sin\theta}\pd{\Psi}{\theta},
@@ -3267,8 +3272,7 @@
           u_\phi=&amp;0.
         </mrow>
       </md>
-      From <xref ref="eq-axisym-vorticity-sphericals"/>,
-      the vorticity is given by
+      Taking the curl of the velocity, the vorticity is given by
       <me>
         \bomega=-\frac1{r\sin\theta}\left(\mathcal{L}_s\left(\Psi\right)\right)\hat\bphi,
       </me>
@@ -3543,11 +3547,15 @@
     </remark>
     <remark>
       <p>
-        This solution is the same as the irrotational flow solution
-        (see <xref ref="subsec-irrot-sphere"/>).
+        It is instructive to compare this with the inviscid, irrotational flow past a sphere,
+        for which
+        <me>
+          \Psi=-\frac12U\left(r^2-\frac{a^3}{r}\right)\sin^2\theta.
+        </me>
+        The two solutions agree in the far field, but they differ near the sphere:
+        the Stokes solution satisfies the no-slip condition and has non-zero vorticity.
         Note that for any real fluid (i.e. one with viscosity),
-        this solution would only be seen for low Reynolds numbers,
-        despite the fact that inviscid fluids correspond to high Reynolds numbers.
+        the Stokes solution would only be seen at low Reynolds numbers.
       </p>
     </remark>
     </example>
@@ -3626,7 +3634,7 @@
         where <m>\mathrm{c.c.}</m> denotes the complex conjugate.
         We try a solution of the form
         <men xml:id="eq-ansatz-uz">
-          u_z(r,t)=U(r)e^{\im\omega t}+\mathrm{c.c.},\label{eq:udecomp}
+          u_z(r,t)=U(r)e^{\im\omega t}+\mathrm{c.c.},
         </men>
         where <m>U</m> is a complex-valued function, and, substituting this into
         <xref ref="eq-axialNS"/>, we obtain
@@ -3733,7 +3741,7 @@
         </me>
         and, substituting this into <xref ref="eq-ansatz-uz"/>, we get
         <men xml:id="eq-womsersley-flow">
-          u_z=-\frac{\im G_0}{2\omega\rho}\left(1-\frac{J_0(\sqrt{-\im}\alpha r/a)}{J_0(\sqrt{-\im}\alpha)}\right)e^{\im\omega t}+\mathrm{c.c.}\label{eq:womersleyflow}
+          u_z=-\frac{\im G_0}{2\omega\rho}\left(1-\frac{J_0(\sqrt{-\im}\alpha r/a)}{J_0(\sqrt{-\im}\alpha)}\right)e^{\im\omega t}+\mathrm{c.c.}
         </men>
         This is Womersley flow, which was first described by Womersley in 1955.
         The nondimensionalised flow profile is
@@ -5103,9 +5111,10 @@
                   represents rotation since, setting <m>\bOmega=\nabla_x\times\bu/2=\bomega/2</m>,
                   this term is of the form <m>\bOmega\times\bs</m>,
                   which is purely rotational motion about point <m>P</m> (see <xref ref="ex-rotating-flow"/>).
-                  Note also that this again shows a result that we used in <xref ref="sec-vorticity"/>
-                  that the vorticity <m>\bomega</m> is twice the angular velocity
-                  since <m>\bOmega=\bomega/2</m>.
+                  Note also that this shows that the vorticity <m>\bomega</m> is twice the
+                  local angular velocity of the fluid element, since <m>\bOmega=\bomega/2</m>.
+                  This makes precise the statement in <xref ref="def-vorticity"/> that the
+                  vorticity measures the local rotation of the flow.
                 </p>
               </li>
               <li>
@@ -5985,22 +5994,19 @@
           </p>
           <figure xml:id="fig-womersley-example-1">
             <caption>Womersley flow profile for <m>\alpha=1</m>.</caption>
-            <image source="ch-chapter07-womersley1.gif" width="50%">
-              <!-- <image source="womersley1.gif"> -->
+            <image source="ch-chapter07-womersley1" width="50%">
               <shortdescription>Womersley <m>\alpha=1</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-10">
             <caption>Womersley flow profile for <m>\alpha=10</m>.</caption>
-            <image source="ch-chapter07-womersley10.gif" width="50%">
-              <!-- <image source="womersley10.gif"> -->
+            <image source="ch-chapter07-womersley10" width="50%">
               <shortdescription>Womersley <m>\alpha=10</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-100">
             <caption>Womersley flow profile for <m>\alpha=100</m>.</caption>
-            <image source="ch-chapter07-womersley100.gif" width="50%">
-              <!-- <image source="womersley100.gif"> -->
+            <image source="ch-chapter07-womersley100" width="50%">
               <shortdescription>Womersley <m>\alpha=100</m></shortdescription>
             </image>
           </figure>
