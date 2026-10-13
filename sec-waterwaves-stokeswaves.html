@@ -221,7 +221,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
 <ul id="ptx-toc-group-sec-RTT" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of the Lagrangian-to-Eulerian map</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
 </ul>
 </li>
@@ -245,7 +245,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
-<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-first-integral" class="internal"><span class="codenumber">3.5.1</span> <span class="title">A first integral of the momentum equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-forms" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Three forms of Bernoulli’s equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-applications" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Applications</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
@@ -427,7 +431,7 @@ eBookConfig.enable_chatcodes =  false;
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linearisation of the water-wave equations</span>
 </h2>
-<div class="para" id="subsec-waterwaves-linearisation-2">Our task in this section is to linearise the water-wave equations given in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing" class="xref" data-knowl="./knowl/xref/thm-waterwaves-governing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.2: Water wave equations in potential flow">Theorem 5.1.2</a>. The culprit to the difficulty in seeking solutions concerns two main issues. The first is the nonlinearity in Bernoulli’s equation (i.e. the term <span class="process-math">\(|\nabla\phi|^2\)</span>). The second is to do with the specification of the unknown free surface, <span class="process-math">\(\eta(x, t)\text{,}\)</span> and the need to solve the extra equations on this unknown location.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-waterwaves-linearisation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-waterwaves-linearisation-2">Our task in this section is to linearise the water-wave equations given in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing" class="xref" data-knowl="./knowl/xref/thm-waterwaves-governing.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.1.1: Water wave equations in potential flow">Theorem 5.1.1</a>. The culprit to the difficulty in seeking solutions concerns two main issues. The first is the nonlinearity in Bernoulli’s equation (i.e. the term <span class="process-math">\(|\nabla\phi|^2\)</span>). The second is to do with the specification of the unknown free surface, <span class="process-math">\(\eta(x, t)\text{,}\)</span> and the need to solve the extra equations on this unknown location.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-waterwaves-linearisation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-waterwaves-linearisation-3">
 <div class="para">The idea of linearisation relies upon the consideration that if disturbances in the fluid are small, then the quadratic terms in the free-surface conditions can be neglected. One way to see this is to introduce a scaling on all the associated quantities. For example, we consider the free surface as written as</div>
@@ -467,7 +471,7 @@ v = \delta \pd{\overline{\phi}(x, 0, t)}{y} + \delta^2 \pd{^2\overline{\phi}(x, 
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-waterwaves-linearisation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-waterwaves-linearisation-6">
-<div class="para">Let us consider now the kinematic condition <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull02.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.6">(5.1.6)</a>. Since the term with the horizontal velocity <span class="process-math">\(u \pd{\eta}{x} = O(\delta^2)\text{,}\)</span> then we see that the kinematic approximation now yields</div>
+<div class="para">Let us consider now the kinematic condition <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull02.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.5">(5.1.5)</a>. Since the term with the horizontal velocity <span class="process-math">\(u \pd{\eta}{x} = O(\delta^2)\text{,}\)</span> then we see that the kinematic approximation now yields</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/wwfull02.html" id="subsec-waterwaves-linearisation-6-3">
 \begin{equation*}
 \delta\pd{\overline{\eta}}{t} = \delta \pd{\overline{\phi}}{y} + O(\delta^2), \qquad \text{on $y = 0$}.
@@ -507,7 +511,7 @@ v = \delta \pd{\overline{\phi}(x, 0, t)}{y} + \delta^2 \pd{^2\overline{\phi}(x, 
 <div class="para" id="subsec-waterwaves-linearisation-8">You will be able to practice this linearisation in the exercises.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-waterwaves-linearisation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-waterwaves-linearisation-9">
-<div class="para">The linearisation of Bernoulli’s equation in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull03.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.7">(5.1.7)</a> is done similarly, and the end result is that the term,</div>
+<div class="para">The linearisation of Bernoulli’s equation in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull03.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.6">(5.1.6)</a> is done similarly, and the end result is that the term,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/wwfull03.html" id="subsec-waterwaves-linearisation-9-2">
 \begin{equation*}
 |\nabla \phi|^2 = \left( \pd{\phi}{x}\right)^2  + \left( \pd{\phi}{y}\right)^2,
@@ -517,7 +521,7 @@ v = \delta \pd{\overline{\phi}(x, 0, t)}{y} + \delta^2 \pd{^2\overline{\phi}(x, 
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-waterwaves-linearisation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="subsec-waterwaves-linearisation-10">
-<div class="para">Using the linearisation techniques, similar to the kinematic equation and its linear variation <a href="sec-waterwaves-stokeswaves.html#eqn-waves-kinematiccondition01" class="xref" data-knowl="./knowl/xref/eqn-waves-kinematiccondition01.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.3">(5.3.3)</a>, Bernoulli’s equation in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull03.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.7">(5.1.7)</a> is then approximated as</div>
+<div class="para">Using the linearisation techniques, similar to the kinematic equation and its linear variation <a href="sec-waterwaves-stokeswaves.html#eqn-waves-kinematiccondition01" class="xref" data-knowl="./knowl/xref/eqn-waves-kinematiccondition01.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.3">(5.3.3)</a>, Bernoulli’s equation in <a href="sec-waterwaves-equations.html#thm-waterwaves-governing-2-2-1" class="xref" data-knowl="./knowl/xref/wwfull03.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1.6">(5.1.6)</a> is then approximated as</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-waves-kinematiccondition01.html ./knowl/xref/wwfull03.html" id="subsec-waterwaves-linearisation-10-3">
 \begin{equation*}
 \pd{\phi}{t} + \frac{1}{2} |\nabla \phi|^2 + g\eta  = 0 \qquad \text{on $y = 0$}.

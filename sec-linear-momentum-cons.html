@@ -221,7 +221,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
 <ul id="ptx-toc-group-sec-RTT" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of the Lagrangian-to-Eulerian map</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
 </ul>
 </li>
@@ -245,7 +245,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
-<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+<ul id="ptx-toc-group-sec-bernoulli" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-first-integral" class="internal"><span class="codenumber">3.5.1</span> <span class="title">A first integral of the momentum equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-forms" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Three forms of Bernoulli’s equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-applications" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Applications</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
@@ -715,7 +719,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="subsec-navierstokes-discussion-5-2">
 <em class="emphasis">Non-examinable.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-navierstokes-discussion-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="subsec-navierstokes-discussion-5-3">As mentioned in <a href="sec-RTT.html#rem-RTT-control-volume" class="xref" data-knowl="./knowl/xref/rem-RTT-control-volume.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 3.1.8: General statement of RTT">Remark 3.1.8</a>, some engineering problems can be analysed in terms of applying the principle of mass and linear momentum conservation to a defined region of the fluid, and this can be used for some engineering applications. In contrast, the Navier–Stokes and continuity equations, <a href="sec-linear-momentum-cons.html#eqn-navierstokes" class="xref" data-knowl="./knowl/xref/eqn-navierstokes.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.1">(6.5.1)</a> and <a href="sec-incompressible.html#eqn-incompressibledef" class="xref" data-knowl="./knowl/xref/eqn-incompressibledef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a>, apply mass and linear momentum conservation at each point in the fluid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-navierstokes-discussion-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-navierstokes-discussion-5-3">Some engineering problems can be analysed in terms of applying the principle of mass and linear momentum conservation to a defined region of the fluid, and this can be used for some engineering applications. In contrast, the Navier–Stokes and continuity equations, <a href="sec-linear-momentum-cons.html#eqn-navierstokes" class="xref" data-knowl="./knowl/xref/eqn-navierstokes.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.1">(6.5.1)</a> and <a href="sec-incompressible.html#eqn-incompressibledef" class="xref" data-knowl="./knowl/xref/eqn-incompressibledef.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.2">(3.4.2)</a>, apply mass and linear momentum conservation at each point in the fluid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-navierstokes-discussion-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Remark 6.5.6: Comparison with analysis of the extensive properties"><a tabindex="-1" href="#subsec-navierstokes-discussion-5" title="Copy heading and permalink for Remark 6.5.6: Comparison with analysis of the extensive properties" aria-label="Copy heading and permalink for Remark 6.5.6: Comparison with analysis of the extensive properties">🔗</a></div>
 </article>

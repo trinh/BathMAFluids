@@ -221,7 +221,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-RTT.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Reynolds’ Transport Theorem</span></a></div>
 <ul id="ptx-toc-group-sec-RTT" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of Lagrangian to Eulerian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-jacob" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Jacobian of the Lagrangian-to-Eulerian map</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-RTT.html#subsec-RTT" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Reynolds’ Transport Theorem</span></a></div></li>
 </ul>
 </li>
@@ -245,7 +245,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-bernoulli.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Bernoulli’s equation</span></a></div>
-<ul class="structural toc-item-list active" id="ptx-toc-group-sec-bernoulli"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-potential" class="internal"><span class="codenumber">3.5.1</span> <span class="title">Potential flow</span></a></div></li></ul>
+<ul class="structural toc-item-list active" id="ptx-toc-group-sec-bernoulli">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-first-integral" class="internal"><span class="codenumber">3.5.1</span> <span class="title">A first integral of the momentum equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-forms" class="internal"><span class="codenumber">3.5.2</span> <span class="title">Three forms of Bernoulli’s equation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-bernoulli.html#subsec-bernoulli-applications" class="internal"><span class="codenumber">3.5.3</span> <span class="title">Applications</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-equations.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Exercises</span></a></div></li>
 </ul>
@@ -424,13 +428,47 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation</span>
 </h1>
 <section class="introduction" id="sec-bernoulli-2">
-<div class="para" id="sec-bernoulli-2-1">There is a reformulation of the momentum equations that proves to be useful. In essence, it emerges from attempting to integrate the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a> and yields the famous <em class="emphasis">Bernoulli equation(s)</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-bernoulli-2-1">
+<div class="para">The Euler equations are a system of nonlinear partial differential equations, in which the velocity <span class="process-math">\(\bu\)</span> and the pressure <span class="process-math">\(p\)</span> are coupled together. Solving them in general is difficult. In many problems of interest, however, the velocity can be found by other means. For example:</div>
+<ul class="disc" id="sec-bernoulli-2-1-3">
+<li id="sec-bernoulli-2-1-3-1">
+<div class="para" id="sec-bernoulli-2-1-3-1-1">in flow through a pipe or out of a tank, mass conservation often determines the speed;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-bernoulli-2-2">We will first need a vector identity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-bernoulli-2-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-bernoulli-2-1-3-2">
+<div class="para" id="sec-bernoulli-2-1-3-2-1">in <a href="ch-chapter04-potentialflows.html" class="internal" title="Chapter 4: Potential flows">Chapter 4</a>, the velocity follows from solving Laplace’s equation;<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="identity theorem-like" id="ident-ugradu"><h2 class="heading">
-<span class="type">Identity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-bernoulli-2-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-bernoulli-2-1-3-3">
+<div class="para" id="sec-bernoulli-2-1-3-3-1">in <a href="ch-chapter05-waves.html" class="internal" title="Chapter 5: Water waves">Chapter 5</a>, the motion of the free surface is linked to the velocity by a kinematic condition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#sec-bernoulli-2-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">In each case, the remaining task is to find the <em class="emphasis">pressure</em>, for instance to calculate the force on a body, or to impose that the pressure is atmospheric at a free surface.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-bernoulli-2-2">
+<div class="para">Bernoulli’s equation does exactly this. It is a <em class="emphasis">first integral</em> of the momentum equation: rather than a differential equation, it is an algebraic relation between the pressure, the speed and the height of the fluid,</div>
+<div class="displaymath process-math" id="sec-bernoulli-2-2-2">
+\begin{equation*}
+B = \frac{p}{\rho} + \frac{1}{2}|\bu|^2 + \chi.
+\end{equation*}
+</div>
+<div class="para">In this section, we first rewrite the momentum equation in a form from which <span class="process-math">\(B\)</span> emerges naturally. We then show that, under different assumptions, <span class="process-math">\(B\)</span> is constant along streamlines, constant everywhere, or a function of time only. Finally, we apply these results to some practical problems.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="subsec-bernoulli-first-integral">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A first integral of the momentum equation</span>
 </h2>
+<div class="para" id="subsec-bernoulli-first-integral-2">We will first need a vector identity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="identity theorem-like" id="ident-ugradu"><h3 class="heading">
+<span class="type">Identity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
 <div class="para logical" id="ident-ugradu-1-1">
 <div class="para">Note the following identity:</div>
 <div class="displaymath process-math" id="eqn-ugradu">
@@ -443,34 +481,51 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Identity 3.5.1"><a tabindex="-1" href="#ident-ugradu" title="Copy heading and permalink for Identity 3.5.1" aria-label="Copy heading and permalink for Identity 3.5.1">🔗</a></div>
 </article>
-<details id="ident-ugradu-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<details id="ident-ugradu-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para" id="ident-ugradu-2-1">The proof follows from direct expansion of both sides.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ident-ugradu-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.1.1"><a tabindex="-1" href="#ident-ugradu-2" title="Copy heading and permalink for Proof 3.5.1.1" aria-label="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div>
 </article></details>
-<div class="para" id="sec-bernoulli-2-4">It will also be useful for us to introduce the notion of vorticity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-bernoulli-first-integral-4">The second term on the right-hand side involves the curl of the velocity, which has its own name.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="def-vorticity"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vorticity of a vector field.</span>
-</h2>
+<article class="definition definition-like" id="def-vorticity"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vorticity.</span>
+</h3>
 <div class="para logical" id="def-vorticity-2-1">
-<div class="para">The <em class="emphasis">vorticity</em>, <span class="process-math">\(\omega\text{,}\)</span> of a vector field is defined by</div>
+<div class="para">The <em class="emphasis">vorticity</em>, <span class="process-math">\(\bomega\text{,}\)</span> of the velocity field <span class="process-math">\(\bu\)</span> is defined by</div>
 <div class="displaymath process-math" id="eqn-vorticity">
 \begin{equation}
-\omega \equiv \nabla \times \bu.\tag{3.5.2}
+\bomega \equiv \nabla \times \bu.\tag{3.5.2}
 \end{equation}
 </div>
 <div class="para">The vorticity is a measure of the local rotation of the flow.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-vorticity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.2: Vorticity of a vector field"><a tabindex="-1" href="#def-vorticity" title="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field" aria-label="Copy heading and permalink for Definition 3.5.2: Vorticity of a vector field">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.2: Vorticity"><a tabindex="-1" href="#def-vorticity" title="Copy heading and permalink for Definition 3.5.2: Vorticity" aria-label="Copy heading and permalink for Definition 3.5.2: Vorticity">🔗</a></div>
 </article>
-<div class="para" id="sec-bernoulli-2-6">Let us recall the definition of a <em class="emphasis">conservative force</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-irrotational"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrotational flows.</span>
+</h3>
+<div class="para logical" id="def-irrotational-2-1">
+<div class="para">A flow is said to be <em class="emphasis">irrotational</em> if the vorticity is identically zero:</div>
+<div class="displaymath process-math" id="eqn-irrotational">
+\begin{equation}
+\textrm{flow is irrotational} \Longleftrightarrow \bomega = \nabla \times \bu \equiv
+\mathbf{0}.\tag{3.5.3}
+\end{equation}
 </div>
-<article class="definition definition-like" id="def-conservative-force"><h2 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conservative forces.</span>
-</h2>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-irrotational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.3: Irrotational flows"><a tabindex="-1" href="#def-irrotational" title="Copy heading and permalink for Definition 3.5.3: Irrotational flows" aria-label="Copy heading and permalink for Definition 3.5.3: Irrotational flows">🔗</a></div>
+</article>
+<div class="para" id="subsec-bernoulli-first-integral-7">In <a href="ch-chapter04-potentialflows.html" class="internal" title="Chapter 4: Potential flows">Chapter 4</a>, we will show that an irrotational flow in a simply connected region can always be written as <span class="process-math">\(\bu = \nabla\phi\)</span> for some scalar function <span class="process-math">\(\phi\text{,}\)</span> called the <em class="emphasis">velocity potential</em> (<a href="sec-Potential-and-streamfunction.html#thm-exist-potential" class="xref" data-knowl="./knowl/xref/thm-exist-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.1.1: Existence of a potential">Theorem 4.1.1</a>). We use this fact below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-bernoulli-first-integral-8">Let us recall the definition of a <em class="emphasis">conservative force</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-conservative-force"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conservative forces.</span>
+</h3>
 <div class="para logical" id="def-conservative-force-2-1">
 <div class="para">A force <span class="process-math">\(\bF\)</span> is a <em class="emphasis">conservative force</em> if and only if there exists a potential <span class="process-math">\(\chi\text{,}\)</span> such that</div>
 <div class="displaymath process-math" id="def-conservative-force-2-1-4">
@@ -481,266 +536,352 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">in a simply connected region where the quantities are defined.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-conservative-force-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.3: Conservative forces"><a tabindex="-1" href="#def-conservative-force" title="Copy heading and permalink for Definition 3.5.3: Conservative forces" aria-label="Copy heading and permalink for Definition 3.5.3: Conservative forces">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.4: Conservative forces"><a tabindex="-1" href="#def-conservative-force" title="Copy heading and permalink for Definition 3.5.4: Conservative forces" aria-label="Copy heading and permalink for Definition 3.5.4: Conservative forces">🔗</a></div>
 </article>
-<div class="para" id="sec-bernoulli-2-8">Note the distinction about a simply-connected neighbourhood. The above is not quite the definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-bernoulli-first-integral-10">Note the restriction to a simply connected region. The above is not quite the usual definition of a conservative force (typically defined to be a force for which the work done on an object between two points is independent of path). For now, this is not an important distinction since we will focus on fluid regions that are free of holes. Until told otherwise, we will always assume that the fluid is simply connected and therefore the above serves as a definition of conservative forces.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm-bernoulli-steady"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady flow.</span>
-</h2>
-<div class="para logical" id="thm-bernoulli-steady-2-1">
-<div class="para">Bernoulli’s equation (theorem) for steady flow states that</div>
-<div class="displaymath process-math" id="eqn-bernoulli-steady">
+<article class="remark remark-like" id="subsec-bernoulli-first-integral-11"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="subsec-bernoulli-first-integral-11-1">For the typical gravity force directed in the <span class="process-math">\(-z\)</span> direction, we can write <span class="process-math">\(\bg =
+-g[0, 0, 1] = -g \be_z\text{.}\)</span> So in this case, the (gravitational) potential is <span class="process-math">\(\chi = gz\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 3.5.5"><a tabindex="-1" href="#subsec-bernoulli-first-integral-11" title="Copy heading and permalink for Remark 3.5.5" aria-label="Copy heading and permalink for Remark 3.5.5">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-bernoulli-form"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The momentum equation in Bernoulli form.</span>
+</h3>
+<div class="para logical" id="thm-bernoulli-form-2-1">
+<div class="para">Consider an inviscid, incompressible fluid of constant density <span class="process-math">\(\rho\text{,}\)</span> subject to a conservative body force <span class="process-math">\(\bg = -\nabla\chi\text{.}\)</span> Define the <em class="emphasis">Bernoulli function</em>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-euler-momentum.html" id="eqn-bernoulli-B">
 \begin{equation}
-B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along
-streamlines},\tag{3.5.3}
+B(\bx, t) \equiv \frac{p}{\rho} + \frac{1}{2}|\bu|^2 + \chi.\tag{3.5.4}
 \end{equation}
 </div>
-<div class="para">where we have assumed that the body force is <em class="emphasis">conservative</em>, i.e. it can be written as</div>
-<div class="displaymath process-math" id="eqn-gravity-potential">
+<div class="para">Then the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a> can be written as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-euler-momentum.html" id="eqn-bernoulli-vorticity">
 \begin{equation}
-\bg = -\nabla \chi,\tag{3.5.4}
+\pd{\bu}{t} + \bomega \times \bu = -\nabla B.\tag{3.5.5}
 \end{equation}
 </div>
-<div class="para">for a potential function, <span class="process-math">\(\chi\)</span> .</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-form-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.4: Bernoulli’s equation for steady flow"><a tabindex="-1" href="#thm-bernoulli-steady" title="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow" aria-label="Copy heading and permalink for Theorem 3.5.4: Bernoulli’s equation for steady flow">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.6: The momentum equation in Bernoulli form"><a tabindex="-1" href="#thm-bernoulli-form" title="Copy heading and permalink for Theorem 3.5.6: The momentum equation in Bernoulli form" aria-label="Copy heading and permalink for Theorem 3.5.6: The momentum equation in Bernoulli form">🔗</a></div>
 </article>
-<details id="thm-bernoulli-steady-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<details id="thm-bernoulli-form-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para logical" id="thm-bernoulli-steady-3-1">
-<div class="para">Start from the momentum equation <a href="subsec-euler-momentum.html#eqn-consvmoment" class="xref" data-knowl="./knowl/xref/eqn-consvmoment.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.1">(3.3.1)</a>,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-consvmoment.html ./knowl/xref/eqn-ugradu.html" id="thm-bernoulli-steady-3-1-2">
+<div class="para logical" id="thm-bernoulli-form-3-1">
+<div class="para">Start from the momentum equation <a href="sec-incompressible.html#def-euler-2-1-4" class="xref" data-knowl="./knowl/xref/eqn-euler-momentum.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.4.5">(3.4.5)</a>, with <span class="process-math">\(\bg =
+-\nabla \chi\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-euler-momentum.html ./knowl/xref/eqn-ugradu.html ./knowl/xref/eqn-vorticity.html ./knowl/xref/eqn-bernoulli-B.html" id="thm-bernoulli-form-3-1-3">
 \begin{equation*}
-\pd{\bu}{t} + \bu \cdot \nabla\bu = - \frac{1}{\rho}\nabla p - \nabla \chi
+\pd{\bu}{t} + (\bu \cdot \nabla)\bu = - \frac{1}{\rho}\nabla p - \nabla \chi.
 \end{equation*}
 </div>
-<div class="para">and use the vector identity <a href="sec-bernoulli.html#eqn-ugradu" class="xref" data-knowl="./knowl/xref/eqn-ugradu.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.1">(3.5.1)</a> gives</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-consvmoment.html ./knowl/xref/eqn-ugradu.html" id="eqn-bernoulli-unsteady-chap3">
+<div class="para">Using the vector identity <a href="sec-bernoulli.html#eqn-ugradu" class="xref" data-knowl="./knowl/xref/eqn-ugradu.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.1">(3.5.1)</a>, and noting that <span class="process-math">\(\frac{1}{\rho}\nabla
+p = \nabla(p/\rho)\)</span> since <span class="process-math">\(\rho\)</span> is constant, gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-euler-momentum.html ./knowl/xref/eqn-ugradu.html ./knowl/xref/eqn-vorticity.html ./knowl/xref/eqn-bernoulli-B.html" id="eqn-bernoulli-unsteady-chap3">
 \begin{equation}
-\pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{1}{\rho}\nabla p +
-\frac{1}{2} |\bu|^2 + \chi\right).\tag{3.5.5}
+\pd{\bu}{t} + (\nabla \times \bu) \times \bu = - \nabla \left(\frac{p}{\rho} +
+\frac{1}{2} |\bu|^2 + \chi\right).\tag{3.5.6}
 \end{equation}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Using the definitions of the vorticity <a href="sec-bernoulli.html#eqn-vorticity" class="xref" data-knowl="./knowl/xref/eqn-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.2">(3.5.2)</a> and of <span class="process-math">\(B\)</span> <a href="sec-bernoulli.html#eqn-bernoulli-B" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-B.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.4">(3.5.4)</a> gives the result.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-form-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="thm-bernoulli-steady-3-2">
-<div class="para">Next, the flow is steady, and therefore we can zero the first term. This leaves</div>
-<div class="displaymath process-math" id="thm-bernoulli-steady-3-2-1">
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.6.1"><a tabindex="-1" href="#thm-bernoulli-form-3" title="Copy heading and permalink for Proof 3.5.6.1" aria-label="Copy heading and permalink for Proof 3.5.6.1">🔗</a></div>
+</article></details>
+<div class="para" id="subsec-bernoulli-first-integral-13">Every version of Bernoulli’s equation follows from <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a> by removing terms from the left-hand side.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-bernoulli-first-integral-14" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Removed in 2026.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="subsec-bernoulli-first-integral-14-2">In previous years, this section also derived the <em class="emphasis">vorticity equation</em>, <span class="process-math">\(\DD{\bomega}{t}
+= (\bomega \cdot \nabla)\bu\text{,}\)</span> which describes how vorticity evolves in an inviscid fluid. This was removed from the notes in 2026 and is no longer part of the course.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-first-integral-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.1: A first integral of the momentum equation"><a tabindex="-1" href="#subsec-bernoulli-first-integral" title="Copy heading and permalink for Subsection 3.5.1: A first integral of the momentum equation" aria-label="Copy heading and permalink for Subsection 3.5.1: A first integral of the momentum equation">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-bernoulli-forms">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Three forms of Bernoulli’s equation</span>
+</h2>
+<div class="para" id="subsec-bernoulli-forms-2">
+<a href="sec-bernoulli.html#table-bernoulli-forms" class="xref" data-knowl="./knowl/xref/table-bernoulli-forms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.4: The three forms of Bernoulli’s equation">Table 3.4</a> summarises the three forms of Bernoulli’s equation derived in this subsection, together with where each is used in the course. In each case, the assumptions of <a href="sec-bernoulli.html#thm-bernoulli-form" class="xref" data-knowl="./knowl/xref/thm-bernoulli-form.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.6: The momentum equation in Bernoulli form">Theorem 3.5.6</a> also apply.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-forms-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-bernoulli-forms"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The three forms of Bernoulli’s equation<div class="autopermalink" aria-hidden="true" data-description="Table 3.4: The three forms of Bernoulli’s equation"><a tabindex="-1" href="#table-bernoulli-forms" title="Copy heading and permalink for Table 3.4: The three forms of Bernoulli’s equation" aria-label="Copy heading and permalink for Table 3.4: The three forms of Bernoulli’s equation">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b1 r0 l0 t3 lines">Additional assumptions</th>
+<th scope="col" class="l m b1 r0 l0 t3 lines">Conclusion</th>
+<th scope="col" class="l m b1 r0 l0 t3 lines">Used in</th>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">Steady</td>
+<td class="l m b3 r0 l0 t0 lines">
+<span class="process-math">\(B\)</span> is constant along each streamline</td>
+<td class="l m b3 r0 l0 t0 lines"><a href="sec-bernoulli.html#subsec-bernoulli-applications" class="internal" title="Subsection 3.5.3: Applications">3.5.3</a></td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">Steady and irrotational</td>
+<td class="l m b3 r0 l0 t0 lines">
+<span class="process-math">\(B\)</span> is constant everywhere</td>
+<td class="l m b3 r0 l0 t0 lines"><a href="ch-chapter04-potentialflows.html" class="internal" title="Chapter 4: Potential flows">4</a></td>
+</tr>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">Irrotational, possibly unsteady</td>
+<td class="l m b3 r0 l0 t0 lines">
+<span class="process-math">\(\pd{\phi}{t} + B = F(t)\)</span> everywhere</td>
+<td class="l m b3 r0 l0 t0 lines"><a href="ch-chapter05-waves.html" class="internal" title="Chapter 5: Water waves">5</a></td>
+</tr>
+</table></div>
+</figure>
+<article class="theorem theorem-like" id="thm-bernoulli-steady"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady flow.</span>
+</h3>
+<div class="para logical" id="thm-bernoulli-steady-2-1">
+<div class="para">For a steady flow,</div>
+<div class="displaymath process-math" id="eqn-bernoulli-steady">
+\begin{equation}
+B(\bx) = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant along
+streamlines}.\tag{3.5.7}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.7: Bernoulli’s equation for steady flow"><a tabindex="-1" href="#thm-bernoulli-steady" title="Copy heading and permalink for Theorem 3.5.7: Bernoulli’s equation for steady flow" aria-label="Copy heading and permalink for Theorem 3.5.7: Bernoulli’s equation for steady flow">🔗</a></div>
+</article>
+<details id="thm-bernoulli-steady-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="thm-bernoulli-steady-3-1">
+<div class="para">Since the flow is steady, the first term of <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a> vanishes. This leaves</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="thm-bernoulli-steady-3-1-2">
 \begin{equation*}
 \bomega \times \bu = -\nabla B.
 \end{equation*}
 </div>
 <div class="para">We now take the dot product of both sides of the equation with <span class="process-math">\(\bu\text{.}\)</span> We use the fact that,</div>
-<div class="displaymath process-math" id="thm-bernoulli-steady-3-2-3">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="thm-bernoulli-steady-3-1-4">
 \begin{equation*}
 \bu \cdot (\bomega \times \bu ) = 0,
 \end{equation*}
 </div>
 <div class="para">since it is a triple scalar product with two repeated entries. It therefore results in the fact that</div>
-<div class="displaymath process-math" id="thm-bernoulli-steady-3-2-4">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="thm-bernoulli-steady-3-1-5">
 \begin{equation*}
 \bu \cdot \nabla B = 0.
 \end{equation*}
 </div>
-<div class="para">Notice that this is the steady component that comes from the material derivative, <span class="process-math">\(\DD{B}{t} = 0\text{.}\)</span> So we conclude that <span class="process-math">\(B\)</span> is constant along streamlines of the flow.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Since <span class="process-math">\(B\)</span> does not depend on time, <span class="process-math">\(\DD{B}{t} = \bu \cdot \nabla B\text{,}\)</span> so this states that <span class="process-math">\(\DD{B}{t} = 0\text{.}\)</span> Hence <span class="process-math">\(B\)</span> is constant along streamlines of the flow (which, for steady flow, coincide with particle paths).</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="thm-bernoulli-steady-3-3">
-<div class="para">It is useful to note that if we use the definition of vorticity in <a href="sec-bernoulli.html#eqn-vorticity" class="xref" data-knowl="./knowl/xref/eqn-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.2">(3.5.2)</a>, and the definition of <span class="process-math">\(B\)</span> in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a>, we have from the above that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-vorticity.html ./knowl/xref/eqn-bernoulli-steady.html" id="eqn-bernoulli-vorticity">
-\begin{equation}
-\pd{\bu}{t} + \bomega \times \bu = -\nabla B,\tag{3.5.6}
-\end{equation}
-</div>
-<div class="para">a form that will be useful, shortly.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-steady-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.4.1"><a tabindex="-1" href="#thm-bernoulli-steady-3" title="Copy heading and permalink for Proof 3.5.4.1" aria-label="Copy heading and permalink for Proof 3.5.4.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.7.1"><a tabindex="-1" href="#thm-bernoulli-steady-3" title="Copy heading and permalink for Proof 3.5.7.1" aria-label="Copy heading and permalink for Proof 3.5.7.1">🔗</a></div>
 </article></details>
-<article class="remark remark-like" id="sec-bernoulli-2-10"><h2 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h2>
-<div class="para" id="sec-bernoulli-2-10-1">For the typical gravity force directed in the <span class="process-math">\(-z\)</span> direction, we can write <span class="process-math">\(\bg =
--g[0, 0, 1] = -g \be_z\text{.}\)</span> So in this case, the (gravitational) potential is <span class="process-math">\(\chi = gz\)</span> .<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Remark 3.5.5"><a tabindex="-1" href="#sec-bernoulli-2-10" title="Copy heading and permalink for Remark 3.5.5" aria-label="Copy heading and permalink for Remark 3.5.5">🔗</a></div>
-</article>
-<div class="para" id="sec-bernoulli-2-11">The proof of <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a> introduced a useful form of the momentum equation using the vorticity function, resulting in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.6">(3.5.6)</a>. This leads to the so-called <em class="emphasis">vorticity equation</em> form of the momentum equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="theorem theorem-like" id="thm-vorticity-equation"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The vorticity equation for incompressible flow.</span>
-</h2>
-<div class="para logical" id="thm-vorticity-equation-2-1">
-<div class="para">The momentum equation for incompressible flow, reposed in terms of the vorticity is:</div>
-<div class="displaymath process-math" id="eqn-vorticity-equation">
-\begin{equation}
-\pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,\tag{3.5.7}
-\end{equation}
-</div>
-<div class="para">or, equivalently,</div>
-<div class="displaymath process-math" id="eqn-vorticity-equation-lagrange">
-\begin{equation}
-\DD{\bomega}{t} = (\bomega \cdot \nabla)\bu,\tag{3.5.8}
-\end{equation}
-</div>
-<div class="para">and is known as the <em class="emphasis">vorticity equation</em>.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-vorticity-equation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.6: The vorticity equation for incompressible flow"><a tabindex="-1" href="#thm-vorticity-equation" title="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow" aria-label="Copy heading and permalink for Theorem 3.5.6: The vorticity equation for incompressible flow">🔗</a></div>
-</article>
-<div class="para logical" id="sec-bernoulli-2-13">
-<div class="para">In the proof, it is useful to use the vector identity for the curl of a cross product:</div>
-<div class="displaymath process-math" id="eqn-curlcross">
-\begin{equation}
-\nabla \times (\bu \times \bv) = (\nabla \cdot \bv)\bu - (\nabla \cdot \bu)\bv + (\bv
-\cdot \nabla)\bu - (\bu \cdot \nabla)\bv.\tag{3.5.9}
-\end{equation}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<details id="sec-bernoulli-2-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
-<article class="hiddenproof knowl__content">
-<div class="para logical" id="sec-bernoulli-2-14-1">
-<div class="para">Crucially, we recall the result that "curl grad equals zero" for a vector field. So from <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.6">(3.5.6)</a>, we take the curl of both sides to obtain</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html ./knowl/xref/eqn-curlcross.html" id="sec-bernoulli-2-14-1-2">
-\begin{equation*}
-\nabla \times \left(\pd{\bu}{t} + \bomega \times \bu\right) = 0.
-\end{equation*}
-</div>
-<div class="para">Expanding the outer cross product, the first term can be simplified by swapping differentiation in space with differentiation in time. The second term requires the cross product identity <a href="sec-bernoulli.html#eqn-curlcross" class="xref" data-knowl="./knowl/xref/eqn-curlcross.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.9">(3.5.9)</a>. For the second term, we get</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html ./knowl/xref/eqn-curlcross.html" id="sec-bernoulli-2-14-1-4">
-\begin{equation*}
--\nabla \times (\bu \times \bomega) = 0 - 0 + (\bomega \cdot \nabla)\bu - (\bu \cdot
-\nabla)\bomega,
-\end{equation*}
-</div>
-<div class="para">with the first zero resulting in the fact that "div curl equals zero", while the second results from incompressibility.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="sec-bernoulli-2-14-2">
-<div class="para">Thus we have,</div>
-<div class="displaymath process-math" id="sec-bernoulli-2-14-2-1">
-\begin{equation*}
-\pd{\bomega}{t} + (\bu \cdot \nabla)\bomega = (\bomega \cdot \nabla)\bu,
-\end{equation*}
-</div>
-<div class="para">which is the main result.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.1"><a tabindex="-1" href="#sec-bernoulli-2-14" title="Copy heading and permalink for Proof 3.5.1" aria-label="Copy heading and permalink for Proof 3.5.1">🔗</a></div>
-</article></details>
-<div class="para" id="sec-bernoulli-2-15">You will prove this result from first principles in <a href="ws-equations.html#ex-vorticity-equation" class="xref" data-knowl="./knowl/xref/ex-vorticity-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.6: The vorticity equation">Exercise 3.6.6</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-bernoulli-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section>
-<section class="subsection" id="subsec-potential">
-<h2 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Potential flow</span>
-</h2>
-<div class="para" id="subsec-potential-2">We are interested in the simplest scenarios that will result in reducing the governing equations. Previously, we introduced the notion of incompressible flows, which results in the Euler equations in <a href="sec-incompressible.html#def-euler" class="xref" data-knowl="./knowl/xref/def-euler.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.4.5: Euler equations">Definition 3.4.5</a> and in particular, the reduction of the mass conservation equation to <span class="process-math">\(\nabla \cdot \bu = 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="subsec-potential-3">We attempt to reduce further by assuming that the fluid is <em class="emphasis">irrotational</em>. This lends to the following definition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="definition definition-like" id="def-irrotational"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrotational flows.</span>
-</h3>
-<div class="para logical" id="def-irrotational-2-1">
-<div class="para">A flow is said to be <em class="emphasis">irrotational</em> if the vorticity is identically zero:</div>
-<div class="displaymath process-math" id="eqn-irrotational">
-\begin{equation}
-\textrm{flow is irrotational} \Longleftrightarrow \bomega = \nabla \times \bu \equiv
-0.\tag{3.5.10}
-\end{equation}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-irrotational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 3.5.7: Irrotational flows"><a tabindex="-1" href="#def-irrotational" title="Copy heading and permalink for Definition 3.5.7: Irrotational flows" aria-label="Copy heading and permalink for Definition 3.5.7: Irrotational flows">🔗</a></div>
-</article>
-<article class="theorem theorem-like" id="theorem-irrotational-potential"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalence of irrotational and potential flow.</span>
-</h3>
-<div class="para logical" id="theorem-irrotational-potential-2">
-<div class="para">If a flow with velocity vector <span class="process-math">\(\bu(\bx,t)\)</span> is irrotational, there exists a function <span class="process-math">\(\phi(\bx,t)\)</span> such that</div>
-<div class="displaymath process-math" id="theorem-irrotational-potential-2-3">
-\begin{equation*}
-\bu = \nabla\phi.
-\end{equation*}
-</div>
-<div class="para">The function <span class="process-math">\(\phi\)</span> is called the potential.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-irrotational-potential-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.8: Equivalence of irrotational and potential flow"><a tabindex="-1" href="#theorem-irrotational-potential" title="Copy heading and permalink for Theorem 3.5.8: Equivalence of irrotational and potential flow" aria-label="Copy heading and permalink for Theorem 3.5.8: Equivalence of irrotational and potential flow">🔗</a></div>
-</article>
-<details id="subsec-potential-6" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
-<article class="hiddenproof knowl__content">
-<div class="para" id="subsec-potential-6-1">Any function <span class="process-math">\(\bf(\bx,t)\)</span> whose curl is everywhere zero <span class="process-math">\(\nabla\times\bf=0\)</span> can be written as a gradient of a scalar function. In the case of irrotational flow, the velocity field is such a function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.1.1"><a tabindex="-1" href="#subsec-potential-6" title="Copy heading and permalink for Proof 3.5.1.1" aria-label="Copy heading and permalink for Proof 3.5.1.1">🔗</a></div>
-</article></details>
-<div class="para" id="subsec-potential-7">For an irrotational and incompressible flow, there is a more powerful version of Bernoulli’s equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
 <article class="theorem theorem-like" id="thm-bernoulli-potential"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady irrotational flow.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for steady irrotational flow.</span>
 </h3>
 <div class="para logical" id="thm-bernoulli-potential-2-1">
-<div class="para">For an incompressible and irrotational flow, Bernoulli’s theorem states that</div>
+<div class="para">For a steady and irrotational flow,</div>
 <div class="displaymath process-math" id="eqn-bernoulli-potential">
 \begin{equation}
-B(\bx) \equiv \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant
-everywhere},\tag{3.5.11}
+B(\bx) = \frac{p}{\rho} + \frac{1}{2} |\bu|^2 + \chi = \textrm{constant
+everywhere}.\tag{3.5.8}
 \end{equation}
 </div>
-<div class="para">where <span class="process-math">\(\bg = -\nabla \chi\)</span> is the body force.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.9: Bernoulli’s equation for steady irrotational flow"><a tabindex="-1" href="#thm-bernoulli-potential" title="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for steady irrotational flow" aria-label="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for steady irrotational flow">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow"><a tabindex="-1" href="#thm-bernoulli-potential" title="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow" aria-label="Copy heading and permalink for Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">🔗</a></div>
 </article>
 <details id="thm-bernoulli-potential-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical" id="thm-bernoulli-potential-3-1">
-<div class="para">The proof of this relies on returning to the proof of the unsteady Bernoulli’s equation in <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.4: Bernoulli’s equation for steady flow">Theorem 3.5.4</a>. In the proof, we arrived at the result in <a href="sec-bernoulli.html#eqn-bernoulli-steady" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.3">(3.5.3)</a> that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html ./knowl/xref/eqn-bernoulli-steady.html" id="thm-bernoulli-potential-3-1-3">
+<div class="para">For steady flow, the first term of <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a> vanishes. If, in addition, the flow is irrotational, then <span class="process-math">\(\bomega = \mathbf{0}\text{,}\)</span> and therefore</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="thm-bernoulli-potential-3-1-3">
 \begin{equation*}
-\pd{\bu}{t} + \bomega \times \bu = -\nabla B.
+\nabla B = \mathbf{0}.
 \end{equation*}
 </div>
-<div class="para">For steady flow, the first term disappears. If we have the additional assumption that the flow is irrotational, then we have that <span class="process-math">\(\bomega = 0\text{,}\)</span> and therefore we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html ./knowl/xref/eqn-bernoulli-steady.html" id="thm-bernoulli-potential-3-1-5">
-\begin{equation*}
-\nabla B = 0.
-\end{equation*}
-</div>
-<div class="para">But the only way that all spatial derivatives is zero is if the function is constant.</div>
+<div class="para">Since all spatial derivatives of <span class="process-math">\(B\)</span> are zero, <span class="process-math">\(B\)</span> is constant throughout the (connected) fluid domain.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-potential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.9.1"><a tabindex="-1" href="#thm-bernoulli-potential-3" title="Copy heading and permalink for Proof 3.5.9.1" aria-label="Copy heading and permalink for Proof 3.5.9.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.8.1"><a tabindex="-1" href="#thm-bernoulli-potential-3" title="Copy heading and permalink for Proof 3.5.8.1" aria-label="Copy heading and permalink for Proof 3.5.8.1">🔗</a></div>
 </article></details>
-<div class="para" id="subsec-potential-9">You will practice an application of Bernoulli’s equation in <a href="ws-equations.html#ex-bernoulli-streamline" class="xref" data-knowl="./knowl/xref/ex-bernoulli-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.7: Using streamlines: The clepsydra">Exercise 3.6.7</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="theorem theorem-like" id="thm-bernoulli-unsteady-potential"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for unsteady potential flow.</span>
+</h3>
+<div class="para logical" id="thm-bernoulli-unsteady-potential-2-1">
+<div class="para">For an irrotational, possibly unsteady, flow with velocity potential <span class="process-math">\(\phi\text{,}\)</span> so that <span class="process-math">\(\bu = \nabla\phi\text{,}\)</span>
 </div>
-<details id="subsec-potential-10" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Airflow into or out of a room.</span>
+<div class="displaymath process-math" id="eqn-bernoulli-unsteady-potential">
+\begin{equation}
+\pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),\tag{3.5.9}
+\end{equation}
+</div>
+<div class="para">for some function <span class="process-math">\(F(t)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential" title="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow" aria-label="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow">🔗</a></div>
+</article>
+<details id="thm-bernoulli-unsteady-potential-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="thm-bernoulli-unsteady-potential-3-1">
+<div class="para">Set <span class="process-math">\(\bomega = \mathbf{0}\)</span> and <span class="process-math">\(\bu = \nabla\phi\)</span> in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>. Since space and time derivatives commute, <span class="process-math">\(\pd{}{t}(\nabla
+\phi) = \nabla\left(\pd{\phi}{t}\right)\text{,}\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html" id="thm-bernoulli-unsteady-potential-3-1-5">
+\begin{equation*}
+\nabla\left( \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi
+\right) = \mathbf{0}.
+\end{equation*}
+</div>
+<div class="para">The quantity in brackets therefore has no spatial dependence, i.e. it is a function of <span class="process-math">\(t\)</span> alone.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.9.1"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-3" title="Copy heading and permalink for Proof 3.5.9.1" aria-label="Copy heading and permalink for Proof 3.5.9.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="subsec-bernoulli-forms-7"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The function <span class="process-math">\(F(t)\)</span>.</span>
+</h3>
+<div class="para" id="subsec-bernoulli-forms-7-2">The function <span class="process-math">\(F(t)\)</span> can be absorbed into the potential. Replacing <span class="process-math">\(\phi\)</span> by <span class="process-math">\(\phi
+- \int F \, \de{t}\)</span> does not change the velocity <span class="process-math">\(\bu = \nabla\phi\text{,}\)</span> but sets <span class="process-math">\(F
+\equiv 0\text{.}\)</span> Equivalently, <span class="process-math">\(F(t)\)</span> may be chosen for convenience, as is done in <a href="ch-chapter05-waves.html" class="internal" title="Chapter 5: Water waves">Chapter 5</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-forms-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 3.5.10: The function F(t)"><a tabindex="-1" href="#subsec-bernoulli-forms-7" title="Copy heading and permalink for Remark 3.5.10: The function F(t)" aria-label="Copy heading and permalink for Remark 3.5.10: The function F(t)">🔗</a></div>
+</article>
+<article class="remark remark-like" id="subsec-bernoulli-forms-8"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant <span class="process-math">\(B\)</span> on every streamline.</span>
+</h3>
+<div class="para" id="subsec-bernoulli-forms-8-2">In the steady case, <span class="process-math">\(B\)</span> can be constant everywhere even when the flow is not irrotational. This happens in many practical problems, where every streamline starts in a large reservoir in which the fluid is at rest, so that <span class="process-math">\(B\)</span> takes the same value on every streamline.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-forms-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 3.5.11: Constant B on every streamline"><a tabindex="-1" href="#subsec-bernoulli-forms-8" title="Copy heading and permalink for Remark 3.5.11: Constant B on every streamline" aria-label="Copy heading and permalink for Remark 3.5.11: Constant B on every streamline">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.2: Three forms of Bernoulli’s equation"><a tabindex="-1" href="#subsec-bernoulli-forms" title="Copy heading and permalink for Subsection 3.5.2: Three forms of Bernoulli’s equation" aria-label="Copy heading and permalink for Subsection 3.5.2: Three forms of Bernoulli’s equation">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-bernoulli-applications">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Applications</span>
+</h2>
+<div class="para" id="subsec-bernoulli-applications-2">In each example below, we state which form of Bernoulli’s equation is used and why its assumptions hold.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-bernoulli-hydrostatics" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hydrostatics and Pascal’s bursting barrel.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
-<div class="para" id="subsec-potential-10-2">During the lecture, just for fun, we will play <a class="external" href="https://www.youtube.com/watch?v=1L2ef1CP-yw" target="_blank">this video by Matthias Wandel</a> about airflow out of a room. This is somewhat related to Bernoulli’s equation (the connection between pressure and velocity), though the situation is considerably more difficult.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ex-bernoulli-hydrostatics-2">
+<div class="para">For a fluid at rest, <span class="process-math">\(\bu = \mathbf{0}\text{.}\)</span> The flow is then trivially steady and irrotational, so <a href="sec-bernoulli.html#thm-bernoulli-potential" class="xref" data-knowl="./knowl/xref/thm-bernoulli-potential.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.8: Bernoulli’s equation for steady irrotational flow">Theorem 3.5.8</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html" id="ex-bernoulli-hydrostatics-2-3">
+\begin{equation*}
+\frac{p}{\rho} + gz = \textrm{constant everywhere}.
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.10: Airflow into or out of a room"><a tabindex="-1" href="#subsec-potential-10" title="Copy heading and permalink for Example 3.5.10: Airflow into or out of a room" aria-label="Copy heading and permalink for Example 3.5.10: Airflow into or out of a room">🔗</a></div>
+<div class="para">If the free surface is at <span class="process-math">\(z = H\text{,}\)</span> where <span class="process-math">\(p = p_\text{atm}\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-potential.html" id="ex-bernoulli-hydrostatics-2-6">
+\begin{equation*}
+p = p_\text{atm} + \rho g (H - z).
+\end{equation*}
+</div>
+<div class="para">The pressure at depth <span class="process-math">\(d = H - z\)</span> is <span class="process-math">\(p_\text{atm} + \rho g d\text{.}\)</span> It depends only on depth, not on the shape of the container or the amount of fluid above.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-hydrostatics-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-bernoulli-hydrostatics-3">This explains <em class="emphasis">Pascal’s bursting barrel</em>. A long thin vertical tube is attached to a sealed barrel full of water, and the tube is then filled. Although the column in the tube holds very little water, it raises the pressure throughout the barrel by <span class="process-math">\(\rho g
+h\text{.}\)</span> For a <span class="process-math">\(10\)</span> m column, that is about <span class="process-math">\(10^5\)</span> Pa, roughly one atmosphere. Acting on a lid of diameter <span class="process-math">\(0.5\)</span> m, this is a force of about <span class="process-math">\(2 \times 10^4\)</span> N, the weight of roughly two tonnes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-hydrostatics-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-bernoulli-hydrostatics-4">For fun during the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EJHrr21UvY8" target="_blank">this video demonstration from Princeton</a>, showing the power of hydrostatic pressure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-hydrostatics-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.12: Hydrostatics and Pascal’s bursting barrel"><a tabindex="-1" href="#ex-bernoulli-hydrostatics" title="Copy heading and permalink for Example 3.5.12: Hydrostatics and Pascal’s bursting barrel" aria-label="Copy heading and permalink for Example 3.5.12: Hydrostatics and Pascal’s bursting barrel">🔗</a></div>
 </article></details>
-<details id="subsec-potential-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pascal’s bursting barrel.</span>
+<details id="ex-bernoulli-torricelli" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.13</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Torricelli’s law.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
-<div class="para" id="subsec-potential-11-2">For fun during the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EJHrr21UvY8" target="_blank">this video demonstration done at Princeton</a> demonstrating the power of hydrostatic pressure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-bernoulli-torricelli-2-1">A large open tank of cross-sectional area <span class="process-math">\(A\)</span> holds water of depth <span class="process-math">\(h(t)\)</span> above a small hole of area <span class="process-math">\(a \ll A\)</span> in its base.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="ex-bernoulli-torricelli-2-2">
+<li id="ex-bernoulli-torricelli-2-2-1">
+<div class="para" id="ex-bernoulli-torricelli-2-2-1-1">Find the speed <span class="process-math">\(u\)</span> of the jet leaving the hole.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.11: Pascal’s bursting barrel"><a tabindex="-1" href="#subsec-potential-11" title="Copy heading and permalink for Example 3.5.11: Pascal’s bursting barrel" aria-label="Copy heading and permalink for Example 3.5.11: Pascal’s bursting barrel">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item a"><a tabindex="-1" href="#ex-bernoulli-torricelli-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-bernoulli-torricelli-2-2-2">
+<div class="para" id="ex-bernoulli-torricelli-2-2-2-1">If the initial depth is <span class="process-math">\(h_0\text{,}\)</span> find the time for the tank to drain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item b"><a tabindex="-1" href="#ex-bernoulli-torricelli-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="solutions">
+<details id="ex-bernoulli-torricelli-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-bernoulli-torricelli-3-1">
+<div class="para">
+<em class="alert">(a)</em> The free surface falls at speed <span class="process-math">\(U\text{,}\)</span> where mass conservation gives <span class="process-math">\(AU = au\text{,}\)</span> so <span class="process-math">\(U/u = a/A \ll 1\text{.}\)</span> The flow therefore changes slowly, and we treat it as steady. Taking a streamline from the free surface (<span class="process-math">\(z = h\)</span>) to the jet (<span class="process-math">\(z = 0\)</span>), where the pressure is atmospheric at both ends, <a href="sec-bernoulli.html#thm-bernoulli-steady" class="xref" data-knowl="./knowl/xref/thm-bernoulli-steady.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5.7: Bernoulli’s equation for steady flow">Theorem 3.5.7</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html" id="ex-bernoulli-torricelli-3-1-8">
+\begin{equation*}
+\frac{p_\text{atm}}{\rho} + \frac{1}{2}U^2 + gh = \frac{p_\text{atm}}{\rho} +
+\frac{1}{2}u^2.
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(U = (a/A)u\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-bernoulli-steady.html" id="ex-bernoulli-torricelli-3-1-10">
+\begin{equation*}
+u = \sqrt{\frac{2gh}{1 - (a/A)^2}} \approx \sqrt{2gh}.
+\end{equation*}
+</div>
+<div class="para">This is <em class="emphasis">Torricelli’s law</em> (1643): the jet leaves at the speed of a particle falling freely from height <span class="process-math">\(h\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-bernoulli-torricelli-3-2">
+<div class="para">
+<em class="alert">(b)</em> Mass conservation gives</div>
+<div class="displaymath process-math" id="ex-bernoulli-torricelli-3-2-2">
+\begin{equation*}
+A \dd{h}{t} = -a\sqrt{2gh}.
+\end{equation*}
+</div>
+<div class="para">Separating variables and using <span class="process-math">\(h(0) = h_0\)</span> gives</div>
+<div class="displaymath process-math" id="ex-bernoulli-torricelli-3-2-4">
+\begin{equation*}
+\sqrt{h} = \sqrt{h_0} - \frac{a}{A}\sqrt{\frac{g}{2}} \, t,
+\end{equation*}
+</div>
+<div class="para">so the tank empties at time</div>
+<div class="displaymath process-math" id="ex-bernoulli-torricelli-3-2-5">
+\begin{equation*}
+T = \frac{A}{a}\sqrt{\frac{2h_0}{g}}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-bernoulli-torricelli-3-3">In practice, the jet from a sharp-edged hole contracts just after leaving it (the <em class="emphasis">vena contracta</em>), and the measured flow rate is about <span class="process-math">\(0.6\)</span> of this prediction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-bernoulli-torricelli-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.5.13.1"><a tabindex="-1" href="#ex-bernoulli-torricelli-3" title="Copy heading and permalink for Solution 3.5.13.1" aria-label="Copy heading and permalink for Solution 3.5.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.13: Torricelli’s law"><a tabindex="-1" href="#ex-bernoulli-torricelli" title="Copy heading and permalink for Example 3.5.13: Torricelli’s law" aria-label="Copy heading and permalink for Example 3.5.13: Torricelli’s law">🔗</a></div>
 </article></details>
-<details id="subsec-potential-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Urination across species.</span>
+<div class="para" id="subsec-bernoulli-applications-5">You will practise an application of Bernoulli’s equation in <a href="ws-equations.html#ex-bernoulli-streamline" class="xref" data-knowl="./knowl/xref/ex-bernoulli-streamline.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.6.6: Using streamlines: The clepsydra">Exercise 3.6.6</a>, which combines the calculation of <a href="sec-bernoulli.html#ex-bernoulli-torricelli" class="xref" data-knowl="./knowl/xref/ex-bernoulli-torricelli.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.13: Torricelli’s law">Example 3.5.13</a> with a choice of jar shape that makes the water level fall at a constant rate.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-bernoulli-applications-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Urination across species.</span>
 </h3></summary>
 <article class="example example-like knowl__content">
-<div class="para" id="subsec-potential-12-2">During the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EidLGwyYpBE" target="_blank">this video describing</a> the work by Yang et al. on <a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111" target="_blank">"Duration of urination does not change with body size"</a>. The title is not quite accurate, and the article describe that for most mammals tested greater than about 3kg, this is true. Bernoulli’s equation is used.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-potential-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-bernoulli-applications-6-2">During the lecture, we will play <a class="external" href="https://www.youtube.com/watch?v=EidLGwyYpBE" target="_blank">this video describing</a> the work by Yang et al. on <a class="external" href="https://www.pnas.org/doi/pdf/10.1073/pnas.1402289111" target="_blank">"Duration of urination does not change with body size"</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.12: Urination across species"><a tabindex="-1" href="#subsec-potential-12" title="Copy heading and permalink for Example 3.5.12: Urination across species" aria-label="Copy heading and permalink for Example 3.5.12: Urination across species">🔗</a></div>
-</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.1: Potential flow"><a tabindex="-1" href="#subsec-potential" title="Copy heading and permalink for Subsection 3.5.1: Potential flow" aria-label="Copy heading and permalink for Subsection 3.5.1: Potential flow">🔗</a></div>
+<div class="para" id="subsec-bernoulli-applications-6-3">Yang et al. model the bladder as a pressurised reservoir that drains through a long, narrow tube, the urethra. Applying Bernoulli’s equation between the bladder and the exit of the urethra, gravity acting over the length of the urethra adds to the bladder pressure, much as the depth <span class="process-math">\(h\)</span> drives the jet in Torricelli’s law (<a href="sec-bernoulli.html#ex-bernoulli-torricelli" class="xref" data-knowl="./knowl/xref/ex-bernoulli-torricelli.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.5.13: Torricelli’s law">Example 3.5.13</a>). Larger animals have longer urethras, so urine leaves faster, which compensates for their larger bladders. As a result, the duration of urination is roughly the same, about <span class="process-math">\(21\)</span> s, for animals heavier than about <span class="process-math">\(3\)</span> kg. For smaller animals, viscosity and surface tension dominate and urine is released as drops, so this argument no longer applies.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.14: Urination across species"><a tabindex="-1" href="#subsec-bernoulli-applications-6" title="Copy heading and permalink for Example 3.5.14: Urination across species" aria-label="Copy heading and permalink for Example 3.5.14: Urination across species">🔗</a></div>
+</article></details>
+<details id="subsec-bernoulli-applications-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.15</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The limits of Bernoulli’s equation: airflow into or out of a room.</span>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="subsec-bernoulli-applications-7-2">During the lecture, just for fun, we will play <a class="external" href="https://www.youtube.com/watch?v=1L2ef1CP-yw" target="_blank">this video by Matthias Wandel</a> about airflow into and out of a room.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-bernoulli-applications-7-3">Bernoulli’s equation treats flow into and out of an opening in the same way, but in practice the two look very different. Air pushed out through an opening forms a narrow jet that travels a long way, whereas air drawn in through an opening arrives from all directions. The difference comes from the flow <em class="emphasis">separating</em> at the edges of the opening, a viscous effect that inviscid theory cannot capture. We meet viscosity in <a href="ch-viscousflows.html" class="internal" title="Chapter 6: Viscous flows">Chapter 6</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-bernoulli-applications-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 3.5.15: The limits of Bernoulli’s equation: airflow into or out of a room"><a tabindex="-1" href="#subsec-bernoulli-applications-7" title="Copy heading and permalink for Example 3.5.15: The limits of Bernoulli’s equation: airflow into or out of a room" aria-label="Copy heading and permalink for Example 3.5.15: The limits of Bernoulli’s equation: airflow into or out of a room">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 3.5.3: Applications"><a tabindex="-1" href="#subsec-bernoulli-applications" title="Copy heading and permalink for Subsection 3.5.3: Applications" aria-label="Copy heading and permalink for Subsection 3.5.3: Applications">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 3.5: Bernoulli’s equation"><a tabindex="-1" href="#sec-bernoulli" title="Copy heading and permalink for Section 3.5: Bernoulli’s equation" aria-label="Copy heading and permalink for Section 3.5: Bernoulli’s equation">🔗</a></div>
 </section>
 </div>

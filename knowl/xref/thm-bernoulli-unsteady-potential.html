@@ -19,41 +19,37 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h2 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for unsteady potential flow.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bernoulli’s equation for unsteady potential flow.</span>
 </h2>
 <div class="para logical">
-<div class="para">Bernoulli’s equation for unsteady potential flow states that</div>
+<div class="para">For an irrotational, possibly unsteady, flow with velocity potential <span class="process-math">\(\phi\text{,}\)</span> so that <span class="process-math">\(\bu = \nabla\phi\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation}
-\pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),\tag{5.1.4}
+\pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),\tag{3.5.9}
 \end{equation}
 </div>
-<div class="para">for an arbitrary function <span class="process-math">\(F(t)\text{,}\)</span> and where <span class="process-math">\(\bg = -\nabla\chi\)</span> is the conservative body force.</div>
+<div class="para">for some function <span class="process-math">\(F(t)\text{.}\)</span>
+</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Theorem 5.1.1: Bernoulli’s equation for unsteady potential flow"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential" title="Copy heading and permalink for Theorem 5.1.1: Bernoulli’s equation for unsteady potential flow" aria-label="Copy heading and permalink for Theorem 5.1.1: Bernoulli’s equation for unsteady potential flow">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential" title="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow" aria-label="Copy heading and permalink for Theorem 3.5.9: Bernoulli’s equation for unsteady potential flow">🔗</a></div>
 </article>
 <details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
 <article class="hiddenproof knowl__content">
 <div class="para logical">
-<div class="para">Returning to <a href="sec-bernoulli.html#eqn-bernoulli-unsteady-chap3" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-unsteady-chap3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>, we re-write in terms of the potential function and set the vorticity <span class="process-math">\(\omega = \nabla \times \bu = 0\text{,}\)</span> giving</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-unsteady-chap3.html">
+<div class="para">Set <span class="process-math">\(\bomega = \mathbf{0}\)</span> and <span class="process-math">\(\bu = \nabla\phi\)</span> in <a href="sec-bernoulli.html#eqn-bernoulli-vorticity" class="xref" data-knowl="./knowl/xref/eqn-bernoulli-vorticity.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5.5">(3.5.5)</a>. Since space and time derivatives commute, <span class="process-math">\(\pd{}{t}(\nabla
+\phi) = \nabla\left(\pd{\phi}{t}\right)\text{,}\)</span> and so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-vorticity.html">
 \begin{equation*}
-\pd{}{t}(\nabla \phi) = - \nabla \left(\frac{1}{\rho}\nabla p +
-\frac{1}{2} |\nabla \phi|^2 + \chi\right).
+\nabla\left( \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi
+\right) = \mathbf{0}.
 \end{equation*}
 </div>
-<div class="para">We can interchange the order of differentiation on the left</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-bernoulli-unsteady-chap3.html">
-\begin{equation*}
-\nabla\left(  \pd{\phi}{t}+\frac{1}{\rho}\nabla p +
-\frac{1}{2} |\nabla \phi|^2 + \chi\right) = 0.
-\end{equation*}
-</div>
-<div class="para">We now integrate each of the spatial components and this yields the desired result.</div>
+<div class="para">The quantity in brackets therefore has no spatial dependence, i.e. it is a function of <span class="process-math">\(t\)</span> alone.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proof 5.1.1.1"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-3" title="Copy heading and permalink for Proof 5.1.1.1" aria-label="Copy heading and permalink for Proof 5.1.1.1">🔗</a></div>
-</article></details><span class="incontext"><a class="internal" href="sec-waterwaves-equations.html#thm-bernoulli-unsteady-potential">In Context</a></span>
+<div class="autopermalink" aria-hidden="true" data-description="Proof 3.5.9.1"><a tabindex="-1" href="#thm-bernoulli-unsteady-potential-3" title="Copy heading and permalink for Proof 3.5.9.1" aria-label="Copy heading and permalink for Proof 3.5.9.1">🔗</a></div>
+</article></details><span class="incontext"><a class="internal" href="sec-bernoulli.html#thm-bernoulli-unsteady-potential">In Context</a></span>
 </body>
 </html>
