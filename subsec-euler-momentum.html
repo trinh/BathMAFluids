@@ -239,7 +239,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-incompressible.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Euler equations</span></a></div>
 <ul id="ptx-toc-group-sec-incompressible" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-2" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#sec-incompressible-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Incompressible fluids and the Euler equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-incompressible.html#subsec-euler-BCs" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Boundary conditions</span></a></div></li>
 </ul>
 </li>
@@ -519,8 +519,36 @@ F_n \bn = -p \bn.
 </article>
 <details id="thm-inviscid-force-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
 <article class="hiddenproof knowl__content">
-<div class="para" id="thm-inviscid-force-3-1">Apply the divergence theorem to each component, using <span class="process-math">\(\nabla \cdot (-p\be_i) =
--\pd{p}{x_i}\)</span> for <span class="process-math">\(i = 1, 2, 3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-inviscid-force-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-inviscid-force-3-1">The divergence theorem in its usual form applies to the flux of a vector field, <span class="process-math">\(\iint_{\partial V} \boldsymbol{F} \cdot \bn \, \de{S} = \iiint_V \nabla \cdot
+\boldsymbol{F} \, \de{V}\text{,}\)</span> whereas the left-hand side of <a href="subsec-euler-momentum.html#eqn-momentum-pressure" class="xref" data-knowl="./knowl/xref/eqn-momentum-pressure.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.5">(3.3.5)</a> is a vector. We therefore take its dot product with an arbitrary constant vector <span class="process-math">\(\boldsymbol{c}\text{,}\)</span> which reduces the problem to scalars.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-inviscid-force-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-inviscid-force-3-2">
+<div class="para">Since <span class="process-math">\(\boldsymbol{c}\)</span> is constant, it may be moved inside the integral, giving</div>
+<div class="displaymath process-math" id="thm-inviscid-force-3-2-2">
+\begin{equation*}
+\boldsymbol{c} \cdot \iint_{\partial V} (-p) \bn \, \de{S} = \iint_{\partial V} (-p
+\boldsymbol{c}) \cdot \bn \, \de{S}.
+\end{equation*}
+</div>
+<div class="para">Now apply the divergence theorem with <span class="process-math">\(\boldsymbol{F} = -p\boldsymbol{c}\text{.}\)</span> Again using that <span class="process-math">\(\boldsymbol{c}\)</span> is constant, <span class="process-math">\(\nabla \cdot (-p \boldsymbol{c}) =
+-\boldsymbol{c} \cdot \nabla p\text{,}\)</span> and hence</div>
+<div class="displaymath process-math" id="thm-inviscid-force-3-2-6">
+\begin{equation*}
+\iint_{\partial V} (-p \boldsymbol{c}) \cdot \bn \, \de{S} = \iiint_V (-\boldsymbol{c}
+\cdot \nabla p) \, \de{V} = \boldsymbol{c} \cdot \iiint_V (-\nabla p) \, \de{V}.
+\end{equation*}
+</div>
+<div class="para">Combining the two results,</div>
+<div class="displaymath process-math" id="thm-inviscid-force-3-2-7">
+\begin{equation*}
+\boldsymbol{c} \cdot \left[ \iint_{\partial V} (-p) \bn \, \de{S} - \iiint_V (-\nabla p)
+\, \de{V} \right] = 0.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-inviscid-force-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-inviscid-force-3-3">This holds for every constant vector <span class="process-math">\(\boldsymbol{c}\text{.}\)</span> Choosing <span class="process-math">\(\boldsymbol{c}
+= \be_1, \be_2, \be_3\)</span> in turn shows that each component of the bracketed vector is zero, so the vector itself is zero, which is <a href="subsec-euler-momentum.html#eqn-momentum-pressure" class="xref" data-knowl="./knowl/xref/eqn-momentum-pressure.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3.5">(3.3.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-inviscid-force-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 3.3.2.1"><a tabindex="-1" href="#thm-inviscid-force-3" title="Copy heading and permalink for Proof 3.3.2.1" aria-label="Copy heading and permalink for Proof 3.3.2.1">🔗</a></div>
 </article></details>
