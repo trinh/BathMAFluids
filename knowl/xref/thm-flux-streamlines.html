@@ -25,10 +25,10 @@
 <div class="para">Consider two streamlines <span class="process-math">\(\psi = \psi_1\)</span> and <span class="process-math">\(\psi = \psi_2\text{.}\)</span> We assume that the streamlines pass through the points A and B respectively. Consider a contour <span class="process-math">\(C\)</span> connecting A and B. The <em class="emphasis">flux</em> (net flow of fluid) through <span class="process-math">\(C\)</span> and hence between the streamlines is</div>
 <div class="displaymath process-math">
 \begin{equation*}
-|\textrm{flux}| = |\psi_2 - \psi_1|
+|\textrm{flux}| = |\psi_2 - \psi_1|.
 \end{equation*}
 </div>
-<div class="para">We have not specified the sign of the flux as it is subject to the considered direction through <span class="process-math">\(C\text{.}\)</span>
+<div class="para">We have not specified the sign of the flux as it depends on the direction chosen through <span class="process-math">\(C\text{.}\)</span>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-flux-streamlines-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -51,20 +51,20 @@
 <div class="displaymath process-math">
 \begin{equation*}
 \bt = \frac{[\de{x}, \de{y}]}{\sqrt{\de{x}^2 + \de{y}^2}} = \frac{[\de{x}, \de{y}]}{\de{s}}, \qquad 
-\bn = \frac{[-\de{y}, \de{x}]}{\de{s}}.
+\bn = \frac{[\de{y}, -\de{x}]}{\de{s}}.
 \end{equation*}
 </div>
 <div class="para">Therefore we can write <span class="process-math">\(\bn \de{s} = [\de{y}, -\de{x}]\text{.}\)</span> Then the flux is re-written as the following:</div>
 <div class="displaymath process-math">
 \begin{align*}
-\textrm{flux} \amp= \int_C \left[\pd{\psi}{y}, -\pd{\psi}{x}\right] \cdot [\de{y}, \de{x}], \\
-\amp= \int_C \left(\pd{\psi}{x} \, \de{x} + \pd{\psi}{y} \right), \\
+\textrm{flux} \amp= \int_C \left[\pd{\psi}{y}, -\pd{\psi}{x}\right] \cdot [\de{y}, -\de{x}], \\
+\amp= \int_C \left(\pd{\psi}{x} \, \de{x} + \pd{\psi}{y} \, \de{y} \right), \\
 \amp= \bigl[ \psi \bigr]_C, \\
 \amp= \psi(B) - \psi(A), \\
-\amp= \psi_2 - \psi_1, 
+\amp= \psi_2 - \psi_1. 
 \end{align*}
 </div>
-<div class="para">In the third line above, <span class="process-math">\([\psi]_C\)</span> is the change of <span class="process-math">\(\psi\)</span> across the contour. Note that there is somewhat an arbitrary choice of direction for the contour <span class="process-math">\(C\text{,}\)</span> as related to the selection of the normal direction <span class="process-math">\(\bn\text{,}\)</span> and the positivity or negativity of the flux. To be safe, we have taken the absolute value in the problem.</div>
+<div class="para">In the third line above, <span class="process-math">\([\psi]_C\)</span> is the change of <span class="process-math">\(\psi\)</span> along the contour. Note that there is a somewhat arbitrary choice of direction for the contour <span class="process-math">\(C\text{,}\)</span> as related to the selection of the normal direction <span class="process-math">\(\bn\text{,}\)</span> and the positivity or negativity of the flux. To be safe, we have taken the absolute value in the statement of the theorem.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#thm-flux-streamlines-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Proof 4.2.2.1"><a tabindex="-1" href="#thm-flux-streamlines-3" title="Copy heading and permalink for Proof 4.2.2.1" aria-label="Copy heading and permalink for Proof 4.2.2.1">🔗</a></div>
