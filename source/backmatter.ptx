@@ -10,7 +10,45 @@
 
   <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
 
-  <solutions xml:id="solutions" divisional="solution"> <title>Solutions</title> </solutions>
+  <appendix xml:id="solutions">
+    <title>Solutions</title>
+
+    <section xml:id="solutions-kinematics">
+      <title>Kinematics</title>
+      <solutions scope="ch-chapter02-kinematics" divisional="solution">
+        <title>Solutions</title>
+      </solutions>
+    </section>
+
+    <section xml:id="solutions-equations">
+      <title>Equations of motion</title>
+      <solutions scope="ch-chapter03-equations" divisional="solution">
+        <title>Solutions</title>
+      </solutions>
+    </section>
+
+    <section xml:id="solutions-potentialflows">
+      <title>Potential flows</title>
+      <solutions scope="ch-chapter04-potentialflows" divisional="solution">
+        <title>Solutions</title>
+      </solutions>
+    </section>
+
+    <section xml:id="solutions-waves">
+      <title>Water waves</title>
+      <solutions scope="ch-chapter05-waves" divisional="solution">
+        <title>Solutions</title>
+      </solutions>
+    </section>
+
+    <section xml:id="solutions-viscousflows">
+      <title>Viscous flows</title>
+      <solutions scope="ch-viscousflows" divisional="solution">
+        <title>Solutions</title>
+      </solutions>
+    </section>
+
+  </appendix>
 
   <appendix>
     <title>Vector calculus</title>

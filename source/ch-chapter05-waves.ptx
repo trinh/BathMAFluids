@@ -80,37 +80,12 @@
       </p>
 
       <p>
-        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving <xref ref="eqn-bernoulli-unsteady-chap3"/>:
+        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. Recall from <xref ref="thm-bernoulli-unsteady-potential"/> that, for an unsteady potential flow,
+        <me>
+          \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
+        </me>
+        for some function <m>F(t)</m>, where <m>\bg = -\nabla\chi</m> is the conservative body force.
       </p>
-
-      <theorem xml:id="thm-bernoulli-unsteady-potential">
-        <title>Bernoulli's equation for unsteady potential flow</title>
-        <statement>
-          <p>
-           Bernoulli's equation for unsteady potential flow states that 
-           <men xml:id="eqn-bernoulli-unsteady-potential">
-            \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
-           </men>
-          for an arbitrary function <m>F(t)</m>, and where <m>\bg = -\nabla\chi</m> is the conservative body force. 
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Returning to <xref ref="eqn-bernoulli-unsteady-chap3"/>, we re-write in terms of the potential function and set the vorticity <m>\omega = \nabla \times \bu = 0</m>, giving 
-            <me>
-              \pd{}{t}(\nabla \phi) = - \nabla \left(\frac{1}{\rho}\nabla p +
-            \frac{1}{2} |\nabla \phi|^2 + \chi\right).
-            </me>
-            We can interchange the order of differentiation on the left 
-            <me>
-            \nabla\left(  \pd{\phi}{t}+\frac{1}{\rho}\nabla p +
-            \frac{1}{2} |\nabla \phi|^2 + \chi\right) = 0.
-            </me> 
-            We now integrate each of the spatial components and this yields the desired result.
-          </p>
-        </proof>
-      </theorem>
 
       <p>
         Below, we will set the body force indeed to be gravity. Thus if we write 
@@ -558,6 +533,18 @@
   </section> -->
 
   <exercises xml:id="exercises-water-waves">
+
+    <introduction>
+      <remark xml:id="remark-solutions-feedback-waves">
+        <title>Solutions and feedback</title>
+        <p>Full solutions to these exercises can be found in <xref ref="solutions-waves">the solutions to this chapter</xref> in <xref ref="solutions"/> at the back
+          of the book.</p>
+
+        <p>If you would like feedback on your work, the tutor will by default concentrate on the
+          exercises highlighted with a yellow background in the online notes (the homework
+          exercises), unless you specifically ask for feedback on a different exercise instead.</p>
+      </remark>
+    </introduction>
    
     <exercise>
       <title>Derivation of the kinematic condition</title>

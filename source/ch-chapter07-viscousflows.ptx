@@ -1751,7 +1751,7 @@
           <em>Non-examinable.</em>
         </p>
         <p>
-          As mentioned in <xref ref="rem-RTT-control-volume"/>, some engineering problems can be analysed
+          Some engineering problems can be analysed
           in terms of applying the principle of mass and linear momentum conservation to a defined region
           of the fluid, and this can be used for some engineering applications.
           In contrast, the Navier<ndash/>Stokes and continuity equations,
@@ -3870,6 +3870,15 @@
   <exercises xml:id="ws-viscousflows">
     <title>Practice Exercises</title>
     <introduction>
+      <remark xml:id="remark-solutions-feedback-viscousflows">
+        <title>Solutions and feedback</title>
+        <p>Full solutions to the exercises in this chapter can be found in <xref ref="solutions-viscousflows">the solutions to this chapter</xref> in <xref ref="solutions"/> at the back
+          of the book.</p>
+
+        <p>If you would like feedback on your work, the tutor will by default concentrate on the
+          exercises highlighted with a yellow background in the online notes (the homework
+          exercises), unless you specifically ask for feedback on a different exercise instead.</p>
+      </remark>
       <warning>
         <p>
           We look to complete worksheets in the week prior to the content being delivered.

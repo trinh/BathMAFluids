@@ -37,3 +37,19 @@ figure.figure-like:not(.knowl__content, .born-hidden-knowl) {
 #remark-solutions-feedback .codenumber {
   display: none;
 }
+
+/* Solutions appendix: make the exercise heading's link back to the
+   original question visible. PreTeXt already links each exercise
+   number/title in the solutions to the exercise in the chapter. */
+section.solutions > .exercise-like > .heading > a::after,
+section.solutions .exercisegroup-exercises > .exercise-like > .heading > a::after {
+  content: "↩ Back to question";
+  margin-left: 0.75em;
+  font-size: 0.8em;
+  font-weight: normal;
+  padding: 0.1em 0.5em;
+  border: 1px solid #a8cdea;
+  border-radius: 4px;
+  background-color: #e3f2fd;
+  white-space: nowrap;
+}

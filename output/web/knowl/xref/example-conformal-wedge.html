@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Source in a wedge.</span>
+</h2>
+<div class="para">Fluid is contained in a wedge with walls at <span class="process-math">\(\theta = 0\)</span> and <span class="process-math">\(\theta = \alpha &gt; 0\text{,}\)</span> with the fluid in <span class="process-math">\(0 &lt; \theta &lt; \alpha\text{.}\)</span> Find the complex potential of a source of strength <span class="process-math">\(Q\)</span> at the point <span class="process-math">\(z = c\)</span> in the wedge.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-conformal-wedge-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Consider the map</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-conformal-wedge.html">
+\begin{equation}
+\zeta = g(z) = z^{\pi/\alpha}.\tag{4.5.1}
+\end{equation}
+</div>
+<div class="para">With <span class="process-math">\(z = r\e^{\im\theta}\text{,}\)</span> we have <span class="process-math">\(\zeta = r^{\pi/\alpha}\e^{\im\pi\theta/\alpha}\text{,}\)</span> so <span class="process-math">\(0 &lt; \theta &lt; \alpha\)</span> is mapped to <span class="process-math">\(0 &lt; \arg\zeta &lt; \pi\text{,}\)</span> the upper half-<span class="process-math">\(\zeta\)</span>-plane. The ray <span class="process-math">\(\theta = 0\)</span> is mapped to the positive real axis and the ray <span class="process-math">\(\theta = \alpha\)</span> to the negative real axis, as shown in <a href="sec-conformal-mapping.html#fig-conformal-wedge" class="xref" data-knowl="./knowl/xref/fig-conformal-wedge.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.13">Figure 4.13</a>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-conformal-wedge-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/conformal_wedge.jpg" class="contained" alt="conformal map"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The map from the wedge-shaped region in the <span class="process-math">\(z\)</span>-plane (left) and the upper half-<span class="process-math">\(\zeta\)</span>-plane (right).<div class="autopermalink" aria-hidden="true" data-description="Figure 4.13"><a tabindex="-1" href="#fig-conformal-wedge" title="Copy heading and permalink for Figure 4.13" aria-label="Copy heading and permalink for Figure 4.13">🔗</a></div></figcaption>
+</figure>
+<div class="para logical">
+<div class="para">In the <span class="process-math">\(\zeta\)</span>-plane, we must solve for flow in the upper half-plane with a source of strength <span class="process-math">\(Q\)</span> at <span class="process-math">\(\zeta_c = c^{\pi/\alpha}\text{,}\)</span> and an impermeable boundary on the real <span class="process-math">\(\zeta\)</span>-axis. By the method of images (<a href="sec-method-of-images.html" class="internal" title="Section 4.4: The method of images">Section 4.4</a>), we place sources at both <span class="process-math">\(\zeta_c\)</span> and its complex conjugate, <span class="process-math">\(\overline{\zeta_c}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-method-of-images.html ./knowl/xref/prop-conformal.html">
+\begin{equation}
+F(\zeta) = \frac{Q}{2\pi} \log(\zeta - \zeta_c) + \frac{Q}{2\pi} \log(\zeta - \overline{\zeta_c}).\tag{4.5.2}
+\end{equation}
+</div>
+<div class="para">Composing with the map, the complex potential in the <span class="process-math">\(z\)</span>-plane is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-method-of-images.html ./knowl/xref/prop-conformal.html">
+\begin{equation}
+f(z) = F(g(z)) = \frac{Q}{2\pi} \log(z^{\pi/\alpha} - c^{\pi/\alpha}) + \frac{Q}{2\pi} \log(z^{\pi/\alpha} - \overline{c^{\pi/\alpha}}).\tag{4.5.3}
+\end{equation}
+</div>
+<div class="para">By construction (<a href="sec-conformal-mapping.html#prop-conformal" class="xref" data-knowl="./knowl/xref/prop-conformal.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.5.2: Properties of conformal maps">Proposition 4.5.2</a>), the walls of the wedge are streamlines.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#example-conformal-wedge-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 4.5.3.1"><a tabindex="-1" href="#example-conformal-wedge-3" title="Copy heading and permalink for Solution 4.5.3.1" aria-label="Copy heading and permalink for Solution 4.5.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 4.5.3: Source in a wedge"><a tabindex="-1" href="#example-conformal-wedge" title="Copy heading and permalink for Example 4.5.3: Source in a wedge" aria-label="Copy heading and permalink for Example 4.5.3: Source in a wedge">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="sec-conformal-mapping.html#example-conformal-wedge">In Context</a></span>
+</body>
+</html>

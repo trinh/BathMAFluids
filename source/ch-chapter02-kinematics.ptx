@@ -720,11 +720,11 @@
         Examples of streamlines and velocity fields were examined.</p>
 
       <remark xml:id="remark-solutions-feedback-kinematics">
-        <title>solutions and feedback</title>
-        <p>full solutions to these exercises can be found in <xref ref="solutions"/> at the back
+        <title>Solutions and feedback</title>
+        <p>Full solutions to these exercises can be found in <xref ref="solutions-kinematics">the solutions to this chapter</xref> in <xref ref="solutions"/> at the back
           of the book.</p>
 
-        <p>if you would like feedback on your work, the tutor will by default concentrate on the
+        <p>If you would like feedback on your work, the tutor will by default concentrate on the
           exercises highlighted with a yellow background in the online notes (the homework
           exercises), unless you specifically ask for feedback on a different exercise instead.</p>
       </remark>
