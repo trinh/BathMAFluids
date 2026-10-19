@@ -1227,21 +1227,54 @@
       </task>
 
       <task>
+        <title>Revised in 2026</title>
         <statement>
-          <p> the pathline of the particle starting from <m>(x_0,y_0)</m>.
+          <p>Show that the position at time <m>t</m> of the particle that starts from
+            the point <m>(x_0,y_0)</m>,</p> is
+            <me>
+                x = x_0 + t,\quad
+                y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+            </me>
+        </statement>
+
+        <solution>
+          <p> The position of the particle is found by solving
+            <me>
+              \dd{x}{t}=1,\quad\dd{y}{t}=te^{-4x}
+            </me>
+            Solving the first equation,
+            <me>
+              x = A + t,
+            </me>
+            where <m>A</m> is a constant of integration, and,
+            imposing <m>x=x_0</m> at <m>t=0</m>,
+            <me>
+              x = x_0 + t.
+            </me>
+            Solving the second equation,
+            <me>
+              y = \int te^{-4(x_0+t)}\de t
+              = B-\frac14 te^{-4(x_0+t)} + \frac14\int e^{-4(x_0+t)}\de t
+              = B-\frac14 te^{-4(x_0+t)} - \frac1{16}e^{-4(x_0+t)}.
+            </me>
+            Substituting the initial condition,
+            <me>
+              y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+            </me>
+          </p>
+        </solution>
+      </task>
+
+      <task>
+        <statement>
+          <p> Find the pathline of the particle starting from <m>(x_0,y_0)</m>.
             Hence find and sketch the pathline of the particle that starts from <m>(0,0)</m>, </p>
         </statement>
 
-
         <solution>
-          <p> The pathlines for a particle starting from <m>(x_0,y_0)</m> are given by <md>
-              <mrow>&amp;\dd{x}{t}=1,\quad
-                \dd{y}{t}=te^{-4x}</mrow>
-              <mrow>\Rightarrow\quad&amp;
-                x = x_0 + t,\quad
-                y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.</mrow>
-            </md>
-            Eliminating <m>t</m>: <me>
+          <p>
+            Eliminating <m>t</m> from the particle position found in the previous part:
+            <me>
               y = y_0 + \frac{1}{16} e^{-4x_0}
               - \frac{1+4x-4x_0}{16} e^{-4x}.
             </me>
@@ -1251,7 +1284,6 @@
               ref="flowvisualisationproblem" /> for a sketch. </p>
         </solution>
       </task>
-
 
       <task>
         <statement>

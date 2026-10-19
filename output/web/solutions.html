@@ -66,14 +66,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.5';
+eBookConfig.runestone_version = '8.3.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -727,23 +727,54 @@ y=y_0-\frac{t}{4} e^{-4x},
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of streamlines, pathline and streaklines.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.11"><a tabindex="-1" href="#flowvisualisationproblem" title="Copy heading and permalink for Figure 2.11" aria-label="Copy heading and permalink for Figure 2.11">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.a.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-3-2" title="Copy heading and permalink for Solution 2.3.6.a.1" aria-label="Copy heading and permalink for Solution 2.3.6.a.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.b"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-4" aria-label="Back to 2.3.6.b"><span class="codenumber">2.3.6.b</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.b: Revised in 2026"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-4" aria-label="Back to 2.3.6.b Revised in 2026."><span class="codenumber">2.3.6.b</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Revised in 2026.</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
 <div class="para logical">
-<div class="para">The pathlines for a particle starting from <span class="process-math">\((x_0,y_0)\)</span> are given by</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
-\begin{align*}
-&amp;\dd{x}{t}=1,\quad
-\dd{y}{t}=te^{-4x}\\
-\Rightarrow\quad&amp;
-x = x_0 + t,\quad
+<div class="para">The position of the particle is found by solving</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dd{x}{t}=1,\quad\dd{y}{t}=te^{-4x}
+\end{equation*}
+</div>
+<div class="para">Solving the first equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = A + t,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(A\)</span> is a constant of integration, and, imposing <span class="process-math">\(x=x_0\)</span> at <span class="process-math">\(t=0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = x_0 + t.
+\end{equation*}
+</div>
+<div class="para">Solving the second equation,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = \int te^{-4(x_0+t)}\de t
+= B-\frac14 te^{-4(x_0+t)} + \frac14\int e^{-4(x_0+t)}\de t
+= B-\frac14 te^{-4(x_0+t)} - \frac1{16}e^{-4(x_0+t)}.
+\end{equation*}
+</div>
+<div class="para">Substituting the initial condition,</div>
+<div class="displaymath process-math">
+\begin{equation*}
 y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
-\end{align*}
+\end{equation*}
 </div>
-<div class="para">Eliminating <span class="process-math">\(t\text{:}\)</span>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.b.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-3" title="Copy heading and permalink for Solution 2.3.6.b.1" aria-label="Copy heading and permalink for Solution 2.3.6.b.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.c"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-5" aria-label="Back to 2.3.6.c"><span class="codenumber">2.3.6.c</span></a></h4>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Eliminating <span class="process-math">\(t\)</span> from the particle position found in the previous part:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/flowvisualisationproblem.html">
 \begin{equation*}
 y = y_0 + \frac{1}{16} e^{-4x_0}
@@ -758,11 +789,11 @@ y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
 \end{equation*}
 </div>
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.b.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-4-2" title="Copy heading and permalink for Solution 2.3.6.b.1" aria-label="Copy heading and permalink for Solution 2.3.6.b.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.c.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-2" title="Copy heading and permalink for Solution 2.3.6.c.1" aria-label="Copy heading and permalink for Solution 2.3.6.c.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.c"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-5" aria-label="Back to 2.3.6.c"><span class="codenumber">2.3.6.c</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.d"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-6" aria-label="Back to 2.3.6.d"><span class="codenumber">2.3.6.d</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -798,11 +829,11 @@ y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
 \end{equation*}
 </div>
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch. Note that the streamlines, pathlines and streaklines are all very different.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.c.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-5-3" title="Copy heading and permalink for Solution 2.3.6.c.1" aria-label="Copy heading and permalink for Solution 2.3.6.c.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.d.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-3" title="Copy heading and permalink for Solution 2.3.6.d.1" aria-label="Copy heading and permalink for Solution 2.3.6.d.1">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.d"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-6" aria-label="Back to 2.3.6.d"><span class="codenumber">2.3.6.d</span></a></h4>
+</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 2.3.6.e"><a href="ws-kinematics.html#ex-hw-streamlines-pathlines-streaklines-7" aria-label="Back to 2.3.6.e"><span class="codenumber">2.3.6.e</span></a></h4>
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -822,7 +853,7 @@ y = \tfrac{1}{16}\left(e^{4t} - 1 - 4t\right)e^{-4x}.
 \end{equation*}
 </div>
 <div class="para">See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="para">From the pathline equation, a particle starting from <span class="process-math">\((0,y_0)\)</span> reaches</div>
@@ -835,9 +866,9 @@ y = y_0 + \tfrac{1}{16}
 </div>
 <div class="para">at time <span class="process-math">\(t\text{.}\)</span> Since <span class="process-math">\(y_0\)</span> can take any value, the timeline is just the line <span class="process-math">\(x
 = t\text{.}\)</span> See <a href="ws-kinematics.html#flowvisualisationproblem" class="xref" data-knowl="./knowl/xref/flowvisualisationproblem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11">Figure 2.11</a> for a sketch.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.d.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-6-2" title="Copy heading and permalink for Solution 2.3.6.d.1" aria-label="Copy heading and permalink for Solution 2.3.6.d.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.3.6.e.1"><a tabindex="-1" href="#ex-hw-streamlines-pathlines-streaklines-7-2" title="Copy heading and permalink for Solution 2.3.6.e.1" aria-label="Copy heading and permalink for Solution 2.3.6.e.1">🔗</a></div>
 </div></details>
 </div></article></article><h2 class="heading hide-type" title="Exercises 3.6">
 <span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equations of motion</span><br><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
@@ -3836,635 +3867,6 @@ p=&amp;p_0-\frac{\rho a^4(p_0-p_1)}{r^4}.
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-viscousflows-17-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 6.9.15.a.1"><a tabindex="-1" href="#ws-viscousflows-17-3-2" title="Copy heading and permalink for Solution 6.9.15.a.1" aria-label="Copy heading and permalink for Solution 6.9.15.a.1">🔗</a></div>
-</div></details>
-</div></article></article><h2 class="heading hide-type" title="Exercises 6.10: Problems set 7 to hand in">
-<span class="codenumber">6.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems set 7 to hand in</span>
-</h2>
-<article class="exercise-like"><h3 class="heading"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3" aria-label="Back to 6.10.1. Analysis of flow in a pipe."><span class="codenumber">6.10.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Analysis of flow in a pipe.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.a"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-3" aria-label="Back to 6.10.1.a"><span class="codenumber">6.10.1.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">The no-slip boundary conditions give</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left.\bu\right|_{r=a}=0.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.a.1"><a tabindex="-1" href="#ch-viscousflows-12-3-3-2" title="Copy heading and permalink for Solution 6.10.1.a.1" aria-label="Copy heading and permalink for Solution 6.10.1.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.b"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-4" aria-label="Back to 6.10.1.b"><span class="codenumber">6.10.1.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">Assuming axisymmetric flow implies there is no dependence on <span class="process-math">\(\theta\)</span> and that the <span class="process-math">\(\theta\)</span>-component of the velocity is zero <span class="process-math">\(u_\theta=0\text{.}\)</span> Since the pipe is infinitely long in the <span class="process-math">\(z\)</span>-direction, and the pressure gradient is constant, there is no preferred location in this directions, and hence the velocity profile is independent of <span class="process-math">\(z\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.b.1"><a tabindex="-1" href="#ch-viscousflows-12-3-4-2" title="Copy heading and permalink for Solution 6.10.1.b.1" aria-label="Copy heading and permalink for Solution 6.10.1.b.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.c"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-5" aria-label="Back to 6.10.1.c"><span class="codenumber">6.10.1.c</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">We have no <span class="process-math">\(\theta\)</span>- or <span class="process-math">\(z\)</span>-dependence, meaning that the continuity equation reduces to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{1}{r}\pd{}{r}(ru_r)=0,
-\end{equation*}
-</div>
-<div class="para">and hence <span class="process-math">\(u_r=A/r\text{,}\)</span> where <span class="process-math">\(A\)</span> is constant. Since the cylinder is a solid boundary, we need <span class="process-math">\(u_r=0\)</span> at <span class="process-math">\(r=a\text{.}\)</span> Therefore, <span class="process-math">\(A=0\text{,}\)</span> and so <span class="process-math">\(u_r=0\)</span> everywhere.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.c.1"><a tabindex="-1" href="#ch-viscousflows-12-3-5-2" title="Copy heading and permalink for Solution 6.10.1.c.1" aria-label="Copy heading and permalink for Solution 6.10.1.c.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.d"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-6" aria-label="Back to 6.10.1.d"><span class="codenumber">6.10.1.d</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">At <span class="process-math">\(r=a\text{,}\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u_z=\frac{P}{4\mu}\left(a^2-a^2\right)=0,
-\end{equation*}
-</div>
-<div class="para">which satisfies the no-slip boundary condition.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.d.1"><a tabindex="-1" href="#ch-viscousflows-12-3-6-2" title="Copy heading and permalink for Solution 6.10.1.d.1" aria-label="Copy heading and permalink for Solution 6.10.1.d.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.e"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-7" aria-label="Back to 6.10.1.e"><span class="codenumber">6.10.1.e</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">A larger pressure gradient <span class="process-math">\(P\)</span> means a larger driving force for the flow, and hence a larger velocity. A larger viscosity <span class="process-math">\(\mu\)</span> means a larger resistance to the flow, and hence a smaller velocity. Therefore, it is to be expected that the velocity profile increases as <span class="process-math">\(P\)</span> increases and decreases as <span class="process-math">\(\mu\)</span> increases.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.e.1"><a tabindex="-1" href="#ch-viscousflows-12-3-7-2" title="Copy heading and permalink for Solution 6.10.1.e.1" aria-label="Copy heading and permalink for Solution 6.10.1.e.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.f"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-8" aria-label="Back to 6.10.1.f"><span class="codenumber">6.10.1.f</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">The pressure at a general point is given by</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p=p_0+Pz.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">The stress vector is given by <span class="process-math">\(\btau=\bsigma\bn\text{,}\)</span> with <span class="process-math">\(\bn=-\hat{\br}\)</span> and <span class="process-math">\(\bsigma=-p\bI+2\mu\be\text{.}\)</span> Simplifying <a href="subsec-newtonian-fluids.html#eq-strainrate-cyl" class="xref" data-knowl="./knowl/xref/eq-strainrate-cyl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.4.7">(6.4.7)</a>, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{equation*}
-\be=\left(\begin{matrix}
-0&amp;0&amp;\frac12\pd{u_z}{r}\\
-0&amp;0&amp;0\\
-\frac12\pd{u_z}{r}&amp;0&amp;0
-\end{matrix}\right)
-=\left(\begin{matrix}
-0&amp;0&amp;-\frac{Pr}{4\mu}\\
-0&amp;0&amp;0\\
--\frac{Pr}{4\mu}&amp;0&amp;0
-\end{matrix}\right).
-\end{equation*}
-</div>
-<div class="para">Hence,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{equation*}
-\bsigma=\left(\begin{matrix}
--p_0-Pz&amp;0&amp;-Pr/2\\
-0&amp;-p_0-Pz&amp;0\\
--Pr/2&amp;0&amp;-p_0-Pz
-\end{matrix}\right).
-\end{equation*}
-</div>
-<div class="para">At <span class="process-math">\(r=a\text{,}\)</span> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{align*}
-\tau=&amp;\bsigma\bn\\
-=&amp;\left(-p\bI+2\mu\be\right)(-\hat{\br})\\
-=&amp;\left(p\bI-2\mu\be\right)\hat{\br}\\
-=&amp;p\hat{\br}-\mu\pd{u_z}{r}\hat{\bz}.
-\end{align*}
-</div>
-<div class="para">Hence the normal component of the stress vector is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{equation*}
-\tau_r=p=p_0+Pz,
-\end{equation*}
-</div>
-<div class="para">and the axial component of the shear stress vector is</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{gather*}
-\tau_z=-\mu\pd{u_z}{r}\\
-=-\mu\pd{}{r}\left[\frac{P}{4\mu}(a^2-r^2)\right]\\
-=-\mu\left(-\frac{P}{2\mu}r\right)\\
-=\frac{Pa}{2}
-\end{gather*}
-</div>
-<div class="para">The <span class="process-math">\(\theta\)</span>-component of the stress vector is zero:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-strainrate-cyl.html">
-\begin{equation*}
-\tau_\theta=0.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.f.1"><a tabindex="-1" href="#ch-viscousflows-12-3-8-2" title="Copy heading and permalink for Solution 6.10.1.f.1" aria-label="Copy heading and permalink for Solution 6.10.1.f.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.1.g"><a href="ch-viscousflows-12.html#ch-viscousflows-12-3-9" aria-label="Back to 6.10.1.g"><span class="codenumber">6.10.1.g</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The normal stress is due to the pressure in the fluid, which acts equally in all directions, and hence the normal stress on the inside of the pipe wall points radially outward into the wall. The shear stress points along the pipe in the direction of increasing <span class="process-math">\(z\)</span> since this is the direction of the flow, and hence the fluid exerts a tangential force on the pipe wall in this direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-3-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.1.g.1"><a tabindex="-1" href="#ch-viscousflows-12-3-9-2" title="Copy heading and permalink for Solution 6.10.1.g.1" aria-label="Copy heading and permalink for Solution 6.10.1.g.1">🔗</a></div>
-</div></details>
-</div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="ch-viscousflows-12.html#ex-rotating-flow" aria-label="Back to 6.10.2. Rotating flow."><span class="codenumber">6.10.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rotating flow.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.2.a"><a href="ch-viscousflows-12.html#ex-rotating-flow-3" aria-label="Back to 6.10.2.a"><span class="codenumber">6.10.2.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\bu=\bOmega\times\bx
-=\begin{vmatrix}
-\bi &amp; \bj &amp; \bk \\
-0 &amp; 0 &amp; \Omega \\
-x &amp; y &amp; z
-\end{vmatrix}
-=-\Omega y\bi+\Omega x\bj+0\bk.
-\end{equation*}
-</div>
-<div class="para">Hence the velocity components are</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u=-\Omega y,\quad v=\Omega x,\quad w=0.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-rotating-flow-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.2.a.1"><a tabindex="-1" href="#ex-rotating-flow-3-2" title="Copy heading and permalink for Solution 6.10.2.a.1" aria-label="Copy heading and permalink for Solution 6.10.2.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.2.b"><a href="ch-viscousflows-12.html#ex-rotating-flow-4" aria-label="Back to 6.10.2.b"><span class="codenumber">6.10.2.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\nabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
-\end{equation*}
-</div>
-<div class="para">and hence the flow is incompressible.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-rotating-flow-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.2.b.1"><a tabindex="-1" href="#ex-rotating-flow-4-2" title="Copy heading and permalink for Solution 6.10.2.b.1" aria-label="Copy heading and permalink for Solution 6.10.2.b.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.2.c"><a href="ch-viscousflows-12.html#ex-rotating-flow-5" aria-label="Back to 6.10.2.c"><span class="codenumber">6.10.2.c</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{align*}
-\sigma_{11}=&amp;-p+2\mu\pd{u}{x}=-p+0=-p,\\
-\sigma_{12}=&amp;\mu\left(\pd{u}{y}+\pd{v}{x}\right)
-=\mu(-\Omega+ \Omega)=0,\\
-\sigma_{13}=&amp;\mu\left(\pd{u}{z}+\pd{w}{x}\right)=\mu(0+0)=0,\\
-\sigma_{21}=&amp;\mu\left(\pd{v}{x}+\pd{u}{y}\right)
-=\mu(\Omega -\Omega)=0,\\
-\sigma_{22}=&amp;-p+2\mu\pd{v}{y}=-p+0=-p,\\
-\sigma_{23}=&amp;\mu\left(\pd{v}{z}+\pd{w}{y}\right)=\mu(0+0)=0,\\
-\sigma_{31}=&amp;\mu\left(\pd{w}{x}+\pd{u}{z}\right)=\mu(0+0)=0,\\
-\sigma_{32}=&amp;\mu\left(\pd{w}{y}+\pd{v}{z}\right)=\mu(0+0)=0,\\
-\sigma_{33}=&amp;-p+2\mu\pd{w}{z}=-p+0=-p.
-\end{align*}
-</div>
-<div class="para">Hence the deviatoric stress tensor is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\bsigma
-=\left(\begin{matrix}
--p &amp; 0 &amp; 0 \\
-0 &amp; -p &amp; 0 \\
-0 &amp; 0 &amp; -p
-\end{matrix}\right),
-=-p\bI,
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(\bI\)</span> is the identity tensor.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-rotating-flow-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.2.c.1"><a tabindex="-1" href="#ex-rotating-flow-5-2" title="Copy heading and permalink for Solution 6.10.2.c.1" aria-label="Copy heading and permalink for Solution 6.10.2.c.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.2.d"><a href="ch-viscousflows-12.html#ex-rotating-flow-6" aria-label="Back to 6.10.2.d"><span class="codenumber">6.10.2.d</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The result shows that the deviatoric stress tensor is zero, meaning there are no viscous stresses in this flow. The only stress is due to the pressure in the fluid. This is as expected since the flow represents a solid body rotation with angular velocity <span class="process-math">\(\bOmega\text{.}\)</span> In a solid body rotation, there is no relative motion between adjacent fluid particles, and hence no viscous stresses.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-rotating-flow-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.2.d.1"><a tabindex="-1" href="#ex-rotating-flow-6-2" title="Copy heading and permalink for Solution 6.10.2.d.1" aria-label="Copy heading and permalink for Solution 6.10.2.d.1">🔗</a></div>
-</div></details>
-</div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="ch-viscousflows-12.html#ch-viscousflows-12-5" aria-label="Back to 6.10.3. Flow outside a rotating cylinder."><span class="codenumber">6.10.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Flow outside a rotating cylinder.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.3.a"><a href="ch-viscousflows-12.html#ch-viscousflows-12-5-3" aria-label="Back to 6.10.3.a"><span class="codenumber">6.10.3.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The flow and pressure are steady since the cylinder rotates at constant angular velocity. The flow and pressure have rotational symmetry and therefore no dependence on <span class="process-math">\(\theta\text{.}\)</span> The flow and pressure are independent of <span class="process-math">\(z\)</span> since the cylinder is infinite in this direction and there is no pressure gradient in this direction. The <span class="process-math">\(z\)</span>-component of velocity is zero since there is no motion of the cylinder or pressure gradient in this direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.3.a.1"><a tabindex="-1" href="#ch-viscousflows-12-5-3-2" title="Copy heading and permalink for Solution 6.10.3.a.1" aria-label="Copy heading and permalink for Solution 6.10.3.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.3.b"><a href="ch-viscousflows-12.html#ch-viscousflows-12-5-4" aria-label="Back to 6.10.3.b"><span class="codenumber">6.10.3.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">Since there is no <span class="process-math">\(\theta\)</span>- or <span class="process-math">\(z\)</span>-dependence, the continuity equation reduces to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{1}{r}\pd{}{r}(ru_r)=0,
-\end{equation*}
-</div>
-<div class="para">and hence <span class="process-math">\(u_r=A/r\text{,}\)</span> where <span class="process-math">\(A\)</span> is constant. Since the cylinder is a solid boundary, we need <span class="process-math">\(u_r=0\)</span> at <span class="process-math">\(r=a\text{.}\)</span> Therefore, <span class="process-math">\(A=0\text{,}\)</span> and so <span class="process-math">\(u_r=0\)</span> everywhere.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.3.b.1"><a tabindex="-1" href="#ch-viscousflows-12-5-4-2" title="Copy heading and permalink for Solution 6.10.3.b.1" aria-label="Copy heading and permalink for Solution 6.10.3.b.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.3.c"><a href="ch-viscousflows-12.html#ch-viscousflows-12-5-5" aria-label="Back to 6.10.3.c"><span class="codenumber">6.10.3.c</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">Since <span class="process-math">\(u_r=u_z=0\)</span> and there is no <span class="process-math">\(\theta\)</span>- or <span class="process-math">\(z\)</span>-dependence, the Navier–Stokes equations reduce to</div>
-<div class="displaymath process-math">
-\begin{align*}
-&amp;-\rho\frac{u_{\theta}^2}{r}=-\pd{p}{r},\\
-&amp;0=\mu\left(\frac1r\pd{}{r}\left(r\pd{u_\theta}{r}\right)-\frac{u_{\theta}}{r^2}\right),\\
-&amp;0=-\pd{p}{z}.
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">The <span class="process-math">\(z\)</span>-component shows that <span class="process-math">\(p=p(r)\text{.}\)</span> Now consider the <span class="process-math">\(\theta\)</span>-component. Substituting <span class="process-math">\(u_\theta=a^2\Omega/r\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{align*}
-\frac1r\pd{}{r}\left(r\pd{u_\theta}{r}\right)-\frac{u_{\theta}}{r^2}\\
-=&amp;\frac1r\pd{}{r}\left(r\pd{}{r}\left(\frac{a^2\Omega}{r}\right)\right)-\frac{a^2\Omega}{r^3}\\
-=&amp;-a^2\Omega\frac1r\pd{}{r}\left(\frac{1}{r}\right)-\frac{a^2\Omega}{r^3}\\
-=&amp;a^2\Omega\frac1r\left(\frac{1}{r^2}\right)-\frac{a^2\Omega}{r^3}\\
-=&amp;0.
-\end{align*}
-</div>
-<div class="para">Hence this flow satisfies the <span class="process-math">\(\theta\)</span>-component of the Navier–Stokes equation.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">The <span class="process-math">\(r\)</span>-component of the Navier–Stokes equation is</div>
-<div class="displaymath process-math">
-\begin{align*}
-\pd{p}{r}=&amp;\rho\frac{u_{\theta}^2}{r}\\
-=&amp;\rho\frac{(a^2\Omega/r)^2}{r}\\
-=&amp;\rho\frac{a^4\Omega^2}{r^3}.
-\end{align*}
-</div>
-<div class="para">Hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-p(r)=p_0+\frac{\rho a^4\Omega^2}{2}\left(\frac1{a^2}-\frac1{r^2}\right),
-\end{equation*}
-</div>
-<div class="para">for some constant <span class="process-math">\(p_0\text{,}\)</span> and therefore (since we have been able to find a suitable pressure), this component of the Navier–Stokes equation is also satisfied.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">Hence the flow <span class="process-math">\(\bu=(0,a^2\Omega/r,0)\)</span> satisfies the Navier–Stokes equations. Finally, we check the boundary condition at <span class="process-math">\(r=a\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\left.\bu\right|_{r=a}=\left(0,\frac{a^2\Omega}{a},0\right)=(0,a\Omega,0),
-\end{equation*}
-</div>
-<div class="para">which matches the velocity of the cylinder surface.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.3.c.1"><a tabindex="-1" href="#ch-viscousflows-12-5-5-2" title="Copy heading and permalink for Solution 6.10.3.c.1" aria-label="Copy heading and permalink for Solution 6.10.3.c.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.10.3.d"><a href="ch-viscousflows-12.html#ch-viscousflows-12-5-6" aria-label="Back to 6.10.3.d"><span class="codenumber">6.10.3.d</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">Initially, there will be a thin boundary layer of fluid close to the cylinder surface that starts to rotate with the cylinder due to the no-slip boundary condition. As time progresses, viscous diffusion will cause the rotation to spread outwards from the cylinder surface into the fluid. Eventually, the flow will reach a steady state, which is the flow found in the previous part.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch-viscousflows-12-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.10.3.d.1"><a tabindex="-1" href="#ch-viscousflows-12-5-6-2" title="Copy heading and permalink for Solution 6.10.3.d.1" aria-label="Copy heading and permalink for Solution 6.10.3.d.1">🔗</a></div>
-</div></details>
-</div></article></article><h2 class="heading hide-type" title="Exercises 6.11: Problems set 8 to hand in">
-<span class="codenumber">6.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems set 8 to hand in</span>
-</h2>
-<article class="exercise-like"><h3 class="heading"><a href="problems-set-8.html#problems-set-8-3" aria-label="Back to 6.11.1."><span class="codenumber">6.11.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.1.a"><a href="problems-set-8.html#problems-set-8-3-2" aria-label="Back to 6.11.1.a"><span class="codenumber">6.11.1.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-\mathrm{Re}=\frac{\rho Ua}{\mu},
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(U\)</span> is the characteristic velocity, <span class="process-math">\(a\)</span> is the characteristic length scale (the radius of the sphere), <span class="process-math">\(\rho\)</span> is the density of the fluid, and <span class="process-math">\(\mu\)</span> is the shear viscosity of the fluid.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.1.a.1"><a tabindex="-1" href="#problems-set-8-3-2-2" title="Copy heading and permalink for Solution 6.11.1.a.1" aria-label="Copy heading and permalink for Solution 6.11.1.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.1.b"><a href="problems-set-8.html#problems-set-8-3-3" aria-label="Back to 6.11.1.b"><span class="codenumber">6.11.1.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<ul class="disc" id="problems-set-8-3-3-2-1-1">
-<li>
-<div class="para">In case (a), the flow is smooth and steady around the sphere, and the flow is also reversible (left–right symmetry), indicating a low Reynolds number.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li>
-<div class="para">In case (b), there is some disturbance in the flow behind the sphere, suggesting a moderate Reynolds number, of order 100.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li>
-<div class="para">In case (c), there is a turbulent wake behind the sphere, indicating a high Reynolds number, <span class="process-math">\(\mathrm{Re}\gg 10^3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#problems-set-8-3-3-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.1.b.1"><a tabindex="-1" href="#problems-set-8-3-3-2" title="Copy heading and permalink for Solution 6.11.1.b.1" aria-label="Copy heading and permalink for Solution 6.11.1.b.1">🔗</a></div>
-</div></details>
-</div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="problems-set-8.html#problems-set-8-4" aria-label="Back to 6.11.2. Channel flow."><span class="codenumber">6.11.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Channel flow.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.2.a"><a href="problems-set-8.html#problems-set-8-4-3" aria-label="Back to 6.11.2.a"><span class="codenumber">6.11.2.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">We have <span class="process-math">\(u=v=w=0\)</span> at <span class="process-math">\(y=\pm d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.2.a.1"><a tabindex="-1" href="#problems-set-8-4-3-2" title="Copy heading and permalink for Solution 6.11.2.a.1" aria-label="Copy heading and permalink for Solution 6.11.2.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.2.b"><a href="problems-set-8.html#problems-set-8-4-4" aria-label="Back to 6.11.2.b"><span class="codenumber">6.11.2.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">Fully-developed flow implies the velocity components do not depend on <span class="process-math">\(x\text{.}\)</span> Thus, the continuity equation reduces to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\pd{v}{y}=0,
-\end{equation*}
-</div>
-<div class="para">implying that <span class="process-math">\(v\)</span> is independent of <span class="process-math">\(y\text{.}\)</span> The no-slip boundary conditions at each plate implies <span class="process-math">\(v=0\)</span> there. Hence, <span class="process-math">\(v=0\)</span> everywhere.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.2.b.1"><a tabindex="-1" href="#problems-set-8-4-4-2" title="Copy heading and permalink for Solution 6.11.2.b.1" aria-label="Copy heading and permalink for Solution 6.11.2.b.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.2.c"><a href="problems-set-8.html#problems-set-8-4-5" aria-label="Back to 6.11.2.c"><span class="codenumber">6.11.2.c</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">The three components of the Navier–Stokes equations simplify to</div>
-<div class="displaymath process-math">
-\begin{align*}
-&amp;0=-\pd{p}{x}+\mu\pd{^2u}{y^2},\\
-&amp;0=-\pd{p}{y},\\
-&amp;0=0.
-\end{align*}
-</div>
-<div class="para">The <span class="process-math">\(y\)</span>-component shows the pressure only depends on <span class="process-math">\(x\text{,}\)</span> and for the two terms in the <span class="process-math">\(x\)</span>-component:</div>
-<div class="displaymath process-math">
-\begin{align*}
-&amp;-\pd{p}{x}\quad\mbox{depends on  only},\\
-&amp;\mu\pd{^2u}{y^2}\quad\mbox{depends on  only}.
-\end{align*}
-</div>
-<div class="para">Hence both these terms are constant. Setting</div>
-<div class="displaymath process-math">
-\begin{equation*}
-G=-\pd{p}{x},
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(G\)</span> is constant, we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\mu\pd{^2u}{y^2}=-G.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.2.c.1"><a tabindex="-1" href="#problems-set-8-4-5-2" title="Copy heading and permalink for Solution 6.11.2.c.1" aria-label="Copy heading and permalink for Solution 6.11.2.c.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.2.d"><a href="problems-set-8.html#problems-set-8-4-6" aria-label="Back to 6.11.2.d"><span class="codenumber">6.11.2.d</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u=-\frac{G}{2\mu}y^2+C_1y+C_2,
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> are constants, and, applying the boundary condition at <span class="process-math">\(y=d\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0=-\frac{G}{2\mu}d^2+C_1d+C_2,
-\end{equation*}
-</div>
-<div class="para">and at <span class="process-math">\(y=-d\text{,}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-0=-\frac{G}{2\mu}d^2-C_1d+C_2.
-\end{equation*}
-</div>
-<div class="para">Subtracting these equations, we see that <span class="process-math">\(C_1=0\)</span> and then we find <span class="process-math">\(C_2=Gd^2/(2\mu)\text{.}\)</span> Hence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
-=\frac{G}{2\mu}\left(d^2-y^2\right),
-\end{equation*}
-</div>
-<div class="para">and <span class="process-math">\(v=w=0\text{.}\)</span>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.2.d.1"><a tabindex="-1" href="#problems-set-8-4-6-2" title="Copy heading and permalink for Solution 6.11.2.d.1" aria-label="Copy heading and permalink for Solution 6.11.2.d.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.2.e"><a href="problems-set-8.html#problems-set-8-4-7" aria-label="Back to 6.11.2.e"><span class="codenumber">6.11.2.e</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">For the plate at <span class="process-math">\(y=k\text{,}\)</span> the <span class="process-math">\(x\)</span>-component of the stress is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tau=-\mu\pd{u}{y}
-\end{equation*}
-</div>
-<div class="para">(the minus sign occurs since the vector into the fluid points in the <span class="process-math">\(-y\)</span>-direction) and the <span class="process-math">\(z\)</span>-component of the stress is zero since the flow is two-dimensional. The <span class="process-math">\(x\)</span>-component equals</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tau=-\mu \left(-\frac{Gd}{\mu}\right)=Gd.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">For the plate at <span class="process-math">\(y=-k\text{,}\)</span> the <span class="process-math">\(x\)</span>-component of the stress is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tau=\mu\pd{u}{y}
-\end{equation*}
-</div>
-<div class="para">(the plus sign occurs since the vector into the fluid points in the <span class="process-math">\(+y\)</span>-direction) and the <span class="process-math">\(z\)</span>-component of the stress is zero since the flow is two-dimensional. The <span class="process-math">\(x\)</span>-component equals</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\tau=\mu \left(-\frac{G(-d)}{\mu}\right)=Gd.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Thus the stress at both plates is <span class="process-math">\(Gd\)</span> in the <span class="process-math">\(+x\)</span>-direction, and the force on the whole plate is <span class="process-math">\(GdA\)</span> in the <span class="process-math">\(+x\)</span>-direction. Hence the tethering force to keep each plate fixed is <span class="process-math">\(GdA\)</span> in the <span class="process-math">\(-x\)</span>-direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Note that it is very easy to make a sign error on this type of question. I would therefore recommend always reflecting on your answer to see if the direction you get is what you’d expect from the physics. A viscous fluid tries to drag the surface along with the flow, and so the force due to the shear stress is sometimes called the <em class="emphasis">drag force</em>. Thus, the tethering force must oppose this drag force, which is what we found.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-4-7-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.2.e.1"><a tabindex="-1" href="#problems-set-8-4-7-2" title="Copy heading and permalink for Solution 6.11.2.e.1" aria-label="Copy heading and permalink for Solution 6.11.2.e.1">🔗</a></div>
-</div></details>
-</div></article></article>
-<article class="exercise-like"><h3 class="heading"><a href="problems-set-8.html#problems-set-8-5" aria-label="Back to 6.11.3. Wavy-walled pipe."><span class="codenumber">6.11.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Wavy-walled pipe.</span></a></h3>
-<article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.a"><a href="problems-set-8.html#problems-set-8-5-3" aria-label="Back to 6.11.3.a"><span class="codenumber">6.11.3.a</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/ch-chapter07-wavywalledtube-masscons.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.42<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Wavy-walled pipe – planes to apply mass conservation.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.42"><a tabindex="-1" href="#problems-set-8-5-3-2-1" title="Copy heading and permalink for Figure 6.42" aria-label="Copy heading and permalink for Figure 6.42">🔗</a></div></figcaption>
-</figure>
-<div class="para logical">
-<div class="para">The volumetric flux into the left-hand surface of this region equals area times velocity:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\pi (R^2-a^2)u
-\end{equation*}
-</div>
-<div class="para">and that out of the right-hand surface equals</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\pi \left((R+\de R)^2-a^2\right)(u+\de u)
-=\pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),
-\end{equation*}
-</div>
-<div class="para">where we used the chain rule to rewrite the increments in terms of <span class="process-math">\(\de z\text{.}\)</span> Note that throughout this equation, we neglect <span class="process-math">\(\de z^2\)</span> and higher powers, as they are small.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.a.1"><a tabindex="-1" href="#problems-set-8-5-3-2" title="Copy heading and permalink for Solution 6.11.3.a.1" aria-label="Copy heading and permalink for Solution 6.11.3.a.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.b"><a href="problems-set-8.html#problems-set-8-5-4" aria-label="Back to 6.11.3.b"><span class="codenumber">6.11.3.b</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The area of the inner cylinder in this region is <span class="process-math">\(2\pi a\de z\text{,}\)</span> and thus we have a volumetric flux <span class="process-math">\(2\pi aU\de z\)</span> entering this region from the inner cylinder.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.b.1"><a tabindex="-1" href="#problems-set-8-5-4-2" title="Copy heading and permalink for Solution 6.11.3.b.1" aria-label="Copy heading and permalink for Solution 6.11.3.b.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.c"><a href="problems-set-8.html#problems-set-8-5-5" aria-label="Back to 6.11.3.c"><span class="codenumber">6.11.3.c</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">Since the volume of the pipe between <span class="process-math">\(z\)</span> and <span class="process-math">\(z+\de z\)</span> is fixed, the total volumetric flux into this region equals the total volumetric flux out.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="para">Thus</div>
-<div class="displaymath process-math">
-\begin{align*}
-&amp;\pi (R^2-a^2)u + 2\pi aU\de z = \pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),\\
-\Rightarrow\quad&amp;
-2\pi aU\de z = \pi \left((R^2-a^2)u'+2RR'u\right)\de z,\\
-\Rightarrow\quad&amp;
-2aU = (R^2-a^2)u'+2RR'u,\\
-\Rightarrow\quad&amp;
-u' = \frac{2(aU-RR'u)}{R^2-a^2},
-\end{align*}
-</div>
-<div class="para">thus proving the result.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.c.1"><a tabindex="-1" href="#problems-set-8-5-5-2" title="Copy heading and permalink for Solution 6.11.3.c.1" aria-label="Copy heading and permalink for Solution 6.11.3.c.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.d"><a href="problems-set-8.html#problems-set-8-5-6" aria-label="Back to 6.11.3.d"><span class="codenumber">6.11.3.d</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para logical">
-<div class="para">A suitable lengthscale is <span class="process-math">\(R_0\text{.}\)</span> Simplifying the differential equation for <span class="process-math">\(u\text{,}\)</span> by neglecting variations in pipe radius <span class="process-math">\(R'\)</span> and the radius of the inner cylinder <span class="process-math">\(a\text{,}\)</span> gives</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\dd{u}{z} \approx \frac{2aU}{R_0^2},
-\end{equation*}
-</div>
-<div class="para">suggesting a suitable velocity scale is this times <span class="process-math">\(L\)</span> (the velocity that would be attained at the end of the pipe):</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{2aLU}{R_0^2}.
-\end{equation*}
-</div>
-<div class="para">Hence the Reynolds number is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\mathrm{Re}=\frac{\rho R_0}{\mu}\frac{2aLU}{R_0^2}
-=\frac{2aLU\rho}{\mu R_0}.
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Many students did not find an expression for the velocity scale, and just left it as <span class="process-math">\(u(z)\)</span> or similar. This would mean that we do not have an expression for the Reynolds number in terms of the problem parameters. Also, many students did not approximate <span class="process-math">\(R-a\)</span> as <span class="process-math">\(R_0\text{,}\)</span> which simplifies the expression (some did get <span class="process-math">\(R_0-a\text{,}\)</span> but you can go further than this).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">I have added a final sentence to the question to clarify that the answer should be in terms of the problem parameters as very few students attempted to find an order of magnitude for <span class="process-math">\(u(z)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.d.1"><a tabindex="-1" href="#problems-set-8-5-6-2" title="Copy heading and permalink for Solution 6.11.3.d.1" aria-label="Copy heading and permalink for Solution 6.11.3.d.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.e"><a href="problems-set-8.html#problems-set-8-5-7" aria-label="Back to 6.11.3.e"><span class="codenumber">6.11.3.e</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The Reynolds number would need to be large (but not so large that the flow becomes turbulent).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">In the limit of large Reynolds number, we would recover the Euler equation from the Navier–Stokes equation (see <a href="ws-viscousflows.html#ex-limits-low-high-Reynolds" class="xref" data-knowl="./knowl/xref/ex-limits-low-high-Reynolds.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.11: Limits of low and high Reynolds number">Exercise 6.9.11</a>). In this limit we only need a no-penetration condition (<span class="process-math">\(\bu\cdot\hat{\bn}=0\)</span>) and not the full no-slip conditions (<span class="process-math">\(\bu=\bzero\)</span>), and so in this case uniform flow is possible.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.e.1"><a tabindex="-1" href="#problems-set-8-5-7-2" title="Copy heading and permalink for Solution 6.11.3.e.1" aria-label="Copy heading and permalink for Solution 6.11.3.e.1">🔗</a></div>
-</div></details>
-</div></article><article class="exercise-like"><h4 class="heading hide-type" title="Task 6.11.3.f"><a href="problems-set-8.html#problems-set-8-5-8" aria-label="Back to 6.11.3.f"><span class="codenumber">6.11.3.f</span></a></h4>
-<div class="solutions">
-<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
-<div class="solution solution-like knowl__content">
-<div class="para">The flow would need to satisfy the no-slip boundary condition at the outer cylinder and the velocity there would therefore tend to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#problems-set-8-5-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 6.11.3.f.1"><a tabindex="-1" href="#problems-set-8-5-8-2" title="Copy heading and permalink for Solution 6.11.3.f.1" aria-label="Copy heading and permalink for Solution 6.11.3.f.1">🔗</a></div>
 </div></details>
 </div></article></article><div class="autopermalink" aria-hidden="true" data-description="Appendix A: Solutions"><a tabindex="-1" href="#solutions" title="Copy heading and permalink for Appendix A: Solutions" aria-label="Copy heading and permalink for Appendix A: Solutions">🔗</a></div>
 </section>
