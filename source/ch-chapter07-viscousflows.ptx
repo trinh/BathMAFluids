@@ -5994,19 +5994,19 @@
           </p>
           <figure xml:id="fig-womersley-example-1">
             <caption>Womersley flow profile for <m>\alpha=1</m>.</caption>
-            <image source="ch-chapter07-womersley1" width="50%">
+            <image source="ch-chapter07-womersley1.gif" width="50%">
               <shortdescription>Womersley <m>\alpha=1</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-10">
             <caption>Womersley flow profile for <m>\alpha=10</m>.</caption>
-            <image source="ch-chapter07-womersley10" width="50%">
+            <image source="ch-chapter07-womersley10.gif" width="50%">
               <shortdescription>Womersley <m>\alpha=10</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-100">
             <caption>Womersley flow profile for <m>\alpha=100</m>.</caption>
-            <image source="ch-chapter07-womersley100" width="50%">
+            <image source="ch-chapter07-womersley100.gif" width="50%">
               <shortdescription>Womersley <m>\alpha=100</m></shortdescription>
             </image>
           </figure>
