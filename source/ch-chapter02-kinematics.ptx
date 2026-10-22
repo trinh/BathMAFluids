@@ -943,9 +943,12 @@
           one-dimensional velocity <me>
             u=U\left(1+\frac{x}{L}\right)
           </me> in the <m>x</m>-direction,
-          where <m>
-            U</m> and <m>L</m> are constants. Note that, in reality the flow would be two- or
-          three-dimensional, but we ignore this here for simplicity. </p>
+          where <m>U</m> and <m>L</m> are constants.
+          Note that, in reality the flow would be two- or
+          three-dimensional, but we ignore this here for simplicity.
+          Also note that the flow does not satisfy volume conservation at each point
+          or no-penetration boundary conditions on the nozzle,
+          any you may neglect this issue in this question.'</p>
 
         <figure xml:id="fig-nozzle">
           <caption>Sketch of nozzle.</caption>
