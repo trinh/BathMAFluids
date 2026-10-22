@@ -948,7 +948,7 @@
           three-dimensional, but we ignore this here for simplicity.
           Also note that the flow does not satisfy volume conservation at each point
           or no-penetration boundary conditions on the nozzle,
-          any you may neglect this issue in this question.'</p>
+          any you may neglect this issue in this question.</p>
 
         <figure xml:id="fig-nozzle">
           <caption>Sketch of nozzle.</caption>
