@@ -516,7 +516,10 @@ Fluid Mechanics
     <!-- <exercisegroup> -->
     <!-- <title>Introductory matter</title> -->
     <introduction>
-      <p> There are currently no problems in this set. </p>
+      <remark xml:id="remark-solutions-feedback-introduction">
+        <title>Solutions and feedback</title>
+        <p>There are no exercises in this chapter. Exercises, with full solutions in <xref ref="solutions"/> at the back of the book, begin in <xref ref="ws-kinematics"/>.</p>
+      </remark>
       <!-- <p>
     <warning>
       <p>We look to complete worksheets in the week prior to the content being delivered. Once this is
@@ -850,8 +853,7 @@ A_k\right)</mrow>
         </p>
         </answer>
       </li>
-      <li>The following identity will be useful for proving the vorticity equation in <xref
-ref="ch-chapter03-equations"/> of this course:
+      <li>The following identity is useful when studying the vorticity, <m>\bnabla\times\bu</m>:
         <me>\bnabla\times\left(\bu\cdot\bnabla\bu\right)
           =\bu\cdot\bnabla\left(\bnabla\times\bu\right)
           +\left(\bnabla\cdot\bu\right)\left(\bnabla\times\bu\right)

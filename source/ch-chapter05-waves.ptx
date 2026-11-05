@@ -80,37 +80,12 @@
       </p>
 
       <p>
-        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. We require yet another version of Bernoilli's equation from a previous chapter, this one for unsteady flow and posed in terms of a potential function. This involves returning to an earlier manipulation of the momentum equation giving <xref ref="eqn-bernoulli-unsteady-chap3"/>:
+        Typically, we need the above pressure condition expressed in terms of <m>\phi</m>, and this suggests using Bernoulli's equation. Recall from <xref ref="thm-bernoulli-unsteady-potential"/> that, for an unsteady potential flow,
+        <me>
+          \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
+        </me>
+        for some function <m>F(t)</m>, where <m>\bg = -\nabla\chi</m> is the conservative body force.
       </p>
-
-      <theorem xml:id="thm-bernoulli-unsteady-potential">
-        <title>Bernoulli's equation for unsteady potential flow</title>
-        <statement>
-          <p>
-           Bernoulli's equation for unsteady potential flow states that 
-           <men xml:id="eqn-bernoulli-unsteady-potential">
-            \pd{\phi}{t} + \frac{1}{2}|\nabla\phi|^2 + \frac{p}{\rho} + \chi = F(t),
-           </men>
-          for an arbitrary function <m>F(t)</m>, and where <m>\bg = -\nabla\chi</m> is the conservative body force. 
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Returning to <xref ref="eqn-bernoulli-unsteady-chap3"/>, we re-write in terms of the potential function and set the vorticity <m>\omega = \nabla \times \bu = 0</m>, giving 
-            <me>
-              \pd{}{t}(\nabla \phi) = - \nabla \left(\frac{1}{\rho}\nabla p +
-            \frac{1}{2} |\nabla \phi|^2 + \chi\right).
-            </me>
-            We can interchange the order of differentiation on the left 
-            <me>
-            \nabla\left(  \pd{\phi}{t}+\frac{1}{\rho}\nabla p +
-            \frac{1}{2} |\nabla \phi|^2 + \chi\right) = 0.
-            </me> 
-            We now integrate each of the spatial components and this yields the desired result.
-          </p>
-        </proof>
-      </theorem>
 
       <p>
         Below, we will set the body force indeed to be gravity. Thus if we write 
@@ -447,6 +422,39 @@
       <p>
         The above expression is known as the <em>dispersion relation</em> for water waves in deep water. 
       </p>
+
+      <figure xml:id="fig-dispersion-finite-infinite">
+        <caption>The dispersion relation for linear gravity waves in infinite depth, <m>\omega = \sqrt{gk}</m> (solid), and in finite depth <m>h</m>, <m>\omega = \sqrt{gk\tanh(kh)}</m> (dashed), plotted in terms of <m>kh</m>. The two agree for short waves (<m>kh</m> large) and differ for long waves (<m>kh</m> small). The finite-depth case is treated in <xref ref="ex-hw-waterwaves-finite"/>.</caption>
+        <image source="dispersion-finite-infinite" width="75%"/>
+      </figure>
+
+      <p>
+        The difference between the two cases is clearer if we look at the phase speed <m>c = \omega/k</m> from <xref ref="eqn-wavespeed"/>. In deep water,
+        <me>
+          c = \sqrt{\frac{g}{k}},
+        </me>
+        which grows without bound as <m>k \to 0</m>. The deep-water theory therefore predicts that very long waves travel arbitrarily fast. This happens because the deep-water model is being used outside its range of validity. The solution <m>f(y) = B\e^{ky}</m> decays over a vertical distance of order <m>1/k</m>, which is comparable to the wavelength. When the wavelength is much longer than the depth, <m>kh \ll 1</m>, the motion reaches the bottom, and the depth can no longer be ignored.
+      </p>
+
+      <p>
+        In finite depth, the phase speed is instead
+        <me>
+          c = \sqrt{\frac{g}{k}\tanh(kh)} \to \sqrt{gh} \qquad \text{as $kh \to 0$},
+        </me>
+        since <m>\tanh(kh) \sim kh</m> for small <m>kh</m>. The speed of long waves is therefore bounded, and it is independent of <m>k</m>: long waves in shallow water are <em>non-dispersive</em>. For short waves, <m>kh \gg 1</m>, we have <m>\tanh(kh) \to 1</m> and the deep-water result is recovered. In practice, the deep-water approximation is accurate once <m>kh \gtrsim 3</m>, since <m>\tanh 3 \approx 0.995</m>.
+      </p>
+
+      <figure xml:id="fig-phase-group-speed">
+        <caption>Phase speed <m>c = \omega/k</m> (black) and group velocity <m>v_g = \dd{\omega}{k}</m> (blue) for linear gravity waves in infinite depth (solid) and finite depth <m>h</m> (dashed), scaled by <m>\sqrt{gh}</m> and plotted against <m>kh</m>. In infinite depth, <m>c = \sqrt{g/k}</m> and <m>v_g = c/2</m>, and both become unbounded as <m>kh \to 0</m>. In finite depth, <m>c = \sqrt{(g/k)\tanh(kh)}</m> and <m>v_g = \tfrac{1}{2}c\left(1 + 2kh/\sinh(2kh)\right)</m>, and both tend to <m>\sqrt{gh}</m> as <m>kh \to 0</m>. The group velocity is introduced in <xref ref="ex-hw-waterwaves-dispersion"/>, and the finite-depth case is treated in <xref ref="ex-hw-waterwaves-finite"/>.</caption>
+        <image source="phase-group-speed" width="75%"/>
+      </figure>
+
+      <figure xml:id="fig-ripples-pond">
+        <caption>A still from the video <url href="https://www.youtube.com/watch?v=dESm6VjfSNs">"Ripples in a pond"</url>; only the first 1 minute 10 seconds, which covers gravity waves, is needed. We will play the first minute of this video to show the behaviour of ripples in a pond. Pay attention to two facts: (i) waves of different wavelength travel at different speeds (dispersion); and (ii) the individual waves move faster than the group.</caption>
+        <image source="ch-chapter05-ripples-pond.jpeg" width="70%">
+          <shortdescription>Expanding circular ripples on a pond reflecting trees, with an on-screen caption reading "which means that the longer waves move faster, to the front of the group".</shortdescription>
+        </image>
+      </figure>
     </subsection>
 
 
@@ -461,7 +469,7 @@
      <ul>
       <li>
         <p>
-          Linear water waves in finite depth: part of <xref ref="ex-waterwaves-finite"/> and done in Problem Class Week 6.
+          Linear water waves in finite depth: covered in <xref ref="ex-hw-waterwaves-finite"/>.
         </p>
 
         <p>
@@ -478,7 +486,7 @@
       </li>
       <li>
         <p>
-          Linear water waves in a current: part of <xref ref="ex-waterwaves-current"/> and done in Week 6 Thursday video. 
+          Linear water waves in a current: covered in <xref ref="ex-waterwaves-current"/>.
         </p>
 
         <p>
@@ -494,7 +502,7 @@
       </li>
      <li>
         <p>
-          Linear water waves in two fluids of different densities: part of <xref ref="ex-waterwaves-density"/> and done in Week 7 Problem Class.
+          Linear water waves in two fluids of different densities. This material is not examinable this year.
         </p>
 
         <p>
@@ -528,7 +536,7 @@
       </li>
      <li>
         <p>
-          Linear water waves with surface tension: part of <xref ref="ex-waterwaves-surfacetension"/> and done in Week 7 Problem Class.
+          Linear water waves with surface tension: see <xref ref="ex-waterwaves-surfacetension"/>. This material is not examinable this year.
         </p>
 
         <p>
@@ -558,6 +566,18 @@
   </section> -->
 
   <exercises xml:id="exercises-water-waves">
+
+    <introduction>
+      <remark xml:id="remark-solutions-feedback-waves">
+        <title>Solutions and feedback</title>
+        <p>Full solutions to these exercises can be found in <xref ref="solutions-waves">the solutions to this chapter</xref> in <xref ref="solutions"/> at the back
+          of the book.</p>
+
+        <p>If you would like feedback on your work, the tutor will by default concentrate on the
+          exercises highlighted with a yellow background in the online notes (the homework
+          exercises), unless you specifically ask for feedback on a different exercise instead.</p>
+      </remark>
+    </introduction>
    
     <exercise>
       <title>Derivation of the kinematic condition</title>
@@ -592,7 +612,7 @@
           </solution>
     </exercise>
 
-    <exercise xml:id="ex-waterwaves-finite">
+    <exercise xml:id="ex-hw-waterwaves-finite">
       <title>Stokes waves in finite depth</title>
 
 <statement>
@@ -634,7 +654,7 @@
 
 <solution>
   <p>
-    Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions, 
+    Firstly, we look to linearise the two surface boundary conditions, 
     <md>
       <mrow>\pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},</mrow>
       <mrow>\pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0,</mrow>
@@ -895,7 +915,7 @@
       <!-- </solution> -->
     </exercise>
 
-    <exercise xml:id="ex-waterwaves-density">
+    <!-- Removed this year (kept in source). <exercise xml:id="ex-waterwaves-density">
       <title>Fluids of different densities</title>
 
       <statement>
@@ -1002,14 +1022,18 @@
           
         </p>
       </solution>
-    </exercise>
+    </exercise> -->
 
     <exercise xml:id="ex-waterwaves-surfacetension">
       <title>Fluids with surface tension</title>
 
       <statement>
         <p>
-          Suppose now that there is surface tension <m>T</m> between the two fluids of <xref ref="ex-waterwaves-density"/>. In lectures, it was shown that the linear dynamic boundary condition is given by 
+          <em>Note:</em> the material in this exercise is not taught and is not examinable this year. It is kept in the notes in case it appeared on a previous assessment.
+        </p>
+
+        <p>
+          Suppose now that there is surface tension <m>T</m> between two fluids, with density <m>\rho_1</m> in the lower region <m>y &lt; \eta</m> and density <m>\rho_2</m> in the upper region <m>y &gt; \eta</m>. In lectures, it was shown that the linear dynamic boundary condition is given by 
           <me>
             \rho_1\left( \pd{\phi_1}{t} + g\eta\right) - \rho_2 \left( \pd{\phi_2}{t} + g\eta\right) = T \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$}.
           </me>
@@ -1032,10 +1056,6 @@
 
 
         <solution>
-          <p>
-            This question was done in the problem class recording on 11 November 2025, accessed <url href="https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695">here</url>.
-          </p>
-
           <p>
             Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give 
             <me>
@@ -1067,7 +1087,7 @@
         </solution>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="ex-hw-waterwaves-dispersion">
       <title>The dispersion relation (simple)</title>
       <introduction>
       <p>
@@ -1147,11 +1167,11 @@
 
           <solution>
             <p>
-              This part is quite straightforward. The maxima of the cosines are found at multiples of <m>2\pi</m> in the argument. For example, the first maxima lies at <m>\Delta k x - \Delta \omega t = 0,</m> hence <m>x(t) = (\Delta k/\Delta \omega)t.</m>
+              This part is quite straightforward. The maxima of the cosines are found at multiples of <m>2\pi</m> in the argument. For example, the first maximum lies at <m>\Delta k x - \Delta \omega t = 0,</m> hence <m>x(t) = (\Delta \omega/\Delta k)t.</m>
             </p>
 
             <p>
-              This is indeed equivalent to a particle that moves with velocity <m>\Delta k/\Delta \omega</m>. In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity, 
+              This is indeed equivalent to a particle that moves with velocity <m>\Delta \omega/\Delta k</m>. In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity, 
               <me>
                 v_g = \dd{\omega}{k}.
               </me>
