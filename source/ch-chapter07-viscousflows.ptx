@@ -6145,7 +6145,7 @@
   </exercises>
 
   <exercises>
-    <title>Problems set 7 to hand in</title>
+    <title>Problems set 5 to hand in</title>
     <introduction>
       <p>
         Please hand in the problems in this Section for Set 7 (due in the week commencing 1 Dec).
@@ -6707,10 +6707,60 @@
         </solution>-->
       </task>
     </exercise>
+
+    <exercise>
+      <title>
+        Calculation of the stress tensor
+      </title>
+      <introduction>
+        <p>
+          For each of the following flows of an incompressible Newtonian fluid
+          of density <m>\rho</m> and shear viscosity <m>\mu</m>, check that the flow is possible
+          (<em>i.e.</em> that it is incompressible)
+          and calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\bu=(ky,0,0)</m> and <m>p=p_0</m>, where <m>k</m> and <m>p_0</m> are constants.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <me>\bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,</me>
+            and therefore this is a possible flow. For this fluid,
+            <me>\bsigma=-p\bI+2\mu\be</me>.
+            We have
+            <me>
+              \be=\frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
+              =\left(\begin{matrix}
+              \pd{u}{x} &amp; \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
+              \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \pdf{v}{y} &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
+              \frac12\left(\pd{u}{z}+\pd{w}{x}\right) &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) &amp; \pd{w}{z}
+              \end{matrix}\right),
+              =\left(\begin{matrix}
+              0 &amp; k/2 &amp; 0 \\
+              k/2 &amp; 0 &amp; 0 \\
+              0 &amp; 0 &amp; 0
+              \end{matrix}\right)
+            </me>
+            The stress tensor is therefore
+            <me>
+              =\left(\begin{matrix}
+              0 &amp; k/2 &amp; 0 \\
+              k/2 &amp; 0 &amp; 0 \\
+              0 &amp; 0 &amp; 0
+              \end{matrix}\right)
+            </me>
+          </p>
+        </solution>
+      </task>
+    </exercise>
   </exercises>
 
   <exercises xml:id="problems-set-8">
-    <title>Problems set 8 to hand in</title>
+    <title>Problems set 6 to hand in</title>
     <introduction>
       <p>
         Please hand in the problems in this Section for Set 8 (the final set of problems, due in the week commencing 8 Dec).
