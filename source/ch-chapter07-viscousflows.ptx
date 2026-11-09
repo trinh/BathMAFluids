@@ -6717,53 +6717,174 @@
       </task>
     </exercise>
 
-    <exercise>
+        <exercise>
       <title>
         Calculation of the stress tensor
       </title>
       <introduction>
         <p>
           For each of the following flows of an incompressible Newtonian fluid
-          of density <m>\rho</m> and shear viscosity <m>\mu</m>, check that the flow is possible
-          (<em>i.e.</em> that it is incompressible)
-          and calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
+          of density <m>\rho</m> and shear viscosity <m>\mu</m>, (i) check that the flow is possible
+          (<em>i.e.</em> that it is incompressible), (ii) sketch the flow,
+          and (iii) calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
         </p>
       </introduction>
       <task>
         <statement>
           <p>
-            <m>\bu=(ky,0,0)</m> and <m>p=p_0</m>, where <m>k</m> and <m>p_0</m> are constants.
+            The simple shear flow <m>\bu=(ky,0,0)</m> and <m>p=p_0</m> in <m>y>0</m>,
+            where <m>k</m> and <m>p_0</m> are constants.
           </p>
         </statement>
-        <solution>
+        <!--<solution>
           <p>
-            <me>\bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,</me>
-            and therefore this is a possible flow. For this fluid,
+            (i)
+            <me>
+              \bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
+            </me>
+            and therefore this is a possible flow.
+          </p>
+          <p>
+            (ii)
+            <figure>
+              <caption>Answer to (ii) for parts (a), (b) and (c).</caption>
+              <image source="ch-chapter07-flows-question.jpg" width="50%" />
+            </figure>
+          </p>
+          <p>
+            (iii) For this fluid,
             <me>\bsigma=-p\bI+2\mu\be</me>.
             We have
-            <me>
-              \be=\frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
-              =\left(\begin{matrix}
-              \pd{u}{x} &amp; \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
-              \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \pdf{v}{y} &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
-              \frac12\left(\pd{u}{z}+\pd{w}{x}\right) &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) &amp; \pd{w}{z}
-              \end{matrix}\right),
-              =\left(\begin{matrix}
-              0 &amp; k/2 &amp; 0 \\
-              k/2 &amp; 0 &amp; 0 \\
-              0 &amp; 0 &amp; 0
-              \end{matrix}\right)
-            </me>
+            <md>
+              <mrow>
+                \be= &amp; \frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                \pd{u}{x} &amp; \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
+                \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \pd{v}{y} &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
+                \frac12\left(\pd{u}{z}+\pd{w}{x}\right) &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) &amp; \pd{w}{z}
+                \end{matrix}\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                0 &amp; k/2 &amp; 0 \\
+                k/2 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 0
+                \end{matrix}\right)
+              </mrow>
+            </md>
             The stress tensor is therefore
             <me>
-              =\left(\begin{matrix}
-              0 &amp; k/2 &amp; 0 \\
-              k/2 &amp; 0 &amp; 0 \\
-              0 &amp; 0 &amp; 0
+              \bsigma=\left(\begin{matrix}
+              -p &amp; \mu k &amp; 0 \\
+              \mu k &amp; -p &amp; 0 \\
+              0 &amp; 0 &amp; -p
               \end{matrix}\right)
             </me>
           </p>
-        </solution>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            A rotating flow <m>\bu=(-ky,kx,0)</m> and <m>p=p_0</m>,
+            where <m>k</m> and <m>p_0</m> are constants.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            (i)
+            <me>
+              \bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
+            </me>
+            and therefore this is a possible flow.
+          </p>
+          <p>
+            (ii) See part (a).
+          </p>
+          <p>
+            (iii) For this fluid,
+            <me>\bsigma=-p\bI+2\mu\be</me>.
+            We have
+            <md>
+              <mrow>
+                \be= &amp; \frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                \pd{u}{x} &amp; \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
+                \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \pd{v}{y} &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
+                \frac12\left(\pd{u}{z}+\pd{w}{x}\right) &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) &amp; \pd{w}{z}
+                \end{matrix}\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                0 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 0 \\
+                0 &amp; 0 &amp; 0
+                \end{matrix}\right)
+                =\bzero
+              </mrow>
+            </md>
+            The stress tensor is therefore
+            <me>
+              \bsigma=-p\bI
+            </me>
+          </p>
+        </solution>-->
+      </task>
+      <task>
+        <statement>
+          <p>
+            A straining flow <m>\bu=(kx,-ky,0)</m> and <m>p=p_0</m>, where <m>k</m> and <m>p_0</m> are constants.
+          </p>
+        </statement>
+        <!--<solution>
+          <p>
+            (i)
+            <me>
+              \bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=k-k+0=0,
+            </me>
+            and therefore this is a possible flow.
+          </p>
+          <p>
+            (ii) See part (a).
+          </p>
+          <p>
+            (iii) For this fluid,
+            <me>\bsigma=-p\bI+2\mu\be</me>.
+            We have
+            <md>
+              <mrow>
+                \be= &amp; \frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                \pd{u}{x} &amp; \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
+                \frac12\left(\pd{u}{y}+\pd{v}{x}\right) &amp; \pd{v}{y} &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
+                \frac12\left(\pd{u}{z}+\pd{w}{x}\right) &amp; \frac12\left(\pd{v}{z}+\pd{w}{y}\right) &amp; \pd{w}{z}
+                \end{matrix}\right)
+              </mrow>
+              <mrow>
+                = &amp; \left(\begin{matrix}
+                k &amp; 0 &amp; 0 \\
+                0 &amp; -k &amp; 0 \\
+                0 &amp; 0 &amp; 0
+                \end{matrix}\right)
+                =\bzero
+              </mrow>
+            </md>
+            The stress tensor is therefore
+            <me>
+              \bsigma=\left(\begin{matrix}
+              -p+2\mu k &amp; 0 &amp; 0 \\
+              0 &amp; -p-2\mu k &amp; 0 \\
+              0 &amp; 0 &amp; -p
+              \end{matrix}\right)
+            </me>
+          </p>
+        </solution>-->
       </task>
     </exercise>
   </exercises>
