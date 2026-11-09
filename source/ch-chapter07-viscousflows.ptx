@@ -1780,18 +1780,110 @@
       <remark>
         <title>Non-inertial reference frames</title>
         <p>
+          <em>You do not need to recall the formula as given here,
+          but you could be given assistance to add an apparent force into the equation.</em>
+        </p>
+        <p>
           The Navier<ndash/>Stokes equations can be adapted for use in a non-inertial reference frame:
           <me>
             \rho\left(\pd{\bu_n}{t}+\bu_n\cdot\nabla_n\bu_n\right)
-            =-\nabla_n p+\mu\nabla_n^2\bu_n+\rho\bf_{\textrm{apparent}}+\rho\bg_n,
+            =-\nabla_n p+\mu\nabla_n^2\bu_n-\rho\ba_{\textrm{frame}}+\rho\bg_n,
           </me>
           where <m>\bu_n</m> and <m>\nabla_n</m> are, respectively, the velocity and gradient operator in the
-          non-inertial coordinates, and <m>\bf_{\textrm{apparent}}</m> is the apparent additional
-          force acting on the fluid due to the non-inertial nature of the reference frame,
-          which has contributions due to the linear acceleration and angular accelerations of the
+          non-inertial coordinate frame,
+          and <m>\ba_{\textrm{frame}}</m> is the acceleration of the non-inertial coordinate frame
+          with respect to a fixed coordinate frame.
+        </p>
+        <p>
+          In general the acceleration has contributions from the linear acceleration
+          and angular accelerations of the
           non-inertial reference frame, and the Coriolis and centrifugal forces.
         </p>
+        <p>
+          It can be helpful to think of <m>-\rho\ba_{\textrm{frame}}</m> as an apparent force
+          per unit volume of fluid acting on the fluid due to
+          the non-inertial nature of the reference frame.
+        </p>
+        <p>
+          Note that gravitational force can also be viewed as the effect of
+          being in a non-inertial reference frame, as compared with
+          an `inertial' reference frame, which is in free fall under gravity.
+          This is explained further in the next example.
+        </p>
       </remark>
+      <example>
+        <title>Example of a non-interial reference frame</title>
+        <statement>
+          <p>
+            A box containing a fluid accelerates with linear acceleration vector <m>\ba</m>
+            (and no rotation)
+            in Cartesian coordinates fixed relative to Earth.
+            Write down the Navier<ndash/>Stokes equations in the non-inertial frame of reference
+            fixed to the box, <em>i.e.</em> in local coordinates within the box.
+          </p>
+          <p>
+            What pressure field could be subtracted so as to eliminate body forces?
+            What does this tell us about the flow in the non-inertial reference frame?
+          </p>
+          <p>
+            What choice of acceleration eliminates the body force? Why is this?
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The Navier<ndash/>Stokes equation governing the fluid motion reads
+            <me>
+              \rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+              =-\nabla p+\mu\nabla^2\bu-\rho\ba+\rho\bg,
+            </me>
+            (omitting subscripts `<m>n</m>' since vectors are the same in non-inertial
+            and inertial reference frames).
+          </p>
+          <p>
+            Writing <m>p=p_1+\rho(\bg_n-\ba)\cdot\bx</m>, we get
+            <me>
+              \rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+              =-\nabla p_1+\mu\nabla^2\bu,
+            </me>
+            and therefore the fluid velocity in the non-inertial reference frame
+            is exactly the same as it would be in the inertial reference frame!
+          </p>
+          <p>
+            Here we see a very important general principle, that in a linearly accelerating
+            non-inertial reference frame, the acceleration does not produce a flow.
+            More generally, in a rotating and translating reference frame,
+            it is only the rotational component that induces a flow in the fluid.
+            Pure translations of the frame of reference result in changes in fluid pressure,
+            and no fluid motion.
+          </p>
+          <p>
+            For the particular choice <m>\ba=\bg</m>,
+            the body force terms in the Navier--Stokes equations cancel
+            and we get
+            <me>
+              \rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+              =-\nabla p+\mu\nabla^2\bu,
+            </me>
+            that is, a flow subjected to no body force.
+            This reference frame is in what is called <em>free fall</em>,
+            which is the reference frame in an oblect falling under gravity.
+          </p>
+          <p>
+            You might have heard of experiments being done in free fall to
+            simulate the effect of no gravity.
+            To experience free fall, you just need to drop under gravity.
+            You can drop an object under its own gravity,
+            but this doesn't last very long.
+            Even very tall fairground rides, such as Skyfall
+            (a drop of several tens of metres), only give
+            you a very few seconds worth of weightlessness.
+            The next level is inside an aircraft on a parabolic flight,
+            where you get several seconds worth of weightlessness
+            (for example, see <url href="https://www.youtube.com/shorts/zVgJjdupZ5o" visual="Free fall experience">this short video</url>).
+            For long-lasting weightlessness, visit outer space!
+          </p>
+        </solution>
+      </example>
       <remark>
         <title>Inviscid fluids</title>
         <p>
@@ -1801,6 +1893,10 @@
       </remark>
       <remark xml:id="navier-stokes-continuity-cylindrical">
         <title>Navier<ndash/>Stokes and continuity equations in cylindrical coordinates</title>
+        <p>
+          <em>You do not need to be able to recall the form of these equations,
+          but you could be provided with them in an exam and asked to use them.</em>
+        </p>
         <p>
           In cylindrical coordinates <m>(r,\theta,z)</m> the continuity equation is
           <me>
@@ -1848,6 +1944,10 @@
       </remark>
       <remark xml:id="navier-stokes-continuity-spherical">
         <title>Navier<ndash/>Stokes and continuity equations in spherical coordinates</title>
+        <p>
+          <em>You do not need to be able to recall the form of these equations,
+          but you could be provided with them in an exam and asked to use them.</em>
+        </p>
         <p>
           In spherical coordinates <m>(r,\theta,\phi)</m> the continuity equation is
           <me>
@@ -2070,6 +2170,10 @@
             \rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)=-\nabla p+\rho\bg,\quad \nabla\cdot\bu=0.
           </men>
         </p>
+        This recovers what you were studying in the first part of this course.
+        Therefore we may think of the inviscide flows that you have studied previous section
+        as flows in the limit of high Reynolds number
+        (but not a sufficiently high Reynolds number that the flow becomes turbulent!).
       </subsubsection>
     </subsection>
   </section>
