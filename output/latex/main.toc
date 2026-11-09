@@ -1,4 +1,3 @@
-\xpg@aux {variant=usmax}{english}
 \hypertarget {my-great-book}{}
 \contentsline {chapter}{Official description}{iv}{chapter*.1}%
 \contentsline {chapter}{History of the unit}{vi}{chapter*.4}%
@@ -11,74 +10,121 @@
 \contentsline {subsection}{\numberline {1.2.1}Basic complex representations}{8}{subsection.26}%
 \contentsline {subsection}{\numberline {1.2.2}Complex functions}{8}{subsection.30}%
 \contentsline {section}{\numberline {1.3}Exercises}{10}{section.35}%
-\contentsline {chapter}{\numberline {2}Kinematics}{11}{chapter.36}%
-\contentsline {section}{\numberline {2.1}Eulerian and Lagrangian coordinates}{13}{section.43}%
-\contentsline {subsection}{\numberline {2.1.1}The convective derivative}{14}{subsection.50}%
-\contentsline {section}{\numberline {2.2}Flow visualisation, fluxes, and forces}{16}{section.63}%
-\contentsline {subsection}{\numberline {2.2.1}Definitions of streamlines, pathlines, streaklines}{16}{subsection.64}%
-\contentsline {subsection}{\numberline {2.2.2}Examples of streamlines, pathlines, and streaklines}{17}{subsection.71}%
-\contentsline {subsection}{\numberline {2.2.3}Fluxes and forces}{21}{subsection.86}%
-\contentsline {section}{\numberline {2.3}Exercises}{23}{section.96}%
-\contentsline {chapter}{\numberline {3}Equations of motion}{27}{chapter.130}%
-\contentsline {section}{\numberline {3.1}Reynolds' Transport Theorem}{29}{section.145}%
-\contentsline {subsection}{\numberline {3.1.1}Jacobian of Lagrangian to Eulerian}{29}{subsection.146}%
-\contentsline {subsection}{\numberline {3.1.2}Reynolds' Transport Theorem}{30}{subsection.152}%
-\contentsline {section}{\numberline {3.2}Conservation of mass}{32}{section.165}%
-\contentsline {subsection}{\numberline {3.2.1}Derivation of mass conservation using Eulerian methods}{33}{subsection.172}%
-\contentsline {subsection}{\numberline {3.2.2}Corollary of the Transport Theorem}{35}{subsection.178}%
-\contentsline {section}{\numberline {3.3}Momentum balance}{35}{section.182}%
-\contentsline {subsection}{\numberline {3.3.1}Proof of the momentum equation for an inviscid fluid}{35}{subsection.186}%
-\contentsline {section}{\numberline {3.4}The Euler equations}{37}{section.193}%
-\contentsline {subsection}{\numberline {3.4.1}Incompressible fluids and the Euler equations}{37}{subsection.194}%
-\contentsline {subsection}{\numberline {3.4.2}Boundary conditions}{39}{subsection.212}%
-\contentsline {section}{\numberline {3.5}Bernoulli's equation}{39}{section.216}%
-\contentsline {subsection}{\numberline {3.5.1}Potential flow}{41}{subsection.238}%
-\contentsline {section}{\numberline {3.6}Exercises}{43}{section.253}%
-\contentsline {chapter}{\numberline {4}Potential flows}{47}{chapter.283}%
-\contentsline {section}{\numberline {4.1}The velocity potential}{47}{section.288}%
-\contentsline {subsection}{\numberline {4.1.1}Elementary flows}{49}{subsection.299}%
-\contentsline {section}{\numberline {4.2}The streamfunction}{53}{section.316}%
-\contentsline {subsection}{\numberline {4.2.1}Elementary flows}{56}{subsection.333}%
-\contentsline {section}{\numberline {4.3}The complex potential}{59}{section.350}%
-\contentsline {subsection}{\numberline {4.3.1}Cauchy's theorem and harmonic functions}{60}{subsection.356}%
-\contentsline {subsection}{\numberline {4.3.2}Examples of elementary flows}{61}{subsection.370}%
-\contentsline {section}{\numberline {4.4}The method of images}{63}{section.386}%
-\contentsline {subsection}{\numberline {4.4.1}Planar boundaries: a half-plane}{63}{subsection.387}%
-\contentsline {section}{\numberline {4.5}Conformal mapping}{67}{section.398}%
-\contentsline {subsection}{\numberline {4.5.1}Source in a wedge}{68}{subsection.401}%
-\contentsline {subsection}{\numberline {4.5.2}The conformal mapping method}{68}{subsection.407}%
-\contentsline {subsection}{\numberline {4.5.3}Standard conformal maps}{69}{subsection.415}%
-\contentsline {section}{\numberline {4.6}Flow past an aerofoil}{70}{section.427}%
-\contentsline {subsection}{\numberline {4.6.1}Circle maps}{70}{subsection.428}%
-\contentsline {subsection}{\numberline {4.6.2}The Joukowski map}{74}{subsection.453}%
-\contentsline {section}{\numberline {4.7}Exercises}{77}{section.468}%
-\contentsline {chapter}{\numberline {5}Water waves}{81}{chapter.481}%
-\contentsline {section}{\numberline {5.1}Governing equations of water waves}{81}{section.484}%
-\contentsline {subsection}{\numberline {5.1.1}Boundary conditions}{81}{subsection.485}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}Bottom boundary conditions}{81}{subsubsection.486}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}Dynamic boundary conditions}{82}{subsubsection.489}%
-\contentsline {subsubsection}{\numberline {5.1.1.3}Kinematic boundary conditions}{82}{subsubsection.494}%
-\contentsline {subsection}{\numberline {5.1.2}Summary of the governing equations}{83}{subsection.496}%
-\contentsline {section}{\numberline {5.2}Wave parameters}{83}{section.501}%
-\contentsline {section}{\numberline {5.3}Stokes waves}{84}{section.509}%
-\contentsline {subsection}{\numberline {5.3.1}Linearisation of the water-wave equations}{84}{subsection.510}%
-\contentsline {subsection}{\numberline {5.3.2}Solving for linear waves in infinite depth}{86}{subsection.523}%
-\contentsline {section}{\numberline {5.4}Generalisations of water waves}{87}{section.531}%
-\contentsline {section}{\numberline {5.5}Exercises}{87}{section.533}%
+\contentsline {chapter}{\numberline {2}Kinematics}{11}{chapter.38}%
+\contentsline {section}{\numberline {2.1}Eulerian and Lagrangian coordinates}{13}{section.45}%
+\contentsline {subsection}{\numberline {2.1.1}The convective derivative}{14}{subsection.52}%
+\contentsline {section}{\numberline {2.2}Flow visualisation, fluxes, and forces}{16}{section.65}%
+\contentsline {subsection}{\numberline {2.2.1}Definitions of streamlines, pathlines, streaklines}{16}{subsection.66}%
+\contentsline {subsection}{\numberline {2.2.2}Examples of streamlines, pathlines, and streaklines}{17}{subsection.73}%
+\contentsline {subsection}{\numberline {2.2.3}Fluxes and forces}{22}{subsection.88}%
+\contentsline {section}{\numberline {2.3}Exercises}{23}{section.98}%
+\contentsline {chapter}{\numberline {3}Equations of motion}{28}{chapter.135}%
+\contentsline {section}{\numberline {3.1}Reynolds' Transport Theorem}{29}{section.146}%
+\contentsline {subsection}{\numberline {3.1.1}Jacobian of the Lagrangian-to-Eulerian map}{29}{subsection.147}%
+\contentsline {subsection}{\numberline {3.1.2}Reynolds' Transport Theorem}{30}{subsection.153}%
+\contentsline {section}{\numberline {3.2}Conservation of mass}{33}{section.170}%
+\contentsline {subsection}{\numberline {3.2.1}Derivation of mass conservation using Eulerian methods}{34}{subsection.177}%
+\contentsline {subsection}{\numberline {3.2.2}Corollary of the Transport Theorem}{35}{subsection.183}%
+\contentsline {section}{\numberline {3.3}Momentum balance}{35}{section.187}%
+\contentsline {subsection}{\numberline {3.3.1}Proof of the momentum equation for an inviscid fluid}{36}{subsection.191}%
+\contentsline {section}{\numberline {3.4}The Euler equations}{37}{section.198}%
+\contentsline {subsection}{\numberline {3.4.1}Incompressible fluids and the Euler equations}{37}{subsection.199}%
+\contentsline {subsection}{\numberline {3.4.2}Boundary conditions}{39}{subsection.217}%
+\contentsline {section}{\numberline {3.5}Bernoulli's equation}{40}{section.221}%
+\contentsline {subsection}{\numberline {3.5.1}A first integral of the momentum equation}{40}{subsection.222}%
+\contentsline {subsection}{\numberline {3.5.2}Three forms of Bernoulli's equation}{41}{subsection.242}%
+\contentsline {subsection}{\numberline {3.5.3}Applications}{43}{subsection.258}%
+\contentsline {section}{\numberline {3.6}Exercises}{44}{section.269}%
+\contentsline {chapter}{\numberline {4}Potential flows}{50}{chapter.309}%
+\contentsline {section}{\numberline {4.1}The velocity potential}{50}{section.314}%
+\contentsline {subsection}{\numberline {4.1.1}Elementary flows}{52}{subsection.325}%
+\contentsline {section}{\numberline {4.2}The streamfunction}{56}{section.342}%
+\contentsline {subsection}{\numberline {4.2.1}Elementary flows}{59}{subsection.359}%
+\contentsline {section}{\numberline {4.3}The complex potential}{62}{section.376}%
+\contentsline {subsection}{\numberline {4.3.1}Analytic functions and Laplace's equation}{62}{subsection.380}%
+\contentsline {subsection}{\numberline {4.3.2}Examples of elementary flows}{63}{subsection.389}%
+\contentsline {section}{\numberline {4.4}The method of images}{64}{section.405}%
+\contentsline {subsection}{\numberline {4.4.1}Planar boundaries: a half-plane}{65}{subsection.406}%
+\contentsline {section}{\numberline {4.5}Conformal mapping}{69}{section.421}%
+\contentsline {subsection}{\numberline {4.5.1}The conformal mapping method}{69}{subsection.424}%
+\contentsline {subsection}{\numberline {4.5.2}Source in a wedge}{70}{subsection.432}%
+\contentsline {subsection}{\numberline {4.5.3}Standard conformal maps}{71}{subsection.440}%
+\contentsline {section}{\numberline {4.6}Circle maps}{73}{section.452}%
+\contentsline {section}{\numberline {4.7}Exercises}{78}{section.478}%
+\contentsline {chapter}{\numberline {5}Water waves}{81}{chapter.493}%
+\contentsline {section}{\numberline {5.1}Governing equations of water waves}{81}{section.496}%
+\contentsline {subsection}{\numberline {5.1.1}Boundary conditions}{81}{subsection.497}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Bottom boundary conditions}{81}{subsubsection.498}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Dynamic boundary conditions}{82}{subsubsection.501}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}Kinematic boundary conditions}{82}{subsubsection.503}%
+\contentsline {subsection}{\numberline {5.1.2}Summary of the governing equations}{82}{subsection.505}%
+\contentsline {section}{\numberline {5.2}Wave parameters}{83}{section.510}%
+\contentsline {section}{\numberline {5.3}Stokes waves}{84}{section.518}%
+\contentsline {subsection}{\numberline {5.3.1}Linearisation of the water-wave equations}{84}{subsection.519}%
+\contentsline {subsection}{\numberline {5.3.2}Solving for linear waves in infinite depth}{85}{subsection.532}%
+\contentsline {section}{\numberline {5.4}Generalisations of water waves}{88}{section.546}%
+\contentsline {section}{\numberline {5.5}Exercises}{89}{section.548}%
+\contentsline {chapter}{\numberline {6}Viscous flows}{93}{chapter.562}%
+\contentsline {section}{\numberline {6.1}Important definitions}{95}{section.571}%
+\contentsline {subsection}{\numberline {6.1.1}Viscosity}{95}{subsection.572}%
+\contentsline {subsection}{\numberline {6.1.2}Reynolds number}{96}{subsection.583}%
+\contentsline {subsection}{\numberline {6.1.3}State relations}{97}{subsection.592}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}Liquids}{97}{subsubsection.593}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}Gases}{98}{subsubsection.598}%
+\contentsline {section}{\numberline {6.2}Boundaries, surfaces and interfaces of fluids}{99}{section.604}%
+\contentsline {subsection}{\numberline {6.2.1}Boundary conditions on the velocity}{99}{subsection.605}%
+\contentsline {subsection}{\numberline {6.2.2}Force balance at the boundary\slash {}interface}{99}{subsection.616}%
+\contentsline {subsection}{\numberline {6.2.3}Surface tension}{100}{subsection.619}%
+\contentsline {section}{\numberline {6.3}Stress in a fluid}{102}{section.632}%
+\contentsline {subsection}{\numberline {6.3.1}Stress at a surface}{102}{subsection.633}%
+\contentsline {subsection}{\numberline {6.3.2}The stress tensor}{103}{subsection.650}%
+\contentsline {section}{\numberline {6.4}Newtonian fluids}{106}{section.672}%
+\contentsline {subsection}{\numberline {6.4.1}Incompressible Newtonian fluids}{106}{subsection.675}%
+\contentsline {subsection}{\numberline {6.4.2}Stress at a surface}{108}{subsection.695}%
+\contentsline {subsection}{\numberline {6.4.3}Inviscid fluids}{110}{subsection.697}%
+\contentsline {subsection}{\numberline {6.4.4}Non-Newtonian fluids}{110}{subsection.699}%
+\contentsline {subsection}{\numberline {6.4.5}examples}{112}{subsection.706}%
+\contentsline {section}{\numberline {6.5}Conservation of linear momentum}{114}{section.713}%
+\contentsline {subsection}{\numberline {6.5.1}Left-hand side}{114}{subsection.716}%
+\contentsline {subsection}{\numberline {6.5.2}Right-hand side}{116}{subsection.717}%
+\contentsline {subsection}{\numberline {6.5.3}Equating the two sides}{116}{subsection.718}%
+\contentsline {subsection}{\numberline {6.5.4}Discussion of the Navier\textendash {}Stokes equation}{117}{subsection.724}%
+\contentsline {subsection}{\numberline {6.5.5}Example of the application}{120}{subsection.744}%
+\contentsline {subsection}{\numberline {6.5.6}Limits of low and high Reynolds number}{122}{subsection.752}%
+\contentsline {subsubsection}{\numberline {6.5.6.1}Low Reynolds number}{122}{subsubsection.753}%
+\contentsline {subsubsection}{\numberline {6.5.6.2}High Reynolds number}{123}{subsubsection.755}%
+\contentsline {section}{\numberline {6.6}Viscous Dissipation of Energy}{123}{section.757}%
+\contentsline {section}{\numberline {6.7}Methods to solve the Navier\textendash {}Stokes and continuity equations}{125}{section.767}%
+\contentsline {subsection}{\numberline {6.7.1}Methods of solution}{125}{subsection.768}%
+\contentsline {subsection}{\numberline {6.7.2}Methods to solve the equations analytically}{126}{subsection.769}%
+\contentsline {section}{\numberline {6.8}Examples of solutions to the Navier\textendash {}Stokes equations}{128}{section.770}%
+\contentsline {section}{\numberline {6.9}Practice Exercises}{148}{section.850}%
+\contentsline {section}{\numberline {6.10}Problems set 5 to hand in}{158}{section.929}%
+\contentsline {section}{\numberline {6.11}Problems set 6 to hand in}{160}{section.950}%
 \renewcommand {\ptxappendixperiodchapter }{.}
-\contentsline {part}{Appendices}{91}{section*.546}%
-\contentsline {chapter}{\numberline {A}Solutions}{91}{appendix.547}%
-\contentsline {subparagraph}{Potential flows, part 1}{97}{subparagraph*.550}%
-\contentsline {subparagraph}{Potential flows, part 2}{105}{subparagraph*.551}%
-\contentsline {chapter}{\numberline {B}Vector calculus}{120}{appendix.562}%
-\contentsline {section}{\numberline {B.1}Converting between different coordinate systems}{120}{section.563}%
-\contentsline {subsection}{\numberline {B.1.1}Converting between Cartesian coordinates and cylindrical polar coordinates}{120}{subsection.564}%
-\contentsline {subsection}{\numberline {B.1.2}Converting between Cartesian coordinates and plane polar coordinates}{122}{subsection.596}%
-\contentsline {subsection}{\numberline {B.1.3}Converting between Cartesian coordinates and spherical polar coordinates}{122}{subsection.597}%
-\contentsline {subsection}{\numberline {B.1.4}General conversion}{124}{subsection.616}%
-\contentsline {subsection}{\numberline {B.1.5}Differential operators}{124}{subsection.617}%
-\contentsline {chapter}{\numberline {C}List of Symbols}{125}{appendix.620}%
-\contentsline {part}{Back Matter}{126}{section*.621}%
-\contentsline {chapter}{Index}{126}{section*.622}%
-\contentsline {chapter}{References and further reading}{127}{appendix*.624}%
+\contentsline {part}{Appendices}{163}{section*.973}%
+\contentsline {chapter}{\numberline {A}Solutions}{163}{appendix.974}%
+\contentsline {section}{\numberline {A.1}Kinematics}{163}{section.975}%
+\contentsline {subsection}{Solutions}{163}{section.975}%
+\contentsline {section}{\numberline {A.2}Equations of motion}{168}{section.980}%
+\contentsline {subsection}{Solutions}{168}{section.980}%
+\contentsline {section}{\numberline {A.3}Potential flows}{174}{section.983}%
+\contentsline {subsection}{Solutions}{174}{section.983}%
+\contentsline {subparagraph}{Potential flows, part 1}{174}{subparagraph*.984}%
+\contentsline {subparagraph}{Potential flows, part 2}{178}{subparagraph*.987}%
+\contentsline {section}{\numberline {A.4}Water waves}{186}{section.998}%
+\contentsline {subsection}{Solutions}{186}{section.998}%
+\contentsline {section}{\numberline {A.5}Viscous flows}{190}{section.1001}%
+\contentsline {subsection}{Solutions}{190}{section.1001}%
+\contentsline {chapter}{\numberline {B}Vector calculus}{207}{appendix.1008}%
+\contentsline {section}{\numberline {B.1}Converting between different coordinate systems}{207}{section.1009}%
+\contentsline {subsection}{\numberline {B.1.1}Converting between Cartesian coordinates and cylindrical polar coordinates}{207}{subsection.1010}%
+\contentsline {subsection}{\numberline {B.1.2}Converting between Cartesian coordinates and plane polar coordinates}{209}{subsection.1042}%
+\contentsline {subsection}{\numberline {B.1.3}Converting between Cartesian coordinates and spherical polar coordinates}{209}{subsection.1043}%
+\contentsline {subsection}{\numberline {B.1.4}General conversion}{211}{subsection.1062}%
+\contentsline {subsection}{\numberline {B.1.5}Differential operators}{211}{subsection.1063}%
+\contentsline {chapter}{\numberline {C}List of Symbols}{212}{appendix.1066}%
+\contentsline {part}{Back Matter}{213}{section*.1067}%
+\contentsline {chapter}{Index}{213}{section*.1068}%
+\contentsline {chapter}{References and further reading}{214}{appendix*.1070}%
 \contentsfinish 

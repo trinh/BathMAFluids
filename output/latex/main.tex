@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2026-10-15T11:30:32+01:00       *%
+%*       on 2026-11-09T16:53:59Z       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -54,9 +54,9 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% this is a necessity for isolating styling and behavior
 %% The tcolorbox library of the same name loads the base library
 \tcbuselibrary{xparse}
-%% The tcolorbox library loads TikZ, its calc package is generally useful,
-%% and is necessary for some smaller documents that use partial tcolor boxes
-%% See:  https://github.com/PreTeXtBook/pretext/issues/1624
+%% The tcolorbox package loads TikZ.  The TikZ calc library, for coordinate
+%% arithmetic, is not used by PreTeXt's own LaTeX; it is loaded because
+%% TikZ code provided by an author may rely on it
 \usetikzlibrary{calc}
 %% We use some more exotic tcolorbox keys to restore indentation to parboxes
 \tcbuselibrary{hooks}
@@ -562,22 +562,19 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \newcommand{\ptxhrulethin}  {\noalign{\hrule height 0.04em}}
 \newcommand{\ptxhrulemedium}{\noalign{\hrule height 0.07em}}
 \newcommand{\ptxhrulethick} {\noalign{\hrule height 0.11em}}
-%% We preserve a copy of the \setlength package before other
-%% packages (extpfeil) get a chance to load packages that redefine it
-\let\ptxoldsetlength\setlength
 \newlength{\ptxOldarrayrulewidth}
 \newcommand{\ptxcrulethin}[1]%
-{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}%
+{\noalign{\global\ptxOldarrayrulewidth=\arrayrulewidth}%
+\noalign{\global\arrayrulewidth=0.04em}\cline{#1}%
+\noalign{\global\arrayrulewidth=\ptxOldarrayrulewidth}}%
 \newcommand{\ptxcrulemedium}[1]%
-{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}
+{\noalign{\global\ptxOldarrayrulewidth=\arrayrulewidth}%
+\noalign{\global\arrayrulewidth=0.07em}\cline{#1}%
+\noalign{\global\arrayrulewidth=\ptxOldarrayrulewidth}}
 \newcommand{\ptxcrulethick}[1]%
-{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
-\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}
+{\noalign{\global\ptxOldarrayrulewidth=\arrayrulewidth}%
+\noalign{\global\arrayrulewidth=0.11em}\cline{#1}%
+\noalign{\global\arrayrulewidth=\ptxOldarrayrulewidth}}
 %% Single letter column specifiers defined via array package
 \newcolumntype{A}{!{\vrule width 0.04em}}
 \newcolumntype{B}{!{\vrule width 0.07em}}
@@ -675,11 +672,11 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %%
 %% This document is set to number figure, table, list, listing on a separate numbering scheme
 %% So, a faux tcolorbox whose only purpose is to provide this numbering
-\newtcolorbox[auto counter, number within=chapter]{figure-distinct}{}
+\newtcolorbox[auto counter, number within=chapter]{figuredistinct}{}
 %% A faux tcolorbox whose only purpose is to provide common numbering
 %% facilities for 2D displays which are subnumbered as part of a "sidebyside"
 \makeatletter
-\newtcolorbox[auto counter, number within=tcb@cnt@figure-distinct, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
+\newtcolorbox[auto counter, number within=tcb@cnt@figuredistinct, number freestyle={\noexpand\thetcb@cnt@figuredistinct(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
 \makeatother
 %%
 %% tcolorbox, with styles, for THEOREM-LIKE
@@ -741,16 +738,16 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %%
 %% figureptx: 2-D display structure
 \tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=figure-distinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
+\newtcolorbox[use counter from=figuredistinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
 %% tableptx: 2-D display structure
 \tcbset{ tableptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, coltitle=black, bottomtitle=2ex, titlerule=-0.3pt, fonttitle=\blocktitlefont, breakable} }
-\newtcolorbox[use counter from=figure-distinct]{tableptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, tableptxstyle, }
+\newtcolorbox[use counter from=figuredistinct]{tableptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, tableptxstyle, }
 %%
 %% tcolorbox, with styles, for (PANEL)FIGURE-LIKE
 %%
 %% panelfigureptx: 2-D display structure
 \tcbset{ panelfigureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=figure-distinct]{panelfigureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panelfigureptxstyle, }
+\newtcolorbox[use counter from=figuredistinct]{panelfigureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panelfigureptxstyle, }
 %%
 %% xparse environments for introductions and conclusions of divisions
 %%
@@ -777,7 +774,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% "tcolorbox" environment for a panel of sidebyside
 \NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
 %% Custom Preamble Entries, late (use latex.preamble.late)
-\usepackage{xstring}\titleformat{\chapter}[hang]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large#1}\titleformat{name=\chapter,numberless}[hang]{\normalfont\Large\bfseries}{}{0em}{\Large#1}\titlespacing*{\chapter}{0pt}{20pt}{15pt}\renewtcolorbox[use counter from=figure-distinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, breakable, figureptxstyle, }\setlength{\emergencystretch}{3em}\clubpenalty=10000\widowpenalty=10000\usepackage{parskip}\AtBeginDocument{\setlength{\parindent}{0pt}\setlength{\ptxnormalparindent}{0pt}\setlength{\ptxnormalparskip}{\parskip}}\definecolor{thmcolor}{RGB}{31,78,121}\definecolor{thmfill}{RGB}{235,242,249}\definecolor{defcolor}{RGB}{106,61,130}\definecolor{deffill}{RGB}{244,238,248}\definecolor{remcolor}{RGB}{100,100,100}\definecolor{remfill}{RGB}{245,245,245}\definecolor{excolor}{RGB}{43,108,74}\definecolor{exfill}{RGB}{234,244,238}\definecolor{exercolor}{RGB}{176,98,24}\definecolor{exerfill}{RGB}{252,240,225}\definecolor{exercolornormal}{RGB}{168,205,234}\definecolor{exerfillnormal}{RGB}{227,242,253}\tcbset{ ptxboxstyle/.style={enhanced, breakable, arc=2.5mm, boxrule=0.6pt, top=1.5mm, bottom=1.5mm, left=2mm, right=2mm, before skip=2.0ex plus 0.5ex, after skip=2.0ex plus 0.5ex, fonttitle=\bfseries, coltitle=white} }\tcbset{ theoremstyle/.style={ptxboxstyle, colframe=thmcolor, colback=thmfill, colbacktitle=thmcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ definitionstyle/.style={ptxboxstyle, colframe=defcolor, colback=deffill, colbacktitle=defcolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxdiamond}, before upper app={\ptxsetparstyle}} }\tcbset{ remarkstyle/.style={ptxboxstyle, colframe=remcolor, colback=remfill, colbacktitle=remcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ examplestyle/.style={ptxboxstyle, colframe=excolor, colback=exfill, colbacktitle=excolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxtriangle}, before upper app={\ptxsetparstyle}} }\newtcolorbox{divisionexerciseNORMAL}[4]{ptxboxstyle, colframe=exercolornormal, colback=exerfillnormal, colbacktitle=exercolornormal, title={#1.\notblank{#2}{\space#2}{}}, phantomlabel={#4}, before upper app={\ptxsetparstyle}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}\newtcolorbox{divisionexerciseHW}[4]{ptxboxstyle, colframe=exercolor, colback=exerfill, colbacktitle=exercolor, title={#1.\notblank{#2}{\space#2}{}}, phantomlabel={#4}, before upper app={\ptxsetparstyle}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}\renewenvironment{divisionexercise}[4]{\IfBeginWith{#4}{ex-hw-}{\def\ptxdivexend{\enddivisionexerciseHW}\divisionexerciseHW{#1}{#2}{#3}{#4}}{\def\ptxdivexend{\enddivisionexerciseNORMAL}\divisionexerciseNORMAL{#1}{#2}{#3}{#4}}}{\ptxdivexend}\renewtcolorbox[use counter from=block]{remark}[3]{title={{#1\IfBeginWith{#3}{remark-solutions-feedback}{}{~\thetcbcounter}\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, remarkstyle, }
+\usepackage{xstring}\titleformat{\chapter}[hang]{\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large#1}\titleformat{name=\chapter,numberless}[hang]{\normalfont\Large\bfseries}{}{0em}{\Large#1}\titlespacing*{\chapter}{0pt}{20pt}{15pt}\renewtcolorbox[use counter from=figuredistinct]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, breakable, figureptxstyle, }\setlength{\emergencystretch}{3em}\clubpenalty=10000\widowpenalty=10000\usepackage{parskip}\AtBeginDocument{\setlength{\parindent}{0pt}\setlength{\ptxnormalparindent}{0pt}\setlength{\ptxnormalparskip}{\parskip}}\definecolor{thmcolor}{RGB}{31,78,121}\definecolor{thmfill}{RGB}{235,242,249}\definecolor{defcolor}{RGB}{106,61,130}\definecolor{deffill}{RGB}{244,238,248}\definecolor{remcolor}{RGB}{100,100,100}\definecolor{remfill}{RGB}{245,245,245}\definecolor{excolor}{RGB}{43,108,74}\definecolor{exfill}{RGB}{234,244,238}\definecolor{exercolor}{RGB}{176,98,24}\definecolor{exerfill}{RGB}{252,240,225}\definecolor{exercolornormal}{RGB}{168,205,234}\definecolor{exerfillnormal}{RGB}{227,242,253}\tcbset{ ptxboxstyle/.style={enhanced, breakable, arc=2.5mm, boxrule=0.6pt, top=1.5mm, bottom=1.5mm, left=2mm, right=2mm, before skip=2.0ex plus 0.5ex, after skip=2.0ex plus 0.5ex, fonttitle=\bfseries, coltitle=white} }\tcbset{ theoremstyle/.style={ptxboxstyle, colframe=thmcolor, colback=thmfill, colbacktitle=thmcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ definitionstyle/.style={ptxboxstyle, colframe=defcolor, colback=deffill, colbacktitle=defcolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxdiamond}, before upper app={\ptxsetparstyle}} }\tcbset{ remarkstyle/.style={ptxboxstyle, colframe=remcolor, colback=remfill, colbacktitle=remcolor, after title={\space}, before upper app={\ptxsetparstyle}} }\tcbset{ examplestyle/.style={ptxboxstyle, colframe=excolor, colback=exfill, colbacktitle=excolor, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxtriangle}, before upper app={\ptxsetparstyle}} }\newtcolorbox{divisionexerciseNORMAL}[4]{ptxboxstyle, colframe=exercolornormal, colback=exerfillnormal, colbacktitle=exercolornormal, title={#1.\notblank{#2}{\space#2}{}}, phantomlabel={#4}, before upper app={\ptxsetparstyle}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}\newtcolorbox{divisionexerciseHW}[4]{ptxboxstyle, colframe=exercolor, colback=exerfill, colbacktitle=exercolor, title={#1.\notblank{#2}{\space#2}{}}, phantomlabel={#4}, before upper app={\ptxsetparstyle}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}\renewenvironment{divisionexercise}[4]{\IfBeginWith{#4}{ex-hw-}{\def\ptxdivexend{\enddivisionexerciseHW}\divisionexerciseHW{#1}{#2}{#3}{#4}}{\def\ptxdivexend{\enddivisionexerciseNORMAL}\divisionexerciseNORMAL{#1}{#2}{#3}{#4}}}{\ptxdivexend}\renewtcolorbox[use counter from=block]{remark}[3]{title={{#1\IfBeginWith{#3}{remark-solutions-feedback}{}{~\thetcbcounter}\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, remarkstyle, }
 %% Begin: Author-provided macros
 %% (From  docinfo/macros  element)
 %% Plus three from PTX for XML characters
@@ -851,7 +848,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\LARGE University of Bath 26-27, MA32051\slash{}MA52129}\\[3\baselineskip]
 {\Large  }\\[0.5\baselineskip]
 {\Large Dept. of Math. Sci., University of Bath}\\[3\baselineskip]
-{\Large October 15, 2026}\\}
+{\Large November 9, 2026}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
@@ -1753,7 +1750,7 @@ A fluid flows through the nozzle shown from \(x=0\) to \(x=L\) with one-dimensio
 \begin{equation*}
 u=U\left(1+\frac{x}{L}\right)
 \end{equation*}
-in the \(x\)-direction, where \(U\) and \(L\) are constants. Note that, in reality the flow would be two- or three-dimensional, but we ignore this here for simplicity.%
+in the \(x\)-direction, where \(U\) and \(L\) are constants. Note that, in reality the flow would be two- or three-dimensional, but we ignore this here for simplicity. Also note that the flow does not satisfy volume conservation at each point or no-penetration boundary conditions on the nozzle, any you may neglect this issue in this question.%
  \begin{figureptx}{Figure}{Sketch of nozzle.}{fig-nozzle}{}%
 \begin{image}{0.2}{0.6}{0.2}{}%
 \includegraphics[width=\linewidth]{external/ch-chapter02-nozzle.png}
@@ -1832,10 +1829,17 @@ The velocity of a two-dimensional fluid flow in Cartesian coordinates is \(u = 1
 = t e^{-4x}\). Calculate and sketch the following:%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item{}the streamlines at a fixed time \(t > 0\),%
-\item{}the pathline of the particle starting from \((x_0,y_0)\). Hence find and sketch the pathline of the particle that starts from \((0,0)\),%
+\item{}\ptxlititle{This part added in 2026, following marking homeworks..}\par%
+Show that the position at time \(t\) of the particle that starts from the point \((x_0,y_0)\),%
+%
+\begin{equation*}
+x = x_0 + t,\quad
+y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
+\end{equation*}
+\item{}Find the pathline of the particle starting from \((x_0,y_0)\). Hence find and sketch the pathline of the particle that starts from \((0,0)\),%
 \item{}and the streaklines passing through \((0,0)\).%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{ex-hw-streamlines-pathlines-streaklines-5-2}{}\quad{}The expression for a general pathline starting from \((x_0,y_0)\) is given by%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{ex-hw-streamlines-pathlines-streaklines-6-2}{}\quad{}The expression for a general pathline starting from \((x_0,y_0)\) is given by%
 \begin{equation*}
 x = x_0 + t,\quad
 y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
@@ -2804,7 +2808,11 @@ The piston shown in the diagram below is pushed with a force \(F(t)\) into a pip
 Assume that the pressure at the open end is held at atmospheric pressure, \(p =
 p_\text{atm}\).%
 \par
-Assume the fluid moves as a rigid body and neglect friction and the mass of the piston. Using the Euler equations in \hyperref[def-euler]{Definition~{\xreffont\ref{def-euler}}}, write down a differential equation governing the position, \(X(t)\), of the piston at time \(t\). You may neglect gravity. You do not need to solve the equation (it could be solved using Python or similar).%
+Assume the fluid moves as a rigid body and neglect friction and the mass of the piston.%
+\par
+Assume that the velocity takes the form of \(\bu = (X(t), 0, 0)\) at the position of the piston.%
+\par
+Using the Euler equations in \hyperref[def-euler]{Definition~{\xreffont\ref{def-euler}}}, write down a differential equation governing the position, \(X(t)\), of the piston at time \(t\). You may neglect gravity. You do not need to solve the equation (it could be solved using Python or similar).%
 \end{divisionexercise}%
 \begin{divisionexercise}{6}{Using streamlines: The clepsydra.}{}{ex-bernoulli-streamline}%
 One of the earliest means for measuring the passage of time, invented by the ancient Egyptians, was the \ptxterminology{clepsydra} (or ‘water thief’): a large jar with a hole in its base was filled with water. The shape of the jar was such that the interval of time taken for the water surface to pass two equally-spaced markers on the side of the jar is constant.%
@@ -4356,6 +4364,35 @@ or alternatively if we take the positive root,%
 %
 \par
 The above expression is known as the \emph{dispersion relation} for water waves in deep water.%
+\begin{figureptx}{Figure}{The dispersion relation for linear gravity waves in infinite depth, \(\omega = \sqrt{gk}\) (solid), and in finite depth \(h\), \(\omega = \sqrt{gk\tanh(kh)}\) (dashed), plotted in terms of \(kh\). The two agree for short waves (\(kh\) large) and differ for long waves (\(kh\) small). The finite-depth case is treated in \hyperlink{ex-hw-waterwaves-finite}{Exercise~{\xreffont 5.5.2}}.}{fig-dispersion-finite-infinite}{}%
+\begin{image}{0.125}{0.75}{0.125}{}%
+\includegraphics[width=\linewidth]{external/dispersion-finite-infinite.pdf}
+\end{image}%
+\tcblower
+\end{figureptx}%
+The difference between the two cases is clearer if we look at the phase speed \(c = \omega/k\) from \hyperref[eqn-wavespeed]{({\xreffont\ref{eqn-wavespeed}})}. In deep water,%
+\begin{equation*}
+c = \sqrt{\frac{g}{k}},
+\end{equation*}
+which grows without bound as \(k \to 0\). The deep-water theory therefore predicts that very long waves travel arbitrarily fast. This happens because the deep-water model is being used outside its range of validity. The solution \(f(y) = B\e^{ky}\) decays over a vertical distance of order \(1/k\), which is comparable to the wavelength. When the wavelength is much longer than the depth, \(kh \ll 1\), the motion reaches the bottom, and the depth can no longer be ignored.%
+\par
+In finite depth, the phase speed is instead%
+\begin{equation*}
+c = \sqrt{\frac{g}{k}\tanh(kh)} \to \sqrt{gh} \qquad \text{as $kh \to 0$},
+\end{equation*}
+since \(\tanh(kh) \sim kh\) for small \(kh\). The speed of long waves is therefore bounded, and it is independent of \(k\): long waves in shallow water are \emph{non-dispersive}. For short waves, \(kh \gg 1\), we have \(\tanh(kh) \to 1\) and the deep-water result is recovered. In practice, the deep-water approximation is accurate once \(kh \gtrsim 3\), since \(\tanh 3 \approx 0.995\).%
+\begin{figureptx}{Figure}{Phase speed \(c = \omega/k\) (black) and group velocity \(v_g = \dd{\omega}{k}\) (blue) for linear gravity waves in infinite depth (solid) and finite depth \(h\) (dashed), scaled by \(\sqrt{gh}\) and plotted against \(kh\). In infinite depth, \(c = \sqrt{g/k}\) and \(v_g = c/2\), and both become unbounded as \(kh \to 0\). In finite depth, \(c = \sqrt{(g/k)\tanh(kh)}\) and \(v_g = \tfrac{1}{2}c\left(1 + 2kh/\sinh(2kh)\right)\), and both tend to \(\sqrt{gh}\) as \(kh \to 0\). The group velocity is introduced in \hyperlink{ex-hw-waterwaves-dispersion}{Exercise~{\xreffont 5.5.5}}, and the finite-depth case is treated in \hyperlink{ex-hw-waterwaves-finite}{Exercise~{\xreffont 5.5.2}}.}{fig-phase-group-speed}{}%
+\begin{image}{0.125}{0.75}{0.125}{}%
+\includegraphics[width=\linewidth]{external/phase-group-speed.pdf}
+\end{image}%
+\tcblower
+\end{figureptx}%
+\begin{figureptx}{Figure}{A still from the video \href{https://www.youtube.com/watch?v=dESm6VjfSNs}{"Ripples in a pond"}; only the first 1 minute 10 seconds, which covers gravity waves, is needed. We will play the first minute of this video to show the behaviour of ripples in a pond. Pay attention to two facts: (i) waves of different wavelength travel at different speeds (dispersion); and (ii) the individual waves move faster than the group.}{fig-ripples-pond}{}%
+\begin{image}{0.15}{0.7}{0.15}{}%
+\includegraphics[width=\linewidth]{external/ch-chapter05-ripples-pond.jpeg}
+\end{image}%
+\tcblower
+\end{figureptx}%
 \end{subsectionptx}
 \end{sectionptx}
 %
@@ -4367,7 +4404,7 @@ The above expression is known as the \emph{dispersion relation} for water waves 
 \begin{sectionptx}{Section}{Generalisations of water waves}{}{Generalisations of water waves}{}{}{sec-waterwaves-generalisations}
 During the lectures and exercises, you will cover some of the following variants.%
 \begin{itemize}[label=\ptxlistdisc]
-\item{}Linear water waves in finite depth: part of \hyperlink{ex-waterwaves-finite}{Exercise~{\xreffont 5.5.2}} and done in Problem Class Week 6.%
+\item{}Linear water waves in finite depth: covered in \hyperlink{ex-hw-waterwaves-finite}{Exercise~{\xreffont 5.5.2}}.%
 \par
 In lectures and the exercise, you will confirm that the dispersion relation in finite depth is modified to:%
 \begin{equation*}
@@ -4378,7 +4415,7 @@ In the limit \(h \to \infty\), since \(\tanh(kh) \to 1\), this approaches the de
 \omega_\text{deep} = \sqrt{gk},
 \end{equation*}
 as shown in \hyperref[eqn-dispersion-deep]{({\xreffont\ref{eqn-dispersion-deep}})}.%
-\item{}Linear water waves in a current: part of \hyperlink{ex-waterwaves-current}{Exercise~{\xreffont 5.5.3}} and done in Week 6 Thursday video.%
+\item{}Linear water waves in a current: covered in \hyperlink{ex-waterwaves-current}{Exercise~{\xreffont 5.5.3}}.%
 \par
 In these problems, you will modify the setup to include a horizontal current at infinity, with \(\phi \sim Ux\) as \(x \to -\infty\). The main difference in this case is that there are additional terms to be included in the linear kinematic and dynamic conditions. As shown in the exercise, the dispersion relation is modified to%
 \begin{equation*}
@@ -4387,7 +4424,7 @@ In these problems, you will modify the setup to include a horizontal current at 
 %
 \par
 There are now two distinct wavespeeds. In the version where there is zero current, \(U = 0\), the wavespeeds reduce to a single one (i.e. a single \(|c|\), with both left- and right-travelling waves; remember that we usually drop the \(\pm\)).%
-\item{}Linear water waves in two fluids of different densities: part of \hyperlink{ex-waterwaves-density}{Exercise~{\xreffont 5.5.4}} and done in Week 7 Problem Class.%
+\item{}Linear water waves in two fluids of different densities. This material is not examinable this year.%
 \par
 Consider that the interface \(y - \eta\) separates two fluids of different densities, say \(\rho_1\), lying in the lower portion, \(y < \eta\), and \(\rho_2\) in the upper portion, with \(y > \eta\). The main modification in the governing equations happens in Bernoulli's equation \hyperref[eqn-bernoulli-unsteady-potential]{({\xreffont\ref{eqn-bernoulli-unsteady-potential}})}.%
 \par
@@ -4402,7 +4439,7 @@ The procedure is the same for this version, but the algebra is noticeably more i
 \omega = \pm \sqrt{\left(\frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk}.
 \end{equation*}
 %
-\item{}Linear water waves with surface tension: part of \hyperlink{ex-waterwaves-surfacetension}{Exercise~{\xreffont 5.5.5}} and done in Week 7 Problem Class.%
+\item{}Linear water waves with surface tension: see \hyperlink{ex-waterwaves-surfacetension}{Exercise~{\xreffont 5.5.4}}. This material is not examinable this year.%
 \par
 For the case of deep water waves, this modifies the dispersion relation to%
 \begin{equation*}
@@ -4443,7 +4480,7 @@ v = \pd{\eta}{t} + u\pd{\eta}{x} \qquad \text{on $y = \eta(x, t)$}.
 \end{equation*}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{Stokes waves in finite depth.}{}{ex-waterwaves-finite}%
+\begin{divisionexercise}{2}{Stokes waves in finite depth.}{}{ex-hw-waterwaves-finite}%
 Consider small 2D water waves on the free surface of a potential (incompressible and irrotational) fluid with velocity potential \(\phi(x, y,t)\), with \(\phi\) satisfying \(\nabla^2 \phi = 0\). Let the free surface be at \(y = \eta(x, t)\) and assume the water is confined above a flat channel of depth \(y = -h\). Show that on the free surface, \(y = \eta(x, t)\), the kinematic equation is given by%
 \begin{equation*}
 \pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},
@@ -4507,22 +4544,10 @@ c_{\pm} = U \pm \left( \frac{g}{k} \tanh(kh)\right)^{1/2}.
 The regime where the flow speed is less than \(\sqrt{gh}\) is known as subcritical. The regime where flow is greater than \(\sqrt{gh}\) is supercritical. What can you anticipate about the waves in these two regimes based on the wave speeds above?%
 \end{enumerate}%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{Fluids of different densities.}{}{ex-waterwaves-density}%
-Inviscid incompressible fluid of density \(\rho_2\) lies in the region \(y > 0\) above a fluid with greater density \(\rho_1\) for \(y < 0\). Assume there there is a small-amplitude disturbance the two fluids with the surface given by \(y = \eta(x, t)\). Assuming \(\eta\) and the fluid velocities are small, assume that the linearised boundary conditions on the approximated boundary at \(y = 0\) are given by%
-\begin{align*}
-\pd{\eta}{t} = \pd{\phi_1}{y} = \pd{\phi_2}{y} \amp \qquad \text{at $y = 0$}, \\
-\rho_1\left( \pd{\phi_1}{t}+ g\eta\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) \amp \qquad \text{at $y = 0$}. 
-\end{align*}
-(Notice that these are three conditions; two kinematic conditions for the two fluids, and a dynamic (Bernoulli) condition).%
+\begin{divisionexercise}{4}{Fluids with surface tension.}{}{ex-waterwaves-surfacetension}%
+\emph{Note:} the material in this exercise is not taught and is not examinable this year. It is kept in the notes in case it appeared on a previous assessment.%
 \par
-If \(\eta(x, t) = A\cos(kx - \omega t)\) with \(k > 0\), derive the dispersion relation%
-\begin{equation*}
-\omega^2 = \left( \frac{\rho_1 - \rho_2}{\rho_1 + \rho_2}\right) gk.
-\end{equation*}
-%
-\end{divisionexercise}%
-\begin{divisionexercise}{5}{Fluids with surface tension.}{}{ex-waterwaves-surfacetension}%
-Suppose now that there is surface tension \(T\) between the two fluids of \hyperlink{ex-waterwaves-density}{Exercise~{\xreffont 5.5.4}}. In lectures, it was shown that the linear dynamic boundary condition is given by%
+Suppose now that there is surface tension \(T\) between two fluids, with density \(\rho_1\) in the lower region \(y < \eta\) and density \(\rho_2\) in the upper region \(y > \eta\). In lectures, it was shown that the linear dynamic boundary condition is given by%
 \begin{equation*}
 \rho_1\left( \pd{\phi_1}{t} + g\eta\right) - \rho_2 \left( \pd{\phi_2}{t} + g\eta\right) = T \pd{^2 \eta}{x^2}, \qquad \text{on $y = 0$}.
 \end{equation*}
@@ -4540,7 +4565,7 @@ For the case of deep water waves, show that the frequency \(\omega\) is now rela
 \end{equation*}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{The dispersion relation (simple).}{}{exercises-water-waves-7}%
+\begin{divisionexercise}{5}{The dispersion relation (simple).}{}{ex-hw-waterwaves-dispersion}%
 The following is a classic elementary demonstration of dispersive effects when considering the addition of two sinusoidals with two nearly-identical values of the wavenumber. It can be used to motivate the definition of group and phase velocities.%
  \par
 Consider two sinusoidal waves with nearly the same wavenumber and frequency:%
@@ -7098,19 +7123,19 @@ You may neglect gravity.%
 Examples of the solution for three different Womersley numbers are shown in \hyperref[fig-womersley-example-1]{Figure~{\xreffont\ref{fig-womersley-example-1}}}, \hyperref[fig-womersley-example-10]{Figure~{\xreffont\ref{fig-womersley-example-10}}} and \hyperref[fig-womersley-example-100]{Figure~{\xreffont\ref{fig-womersley-example-100}}}. The solution for small Womersley numbers resembles the Poiseuille flow profile, while that for large Womersley numbers is plug (uniform) flow across the core of the pipe with boundary layers exhibiting rapid spatial oscillations.%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=1\).}{fig-womersley-example-1}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley1.pdf}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley1.gif}
 \end{image}%
 \tcblower
 \end{figureptx}%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=10\).}{fig-womersley-example-10}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley10.pdf}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley10.gif}
 \end{image}%
 \tcblower
 \end{figureptx}%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=100\).}{fig-womersley-example-100}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley100.pdf}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley100.gif}
 \end{image}%
 \tcblower
 \end{figureptx}%
@@ -7152,10 +7177,10 @@ and \(\bf=(f_r,f_\theta,f_\phi)\) represents the body forces per unit mass actin
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 6.10 Problems set 7 to hand in}
+\typeout{Exercises 6.10 Problems set 5 to hand in}
 \typeout{************************************************}
 %
-\begin{exercises-section}{Exercises}{Problems set 7 to hand in}{}{Problems set 7 to hand in}{}{}{ch-viscousflows-12}
+\begin{exercises-section}{Exercises}{Problems set 5 to hand in}{}{Problems set 5 to hand in}{}{}{ch-viscousflows-12}
 \begin{introduction}{}%
 Please hand in the problems in this Section for Set 7 (due in the week commencing 1 Dec).%
 \end{introduction}%
@@ -7245,14 +7270,20 @@ satisfies the Navier\textendash{}Stokes equations and boundary conditions.%
 \item{}If the fluid and cylinder are initially at rest, and the cylinder suddenly starts rotating with angular velocity \(\Omega\) at time \(t=0\), explain qualitatively how you would expect the flow to evolve with time.%
 \end{enumerate}%
 \end{divisionexercise}%
+\begin{divisionexercise}{4}{Calculation of the stress tensor.}{}{ch-viscousflows-12-6}%
+For each of the following flows of an incompressible Newtonian fluid of density \(\rho\) and shear viscosity \(\mu\), check that the flow is possible (\emph{i.e.} that it is incompressible) and calculate the corresponding stress tensor as a \(3\times3\) matrix.%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}\(\bu=(ky,0,0)\) and \(p=p_0\), where \(k\) and \(p_0\) are constants.%
+\end{enumerate}%
+\end{divisionexercise}%
 \end{exercises-section}
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 6.11 Problems set 8 to hand in}
+\typeout{Exercises 6.11 Problems set 6 to hand in}
 \typeout{************************************************}
 %
-\begin{exercises-section}{Exercises}{Problems set 8 to hand in}{}{Problems set 8 to hand in}{}{}{problems-set-8}
+\begin{exercises-section}{Exercises}{Problems set 6 to hand in}{}{Problems set 6 to hand in}{}{}{problems-set-8}
 \begin{introduction}{}%
 Please hand in the problems in this Section for Set 8 (the final set of problems, due in the week commencing 8 Dec).%
 \begin{warning}{Warning}{}{problems-set-8-2-2}%
@@ -7529,15 +7560,32 @@ for any constant \(y_0\). Different values of \(y_0\) give different streamlines
 \end{image}%
 \tcblower
 \end{figureptx}%
-\item[(b)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-4-2-main}{}The pathlines for a particle starting from \((x_0,y_0)\) are given by%
-\begin{align*}
-&\dd{x}{t}=1,\quad
-\dd{y}{t}=te^{-4x}\\
-\Rightarrow\quad&
-x = x_0 + t,\quad
+\item[(b)]\ptxlititle{This part added in 2026, following marking homeworks..}\par%
+\par\smallskip%
+\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-4-3-main}{}The position of the particle is found by solving%
+\begin{equation*}
+\dd{x}{t}=1,\quad\dd{y}{t}=te^{-4x}
+\end{equation*}
+Solving the first equation,%
+\begin{equation*}
+x = A + t,
+\end{equation*}
+where \(A\) is a constant of integration, and, imposing \(x=x_0\) at \(t=0\),%
+\begin{equation*}
+x = x_0 + t.
+\end{equation*}
+Solving the second equation,%
+\begin{equation*}
+y = \int te^{-4(x_0+t)}\de t
+= B-\frac14 te^{-4(x_0+t)} + \frac14\int e^{-4(x_0+t)}\de t
+= B-\frac14 te^{-4(x_0+t)} - \frac1{16}e^{-4(x_0+t)}.
+\end{equation*}
+Substituting the initial condition,%
+\begin{equation*}
 y = y_0 + \frac{1}{16} e^{-4x_0} - \frac{1+4t}{16} e^{-4(x_0+t)}.
-\end{align*}
-Eliminating \(t\):%
+\end{equation*}
+%
+\item[(c)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-5-2-main}{}Eliminating \(t\) from the particle position found in the previous part:%
 \begin{equation*}
 y = y_0 + \frac{1}{16} e^{-4x_0}
 - \frac{1+4x-4x_0}{16} e^{-4x}.
@@ -7547,7 +7595,7 @@ This is a general pathline. For the particular particle that starts from \((0,0)
 y = \tfrac{1}{16}\left(1 - (1+4x)e^{-4x}\right).
 \end{equation*}
 See \hyperref[flowvisualisationproblem]{Figure~{\xreffont\ref{flowvisualisationproblem}}} for a sketch.%
-\item[(c)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-5-3-main}{}Suppose the particle that started at \((x_0,y_0)\) hits the special point \((0,0)\) at time \(t_1\). From the pathline equation:%
+\item[(d)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-6-3-main}{}Suppose the particle that started at \((x_0,y_0)\) hits the special point \((0,0)\) at time \(t_1\). From the pathline equation:%
 \begin{equation*}
 0 = x_0 + t_1, \quad
 0 = y_0 + \tfrac{1}{16} e^{-4x_0}
@@ -7568,7 +7616,7 @@ Eliminating \(t_1\) gives the streakline at time \(t\):%
 y = \tfrac{1}{16}\left((1+4t)(1-e^{-4x}) - 4x\right).
 \end{equation*}
 See \hyperref[flowvisualisationproblem]{Figure~{\xreffont\ref{flowvisualisationproblem}}} for a sketch. Note that the streamlines, pathlines and streaklines are all very different.%
-\item[(d)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-6-2-main}{}From the pathline equation, a particle starting from \((x_0,0)\) reaches%
+\item[(e)]\noindent\hypertarget{ex-hw-streamlines-pathlines-streaklines-7-2-main}{}From the pathline equation, a particle starting from \((x_0,0)\) reaches%
 \begin{equation*}
 x = x_0 + t,\quad
 y = \tfrac{1}{16} e^{-4x_0}
@@ -8206,8 +8254,8 @@ When thinking of the map, the most important step is to just verify that the lin
 \par
 The potential that corresponds to a single source is found by using method of images in the \(\zeta\) plane and mapping backwards. It is%
 \begin{align*}
-F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], \\
-f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} + \overline{d})\right], 
+F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta - \overline{d})\right], \\
+f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} - \overline{d})\right], 
 \end{align*}
 %
 \par
@@ -8227,8 +8275,8 @@ For the trigonometric map, \(\zeta = \sin(\pi z/2a)\), the work is similar.%
 \end{tableptx}%
 The potential that corresponds to a single source is found by using method of images in the \(\zeta\) plane and mapping backwards. It is%
 \begin{align*}
-F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], \\
-f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) + \overline{d})\right], 
+F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta - \overline{d})\right], \\
+f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) - \overline{d})\right], 
 \end{align*}
 %
 \end{divisionsolutioneg}%
@@ -8283,9 +8331,9 @@ The map from the wedge to the upper half-plane is given in the notes near \hyper
 \end{equation*}
 Equating the above to zero for the case of \(y = \eta(x, t)\) yields the desired result.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.5.2}{Stokes waves in finite depth.}{ex-waterwaves-finite}%
+\begin{divisionsolution}{Exercise}{5.5.2}{Stokes waves in finite depth.}{ex-hw-waterwaves-finite}%
 \par\smallskip%
-\noindent\hypertarget{ex-waterwaves-finite-3-main}{}Note that the finite-depth linear wave theory was derived as part of the problem class, so you can examine the video there for more details. Firstly, we look to linearise the two surface boundary conditions,%
+\noindent\hypertarget{ex-hw-waterwaves-finite-3-main}{}Firstly, we look to linearise the two surface boundary conditions,%
 \begin{gather*}
 \pd{\phi}{y}= \pd{\eta}{t} + \pd{\phi}{x}\pd{\eta}{x},\\
 \pd{\phi}{t} + \frac{1}{2}|\nabla \phi|^2 + g\eta = 0,
@@ -8337,7 +8385,7 @@ g & -(\omega)\cosh(kh)
 \begin{pmatrix}
 A \\ B
 \end{pmatrix}
-= 0.\label{ex-waterwaves-finite-3-6-2}
+= 0.\label{ex-hw-waterwaves-finite-3-6-2}
 \end{equation}
 %
 \par
@@ -8442,86 +8490,9 @@ c_\pm = U \mp \left(\frac{g}{k}\tanh(kh)\right)^{1/2}.
 In the deep water limit, if \(U < \sqrt{g/k}\) this yields subcritical solutions, and it is possible to have a wave pattern that is non-trivial upstream of the flow.%
 \end{enumerate}%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.5.4}{Fluids of different densities.}{ex-waterwaves-density}%
+\begin{divisionsolution}{Exercise}{5.5.4}{Fluids with surface tension.}{ex-waterwaves-surfacetension}%
 \par\smallskip%
-\noindent\hypertarget{ex-waterwaves-density-3-main}{}The kinematic condition(s) must be exactly the same form as the usual kinematic condition, since the density of the fluids play no role. They arise from setting \(\DD{(y - \eta)}{t} = 0,\) for both fluids. This gives,%
-\begin{equation*}
-\eta_t + \pd{\phi_i}{x} \pd{\eta}{x} = \pd{\phi_i}{y} \Longrightarrow \pd{\eta}{t} = \pd{\phi_i}{y} \qquad \text{on $y = 0$},
-\end{equation*}
-after linearising, and as imposed on \(i = 1, 2\).%
-\par
-The dynamic condition expresses the fact that the pressures are equal at the interface between the two fluids. Therefore at the interface, we have (ignoring quadratic terms), from \hyperref[thm-bernoulli-unsteady-potential]{Theorem~{\xreffont\ref{thm-bernoulli-unsteady-potential}}}%
-\begin{align*}
-\pd{\phi_1}{t} + \frac{p_1}{\rho_1} + g\eta \amp= B_1, \\
-\pd{\phi_2}{t} + \frac{p_2}{\rho_2} + g\eta \amp= B_2. 
-\end{align*}
-However at the interface, we need the pressures to be equal. Therefore we can set \(p_1 = p_2\). Subtracting the two equations then yields%
-\begin{equation*}
-\rho_1\left( \pd{\phi_1}{t}+ g\eta\right) + \left( \frac{p}{\rho_1} - \frac{p}{\rho_2} - B_1 + B_2\right) = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
-\end{equation*}
-as applied on \(y = 0\). We are free to pick the constants, so we pick them so as to completely zero the expression in the second group of brackets. Thus%
-\begin{equation*}
-\rho_1\left( \pd{\phi_1}{t}+ g\eta\right)  = \rho_2\left(\pd{\phi_2}{t}+ g\eta\right) 
-\end{equation*}
-on \(y = 0\).%
-\par
-So now the natural question is to ask how the linearisation procedure changes with the two fluids of different densities. Gain, we set \(\eta = A\cos(kx - \omega t)\) and \(\phi_i = f_i(y) \sin(kx - \omega t)\). The equation for \(f\) is similarly given by \(f'' = k^2 f,\) and this time, we must select different exponential powers so as to ensure the fluid is bounded either as \(y \to \infty\)  or as \(y \to -\infty\). This essentially yields%
-\begin{align*}
-f_1 = B \e^{ky}, \amp \qquad y < 0, \\
-f_2 = C \e^{-ky}, \amp \qquad y > 0, 
-\end{align*}
-for constants \(B\) and \(C\).%
-\par
-The remaining boundary conditions are:%
-\begin{gather*}
-f_1'(0) = (\omega)A, \\
-f_2'(0) = (\omega)A, \\
-\rho_1(-\omega f_1(0) + gA) = \rho_2(-\omega f_2(0) + gA), 
-\end{gather*}
-thus%
-\begin{gather*}
-Bk = \omega A, \\
--Ck = \omega A, \\
-\rho_1(-\omega B + gA) = \rho_2(-\omega C + gA), 
-\end{gather*}
-which in matrix form is%
-\begin{equation*}
-\begin{pmatrix}
-\omega \amp -k \amp 0 \\
-\omega \amp 0 \amp k \\
-g(\rho_1 - \rho_2) \amp -\omega\rho_1 \amp \omega \rho_2
-\end{pmatrix}
-\begin{pmatrix}
-A \\ B \\ C
-\end{pmatrix}
-= 
-\begin{pmatrix}
-0 \\ 0 \\ 0
-\end{pmatrix}.
-\end{equation*}
-%
-\par
-Expanding the determinant about the first row yields%
-\begin{align*}
-\omega
-\begin{vmatrix}
-0 \amp k \\
--\omega \rho_1 \amp \omega \rho_2 
-\end{vmatrix}
-+ k
-\begin{vmatrix}
-\omega \amp k \\ 
-g(\rho_1 - \rho_2) \amp \rho_2 \omega
-\end{vmatrix}\\
-= \omega^2 k (\rho_1 + \rho_2) - k^2 g (\rho_1 - \rho_2) = 0,
-\end{align*}
-which gives the desired result.%
-\end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.5.5}{Fluids with surface tension.}{ex-waterwaves-surfacetension}%
-\par\smallskip%
-\noindent\hypertarget{ex-waterwaves-surfacetension-3-main}{}This question was done in the problem class recording on 11 November 2025, accessed \href{https://uniofbath.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54f12952-d20d-4281-a771-b39100cca695}{here}.%
-\par
-Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give%
+\noindent\hypertarget{ex-waterwaves-surfacetension-3-main}{}Very little changes in the linearisation procedure with surface tension, as the only difference is the Bernoulli equation, which is linearised to give%
 \begin{equation*}
 \pd{\phi}{t} + g\eta = \frac{T}{\rho} \pd{^2 \eta}{x^2}, 
 \end{equation*}
@@ -8544,22 +8515,22 @@ Previously for deep-water gravity waves, we had \(\omega^2 = gk\). So now we mus
 \end{equation*}
 as desired.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.5.6}{The dispersion relation (simple).}{exercises-water-waves-7}%
+\begin{divisionsolution}{Exercise}{5.5.5}{The dispersion relation (simple).}{ex-hw-waterwaves-dispersion}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{exercises-water-waves-7-3-2-main}{}%
+\item[(a)]\noindent\hypertarget{ex-hw-waterwaves-dispersion-3-2-main}{}%
 \begin{equation*}
 \eta(x, t) = 2\sin \left[ \frac{(k_1 + k_2)x - (\omega_1 + \omega_2)t}{2}\right]
 \cos \left[ \frac{(k_1 - k_2)x - (\omega_1 - \omega_2)t}{2}\right]
 \end{equation*}
 %
-\item[(b)]\noindent\hypertarget{exercises-water-waves-7-4-2-main}{}Substituting these expressions, we have%
+\item[(b)]\noindent\hypertarget{ex-hw-waterwaves-dispersion-4-2-main}{}Substituting these expressions, we have%
 \begin{equation*}
 \eta = 2\sin(kx - \omega t)\cos(\Delta k x - \Delta \omega t).
 \end{equation*}
 The point here is that \(\Delta k, \Delta \omega \ll 1\), so the cosine term is very nearly 1. This yields the standard travelling sinusoidal wave. However, over long timescales, notably when \(t\) is large, the cosine term is no longer constant. This yields a slowly varying envelope or amplitude multiplying the sine,%
-\item[(c)]\noindent\hypertarget{exercises-water-waves-7-5-2-main}{}This part is quite straightforward. The maxima of the cosines are found at multiples of \(2\pi\) in the argument. For example, the first maxima lies at \(\Delta k x - \Delta \omega t = 0,\) hence \(x(t) = (\Delta k/\Delta \omega)t.\)%
+\item[(c)]\noindent\hypertarget{ex-hw-waterwaves-dispersion-5-2-main}{}This part is quite straightforward. The maxima of the cosines are found at multiples of \(2\pi\) in the argument. For example, the first maximum lies at \(\Delta k x - \Delta \omega t = 0,\) hence \(x(t) = (\Delta \omega/\Delta k)t.\)%
 \par
-This is indeed equivalent to a particle that moves with velocity \(\Delta k/\Delta \omega\). In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity,%
+This is indeed equivalent to a particle that moves with velocity \(\Delta \omega/\Delta k\). In the limit the perturbations to the quantities tends to zero, we can informally note that this leads to the notion of the group velocity,%
 \begin{equation*}
 v_g = \dd{\omega}{k}.
 \end{equation*}
@@ -9496,318 +9467,40 @@ p=&p_0-\frac{\rho a^4(p_0-p_1)}{r^4}.
 \end{enumerate}%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\normalsize{}6.10\space\textperiodcentered\space{}Problems set 7 to hand in}
-\begin{divisionsolution}{Exercise}{6.10.1}{Analysis of flow in a pipe.}{ch-viscousflows-12-3}%
+\noindent\textbf{\normalsize{}6.10\space\textperiodcentered\space{}Problems set 5 to hand in}
+\begin{divisionsolution}{Exercise}{6.10.4}{Calculation of the stress tensor.}{ch-viscousflows-12-6}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{ch-viscousflows-12-3-3-2-main}{}The no-slip boundary conditions give%
+\item[(a)]\noindent\hypertarget{ch-viscousflows-12-6-3-2-main}{}%
 \begin{equation*}
-\left.\bu\right|_{r=a}=0.
+\bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
 \end{equation*}
-%
-\item[(b)]\noindent\hypertarget{ch-viscousflows-12-3-4-2-main}{}Assuming axisymmetric flow implies there is no dependence on \(\theta\) and that the \(\theta\)-component of the velocity is zero \(u_\theta=0\). Since the pipe is infinitely long in the \(z\)-direction, and the pressure gradient is constant, there is no preferred location in this directions, and hence the velocity profile is independent of \(z\).%
-\item[(c)]\noindent\hypertarget{ch-viscousflows-12-3-5-2-main}{}We have no \(\theta\)- or \(z\)-dependence, meaning that the continuity equation reduces to%
+and therefore this is a possible flow. For this fluid,%
 \begin{equation*}
-\frac{1}{r}\pd{}{r}(ru_r)=0,
+\bsigma=-p\bI+2\mu\be\text{.}
 \end{equation*}
-and hence \(u_r=A/r\), where \(A\) is constant. Since the cylinder is a solid boundary, we need \(u_r=0\) at \(r=a\). Therefore, \(A=0\), and so \(u_r=0\) everywhere.%
-\item[(d)]\noindent\hypertarget{ch-viscousflows-12-3-6-2-main}{}At \(r=a\), we have%
+We have%
 \begin{equation*}
-u_z=\frac{P}{4\mu}\left(a^2-a^2\right)=0,
-\end{equation*}
-which satisfies the no-slip boundary condition.%
-\item[(e)]\noindent\hypertarget{ch-viscousflows-12-3-7-2-main}{}A larger pressure gradient \(P\) means a larger driving force for the flow, and hence a larger velocity. A larger viscosity \(\mu\) means a larger resistance to the flow, and hence a smaller velocity. Therefore, it is to be expected that the velocity profile increases as \(P\) increases and decreases as \(\mu\) increases.%
-\item[(f)]\noindent\hypertarget{ch-viscousflows-12-3-8-2-main}{}The pressure at a general point is given by%
-\begin{equation*}
-p=p_0+Pz.
-\end{equation*}
-%
-\par
-The stress vector is given by \(\btau=\bsigma\bn\), with \(\bn=-\hat{\br}\) and \(\bsigma=-p\bI+2\mu\be\). Simplifying \hyperref[eq-strainrate-cyl]{({\xreffont\ref{eq-strainrate-cyl}})}, we have%
-\begin{equation*}
-\be=\left(\begin{matrix}
-0&0&\frac12\pd{u_z}{r}\\
-0&0&0\\
-\frac12\pd{u_z}{r}&0&0
-\end{matrix}\right)
+\be=\frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
 =\left(\begin{matrix}
-0&0&-\frac{Pr}{4\mu}\\
-0&0&0\\
--\frac{Pr}{4\mu}&0&0
-\end{matrix}\right).
-\end{equation*}
-Hence,%
-\begin{equation*}
-\bsigma=\left(\begin{matrix}
--p_0-Pz&0&-Pr/2\\
-0&-p_0-Pz&0\\
--Pr/2&0&-p_0-Pz
-\end{matrix}\right).
-\end{equation*}
-At \(r=a\), we have%
-\begin{align*}
-\tau=&\bsigma\bn\\
-=&\left(-p\bI+2\mu\be\right)(-\hat{\br})\\
-=&\left(p\bI-2\mu\be\right)\hat{\br}\\
-=&p\hat{\br}-\mu\pd{u_z}{r}\hat{\bz}.
-\end{align*}
-Hence the normal component of the stress vector is%
-\begin{equation*}
-\tau_r=p=p_0+Pz,
-\end{equation*}
-and the axial component of the shear stress vector is%
-\begin{gather*}
-\tau_z=-\mu\pd{u_z}{r}\\
-=-\mu\pd{}{r}\left[\frac{P}{4\mu}(a^2-r^2)\right]\\
-=-\mu\left(-\frac{P}{2\mu}r\right)\\
-=\frac{Pa}{2}
-\end{gather*}
-The \(\theta\)-component of the stress vector is zero:%
-\begin{equation*}
-\tau_\theta=0.
-\end{equation*}
-%
-\item[(g)]\noindent\hypertarget{ch-viscousflows-12-3-9-2-main}{}The normal stress is due to the pressure in the fluid, which acts equally in all directions, and hence the normal stress on the inside of the pipe wall points radially outward into the wall. The shear stress points along the pipe in the direction of increasing \(z\) since this is the direction of the flow, and hence the fluid exerts a tangential force on the pipe wall in this direction.%
-\end{enumerate}%
-\end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{6.10.2}{Rotating flow.}{ex-rotating-flow}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{ex-rotating-flow-3-2-main}{}We have%
-\begin{equation*}
-\bu=\bOmega\times\bx
-=\begin{vmatrix}
-\bi & \bj & \bk \\
-0 & 0 & \Omega \\
-x & y & z
-\end{vmatrix}
-=-\Omega y\bi+\Omega x\bj+0\bk.
-\end{equation*}
-Hence the velocity components are%
-\begin{equation*}
-u=-\Omega y,\quad v=\Omega x,\quad w=0.
-\end{equation*}
-%
-\item[(b)]\noindent\hypertarget{ex-rotating-flow-4-2-main}{}We have%
-\begin{equation*}
-\nabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
-\end{equation*}
-and hence the flow is incompressible.%
-\item[(c)]\noindent\hypertarget{ex-rotating-flow-5-2-main}{}We have%
-\begin{align*}
-\sigma_{11}=&-p+2\mu\pd{u}{x}=-p+0=-p,\\
-\sigma_{12}=&\mu\left(\pd{u}{y}+\pd{v}{x}\right)
-=\mu(-\Omega+ \Omega)=0,\\
-\sigma_{13}=&\mu\left(\pd{u}{z}+\pd{w}{x}\right)=\mu(0+0)=0,\\
-\sigma_{21}=&\mu\left(\pd{v}{x}+\pd{u}{y}\right)
-=\mu(\Omega -\Omega)=0,\\
-\sigma_{22}=&-p+2\mu\pd{v}{y}=-p+0=-p,\\
-\sigma_{23}=&\mu\left(\pd{v}{z}+\pd{w}{y}\right)=\mu(0+0)=0,\\
-\sigma_{31}=&\mu\left(\pd{w}{x}+\pd{u}{z}\right)=\mu(0+0)=0,\\
-\sigma_{32}=&\mu\left(\pd{w}{y}+\pd{v}{z}\right)=\mu(0+0)=0,\\
-\sigma_{33}=&-p+2\mu\pd{w}{z}=-p+0=-p.
-\end{align*}
-Hence the deviatoric stress tensor is%
-\begin{equation*}
-\bsigma
-=\left(\begin{matrix}
--p & 0 & 0 \\
-0 & -p & 0 \\
-0 & 0 & -p
+\pd{u}{x} & \frac12\left(\pd{u}{y}+\pd{v}{x}\right) & \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
+\frac12\left(\pd{u}{y}+\pd{v}{x}\right) & \pdf{v}{y} & \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
+\frac12\left(\pd{u}{z}+\pd{w}{x}\right) & \frac12\left(\pd{v}{z}+\pd{w}{y}\right) & \pd{w}{z}
 \end{matrix}\right),
-=-p\bI,
+=\left(\begin{matrix}
+0 & k/2 & 0 \\
+k/2 & 0 & 0 \\
+0 & 0 & 0
+\end{matrix}\right)
 \end{equation*}
-where \(\bI\) is the identity tensor.%
-\item[(d)]\noindent\hypertarget{ex-rotating-flow-6-2-main}{}The result shows that the deviatoric stress tensor is zero, meaning there are no viscous stresses in this flow. The only stress is due to the pressure in the fluid. This is as expected since the flow represents a solid body rotation with angular velocity \(\bOmega\). In a solid body rotation, there is no relative motion between adjacent fluid particles, and hence no viscous stresses.%
-\end{enumerate}%
-\end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{6.10.3}{Flow outside a rotating cylinder.}{ch-viscousflows-12-5}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{ch-viscousflows-12-5-3-2-main}{}The flow and pressure are steady since the cylinder rotates at constant angular velocity. The flow and pressure have rotational symmetry and therefore no dependence on \(\theta\). The flow and pressure are independent of \(z\) since the cylinder is infinite in this direction and there is no pressure gradient in this direction. The \(z\)-component of velocity is zero since there is no motion of the cylinder or pressure gradient in this direction.%
-\item[(b)]\noindent\hypertarget{ch-viscousflows-12-5-4-2-main}{}Since there is no \(\theta\)- or \(z\)-dependence, the continuity equation reduces to%
+The stress tensor is therefore%
 \begin{equation*}
-\frac{1}{r}\pd{}{r}(ru_r)=0,
-\end{equation*}
-and hence \(u_r=A/r\), where \(A\) is constant. Since the cylinder is a solid boundary, we need \(u_r=0\) at \(r=a\). Therefore, \(A=0\), and so \(u_r=0\) everywhere.%
-\item[(c)]\noindent\hypertarget{ch-viscousflows-12-5-5-2-main}{}Since \(u_r=u_z=0\) and there is no \(\theta\)- or \(z\)-dependence, the Navier\textendash{}Stokes equations reduce to%
-\begin{align*}
-&-\rho\frac{u_{\theta}^2}{r}=-\pd{p}{r},\\
-&0=\mu\left(\frac1r\pd{}{r}\left(r\pd{u_\theta}{r}\right)-\frac{u_{\theta}}{r^2}\right),\\
-&0=-\pd{p}{z}.
-\end{align*}
-%
-\par
-The \(z\)-component shows that \(p=p(r)\). Now consider the \(\theta\)-component. Substituting \(u_\theta=a^2\Omega/r\):%
-\begin{align*}
-\frac1r\pd{}{r}\left(r\pd{u_\theta}{r}\right)-\frac{u_{\theta}}{r^2}\\
-=&\frac1r\pd{}{r}\left(r\pd{}{r}\left(\frac{a^2\Omega}{r}\right)\right)-\frac{a^2\Omega}{r^3}\\
-=&-a^2\Omega\frac1r\pd{}{r}\left(\frac{1}{r}\right)-\frac{a^2\Omega}{r^3}\\
-=&a^2\Omega\frac1r\left(\frac{1}{r^2}\right)-\frac{a^2\Omega}{r^3}\\
-=&0.
-\end{align*}
-Hence this flow satisfies the \(\theta\)-component of the Navier\textendash{}Stokes equation.%
-\par
-The \(r\)-component of the Navier\textendash{}Stokes equation is%
-\begin{align*}
-\pd{p}{r}=&\rho\frac{u_{\theta}^2}{r}\\
-=&\rho\frac{(a^2\Omega/r)^2}{r}\\
-=&\rho\frac{a^4\Omega^2}{r^3}.
-\end{align*}
-Hence%
-\begin{equation*}
-p(r)=p_0+\frac{\rho a^4\Omega^2}{2}\left(\frac1{a^2}-\frac1{r^2}\right),
-\end{equation*}
-for some constant \(p_0\), and therefore (since we have been able to find a suitable pressure), this component of the Navier\textendash{}Stokes equation is also satisfied.%
-\par
-Hence the flow \(\bu=(0,a^2\Omega/r,0)\) satisfies the Navier\textendash{}Stokes equations. Finally, we check the boundary condition at \(r=a\):%
-\begin{equation*}
-\left.\bu\right|_{r=a}=\left(0,\frac{a^2\Omega}{a},0\right)=(0,a\Omega,0),
-\end{equation*}
-which matches the velocity of the cylinder surface.%
-\item[(d)]\noindent\hypertarget{ch-viscousflows-12-5-6-2-main}{}Initially, there will be a thin boundary layer of fluid close to the cylinder surface that starts to rotate with the cylinder due to the no-slip boundary condition. As time progresses, viscous diffusion will cause the rotation to spread outwards from the cylinder surface into the fluid. Eventually, the flow will reach a steady state, which is the flow found in the previous part.%
-\end{enumerate}%
-\end{divisionsolution}%
-\par\medskip
-\noindent\textbf{\normalsize{}6.11\space\textperiodcentered\space{}Problems set 8 to hand in}
-\begin{divisionsolution}{Exercise}{6.11.1}{}{problems-set-8-3}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{problems-set-8-3-2-2-main}{}%
-\begin{equation*}
-\mathrm{Re}=\frac{\rho Ua}{\mu},
-\end{equation*}
-where \(U\) is the characteristic velocity, \(a\) is the characteristic length scale (the radius of the sphere), \(\rho\) is the density of the fluid, and \(\mu\) is the shear viscosity of the fluid.%
-\item[(b)]\noindent\hypertarget{problems-set-8-3-3-2-main}{}%
-\begin{itemize}[label=\ptxlistdisc]
-\item{}In case (a), the flow is smooth and steady around the sphere, and the flow is also reversible (left\textendash{}right symmetry), indicating a low Reynolds number.%
-\item{}In case (b), there is some disturbance in the flow behind the sphere, suggesting a moderate Reynolds number, of order 100.%
-\item{}In case (c), there is a turbulent wake behind the sphere, indicating a high Reynolds number, \(\mathrm{Re}\gg 10^3\).%
-\end{itemize}
-%
-\end{enumerate}%
-\end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{6.11.2}{Channel flow.}{problems-set-8-4}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{problems-set-8-4-3-2-main}{}We have \(u=v=w=0\) at \(y=\pm d\).%
-\item[(b)]\noindent\hypertarget{problems-set-8-4-4-2-main}{}Fully-developed flow implies the velocity components do not depend on \(x\). Thus, the continuity equation reduces to%
-\begin{equation*}
-\pd{v}{y}=0,
-\end{equation*}
-implying that \(v\) is independent of \(y\). The no-slip boundary conditions at each plate implies \(v=0\) there. Hence, \(v=0\) everywhere.%
-\item[(c)]\noindent\hypertarget{problems-set-8-4-5-2-main}{}The three components of the Navier\textendash{}Stokes equations simplify to%
-\begin{align*}
-&0=-\pd{p}{x}+\mu\pd{^2u}{y^2},\\
-&0=-\pd{p}{y},\\
-&0=0.
-\end{align*}
-The \(y\)-component shows the pressure only depends on \(x\), and for the two terms in the \(x\)-component:%
-\begin{align*}
-&-\pd{p}{x}\quad\mbox{depends on  only},\\
-&\mu\pd{^2u}{y^2}\quad\mbox{depends on  only}.
-\end{align*}
-Hence both these terms are constant. Setting%
-\begin{equation*}
-G=-\pd{p}{x},
-\end{equation*}
-where \(G\) is constant, we have%
-\begin{equation*}
-\mu\pd{^2u}{y^2}=-G.
+=\left(\begin{matrix}
+0 & k/2 & 0 \\
+k/2 & 0 & 0 \\
+0 & 0 & 0
+\end{matrix}\right)
 \end{equation*}
 %
-\item[(d)]\noindent\hypertarget{problems-set-8-4-6-2-main}{}We have%
-\begin{equation*}
-u=-\frac{G}{2\mu}y^2+C_1y+C_2,
-\end{equation*}
-where \(C_1\) and \(C_2\) are constants, and, applying the boundary condition at \(y=d\),%
-\begin{equation*}
-0=-\frac{G}{2\mu}d^2+C_1d+C_2,
-\end{equation*}
-and at \(y=-d\),%
-\begin{equation*}
-0=-\frac{G}{2\mu}d^2-C_1d+C_2.
-\end{equation*}
-Subtracting these equations, we see that \(C_1=0\) and then we find \(C_2=Gd^2/(2\mu)\). Hence%
-\begin{equation*}
-u=-\frac{G}{2\mu}y^2+\frac{Gd^2}{2\mu}
-=\frac{G}{2\mu}\left(d^2-y^2\right),
-\end{equation*}
-and \(v=w=0\).%
-\item[(e)]\noindent\hypertarget{problems-set-8-4-7-2-main}{}For the plate at \(y=k\), the \(x\)-component of the stress is%
-\begin{equation*}
-\tau=-\mu\pd{u}{y}
-\end{equation*}
-(the minus sign occurs since the vector into the fluid points in the \(-y\)-direction) and the \(z\)-component of the stress is zero since the flow is two-dimensional. The \(x\)-component equals%
-\begin{equation*}
-\tau=-\mu \left(-\frac{Gd}{\mu}\right)=Gd.
-\end{equation*}
-%
-\par
-For the plate at \(y=-k\), the \(x\)-component of the stress is%
-\begin{equation*}
-\tau=\mu\pd{u}{y}
-\end{equation*}
-(the plus sign occurs since the vector into the fluid points in the \(+y\)-direction) and the \(z\)-component of the stress is zero since the flow is two-dimensional. The \(x\)-component equals%
-\begin{equation*}
-\tau=\mu \left(-\frac{G(-d)}{\mu}\right)=Gd.
-\end{equation*}
-%
-\par
-Thus the stress at both plates is \(Gd\) in the \(+x\)-direction, and the force on the whole plate is \(GdA\) in the \(+x\)-direction. Hence the tethering force to keep each plate fixed is \(GdA\) in the \(-x\)-direction.%
-\par
-Note that it is very easy to make a sign error on this type of question. I would therefore recommend always reflecting on your answer to see if the direction you get is what you'd expect from the physics. A viscous fluid tries to drag the surface along with the flow, and so the force due to the shear stress is sometimes called the \emph{drag force}. Thus, the tethering force must oppose this drag force, which is what we found.%
-\end{enumerate}%
-\end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{6.11.3}{Wavy-walled pipe.}{problems-set-8-5}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{problems-set-8-5-3-2-main}{}\begin{figureptx}{Figure}{Wavy-walled pipe \textendash{} planes to apply mass conservation.}{problems-set-8-5-3-2-1}{}%
-\begin{image}{0.2}{0.6}{0.2}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-wavywalledtube-masscons.jpg}
-\end{image}%
-\tcblower
-\end{figureptx}%
-The volumetric flux into the left-hand surface of this region equals area times velocity:%
-\begin{equation*}
-\pi (R^2-a^2)u
-\end{equation*}
-and that out of the right-hand surface equals%
-\begin{equation*}
-\pi \left((R+\de R)^2-a^2\right)(u+\de u)
-=\pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),
-\end{equation*}
-where we used the chain rule to rewrite the increments in terms of \(\de z\). Note that throughout this equation, we neglect \(\de z^2\) and higher powers, as they are small.%
-\item[(b)]\noindent\hypertarget{problems-set-8-5-4-2-main}{}The area of the inner cylinder in this region is \(2\pi a\de z\), and thus we have a volumetric flux \(2\pi aU\de z\) entering this region from the inner cylinder.%
-\item[(c)]\noindent\hypertarget{problems-set-8-5-5-2-main}{}Since the volume of the pipe between \(z\) and \(z+\de z\) is fixed, the total volumetric flux into this region equals the total volumetric flux out.%
-\par
-Thus%
-\begin{align*}
-&\pi (R^2-a^2)u + 2\pi aU\de z = \pi \left(\left(R+R'\de z\right)^2-a^2\right)\left(u+u'\de z\right),\\
-\Rightarrow\quad&
-2\pi aU\de z = \pi \left((R^2-a^2)u'+2RR'u\right)\de z,\\
-\Rightarrow\quad&
-2aU = (R^2-a^2)u'+2RR'u,\\
-\Rightarrow\quad&
-u' = \frac{2(aU-RR'u)}{R^2-a^2},
-\end{align*}
-thus proving the result.%
-\item[(d)]\noindent\hypertarget{problems-set-8-5-6-2-main}{}A suitable lengthscale is \(R_0\). Simplifying the differential equation for \(u\), by neglecting variations in pipe radius \(R'\) and the radius of the inner cylinder \(a\), gives%
-\begin{equation*}
-\dd{u}{z} \approx \frac{2aU}{R_0^2},
-\end{equation*}
-suggesting a suitable velocity scale is this times \(L\) (the velocity that would be attained at the end of the pipe):%
-\begin{equation*}
-\frac{2aLU}{R_0^2}.
-\end{equation*}
-Hence the Reynolds number is%
-\begin{equation*}
-\mathrm{Re}=\frac{\rho R_0}{\mu}\frac{2aLU}{R_0^2}
-=\frac{2aLU\rho}{\mu R_0}.
-\end{equation*}
-%
-\par
-Many students did not find an expression for the velocity scale, and just left it as \(u(z)\) or similar. This would mean that we do not have an expression for the Reynolds number in terms of the problem parameters. Also, many students did not approximate \(R-a\) as \(R_0\), which simplifies the expression (some did get \(R_0-a\), but you can go further than this).%
-\par
-I have added a final sentence to the question to clarify that the answer should be in terms of the problem parameters as very few students attempted to find an order of magnitude for \(u(z)\).%
-\item[(e)]\noindent\hypertarget{problems-set-8-5-7-2-main}{}The Reynolds number would need to be large (but not so large that the flow becomes turbulent).%
-\par
-In the limit of large Reynolds number, we would recover the Euler equation from the Navier\textendash{}Stokes equation (see \hyperlink{ex-limits-low-high-Reynolds}{Exercise~{\xreffont 6.9.11}}). In this limit we only need a no-penetration condition (\(\bu\cdot\hat{\bn}=0\)) and not the full no-slip conditions (\(\bu=\bzero\)), and so in this case uniform flow is possible.%
-\item[(f)]\noindent\hypertarget{problems-set-8-5-8-2-main}{}The flow would need to satisfy the no-slip boundary condition at the outer cylinder and the velocity there would therefore tend to zero.%
 \end{enumerate}%
 \end{divisionsolution}%
 \end{solutions-subsection-numberless}
