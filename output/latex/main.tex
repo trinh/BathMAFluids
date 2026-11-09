@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2026-11-09T16:53:59Z       *%
+%*       on 2026-11-09T16:56:21Z       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -7271,9 +7271,11 @@ satisfies the Navier\textendash{}Stokes equations and boundary conditions.%
 \end{enumerate}%
 \end{divisionexercise}%
 \begin{divisionexercise}{4}{Calculation of the stress tensor.}{}{ch-viscousflows-12-6}%
-For each of the following flows of an incompressible Newtonian fluid of density \(\rho\) and shear viscosity \(\mu\), check that the flow is possible (\emph{i.e.} that it is incompressible) and calculate the corresponding stress tensor as a \(3\times3\) matrix.%
+For each of the following flows of an incompressible Newtonian fluid of density \(\rho\) and shear viscosity \(\mu\), (i) check that the flow is possible (\emph{i.e.} that it is incompressible), (ii) sketch the flow, and (iii) calculate the corresponding stress tensor as a \(3\times3\) matrix.%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item{}\(\bu=(ky,0,0)\) and \(p=p_0\), where \(k\) and \(p_0\) are constants.%
+\item{}The simple shear flow \(\bu=(ky,0,0)\) and \(p=p_0\) in \(y>0\), where \(k\) and \(p_0\) are constants.%
+\item{}A rotating flow \(\bu=(-ky,kx,0)\) and \(p=p_0\), where \(k\) and \(p_0\) are constants.%
+\item{}A straining flow \(\bu=(kx,-ky,0)\) and \(p=p_0\), where \(k\) and \(p_0\) are constants.%
 \end{enumerate}%
 \end{divisionexercise}%
 \end{exercises-section}
@@ -9463,43 +9465,6 @@ and hence the velocity and pressure fields are%
 u_r=&\frac{a^2}{r^2}\sqrt{\frac{4(p_0-p_1)}{\rho}},\\
 p=&p_0-\frac{\rho a^4(p_0-p_1)}{r^4}.
 \end{align*}
-%
-\end{enumerate}%
-\end{divisionsolution}%
-\par\medskip
-\noindent\textbf{\normalsize{}6.10\space\textperiodcentered\space{}Problems set 5 to hand in}
-\begin{divisionsolution}{Exercise}{6.10.4}{Calculation of the stress tensor.}{ch-viscousflows-12-6}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\noindent\hypertarget{ch-viscousflows-12-6-3-2-main}{}%
-\begin{equation*}
-\bnabla\cdot\bu=\pd{u}{x}+\pd{v}{y}+\pd{w}{z}=0+0+0=0,
-\end{equation*}
-and therefore this is a possible flow. For this fluid,%
-\begin{equation*}
-\bsigma=-p\bI+2\mu\be\text{.}
-\end{equation*}
-We have%
-\begin{equation*}
-\be=\frac12\left(\bnabla\bu+\left(\bnabla\bu\right)^T\right)
-=\left(\begin{matrix}
-\pd{u}{x} & \frac12\left(\pd{u}{y}+\pd{v}{x}\right) & \frac12\left(\pd{u}{z}+\pd{w}{x}\right) \\
-\frac12\left(\pd{u}{y}+\pd{v}{x}\right) & \pdf{v}{y} & \frac12\left(\pd{v}{z}+\pd{w}{y}\right) \\
-\frac12\left(\pd{u}{z}+\pd{w}{x}\right) & \frac12\left(\pd{v}{z}+\pd{w}{y}\right) & \pd{w}{z}
-\end{matrix}\right),
-=\left(\begin{matrix}
-0 & k/2 & 0 \\
-k/2 & 0 & 0 \\
-0 & 0 & 0
-\end{matrix}\right)
-\end{equation*}
-The stress tensor is therefore%
-\begin{equation*}
-=\left(\begin{matrix}
-0 & k/2 & 0 \\
-k/2 & 0 & 0 \\
-0 & 0 & 0
-\end{matrix}\right)
-\end{equation*}
 %
 \end{enumerate}%
 \end{divisionsolution}%
