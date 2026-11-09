@@ -2034,7 +2034,11 @@
         <image source="ex-potential-Q4.png">
           <shortdescription>Solution</shortdescription>
         </image>
-      </solution>
+        </solution>
+
+        <p>
+          There is a sign error in the above solution. In the last line of the $f'(z)$ computation, the sign of the <m>+iy</m> term has been flipped and should be <m>-iy</m>. This error propagates; the expression for <m>v</m> in the line that follows should have positive <m>Q</m>.
+        </p>
     </exercise>
     
   <exercise xml:id="ps-image-planar02">
@@ -2248,8 +2252,8 @@ from the origin. Try to sketch the streamlines in either case
       <p>
         The potential that corresponds to a single source is found by using method of images in the <m>\zeta</m> plane and mapping backwards. It is
         <md>
-          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], </mrow>
-          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} + \overline{d})\right], </mrow>
+          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta - \overline{d})\right], </mrow>
+          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} - \overline{d})\right], </mrow>
         </md>
       </p>
 
@@ -2290,8 +2294,8 @@ from the origin. Try to sketch the streamlines in either case
       <p>
         The potential that corresponds to a single source is found by using method of images in the <m>\zeta</m> plane and mapping backwards. It is
         <md>
-          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta + \overline{d})\right], </mrow>
-          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) + \overline{d})\right], </mrow>
+          <mrow>F(\zeta) \amp= \frac{Q}{2\pi} \left[\log(\zeta - d) + \log(\zeta - \overline{d})\right], </mrow>
+          <mrow>f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) - \overline{d})\right], </mrow>
         </md>
       </p>
 
