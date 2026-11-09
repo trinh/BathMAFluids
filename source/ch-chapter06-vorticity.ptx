@@ -1777,6 +1777,10 @@
       </hint>
       <solution>
         <p>
+          A vortex tube is a group of vortex lines.
+          The sides of the vortex tube are parallel to vortex lines.
+        </p>
+        <p>
           Given two different such surfaces <m>S_1</m> and <m>S_2</m>,
           define a `cylindrical' volume <m>V</m>,
           whose ends are the the two surfaces <m>S_1</m> and <m>S_2</m>
