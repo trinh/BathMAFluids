@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item analytic, \hyperpage{60}
+  \item analytic, \hyperpage{62}
 
   \indexspace
 
@@ -12,36 +12,11 @@
 
   \indexspace
 
-  \item entire, \hyperpage{60}
-
-  \indexspace
-
-  \item flux through a surface, \hyperpage{21}
+  \item flux through a surface, \hyperpage{22}
   \item free-surface, \hyperpage{39}
 
   \indexspace
 
-  \item holomorphic, \hyperpage{60}
-
-  \indexspace
-
-  \item line sink, \hyperpage{52}
-  \item line source, \hyperpage{51}
-  \item line source, complex, \hyperpage{62}
-  \item line source, streamfunction, \hyperpage{56}
-  \item line vortex, \hyperpage{57}
-  \item line vortex, complex, \hyperpage{63}
-
-  \indexspace
-
-  \item stagnation point flow, \hyperpage{50}
-  \item stagnation point flow, complex, \hyperpage{62}
-  \item stagnation point flow, streamfunction, \hyperpage{56}
-
-  \indexspace
-
-  \item uniform flow, \hyperpage{49}
-  \item uniform flow, complex, \hyperpage{62}
-  \item uniform flow, streamfunction, \hyperpage{56}
+  \item line sink, \hyperpage{55}
 
 \end{theindex}
