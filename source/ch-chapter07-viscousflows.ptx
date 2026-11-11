@@ -104,9 +104,20 @@
             <me>
               \mu = \frac{F h}{A U}.
             </me>
+            This formula is potentially easier to understand in the following (equivalent) form:
+            <me>
+              F = \frac{\mu A U}{h};
+            </me>
+            (the force required to move the block with speed <m>U</m> is proportional to
+            the shear viscosity of the fluid, the area of the block, the speed of the block
+            and inversely proportional to the thickness of the fluid layer).
+          </p>
+          <p>
             In principle this formula could be used to determine the viscosity of a fluid
-            experimentally; however, in practice it is more common to use a falling ball viscometer (see
-            <xref ref="ps-falling-ball-viscometer"/> in the worksheet at the end of this chapter).
+            experimentally;
+            however, in practice it is more common to use a falling ball viscometer
+            (see <xref ref="ps-falling-ball-viscometer"/> in the worksheet
+            at the end of this chapter) or a cone-and-plate viscometer.
           </p>
           <figure xml:id="fig-viscosity-measurement">
             <caption>Experiment to determine the shear viscosity of a fluid.</caption>
@@ -2181,7 +2192,38 @@
   <section xml:id="sec-viscous-dissipation-of-energy">
     <title>Viscous Dissipation of Energy</title>
     <p>
-      <em>Non-examinable.</em>
+      If <m>T</m> is the total kinetic energy of a volume of fluid,
+      then the rate of change of <m>T</m>, <m>\de T/\de t</m>,
+      is a sum of three terms:
+      <ul>
+        <li>
+          <p>
+            the rate of work done on the fluid by the body forces
+          </p>
+        </li>
+        <li>
+          <p>
+            plus the rate of work done on the fluid by the surface forces
+          </p>
+        </li>
+        <li>
+          <p>
+            minus the rate of dissipation of kinetic energy due to the viscous stresses.
+          </p>
+        </li>
+      </ul>
+      In this section,
+      we calculate expressions for each of these terms in terms of the velocity field
+      and the stress tensor.
+    </p>
+    <p>
+      The viscous stresses do work on the fluid, and this work is converted into heat.
+      The rate of dissipation of kinetic energy due to the viscous stresses is always positive,
+      as we will show later in this section.
+      This means that the system always loses energy due to the viscous stresses.
+    </p>
+    <p>
+      <em>The remainder of this section is non-examinable.</em>
     </p>
     <p>
       In this section we derive an expression for the rate of dissipation
@@ -2654,6 +2696,9 @@
               <em>Fully developed flow:</em>
               <m>\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0</m>,
               but <m>\partial p/\partial z</m> is not, in general, zero.
+              For example, in a pipe of constant cross-section, the flow is fully developed
+              if the velocity profile does not change along the pipe,
+              which is commonly the case after a distance of a few radius lengths from the pipe entrance.
             </p>
             <p>
               The pipe flow problem, Poiseuille flow <xref ref="sec-poiseuille"/>
@@ -4423,16 +4468,26 @@
       <task>
         <statement>
           <p>
-            Find the drag force on the plate.
+            Apply the coordinate transformation from the <m>(x,y)</m>-plane to
+            the <m>(\xi,\eta)</m>-plane illustrated in <xref ref="plate-coordinates"/>,
+            where the <m>\xi</m>-axis runs along the plate
+            and the <m>\eta</m>-axis goes from the plate perpendicularly into the fluid.
+          </p>
+          <figure xml:id="plate-coordinates">
+            <caption>Sketch of coordinate transformation.</caption>
+            <image source="ch-chapter07-plate-coordinates.jpg" width="100%" />
+          </figure>
+          <p>
+            Hence show that the velocity components <m>u_\xi</m> and <m>u_\eta</m>
+            in the <m>\xi</m>- and <m>\eta</m>-directions are given by
+            <me>
+              u_\xi=\alpha(1+k^2)\eta,\quad u_\eta=0.
+            </me>
           </p>
         </statement>
         <hint>
           <p>
-            The drag force can be found by changing coordinates from
-            <m>(x,y)</m> to <m>(\xi,\eta)</m>,
-            which are Cartesian coordinates where the <m>\xi</m>-axis runs along the plate
-            and the <m>\eta</m>-axis goes from the plate perpendicularly into the fluid.
-            You may use the fact that
+            We have
             <me>
               \boldsymbol{i}=\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}},\qquad
               \boldsymbol{j}=\sin\theta\hat{\boldsymbol{\xi}}+\cos\theta\hat{\boldsymbol{\eta}},
@@ -4441,8 +4496,10 @@
             and <m>y</m>-directions, respectively, and <m>\hat{\boldsymbol{\xi}}</m>, <m>\hat{\boldsymbol{\eta}}</m>
             are unit vectors in the <m>\xi</m>- and <m>\eta</m>-directions, respectively, and <m>\theta</m>
             is the angle between the plate and the <m>x</m>-axis.
-            You may use the fact that <m>\cos\theta=1/(\sqrt{1+k^2})</m>,
-            <m>\sin\theta=k/(\sqrt{1+k^2})</m> and
+          </p>
+          <p>
+            In addition, <m>\cos\theta=1/(\sqrt{1+k^2})</m> and <m>\sin\theta=k/(\sqrt{1+k^2})</m>,
+            and therefore
             <me>
               x=\frac{\xi}{\sqrt{1+k^2}}-\frac{k\eta}{\sqrt{1+k^2}},\quad
               y=\frac{k\xi}{\sqrt{1+k^2}}+\frac{\eta}{\sqrt{1+k^2}}.
@@ -4451,15 +4508,7 @@
         </hint>
         <solution>
           <p>
-            We perform the coordinate transform illustrated in <xref ref="plate-coordinates"/>
-            from the <m>(x,y)</m>-plane to the <m>(\xi,\eta)</m>-plane:
-          </p>
-          <figure xml:id="plate-coordinates">
-            <caption>Sketch of plate.</caption>
-            <image source="ch-chapter07-plate-coordinates.jpg" width="100%" />
-          </figure>
-          <p>
-            We use
+            We have
             <md>
               <mrow>
                 \bu=&amp;u\boldsymbol{i}+v\boldsymbol{j}
@@ -4488,8 +4537,17 @@
             </md>
             and so the velocity components are <m>u_\xi=\alpha(1+k^2)\eta</m> and <m>u_\eta=0</m>.
           </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
           <p>
-            Thus the shear stress is given by
+            Hence, find the drag force on the plate.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The shear stress is given by
             <me>
               \mu\pd{u_\xi}{\eta}=\mu\alpha(1+k^2),
             </me>
@@ -4503,8 +4561,9 @@
       <task>
         <statement>
           <p>
-            In this part, find the drag force on the plate by using the stress tensor,
-            and check your answer against the previous part.
+            In this part, use the velocity field in the original
+            <m>(x,y)</m>-coordinate system to find the stress tensor,
+            and hence find the drag force on the plate.
           </p>
         </statement>
         <solution>
@@ -4559,6 +4618,46 @@
             </me>
             which agrees with the previous answer.
           </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compare your answers for the previous two parts. Explain your comparison.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            The two answers are the same, as expected.
+            The coordinate transformation has no effect on the physics of the problem,
+            and so the drag force must be the same in both cases.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Sketch the velocity field in the <m>(\xi,\eta)</m>-plane,
+            and hence sketch the velocity field in the <m>(x,y)</m>-plane.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            In the <m>(\xi,\eta)</m>-plane,
+            the velocity is zero at the plate and increases linearly
+            with increasing distance from the plate.
+          </p>
+          <figure xml:id="plate-velocity-xi-eta-plane">
+            <caption>Sketch of plate.</caption>
+            <image source="ch-chapter07-plate-velocity-xi-eta.jpg" width="50%" />
+          </figure>
+          <p>
+            To get the velocity in the <m>(x,y)</m>-plane, we rotate the figure.
+          </p>
+          <figure xml:id="plate-velocity-x-y-plane">
+            <caption>Sketch of plate.</caption>
+            <image source="ch-chapter07-plate-velocity.jpg" width="50%" />
+          </figure>
         </solution>
       </task>
     </exercise>
@@ -6107,19 +6206,19 @@
           </p>
           <figure xml:id="fig-womersley-example-1">
             <caption>Womersley flow profile for <m>\alpha=1</m>.</caption>
-            <image source="ch-chapter07-womersley1.gif" width="50%">
+            <image source="ch-chapter07-womersley1.png" width="50%">
               <shortdescription>Womersley <m>\alpha=1</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-10">
             <caption>Womersley flow profile for <m>\alpha=10</m>.</caption>
-            <image source="ch-chapter07-womersley10.gif" width="50%">
+            <image source="ch-chapter07-womersley10.png" width="50%">
               <shortdescription>Womersley <m>\alpha=10</m></shortdescription>
             </image>
           </figure>
           <figure xml:id="fig-womersley-example-100">
             <caption>Womersley flow profile for <m>\alpha=100</m>.</caption>
-            <image source="ch-chapter07-womersley100.gif" width="50%">
+            <image source="ch-chapter07-womersley100.png" width="50%">
               <shortdescription>Womersley <m>\alpha=100</m></shortdescription>
             </image>
           </figure>
