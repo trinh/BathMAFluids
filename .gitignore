@@ -6,7 +6,7 @@
 !.gitignore
 
 # don't track unpublished builds or stage (note: Runestone uses `published`)
-# output directory is now tracked - see end of file
+# parts of the output directory are tracked - see end of file
 published
 
 # don't track assets generated from source
@@ -108,16 +108,16 @@ codechat_config.yaml
 
 # Include all files in the output directory
 !output/**
-# The print target keeps its LaTeX build files (latex-source="yes" in
-# project.ptx). Track main.tex/.log/.aux etc., but not the image folders,
-# which are copies of assets/ (they are also stripped from the website).
+# Build output is NOT tracked, except the LaTeX text files from the print
+# build (main.tex, main.log, main.aux, ...) so logs can be compared between
+# versions, and output/doc/main.docx.
+#  - web/ and stage/: rebuilt on every deploy, published via the gh-pages branch
+#  - latex/: main.tex + image copies for the docx conversion, rebuilt each time
+#  - print/main.pdf: ~20 MB per version; it is on the website at pdf/main.pdf
+#  - print/external, print/generated: copies of assets/ and generated-assets/
+output/web/
+output/stage/
+output/latex/
+output/print/main.pdf
 output/print/external/
 output/print/generated/
-
-# output/latex is only main.tex (+ images) from `pretext build latex`, used
-# for the docx conversion. Ignore files left by compiling it by hand
-# (the real build log is kept in output/print/).
-output/latex/*
-!output/latex/main.tex
-!output/latex/external/
-!output/latex/generated/

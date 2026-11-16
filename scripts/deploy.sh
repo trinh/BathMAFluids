@@ -38,7 +38,8 @@ trap 'rm -f "$STEP_OUT"' EXIT
 # Lines that count as errors in a step's output. PreTeXt can print
 # PTX:ERROR (from the XSL stylesheets) yet still exit 0, so we check the
 # output as well as the exit status.
-ERROR_PATTERN='PTX:ERROR|^ERROR|^CRITICAL|^! |Traceback|fatal:'
+# (pretext prints "error:" on the console but "ERROR   :" in its log files)
+ERROR_PATTERN='PTX:ERROR|^(ERROR|error|CRITICAL|critical)[ :]|^! |Traceback|fatal:'
 
 # run_step <description> <command...>
 # Runs one step, shows its output live, appends it to $LOG, and stops the
