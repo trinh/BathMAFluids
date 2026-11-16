@@ -21,7 +21,6 @@
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <style>
 @counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
-@counter-style ptx-marker-2 { system: extends lower-roman; prefix: '('; suffix: ') '; }
 </style>
 <link rel="stylesheet" type="text/css" href="external/custom.css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
@@ -389,8 +388,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Practice Exercises</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscous-handin1.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Problems set 5 to hand in</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscous-handin2.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Problems set 6 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-12.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Problems set 5 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="problems-set-8.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Problems set 6 to hand in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter contains-active">
@@ -812,8 +811,59 @@ f(z) = \frac{\mu}{z}
 <div class="solutions">
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ex-potential-Q4.png" class="contained" alt="Solution"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Solution 4.7.4.1"><a tabindex="-1" href="#ex-hw-image-planar01-3" title="Copy heading and permalink for Solution 4.7.4.1" aria-label="Copy heading and permalink for Solution 4.7.4.1">🔗</a></div>
+<div class="para logical">
+<div class="para">A source at <span class="process-math">\(z = d\)</span> has complex potential</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} \log(z - d).
+\end{equation*}
+</div>
+<div class="para">The complex velocity is then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \frac{1}{z - d} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{[(x - d) + \im y][(x - d) - \im y]} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{(x - d)^2 + y^2}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-image-planar01-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">So on <span class="process-math">\(x = 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \frac{-d - \im y}{d^2 + y^2},
+\end{equation*}
+</div>
+<div class="para">and since <span class="process-math">\(f'(z) = u - \im v\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u = -\frac{Q}{2\pi} \frac{d}{d^2 + y^2}, \qquad v = \frac{Q}{2\pi} \frac{y}{d^2 + y^2}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(u \neq 0\text{,}\)</span> there is flow through the boundary, so the single source is insufficient.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-image-planar01-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">For the equation of the streamlines,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi = \operatorname{Im} f(z) = \operatorname{Im}\left[\frac{Q}{2\pi} \log(z - d)\right].
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(z - d = r\e^{\im\theta}\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\psi = \frac{Q}{2\pi} \theta,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\theta\)</span> is measured about <span class="process-math">\(z = d\text{.}\)</span> The streamlines are therefore radial lines emanating from <span class="process-math">\(z = d\text{,}\)</span> which cross the wall at <span class="process-math">\(x = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-image-planar01-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/ex-potential-Q4-sketch.png" class="contained" alt="A source on the positive x-axis with radial streamlines, some crossing the wall at x = 0"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Sketch of the flow due to a single source at <span class="process-math">\(z = d\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 4.20"><a tabindex="-1" href="#ex-hw-image-planar01-3-4" title="Copy heading and permalink for Figure 4.20" aria-label="Copy heading and permalink for Figure 4.20">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 4.7.4.1"><a tabindex="-1" href="#ex-hw-image-planar01-3" title="Copy heading and permalink for Solution 4.7.4.1" aria-label="Copy heading and permalink for Solution 4.7.4.1">🔗</a></div>
 </div></details>
 </div></article>
 <article class="exercise-like"><h4 class="heading"><a href="ws-potentialflows.html#ps-image-planar02" aria-label="Back to 4.7.5. A source in a semi-infinite flow."><span class="codenumber">4.7.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A source in a semi-infinite flow.</span></a></h4>
@@ -897,14 +947,31 @@ f'(z) = U + \frac{Qz}{\pi(z^2 + a^2)}.
 z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
 \end{equation*}
 </div>
-<div class="para">Setting <span class="process-math">\(\beta = Q/(2\pi a U)\text{,}\)</span> there are two real roots if <span class="process-math">\(\beta &gt; 1\text{.}\)</span> Hence this is the case of two stagnation points along the axis. If <span class="process-math">\(\beta &lt; 1\text{,}\)</span> then there two complex conjugate points, and hence only one stagnation point in the flow field.</div>
+<div class="para">Setting <span class="process-math">\(\beta = Q/(2\pi a U)\text{,}\)</span> there are two real roots if <span class="process-math">\(\beta &gt; 1\text{.}\)</span> Hence this is the case of two stagnation points along the axis. If <span class="process-math">\(\beta &lt; 1\text{,}\)</span> then there are two complex conjugate points; one of the complex conjugates has <span class="process-math">\(\operatorname{Im}(z) &gt; 0\)</span> so lies inside the flow domain in the upper half-plane; the other is the mirrored point in the lower half-plane. So in this case, there is only a single stagnation point in the flow field.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para logical">
+<div class="para">To find where this stagnation point lies, write the roots in terms of <span class="process-math">\(\beta\)</span> as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = a\left(-\beta \pm \sqrt{\beta^2 - 1}\right).
+\end{equation*}
+</div>
+<div class="para">When <span class="process-math">\(\beta &lt; 1\text{,}\)</span> these are <span class="process-math">\(z = a\left(-\beta \pm \im\sqrt{1 - \beta^2}\right)\text{,}\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|z|^2 = a^2\left(\beta^2 + (1 - \beta^2)\right) = a^2.
+\end{equation*}
+</div>
+<div class="para">The stagnation point in the flow is therefore a distance <span class="process-math">\(a\)</span> from the origin, upstream of the source since <span class="process-math">\(\operatorname{Re}(z) = -\beta a \lt 0\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/potential_stag_2_inflow.png" class="contained" alt="image"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 0.94\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 4.20"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-3" title="Copy heading and permalink for Figure 4.20" aria-label="Copy heading and permalink for Figure 4.20">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 0.94\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 4.21"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-4" title="Copy heading and permalink for Figure 4.21" aria-label="Copy heading and permalink for Figure 4.21">🔗</a></div></figcaption>
 </figure>
 <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/potential_stag_2_onbound.png" class="contained" alt="image"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 1.3\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 4.21"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-4" title="Copy heading and permalink for Figure 4.21" aria-label="Copy heading and permalink for Figure 4.21">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\beta = 1.3\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 4.22"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3-5" title="Copy heading and permalink for Figure 4.22" aria-label="Copy heading and permalink for Figure 4.22">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Solution 4.7.7.1"><a tabindex="-1" href="#ex-hw-linesource-stagnation-3" title="Copy heading and permalink for Solution 4.7.7.1" aria-label="Copy heading and permalink for Solution 4.7.7.1">🔗</a></div>
 </div></details>
 </div></article>
@@ -914,7 +981,7 @@ z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
 <div class="solution solution-like knowl__content">
 <div class="para">For the exponential map, <span class="process-math">\(\zeta = \e^{\pi z/h}\text{,}\)</span> we want to check the outputs of points A, B, C, D listed on the figure. These are as follows.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Exponential map<div class="autopermalink" aria-hidden="true" data-description="Table 4.22: Exponential map"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-2" title="Copy heading and permalink for Table 4.22: Exponential map" aria-label="Copy heading and permalink for Table 4.22: Exponential map">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Exponential map<div class="autopermalink" aria-hidden="true" data-description="Table 4.23: Exponential map"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-2" title="Copy heading and permalink for Table 4.23: Exponential map" aria-label="Copy heading and permalink for Table 4.23: Exponential map">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(z\)</span>-plane</td>
@@ -953,7 +1020,7 @@ f(z) \amp= \frac{Q}{2\pi} \left[\log(\e^{\pi z/h} - d) + \log(\e^{\pi z/h} - \ov
 </div>
 <div class="para">For the trigonometric map, <span class="process-math">\(\zeta = \sin(\pi z/2a)\text{,}\)</span> the work is similar.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Trigonometric map<div class="autopermalink" aria-hidden="true" data-description="Table 4.23: Trigonometric map"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-6" title="Copy heading and permalink for Table 4.23: Trigonometric map" aria-label="Copy heading and permalink for Table 4.23: Trigonometric map">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Trigonometric map<div class="autopermalink" aria-hidden="true" data-description="Table 4.24: Trigonometric map"><a tabindex="-1" href="#ps-conformal-check-exp-sin-3-6" title="Copy heading and permalink for Table 4.24: Trigonometric map" aria-label="Copy heading and permalink for Table 4.24: Trigonometric map">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">
 <span class="process-math">\(z\)</span>-plane</td>
@@ -1028,7 +1095,7 @@ f(z) \amp= \frac{Q}{2\pi} \left[\log(\sin(\pi z/2a) - d) + \log(\sin(\pi z/2a) -
 <div class="para">First, construct the complex potential <span class="process-math">\(F(\zeta)\)</span> of uniform flow plus a source. Use the Circle Theorem (<a href="sec-circle-maps.html#thm-circle-theorem" class="xref" data-knowl="./knowl/xref/thm-circle-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.6.1: Milne-Thomson’s Circle Theorem">Theorem 4.6.1</a>) to obtain the corresponding flow past a circular cylinder of radius <span class="process-math">\(a\text{.}\)</span> Finally, use the map from part (b) to obtain the flow in the <span class="process-math">\(z\)</span>-plane.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ws-potentialflows-3-9-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/ex-potential-Q10c.png" class="contained" alt="Solution"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Construction of the flow past a flat plate. There are two typos in the sketch: in the Circle Theorem step, the second term should read <span class="process-math">\(\overline{F(a^2/\overline{\zeta})}\text{,}\)</span> and the final map should read <span class="process-math">\(\zeta = g(z) = \frac{1}{2}\left(z + \sqrt{z - 2a}\sqrt{z + 2a}\right)\text{,}\)</span> as in part (b).<div class="autopermalink" aria-hidden="true" data-description="Figure 4.24"><a tabindex="-1" href="#fig-ex-flatplate-solution" title="Copy heading and permalink for Figure 4.24" aria-label="Copy heading and permalink for Figure 4.24">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Construction of the flow past a flat plate. There are two typos in the sketch: in the Circle Theorem step, the second term should read <span class="process-math">\(\overline{F(a^2/\overline{\zeta})}\text{,}\)</span> and the final map should read <span class="process-math">\(\zeta = g(z) = \frac{1}{2}\left(z + \sqrt{z - 2a}\sqrt{z + 2a}\right)\text{,}\)</span> as in part (b).<div class="autopermalink" aria-hidden="true" data-description="Figure 4.25"><a tabindex="-1" href="#fig-ex-flatplate-solution" title="Copy heading and permalink for Figure 4.25" aria-label="Copy heading and permalink for Figure 4.25">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Solution 4.7.10.c.1"><a tabindex="-1" href="#ws-potentialflows-3-9-4-2" title="Copy heading and permalink for Solution 4.7.10.c.1" aria-label="Copy heading and permalink for Solution 4.7.10.c.1">🔗</a></div>
 </div></details>
 </div></article></article>
