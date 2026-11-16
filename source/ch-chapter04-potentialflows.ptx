@@ -2031,14 +2031,48 @@
       </statement>
 
       <solution>
-        <image source="ex-potential-Q4.png">
-          <shortdescription>Solution</shortdescription>
-        </image>
-        </solution>
+        <p>
+          A source at <m>z = d</m> has complex potential
+          <me>
+            f(z) = \frac{Q}{2\pi} \log(z - d).
+          </me>
+          The complex velocity is then
+          <me>
+            f'(z) = \frac{Q}{2\pi} \frac{1}{z - d} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{[(x - d) + \im y][(x - d) - \im y]} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{(x - d)^2 + y^2}.
+          </me>
+        </p>
 
         <p>
-          There is a sign error in the above solution. In the last line of the $f'(z)$ computation, the sign of the <m>+iy</m> term has been flipped and should be <m>-iy</m>. This error propagates; the expression for <m>v</m> in the line that follows should have positive <m>Q</m>.
+          So on <m>x = 0</m>,
+          <me>
+            f'(z) = \frac{Q}{2\pi} \frac{-d - \im y}{d^2 + y^2},
+          </me>
+          and since <m>f'(z) = u - \im v</m>,
+          <me>
+            u = -\frac{Q}{2\pi} \frac{d}{d^2 + y^2}, \qquad v = \frac{Q}{2\pi} \frac{y}{d^2 + y^2}.
+          </me>
+          Since <m>u \neq 0</m>, there is flow through the boundary, so the single source is insufficient.
         </p>
+
+        <p>
+          For the equation of the streamlines,
+          <me>
+            \psi = \operatorname{Im} f(z) = \operatorname{Im}\left[\frac{Q}{2\pi} \log(z - d)\right].
+          </me>
+          Let <m>z - d = r\e^{\im\theta}</m>. Then
+          <me>
+            \psi = \frac{Q}{2\pi} \theta,
+          </me>
+          where <m>\theta</m> is measured about <m>z = d</m>. The streamlines are therefore radial lines emanating from <m>z = d</m>, which cross the wall at <m>x = 0</m>.
+        </p>
+
+        <figure>
+          <caption>Sketch of the flow due to a single source at <m>z = d</m>.</caption>
+          <image source="ex-potential-Q4-sketch.png" width="50%">
+            <shortdescription>A source on the positive x-axis with radial streamlines, some crossing the wall at x = 0</shortdescription>
+          </image>
+        </figure>
+      </solution>
     </exercise>
     
   <exercise xml:id="ps-image-planar02">
@@ -2184,7 +2218,19 @@ from the origin. Try to sketch the streamlines in either case
           <me>
             z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
           </me>
-          Setting <m>\beta = Q/(2\pi a U)</m>, there are two real roots if <m>\beta &gt; 1</m>. Hence this is the case of two stagnation points along the axis. If <m>\beta &lt; 1</m>, then there two complex conjugate points, and hence only one stagnation point in the flow field. 
+          Setting <m>\beta = Q/(2\pi a U)</m>, there are two real roots if <m>\beta &gt; 1</m>. Hence this is the case of two stagnation points along the axis. If <m>\beta &lt; 1</m>, then there are two complex conjugate points; one of the complex conjugates has <m>\operatorname{Im}(z) &gt; 0</m> so lies inside the flow domain in the upper half-plane; the other is the mirrored point in the lower half-plane. So in this case, there is only a single stagnation point in the flow field.
+        </p>
+
+        <p>
+          To find where this stagnation point lies, write the roots in terms of <m>\beta</m> as
+          <me>
+            z = a\left(-\beta \pm \sqrt{\beta^2 - 1}\right).
+          </me>
+          When <m>\beta &lt; 1</m>, these are <m>z = a\left(-\beta \pm \im\sqrt{1 - \beta^2}\right)</m>, and so
+          <me>
+            |z|^2 = a^2\left(\beta^2 + (1 - \beta^2)\right) = a^2.
+          </me>
+          The stagnation point in the flow is therefore a distance <m>a</m> from the origin, upstream of the source since <m>\operatorname{Re}(z) = -\beta a \lt 0</m>.
         </p>
 
         <figure>
