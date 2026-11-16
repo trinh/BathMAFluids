@@ -609,7 +609,7 @@
         This <url href="https://www-cambridge-org.ezproxy1.bath.ac.uk/core/homsy/category/926">movie</url>
         shows the effect of different values of <m>\gamma</m> on the shape of a droplet.
       </p>
-      <example>
+      <example xml:id="example-droplet">
         <title>Droplet pressure</title>
         <p>
           A spherical fluid droplet of radius <m>R</m> has
@@ -1722,8 +1722,18 @@
           The problem is that the nonlinear term can lead to singularities developing
           in the solution, which would correspond to infinite velocities or pressures
           at some point in the fluid.
-          This is not expected to happen in real fluids,
-          but proving this rigorously is a major challenge.
+          This cannot happen in real fluids,
+          and thus, if the mathematical model (that is, the Navier<ndash/>Stokes equation)
+          is correct, its solution should not develop singularities either.
+        </p>
+        <p>
+          In September 2026, OpenAI
+          <url href="https://openai.com/index/navier-stokes-solution/">claimed</url>
+          that their software
+          had found an example of finite-time blow up of the Navier<ndash/>Stokes equation,
+          meaning that they would have solved the Clay Millennium Prize Problem.
+          They published a 166-page proof, but this has not yet been verified by
+          the mathematical community ...
         </p>
         <p>
           You will be relieved to know that in this course we will only consider
@@ -1731,7 +1741,16 @@
           (often ones in which the nonlinear term equals zero).
         </p>
         <p>
-          In a typical problem, there are four unknown variables: <m>u</m>, <m>v</m>, <m>w</m> and <m>p</m>. There are four equations governing their behaviour, which are the incompressible continuity equation <xref ref="eqn-incompressibledef"/> and the three components of the Navier<ndash/>Stokes equation <xref ref="eqn-navierstokes"/>. In addition, we need to specify appropriate boundary conditions (for example, no slip conditions at a solid boundary) and initial conditions (the velocity and pressure at time <m>t=0</m>).
+          In a typical problem, there are four unknown variables:
+          <m>u</m>, <m>v</m>, <m>w</m> and <m>p</m>.
+          There are four equations governing their behaviour,
+          which are the incompressible continuity equation
+          <xref ref="eqn-incompressibledef"/> and
+          the three components of the Navier<ndash/>Stokes equation
+          <xref ref="eqn-navierstokes"/>.
+          In addition, we need to specify appropriate boundary conditions
+          (for example, no slip conditions at a solid boundary)
+          and initial conditions (the velocity and pressure at time <m>t=0</m>).
         </p>
       </remark>
       <remark xml:id="remark-navierstokes-components">
@@ -4410,6 +4429,135 @@
             the viscosity of fluids (since the viscosity can be calculated from the terminal velocity);
             this is called a <em>falling ball viscometer</em>.              
           </p>
+        </solution>
+      </task>
+    </exercise>
+    
+    <exercise>
+      <title>New in 2026: Surface tension force due to curvature of free surface</title>
+      <introduction>
+        <p>
+          An interface between two fluids has a coefficient of surface tension <m>\gamma</m>.
+          At a particular point <m>\bx_0</m> on the interface,
+          the interface has principal curvatures <m>\kappa_1</m> and <m>\kappa_2</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            What is the force per unit area on the interface due to the surface tension
+            at the point <m>\bx_0</m>? Write your answer in terms of
+            <m>\gamma</m>, <m>\kappa_1</m>, <m>\kappa_2</m>
+            and the unit normal vector <m>\bn</m> to the interface at <m>\bx_0</m>
+            (which points towards the concave side of the interface).
+          </p>
+        </statement>
+        <solution>
+          <figure xml:id="surface-tension-question">
+            <caption>Sketch of small section of the interface, showing surface tension forces.</caption>
+            <image source="surface-tension-question.jpg" width="50%" />
+          </figure>
+          <p>
+            We consider the plane passing through <m>\bx_0</m> with curvature <m>\kappa_1</m>.
+            The three angles marked with a double arc are equal, and we denote these <m>\delta\theta_1</m>.
+            Working per unit length in the third direction (the direction out of the plane),
+            there are two forces <m>\gamma</m>.
+            The horizontal components of these forces cancel and the vertical components are each
+            <m>\gamma\sin\delta\theta_1</m>, so the net force per unit length in the vertical direction is
+            <me>
+              2\gamma\sin\delta\theta_1\approx2\gamma\delta\theta_1.
+            </me>
+            The area of the surface per unit length in the third direction equals the length
+            of the surface snippet shown, which is <m>2\delta\theta_1/\kappa_1</m>.
+            Thus, the contribution to the force per unit area is the force per unit length
+            divided by the area per unit length:
+            <me>
+              \frac{2\gamma\delta\theta_1}{2\delta\theta_1/\kappa_1}=\gamma\kappa_1.
+            </me>
+            Similarly, the contribution to the force per unit area from the plane with curvature
+            <m>\kappa_2</m> is <m>\gamma\kappa_2</m>.
+            Thus the total force per unit area due to the surface tension equals
+            <me>
+              \gamma (\kappa_1 + \kappa_2) \bn,
+            </me>
+            where <m>\bn</m> is the unit normal vector to the interface.
+          </p>
+          <p>
+            Note that it is possible for the two curvatures to have different signs,
+            in which case the surface tension forces due to the two curvatures will cancel out.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What is the force per unit area on the interface due to the surface tension
+            at the point <m>\bx_0</m> if the interface is a sphere of radius <m>R</m>?
+            Check that your answer agrees with the calculation in the droplet example
+            in <xref ref="example-droplet"/>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            In the case of a sphere, the two principle curvatures are equal,
+            <m>\kappa_1=\kappa_2=1/R</m>.
+            Hence the force per unit area due to the surface tension is
+            <me>
+              \gamma (\kappa_1 + \kappa_2) = \frac{2\gamma}{R},
+            </me>
+            which points into the droplet.
+            In the absence of flow, this force per unit area is balanced by the pressure difference
+            across the interface, since the surface tension points inwards, the pressure in the droplet
+            must be greater than that outside the droplet.
+            Hence
+            <me>p_{\textrm{in}} = p_{\textrm{out}} + \frac{2\gamma}{R},</me>
+            which agrees with the calculation in <xref ref="example-droplet"/>.
+          </p>
+        </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Repeat the calculation in the previous part, but this time for the cases of
+            (i) a cylindrical interface of radius <m>R</m> and (ii) a planar interface.
+            In each case, assume there is no fluid flow and find the drop in pressure
+            across the interface.
+            (iii) Explain why the three pressure drops you have found for the cases of
+            a spherical, cylindrical and planar interface make sense physically.
+          </p>
+        </statement>
+        <solution>
+          <ol marker="(i)">
+            <li>
+              <p>
+                In the case of a cylinder, the principle curvatures are <m>1/R</m> and <m>0</m>,
+                and thus the change in pressure across the interface is
+                <me>
+                  \gamma (\kappa_1 + \kappa_2) = \frac{\gamma}{R}.
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                In the case of a planar interface, the principle curvatures are both <m>0</m>,
+                and thus the change in pressure across the interface is
+                <me>
+                  \gamma (\kappa_1 + \kappa_2) = 0.
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                In all three cases,
+                the pressure is higher on the side of the interface with the concave curvature.
+                The spherical interface has the largest pressure difference,
+                because there are two directions of curvature,
+                the cylindrical interface has a moderate pressure difference,
+                because there is only one direction of curvature,
+                and the planar interface has no pressure difference because it is flat (no curvature).
+              </p>
+            </li>
+          </ol>
         </solution>
       </task>
     </exercise>
