@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2026-11-09T17:12:33Z       *%
+%*       on 2026-11-16T14:17:13Z       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -848,7 +848,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\LARGE University of Bath 26-27, MA32051\slash{}MA52129}\\[3\baselineskip]
 {\Large  }\\[0.5\baselineskip]
 {\Large Dept. of Math. Sci., University of Bath}\\[3\baselineskip]
-{\Large November 9, 2026}\\}
+{\Large November 16, 2026}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
@@ -4668,7 +4668,13 @@ We could imagine a thought experiment to measure the shear viscosity of a fluid 
 \begin{equation*}
 \mu = \frac{F h}{A U}.
 \end{equation*}
-In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see \hyperlink{ps-falling-ball-viscometer}{Exercise~{\xreffont 6.9.3}} in the worksheet at the end of this chapter).%
+This formula is potentially easier to understand in the following (equivalent) form:%
+\begin{equation*}
+F = \frac{\mu A U}{h};
+\end{equation*}
+(the force required to move the block with speed \(U\) is proportional to the shear viscosity of the fluid, the area of the block, the speed of the block and inversely proportional to the thickness of the fluid layer).%
+\par
+In principle this formula could be used to determine the viscosity of a fluid experimentally; however, in practice it is more common to use a falling ball viscometer (see \hyperlink{ps-falling-ball-viscometer}{Exercise~{\xreffont 6.9.3}} in the worksheet at the end of this chapter) or a cone-and-plate viscometer.%
 \begin{figureptx}{Figure}{Experiment to determine the shear viscosity of a fluid.}{fig-viscosity-measurement}{}%
 \begin{image}{0.2}{0.6}{0.2}{}%
 \includegraphics[width=\linewidth]{external/ch-chapter07-viscosity-measurement.png}
@@ -5705,17 +5711,59 @@ Instead of working in terms of the stress tensor for Newtonian fluids, as we did
 where \(\bf\) is the body force per unit mass (for example, gravity). This is a more general equation than the Navier\textendash{}Stokes equation, which applies only to Newtonian fluids obeying the consititutive law \hyperref[eq-cartesiannewtonianstress]{({\xreffont\ref{eq-cartesiannewtonianstress}})}. You will perform the derivation in this more general case in \hyperlink{ps-Cauchy-equation}{Exercise~{\xreffont 6.9.10}}.%
 \end{remark}
 \begin{remark}{Remark}{Non-inertial reference frames.}{subsec-navierstokes-discussion-7}%
+\emph{You do not need to recall the formula as given here, but you could be given assistance to add an apparent force into the equation.}%
+\par
 The Navier\textendash{}Stokes equations can be adapted for use in a non-inertial reference frame:%
 \begin{equation*}
 \rho\left(\pd{\bu_n}{t}+\bu_n\cdot\nabla_n\bu_n\right)
-=-\nabla_n p+\mu\nabla_n^2\bu_n+\rho\bf_{\textrm{apparent}}+\rho\bg_n,
+=-\nabla_n p+\mu\nabla_n^2\bu_n-\rho\ba_{\textrm{frame}}+\rho\bg_n,
 \end{equation*}
-where \(\bu_n\) and \(\nabla_n\) are, respectively, the velocity and gradient operator in the non-inertial coordinates, and \(\bf_{\textrm{apparent}}\) is the apparent additional force acting on the fluid due to the non-inertial nature of the reference frame, which has contributions due to the linear acceleration and angular accelerations of the non-inertial reference frame, and the Coriolis and centrifugal forces.%
+where \(\bu_n\) and \(\nabla_n\) are, respectively, the velocity and gradient operator in the non-inertial coordinate frame, and \(\ba_{\textrm{frame}}\) is the acceleration of the non-inertial coordinate frame with respect to a fixed coordinate frame.%
+\par
+In general the acceleration has contributions from the linear acceleration and angular accelerations of the non-inertial reference frame, and the Coriolis and centrifugal forces.%
+\par
+It can be helpful to think of \(-\rho\ba_{\textrm{frame}}\) as an apparent force per unit volume of fluid acting on the fluid due to the non-inertial nature of the reference frame.%
+\par
+Note that gravitational force can also be viewed as the effect of being in a non-inertial reference frame, as compared with an \textasciigrave{}inertial' reference frame, which is in free fall under gravity. This is explained further in the next example.%
 \end{remark}
-\begin{remark}{Remark}{Inviscid fluids.}{subsec-navierstokes-discussion-8}%
+\begin{example}{Example}{Example of a non-interial reference frame.}{subsec-navierstokes-discussion-8}%
+A box containing a fluid accelerates with linear acceleration vector \(\ba\) (and no rotation) in Cartesian coordinates fixed relative to Earth. Write down the Navier\textendash{}Stokes equations in the non-inertial frame of reference fixed to the box, \emph{i.e.} in local coordinates within the box.%
+\par
+What pressure field could be subtracted so as to eliminate body forces? What does this tell us about the flow in the non-inertial reference frame?%
+\par
+What choice of acceleration eliminates the body force? Why is this?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{subsec-navierstokes-discussion-8-3}{}\quad{}The Navier\textendash{}Stokes equation governing the fluid motion reads%
+\begin{equation*}
+\rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+=-\nabla p+\mu\nabla^2\bu-\rho\ba+\rho\bg,
+\end{equation*}
+(omitting subscripts \textasciigrave{}\(n\)' since vectors are the same in non-inertial and inertial reference frames).%
+\par
+Writing \(p=p_1+\rho(\bg_n-\ba)\cdot\bx\), we get%
+\begin{equation*}
+\rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+=-\nabla p_1+\mu\nabla^2\bu,
+\end{equation*}
+and therefore the fluid velocity in the non-inertial reference frame is exactly the same as it would be in the inertial reference frame!%
+\par
+Here we see a very important general principle, that in a linearly accelerating non-inertial reference frame, the acceleration does not produce a flow. More generally, in a rotating and translating reference frame, it is only the rotational component that induces a flow in the fluid. Pure translations of the frame of reference result in changes in fluid pressure, and no fluid motion.%
+\par
+For the particular choice \(\ba=\bg\), the body force terms in the Navier-{}-{}Stokes equations cancel and we get%
+\begin{equation*}
+\rho\left(\pd{\bu}{t}+\bu\cdot\nabla\bu\right)
+=-\nabla p+\mu\nabla^2\bu,
+\end{equation*}
+that is, a flow subjected to no body force. This reference frame is in what is called \emph{free fall}, which is the reference frame in an oblect falling under gravity.%
+\par
+You might have heard of experiments being done in free fall to simulate the effect of no gravity. To experience free fall, you just need to drop under gravity. You can drop an object under its own gravity, but this doesn't last very long. Even very tall fairground rides, such as Skyfall (a drop of several tens of metres), only give you a very few seconds worth of weightlessness. The next level is inside an aircraft on a parabolic flight, where you get several seconds worth of weightlessness (for example, see \href{https://www.youtube.com/shorts/zVgJjdupZ5o}{this short video}). For long-lasting weightlessness, visit outer space!%
+\end{example}
+\begin{remark}{Remark}{Inviscid fluids.}{subsec-navierstokes-discussion-9}%
 In the case of an inviscid fluid, \(\mu=0\), and we recover the Euler equation \hyperref[eqn-euler-momentum]{({\xreffont\ref{eqn-euler-momentum}})}.%
 \end{remark}
 \begin{remark}{Remark}{Navier\textendash{}Stokes and continuity equations in cylindrical coordinates.}{navier-stokes-continuity-cylindrical}%
+\emph{You do not need to be able to recall the form of these equations, but you could be provided with them in an exam and asked to use them.}%
+\par
 In cylindrical coordinates \((r,\theta,z)\) the continuity equation is%
 \begin{equation*}
 \frac1r\pd{(ru_r)}{r}+\frac1r\pd{u_\theta}{\theta}+\pd{u_z}{z}=0,
@@ -5741,6 +5789,8 @@ and \(\bf=(f_r,f_\theta,f_z)\) represents the body forces per unit mass acting o
 Note that the vector calculus operators in cylindrical (and also in spherical) coordinates are quite complicated. I would always recommend looking up the formulae, because they is very tricky to remember and extremely time-consuming to derive. A helpful website that lists these formulae along with many other useful formulae is \href{http://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates}{here}, and \hyperlink{ref-acheson}{[{\xreffont 4}]} gives these formulae in the appendices, as do many other textbooks. Note in particular that the Laplacian of a vector quantity is not given by the Laplacians of its components individually.%
 \end{remark}
 \begin{remark}{Remark}{Navier\textendash{}Stokes and continuity equations in spherical coordinates.}{navier-stokes-continuity-spherical}%
+\emph{You do not need to be able to recall the form of these equations, but you could be provided with them in an exam and asked to use them.}%
+\par
 In spherical coordinates \((r,\theta,\phi)\) the continuity equation is%
 \begin{equation*}
 \frac1{r^2}\pd{(r^2u_r)}{r}+\frac1{r\sin\theta}\pd{(u_\theta\sin\theta)}{\theta}+\frac1{r\sin\theta}\pd{u_\phi}{\phi}=0,
@@ -5922,7 +5972,17 @@ We obtain the Euler equation%
 \typeout{************************************************}
 %
 \begin{sectionptx}{Section}{Viscous Dissipation of Energy}{}{Viscous Dissipation of Energy}{}{}{sec-viscous-dissipation-of-energy}
-\emph{Non-examinable.}%
+If \(T\) is the total kinetic energy of a volume of fluid, then the rate of change of \(T\), \(\de T/\de t\), is a sum of three terms:%
+\begin{itemize}[label=\ptxlistdisc]
+\item{}the rate of work done on the fluid by the body forces%
+\item{}plus the rate of work done on the fluid by the surface forces%
+\item{}minus the rate of dissipation of kinetic energy due to the viscous stresses.%
+\end{itemize}
+In this section, we calculate expressions for each of these terms in terms of the velocity field and the stress tensor.%
+\par
+The viscous stresses do work on the fluid, and this work is converted into heat. The rate of dissipation of kinetic energy due to the viscous stresses is always positive, as we will show later in this section. This means that the system always loses energy due to the viscous stresses.%
+\par
+\emph{The remainder of this section is non-examinable.}%
 \par
 In this section we derive an expression for the rate of dissipation of kinetic energy in terms of the rate-of-strain tensor.%
 \par
@@ -5945,7 +6005,7 @@ where%
 \end{equation*}
 is the rate of dissipation per unit volume due to the viscous stresses.%
 \end{theorem}
-\begin{proof}{Proof}{}{sec-viscous-dissipation-of-energy-6}
+\begin{proof}{Proof}{}{sec-viscous-dissipation-of-energy-8}
 We need derive an expression for the rate of change:%
 \begin{equation*}
 \dd{T}{t}=\sum_{i=1}^3\int_V\rho u_i\DD{u_i}{t}\de V
@@ -5975,7 +6035,7 @@ Hence,%
 \end{equation*}
 and the result follows.%
 \end{proof}
-\begin{remark}{Remark}{Interpretation of the terms in the viscous dissipation.}{sec-viscous-dissipation-of-energy-7}%
+\begin{remark}{Remark}{Interpretation of the terms in the viscous dissipation.}{sec-viscous-dissipation-of-energy-9}%
 The terms on the right-hand side of \hyperref[eq-viscous-dissipation]{({\xreffont\ref{eq-viscous-dissipation}})} have physical interpretations as follows:%
 \begin{itemize}[label=\ptxlistdisc]
 \item{}The first term \(\int_V\rho\bu\cdot\bg\,\de V\) is the decrease in gravitational potential energy associated with the flow. This energy is converted into kinetic energy.%
@@ -5984,7 +6044,7 @@ The terms on the right-hand side of \hyperref[eq-viscous-dissipation]{({\xreffon
 \end{itemize}
 %
 \end{remark}
-\begin{remark}{Remark}{Viscous stresses.}{sec-viscous-dissipation-of-energy-8}%
+\begin{remark}{Remark}{Viscous stresses.}{sec-viscous-dissipation-of-energy-10}%
 Recall from \hyperlink{exercise-velocity-decomposition}{Exercise~{\xreffont 6.9.9}} that any incompressible flow may locally be written as a sum of a translation, a rotation and a straining component. The viscous stresses \(2\mu\sum_{i=1}^3\sum_{j=1}^3e_{ij}^2\) are zero for the translational and rotational components of the flow and non-zero for the straining component.%
 \par
 Since the rate-of-strain tensor is symmetric, and writing%
@@ -6002,7 +6062,7 @@ where \(D\) is symmetric, we have%
 \end{align*}
 where \(\lambda_i\), \(i=1,2,3\), are the eigenvalues of \(\be\).%
 \end{remark}
-\begin{remark}{Remark}{The energy equation.}{sec-viscous-dissipation-of-energy-9}%
+\begin{remark}{Remark}{The energy equation.}{sec-viscous-dissipation-of-energy-11}%
 We can also use the Reynolds Transport Theorem to perform conservation of energy in the control volume instead of mass. The energy is the sum of the internal energy, kinetic energy and the gravitational potential energy%
 \begin{equation*}
 e=\hat{u}+\frac12\left|{\bu}\right|^2-{\bg}\cdot{\bx},
@@ -6089,7 +6149,7 @@ We used this for the Stokes boundary layer problem \hyperref[example-stokes-boun
 =\partial w/\partial t=\partial p/\partial t=0\) (indeed \(\partial/\partial t=0\) for any variable).%
 \par
 Many examples that we cover make this assumption.%
-\item{}\emph{Fully developed flow:} \(\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0\), but \(\partial p/\partial z\) is not, in general, zero.%
+\item{}\emph{Fully developed flow:} \(\partial u/\partial z=\partial v/\partial z=\partial w/\partial z=0\), but \(\partial p/\partial z\) is not, in general, zero. For example, in a pipe of constant cross-section, the flow is fully developed if the velocity profile does not change along the pipe, which is commonly the case after a distance of a few radius lengths from the pipe entrance.%
 \par
 The pipe flow problem, Poiseuille flow \hyperref[sec-poiseuille]{Example~{\xreffont\ref{sec-poiseuille}}} uses this assumption.%
 \item{}\emph{Periodic and sinusoidal flow (with period \(T\)):}%
@@ -6862,20 +6922,36 @@ A rigid plate of length \(L\) is fixed along the line \(y=kx\) and has width \(W
 u=\alpha y+Ax+B,\quad v=-Ay+Dx+C,
 \end{equation*}
 what are \(A\), \(B\), \(C\), \(D\) in terms of \(\alpha\) and \(k\)? Simplify the velocity components \(u\) and \(v\). (Note that the fact that the coefficients on the terms \(Ax\) in \(u\) and \(-Ay\) in \(v\) are equal and opposite is required to ensure incompressibility of the fluid).%
-\item{}Find the drag force on the plate.%
+\item{}Apply the coordinate transformation from the \((x,y)\)-plane to the \((\xi,\eta)\)-plane illustrated in \hyperref[plate-coordinates]{Figure~{\xreffont\ref{plate-coordinates}}}, where the \(\xi\)-axis runs along the plate and the \(\eta\)-axis goes from the plate perpendicularly into the fluid.%
+\begin{figureptx}{Figure}{Sketch of coordinate transformation.}{plate-coordinates}{}%
+\begin{image}{0}{1}{0}{}%
+\includegraphics[width=\linewidth]{external/ch-chapter07-plate-coordinates.jpg}
+\end{image}%
+\tcblower
+\end{figureptx}%
+Hence show that the velocity components \(u_\xi\) and \(u_\eta\) in the \(\xi\)- and \(\eta\)-directions are given by%
+\begin{equation*}
+u_\xi=\alpha(1+k^2)\eta,\quad u_\eta=0.
+\end{equation*}
+%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{ps-stress-plate-4-2}{}\quad{}The drag force can be found by changing coordinates from \((x,y)\) to \((\xi,\eta)\), which are Cartesian coordinates where the \(\xi\)-axis runs along the plate and the \(\eta\)-axis goes from the plate perpendicularly into the fluid. You may use the fact that%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{ps-stress-plate-4-2}{}\quad{}We have%
 \begin{equation*}
 \boldsymbol{i}=\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}},\qquad
 \boldsymbol{j}=\sin\theta\hat{\boldsymbol{\xi}}+\cos\theta\hat{\boldsymbol{\eta}},
 \end{equation*}
-where \(\boldsymbol{i}\), \(\boldsymbol{j}\) are unit vectors in the \(x\)- and \(y\)-directions, respectively, and \(\hat{\boldsymbol{\xi}}\), \(\hat{\boldsymbol{\eta}}\) are unit vectors in the \(\xi\)- and \(\eta\)-directions, respectively, and \(\theta\) is the angle between the plate and the \(x\)-axis. You may use the fact that \(\cos\theta=1/(\sqrt{1+k^2})\), \(\sin\theta=k/(\sqrt{1+k^2})\) and%
+where \(\boldsymbol{i}\), \(\boldsymbol{j}\) are unit vectors in the \(x\)- and \(y\)-directions, respectively, and \(\hat{\boldsymbol{\xi}}\), \(\hat{\boldsymbol{\eta}}\) are unit vectors in the \(\xi\)- and \(\eta\)-directions, respectively, and \(\theta\) is the angle between the plate and the \(x\)-axis.%
+\par
+In addition, \(\cos\theta=1/(\sqrt{1+k^2})\) and \(\sin\theta=k/(\sqrt{1+k^2})\), and therefore%
 \begin{equation*}
 x=\frac{\xi}{\sqrt{1+k^2}}-\frac{k\eta}{\sqrt{1+k^2}},\quad
 y=\frac{k\xi}{\sqrt{1+k^2}}+\frac{\eta}{\sqrt{1+k^2}}.
 \end{equation*}
 %
-\item{}In this part, find the drag force on the plate by using the stress tensor, and check your answer against the previous part.%
+\item{}Hence, find the drag force on the plate.%
+\item{}In this part, use the velocity field in the original \((x,y)\)-coordinate system to find the stress tensor, and hence find the drag force on the plate.%
+\item{}Compare your answers for the previous two parts. Explain your comparison.%
+\item{}Sketch the velocity field in the \((\xi,\eta)\)-plane, and hence sketch the velocity field in the \((x,y)\)-plane.%
 \end{enumerate}%
 \end{divisionexercise}%
 \begin{divisionexercise}{5}{Stress on a surface due to the pressure.}{}{ps-stress-pressure}%
@@ -7123,19 +7199,19 @@ You may neglect gravity.%
 Examples of the solution for three different Womersley numbers are shown in \hyperref[fig-womersley-example-1]{Figure~{\xreffont\ref{fig-womersley-example-1}}}, \hyperref[fig-womersley-example-10]{Figure~{\xreffont\ref{fig-womersley-example-10}}} and \hyperref[fig-womersley-example-100]{Figure~{\xreffont\ref{fig-womersley-example-100}}}. The solution for small Womersley numbers resembles the Poiseuille flow profile, while that for large Womersley numbers is plug (uniform) flow across the core of the pipe with boundary layers exhibiting rapid spatial oscillations.%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=1\).}{fig-womersley-example-1}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley1.gif}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley1.png}
 \end{image}%
 \tcblower
 \end{figureptx}%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=10\).}{fig-womersley-example-10}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley10.gif}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley10.png}
 \end{image}%
 \tcblower
 \end{figureptx}%
 \begin{figureptx}{Figure}{Womersley flow profile for \(\alpha=100\).}{fig-womersley-example-100}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-womersley100.gif}
+\includegraphics[width=\linewidth]{external/ch-chapter07-womersley100.png}
 \end{image}%
 \tcblower
 \end{figureptx}%
@@ -8176,9 +8252,41 @@ where \(\mu = -Qa/\pi.\)%
 \begin{exercisegroup}
 \begin{divisionsolutioneg}{Exercise}{4.7.4}{Single source in a semi-infinite flow.}{ex-hw-image-planar01}%
 \par\smallskip%
-\noindent\hypertarget{ex-hw-image-planar01-3-main}{}\begin{image}{0}{1}{0}{}%
-\includegraphics[width=\linewidth]{external/ex-potential-Q4.png}
+\noindent\hypertarget{ex-hw-image-planar01-3-main}{}A source at \(z = d\) has complex potential%
+\begin{equation*}
+f(z) = \frac{Q}{2\pi} \log(z - d).
+\end{equation*}
+The complex velocity is then%
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \frac{1}{z - d} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{[(x - d) + \im y][(x - d) - \im y]} = \frac{Q}{2\pi} \frac{(x - d) - \im y}{(x - d)^2 + y^2}.
+\end{equation*}
+%
+\par
+So on \(x = 0\),%
+\begin{equation*}
+f'(z) = \frac{Q}{2\pi} \frac{-d - \im y}{d^2 + y^2},
+\end{equation*}
+and since \(f'(z) = u - \im v\),%
+\begin{equation*}
+u = -\frac{Q}{2\pi} \frac{d}{d^2 + y^2}, \qquad v = \frac{Q}{2\pi} \frac{y}{d^2 + y^2}.
+\end{equation*}
+Since \(u \neq 0\), there is flow through the boundary, so the single source is insufficient.%
+\par
+For the equation of the streamlines,%
+\begin{equation*}
+\psi = \operatorname{Im} f(z) = \operatorname{Im}\left[\frac{Q}{2\pi} \log(z - d)\right].
+\end{equation*}
+Let \(z - d = r\e^{\im\theta}\). Then%
+\begin{equation*}
+\psi = \frac{Q}{2\pi} \theta,
+\end{equation*}
+where \(\theta\) is measured about \(z = d\). The streamlines are therefore radial lines emanating from \(z = d\), which cross the wall at \(x = 0\).%
+\begin{figureptx}{Figure}{Sketch of the flow due to a single source at \(z = d\).}{ex-hw-image-planar01-3-4}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/ex-potential-Q4-sketch.png}
 \end{image}%
+\tcblower
+\end{figureptx}%
 \end{divisionsolutioneg}%
 \begin{divisionsolutioneg}{Exercise}{4.7.5}{A source in a semi-infinite flow.}{ps-image-planar02}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
@@ -8223,14 +8331,24 @@ A stagnation point requires \(f'(z) = 0\) and so we solve the resultant quadrati
 \begin{equation*}
 z = \frac{-Q \pm \sqrt{Q^2 - (2a\pi U)^2}}{2\pi U}.
 \end{equation*}
-Setting \(\beta = Q/(2\pi a U)\), there are two real roots if \(\beta > 1\). Hence this is the case of two stagnation points along the axis. If \(\beta < 1\), then there two complex conjugate points, and hence only one stagnation point in the flow field.%
-\begin{figureptx}{Figure}{\(\beta = 0.94\)}{ex-hw-linesource-stagnation-3-3}{}%
+Setting \(\beta = Q/(2\pi a U)\), there are two real roots if \(\beta > 1\). Hence this is the case of two stagnation points along the axis. If \(\beta < 1\), then there are two complex conjugate points; one of the complex conjugates has \(\operatorname{Im}(z) > 0\) so lies inside the flow domain in the upper half-plane; the other is the mirrored point in the lower half-plane. So in this case, there is only a single stagnation point in the flow field.%
+\par
+To find where this stagnation point lies, write the roots in terms of \(\beta\) as%
+\begin{equation*}
+z = a\left(-\beta \pm \sqrt{\beta^2 - 1}\right).
+\end{equation*}
+When \(\beta < 1\), these are \(z = a\left(-\beta \pm \im\sqrt{1 - \beta^2}\right)\), and so%
+\begin{equation*}
+|z|^2 = a^2\left(\beta^2 + (1 - \beta^2)\right) = a^2.
+\end{equation*}
+The stagnation point in the flow is therefore a distance \(a\) from the origin, upstream of the source since \(\operatorname{Re}(z) = -\beta a \lt 0\).%
+\begin{figureptx}{Figure}{\(\beta = 0.94\)}{ex-hw-linesource-stagnation-3-4}{}%
 \begin{image}{0.15}{0.7}{0.15}{}%
 \includegraphics[width=\linewidth]{external/potential_stag_2_inflow.png}
 \end{image}%
 \tcblower
 \end{figureptx}%
-\begin{figureptx}{Figure}{\(\beta = 1.3\)}{ex-hw-linesource-stagnation-3-4}{}%
+\begin{figureptx}{Figure}{\(\beta = 1.3\)}{ex-hw-linesource-stagnation-3-5}{}%
 \begin{image}{0.15}{0.7}{0.15}{}%
 \includegraphics[width=\linewidth]{external/potential_stag_2_onbound.png}
 \end{image}%
@@ -8712,14 +8830,7 @@ Hence%
 u=\alpha\left(y-kx\right),\quad v=\alpha k\left(y-kx\right).
 \end{equation*}
 %
-\item[(b)]\noindent\hypertarget{ps-stress-plate-4-3-main}{}We perform the coordinate transform illustrated in \hyperref[plate-coordinates]{Figure~{\xreffont\ref{plate-coordinates}}} from the \((x,y)\)-plane to the \((\xi,\eta)\)-plane:%
-\begin{figureptx}{Figure}{Sketch of plate.}{plate-coordinates}{}%
-\begin{image}{0}{1}{0}{}%
-\includegraphics[width=\linewidth]{external/ch-chapter07-plate-coordinates.jpg}
-\end{image}%
-\tcblower
-\end{figureptx}%
-We use%
+\item[(b)]\noindent\hypertarget{ps-stress-plate-4-3-main}{}We have%
 \begin{align*}
 \bu=&u\boldsymbol{i}+v\boldsymbol{j}\\
 =&u\left(\cos\theta\hat{\boldsymbol{\xi}}-\sin\theta\hat{\boldsymbol{\eta}}\right)
@@ -8733,8 +8844,7 @@ We use%
 =&\alpha(1+k^2)\eta\hat{\boldsymbol{\xi}}
 \end{align*}
 and so the velocity components are \(u_\xi=\alpha(1+k^2)\eta\) and \(u_\eta=0\).%
-\par
-Thus the shear stress is given by%
+\item[(c)]\noindent\hypertarget{ps-stress-plate-5-2-main}{}The shear stress is given by%
 \begin{equation*}
 \mu\pd{u_\xi}{\eta}=\mu\alpha(1+k^2),
 \end{equation*}
@@ -8743,7 +8853,7 @@ and hence the drag force equals%
 \mu\alpha(1+k^2)LW.
 \end{equation*}
 %
-\item[(c)]\noindent\hypertarget{ps-stress-plate-5-2-main}{}We have the normal vector to the plate%
+\item[(d)]\noindent\hypertarget{ps-stress-plate-6-2-main}{}We have the normal vector to the plate%
 \begin{equation*}
 \hat{\bn}=\frac1{\sqrt{1+k^2}}(-k,1,0).
 \end{equation*}
@@ -8779,6 +8889,21 @@ This is the pressure pushing into the plate (direction \(-\hat{\bn}\)) plus the 
 \mu\alpha(1+k^2)
 \end{equation*}
 which agrees with the previous answer.%
+\item[(e)]\noindent\hypertarget{ps-stress-plate-7-2-main}{}The two answers are the same, as expected. The coordinate transformation has no effect on the physics of the problem, and so the drag force must be the same in both cases.%
+\item[(f)]\noindent\hypertarget{ps-stress-plate-8-2-main}{}In the \((\xi,\eta)\)-plane, the velocity is zero at the plate and increases linearly with increasing distance from the plate.%
+\begin{figureptx}{Figure}{Sketch of plate.}{plate-velocity-xi-eta-plane}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/ch-chapter07-plate-velocity-xi-eta.jpg}
+\end{image}%
+\tcblower
+\end{figureptx}%
+To get the velocity in the \((x,y)\)-plane, we rotate the figure.%
+\begin{figureptx}{Figure}{Sketch of plate.}{plate-velocity-x-y-plane}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/ch-chapter07-plate-velocity.jpg}
+\end{image}%
+\tcblower
+\end{figureptx}%
 \end{enumerate}%
 \end{divisionsolution}%
 \begin{divisionsolution}{Exercise}{6.9.5}{Stress on a surface due to the pressure.}{ps-stress-pressure}%

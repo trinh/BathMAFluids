@@ -108,3 +108,16 @@ codechat_config.yaml
 
 # Include all files in the output directory
 !output/**
+# The print target keeps its LaTeX build files (latex-source="yes" in
+# project.ptx). Track main.tex/.log/.aux etc., but not the image folders,
+# which are copies of assets/ (they are also stripped from the website).
+output/print/external/
+output/print/generated/
+
+# output/latex is only main.tex (+ images) from `pretext build latex`, used
+# for the docx conversion. Ignore files left by compiling it by hand
+# (the real build log is kept in output/print/).
+output/latex/*
+!output/latex/main.tex
+!output/latex/external/
+!output/latex/generated/

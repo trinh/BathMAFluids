@@ -3,22 +3,23 @@
 # GitHub Pages, and (optionally) push the gh-pages branch.
 #
 # Usage:
-#   scripts/deploy.sh                        # build + stage + commit locally, but don't push
-#   scripts/deploy.sh --push                 # also push gh-pages to origin
-#   scripts/deploy.sh --allow-errors         # build past PTX:ERROR (e.g. broken cross-references)
-#   scripts/deploy.sh --allow-errors --push  # both, in any order
+#   scripts/deploy.sh          # build + stage + commit locally, but don't push
+#   scripts/deploy.sh --push   # also push gh-pages to origin
+#
+# The script is strict: if any step reports an error (including a PreTeXt
+# PTX:ERROR such as a broken cross-reference), it stops immediately, prints
+# the error lines it found, and does NOT commit or push anything.
+# The full output of the run is saved in logs/deploy-<timestamp>.log.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 PUSH=false
-ALLOW_ERRORS=false
 for arg in "$@"; do
   case "$arg" in
     --push) PUSH=true ;;
-    --allow-errors) ALLOW_ERRORS=true ;;
     *)
-      echo "error: unknown argument '$arg' (expected --push and/or --allow-errors)" >&2
+      echo "error: unknown argument '$arg' (expected --push)" >&2
       exit 1
       ;;
   esac
@@ -29,59 +30,92 @@ if ! command -v pandoc >/dev/null 2>&1; then
   exit 1
 fi
 
-# run_build <description> <command...>
-# Runs a `pretext build`/`pretext deploy` step. pretext exits non-zero
-# whenever it logs a PTX:ERROR (e.g. an unresolved cross-reference), even
-# though it still writes usable output with placeholder text in place of
-# the broken bits. With --allow-errors, that failure is downgraded to a
-# warning and the script continues using whatever pretext wrote to disk.
-# Without it, the whole script stops here (the safe default).
-run_build() {
+mkdir -p logs
+LOG="logs/deploy-$(date +%Y%m%d-%H%M%S).log"
+STEP_OUT="$(mktemp)"
+trap 'rm -f "$STEP_OUT"' EXIT
+
+# Lines that count as errors in a step's output. PreTeXt can print
+# PTX:ERROR (from the XSL stylesheets) yet still exit 0, so we check the
+# output as well as the exit status.
+ERROR_PATTERN='PTX:ERROR|^ERROR|^CRITICAL|^! |Traceback|fatal:'
+
+# run_step <description> <command...>
+# Runs one step, shows its output live, appends it to $LOG, and stops the
+# whole script with a summary if the command fails or prints an error line.
+run_step() {
   local desc="$1"; shift
+  echo
   echo "==> $desc"
+  echo "==> $desc" >>"$LOG"
+
   local status=0
-  "$@" || status=$?
-  if [[ $status -ne 0 ]]; then
-    if [[ "$ALLOW_ERRORS" == true ]]; then
-      echo "warning: '$desc' finished with errors (exit $status)." >&2
-      echo "         Continuing because --allow-errors was passed. The output" >&2
-      echo "         may contain placeholder text, e.g.:" >&2
-      echo "         [cross-reference to target(s) \"...\" missing or not unique]" >&2
-    else
-      echo "error: '$desc' failed (exit $status)." >&2
-      echo "       Fix the errors above (recommended), or re-run with --allow-errors" >&2
-      echo "       to build/deploy anyway." >&2
-      exit "$status"
-    fi
+  "$@" 2>&1 | tee "$STEP_OUT" || status=${PIPESTATUS[0]}
+  cat "$STEP_OUT" >>"$LOG"
+
+  local errors
+  errors="$(grep -nE -A3 "$ERROR_PATTERN" "$STEP_OUT" || true)"
+
+  if [[ $status -ne 0 || -n "$errors" ]]; then
+    {
+      echo
+      echo "================================================================"
+      echo " DEPLOY STOPPED at step: $desc"
+      echo " Command: $*"
+      echo " Exit status: $status"
+      echo "================================================================"
+      if [[ -n "$errors" ]]; then
+        echo " Errors found (line numbers refer to this step's output):"
+        echo
+        echo "$errors"
+      else
+        echo " The command failed but printed no recognisable error line;"
+        echo " see the last lines of output above."
+      fi
+      echo "================================================================"
+      echo " Full output of this run: $LOG"
+      echo " Nothing was committed to gh-pages and nothing was pushed."
+      echo "================================================================"
+    } >&2
+    exit 1
   fi
 }
 
-run_build "Building web + print (PDF) targets" pretext build --deploys
-run_build "Building latex target (source for docx conversion)" pretext build latex
+run_step "Building web + print (PDF) targets" pretext build --deploys
+run_step "Building latex target (source for docx conversion)" pretext build latex
 
-echo "==> Converting latex output to docx with pandoc"
 mkdir -p output/doc
-pandoc output/latex/main.tex -o output/doc/main.docx --resource-path=output/latex
+run_step "Converting latex output to docx with pandoc" \
+  pandoc output/latex/main.tex -o output/doc/main.docx --resource-path=output/latex
 
-run_build "Staging deploy targets" pretext deploy --stage-only
+run_step "Staging deploy targets" pretext deploy --stage-only
 
+# The print target keeps its LaTeX build files (latex-source="yes" in
+# project.ptx), and staging copies the whole of output/print/. Publish only
+# the PDF: remove main.tex, main.log, main.aux, images etc. from the site.
+echo
+echo "==> Removing LaTeX build files from staged PDF folder"
+find output/stage/pdf -mindepth 1 ! -name main.pdf -exec rm -rf {} +
+
+echo
 echo "==> Adding docx download to staged site"
 mkdir -p output/stage/doc
 cp output/doc/main.docx output/stage/doc/main.docx
 
-echo "==> Committing staged site to local gh-pages branch"
-python3 - <<'PYEOF'
+run_step "Committing staged site to local gh-pages branch" python3 - <<'PYEOF'
 from pretext.project import Project
 project = Project.parse()
 project.deploy(update_source=False, skip_staging=True, no_push=True)
 PYEOF
 
+echo
 if [[ "$PUSH" == true ]]; then
-  echo "==> Pushing gh-pages branch to origin"
-  git push origin gh-pages --force
+  run_step "Pushing gh-pages branch to origin" git push origin gh-pages --force
+  echo "Done. Site published. Log: $LOG"
 else
-  echo
-  echo "Staged and committed locally to gh-pages. Review it, then run:"
+  echo "All steps succeeded. Staged and committed locally to gh-pages."
+  echo "Review output/stage/, then run:"
   echo "    git push origin gh-pages --force"
   echo "or re-run this script with --push."
+  echo "Log: $LOG"
 fi

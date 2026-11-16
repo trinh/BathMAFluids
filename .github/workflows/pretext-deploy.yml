@@ -74,6 +74,10 @@ jobs:
       - name: stage deploy targets
         run: pretext deploy --stage-only
 
+      # print keeps its LaTeX build files (latex-source="yes"); publish only the PDF
+      - name: remove LaTeX build files from staged PDF folder
+        run: find output/stage/pdf -mindepth 1 ! -name main.pdf -exec rm -rf {} +
+
       - name: add docx download to staged site
         run: |
           mkdir -p output/stage/doc
