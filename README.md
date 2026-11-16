@@ -4,7 +4,7 @@ Phil's workflow:
 
 * You can compile locally for web via `pretext build web` and `pretext view web`
 * Similarly you can compile locally via `pretext build print` which should build the pretext files
-* To compile and sync to online, you can go into the `scripts/` directory and enter `./deploy.sh` which should run the compile scripts for all document formats and then commit to the repository corresponding to the website. 
+* To compile and sync to online, you can go into the `scripts/` directory and enter `./deploy.sh --push` which should run the compile scripts for all document formats and then commit to the repository corresponding to the website. 
 
 
 
