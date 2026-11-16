@@ -21,6 +21,7 @@
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <style>
 @counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-roman; prefix: '('; suffix: ') '; }
 </style>
 <link rel="stylesheet" type="text/css" href="external/custom.css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
@@ -388,8 +389,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exact-solutions.html" class="internal"><span class="codenumber">6.8</span> <span class="title">Examples of solutions to the Navier–Stokes equations</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscousflows.html" class="internal"><span class="codenumber">6.9</span> <span class="title">Practice Exercises</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch-viscousflows-12.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Problems set 5 to hand in</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="problems-set-8.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Problems set 6 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscous-handin1.html" class="internal"><span class="codenumber">6.10</span> <span class="title">Problems set 5 to hand in</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ws-viscous-handin2.html" class="internal"><span class="codenumber">6.11</span> <span class="title">Problems set 6 to hand in</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -750,7 +751,7 @@ eBookConfig.enable_chatcodes =  false;
 \rho\DD{\bu}{t}=\nabla\cdot\bsigma+\rho\bf,\tag{6.5.2}
 \end{equation}
 </div>
-<div class="para">where <span class="process-math">\(\bf\)</span> is the body force per unit mass (for example, gravity). This is a more general equation than the Navier–Stokes equation, which applies only to Newtonian fluids obeying the consititutive law <a href="subsec-newtonian-fluids.html#eq-cartesiannewtonianstress" class="xref" data-knowl="./knowl/xref/eq-cartesiannewtonianstress.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.4.5">(6.4.5)</a>. You will perform the derivation in this more general case in <a href="ws-viscousflows.html#ps-Cauchy-equation" class="xref" data-knowl="./knowl/xref/ps-Cauchy-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.10: Derivation of the Cauchy equation">Exercise 6.9.10</a>.</div>
+<div class="para">where <span class="process-math">\(\bf\)</span> is the body force per unit mass (for example, gravity). This is a more general equation than the Navier–Stokes equation, which applies only to Newtonian fluids obeying the consititutive law <a href="subsec-newtonian-fluids.html#eq-cartesiannewtonianstress" class="xref" data-knowl="./knowl/xref/eq-cartesiannewtonianstress.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.4.5">(6.4.5)</a>. You will perform the derivation in this more general case in <a href="ws-viscousflows.html#ps-Cauchy-equation" class="xref" data-knowl="./knowl/xref/ps-Cauchy-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.11: Derivation of the Cauchy equation">Exercise 6.9.11</a>.</div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#subsec-navierstokes-discussion-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Remark 6.5.7: The Cauchy equation"><a tabindex="-1" href="#subsec-navierstokes-discussion-6" title="Copy heading and permalink for Remark 6.5.7: The Cauchy equation" aria-label="Copy heading and permalink for Remark 6.5.7: The Cauchy equation">🔗</a></div>
@@ -1112,7 +1113,7 @@ p=-\frac12\rho K^2(x^2+4xy)+f_1(y,z),
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Limits of low and high Reynolds number</span>
 </h2>
 <section class="introduction" id="sec-low-and-high-reynolds-number-2">
-<div class="para" id="sec-low-and-high-reynolds-number-2-1">By nondimensionalising the Navier–Stokes equation, we may show that it simplifies in the limits of low and high Reynolds number. We present the limiting forms in this section. In <a href="ws-viscousflows.html#ex-limits-low-high-Reynolds" class="xref" data-knowl="./knowl/xref/ex-limits-low-high-Reynolds.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.11: Limits of low and high Reynolds number">Exercise 6.9.11</a>, you will derive these results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-low-and-high-reynolds-number-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-low-and-high-reynolds-number-2-1">By nondimensionalising the Navier–Stokes equation, we may show that it simplifies in the limits of low and high Reynolds number. We present the limiting forms in this section. In <a href="ws-viscousflows.html#ex-limits-low-high-Reynolds" class="xref" data-knowl="./knowl/xref/ex-limits-low-high-Reynolds.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.9.12: Limits of low and high Reynolds number">Exercise 6.9.12</a>, you will derive these results.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#sec-low-and-high-reynolds-number-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsubsection" id="subsec-low-Reynolds-number">
 <h3 class="heading hide-type">
