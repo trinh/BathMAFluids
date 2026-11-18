@@ -5470,7 +5470,8 @@
                   <m>\frac12(\nabla_x\times\bu)\times\bs</m>
                   represents rotation since, setting <m>\bOmega=\nabla_x\times\bu/2=\bomega/2</m>,
                   this term is of the form <m>\bOmega\times\bs</m>,
-                  which is purely rotational motion about point <m>P</m> (see <xref ref="ex-rotating-flow"/>).
+                  which is purely rotational motion about point <m>P</m>
+                  (see <xref ref="ex-hw-rotating-flow"/>).
                   Note also that this shows that the vorticity <m>\bomega</m> is twice the
                   local angular velocity of the fluid element, since <m>\bOmega=\bomega/2</m>.
                   This makes precise the statement in <xref ref="def-vorticity"/> that the
@@ -6508,11 +6509,14 @@
     <title>Problems set 5 to hand in</title>
     <introduction>
       <p>
-        Please hand in the problems in this Section for Set 7 (due in the week commencing 1 Dec).
+        Please hand in the problems in this Section for Set 5 (due 25 Nov).
+        If you would like feedback on your work, the tutor will by default concentrate on the
+        exercises highlighted with a yellow background in the online notes,
+        unless you specifically ask for feedback on a different exercise instead.
       </p>
     </introduction>
 
-    <exercise>
+    <exercise xml:id="ex-hw-analysis-of-flow-in-a-pipe">
       <title>Analysis of flow in a pipe</title>
       <introduction>
         <p>
@@ -6748,7 +6752,7 @@
       </task>
     </exercise>
 
-    <exercise xml:id="ex-rotating-flow">
+    <exercise xml:id="ex-hw-rotating-flow">
       <title>Rotating flow</title>
       <introduction>
         <p>
@@ -6876,14 +6880,14 @@
       </task>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="ex-hw-flow-outside-a-rotating-cylinder">
       <title>Flow outside a rotating cylinder</title>
       <introduction>
         <p>
           <em>Based on problem 2.8 in <xref ref="ref-acheson"/>.</em>
         </p>
         <p>
-          An incompressible Newonian fluid fills <m>\mathbb{R}^3</m>.
+          An incompressible Newtonian fluid fills <m>\mathbb{R}^3</m>.
           An infinite solid cylinder of radius <m>a</m> is placed in the fluid
           with its axis on the line <m>r=0</m> in cylindrical polar coordinates.
         </p>
@@ -7068,7 +7072,7 @@
       </task>
     </exercise>
 
-        <exercise>
+    <exercise xml:id="ex-calculation-of-the-stress-tensor">
       <title>
         Calculation of the stress tensor
       </title>
@@ -7080,7 +7084,7 @@
           and (iii) calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
         </p>
       </introduction>
-      <task>
+      <task xml:id="ex-hw-stress-tensor-simple-shear-flow">
         <statement>
           <p>
             The simple shear flow <m>\bu=(ky,0,0)</m> and <m>p=p_0</m> in <m>y>0</m>,
@@ -7244,16 +7248,14 @@
     <title>Problems set 6 to hand in</title>
     <introduction>
       <p>
-        Please hand in the problems in this Section for Set 8 (the final set of problems, due in the week commencing 8 Dec).
+        Please hand in the problems in this Section for Homework Set 6 (due 1 Dec).
+        If you would like feedback on your work, the tutor will by default concentrate on the
+        exercises highlighted with a yellow background in the online notes,
+        unless you specifically ask for feedback on a different exercise instead.
       </p>
-      <warning>
-        <p>
-          We look to complete worksheets in the week prior to the content being delivered.
-          Once this is done, this disclaimer message will be removed.
-        </p>
-      </warning>
     </introduction>
-    <exercise>
+
+    <exercise xml:id="ex-hw-sphere-flow">
       <introduction>
         <p>
           A tethered sphere of radius <m>a</m> is surrounded by a flowing
@@ -7319,7 +7321,7 @@
         </solution>-->
       </task>
     </exercise>
-    <exercise>
+    <exercise xml:id="ex-hw-channel-flow">
       <title>Channel flow</title>
       <introduction>
         <p>
@@ -7489,7 +7491,7 @@
         </solution>-->
       </task>
     </exercise>
-    <exercise>
+    <exercise xml:id="ex-hw-wavy-walled-pipe">
       <title>Wavy-walled pipe</title>
       <introduction>
         <p>
