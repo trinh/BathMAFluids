@@ -7192,7 +7192,8 @@
       <task>
         <statement>
           <p>
-            A straining flow <m>\bu=(kx,-ky,0)</m> and <m>p=p_0</m>, where <m>k</m> and <m>p_0</m> are constants.
+            A straining flow <m>\bu=(kx,-ky,0)</m> and <m>p=p_0-\rho k^2x^2/2-\rho k^2y^2/2</m>,
+            where <m>k</m> and <m>p_0</m> are constants.
           </p>
         </statement>
         <!--<solution>
