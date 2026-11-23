@@ -7079,9 +7079,10 @@
       <introduction>
         <p>
           For each of the following flows of an incompressible Newtonian fluid
-          of density <m>\rho</m> and shear viscosity <m>\mu</m>, (i) check that the flow is possible
-          (<em>i.e.</em> that it is incompressible), (ii) sketch the flow,
-          and (iii) calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
+          of density <m>\rho</m> and shear viscosity <m>\mu</m>,
+          (i) check that the flow is incompressible,
+          (ii) sketch the flow, and
+          (iii) calculate the corresponding stress tensor as a <m>3\times3</m> matrix.
         </p>
       </introduction>
       <task xml:id="ex-hw-stress-tensor-simple-shear-flow">
