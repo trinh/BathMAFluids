@@ -2606,7 +2606,7 @@
         Whether or not a given solution that we find is stable is a crucial question,
         because if it is not stable then it would not be seen in an experiment.
         To determine stability mathematically we would need to use techniques
-        such as those taught in the course MA40045 Dynamical Systems.
+        such as those taught in a course on dynamical systems.
         However, it is typically very difficult to do this in practice
         in the study of fluid dynamics because of the (infinite) dimensionality
         of the phase space.
